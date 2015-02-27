@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 245
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,14 +49,12 @@
 
     const/4 v2, -0x1
 
-    .line 248
     iget v4, p1, Lcom/android/internal/os/ProcessCpuTracker$Stats;->rel_utime:I
 
     iget v5, p1, Lcom/android/internal/os/ProcessCpuTracker$Stats;->rel_stime:I
 
     add-int v0, v4, v5
 
-    .line 249
     .local v0, ta:I
     iget v4, p2, Lcom/android/internal/os/ProcessCpuTracker$Stats;->rel_utime:I
 
@@ -65,14 +62,11 @@
 
     add-int v1, v4, v5
 
-    .line 250
     .local v1, tb:I
     if-eq v0, v1, :cond_2
 
-    .line 251
     if-le v0, v1, :cond_1
 
-    .line 259
     :cond_0
     :goto_0
     return v2
@@ -80,10 +74,8 @@
     :cond_1
     move v2, v3
 
-    .line 251
     goto :goto_0
 
-    .line 253
     :cond_2
     iget-boolean v4, p1, Lcom/android/internal/os/ProcessCpuTracker$Stats;->added:Z
 
@@ -91,7 +83,6 @@
 
     if-eq v4, v5, :cond_3
 
-    .line 254
     iget-boolean v4, p1, Lcom/android/internal/os/ProcessCpuTracker$Stats;->added:Z
 
     if-nez v4, :cond_0
@@ -100,7 +91,6 @@
 
     goto :goto_0
 
-    .line 256
     :cond_3
     iget-boolean v4, p1, Lcom/android/internal/os/ProcessCpuTracker$Stats;->removed:Z
 
@@ -108,7 +98,6 @@
 
     if-eq v4, v5, :cond_4
 
-    .line 257
     iget-boolean v4, p1, Lcom/android/internal/os/ProcessCpuTracker$Stats;->added:Z
 
     if-nez v4, :cond_0
@@ -117,7 +106,6 @@
 
     goto :goto_0
 
-    .line 259
     :cond_4
     const/4 v2, 0x0
 
@@ -130,7 +118,6 @@
     .parameter "x1"
 
     .prologue
-    .line 245
     check-cast p1, Lcom/android/internal/os/ProcessCpuTracker$Stats;
 
     .end local p1

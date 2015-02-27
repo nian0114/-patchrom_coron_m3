@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 543
     iput-object p1, p0, Landroid/accessibilityservice/AccessibilityService$1;->this$0:Landroid/accessibilityservice/AccessibilityService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .parameter "event"
 
     .prologue
-    .line 556
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityService$1;->this$0:Landroid/accessibilityservice/AccessibilityService;
 
     invoke-virtual {v0, p1}, Landroid/accessibilityservice/AccessibilityService;->onAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 557
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .parameter "gestureId"
 
     .prologue
-    .line 566
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityService$1;->this$0:Landroid/accessibilityservice/AccessibilityService;
 
     invoke-virtual {v0, p1}, Landroid/accessibilityservice/AccessibilityService;->onGesture(I)Z
@@ -70,12 +66,10 @@
     .locals 1
 
     .prologue
-    .line 551
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityService$1;->this$0:Landroid/accessibilityservice/AccessibilityService;
 
     invoke-virtual {v0}, Landroid/accessibilityservice/AccessibilityService;->onInterrupt()V
 
-    .line 552
     return-void
 .end method
 
@@ -84,7 +78,6 @@
     .parameter "event"
 
     .prologue
-    .line 571
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityService$1;->this$0:Landroid/accessibilityservice/AccessibilityService;
 
     invoke-virtual {v0, p1}, Landroid/accessibilityservice/AccessibilityService;->onKeyEvent(Landroid/view/KeyEvent;)Z
@@ -98,12 +91,10 @@
     .locals 1
 
     .prologue
-    .line 546
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityService$1;->this$0:Landroid/accessibilityservice/AccessibilityService;
 
     invoke-virtual {v0}, Landroid/accessibilityservice/AccessibilityService;->onServiceConnected()V
 
-    .line 547
     return-void
 .end method
 
@@ -112,12 +103,10 @@
     .parameter "connectionId"
 
     .prologue
-    .line 561
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityService$1;->this$0:Landroid/accessibilityservice/AccessibilityService;
 
     #setter for: Landroid/accessibilityservice/AccessibilityService;->mConnectionId:I
     invoke-static {v0, p1}, Landroid/accessibilityservice/AccessibilityService;->access$002(Landroid/accessibilityservice/AccessibilityService;I)I
 
-    .line 562
     return-void
 .end method

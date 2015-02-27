@@ -20,10 +20,8 @@
     .parameter "rs"
 
     .prologue
-    .line 98
     invoke-direct {p0, p1}, Landroid/renderscript/Program$BaseProgramBuilder;-><init>(Landroid/renderscript/RenderScript;)V
 
-    .line 99
     return-void
 .end method
 
@@ -39,14 +37,12 @@
     .end annotation
 
     .prologue
-    .line 111
     iget v0, p0, Landroid/renderscript/ProgramVertex$Builder;->mInputCount:I
 
     const/16 v1, 0x8
 
     if-lt v0, v1, :cond_0
 
-    .line 112
     new-instance v0, Landroid/renderscript/RSIllegalArgumentException;
 
     const-string v1, "Max input count exceeded."
@@ -55,7 +51,6 @@
 
     throw v0
 
-    .line 114
     :cond_0
     invoke-virtual {p1}, Landroid/renderscript/Element;->isComplex()Z
 
@@ -63,7 +58,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 115
     new-instance v0, Landroid/renderscript/RSIllegalArgumentException;
 
     const-string v1, "Complex elements not allowed."
@@ -72,7 +66,6 @@
 
     throw v0
 
-    .line 117
     :cond_1
     iget-object v0, p0, Landroid/renderscript/ProgramVertex$Builder;->mInputs:[Landroid/renderscript/Element;
 
@@ -84,7 +77,6 @@
 
     aput-object p1, v0, v1
 
-    .line 118
     return-object p0
 .end method
 
@@ -92,12 +84,10 @@
     .locals 9
 
     .prologue
-    .line 128
     iget-object v7, p0, Landroid/renderscript/ProgramVertex$Builder;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v7}, Landroid/renderscript/RenderScript;->validate()V
 
-    .line 129
     iget v7, p0, Landroid/renderscript/ProgramVertex$Builder;->mInputCount:I
 
     iget v8, p0, Landroid/renderscript/ProgramVertex$Builder;->mOutputCount:I
@@ -116,17 +106,14 @@
 
     new-array v6, v7, [I
 
-    .line 130
     .local v6, tmp:[I
     iget v7, p0, Landroid/renderscript/ProgramVertex$Builder;->mTextureCount:I
 
     new-array v5, v7, [Ljava/lang/String;
 
-    .line 131
     .local v5, texNames:[Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 133
     .local v2, idx:I
     const/4 v0, 0x0
 
@@ -136,7 +123,6 @@
 
     if-ge v0, v7, :cond_0
 
-    .line 134
     add-int/lit8 v3, v2, 0x1
 
     .end local v2           #idx:I
@@ -147,7 +133,6 @@
 
     aput v7, v6, v2
 
-    .line 135
     add-int/lit8 v2, v3, 0x1
 
     .end local v3           #idx:I
@@ -164,12 +149,10 @@
 
     aput v7, v6, v3
 
-    .line 133
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 137
     :cond_0
     const/4 v0, 0x0
 
@@ -178,7 +161,6 @@
 
     if-ge v0, v7, :cond_1
 
-    .line 138
     add-int/lit8 v3, v2, 0x1
 
     .end local v2           #idx:I
@@ -189,7 +171,6 @@
 
     aput v7, v6, v2
 
-    .line 139
     add-int/lit8 v2, v3, 0x1
 
     .end local v3           #idx:I
@@ -206,12 +187,10 @@
 
     aput v7, v6, v3
 
-    .line 137
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 141
     :cond_1
     const/4 v0, 0x0
 
@@ -220,7 +199,6 @@
 
     if-ge v0, v7, :cond_2
 
-    .line 142
     add-int/lit8 v3, v2, 0x1
 
     .end local v2           #idx:I
@@ -231,7 +209,6 @@
 
     aput v7, v6, v2
 
-    .line 143
     add-int/lit8 v2, v3, 0x1
 
     .end local v3           #idx:I
@@ -248,12 +225,10 @@
 
     aput v7, v6, v3
 
-    .line 141
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 145
     :cond_2
     const/4 v0, 0x0
 
@@ -262,7 +237,6 @@
 
     if-ge v0, v7, :cond_3
 
-    .line 146
     add-int/lit8 v3, v2, 0x1
 
     .end local v2           #idx:I
@@ -273,7 +247,6 @@
 
     aput v7, v6, v2
 
-    .line 147
     add-int/lit8 v2, v3, 0x1
 
     .end local v3           #idx:I
@@ -286,19 +259,16 @@
 
     aput v7, v6, v3
 
-    .line 148
     iget-object v7, p0, Landroid/renderscript/ProgramVertex$Builder;->mTextureNames:[Ljava/lang/String;
 
     aget-object v7, v7, v0
 
     aput-object v7, v5, v0
 
-    .line 145
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 151
     :cond_3
     iget-object v7, p0, Landroid/renderscript/ProgramVertex$Builder;->mRS:Landroid/renderscript/RenderScript;
 
@@ -308,7 +278,6 @@
 
     move-result v1
 
-    .line 152
     .local v1, id:I
     new-instance v4, Landroid/renderscript/ProgramVertex;
 
@@ -316,10 +285,8 @@
 
     invoke-direct {v4, v1, v7}, Landroid/renderscript/ProgramVertex;-><init>(ILandroid/renderscript/RenderScript;)V
 
-    .line 153
     .local v4, pv:Landroid/renderscript/ProgramVertex;
     invoke-virtual {p0, v4}, Landroid/renderscript/ProgramVertex$Builder;->initProgram(Landroid/renderscript/Program;)V
 
-    .line 154
     return-object v4
 .end method

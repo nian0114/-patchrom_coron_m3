@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1029
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$5;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .locals 3
 
     .prologue
-    .line 1032
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.cyanogenmod.ACTION_START_SCREENCAST"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1033
     .local v0, screencastIntent:Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$5;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -58,6 +55,5 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1034
     return-void
 .end method

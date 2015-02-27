@@ -37,12 +37,10 @@
     .parameter
 
     .prologue
-    .line 1519
     iput-object p1, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->this$0:Lcom/android/server/print/UserState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1520
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -58,7 +56,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1519
     invoke-direct {p0, p1}, Lcom/android/server/print/UserState$PrintJobForAppCache;-><init>(Lcom/android/server/print/UserState;)V
 
     return-void
@@ -69,7 +66,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1519
     iget-object v0, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->mPrintJobsForRunningApp:Landroid/util/SparseArray;
 
     return-object v0
@@ -83,7 +79,6 @@
     .parameter "prefix"
 
     .prologue
-    .line 1613
     iget-object v8, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->this$0:Lcom/android/server/print/UserState;
 
     #getter for: Lcom/android/server/print/UserState;->mLock:Ljava/lang/Object;
@@ -93,11 +88,9 @@
 
     monitor-enter v9
 
-    .line 1614
     :try_start_0
     const-string v7, "  "
 
-    .line 1615
     .local v7, tab:Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->mPrintJobsForRunningApp:Landroid/util/SparseArray;
 
@@ -105,7 +98,6 @@
 
     move-result v2
 
-    .line 1616
     .local v2, bucketCount:I
     const/4 v3, 0x0
 
@@ -113,14 +105,12 @@
     :goto_0
     if-ge v3, v2, :cond_1
 
-    .line 1617
     iget-object v8, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->mPrintJobsForRunningApp:Landroid/util/SparseArray;
 
     invoke-virtual {v8, v3}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v0
 
-    .line 1618
     .local v0, appId:I
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
@@ -156,7 +146,6 @@
 
     invoke-virtual {v8}, Ljava/io/PrintWriter;->println()V
 
-    .line 1619
     iget-object v8, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->mPrintJobsForRunningApp:Landroid/util/SparseArray;
 
     invoke-virtual {v8, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -165,13 +154,11 @@
 
     check-cast v1, Ljava/util/List;
 
-    .line 1620
     .local v1, bucket:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v6
 
-    .line 1621
     .local v6, printJobCount:I
     const/4 v4, 0x0
 
@@ -179,14 +166,12 @@
     :goto_1
     if-ge v4, v6, :cond_0
 
-    .line 1622
     invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/print/PrintJobInfo;
 
-    .line 1623
     .local v5, printJob:Landroid/print/PrintJobInfo;
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
@@ -206,19 +191,16 @@
 
     invoke-virtual {v8}, Ljava/io/PrintWriter;->println()V
 
-    .line 1621
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 1616
     .end local v5           #printJob:Landroid/print/PrintJobInfo;
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 1626
     .end local v0           #appId:I
     .end local v1           #bucket:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     .end local v4           #j:I
@@ -226,10 +208,8 @@
     :cond_1
     monitor-exit v9
 
-    .line 1627
     return-void
 
-    .line 1626
     .end local v2           #bucketCount:I
     .end local v3           #i:I
     .end local v7           #tab:Ljava/lang/String;
@@ -251,7 +231,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1568
     iget-object v5, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->this$0:Lcom/android/server/print/UserState;
 
     #getter for: Lcom/android/server/print/UserState;->mLock:Ljava/lang/Object;
@@ -261,7 +240,6 @@
 
     monitor-enter v5
 
-    .line 1569
     :try_start_0
     iget-object v6, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->mPrintJobsForRunningApp:Landroid/util/SparseArray;
 
@@ -271,26 +249,21 @@
 
     check-cast v3, Ljava/util/List;
 
-    .line 1570
     .local v3, printJobsForApp:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     if-nez v3, :cond_0
 
-    .line 1571
     monitor-exit v5
 
     move-object v1, v4
 
-    .line 1581
     :goto_0
     return-object v1
 
-    .line 1573
     :cond_0
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 1574
     .local v2, printJobCount:I
     const/4 v0, 0x0
 
@@ -298,14 +271,12 @@
     :goto_1
     if-ge v0, v2, :cond_2
 
-    .line 1575
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/print/PrintJobInfo;
 
-    .line 1576
     .local v1, printJob:Landroid/print/PrintJobInfo;
     invoke-virtual {v1}, Landroid/print/PrintJobInfo;->getId()Landroid/print/PrintJobId;
 
@@ -317,12 +288,10 @@
 
     if-eqz v6, :cond_1
 
-    .line 1577
     monitor-exit v5
 
     goto :goto_0
 
-    .line 1580
     .end local v0           #i:I
     .end local v1           #printJob:Landroid/print/PrintJobInfo;
     .end local v2           #printJobCount:I
@@ -336,7 +305,6 @@
 
     throw v4
 
-    .line 1574
     .restart local v0       #i:I
     .restart local v1       #printJob:Landroid/print/PrintJobInfo;
     .restart local v2       #printJobCount:I
@@ -346,7 +314,6 @@
 
     goto :goto_1
 
-    .line 1580
     .end local v1           #printJob:Landroid/print/PrintJobInfo;
     :cond_2
     :try_start_1
@@ -356,7 +323,6 @@
 
     move-object v1, v4
 
-    .line 1581
     goto :goto_0
 .end method
 
@@ -374,7 +340,6 @@
     .end annotation
 
     .prologue
-    .line 1585
     iget-object v5, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->this$0:Lcom/android/server/print/UserState;
 
     #getter for: Lcom/android/server/print/UserState;->mLock:Ljava/lang/Object;
@@ -384,16 +349,13 @@
 
     monitor-enter v6
 
-    .line 1586
     const/4 v3, 0x0
 
-    .line 1587
     .local v3, printJobs:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     const/4 v5, -0x2
 
     if-ne p1, v5, :cond_2
 
-    .line 1588
     :try_start_0
     iget-object v5, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->mPrintJobsForRunningApp:Landroid/util/SparseArray;
 
@@ -403,7 +365,6 @@
 
     move-result v1
 
-    .line 1589
     .local v1, bucketCount:I
     const/4 v2, 0x0
 
@@ -415,7 +376,6 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 1590
     :try_start_1
     iget-object v5, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->mPrintJobsForRunningApp:Landroid/util/SparseArray;
 
@@ -425,25 +385,21 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 1591
     .local v0, bucket:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     if-nez v4, :cond_5
 
-    .line 1592
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1594
     .end local v4           #printJobs:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     .restart local v3       #printJobs:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     :goto_1
     :try_start_2
     invoke-interface {v3, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 1589
     add-int/lit8 v2, v2, 0x1
 
     move-object v4, v3
@@ -456,7 +412,6 @@
     :cond_0
     move-object v3, v4
 
-    .line 1605
     .end local v1           #bucketCount:I
     .end local v2           #i:I
     .end local v4           #printJobs:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
@@ -465,15 +420,12 @@
     :goto_2
     if-eqz v3, :cond_4
 
-    .line 1606
     monitor-exit v6
 
-    .line 1608
     .end local v3           #printJobs:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     :goto_3
     return-object v3
 
-    .line 1597
     .restart local v3       #printJobs:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     :cond_2
     iget-object v5, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->mPrintJobsForRunningApp:Landroid/util/SparseArray;
@@ -484,14 +436,11 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 1598
     .restart local v0       #bucket:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     if-eqz v0, :cond_1
 
-    .line 1599
     if-nez v3, :cond_3
 
-    .line 1600
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
@@ -500,7 +449,6 @@
     .restart local v4       #printJobs:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     move-object v3, v4
 
-    .line 1602
     .end local v4           #printJobs:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     .restart local v3       #printJobs:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     :cond_3
@@ -508,7 +456,6 @@
 
     goto :goto_2
 
-    .line 1609
     .end local v0           #bucket:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     :catchall_0
     move-exception v5
@@ -520,7 +467,6 @@
 
     throw v5
 
-    .line 1608
     :cond_4
     :try_start_3
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -535,7 +481,6 @@
 
     goto :goto_3
 
-    .line 1609
     .end local v3           #printJobs:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     .restart local v1       #bucketCount:I
     .restart local v2       #i:I
@@ -569,7 +514,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1526
     :try_start_0
     new-instance v3, Lcom/android/server/print/UserState$PrintJobForAppCache$1;
 
@@ -581,7 +525,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1539
     iget-object v2, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->this$0:Lcom/android/server/print/UserState;
 
     #getter for: Lcom/android/server/print/UserState;->mLock:Ljava/lang/Object;
@@ -591,7 +534,6 @@
 
     monitor-enter v3
 
-    .line 1540
     :try_start_1
     iget-object v2, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->mPrintJobsForRunningApp:Landroid/util/SparseArray;
 
@@ -601,45 +543,36 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 1541
     .local v0, printJobsForApp:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     if-nez v0, :cond_0
 
-    .line 1542
     new-instance v0, Ljava/util/ArrayList;
 
     .end local v0           #printJobsForApp:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1543
     .restart local v0       #printJobsForApp:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     iget-object v2, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->mPrintJobsForRunningApp:Landroid/util/SparseArray;
 
     invoke-virtual {v2, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1545
     :cond_0
     invoke-interface {v0, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1546
     monitor-exit v3
 
-    .line 1547
     const/4 v2, 0x1
 
     .end local v0           #printJobsForApp:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     :goto_0
     return v2
 
-    .line 1535
     :catch_0
     move-exception v1
 
-    .line 1537
     .local v1, re:Landroid/os/RemoteException;
     goto :goto_0
 
-    .line 1546
     .end local v1           #re:Landroid/os/RemoteException;
     :catchall_0
     move-exception v2
@@ -656,7 +589,6 @@
     .parameter "printJob"
 
     .prologue
-    .line 1551
     iget-object v4, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->this$0:Lcom/android/server/print/UserState;
 
     #getter for: Lcom/android/server/print/UserState;->mLock:Ljava/lang/Object;
@@ -666,7 +598,6 @@
 
     monitor-enter v5
 
-    .line 1552
     :try_start_0
     iget-object v4, p0, Lcom/android/server/print/UserState$PrintJobForAppCache;->mPrintJobsForRunningApp:Landroid/util/SparseArray;
 
@@ -680,24 +611,19 @@
 
     check-cast v3, Ljava/util/List;
 
-    .line 1554
     .local v3, printJobsForApp:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     if-nez v3, :cond_0
 
-    .line 1555
     monitor-exit v5
 
-    .line 1565
     :goto_0
     return-void
 
-    .line 1557
     :cond_0
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 1558
     .local v2, printJobCount:I
     const/4 v0, 0x0
 
@@ -705,14 +631,12 @@
     :goto_1
     if-ge v0, v2, :cond_2
 
-    .line 1559
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/print/PrintJobInfo;
 
-    .line 1560
     .local v1, oldPrintJob:Landroid/print/PrintJobInfo;
     invoke-virtual {v1}, Landroid/print/PrintJobInfo;->getId()Landroid/print/PrintJobId;
 
@@ -728,16 +652,13 @@
 
     if-eqz v4, :cond_1
 
-    .line 1561
     invoke-interface {v3, v0, p1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1558
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1564
     .end local v1           #oldPrintJob:Landroid/print/PrintJobInfo;
     :cond_2
     monitor-exit v5

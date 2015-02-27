@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 1804
     iput-object p1, p0, Lcom/android/server/NotificationManagerService$6;->this$0:Lcom/android/server/NotificationManagerService;
 
     iput p2, p0, Lcom/android/server/NotificationManagerService$6;->val$notifId:I
@@ -48,7 +47,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1807
     invoke-static {}, Lcom/android/server/NotificationManagerService;->access$3100()Landroid/net/Uri;
 
     move-result-object v1
@@ -63,7 +61,6 @@
 
     move-result-object v0
 
-    .line 1808
     .local v0, updateUri:Landroid/net/Uri;
     iget-object v1, p0, Lcom/android/server/NotificationManagerService$6;->this$0:Lcom/android/server/NotificationManagerService;
 
@@ -79,6 +76,5 @@
 
     invoke-virtual {v1, v0, v2, v3, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1810
     return-void
 .end method

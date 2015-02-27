@@ -28,7 +28,6 @@
     .parameter
 
     .prologue
-    .line 622
     iput-object p1, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;
 
     iput-object p3, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton$1;->val$this$0:Lcom/android/internal/view/menu/ActionMenuPresenter;
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 625
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;->this$0:Lcom/android/internal/view/menu/ActionMenuPresenter;
@@ -56,10 +54,8 @@
 
     if-nez v0, :cond_0
 
-    .line 626
     const/4 v0, 0x0
 
-    .line 629
     :goto_0
     return-object v0
 
@@ -84,14 +80,12 @@
     .locals 1
 
     .prologue
-    .line 634
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;->this$0:Lcom/android/internal/view/menu/ActionMenuPresenter;
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/ActionMenuPresenter;->showOverflowMenu()Z
 
-    .line 635
     const/4 v0, 0x1
 
     return v0
@@ -101,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 643
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;->this$0:Lcom/android/internal/view/menu/ActionMenuPresenter;
@@ -113,14 +106,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 644
     const/4 v0, 0x0
 
-    .line 648
     :goto_0
     return v0
 
-    .line 647
     :cond_0
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;
 
@@ -128,7 +118,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/ActionMenuPresenter;->hideOverflowMenu()Z
 
-    .line 648
     const/4 v0, 0x1
 
     goto :goto_0

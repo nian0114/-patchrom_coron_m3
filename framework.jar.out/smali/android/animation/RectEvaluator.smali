@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .parameter "endValue"
 
     .prologue
-    .line 40
     new-instance v0, Landroid/graphics/Rect;
 
     iget v1, p2, Landroid/graphics/Rect;->left:I
@@ -117,7 +115,6 @@
     .parameter "x2"
 
     .prologue
-    .line 23
     check-cast p2, Landroid/graphics/Rect;
 
     .end local p2

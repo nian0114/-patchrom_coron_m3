@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 1716
     new-instance v0, Landroid/widget/ScrollView$SavedState$1;
 
     invoke-direct {v0}, Landroid/widget/ScrollView$SavedState$1;-><init>()V
@@ -51,17 +50,14 @@
     .parameter "source"
 
     .prologue
-    .line 1699
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1700
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/ScrollView$SavedState;->scrollPosition:I
 
-    .line 1701
     return-void
 .end method
 
@@ -70,10 +66,8 @@
     .parameter "superState"
 
     .prologue
-    .line 1695
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1696
     return-void
 .end method
 
@@ -83,7 +77,6 @@
     .locals 2
 
     .prologue
-    .line 1711
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,7 +111,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -137,14 +130,11 @@
     .parameter "flags"
 
     .prologue
-    .line 1705
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1706
     iget v0, p0, Landroid/widget/ScrollView$SavedState;->scrollPosition:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1707
     return-void
 .end method

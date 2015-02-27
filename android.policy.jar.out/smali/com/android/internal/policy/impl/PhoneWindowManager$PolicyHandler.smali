@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 575
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 575
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     return-void
@@ -53,16 +51,13 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 578
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 597
     :goto_0
     return-void
 
-    .line 580
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -71,7 +66,6 @@
 
     goto :goto_0
 
-    .line 583
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -80,7 +74,6 @@
 
     goto :goto_0
 
-    .line 586
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -92,7 +85,6 @@
 
     goto :goto_0
 
-    .line 589
     :pswitch_3
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -104,13 +96,11 @@
 
     goto :goto_0
 
-    .line 592
     :pswitch_4
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-boolean v2, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mIsLongPress:Z
 
-    .line 593
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -119,7 +109,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->dispatchMediaKeyWithWakeLockToAudioService(Landroid/view/KeyEvent;)V
 
-    .line 594
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -134,7 +123,6 @@
 
     goto :goto_0
 
-    .line 578
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

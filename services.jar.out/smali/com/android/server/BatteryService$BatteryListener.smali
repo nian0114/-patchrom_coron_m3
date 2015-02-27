@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 992
     iput-object p1, p0, Lcom/android/server/BatteryService$BatteryListener;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/os/IBatteryPropertiesListener$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 992
     invoke-direct {p0, p1}, Lcom/android/server/BatteryService$BatteryListener;-><init>(Lcom/android/server/BatteryService;)V
 
     return-void
@@ -51,12 +49,10 @@
     .parameter "props"
 
     .prologue
-    .line 994
     iget-object v0, p0, Lcom/android/server/BatteryService$BatteryListener;->this$0:Lcom/android/server/BatteryService;
 
     #calls: Lcom/android/server/BatteryService;->update(Landroid/os/BatteryProperties;)V
     invoke-static {v0, p1}, Lcom/android/server/BatteryService;->access$1300(Lcom/android/server/BatteryService;Landroid/os/BatteryProperties;)V
 
-    .line 995
     return-void
 .end method

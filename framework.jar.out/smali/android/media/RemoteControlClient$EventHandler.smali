@@ -26,13 +26,10 @@
     .parameter "looper"
 
     .prologue
-    .line 1242
     iput-object p1, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
-    .line 1243
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1244
     return-void
 .end method
 
@@ -47,12 +44,10 @@
 
     const/4 v1, 0x1
 
-    .line 1248
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1307
     const-string v0, "RemoteControlClient"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -83,11 +78,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1309
     :goto_0
     return-void
 
-    .line 1250
     :pswitch_0
     iget-object v0, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -98,7 +91,6 @@
 
     monitor-enter v1
 
-    .line 1251
     :try_start_0
     iget-object v2, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -109,7 +101,6 @@
     #calls: Landroid/media/RemoteControlClient;->sendPlaybackState_syncCacheLock(Landroid/media/IRemoteControlDisplay;)V
     invoke-static {v2, v0}, Landroid/media/RemoteControlClient;->access$800(Landroid/media/RemoteControlClient;Landroid/media/IRemoteControlDisplay;)V
 
-    .line 1252
     monitor-exit v1
 
     goto :goto_0
@@ -123,7 +114,6 @@
 
     throw v0
 
-    .line 1255
     :pswitch_1
     iget-object v0, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -134,7 +124,6 @@
 
     monitor-enter v1
 
-    .line 1256
     :try_start_1
     iget-object v2, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -145,7 +134,6 @@
     #calls: Landroid/media/RemoteControlClient;->sendMetadata_syncCacheLock(Landroid/media/IRemoteControlDisplay;)V
     invoke-static {v2, v0}, Landroid/media/RemoteControlClient;->access$400(Landroid/media/RemoteControlClient;Landroid/media/IRemoteControlDisplay;)V
 
-    .line 1257
     monitor-exit v1
 
     goto :goto_0
@@ -159,7 +147,6 @@
 
     throw v0
 
-    .line 1260
     :pswitch_2
     iget-object v0, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -170,7 +157,6 @@
 
     monitor-enter v1
 
-    .line 1261
     :try_start_2
     iget-object v2, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -181,7 +167,6 @@
     #calls: Landroid/media/RemoteControlClient;->sendTransportControlInfo_syncCacheLock(Landroid/media/IRemoteControlDisplay;)V
     invoke-static {v2, v0}, Landroid/media/RemoteControlClient;->access$900(Landroid/media/RemoteControlClient;Landroid/media/IRemoteControlDisplay;)V
 
-    .line 1262
     monitor-exit v1
 
     goto :goto_0
@@ -195,7 +180,6 @@
 
     throw v0
 
-    .line 1265
     :pswitch_3
     iget-object v0, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -206,7 +190,6 @@
 
     monitor-enter v1
 
-    .line 1266
     :try_start_3
     iget-object v2, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -221,7 +204,6 @@
     #calls: Landroid/media/RemoteControlClient;->sendArtwork_syncCacheLock(Landroid/media/IRemoteControlDisplay;II)V
     invoke-static {v2, v0, v3, v4}, Landroid/media/RemoteControlClient;->access$500(Landroid/media/RemoteControlClient;Landroid/media/IRemoteControlDisplay;II)V
 
-    .line 1268
     monitor-exit v1
 
     goto :goto_0
@@ -235,7 +217,6 @@
 
     throw v0
 
-    .line 1271
     :pswitch_4
     iget-object v0, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -246,7 +227,6 @@
 
     monitor-enter v1
 
-    .line 1272
     :try_start_4
     iget-object v2, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -261,7 +241,6 @@
     #calls: Landroid/media/RemoteControlClient;->sendMetadataWithArtwork_syncCacheLock(Landroid/media/IRemoteControlDisplay;II)V
     invoke-static {v2, v0, v3, v4}, Landroid/media/RemoteControlClient;->access$300(Landroid/media/RemoteControlClient;Landroid/media/IRemoteControlDisplay;II)V
 
-    .line 1274
     monitor-exit v1
 
     goto :goto_0
@@ -275,7 +254,6 @@
 
     throw v0
 
-    .line 1277
     :pswitch_5
     iget-object v0, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -286,7 +264,6 @@
 
     goto :goto_0
 
-    .line 1280
     :pswitch_6
     iget-object v0, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -297,7 +274,6 @@
 
     goto/16 :goto_0
 
-    .line 1283
     :pswitch_7
     iget-object v1, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -314,7 +290,6 @@
 
     goto/16 :goto_0
 
-    .line 1286
     :pswitch_8
     iget-object v1, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -327,7 +302,6 @@
 
     goto/16 :goto_0
 
-    .line 1289
     :pswitch_9
     iget-object v1, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -344,7 +318,6 @@
 
     goto/16 :goto_0
 
-    .line 1292
     :pswitch_a
     iget-object v1, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -363,7 +336,6 @@
 
     goto/16 :goto_0
 
-    .line 1295
     :pswitch_b
     iget-object v0, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -372,7 +344,6 @@
 
     goto/16 :goto_0
 
-    .line 1298
     :pswitch_c
     iget-object v3, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -395,7 +366,6 @@
 
     goto :goto_1
 
-    .line 1301
     :pswitch_d
     iget-object v0, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -410,7 +380,6 @@
 
     goto/16 :goto_0
 
-    .line 1304
     :pswitch_e
     iget-object v3, p0, Landroid/media/RemoteControlClient$EventHandler;->this$0:Landroid/media/RemoteControlClient;
 
@@ -433,7 +402,6 @@
 
     goto :goto_2
 
-    .line 1248
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

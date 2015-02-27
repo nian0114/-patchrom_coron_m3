@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 228
     iput-object p1, p0, Landroid/os/AsyncTask$SerialExecutor$1;->this$0:Landroid/os/AsyncTask$SerialExecutor;
 
     iput-object p2, p0, Landroid/os/AsyncTask$SerialExecutor$1;->val$r:Ljava/lang/Runnable;
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 231
     :try_start_0
     iget-object v0, p0, Landroid/os/AsyncTask$SerialExecutor$1;->val$r:Ljava/lang/Runnable;
 
@@ -54,15 +52,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 233
     iget-object v0, p0, Landroid/os/AsyncTask$SerialExecutor$1;->this$0:Landroid/os/AsyncTask$SerialExecutor;
 
     invoke-virtual {v0}, Landroid/os/AsyncTask$SerialExecutor;->scheduleNext()V
 
-    .line 235
     return-void
 
-    .line 233
     :catchall_0
     move-exception v0
 

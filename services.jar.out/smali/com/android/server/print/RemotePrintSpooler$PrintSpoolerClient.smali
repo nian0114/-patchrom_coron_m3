@@ -33,17 +33,14 @@
     .parameter "spooler"
 
     .prologue
-    .line 578
     invoke-direct {p0}, Landroid/print/IPrintSpoolerClient$Stub;-><init>()V
 
-    .line 579
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerClient;->mWeakSpooler:Ljava/lang/ref/WeakReference;
 
-    .line 580
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .parameter "printService"
 
     .prologue
-    .line 597
     iget-object v3, p0, Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerClient;->mWeakSpooler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -63,16 +59,13 @@
 
     check-cast v2, Lcom/android/server/print/RemotePrintSpooler;
 
-    .line 598
     .local v2, spooler:Lcom/android/server/print/RemotePrintSpooler;
     if-eqz v2, :cond_0
 
-    .line 599
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 601
     .local v0, identity:J
     :try_start_0
     #getter for: Lcom/android/server/print/RemotePrintSpooler;->mCallbacks:Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerCallbacks;
@@ -84,15 +77,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 603
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 606
     .end local v0           #identity:J
     :cond_0
     return-void
 
-    .line 603
     .restart local v0       #identity:J
     :catchall_0
     move-exception v3
@@ -106,7 +96,6 @@
     .locals 4
 
     .prologue
-    .line 610
     iget-object v3, p0, Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerClient;->mWeakSpooler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -115,16 +104,13 @@
 
     check-cast v2, Lcom/android/server/print/RemotePrintSpooler;
 
-    .line 611
     .local v2, spooler:Lcom/android/server/print/RemotePrintSpooler;
     if-eqz v2, :cond_0
 
-    .line 612
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 614
     .local v0, identity:J
     :try_start_0
     #calls: Lcom/android/server/print/RemotePrintSpooler;->onAllPrintJobsHandled()V
@@ -132,15 +118,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 616
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 619
     .end local v0           #identity:J
     :cond_0
     return-void
 
-    .line 616
     .restart local v0       #identity:J
     :catchall_0
     move-exception v3
@@ -155,7 +138,6 @@
     .parameter "printJob"
 
     .prologue
-    .line 584
     iget-object v3, p0, Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerClient;->mWeakSpooler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -164,16 +146,13 @@
 
     check-cast v2, Lcom/android/server/print/RemotePrintSpooler;
 
-    .line 585
     .local v2, spooler:Lcom/android/server/print/RemotePrintSpooler;
     if-eqz v2, :cond_0
 
-    .line 586
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 588
     .local v0, identity:J
     :try_start_0
     #getter for: Lcom/android/server/print/RemotePrintSpooler;->mCallbacks:Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerCallbacks;
@@ -185,15 +164,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 590
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 593
     .end local v0           #identity:J
     :cond_0
     return-void
 
-    .line 590
     .restart local v0       #identity:J
     :catchall_0
     move-exception v3
@@ -208,7 +184,6 @@
     .parameter "printJob"
 
     .prologue
-    .line 623
     iget-object v3, p0, Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerClient;->mWeakSpooler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -217,16 +192,13 @@
 
     check-cast v2, Lcom/android/server/print/RemotePrintSpooler;
 
-    .line 624
     .local v2, spooler:Lcom/android/server/print/RemotePrintSpooler;
     if-eqz v2, :cond_0
 
-    .line 625
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 627
     .local v0, identity:J
     :try_start_0
     #calls: Lcom/android/server/print/RemotePrintSpooler;->onPrintJobStateChanged(Landroid/print/PrintJobInfo;)V
@@ -234,15 +206,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 629
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 632
     .end local v0           #identity:J
     :cond_0
     return-void
 
-    .line 629
     .restart local v0       #identity:J
     :catchall_0
     move-exception v3

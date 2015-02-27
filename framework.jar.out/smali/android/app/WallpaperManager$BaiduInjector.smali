@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 616
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .parameter "x3"
 
     .prologue
-    .line 616
     invoke-static {p0, p1, p2, p3}, Landroid/app/WallpaperManager$BaiduInjector;->setWallpaperOffsets(Landroid/app/WallpaperManager;Landroid/os/IBinder;FF)Z
 
     move-result v0
@@ -49,7 +47,6 @@
     .parameter "height"
 
     .prologue
-    .line 645
     return-object p1
 .end method
 
@@ -63,16 +60,13 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 620
     invoke-virtual {p0}, Landroid/app/WallpaperManager;->getDesiredMinimumWidth()I
 
     move-result v8
 
-    .line 621
     .local v8, minWidth:I
     const/4 v7, -0x1
 
-    .line 623
     .local v7, bmpWidth:I
     invoke-static {}, Landroid/app/WallpaperManager;->access$sget-sGlobals-60adc1()Landroid/app/WallpaperManager$Globals;
 
@@ -87,25 +81,20 @@
 
     move-result-object v6
 
-    .line 624
     .local v6, bitmap:Landroid/graphics/Bitmap;
     if-eqz v6, :cond_0
 
-    .line 625
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v7
 
-    .line 628
     :cond_0
     if-lez v7, :cond_1
 
     if-ge v7, v8, :cond_1
 
-    .line 629
     const/high16 p2, 0x3f00
 
-    .line 634
     :cond_1
     :try_start_0
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowSession()Landroid/view/IWindowSession;
@@ -132,11 +121,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 640
     :goto_0
     return v9
 
-    .line 637
     :catch_0
     move-exception v0
 

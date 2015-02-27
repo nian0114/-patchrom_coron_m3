@@ -30,18 +30,13 @@
     .parameter "descResId"
 
     .prologue
-    .line 921
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 922
     iput p1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo$CapabilityInfo;->capability:I
 
-    .line 923
     iput p2, p0, Landroid/accessibilityservice/AccessibilityServiceInfo$CapabilityInfo;->titleResId:I
 
-    .line 924
     iput p3, p0, Landroid/accessibilityservice/AccessibilityServiceInfo$CapabilityInfo;->descResId:I
 
-    .line 925
     return-void
 .end method

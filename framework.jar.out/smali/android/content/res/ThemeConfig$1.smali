@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .parameter "source"
 
     .prologue
-    .line 199
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 200
     .local v0, json:Ljava/lang/String;
     invoke-static {v0}, Landroid/content/res/ThemeConfig$JsonSerializer;->fromJson(Ljava/lang/String;)Landroid/content/res/ThemeConfig;
 
@@ -64,7 +61,6 @@
     .parameter "x0"
 
     .prologue
-    .line 197
     invoke-virtual {p0, p1}, Landroid/content/res/ThemeConfig$1;->createFromParcel(Landroid/os/Parcel;)Landroid/content/res/ThemeConfig;
 
     move-result-object v0
@@ -77,7 +73,6 @@
     .parameter "size"
 
     .prologue
-    .line 204
     new-array v0, p1, [Landroid/content/res/ThemeConfig;
 
     return-object v0
@@ -88,7 +83,6 @@
     .parameter "x0"
 
     .prologue
-    .line 197
     invoke-virtual {p0, p1}, Landroid/content/res/ThemeConfig$1;->newArray(I)[Landroid/content/res/ThemeConfig;
 
     move-result-object v0

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 686
     iput-object p1, p0, Landroid/media/WebVttParser$1;->this$0:Landroid/media/WebVttParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +41,5 @@
     .parameter "line"
 
     .prologue
-    .line 688
     return-void
 .end method

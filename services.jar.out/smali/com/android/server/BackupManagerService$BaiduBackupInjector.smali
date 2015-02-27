@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1409
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,21 +33,18 @@
     .parameter "service"
 
     .prologue
-    .line 1412
     new-instance v4, Lcom/android/server/BackupManagerService$BaiduConnection;
 
     invoke-direct {v4, p0}, Lcom/android/server/BackupManagerService$BaiduConnection;-><init>(Lcom/android/server/BackupManagerService;)V
 
     sput-object v4, Lcom/android/server/BackupManagerService$BaiduBackupInjector;->mBaiduConnection:Landroid/content/ServiceConnection;
 
-    .line 1413
     const-string v4, "BackupManagerService"
 
     const-string v5, "registerBaiduTransport"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1415
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v4, "com.baidu.bsf.service"
@@ -57,7 +53,6 @@
 
     invoke-direct {v0, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1418
     .local v0, componentName:Landroid/content/ComponentName;
     :try_start_0
     #getter for: Lcom/android/server/BackupManagerService;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -75,7 +70,6 @@
 
     move-result-object v1
 
-    .line 1420
     .local v1, info:Landroid/content/pm/ApplicationInfo;
     iget v4, v1, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -83,7 +77,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1421
     new-instance v4, Landroid/content/Intent;
 
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
@@ -92,7 +85,6 @@
 
     move-result-object v2
 
-    .line 1422
     .local v2, intent:Landroid/content/Intent;
     #getter for: Lcom/android/server/BackupManagerService;->mContext:Landroid/content/Context;
     invoke-static {p0}, Lcom/android/server/BackupManagerService;->access$900(Lcom/android/server/BackupManagerService;)Landroid/content/Context;
@@ -107,18 +99,15 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1427
     .end local v1           #info:Landroid/content/pm/ApplicationInfo;
     .end local v2           #intent:Landroid/content/Intent;
     :cond_0
     :goto_0
     return-void
 
-    .line 1424
     :catch_0
     move-exception v3
 
-    .line 1425
     .local v3, nnf:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v4, "BackupManagerService"
 

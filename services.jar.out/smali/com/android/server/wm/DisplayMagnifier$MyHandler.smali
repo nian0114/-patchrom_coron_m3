@@ -37,13 +37,10 @@
     .parameter "looper"
 
     .prologue
-    .line 699
     iput-object p1, p0, Lcom/android/server/wm/DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/DisplayMagnifier;
 
-    .line 700
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 701
     return-void
 .end method
 
@@ -54,22 +51,18 @@
     .parameter "message"
 
     .prologue
-    .line 705
     iget v7, p1, Landroid/os/Message;->what:I
 
     packed-switch v7, :pswitch_data_0
 
-    .line 754
     :goto_0
     return-void
 
-    .line 707
     :pswitch_0
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Landroid/graphics/Region;
 
-    .line 709
     .local v2, bounds:Landroid/graphics/Region;
     :try_start_0
     iget-object v7, p0, Lcom/android/server/wm/DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/DisplayMagnifier;
@@ -84,16 +77,13 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 713
     invoke-virtual {v2}, Landroid/graphics/Region;->recycle()V
 
     goto :goto_0
 
-    .line 710
     :catch_0
     move-exception v7
 
-    .line 713
     invoke-virtual {v2}, Landroid/graphics/Region;->recycle()V
 
     goto :goto_0
@@ -105,30 +95,24 @@
 
     throw v7
 
-    .line 717
     .end local v2           #bounds:Landroid/graphics/Region;
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 718
     .local v0, args:Lcom/android/internal/os/SomeArgs;
     iget v3, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 719
     .local v3, left:I
     iget v6, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 720
     .local v6, top:I
     iget v4, v0, Lcom/android/internal/os/SomeArgs;->argi3:I
 
-    .line 721
     .local v4, right:I
     iget v1, v0, Lcom/android/internal/os/SomeArgs;->argi4:I
 
-    .line 723
     .local v1, bottom:I
     :try_start_1
     iget-object v7, p0, Lcom/android/server/wm/DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/DisplayMagnifier;
@@ -143,16 +127,13 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 727
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
 
-    .line 724
     :catch_1
     move-exception v7
 
-    .line 727
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
@@ -164,7 +145,6 @@
 
     throw v7
 
-    .line 732
     .end local v0           #args:Lcom/android/internal/os/SomeArgs;
     .end local v1           #bottom:I
     .end local v3           #left:I
@@ -185,17 +165,14 @@
 
     goto :goto_0
 
-    .line 733
     :catch_2
     move-exception v7
 
     goto :goto_0
 
-    .line 738
     :pswitch_3
     iget v5, p1, Landroid/os/Message;->arg1:I
 
-    .line 740
     .local v5, rotation:I
     :try_start_3
     iget-object v7, p0, Lcom/android/server/wm/DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/DisplayMagnifier;
@@ -211,13 +188,11 @@
 
     goto :goto_0
 
-    .line 741
     :catch_3
     move-exception v7
 
     goto :goto_0
 
-    .line 746
     .end local v5           #rotation:I
     :pswitch_4
     iget-object v7, p0, Lcom/android/server/wm/DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/DisplayMagnifier;
@@ -231,7 +206,6 @@
 
     monitor-enter v8
 
-    .line 747
     :try_start_4
     iget-object v7, p0, Lcom/android/server/wm/DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/DisplayMagnifier;
 
@@ -246,7 +220,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 748
     iget-object v7, p0, Lcom/android/server/wm/DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/DisplayMagnifier;
 
     #getter for: Lcom/android/server/wm/DisplayMagnifier;->mMagnifedViewport:Lcom/android/server/wm/DisplayMagnifier$MagnifiedViewport;
@@ -260,7 +233,6 @@
 
     invoke-virtual {v7, v9, v10}, Lcom/android/server/wm/DisplayMagnifier$MagnifiedViewport;->setMagnifiedRegionBorderShownLocked(ZZ)V
 
-    .line 749
     iget-object v7, p0, Lcom/android/server/wm/DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/DisplayMagnifier;
 
     #getter for: Lcom/android/server/wm/DisplayMagnifier;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
@@ -270,7 +242,6 @@
 
     invoke-virtual {v7}, Lcom/android/server/wm/WindowManagerService;->scheduleAnimationLocked()V
 
-    .line 751
     :cond_0
     monitor-exit v8
 
@@ -285,7 +256,6 @@
 
     throw v7
 
-    .line 705
     nop
 
     :pswitch_data_0

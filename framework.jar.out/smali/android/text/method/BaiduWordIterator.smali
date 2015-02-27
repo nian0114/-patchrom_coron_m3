@@ -20,21 +20,16 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 44
     invoke-direct {p0}, Landroid/text/method/WordIterator;-><init>()V
 
-    .line 37
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/text/method/BaiduWordIterator;->mHasWord:Z
 
-    .line 38
     iput v1, p0, Landroid/text/method/BaiduWordIterator;->mWordStart:I
 
-    .line 39
     iput v1, p0, Landroid/text/method/BaiduWordIterator;->mWordEnd:I
 
-    .line 45
     return-void
 .end method
 
@@ -45,21 +40,16 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 52
     invoke-direct {p0, p1}, Landroid/text/method/WordIterator;-><init>(Ljava/util/Locale;)V
 
-    .line 37
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/text/method/BaiduWordIterator;->mHasWord:Z
 
-    .line 38
     iput v1, p0, Landroid/text/method/BaiduWordIterator;->mWordStart:I
 
-    .line 39
     iput v1, p0, Landroid/text/method/BaiduWordIterator;->mWordEnd:I
 
-    .line 53
     return-void
 .end method
 
@@ -67,19 +57,16 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Landroid/text/method/BaiduWordIterator;->mWordSegment:Lcom/android/internal/util/WordSegment;
 
     if-nez v0, :cond_0
 
-    .line 57
     new-instance v0, Lcom/android/internal/util/WordSegment;
 
     invoke-direct {v0}, Lcom/android/internal/util/WordSegment;-><init>()V
 
     iput-object v0, p0, Landroid/text/method/BaiduWordIterator;->mWordSegment:Lcom/android/internal/util/WordSegment;
 
-    .line 59
     :cond_0
     return-void
 .end method
@@ -91,15 +78,12 @@
     .parameter "offset"
 
     .prologue
-    .line 88
     iget-boolean v0, p0, Landroid/text/method/BaiduWordIterator;->mHasWord:Z
 
     if-eqz v0, :cond_0
 
-    .line 89
     iget v0, p0, Landroid/text/method/BaiduWordIterator;->mWordStart:I
 
-    .line 91
     :goto_0
     return v0
 
@@ -116,15 +100,12 @@
     .parameter "offset"
 
     .prologue
-    .line 108
     iget-boolean v0, p0, Landroid/text/method/BaiduWordIterator;->mHasWord:Z
 
     if-eqz v0, :cond_0
 
-    .line 109
     iget v0, p0, Landroid/text/method/BaiduWordIterator;->mWordEnd:I
 
-    .line 111
     :goto_0
     return v0
 
@@ -147,10 +128,8 @@
 
     const/4 v2, 0x0
 
-    .line 62
     invoke-direct {p0}, Landroid/text/method/BaiduWordIterator;->getWordSegment()V
 
-    .line 63
     iget-object v1, p0, Landroid/text/method/BaiduWordIterator;->mWordSegment:Lcom/android/internal/util/WordSegment;
 
     invoke-virtual {v1, p1, p2, p3}, Lcom/android/internal/util/WordSegment;->setCharSequence(Ljava/lang/CharSequence;II)Z
@@ -159,37 +138,30 @@
 
     if-eqz v1, :cond_0
 
-    .line 64
     iput-boolean v3, p0, Landroid/text/method/BaiduWordIterator;->mHasWord:Z
 
-    .line 65
     iget-object v1, p0, Landroid/text/method/BaiduWordIterator;->mWordSegment:Lcom/android/internal/util/WordSegment;
 
     invoke-virtual {v1, p2}, Lcom/android/internal/util/WordSegment;->caculateWordSegment(I)[I
 
     move-result-object v0
 
-    .line 66
     .local v0, result:[I
     aget v1, v0, v2
 
     iput v1, p0, Landroid/text/method/BaiduWordIterator;->mWordStart:I
 
-    .line 67
     aget v1, v0, v3
 
     iput v1, p0, Landroid/text/method/BaiduWordIterator;->mWordEnd:I
 
-    .line 73
     .end local v0           #result:[I
     :goto_0
     return-void
 
-    .line 69
     :cond_0
     iput-boolean v2, p0, Landroid/text/method/BaiduWordIterator;->mHasWord:Z
 
-    .line 70
     invoke-super {p0, p1, p2, p3}, Landroid/text/method/WordIterator;->setCharSequence(Ljava/lang/CharSequence;II)V
 
     goto :goto_0

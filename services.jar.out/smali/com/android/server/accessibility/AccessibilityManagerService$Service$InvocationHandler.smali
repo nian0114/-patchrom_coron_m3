@@ -35,17 +35,14 @@
     .parameter "looper"
 
     .prologue
-    .line 2516
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$Service$InvocationHandler;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
-    .line 2517
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 2518
     return-void
 .end method
 
@@ -56,14 +53,11 @@
     .parameter "message"
 
     .prologue
-    .line 2522
     iget v4, p1, Landroid/os/Message;->what:I
 
-    .line 2523
     .local v4, type:I
     packed-switch v4, :pswitch_data_0
 
-    .line 2541
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -88,33 +82,27 @@
 
     throw v5
 
-    .line 2525
     :pswitch_0
     iget v2, p1, Landroid/os/Message;->arg1:I
 
-    .line 2526
     .local v2, gestureId:I
     iget-object v5, p0, Lcom/android/server/accessibility/AccessibilityManagerService$Service$InvocationHandler;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
     #calls: Lcom/android/server/accessibility/AccessibilityManagerService$Service;->notifyGestureInternal(I)V
     invoke-static {v5, v2}, Lcom/android/server/accessibility/AccessibilityManagerService$Service;->access$3700(Lcom/android/server/accessibility/AccessibilityManagerService$Service;I)V
 
-    .line 2544
     .end local v2           #gestureId:I
     :goto_0
     return-void
 
-    .line 2529
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/view/KeyEvent;
 
-    .line 2530
     .local v0, event:Landroid/view/KeyEvent;
     iget v3, p1, Landroid/os/Message;->arg1:I
 
-    .line 2531
     .local v3, policyFlags:I
     iget-object v5, p0, Lcom/android/server/accessibility/AccessibilityManagerService$Service$InvocationHandler;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
@@ -123,7 +111,6 @@
 
     goto :goto_0
 
-    .line 2534
     .end local v0           #event:Landroid/view/KeyEvent;
     .end local v3           #policyFlags:I
     :pswitch_2
@@ -134,13 +121,11 @@
 
     goto :goto_0
 
-    .line 2537
     :pswitch_3
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/accessibility/AccessibilityManagerService$PendingEvent;
 
-    .line 2538
     .local v1, eventState:Lcom/android/server/accessibility/AccessibilityManagerService$PendingEvent;
     iget-object v5, p0, Lcom/android/server/accessibility/AccessibilityManagerService$Service$InvocationHandler;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
@@ -152,7 +137,6 @@
 
     goto :goto_0
 
-    .line 2523
     nop
 
     :pswitch_data_0

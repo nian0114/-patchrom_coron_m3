@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 367
     iput-object p1, p0, Lcom/android/server/location/FlpHardwareProvider$NetworkLocationListener;->this$0:Lcom/android/server/location/FlpHardwareProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .parameter "x1"
 
     .prologue
-    .line 367
     invoke-direct {p0, p1}, Lcom/android/server/location/FlpHardwareProvider$NetworkLocationListener;-><init>(Lcom/android/server/location/FlpHardwareProvider;)V
 
     return-void
@@ -54,7 +52,6 @@
     .parameter "location"
 
     .prologue
-    .line 370
     const-string v0, "network"
 
     invoke-virtual {p1}, Landroid/location/Location;->getProvider()Ljava/lang/String;
@@ -73,12 +70,10 @@
 
     if-nez v0, :cond_1
 
-    .line 378
     :cond_0
     :goto_0
     return-void
 
-    .line 377
     :cond_1
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider$NetworkLocationListener;->this$0:Lcom/android/server/location/FlpHardwareProvider;
 
@@ -93,7 +88,6 @@
     .parameter "provider"
 
     .prologue
-    .line 387
     return-void
 .end method
 
@@ -102,7 +96,6 @@
     .parameter "provider"
 
     .prologue
-    .line 384
     return-void
 .end method
 
@@ -113,6 +106,5 @@
     .parameter "extras"
 
     .prologue
-    .line 381
     return-void
 .end method

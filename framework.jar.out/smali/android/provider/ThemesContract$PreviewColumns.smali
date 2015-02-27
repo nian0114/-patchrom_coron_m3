@@ -77,10 +77,9 @@
     .locals 2
 
     .prologue
-    .line 389
     sget-object v0, Landroid/provider/ThemesContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "previews"
+    const-string v1, "previews"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -88,7 +87,6 @@
 
     sput-object v0, Landroid/provider/ThemesContract$PreviewColumns;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 396
     sget-object v0, Landroid/provider/ThemesContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "applied_previews"
@@ -106,7 +104,6 @@
     .locals 0
 
     .prologue
-    .line 388
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

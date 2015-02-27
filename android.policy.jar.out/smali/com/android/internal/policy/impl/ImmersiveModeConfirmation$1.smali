@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 79
     iput-object p1, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$1;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 82
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$1;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
 
     const/4 v1, 0x0
@@ -48,6 +46,5 @@
     #setter for: Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;->mUiContext:Landroid/content/Context;
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;->access$102(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;Landroid/content/Context;)Landroid/content/Context;
 
-    .line 83
     return-void
 .end method

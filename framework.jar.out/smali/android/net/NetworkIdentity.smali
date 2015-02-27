@@ -31,27 +31,20 @@
     .parameter "roaming"
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput p1, p0, Landroid/net/NetworkIdentity;->mType:I
 
-    .line 57
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/net/NetworkIdentity;->mSubType:I
 
-    .line 58
     iput-object p3, p0, Landroid/net/NetworkIdentity;->mSubscriberId:Ljava/lang/String;
 
-    .line 59
     iput-object p4, p0, Landroid/net/NetworkIdentity;->mNetworkId:Ljava/lang/String;
 
-    .line 60
     iput-boolean p5, p0, Landroid/net/NetworkIdentity;->mRoaming:Z
 
-    .line 61
     return-void
 .end method
 
@@ -61,14 +54,12 @@
     .parameter "state"
 
     .prologue
-    .line 142
     iget-object v0, p1, Landroid/net/NetworkState;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v1
 
-    .line 143
     .local v1, type:I
     iget-object v0, p1, Landroid/net/NetworkState;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -76,19 +67,15 @@
 
     move-result v2
 
-    .line 148
     .local v2, subType:I
     const/4 v3, 0x0
 
-    .line 149
     .local v3, subscriberId:Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 150
     .local v4, networkId:Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 152
     .local v5, roaming:Z
     invoke-static {v1}, Landroid/net/ConnectivityManager;->isNetworkTypeMobile(I)Z
 
@@ -96,20 +83,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 153
     invoke-static {}, Landroid/net/NetworkIdentity;->isDdsRoaming()Z
 
     move-result v5
 
-    .line 154
     iget-object v0, p1, Landroid/net/NetworkState;->subscriberId:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 155
     iget-object v3, p1, Landroid/net/NetworkState;->subscriberId:Ljava/lang/String;
 
-    .line 172
     :cond_0
     :goto_0
     new-instance v0, Landroid/net/NetworkIdentity;
@@ -118,7 +101,6 @@
 
     return-object v0
 
-    .line 158
     :cond_1
     invoke-static {}, Landroid/net/NetworkIdentity;->getDdsSubscriberId()Ljava/lang/String;
 
@@ -126,25 +108,21 @@
 
     goto :goto_0
 
-    .line 161
     :cond_2
     const/4 v0, 0x1
 
     if-ne v1, v0, :cond_0
 
-    .line 162
     iget-object v0, p1, Landroid/net/NetworkState;->networkId:Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
-    .line 163
     iget-object v4, p1, Landroid/net/NetworkState;->networkId:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 165
     :cond_3
-    const-string/jumbo v0, "wifi"
+    const-string v0, "wifi"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -152,13 +130,11 @@
 
     check-cast v7, Landroid/net/wifi/WifiManager;
 
-    .line 167
     .local v7, wifi:Landroid/net/wifi/WifiManager;
     invoke-virtual {v7}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v6
 
-    .line 168
     .local v6, info:Landroid/net/wifi/WifiInfo;
     if-eqz v6, :cond_4
 
@@ -179,18 +155,15 @@
     .locals 3
 
     .prologue
-    .line 186
     invoke-static {}, Landroid/telephony/MSimTelephonyManager;->getDefault()Landroid/telephony/MSimTelephonyManager;
 
     move-result-object v0
 
-    .line 187
     .local v0, mtm:Landroid/telephony/MSimTelephonyManager;
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v1
 
-    .line 188
     .local v1, tm:Landroid/telephony/TelephonyManager;
     invoke-virtual {v0}, Landroid/telephony/MSimTelephonyManager;->isMultiSimEnabled()Z
 
@@ -198,7 +171,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 189
     invoke-virtual {v0}, Landroid/telephony/MSimTelephonyManager;->getPreferredDataSubscription()I
 
     move-result v2
@@ -207,7 +179,6 @@
 
     move-result-object v2
 
-    .line 191
     :goto_0
     return-object v2
 
@@ -229,18 +200,15 @@
 
     const/4 v3, 0x0
 
-    .line 196
     invoke-static {}, Landroid/telephony/MSimTelephonyManager;->getDefault()Landroid/telephony/MSimTelephonyManager;
 
     move-result-object v0
 
-    .line 197
     .local v0, mtm:Landroid/telephony/MSimTelephonyManager;
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v1
 
-    .line 198
     .local v1, tm:Landroid/telephony/TelephonyManager;
     invoke-virtual {v0}, Landroid/telephony/MSimTelephonyManager;->isMultiSimEnabled()Z
 
@@ -248,7 +216,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 199
     invoke-virtual {v0}, Landroid/telephony/MSimTelephonyManager;->getPreferredDataSubscription()I
 
     move-result v4
@@ -259,7 +226,6 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 202
     :cond_0
     :goto_0
     return v2
@@ -267,10 +233,8 @@
     :cond_1
     move v2, v3
 
-    .line 199
     goto :goto_0
 
-    .line 202
     :cond_2
     invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getSimState()I
 
@@ -287,18 +251,15 @@
     .locals 3
 
     .prologue
-    .line 176
     invoke-static {}, Landroid/telephony/MSimTelephonyManager;->getDefault()Landroid/telephony/MSimTelephonyManager;
 
     move-result-object v0
 
-    .line 177
     .local v0, mtm:Landroid/telephony/MSimTelephonyManager;
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v1
 
-    .line 178
     .local v1, tm:Landroid/telephony/TelephonyManager;
     invoke-virtual {v0}, Landroid/telephony/MSimTelephonyManager;->isMultiSimEnabled()Z
 
@@ -306,7 +267,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 179
     invoke-virtual {v0}, Landroid/telephony/MSimTelephonyManager;->getPreferredDataSubscription()I
 
     move-result v2
@@ -315,7 +275,6 @@
 
     move-result v2
 
-    .line 181
     :goto_0
     return v2
 
@@ -332,7 +291,6 @@
     .parameter "subscriberId"
 
     .prologue
-    .line 127
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -343,17 +301,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 133
     .end local p0
     :goto_0
     return-object p0
 
-    .line 129
     .restart local p0
     :cond_0
     if-eqz p0, :cond_1
 
-    .line 131
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -390,9 +345,8 @@
 
     goto :goto_0
 
-    .line 133
     :cond_1
-    const-string/jumbo p0, "null"
+    const-string p0, "null"
 
     goto :goto_0
 .end method
@@ -406,17 +360,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 70
     instance-of v2, p1, Landroid/net/NetworkIdentity;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 71
     check-cast v0, Landroid/net/NetworkIdentity;
 
-    .line 72
     .local v0, ident:Landroid/net/NetworkIdentity;
     iget v2, p0, Landroid/net/NetworkIdentity;->mType:I
 
@@ -458,7 +409,6 @@
 
     const/4 v1, 0x1
 
-    .line 76
     .end local v0           #ident:Landroid/net/NetworkIdentity;
     :cond_0
     return v1
@@ -468,7 +418,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget-object v0, p0, Landroid/net/NetworkIdentity;->mNetworkId:Ljava/lang/String;
 
     return-object v0
@@ -478,7 +427,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget-boolean v0, p0, Landroid/net/NetworkIdentity;->mRoaming:Z
 
     return v0
@@ -488,7 +436,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget v0, p0, Landroid/net/NetworkIdentity;->mSubType:I
 
     return v0
@@ -498,7 +445,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-object v0, p0, Landroid/net/NetworkIdentity;->mSubscriberId:Ljava/lang/String;
 
     return-object v0
@@ -508,7 +454,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget v0, p0, Landroid/net/NetworkIdentity;->mType:I
 
     return v0
@@ -518,7 +463,6 @@
     .locals 3
 
     .prologue
-    .line 65
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -576,16 +520,14 @@
     .locals 3
 
     .prologue
-    .line 81
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "["
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 82
     .local v0, builder:Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "type="
+    const-string v1, "type="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -599,22 +541,18 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 83
     const-string v1, ", subType="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 85
     const-string v1, "COMBINED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 91
     iget-object v1, p0, Landroid/net/NetworkIdentity;->mSubscriberId:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 92
     const-string v1, ", subscriberId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -629,13 +567,11 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 94
     :cond_0
     iget-object v1, p0, Landroid/net/NetworkIdentity;->mNetworkId:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 95
     const-string v1, ", networkId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -646,18 +582,15 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 97
     :cond_1
     iget-boolean v1, p0, Landroid/net/NetworkIdentity;->mRoaming:Z
 
     if-eqz v1, :cond_2
 
-    .line 98
     const-string v1, ", ROAMING"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 100
     :cond_2
     const-string v1, "]"
 

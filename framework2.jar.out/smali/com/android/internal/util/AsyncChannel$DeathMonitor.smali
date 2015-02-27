@@ -27,12 +27,10 @@
     .parameter
 
     .prologue
-    .line 909
     iput-object p1, p0, Lcom/android/internal/util/AsyncChannel$DeathMonitor;->this$0:Lcom/android/internal/util/AsyncChannel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 910
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 913
     iget-object v0, p0, Lcom/android/internal/util/AsyncChannel$DeathMonitor;->this$0:Lcom/android/internal/util/AsyncChannel;
 
     const/4 v1, 0x4
@@ -50,6 +47,5 @@
     #calls: Lcom/android/internal/util/AsyncChannel;->replyDisconnected(I)V
     invoke-static {v0, v1}, Lcom/android/internal/util/AsyncChannel;->access$600(Lcom/android/internal/util/AsyncChannel;I)V
 
-    .line 914
     return-void
 .end method

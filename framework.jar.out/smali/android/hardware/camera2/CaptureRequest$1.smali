@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +44,15 @@
     .parameter "in"
 
     .prologue
-    .line 153
     new-instance v0, Landroid/hardware/camera2/CaptureRequest;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Landroid/hardware/camera2/CaptureRequest;-><init>(Landroid/hardware/camera2/CaptureRequest$1;)V
 
-    .line 154
     .local v0, request:Landroid/hardware/camera2/CaptureRequest;
     invoke-virtual {v0, p1}, Landroid/hardware/camera2/CaptureRequest;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 156
     return-object v0
 .end method
 
@@ -65,7 +61,6 @@
     .parameter "x0"
 
     .prologue
-    .line 150
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/CaptureRequest$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/camera2/CaptureRequest;
 
     move-result-object v0
@@ -78,7 +73,6 @@
     .parameter "size"
 
     .prologue
-    .line 161
     new-array v0, p1, [Landroid/hardware/camera2/CaptureRequest;
 
     return-object v0
@@ -89,7 +83,6 @@
     .parameter "x0"
 
     .prologue
-    .line 150
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/CaptureRequest$1;->newArray(I)[Landroid/hardware/camera2/CaptureRequest;
 
     move-result-object v0

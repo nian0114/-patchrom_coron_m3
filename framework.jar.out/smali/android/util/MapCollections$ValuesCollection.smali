@@ -35,7 +35,6 @@
     .parameter
 
     .prologue
-    .line 355
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     iput-object p1, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
@@ -56,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 359
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     .local p1, object:Ljava/lang/Object;,"TV;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
@@ -78,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 364
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     .local p1, collection:Ljava/util/Collection;,"Ljava/util/Collection<+TV;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
@@ -92,13 +89,11 @@
     .locals 1
 
     .prologue
-    .line 369
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     iget-object v0, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v0}, Landroid/util/MapCollections;->colClear()V
 
-    .line 370
     return-void
 .end method
 
@@ -107,7 +102,6 @@
     .parameter "object"
 
     .prologue
-    .line 374
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     iget-object v0, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
@@ -140,14 +134,12 @@
     .end annotation
 
     .prologue
-    .line 379
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     .local p1, collection:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 380
     .local v0, it:Ljava/util/Iterator;,"Ljava/util/Iterator<*>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -156,7 +148,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 381
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -167,10 +158,8 @@
 
     if-nez v1, :cond_0
 
-    .line 382
     const/4 v1, 0x0
 
-    .line 385
     :goto_0
     return v1
 
@@ -184,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 390
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     iget-object v0, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
@@ -216,7 +204,6 @@
     .end annotation
 
     .prologue
-    .line 395
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     new-instance v0, Landroid/util/MapCollections$ArrayIterator;
 
@@ -234,7 +221,6 @@
     .parameter "object"
 
     .prologue
-    .line 400
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     iget-object v1, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
@@ -242,19 +228,15 @@
 
     move-result v0
 
-    .line 401
     .local v0, index:I
     if-ltz v0, :cond_0
 
-    .line 402
     iget-object v1, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v1, v0}, Landroid/util/MapCollections;->colRemoveAt(I)V
 
-    .line 403
     const/4 v1, 0x1
 
-    .line 405
     :goto_0
     return v1
 
@@ -276,7 +258,6 @@
     .end annotation
 
     .prologue
-    .line 410
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     .local p1, collection:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
     iget-object v4, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
@@ -285,11 +266,9 @@
 
     move-result v0
 
-    .line 411
     .local v0, N:I
     const/4 v1, 0x0
 
-    .line 412
     .local v1, changed:Z
     const/4 v3, 0x0
 
@@ -297,7 +276,6 @@
     :goto_0
     if-ge v3, v0, :cond_1
 
-    .line 413
     iget-object v4, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
     const/4 v5, 0x1
@@ -306,7 +284,6 @@
 
     move-result-object v2
 
-    .line 414
     .local v2, cur:Ljava/lang/Object;
     invoke-interface {p1, v2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
@@ -314,27 +291,21 @@
 
     if-eqz v4, :cond_0
 
-    .line 415
     iget-object v4, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v4, v3}, Landroid/util/MapCollections;->colRemoveAt(I)V
 
-    .line 416
     add-int/lit8 v3, v3, -0x1
 
-    .line 417
     add-int/lit8 v0, v0, -0x1
 
-    .line 418
     const/4 v1, 0x1
 
-    .line 412
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 421
     .end local v2           #cur:Ljava/lang/Object;
     :cond_1
     return v1
@@ -352,7 +323,6 @@
     .end annotation
 
     .prologue
-    .line 426
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     .local p1, collection:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
     iget-object v4, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
@@ -361,11 +331,9 @@
 
     move-result v0
 
-    .line 427
     .local v0, N:I
     const/4 v1, 0x0
 
-    .line 428
     .local v1, changed:Z
     const/4 v3, 0x0
 
@@ -373,7 +341,6 @@
     :goto_0
     if-ge v3, v0, :cond_1
 
-    .line 429
     iget-object v4, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
     const/4 v5, 0x1
@@ -382,7 +349,6 @@
 
     move-result-object v2
 
-    .line 430
     .local v2, cur:Ljava/lang/Object;
     invoke-interface {p1, v2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
@@ -390,27 +356,21 @@
 
     if-nez v4, :cond_0
 
-    .line 431
     iget-object v4, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v4, v3}, Landroid/util/MapCollections;->colRemoveAt(I)V
 
-    .line 432
     add-int/lit8 v3, v3, -0x1
 
-    .line 433
     add-int/lit8 v0, v0, -0x1
 
-    .line 434
     const/4 v1, 0x1
 
-    .line 428
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 437
     .end local v2           #cur:Ljava/lang/Object;
     :cond_1
     return v1
@@ -420,7 +380,6 @@
     .locals 1
 
     .prologue
-    .line 442
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     iget-object v0, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
@@ -435,7 +394,6 @@
     .locals 2
 
     .prologue
-    .line 447
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     iget-object v0, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;
 
@@ -460,7 +418,6 @@
     .end annotation
 
     .prologue
-    .line 452
     .local p0, this:Landroid/util/MapCollections$ValuesCollection;,"Landroid/util/MapCollections<TK;TV;>.ValuesCollection;"
     .local p1, array:[Ljava/lang/Object;,"[TT;"
     iget-object v0, p0, Landroid/util/MapCollections$ValuesCollection;->this$0:Landroid/util/MapCollections;

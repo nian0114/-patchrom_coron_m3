@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 68
     invoke-static {}, Lcom/android/internal/util/ButtonHelper$ActionType;->values()[Lcom/android/internal/util/ButtonHelper$ActionType;
 
     move-result-object v0

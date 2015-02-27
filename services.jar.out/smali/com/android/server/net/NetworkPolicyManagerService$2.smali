@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 427
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 432
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     #getter for: Lcom/android/server/net/NetworkPolicyManagerService;->mHandler:Landroid/os/Handler;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 433
     return-void
 .end method

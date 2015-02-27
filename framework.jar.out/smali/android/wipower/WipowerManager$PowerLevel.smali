@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 88
     new-instance v0, Landroid/wipower/WipowerManager$PowerLevel;
 
     const-string v1, "POWER_LEVEL_MAXIMUM"
@@ -57,7 +56,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$PowerLevel;->POWER_LEVEL_MAXIMUM:Landroid/wipower/WipowerManager$PowerLevel;
 
-    .line 89
     new-instance v0, Landroid/wipower/WipowerManager$PowerLevel;
 
     const-string v1, "POWER_LEVEL_MEDIUM"
@@ -66,7 +64,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$PowerLevel;->POWER_LEVEL_MEDIUM:Landroid/wipower/WipowerManager$PowerLevel;
 
-    .line 90
     new-instance v0, Landroid/wipower/WipowerManager$PowerLevel;
 
     const-string v1, "POWER_LEVEL_MINIMUM"
@@ -75,7 +72,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$PowerLevel;->POWER_LEVEL_MINIMUM:Landroid/wipower/WipowerManager$PowerLevel;
 
-    .line 91
     new-instance v0, Landroid/wipower/WipowerManager$PowerLevel;
 
     const-string v1, "POWER_LEVEL_UNKNOWN"
@@ -84,7 +80,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$PowerLevel;->POWER_LEVEL_UNKNOWN:Landroid/wipower/WipowerManager$PowerLevel;
 
-    .line 87
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/wipower/WipowerManager$PowerLevel;
@@ -121,7 +116,6 @@
     .end annotation
 
     .prologue
-    .line 87
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -132,7 +126,6 @@
     .parameter "name"
 
     .prologue
-    .line 87
     const-class v0, Landroid/wipower/WipowerManager$PowerLevel;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -148,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 87
     sget-object v0, Landroid/wipower/WipowerManager$PowerLevel;->$VALUES:[Landroid/wipower/WipowerManager$PowerLevel;
 
     invoke-virtual {v0}, [Landroid/wipower/WipowerManager$PowerLevel;->clone()Ljava/lang/Object;

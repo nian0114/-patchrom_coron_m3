@@ -25,13 +25,10 @@
     .parameter "flags"
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput p1, p0, Landroid/security/KeyStoreParameter;->mFlags:I
 
-    .line 52
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .parameter "x1"
 
     .prologue
-    .line 47
     invoke-direct {p0, p1}, Landroid/security/KeyStoreParameter;-><init>(I)V
 
     return-void
@@ -53,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iget v0, p0, Landroid/security/KeyStoreParameter;->mFlags:I
 
     return v0
@@ -63,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget v0, p0, Landroid/security/KeyStoreParameter;->mFlags:I
 
     and-int/lit8 v0, v0, 0x1

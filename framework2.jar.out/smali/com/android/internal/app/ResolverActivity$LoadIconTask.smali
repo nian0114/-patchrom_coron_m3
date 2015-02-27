@@ -35,7 +35,6 @@
     .parameter
 
     .prologue
-    .line 744
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -50,18 +49,15 @@
     .parameter "params"
 
     .prologue
-    .line 747
     const/4 v1, 0x0
 
     aget-object v0, p1, v1
 
-    .line 748
     .local v0, info:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
     iget-object v1, v0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
     if-nez v1, :cond_0
 
-    .line 749
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v2, v0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->ri:Landroid/content/pm/ResolveInfo;
@@ -72,7 +68,6 @@
 
     iput-object v1, v0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 751
     :cond_0
     return-object v0
 .end method
@@ -82,7 +77,6 @@
     .parameter "x0"
 
     .prologue
-    .line 744
     check-cast p1, [Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .end local p1
@@ -98,7 +92,6 @@
     .parameter "info"
 
     .prologue
-    .line 756
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$LoadIconTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     #getter for: Lcom/android/internal/app/ResolverActivity;->mAdapter:Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
@@ -108,7 +101,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;->notifyDataSetChanged()V
 
-    .line 757
     return-void
 .end method
 
@@ -117,7 +109,6 @@
     .parameter "x0"
 
     .prologue
-    .line 744
     check-cast p1, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .end local p1

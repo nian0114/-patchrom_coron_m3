@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 227
     iput-object p1, p0, Lcom/android/server/content/SyncManager$3;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -46,7 +45,6 @@
 
     const/4 v2, -0x1
 
-    .line 230
     iget-object v0, p0, Lcom/android/server/content/SyncManager$3;->this$0:Lcom/android/server/content/SyncManager;
 
     #calls: Lcom/android/server/content/SyncManager;->getConnectivityManager()Landroid/net/ConnectivityManager;
@@ -60,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 231
     iget-object v0, p0, Lcom/android/server/content/SyncManager$3;->this$0:Lcom/android/server/content/SyncManager;
 
     new-instance v5, Landroid/os/Bundle;
@@ -77,7 +74,6 @@
 
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/content/SyncManager;->scheduleSync(Landroid/accounts/Account;IILjava/lang/String;Landroid/os/Bundle;JJZ)V
 
-    .line 237
     :cond_0
     return-void
 .end method

@@ -31,13 +31,10 @@
     .parameter "params"
 
     .prologue
-    .line 493
     iput-object p1, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
-    .line 494
     invoke-direct/range {p0 .. p5}, Landroid/speech/tts/TextToSpeechService$SpeechItem;-><init>(Landroid/speech/tts/TextToSpeechService;Ljava/lang/Object;IILandroid/os/Bundle;)V
 
-    .line 495
     return-void
 .end method
 
@@ -47,16 +44,13 @@
     .locals 3
 
     .prologue
-    .line 499
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->getUtteranceId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 500
     .local v0, utteranceId:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 501
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
     #getter for: Landroid/speech/tts/TextToSpeechService;->mCallbacks:Landroid/speech/tts/TextToSpeechService$CallbackMap;
@@ -70,7 +64,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/speech/tts/TextToSpeechService$CallbackMap;->dispatchOnDone(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 503
     :cond_0
     return-void
 .end method
@@ -79,16 +72,13 @@
     .locals 3
 
     .prologue
-    .line 515
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->getUtteranceId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 516
     .local v0, utteranceId:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 517
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
     #getter for: Landroid/speech/tts/TextToSpeechService;->mCallbacks:Landroid/speech/tts/TextToSpeechService$CallbackMap;
@@ -102,7 +92,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/speech/tts/TextToSpeechService$CallbackMap;->dispatchOnError(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 519
     :cond_0
     return-void
 .end method
@@ -111,16 +100,13 @@
     .locals 3
 
     .prologue
-    .line 507
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->getUtteranceId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 508
     .local v0, utteranceId:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 509
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
     #getter for: Landroid/speech/tts/TextToSpeechService;->mCallbacks:Landroid/speech/tts/TextToSpeechService$CallbackMap;
@@ -134,7 +120,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/speech/tts/TextToSpeechService$CallbackMap;->dispatchOnStart(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 511
     :cond_0
     return-void
 .end method
@@ -145,7 +130,6 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 546
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->mParams:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -171,7 +155,6 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 542
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->mParams:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -195,8 +178,7 @@
     .locals 2
 
     .prologue
-    .line 530
-    const-string/jumbo v0, "pan"
+    const-string v0, "pan"
 
     const/4 v1, 0x0
 
@@ -211,8 +193,7 @@
     .locals 2
 
     .prologue
-    .line 522
-    const-string/jumbo v0, "streamType"
+    const-string v0, "streamType"
 
     const/4 v1, 0x3
 
@@ -229,7 +210,6 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 538
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;->mParams:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -253,8 +233,7 @@
     .locals 2
 
     .prologue
-    .line 534
-    const-string/jumbo v0, "utteranceId"
+    const-string v0, "utteranceId"
 
     const/4 v1, 0x0
 
@@ -269,8 +248,7 @@
     .locals 2
 
     .prologue
-    .line 526
-    const-string/jumbo v0, "volume"
+    const-string v0, "volume"
 
     const/high16 v1, 0x3f80
 

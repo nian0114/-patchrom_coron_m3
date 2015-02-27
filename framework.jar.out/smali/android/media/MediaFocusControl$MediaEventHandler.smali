@@ -25,13 +25,10 @@
     .parameter "looper"
 
     .prologue
-    .line 355
     iput-object p1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
-    .line 356
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 357
     return-void
 .end method
 
@@ -42,16 +39,13 @@
     .parameter "msg"
 
     .prologue
-    .line 361
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 419
     :goto_0
     return-void
 
-    .line 363
     :pswitch_0
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -64,7 +58,6 @@
 
     goto :goto_0
 
-    .line 367
     :pswitch_1
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -73,7 +66,6 @@
 
     goto :goto_0
 
-    .line 372
     :pswitch_2
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -88,7 +80,6 @@
 
     goto :goto_0
 
-    .line 376
     :pswitch_3
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -97,7 +88,6 @@
 
     goto :goto_0
 
-    .line 380
     :pswitch_4
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -118,7 +108,6 @@
 
     goto :goto_0
 
-    .line 385
     :pswitch_5
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -133,7 +122,6 @@
 
     goto :goto_0
 
-    .line 390
     :pswitch_6
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -150,7 +138,6 @@
 
     goto :goto_0
 
-    .line 396
     :pswitch_7
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -169,7 +156,6 @@
 
     goto :goto_0
 
-    .line 401
     :pswitch_8
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -186,7 +172,6 @@
 
     goto :goto_0
 
-    .line 406
     :pswitch_9
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -197,7 +182,6 @@
 
     goto :goto_0
 
-    .line 411
     :pswitch_a
     iget-object v1, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -214,7 +198,6 @@
 
     goto/16 :goto_0
 
-    .line 416
     :pswitch_b
     iget-object v0, p0, Landroid/media/MediaFocusControl$MediaEventHandler;->this$0:Landroid/media/MediaFocusControl;
 
@@ -223,7 +206,6 @@
 
     goto/16 :goto_0
 
-    .line 361
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

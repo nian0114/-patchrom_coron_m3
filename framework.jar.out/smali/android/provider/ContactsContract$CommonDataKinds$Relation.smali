@@ -57,7 +57,6 @@
     .locals 0
 
     .prologue
-    .line 6407
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,7 +69,6 @@
     .parameter "label"
 
     .prologue
-    .line 6466
     if-nez p1, :cond_0
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -79,19 +77,16 @@
 
     if-nez v1, :cond_0
 
-    .line 6470
     .end local p2
     :goto_0
     return-object p2
 
-    .line 6469
     .restart local p2
     :cond_0
     invoke-static {p1}, Landroid/provider/ContactsContract$CommonDataKinds$Relation;->getTypeLabelResource(I)I
 
     move-result v0
 
-    .line 6470
     .local v0, labelRes:I
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -105,100 +100,83 @@
     .parameter "type"
 
     .prologue
-    .line 6438
     packed-switch p0, :pswitch_data_0
 
-    .line 6455
     const v0, 0x10403c7
 
     :goto_0
     return v0
 
-    .line 6439
     :pswitch_0
     const v0, 0x10403c9
 
     goto :goto_0
 
-    .line 6440
     :pswitch_1
     const v0, 0x10403ca
 
     goto :goto_0
 
-    .line 6441
     :pswitch_2
     const v0, 0x10403cb
 
     goto :goto_0
 
-    .line 6443
     :pswitch_3
     const v0, 0x10403cc
 
     goto :goto_0
 
-    .line 6444
     :pswitch_4
     const v0, 0x10403cd
 
     goto :goto_0
 
-    .line 6445
     :pswitch_5
     const v0, 0x10403ce
 
     goto :goto_0
 
-    .line 6446
     :pswitch_6
     const v0, 0x10403cf
 
     goto :goto_0
 
-    .line 6447
     :pswitch_7
     const v0, 0x10403d0
 
     goto :goto_0
 
-    .line 6448
     :pswitch_8
     const v0, 0x10403d1
 
     goto :goto_0
 
-    .line 6449
     :pswitch_9
     const v0, 0x10403d2
 
     goto :goto_0
 
-    .line 6451
     :pswitch_a
     const v0, 0x10403d3
 
     goto :goto_0
 
-    .line 6452
     :pswitch_b
     const v0, 0x10403d4
 
     goto :goto_0
 
-    .line 6453
     :pswitch_c
     const v0, 0x10403d5
 
     goto :goto_0
 
-    .line 6454
     :pswitch_d
     const v0, 0x10403d6
 
     goto :goto_0
 
-    .line 6438
     nop
 
     :pswitch_data_0

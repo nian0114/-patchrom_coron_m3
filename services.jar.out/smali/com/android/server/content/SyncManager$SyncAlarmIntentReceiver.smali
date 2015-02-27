@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 816
     iput-object p1, p0, Lcom/android/server/content/SyncManager$SyncAlarmIntentReceiver;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 819
     iget-object v0, p0, Lcom/android/server/content/SyncManager$SyncAlarmIntentReceiver;->this$0:Lcom/android/server/content/SyncManager;
 
     #getter for: Lcom/android/server/content/SyncManager;->mHandleAlarmWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -50,12 +48,10 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 820
     iget-object v0, p0, Lcom/android/server/content/SyncManager$SyncAlarmIntentReceiver;->this$0:Lcom/android/server/content/SyncManager;
 
     #calls: Lcom/android/server/content/SyncManager;->sendSyncAlarmMessage()V
     invoke-static {v0}, Lcom/android/server/content/SyncManager;->access$1200(Lcom/android/server/content/SyncManager;)V
 
-    .line 821
     return-void
 .end method

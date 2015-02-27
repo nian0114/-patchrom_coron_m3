@@ -25,13 +25,10 @@
     .parameter "looper"
 
     .prologue
-    .line 298
     iput-object p1, p0, Landroid/net/nsd/NsdManager$ServiceHandler;->this$0:Landroid/net/nsd/NsdManager;
 
-    .line 299
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 300
     return-void
 .end method
 
@@ -42,12 +39,10 @@
     .parameter "message"
 
     .prologue
-    .line 304
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 317
     :pswitch_0
     iget-object v4, p0, Landroid/net/nsd/NsdManager$ServiceHandler;->this$0:Landroid/net/nsd/NsdManager;
 
@@ -58,11 +53,9 @@
 
     move-result-object v0
 
-    .line 318
     .local v0, listener:Ljava/lang/Object;
     if-nez v0, :cond_1
 
-    .line 319
     const-string v4, "NsdManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -87,13 +80,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
     .end local v0           #listener:Ljava/lang/Object;
     :cond_0
     :goto_0
     return-void
 
-    .line 306
     :pswitch_1
     iget-object v4, p0, Landroid/net/nsd/NsdManager$ServiceHandler;->this$0:Landroid/net/nsd/NsdManager;
 
@@ -108,7 +99,6 @@
 
     goto :goto_0
 
-    .line 309
     :pswitch_2
     iget-object v4, p0, Landroid/net/nsd/NsdManager$ServiceHandler;->this$0:Landroid/net/nsd/NsdManager;
 
@@ -121,7 +111,6 @@
 
     goto :goto_0
 
-    .line 312
     :pswitch_3
     const-string v4, "NsdManager"
 
@@ -131,12 +120,10 @@
 
     goto :goto_0
 
-    .line 322
     .restart local v0       #listener:Ljava/lang/Object;
     :cond_1
     const/4 v1, 0x1
 
-    .line 323
     .local v1, listenerRemove:Z
     iget-object v4, p0, Landroid/net/nsd/NsdManager$ServiceHandler;->this$0:Landroid/net/nsd/NsdManager;
 
@@ -147,13 +134,11 @@
 
     move-result-object v2
 
-    .line 324
     .local v2, ns:Landroid/net/nsd/NsdServiceInfo;
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_1
 
-    .line 374
     :pswitch_4
     const-string v4, "NsdManager"
 
@@ -177,12 +162,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     .end local v0           #listener:Ljava/lang/Object;
     :goto_1
     if-eqz v1, :cond_0
 
-    .line 378
     iget-object v4, p0, Landroid/net/nsd/NsdManager$ServiceHandler;->this$0:Landroid/net/nsd/NsdManager;
 
     iget v5, p1, Landroid/os/Message;->arg2:I
@@ -192,7 +175,6 @@
 
     goto :goto_0
 
-    .line 326
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_5
     iget-object v5, p0, Landroid/net/nsd/NsdManager$ServiceHandler;->this$0:Landroid/net/nsd/NsdManager;
@@ -206,20 +188,16 @@
 
     move-result-object v3
 
-    .line 327
     .local v3, s:Ljava/lang/String;
     check-cast v0, Landroid/net/nsd/NsdManager$DiscoveryListener;
 
     .end local v0           #listener:Ljava/lang/Object;
     invoke-interface {v0, v3}, Landroid/net/nsd/NsdManager$DiscoveryListener;->onDiscoveryStarted(Ljava/lang/String;)V
 
-    .line 329
     const/4 v1, 0x0
 
-    .line 330
     goto :goto_1
 
-    .line 332
     .end local v3           #s:Ljava/lang/String;
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_6
@@ -239,7 +217,6 @@
 
     goto :goto_1
 
-    .line 336
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_7
     check-cast v0, Landroid/net/nsd/NsdManager$DiscoveryListener;
@@ -251,13 +228,10 @@
 
     invoke-interface {v0, v4}, Landroid/net/nsd/NsdManager$DiscoveryListener;->onServiceFound(Landroid/net/nsd/NsdServiceInfo;)V
 
-    .line 338
     const/4 v1, 0x0
 
-    .line 339
     goto :goto_1
 
-    .line 341
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_8
     check-cast v0, Landroid/net/nsd/NsdManager$DiscoveryListener;
@@ -269,13 +243,10 @@
 
     invoke-interface {v0, v4}, Landroid/net/nsd/NsdManager$DiscoveryListener;->onServiceLost(Landroid/net/nsd/NsdServiceInfo;)V
 
-    .line 343
     const/4 v1, 0x0
 
-    .line 344
     goto :goto_1
 
-    .line 346
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_9
     check-cast v0, Landroid/net/nsd/NsdManager$DiscoveryListener;
@@ -294,7 +265,6 @@
 
     goto :goto_1
 
-    .line 350
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_a
     check-cast v0, Landroid/net/nsd/NsdManager$DiscoveryListener;
@@ -311,7 +281,6 @@
 
     goto :goto_1
 
-    .line 353
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_b
     check-cast v0, Landroid/net/nsd/NsdManager$RegistrationListener;
@@ -323,7 +292,6 @@
 
     goto :goto_1
 
-    .line 356
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_c
     check-cast v0, Landroid/net/nsd/NsdManager$RegistrationListener;
@@ -335,13 +303,10 @@
 
     invoke-interface {v0, v4}, Landroid/net/nsd/NsdManager$RegistrationListener;->onServiceRegistered(Landroid/net/nsd/NsdServiceInfo;)V
 
-    .line 359
     const/4 v1, 0x0
 
-    .line 360
     goto :goto_1
 
-    .line 362
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_d
     check-cast v0, Landroid/net/nsd/NsdManager$RegistrationListener;
@@ -353,7 +318,6 @@
 
     goto :goto_1
 
-    .line 365
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_e
     check-cast v0, Landroid/net/nsd/NsdManager$RegistrationListener;
@@ -363,7 +327,6 @@
 
     goto :goto_1
 
-    .line 368
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_f
     check-cast v0, Landroid/net/nsd/NsdManager$ResolveListener;
@@ -375,7 +338,6 @@
 
     goto/16 :goto_1
 
-    .line 371
     .restart local v0       #listener:Ljava/lang/Object;
     :pswitch_10
     check-cast v0, Landroid/net/nsd/NsdManager$ResolveListener;
@@ -389,7 +351,6 @@
 
     goto/16 :goto_1
 
-    .line 304
     nop
 
     :pswitch_data_0
@@ -401,7 +362,6 @@
         :pswitch_3
     .end packed-switch
 
-    .line 324
     :pswitch_data_1
     .packed-switch 0x60002
         :pswitch_5

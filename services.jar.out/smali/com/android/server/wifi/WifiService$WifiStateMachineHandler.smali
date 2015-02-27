@@ -27,20 +27,16 @@
     .parameter "looper"
 
     .prologue
-    .line 241
     iput-object p1, p0, Lcom/android/server/wifi/WifiService$WifiStateMachineHandler;->this$0:Lcom/android/server/wifi/WifiService;
 
-    .line 242
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 243
     new-instance v0, Lcom/android/internal/util/AsyncChannel;
 
     invoke-direct {v0}, Lcom/android/internal/util/AsyncChannel;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiService$WifiStateMachineHandler;->mWsmChannel:Lcom/android/internal/util/AsyncChannel;
 
-    .line 244
     iget-object v0, p0, Lcom/android/server/wifi/WifiService$WifiStateMachineHandler;->mWsmChannel:Lcom/android/internal/util/AsyncChannel;
 
     #getter for: Lcom/android/server/wifi/WifiService;->mContext:Landroid/content/Context;
@@ -56,7 +52,6 @@
 
     invoke-virtual {v0, v1, p0, v2}, Lcom/android/internal/util/AsyncChannel;->connect(Landroid/content/Context;Landroid/os/Handler;Landroid/os/Handler;)V
 
-    .line 245
     return-void
 .end method
 
@@ -69,12 +64,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 249
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 267
     const-string v0, "WifiService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -97,17 +90,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
     :goto_0
     return-void
 
-    .line 251
     :sswitch_0
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     if-nez v0, :cond_0
 
-    .line 252
     iget-object v0, p0, Lcom/android/server/wifi/WifiService$WifiStateMachineHandler;->this$0:Lcom/android/server/wifi/WifiService;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiService$WifiStateMachineHandler;->mWsmChannel:Lcom/android/internal/util/AsyncChannel;
@@ -117,7 +107,6 @@
 
     goto :goto_0
 
-    .line 254
     :cond_0
     const-string v0, "WifiService"
 
@@ -143,7 +132,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     iget-object v0, p0, Lcom/android/server/wifi/WifiService$WifiStateMachineHandler;->this$0:Lcom/android/server/wifi/WifiService;
 
     #setter for: Lcom/android/server/wifi/WifiService;->mWifiStateMachineChannel:Lcom/android/internal/util/AsyncChannel;
@@ -151,7 +139,6 @@
 
     goto :goto_0
 
-    .line 260
     :sswitch_1
     const-string v0, "WifiService"
 
@@ -177,13 +164,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     iget-object v0, p0, Lcom/android/server/wifi/WifiService$WifiStateMachineHandler;->this$0:Lcom/android/server/wifi/WifiService;
 
     #setter for: Lcom/android/server/wifi/WifiService;->mWifiStateMachineChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {v0, v3}, Lcom/android/server/wifi/WifiService;->access$302(Lcom/android/server/wifi/WifiService;Lcom/android/internal/util/AsyncChannel;)Lcom/android/internal/util/AsyncChannel;
 
-    .line 263
     iget-object v0, p0, Lcom/android/server/wifi/WifiService$WifiStateMachineHandler;->mWsmChannel:Lcom/android/internal/util/AsyncChannel;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiService$WifiStateMachineHandler;->this$0:Lcom/android/server/wifi/WifiService;
@@ -205,7 +190,6 @@
 
     goto :goto_0
 
-    .line 249
     :sswitch_data_0
     .sparse-switch
         0x11000 -> :sswitch_0

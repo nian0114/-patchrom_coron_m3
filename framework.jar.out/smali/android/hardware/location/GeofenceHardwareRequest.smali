@@ -30,25 +30,20 @@
     .locals 1
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     const/4 v0, 0x4
 
     iput v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mLastTransition:I
 
-    .line 34
     const/16 v0, 0x7530
 
     iput v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mUnknownTimer:I
 
-    .line 35
     const/4 v0, 0x7
 
     iput v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mMonitorTransitions:I
 
-    .line 37
     const/16 v0, 0x1388
 
     iput v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mNotificationResponsiveness:I
@@ -63,7 +58,6 @@
     .parameter "radius"
 
     .prologue
-    .line 55
     new-instance v0, Landroid/hardware/location/GeofenceHardwareRequest;
 
     invoke-direct {v0}, Landroid/hardware/location/GeofenceHardwareRequest;-><init>()V
@@ -75,10 +69,8 @@
 
     move-wide v5, p4
 
-    .line 56
     invoke-direct/range {v0 .. v6}, Landroid/hardware/location/GeofenceHardwareRequest;->setCircularGeofence(DDD)V
 
-    .line 57
     return-object v0
 .end method
 
@@ -89,21 +81,16 @@
     .parameter "radius"
 
     .prologue
-    .line 40
     iput-wide p1, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mLatitude:D
 
-    .line 41
     iput-wide p3, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mLongitude:D
 
-    .line 42
     iput-wide p5, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mRadius:D
 
-    .line 43
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mType:I
 
-    .line 44
     return-void
 .end method
 
@@ -113,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 152
     iget v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mLastTransition:I
 
     return v0
@@ -123,7 +109,6 @@
     .locals 2
 
     .prologue
-    .line 110
     iget-wide v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mLatitude:D
 
     return-wide v0
@@ -133,7 +118,6 @@
     .locals 2
 
     .prologue
-    .line 117
     iget-wide v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mLongitude:D
 
     return-wide v0
@@ -143,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 131
     iget v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mMonitorTransitions:I
 
     return v0
@@ -153,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 145
     iget v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mNotificationResponsiveness:I
 
     return v0
@@ -163,7 +145,6 @@
     .locals 2
 
     .prologue
-    .line 124
     iget-wide v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mRadius:D
 
     return-wide v0
@@ -173,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 156
     iget v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mType:I
 
     return v0
@@ -183,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget v0, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mUnknownTimer:I
 
     return v0
@@ -194,10 +173,8 @@
     .parameter "lastTransition"
 
     .prologue
-    .line 68
     iput p1, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mLastTransition:I
 
-    .line 69
     return-void
 .end method
 
@@ -206,10 +183,8 @@
     .parameter "monitorTransitions"
 
     .prologue
-    .line 89
     iput p1, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mMonitorTransitions:I
 
-    .line 90
     return-void
 .end method
 
@@ -218,10 +193,8 @@
     .parameter "notificationResponsiveness"
 
     .prologue
-    .line 103
     iput p1, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mNotificationResponsiveness:I
 
-    .line 104
     return-void
 .end method
 
@@ -230,9 +203,7 @@
     .parameter "unknownTimer"
 
     .prologue
-    .line 79
     iput p1, p0, Landroid/hardware/location/GeofenceHardwareRequest;->mUnknownTimer:I
 
-    .line 80
     return-void
 .end method

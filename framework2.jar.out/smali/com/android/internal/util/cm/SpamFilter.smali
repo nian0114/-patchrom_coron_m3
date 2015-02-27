@@ -22,7 +22,6 @@
     .locals 2
 
     .prologue
-    .line 12
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
@@ -52,10 +51,8 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     return-void
 .end method
 
@@ -64,7 +61,6 @@
     .parameter "msg"
 
     .prologue
-    .line 38
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
@@ -85,10 +81,8 @@
     .parameter "notification"
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
-    .line 43
     .local v0, extras:Landroid/os/Bundle;
     const-string v5, "android.title.big"
 
@@ -100,14 +94,12 @@
 
     const-string v4, "android.title.big"
 
-    .line 45
     .local v4, titleExtra:Ljava/lang/String;
     :goto_0
     invoke-virtual {v0, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    .line 46
     .local v3, notificationTitle:Ljava/lang/CharSequence;
     const-string v5, "android.text"
 
@@ -115,7 +107,6 @@
 
     move-result-object v2
 
-    .line 48
     .local v2, notificationMessage:Ljava/lang/CharSequence;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -123,14 +114,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 49
     const-string v5, "android.textLines"
 
     invoke-virtual {v0, v5}, Landroid/os/Bundle;->getCharSequenceArray(Ljava/lang/String;)[Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 50
     .local v1, inboxLines:[Ljava/lang/CharSequence;
     if-eqz v1, :cond_0
 
@@ -138,11 +127,9 @@
 
     if-nez v5, :cond_3
 
-    .line 51
     :cond_0
     const-string v2, ""
 
-    .line 56
     .end local v1           #inboxLines:[Ljava/lang/CharSequence;
     :cond_1
     :goto_1
@@ -170,7 +157,6 @@
 
     return-object v5
 
-    .line 43
     .end local v2           #notificationMessage:Ljava/lang/CharSequence;
     .end local v3           #notificationTitle:Ljava/lang/CharSequence;
     .end local v4           #titleExtra:Ljava/lang/String;
@@ -179,7 +165,6 @@
 
     goto :goto_0
 
-    .line 53
     .restart local v1       #inboxLines:[Ljava/lang/CharSequence;
     .restart local v2       #notificationMessage:Ljava/lang/CharSequence;
     .restart local v3       #notificationTitle:Ljava/lang/CharSequence;

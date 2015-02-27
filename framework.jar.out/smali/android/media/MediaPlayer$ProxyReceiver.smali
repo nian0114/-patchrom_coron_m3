@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 2811
     iput-object p1, p0, Landroid/media/MediaPlayer$ProxyReceiver;->this$0:Landroid/media/MediaPlayer;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 2811
     invoke-direct {p0, p1}, Landroid/media/MediaPlayer$ProxyReceiver;-><init>(Landroid/media/MediaPlayer;)V
 
     return-void
@@ -52,7 +50,6 @@
     .parameter "intent"
 
     .prologue
-    .line 2814
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -65,13 +62,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 2815
     iget-object v0, p0, Landroid/media/MediaPlayer$ProxyReceiver;->this$0:Landroid/media/MediaPlayer;
 
     #calls: Landroid/media/MediaPlayer;->handleProxyBroadcast(Landroid/content/Intent;)V
     invoke-static {v0, p2}, Landroid/media/MediaPlayer;->access$1900(Landroid/media/MediaPlayer;Landroid/content/Intent;)V
 
-    .line 2817
     :cond_0
     return-void
 .end method

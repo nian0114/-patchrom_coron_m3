@@ -36,19 +36,16 @@
     .parameter "c"
 
     .prologue
-    .line 469
     iput-object p1, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareCallbackWrapper;->this$0:Landroid/hardware/location/GeofenceHardware;
 
     invoke-direct {p0}, Landroid/hardware/location/IGeofenceHardwareCallback$Stub;-><init>()V
 
-    .line 470
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareCallbackWrapper;->mCallback:Ljava/lang/ref/WeakReference;
 
-    .line 471
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .parameter "status"
 
     .prologue
-    .line 483
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareCallbackWrapper;->mCallback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -69,13 +65,11 @@
 
     check-cast v0, Landroid/hardware/location/GeofenceHardwareCallback;
 
-    .line 484
     .local v0, c:Landroid/hardware/location/GeofenceHardwareCallback;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/location/GeofenceHardwareCallback;->onGeofenceAdd(II)V
 
-    .line 485
     :cond_0
     return-void
 .end method
@@ -86,7 +80,6 @@
     .parameter "status"
 
     .prologue
-    .line 496
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareCallbackWrapper;->mCallback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -95,14 +88,11 @@
 
     check-cast v0, Landroid/hardware/location/GeofenceHardwareCallback;
 
-    .line 497
     .local v0, c:Landroid/hardware/location/GeofenceHardwareCallback;
     if-eqz v0, :cond_0
 
-    .line 498
     invoke-virtual {v0, p1, p2}, Landroid/hardware/location/GeofenceHardwareCallback;->onGeofencePause(II)V
 
-    .line 500
     :cond_0
     return-void
 .end method
@@ -113,7 +103,6 @@
     .parameter "status"
 
     .prologue
-    .line 488
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareCallbackWrapper;->mCallback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -122,20 +111,16 @@
 
     check-cast v0, Landroid/hardware/location/GeofenceHardwareCallback;
 
-    .line 489
     .local v0, c:Landroid/hardware/location/GeofenceHardwareCallback;
     if-eqz v0, :cond_0
 
-    .line 490
     invoke-virtual {v0, p1, p2}, Landroid/hardware/location/GeofenceHardwareCallback;->onGeofenceRemove(II)V
 
-    .line 491
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareCallbackWrapper;->this$0:Landroid/hardware/location/GeofenceHardware;
 
     #calls: Landroid/hardware/location/GeofenceHardware;->removeCallback(Landroid/hardware/location/GeofenceHardwareCallback;)V
     invoke-static {v1, v0}, Landroid/hardware/location/GeofenceHardware;->access$000(Landroid/hardware/location/GeofenceHardware;Landroid/hardware/location/GeofenceHardwareCallback;)V
 
-    .line 493
     :cond_0
     return-void
 .end method
@@ -146,7 +131,6 @@
     .parameter "status"
 
     .prologue
-    .line 503
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareCallbackWrapper;->mCallback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -155,13 +139,11 @@
 
     check-cast v0, Landroid/hardware/location/GeofenceHardwareCallback;
 
-    .line 504
     .local v0, c:Landroid/hardware/location/GeofenceHardwareCallback;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/location/GeofenceHardwareCallback;->onGeofenceResume(II)V
 
-    .line 505
     :cond_0
     return-void
 .end method
@@ -175,7 +157,6 @@
     .parameter "monitoringType"
 
     .prologue
-    .line 475
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareCallbackWrapper;->mCallback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -184,7 +165,6 @@
 
     check-cast v0, Landroid/hardware/location/GeofenceHardwareCallback;
 
-    .line 476
     .local v0, c:Landroid/hardware/location/GeofenceHardwareCallback;
     if-eqz v0, :cond_0
 
@@ -198,10 +178,8 @@
 
     move v6, p6
 
-    .line 477
     invoke-virtual/range {v0 .. v6}, Landroid/hardware/location/GeofenceHardwareCallback;->onGeofenceTransition(IILandroid/location/Location;JI)V
 
-    .line 480
     :cond_0
     return-void
 .end method

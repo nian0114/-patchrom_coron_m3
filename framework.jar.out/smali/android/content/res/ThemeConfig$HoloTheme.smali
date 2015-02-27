@@ -19,7 +19,6 @@
     .locals 3
 
     .prologue
-    .line 537
     const-string v0, "holo"
 
     const-string v1, "holo"
@@ -28,7 +27,6 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroid/content/res/ThemeConfig$AppTheme;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 538
     return-void
 .end method
 
@@ -38,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 542
     const-string v0, "No Theme Applied (Holo)"
 
     return-object v0

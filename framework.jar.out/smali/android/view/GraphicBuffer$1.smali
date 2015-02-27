@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 268
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,46 +46,38 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 270
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 271
     .local v1, width:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 272
     .local v2, height:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 273
     .local v3, format:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 274
     .local v4, usage:I
     #calls: Landroid/view/GraphicBuffer;->nReadGraphicBufferFromParcel(Landroid/os/Parcel;)I
     invoke-static {p1}, Landroid/view/GraphicBuffer;->access$000(Landroid/os/Parcel;)I
 
     move-result v5
 
-    .line 275
     .local v5, nativeObject:I
     if-eqz v5, :cond_0
 
-    .line 276
     new-instance v0, Landroid/view/GraphicBuffer;
 
     invoke-direct/range {v0 .. v6}, Landroid/view/GraphicBuffer;-><init>(IIIIILandroid/view/GraphicBuffer$1;)V
 
-    .line 278
     :goto_0
     return-object v0
 
@@ -101,7 +92,6 @@
     .parameter "x0"
 
     .prologue
-    .line 268
     invoke-virtual {p0, p1}, Landroid/view/GraphicBuffer$1;->createFromParcel(Landroid/os/Parcel;)Landroid/view/GraphicBuffer;
 
     move-result-object v0
@@ -114,7 +104,6 @@
     .parameter "size"
 
     .prologue
-    .line 282
     new-array v0, p1, [Landroid/view/GraphicBuffer;
 
     return-object v0
@@ -125,7 +114,6 @@
     .parameter "x0"
 
     .prologue
-    .line 268
     invoke-virtual {p0, p1}, Landroid/view/GraphicBuffer$1;->newArray(I)[Landroid/view/GraphicBuffer;
 
     move-result-object v0

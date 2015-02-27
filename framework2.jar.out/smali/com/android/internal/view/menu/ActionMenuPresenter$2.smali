@@ -37,7 +37,6 @@
     .parameter
 
     .prologue
-    .line 399
     iput-object p1, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$2;->this$0:Lcom/android/internal/view/menu/ActionMenuPresenter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,41 +58,34 @@
 
     const/4 v5, -0x1
 
-    .line 402
     invoke-virtual {p1}, Lcom/android/internal/view/menu/MenuItemImpl;->requiresActionButton()Z
 
     move-result v1
 
-    .line 403
     .local v1, lhsRequires:Z
     invoke-virtual {p1}, Lcom/android/internal/view/menu/MenuItemImpl;->requestsActionButton()Z
 
     move-result v0
 
-    .line 404
     .local v0, lhsRequest:Z
     invoke-virtual {p2}, Lcom/android/internal/view/menu/MenuItemImpl;->requiresActionButton()Z
 
     move-result v3
 
-    .line 405
     .local v3, rhsRequires:Z
     invoke-virtual {p2}, Lcom/android/internal/view/menu/MenuItemImpl;->requestsActionButton()Z
 
     move-result v2
 
-    .line 406
     .local v2, rhsRequest:Z
     if-eqz v1, :cond_1
 
     if-eqz v3, :cond_1
 
-    .line 411
     :cond_0
     :goto_0
     return v4
 
-    .line 407
     :cond_1
     if-eqz v1, :cond_2
 
@@ -101,7 +93,6 @@
 
     goto :goto_0
 
-    .line 408
     :cond_2
     if-eqz v3, :cond_3
 
@@ -109,13 +100,11 @@
 
     goto :goto_0
 
-    .line 409
     :cond_3
     if-eqz v0, :cond_4
 
     if-nez v2, :cond_0
 
-    .line 410
     :cond_4
     if-eqz v0, :cond_5
 
@@ -126,7 +115,6 @@
     :cond_5
     move v4, v6
 
-    .line 411
     goto :goto_0
 .end method
 
@@ -136,7 +124,6 @@
     .parameter "x1"
 
     .prologue
-    .line 399
     check-cast p1, Lcom/android/internal/view/menu/MenuItemImpl;
 
     .end local p1

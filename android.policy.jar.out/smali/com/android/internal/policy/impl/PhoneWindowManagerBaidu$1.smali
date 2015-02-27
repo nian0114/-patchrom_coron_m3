@@ -36,7 +36,6 @@
     .parameter
 
     .prologue
-    .line 62
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$1;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu;
 
     iput-boolean p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$1;->val$isKeyguardOn:Z
@@ -56,7 +55,6 @@
     .locals 3
 
     .prologue
-    .line 65
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$1;->val$isKeyguardOn:Z
 
     if-eqz v0, :cond_0
@@ -67,16 +65,13 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 66
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$1;->val$context:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager$BaiduInjector;->flashOpen(Landroid/content/Context;)V
 
-    .line 71
     :goto_0
     return-void
 
-    .line 68
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$1;->val$context:Landroid/content/Context;
 

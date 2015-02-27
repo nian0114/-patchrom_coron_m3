@@ -26,7 +26,6 @@
     .parameter "x1"
 
     .prologue
-    .line 353
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0, p2, p3}, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;-><init>(II)V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 359
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -52,7 +50,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->rebootSafeMode(Z)V
 
-    .line 360
     return v1
 .end method
 
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 355
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -70,7 +66,6 @@
 
     invoke-interface {v0}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->reboot()V
 
-    .line 356
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 368
     const/4 v0, 0x1
 
     return v0
@@ -88,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 364
     const/4 v0, 0x1
 
     return v0

@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 17
     new-instance v0, Landroid/annotation/BaiduHook$Product;
 
     const-string v1, "COMMON"
@@ -57,7 +56,6 @@
 
     sput-object v0, Landroid/annotation/BaiduHook$Product;->COMMON:Landroid/annotation/BaiduHook$Product;
 
-    .line 20
     new-instance v0, Landroid/annotation/BaiduHook$Product;
 
     const-string v1, "MTK"
@@ -66,7 +64,6 @@
 
     sput-object v0, Landroid/annotation/BaiduHook$Product;->MTK:Landroid/annotation/BaiduHook$Product;
 
-    .line 23
     new-instance v0, Landroid/annotation/BaiduHook$Product;
 
     const-string v1, "QCOM"
@@ -75,7 +72,6 @@
 
     sput-object v0, Landroid/annotation/BaiduHook$Product;->QCOM:Landroid/annotation/BaiduHook$Product;
 
-    .line 26
     new-instance v0, Landroid/annotation/BaiduHook$Product;
 
     const-string v1, "BAIDU"
@@ -84,7 +80,6 @@
 
     sput-object v0, Landroid/annotation/BaiduHook$Product;->BAIDU:Landroid/annotation/BaiduHook$Product;
 
-    .line 15
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/annotation/BaiduHook$Product;
@@ -121,7 +116,6 @@
     .end annotation
 
     .prologue
-    .line 15
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -132,7 +126,6 @@
     .parameter "name"
 
     .prologue
-    .line 15
     const-class v0, Landroid/annotation/BaiduHook$Product;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -148,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 15
     sget-object v0, Landroid/annotation/BaiduHook$Product;->$VALUES:[Landroid/annotation/BaiduHook$Product;
 
     invoke-virtual {v0}, [Landroid/annotation/BaiduHook$Product;->clone()Ljava/lang/Object;

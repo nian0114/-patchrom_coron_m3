@@ -346,10 +346,8 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     return-void
 .end method
 
@@ -359,7 +357,6 @@
     .parameter "packageName"
 
     .prologue
-    .line 3283
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -430,7 +427,6 @@
     .parameter "userId"
 
     .prologue
-    .line 3082
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented. Must override in a subclass."
@@ -445,19 +441,16 @@
     .parameter "permissions"
 
     .prologue
-    .line 1873
     if-nez p1, :cond_0
 
-    .line 1874
     new-instance v5, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v6, "permissions cannot be null"
+    const-string v6, "permissions cannot be null"
 
     invoke-direct {v5, v6}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
-    .line 1876
     :cond_0
     move-object v0, p1
 
@@ -473,26 +466,22 @@
 
     aget-object v4, v0, v2
 
-    .line 1877
     .local v4, permission:Ljava/lang/String;
     if-nez v4, :cond_1
 
-    .line 1878
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v6, "permissions cannot contain null"
+    const-string v6, "permissions cannot contain null"
 
     invoke-direct {v5, v6}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
-    .line 1876
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1882
     .end local v4           #permission:Ljava/lang/String;
     :cond_2
     new-instance v1, Landroid/content/Intent;
@@ -501,18 +490,15 @@
 
     invoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1883
     .local v1, i:Landroid/content/Intent;
     const-string v5, "android.content.pm.extra.PERMISSION_LIST"
 
     invoke-virtual {v1, v5, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1884
     const-string v5, "com.android.packageinstaller"
 
     invoke-virtual {v1, v5}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1885
     return-object v1
 .end method
 
@@ -730,50 +716,40 @@
 
     const/4 v1, 0x0
 
-    .line 2681
     new-instance v10, Landroid/content/pm/PackageParser;
 
     invoke-direct {v10, p1}, Landroid/content/pm/PackageParser;-><init>(Ljava/lang/String;)V
 
-    .line 2682
     .local v10, packageParser:Landroid/content/pm/PackageParser;
     new-instance v9, Landroid/util/DisplayMetrics;
 
     invoke-direct {v9}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 2683
     .local v9, metrics:Landroid/util/DisplayMetrics;
     invoke-virtual {v9}, Landroid/util/DisplayMetrics;->setToDefaults()V
 
-    .line 2684
     new-instance v11, Ljava/io/File;
 
     invoke-direct {v11, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2685
     .local v11, sourceFile:Ljava/io/File;
     invoke-virtual {v10, v11, p1, v9, v5}, Landroid/content/pm/PackageParser;->parsePackage(Ljava/io/File;Ljava/lang/String;Landroid/util/DisplayMetrics;I)Landroid/content/pm/PackageParser$Package;
 
     move-result-object v0
 
-    .line 2687
     .local v0, pkg:Landroid/content/pm/PackageParser$Package;
     if-nez v0, :cond_0
 
-    .line 2694
     :goto_0
     return-object v1
 
-    .line 2690
     :cond_0
     and-int/lit8 v2, p2, 0x40
 
     if-eqz v2, :cond_1
 
-    .line 2691
     invoke-virtual {v10, v0, v5}, Landroid/content/pm/PackageParser;->collectCertificates(Landroid/content/pm/PackageParser$Package;I)Z
 
-    .line 2693
     :cond_1
     new-instance v8, Landroid/content/pm/PackageUserState;
 
@@ -786,7 +762,6 @@
 
     move-object v7, v1
 
-    .line 2694
     invoke-static/range {v0 .. v8}, Landroid/content/pm/PackageParser;->generatePackageInfo(Landroid/content/pm/PackageParser$Package;[IIJJLjava/util/HashSet;Landroid/content/pm/PackageUserState;)Landroid/content/pm/PackageInfo;
 
     move-result-object v1
@@ -819,14 +794,12 @@
     .parameter "observer"
 
     .prologue
-    .line 3001
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0, p2}, Landroid/content/pm/PackageManager;->getPackageSizeInfo(Ljava/lang/String;ILandroid/content/pm/IPackageStatsObserver;)V
 
-    .line 3002
     return-void
 .end method
 

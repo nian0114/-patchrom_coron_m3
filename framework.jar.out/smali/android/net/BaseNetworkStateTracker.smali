@@ -49,31 +49,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 56
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mPrivateDnsRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 57
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mDefaultRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 68
     return-void
 .end method
 
@@ -84,31 +79,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 56
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mPrivateDnsRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 57
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mDefaultRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 60
     new-instance v0, Landroid/net/NetworkInfo;
 
     const/4 v1, -0x1
@@ -123,21 +113,18 @@
 
     iput-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 62
     new-instance v0, Landroid/net/LinkProperties;
 
     invoke-direct {v0}, Landroid/net/LinkProperties;-><init>()V
 
     iput-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
-    .line 63
     new-instance v0, Landroid/net/LinkCapabilities;
 
     invoke-direct {v0}, Landroid/net/LinkCapabilities;-><init>()V
 
     iput-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mLinkCapabilities:Landroid/net/LinkCapabilities;
 
-    .line 64
     return-void
 .end method
 
@@ -148,12 +135,10 @@
     .parameter "link"
 
     .prologue
-    .line 184
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v0, p1}, Landroid/net/LinkProperties;->addStackedLink(Landroid/net/LinkProperties;)Z
 
-    .line 185
     return-void
 .end method
 
@@ -161,7 +146,6 @@
     .locals 0
 
     .prologue
-    .line 119
     return-void
 .end method
 
@@ -170,7 +154,6 @@
     .parameter "isCaptivePortal"
 
     .prologue
-    .line 124
     return-void
 .end method
 
@@ -179,12 +162,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 164
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mDefaultRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 165
     return-void
 .end method
 
@@ -192,7 +173,6 @@
     .locals 3
 
     .prologue
-    .line 82
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mTarget:Landroid/os/Handler;
 
     const v1, 0x70001
@@ -207,7 +187,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 83
     return-void
 .end method
 
@@ -215,7 +194,6 @@
     .locals 3
 
     .prologue
-    .line 77
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mTarget:Landroid/os/Handler;
 
     const/high16 v1, 0x7
@@ -230,7 +208,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 78
     return-void
 .end method
 
@@ -238,8 +215,7 @@
     .locals 1
 
     .prologue
-    .line 226
-    const-string/jumbo v0, "net.tcp.delack.default"
+    const-string v0, "net.tcp.delack.default"
 
     return-object v0
 .end method
@@ -248,8 +224,7 @@
     .locals 1
 
     .prologue
-    .line 230
-    const-string/jumbo v0, "net.tcp.usercfg.default"
+    const-string v0, "net.tcp.usercfg.default"
 
     return-object v0
 .end method
@@ -258,7 +233,6 @@
     .locals 2
 
     .prologue
-    .line 108
     new-instance v0, Landroid/net/LinkCapabilities;
 
     iget-object v1, p0, Landroid/net/BaseNetworkStateTracker;->mLinkCapabilities:Landroid/net/LinkCapabilities;
@@ -272,7 +246,6 @@
     .locals 2
 
     .prologue
-    .line 103
     new-instance v0, Landroid/net/LinkProperties;
 
     iget-object v1, p0, Landroid/net/BaseNetworkStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
@@ -286,7 +259,6 @@
     .locals 1
 
     .prologue
-    .line 113
     const/4 v0, 0x0
 
     return-object v0
@@ -296,7 +268,6 @@
     .locals 2
 
     .prologue
-    .line 98
     new-instance v0, Landroid/net/NetworkInfo;
 
     iget-object v1, p0, Landroid/net/BaseNetworkStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -310,19 +281,16 @@
     .locals 1
 
     .prologue
-    .line 199
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     if-eqz v0, :cond_0
 
-    .line 200
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v0}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 202
     :goto_0
     return-object v0
 
@@ -338,7 +306,6 @@
     .end annotation
 
     .prologue
-    .line 72
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mTarget:Landroid/os/Handler;
 
     return-object v0
@@ -348,8 +315,7 @@
     .locals 1
 
     .prologue
-    .line 218
-    const-string/jumbo v0, "net.tcp.delack.default"
+    const-string v0, "net.tcp.delack.default"
 
     return-object v0
 .end method
@@ -358,8 +324,7 @@
     .locals 1
 
     .prologue
-    .line 222
-    const-string/jumbo v0, "net.tcp.usercfg.default"
+    const-string v0, "net.tcp.usercfg.default"
 
     return-object v0
 .end method
@@ -368,7 +333,6 @@
     .locals 1
 
     .prologue
-    .line 134
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isAvailable()Z
@@ -382,7 +346,6 @@
     .locals 1
 
     .prologue
-    .line 159
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mDefaultRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -396,7 +359,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mPrivateDnsRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -410,7 +372,6 @@
     .locals 1
 
     .prologue
-    .line 169
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -425,12 +386,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 154
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mPrivateDnsRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 155
     return-void
 .end method
 
@@ -439,12 +398,10 @@
     .parameter "link"
 
     .prologue
-    .line 189
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v0, p1}, Landroid/net/LinkProperties;->removeStackedLink(Landroid/net/LinkProperties;)Z
 
-    .line 190
     return-void
 .end method
 
@@ -453,7 +410,6 @@
     .parameter "met"
 
     .prologue
-    .line 180
     return-void
 .end method
 
@@ -462,7 +418,6 @@
     .parameter "enabled"
 
     .prologue
-    .line 145
     return-void
 .end method
 
@@ -471,7 +426,6 @@
     .parameter "turnOn"
 
     .prologue
-    .line 129
     const/4 v0, 0x1
 
     return v0
@@ -482,12 +436,10 @@
     .parameter "isRequested"
 
     .prologue
-    .line 174
     iget-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 175
     return-void
 .end method
 
@@ -496,7 +448,6 @@
     .parameter "enabled"
 
     .prologue
-    .line 140
     return-void
 .end method
 
@@ -506,7 +457,6 @@
     .parameter "target"
 
     .prologue
-    .line 87
     invoke-static {p1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -515,7 +465,6 @@
 
     iput-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mContext:Landroid/content/Context;
 
-    .line 88
     invoke-static {p2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -524,10 +473,8 @@
 
     iput-object v0, p0, Landroid/net/BaseNetworkStateTracker;->mTarget:Landroid/os/Handler;
 
-    .line 89
     invoke-virtual {p0}, Landroid/net/BaseNetworkStateTracker;->startMonitoringInternal()V
 
-    .line 90
     return-void
 .end method
 
@@ -535,7 +482,6 @@
     .locals 0
 
     .prologue
-    .line 94
     return-void
 .end method
 
@@ -544,7 +490,6 @@
     .parameter "s"
 
     .prologue
-    .line 209
     return-void
 .end method
 
@@ -553,7 +498,6 @@
     .parameter "s"
 
     .prologue
-    .line 214
     return-void
 .end method
 
@@ -562,6 +506,5 @@
     .parameter "messenger"
 
     .prologue
-    .line 195
     return-void
 .end method

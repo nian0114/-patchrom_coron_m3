@@ -21,7 +21,6 @@
     .parameter "x1"
 
     .prologue
-    .line 288
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/os/CountDownTimer;-><init>(JJ)V
 
     return-void
@@ -33,21 +32,18 @@
     .locals 3
 
     .prologue
-    .line 309
     invoke-static {}, Landroid/app/ActivityManagerNative;->isSystemReady()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 310
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.ACTION_REQUEST_SHUTDOWN"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 311
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "android.intent.extra.KEY_CONFIRM"
 
@@ -55,12 +51,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 312
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 313
     invoke-static {}, Lcom/android/server/BatteryService$BaiduInjector;->access$sget-mContext-f47ec3()Landroid/content/Context;
 
     move-result-object v1
@@ -69,7 +63,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 314
     invoke-static {}, Lcom/android/server/BatteryService$BaiduInjector;->access$sget-mManager-67e28c()Landroid/app/NotificationManager;
 
     move-result-object v1
@@ -80,14 +73,12 @@
 
     invoke-virtual {v1, v2}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 315
     invoke-static {}, Lcom/android/server/BatteryService$BaiduInjector;->access$sget-mDialog-066056()Landroid/app/AlertDialog;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->cancel()V
 
-    .line 317
     .end local v0           #intent:Landroid/content/Intent;
     :cond_0
     return-void
@@ -102,7 +93,6 @@
 
     const/4 v8, 0x1
 
-    .line 291
     invoke-static {}, Lcom/android/server/BatteryService$BaiduInjector;->access$sget-mContext-f47ec3()Landroid/content/Context;
 
     move-result-object v2
@@ -127,7 +117,6 @@
 
     move-result-object v1
 
-    .line 293
     .local v1, msg:Ljava/lang/String;
     new-instance v0, Landroid/app/Notification$Builder;
 
@@ -137,7 +126,6 @@
 
     invoke-direct {v0, v2}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 294
     .local v0, builder:Landroid/app/Notification$Builder;
     invoke-static {}, Lcom/android/server/BatteryService$BaiduInjector;->access$sget-mContext-f47ec3()Landroid/content/Context;
 
@@ -149,7 +137,6 @@
 
     invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setTicker(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 295
     invoke-static {}, Lcom/android/server/BatteryService$BaiduInjector;->access$sget-mContext-f47ec3()Landroid/content/Context;
 
     move-result-object v2
@@ -160,18 +147,14 @@
 
     invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 296
     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 297
     const v2, #android:drawable@stat_sys_warning#t
 
     invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
-    .line 298
     invoke-virtual {v0, v8}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
 
-    .line 299
     invoke-static {}, Lcom/android/server/BatteryService$BaiduInjector;->access$sget-mManager-67e28c()Landroid/app/NotificationManager;
 
     move-result-object v2
@@ -186,7 +169,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 301
     invoke-static {}, Lcom/android/server/BatteryService$BaiduInjector;->access$sget-mDialog-066056()Landroid/app/AlertDialog;
 
     move-result-object v2
@@ -197,14 +179,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 302
     invoke-static {}, Lcom/android/server/BatteryService$BaiduInjector;->access$sget-mDialog-066056()Landroid/app/AlertDialog;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 304
     :cond_0
     return-void
 .end method

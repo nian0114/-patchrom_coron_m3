@@ -33,12 +33,10 @@
     .locals 1
 
     .prologue
-    .line 278
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/server/BatteryService$BaiduInjector;->mStartShutdownTimer:Z
 
-    .line 283
     const/16 v0, 0x2773
 
     sput v0, Lcom/android/server/BatteryService$BaiduInjector;->NOTIFI_ID:I
@@ -50,7 +48,6 @@
     .locals 0
 
     .prologue
-    .line 277
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 277
     sget-object v0, Lcom/android/server/BatteryService$BaiduInjector;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -70,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 277
     sget v0, Lcom/android/server/BatteryService$BaiduInjector;->NOTIFI_ID:I
 
     return v0
@@ -80,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 277
     sget-object v0, Lcom/android/server/BatteryService$BaiduInjector;->mManager:Landroid/app/NotificationManager;
 
     return-object v0
@@ -90,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 277
     sget-object v0, Lcom/android/server/BatteryService$BaiduInjector;->mDialog:Landroid/app/AlertDialog;
 
     return-object v0
@@ -100,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 277
     sget-object v0, Lcom/android/server/BatteryService$BaiduInjector;->mShutdownTimer:Landroid/os/CountDownTimer;
 
     return-object v0
@@ -111,7 +103,6 @@
     .parameter "service"
 
     .prologue
-    .line 286
     #getter for: Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
     invoke-static {p0}, Lcom/android/server/BatteryService;->access$100(Lcom/android/server/BatteryService;)Landroid/content/Context;
 
@@ -119,7 +110,6 @@
 
     sput-object v1, Lcom/android/server/BatteryService$BaiduInjector;->mContext:Landroid/content/Context;
 
-    .line 287
     sget-object v1, Lcom/android/server/BatteryService$BaiduInjector;->mContext:Landroid/content/Context;
 
     const-string v2, "notification"
@@ -132,7 +122,6 @@
 
     sput-object v1, Lcom/android/server/BatteryService$BaiduInjector;->mManager:Landroid/app/NotificationManager;
 
-    .line 288
     new-instance v1, Lcom/android/server/BatteryService$BaiduInjector$1;
 
     const-wide/16 v2, 0x7530
@@ -143,14 +132,12 @@
 
     sput-object v1, Lcom/android/server/BatteryService$BaiduInjector;->mShutdownTimer:Landroid/os/CountDownTimer;
 
-    .line 320
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     sget-object v1, Lcom/android/server/BatteryService$BaiduInjector;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 321
     .local v0, builder:Landroid/app/AlertDialog$Builder;
     const v1, #android:drawable@stat_sys_warning#t
 
@@ -206,7 +193,6 @@
 
     sput-object v1, Lcom/android/server/BatteryService$BaiduInjector;->mDialog:Landroid/app/AlertDialog;
 
-    .line 330
     sget-object v1, Lcom/android/server/BatteryService$BaiduInjector;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
@@ -217,7 +203,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setType(I)V
 
-    .line 331
     return-void
 .end method
 
@@ -225,7 +210,6 @@
     .locals 2
 
     .prologue
-    .line 356
     invoke-static {}, Lcom/android/server/BatteryService;->access$600()Ljava/lang/String;
 
     move-result-object v0
@@ -238,10 +222,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 357
     const/4 v0, 0x1
 
-    .line 359
     :goto_0
     return v0
 
@@ -256,7 +238,6 @@
     .parameter "service"
 
     .prologue
-    .line 334
     #getter for: Lcom/android/server/BatteryService;->mBatteryProps:Landroid/os/BatteryProperties;
     invoke-static {p0}, Lcom/android/server/BatteryService;->access$500(Lcom/android/server/BatteryService;)Landroid/os/BatteryProperties;
 
@@ -282,17 +263,14 @@
 
     if-nez v0, :cond_2
 
-    .line 335
     sget-boolean v0, Lcom/android/server/BatteryService$BaiduInjector;->mStartShutdownTimer:Z
 
     if-nez v0, :cond_1
 
-    .line 336
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/server/BatteryService$BaiduInjector;->mStartShutdownTimer:Z
 
-    .line 337
     #getter for: Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
     invoke-static {p0}, Lcom/android/server/BatteryService;->access$iget-mHandler-7bf639(Lcom/android/server/BatteryService;)Landroid/os/Handler;
 
@@ -304,35 +282,29 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 353
     :cond_1
     :goto_0
     return-void
 
-    .line 346
     :cond_2
     sget-boolean v0, Lcom/android/server/BatteryService$BaiduInjector;->mStartShutdownTimer:Z
 
     if-eqz v0, :cond_1
 
-    .line 347
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/server/BatteryService$BaiduInjector;->mStartShutdownTimer:Z
 
-    .line 348
     sget-object v0, Lcom/android/server/BatteryService$BaiduInjector;->mShutdownTimer:Landroid/os/CountDownTimer;
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->cancel()V
 
-    .line 349
     sget-object v0, Lcom/android/server/BatteryService$BaiduInjector;->mManager:Landroid/app/NotificationManager;
 
     sget v1, Lcom/android/server/BatteryService$BaiduInjector;->NOTIFI_ID:I
 
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 350
     sget-object v0, Lcom/android/server/BatteryService$BaiduInjector;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->cancel()V

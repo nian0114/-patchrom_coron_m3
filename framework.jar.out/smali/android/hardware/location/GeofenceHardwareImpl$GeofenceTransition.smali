@@ -42,30 +42,22 @@
     .parameter "sourcesUsed"
 
     .prologue
-    .line 749
     iput-object p1, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->this$0:Landroid/hardware/location/GeofenceHardwareImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 750
     iput p2, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->mGeofenceId:I
 
-    .line 751
     iput p3, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->mTransition:I
 
-    .line 752
     iput-wide p4, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->mTimestamp:J
 
-    .line 753
     iput-object p6, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->mLocation:Landroid/location/Location;
 
-    .line 754
     iput p7, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->mMonitoringType:I
 
-    .line 755
     iput p8, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->mSourcesUsed:I
 
-    .line 756
     return-void
 .end method
 
@@ -74,7 +66,6 @@
     .parameter "x0"
 
     .prologue
-    .line 736
     iget v0, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->mGeofenceId:I
 
     return v0
@@ -85,7 +76,6 @@
     .parameter "x0"
 
     .prologue
-    .line 736
     iget v0, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->mTransition:I
 
     return v0
@@ -96,7 +86,6 @@
     .parameter "x0"
 
     .prologue
-    .line 736
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->mLocation:Landroid/location/Location;
 
     return-object v0
@@ -107,7 +96,6 @@
     .parameter "x0"
 
     .prologue
-    .line 736
     iget-wide v0, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->mTimestamp:J
 
     return-wide v0
@@ -118,7 +106,6 @@
     .parameter "x0"
 
     .prologue
-    .line 736
     iget v0, p0, Landroid/hardware/location/GeofenceHardwareImpl$GeofenceTransition;->mMonitoringType:I
 
     return v0

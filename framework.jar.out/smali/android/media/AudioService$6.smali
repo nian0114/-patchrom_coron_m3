@@ -33,7 +33,6 @@
     .parameter
 
     .prologue
-    .line 4458
     iput-object p1, p0, Landroid/media/AudioService$6;->this$0:Landroid/media/AudioService;
 
     iput p2, p0, Landroid/media/AudioService$6;->val$streamType:I
@@ -51,7 +50,6 @@
     .locals 4
 
     .prologue
-    .line 4461
     iget-object v1, p0, Landroid/media/AudioService$6;->this$0:Landroid/media/AudioService;
 
     #getter for: Landroid/media/AudioService;->mUiContext:Landroid/content/Context;
@@ -61,7 +59,6 @@
 
     if-nez v1, :cond_0
 
-    .line 4462
     iget-object v1, p0, Landroid/media/AudioService$6;->this$0:Landroid/media/AudioService;
 
     iget-object v2, p0, Landroid/media/AudioService$6;->this$0:Landroid/media/AudioService;
@@ -78,7 +75,6 @@
     #setter for: Landroid/media/AudioService;->mUiContext:Landroid/content/Context;
     invoke-static {v1, v2}, Landroid/media/AudioService;->access$302(Landroid/media/AudioService;Landroid/content/Context;)Landroid/content/Context;
 
-    .line 4465
     :cond_0
     iget-object v1, p0, Landroid/media/AudioService$6;->this$0:Landroid/media/AudioService;
 
@@ -96,7 +92,6 @@
 
     move-result-object v0
 
-    .line 4466
     .local v0, context:Landroid/content/Context;
     :goto_0
     iget-object v1, p0, Landroid/media/AudioService$6;->this$0:Landroid/media/AudioService;
@@ -110,7 +105,6 @@
     #setter for: Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
     invoke-static {v1, v2}, Landroid/media/AudioService;->access$9402(Landroid/media/AudioService;Landroid/view/VolumePanel;)Landroid/view/VolumePanel;
 
-    .line 4467
     iget-object v1, p0, Landroid/media/AudioService$6;->this$0:Landroid/media/AudioService;
 
     #getter for: Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
@@ -124,10 +118,8 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/VolumePanel;->postVolumeChanged(II)V
 
-    .line 4468
     return-void
 
-    .line 4465
     .end local v0           #context:Landroid/content/Context;
     :cond_1
     iget-object v1, p0, Landroid/media/AudioService$6;->this$0:Landroid/media/AudioService;

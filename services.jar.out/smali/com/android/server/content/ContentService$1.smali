@@ -40,7 +40,6 @@
     .parameter
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/android/server/content/ContentService$1;->this$0:Lcom/android/server/content/ContentService;
 
     iput-object p2, p0, Lcom/android/server/content/ContentService$1;->val$pidCounts:Landroid/util/SparseIntArray;
@@ -58,7 +57,6 @@
     .parameter "rhs"
 
     .prologue
-    .line 111
     iget-object v2, p0, Lcom/android/server/content/ContentService$1;->val$pidCounts:Landroid/util/SparseIntArray;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -69,7 +67,6 @@
 
     move-result v0
 
-    .line 112
     .local v0, lc:I
     iget-object v2, p0, Lcom/android/server/content/ContentService$1;->val$pidCounts:Landroid/util/SparseIntArray;
 
@@ -81,27 +78,21 @@
 
     move-result v1
 
-    .line 113
     .local v1, rc:I
     if-ge v0, v1, :cond_0
 
-    .line 114
     const/4 v2, 0x1
 
-    .line 118
     :goto_0
     return v2
 
-    .line 115
     :cond_0
     if-le v0, v1, :cond_1
 
-    .line 116
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 118
     :cond_1
     const/4 v2, 0x0
 
@@ -114,7 +105,6 @@
     .parameter "x1"
 
     .prologue
-    .line 108
     check-cast p1, Ljava/lang/Integer;
 
     .end local p1

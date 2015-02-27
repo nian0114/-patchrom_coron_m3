@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,6 +22,5 @@
     .parameter "location"
 
     .prologue
-    .line 36
     return-void
 .end method

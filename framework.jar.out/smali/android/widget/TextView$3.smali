@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 8067
     iput-object p1, p0, Landroid/widget/TextView$3;->this$0:Landroid/widget/TextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 8070
     iget-object v0, p0, Landroid/widget/TextView$3;->this$0:Landroid/widget/TextView;
 
     #calls: Landroid/widget/TextView;->updateTextServicesLocaleLocked()V
     invoke-static {v0}, Landroid/widget/TextView;->access$200(Landroid/widget/TextView;)V
 
-    .line 8071
     return-void
 .end method

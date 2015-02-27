@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1123
     iput-object p1, p0, Landroid/bluetooth/BluetoothHandsfreeClient$2;->this$0:Landroid/bluetooth/BluetoothHandsfreeClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +42,12 @@
     .parameter "service"
 
     .prologue
-    .line 1126
     const-string v0, "BluetoothHandsfreeClient"
 
     const-string v1, "Proxy object connected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1127
     iget-object v0, p0, Landroid/bluetooth/BluetoothHandsfreeClient$2;->this$0:Landroid/bluetooth/BluetoothHandsfreeClient;
 
     invoke-static {p2}, Landroid/bluetooth/IBluetoothHandsfreeClient$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -60,7 +57,6 @@
     #setter for: Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->access$102(Landroid/bluetooth/BluetoothHandsfreeClient;Landroid/bluetooth/IBluetoothHandsfreeClient;)Landroid/bluetooth/IBluetoothHandsfreeClient;
 
-    .line 1129
     iget-object v0, p0, Landroid/bluetooth/BluetoothHandsfreeClient$2;->this$0:Landroid/bluetooth/BluetoothHandsfreeClient;
 
     #getter for: Landroid/bluetooth/BluetoothHandsfreeClient;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -70,7 +66,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1130
     iget-object v0, p0, Landroid/bluetooth/BluetoothHandsfreeClient$2;->this$0:Landroid/bluetooth/BluetoothHandsfreeClient;
 
     #getter for: Landroid/bluetooth/BluetoothHandsfreeClient;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -84,7 +79,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/bluetooth/BluetoothProfile$ServiceListener;->onServiceConnected(ILandroid/bluetooth/BluetoothProfile;)V
 
-    .line 1132
     :cond_0
     return-void
 .end method
@@ -94,14 +88,12 @@
     .parameter "className"
 
     .prologue
-    .line 1135
     const-string v0, "BluetoothHandsfreeClient"
 
     const-string v1, "Proxy object disconnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1136
     iget-object v0, p0, Landroid/bluetooth/BluetoothHandsfreeClient$2;->this$0:Landroid/bluetooth/BluetoothHandsfreeClient;
 
     const/4 v1, 0x0
@@ -109,7 +101,6 @@
     #setter for: Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->access$102(Landroid/bluetooth/BluetoothHandsfreeClient;Landroid/bluetooth/IBluetoothHandsfreeClient;)Landroid/bluetooth/IBluetoothHandsfreeClient;
 
-    .line 1137
     iget-object v0, p0, Landroid/bluetooth/BluetoothHandsfreeClient$2;->this$0:Landroid/bluetooth/BluetoothHandsfreeClient;
 
     #getter for: Landroid/bluetooth/BluetoothHandsfreeClient;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -119,7 +110,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1138
     iget-object v0, p0, Landroid/bluetooth/BluetoothHandsfreeClient$2;->this$0:Landroid/bluetooth/BluetoothHandsfreeClient;
 
     #getter for: Landroid/bluetooth/BluetoothHandsfreeClient;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -131,7 +121,6 @@
 
     invoke-interface {v0, v1}, Landroid/bluetooth/BluetoothProfile$ServiceListener;->onServiceDisconnected(I)V
 
-    .line 1140
     :cond_0
     return-void
 .end method

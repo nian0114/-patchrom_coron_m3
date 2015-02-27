@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .parameter "status"
 
     .prologue
-    .line 52
     return-void
 .end method
 
@@ -32,7 +30,6 @@
     .parameter "status"
 
     .prologue
-    .line 74
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .parameter "status"
 
     .prologue
-    .line 63
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .parameter "status"
 
     .prologue
-    .line 86
     return-void
 .end method
 
@@ -65,6 +60,5 @@
     .parameter "monitoringType"
 
     .prologue
-    .line 39
     return-void
 .end method

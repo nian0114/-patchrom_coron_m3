@@ -10,13 +10,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 35
     invoke-direct {p0}, Landroid/transition/TransitionSet;-><init>()V
 
-    .line 36
     invoke-virtual {p0, v2}, Landroid/transition/AutoTransition;->setOrdering(I)Landroid/transition/TransitionSet;
 
-    .line 37
     new-instance v0, Landroid/transition/Fade;
 
     const/4 v1, 0x2
@@ -41,6 +38,5 @@
 
     invoke-virtual {v0, v1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
-    .line 40
     return-void
 .end method

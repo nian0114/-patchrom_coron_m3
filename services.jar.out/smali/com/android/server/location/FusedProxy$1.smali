@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 58
     iput-object p1, p0, Lcom/android/server/location/FusedProxy$1;->this$0:Lcom/android/server/location/FusedProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/server/location/FusedProxy$1;->this$0:Lcom/android/server/location/FusedProxy;
 
     iget-object v1, p0, Lcom/android/server/location/FusedProxy$1;->this$0:Lcom/android/server/location/FusedProxy;
@@ -54,6 +52,5 @@
     #calls: Lcom/android/server/location/FusedProxy;->bindProvider(Landroid/hardware/location/IFusedLocationHardware;)V
     invoke-static {v0, v1}, Lcom/android/server/location/FusedProxy;->access$100(Lcom/android/server/location/FusedProxy;Landroid/hardware/location/IFusedLocationHardware;)V
 
-    .line 62
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,10 +44,8 @@
     .parameter "source"
 
     .prologue
-    .line 45
     const/4 v3, 0x0
 
-    .line 46
     .local v3, uris:[Landroid/net/Uri;
     const-class v4, Landroid/nfc/NdefMessage;
 
@@ -62,31 +59,25 @@
 
     check-cast v1, Landroid/nfc/NdefMessage;
 
-    .line 47
     .local v1, msg:Landroid/nfc/NdefMessage;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 48
     .local v2, numUris:I
     if-lez v2, :cond_0
 
-    .line 49
     new-array v3, v2, [Landroid/net/Uri;
 
-    .line 50
     sget-object v4, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->readTypedArray([Ljava/lang/Object;Landroid/os/Parcelable$Creator;)V
 
-    .line 52
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 54
     .local v0, flags:I
     new-instance v4, Landroid/nfc/BeamShareData;
 
@@ -100,7 +91,6 @@
     .parameter "x0"
 
     .prologue
-    .line 42
     invoke-virtual {p0, p1}, Landroid/nfc/BeamShareData$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/BeamShareData;
 
     move-result-object v0
@@ -113,7 +103,6 @@
     .parameter "size"
 
     .prologue
-    .line 59
     new-array v0, p1, [Landroid/nfc/BeamShareData;
 
     return-object v0
@@ -124,7 +113,6 @@
     .parameter "x0"
 
     .prologue
-    .line 42
     invoke-virtual {p0, p1}, Landroid/nfc/BeamShareData$1;->newArray(I)[Landroid/nfc/BeamShareData;
 
     move-result-object v0

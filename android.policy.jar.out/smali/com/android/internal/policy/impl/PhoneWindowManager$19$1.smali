@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 4564
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$19$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$19;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 4568
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$19$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$19;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager$19;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -52,7 +50,6 @@
 
     monitor-enter v1
 
-    .line 4569
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$19$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$19;
 
@@ -65,13 +62,10 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 4570
     monitor-exit v1
 
-    .line 4571
     return-void
 
-    .line 4570
     :catchall_0
     move-exception v0
 

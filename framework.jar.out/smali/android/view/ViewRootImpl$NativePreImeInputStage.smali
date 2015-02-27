@@ -29,13 +29,10 @@
     .parameter "traceCounter"
 
     .prologue
-    .line 3627
     iput-object p1, p0, Landroid/view/ViewRootImpl$NativePreImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
-    .line 3628
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewRootImpl$AsyncInputStage;-><init>(Landroid/view/ViewRootImpl;Landroid/view/ViewRootImpl$InputStage;Ljava/lang/String;)V
 
-    .line 3629
     return-void
 .end method
 
@@ -47,25 +44,20 @@
     .parameter "handled"
 
     .prologue
-    .line 3642
     move-object v0, p1
 
     check-cast v0, Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 3643
     .local v0, q:Landroid/view/ViewRootImpl$QueuedInputEvent;
     if-eqz p2, :cond_0
 
-    .line 3644
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Landroid/view/ViewRootImpl$NativePreImeInputStage;->finish(Landroid/view/ViewRootImpl$QueuedInputEvent;Z)V
 
-    .line 3648
     :goto_0
     return-void
 
-    .line 3647
     :cond_0
     invoke-virtual {p0, v0}, Landroid/view/ViewRootImpl$NativePreImeInputStage;->forward(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
@@ -77,7 +69,6 @@
     .parameter "q"
 
     .prologue
-    .line 3633
     iget-object v0, p0, Landroid/view/ViewRootImpl$NativePreImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl;->mInputQueue:Landroid/view/InputQueue;
@@ -90,7 +81,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3634
     iget-object v0, p0, Landroid/view/ViewRootImpl$NativePreImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl;->mInputQueue:Landroid/view/InputQueue;
@@ -101,10 +91,8 @@
 
     invoke-virtual {v0, v1, p1, v2, p0}, Landroid/view/InputQueue;->sendInputEvent(Landroid/view/InputEvent;Ljava/lang/Object;ZLandroid/view/InputQueue$FinishedInputEventCallback;)V
 
-    .line 3635
     const/4 v0, 0x3
 
-    .line 3637
     :goto_0
     return v0
 

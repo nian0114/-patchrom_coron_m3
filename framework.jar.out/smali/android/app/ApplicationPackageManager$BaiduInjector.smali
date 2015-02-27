@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,10 +32,8 @@
     .parameter "r"
 
     .prologue
-    .line 76
     const/4 v0, 0x0
 
-    .line 77
     .local v0, dr:Landroid/graphics/drawable/Drawable;
     iget v3, p0, Landroid/content/pm/ApplicationInfo;->icon:I
 
@@ -48,7 +45,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 79
     :cond_0
     new-instance v2, Ljava/lang/StringBuffer;
 
@@ -56,7 +52,6 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
-    .line 80
     .local v2, sb:Ljava/lang/StringBuffer;
     sget-object v3, Ljava/io/File;->separator:Ljava/lang/String;
 
@@ -74,7 +69,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 81
     new-instance v1, Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -83,7 +77,6 @@
 
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 82
     .local v1, file:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -91,7 +84,6 @@
 
     if-nez v3, :cond_1
 
-    .line 83
     invoke-static {}, Landroid/content/ThemeDefine;->getIconReplaceMap()Ljava/util/HashMap;
 
     move-result-object v3
@@ -102,7 +94,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 84
     invoke-static {}, Landroid/content/ThemeDefine;->getIconReplaceMap()Ljava/util/HashMap;
 
     move-result-object v3
@@ -117,24 +108,20 @@
 
     move-result p2
 
-    .line 88
     :cond_1
     invoke-virtual {p3, p2}, Landroid/content/res/Resources;->getIconDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 90
     .end local v1           #file:Ljava/io/File;
     .end local v2           #sb:Ljava/lang/StringBuffer;
     :cond_2
     if-nez v0, :cond_3
 
-    .line 91
     invoke-virtual {p3, p2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 93
     :cond_3
     return-object v0
 .end method

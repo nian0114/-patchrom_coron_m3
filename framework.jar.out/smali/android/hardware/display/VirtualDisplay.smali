@@ -19,19 +19,14 @@
     .parameter "token"
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-object p1, p0, Landroid/hardware/display/VirtualDisplay;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
-    .line 39
     iput-object p2, p0, Landroid/hardware/display/VirtualDisplay;->mDisplay:Landroid/view/Display;
 
-    .line 40
     iput-object p3, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/os/IBinder;
 
-    .line 41
     return-void
 .end method
 
@@ -41,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mDisplay:Landroid/view/Display;
 
     return-object v0
@@ -51,24 +45,20 @@
     .locals 2
 
     .prologue
-    .line 58
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
 
-    .line 59
     iget-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mGlobal:Landroid/hardware/display/DisplayManagerGlobal;
 
     iget-object v1, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/os/IBinder;
 
     invoke-virtual {v0, v1}, Landroid/hardware/display/DisplayManagerGlobal;->releaseVirtualDisplay(Landroid/os/IBinder;)V
 
-    .line 60
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/hardware/display/VirtualDisplay;->mToken:Landroid/os/IBinder;
 
-    .line 62
     :cond_0
     return-void
 .end method
@@ -77,7 +67,6 @@
     .locals 2
 
     .prologue
-    .line 66
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -106,7 +95,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

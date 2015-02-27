@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 50
     iput-object p1, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator;->this$0:Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;
 
     invoke-direct {p0}, Landroid/service/gesture/IEdgeGestureActivationListener$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 50
     invoke-direct {p0, p1}, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator;-><init>(Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;)V
 
     return-void
@@ -59,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener$Delegator;->this$0:Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;
 
     #getter for: Landroid/service/gesture/EdgeGestureManager$EdgeGestureActivationListener;->mHandler:Landroid/os/Handler;
@@ -83,6 +80,5 @@
 
     invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 58
     return-void
 .end method

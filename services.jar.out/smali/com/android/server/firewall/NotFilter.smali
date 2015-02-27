@@ -19,7 +19,6 @@
     .locals 2
 
     .prologue
-    .line 41
     new-instance v0, Lcom/android/server/firewall/NotFilter$1;
 
     const-string v1, "not"
@@ -36,13 +35,10 @@
     .parameter "child"
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-object p1, p0, Lcom/android/server/firewall/NotFilter;->mChild:Lcom/android/server/firewall/Filter;
 
-    .line 32
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .parameter "x1"
 
     .prologue
-    .line 27
     invoke-direct {p0, p1}, Lcom/android/server/firewall/NotFilter;-><init>(Lcom/android/server/firewall/Filter;)V
 
     return-void
@@ -71,7 +66,6 @@
     .parameter "receivingUid"
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/server/firewall/NotFilter;->mChild:Lcom/android/server/firewall/Filter;
 
     move-object v1, p1

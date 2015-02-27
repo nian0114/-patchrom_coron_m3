@@ -24,10 +24,8 @@
     .locals 1
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -44,12 +42,10 @@
     .parameter "other"
 
     .prologue
-    .line 57
     instance-of v0, p1, Landroid/transition/TransitionValues;
 
     if-eqz v0, :cond_0
 
-    .line 58
     iget-object v1, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     move-object v0, p1
@@ -60,7 +56,6 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 59
     iget-object v0, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     check-cast p1, Landroid/transition/TransitionValues;
@@ -74,10 +69,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 60
     const/4 v0, 0x1
 
-    .line 64
     :goto_0
     return v0
 
@@ -91,7 +84,6 @@
     .locals 2
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -115,7 +107,6 @@
     .locals 5
 
     .prologue
-    .line 74
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -148,7 +139,6 @@
 
     move-result-object v1
 
-    .line 75
     .local v1, returnValue:Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -180,7 +170,6 @@
 
     move-result-object v1
 
-    .line 76
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -199,7 +188,6 @@
 
     move-result-object v1
 
-    .line 77
     iget-object v3, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -224,7 +212,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 78
     .local v2, s:Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -270,10 +257,8 @@
 
     move-result-object v1
 
-    .line 79
     goto :goto_0
 
-    .line 80
     .end local v2           #s:Ljava/lang/String;
     :cond_0
     return-object v1

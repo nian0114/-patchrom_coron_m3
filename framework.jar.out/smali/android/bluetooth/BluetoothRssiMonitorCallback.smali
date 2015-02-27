@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .parameter "rssi"
 
     .prologue
-    .line 48
     return-void
 .end method
 
@@ -34,7 +32,6 @@
     .parameter "status"
 
     .prologue
-    .line 44
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 36
     return-void
 .end method
 
@@ -50,6 +46,5 @@
     .locals 0
 
     .prologue
-    .line 40
     return-void
 .end method

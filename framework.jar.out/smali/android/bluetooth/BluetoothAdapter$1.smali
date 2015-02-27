@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 549
     iput-object p1, p0, Landroid/bluetooth/BluetoothAdapter$1;->this$0:Landroid/bluetooth/BluetoothAdapter;
 
     iput-object p2, p0, Landroid/bluetooth/BluetoothAdapter$1;->val$callback:Landroid/bluetooth/BluetoothAdapter$AdvertiseCallback;
@@ -46,13 +45,11 @@
     .locals 2
 
     .prologue
-    .line 553
     iget-object v0, p0, Landroid/bluetooth/BluetoothAdapter$1;->val$callback:Landroid/bluetooth/BluetoothAdapter$AdvertiseCallback;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Landroid/bluetooth/BluetoothAdapter$AdvertiseCallback;->onAdvertiseStart(I)V
 
-    .line 554
     return-void
 .end method

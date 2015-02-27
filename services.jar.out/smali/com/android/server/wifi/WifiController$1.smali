@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 181
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 184
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 185
     .local v0, action:Ljava/lang/String;
     const-string v1, "com.android.server.WifiManager.action.DEVICE_IDLE"
 
@@ -55,19 +52,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 186
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const v2, 0x26005
 
     invoke-virtual {v1, v2}, Lcom/android/server/wifi/WifiController;->sendMessage(I)V
 
-    .line 191
     :cond_0
     :goto_0
     return-void
 
-    .line 187
     :cond_1
     const-string v1, "android.net.wifi.STATE_CHANGE"
 
@@ -77,7 +71,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 188
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$1;->this$0:Lcom/android/server/wifi/WifiController;
 
     const-string v1, "networkInfo"

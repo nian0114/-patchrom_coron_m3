@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 309
     iput-object p1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 312
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
     #getter for: Lcom/android/server/content/SyncManager;->mDataConnectionIsConnected:Z
@@ -48,7 +46,6 @@
 
     move-result v0
 
-    .line 316
     .local v0, wasConnected:Z
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
@@ -62,7 +59,6 @@
     #setter for: Lcom/android/server/content/SyncManager;->mDataConnectionIsConnected:Z
     invoke-static {v1, v2}, Lcom/android/server/content/SyncManager;->access$402(Lcom/android/server/content/SyncManager;Z)Z
 
-    .line 317
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
     #getter for: Lcom/android/server/content/SyncManager;->mDataConnectionIsConnected:Z
@@ -72,10 +68,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 318
     if-nez v0, :cond_1
 
-    .line 319
     const-string v1, "SyncManager"
 
     const/4 v2, 0x2
@@ -86,14 +80,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 320
     const-string v1, "SyncManager"
 
     const-string v2, "Reconnection detected: clearing all backoffs"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 322
     :cond_0
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
@@ -104,7 +96,6 @@
 
     monitor-enter v2
 
-    .line 323
     :try_start_0
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
@@ -122,23 +113,19 @@
 
     invoke-virtual {v1, v3}, Lcom/android/server/content/SyncStorageEngine;->clearAllBackoffsLocked(Lcom/android/server/content/SyncQueue;)V
 
-    .line 324
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 326
     :cond_1
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
     #calls: Lcom/android/server/content/SyncManager;->sendCheckAlarmsMessage()V
     invoke-static {v1}, Lcom/android/server/content/SyncManager;->access$100(Lcom/android/server/content/SyncManager;)V
 
-    .line 328
     :cond_2
     return-void
 
-    .line 324
     :catchall_0
     move-exception v1
 

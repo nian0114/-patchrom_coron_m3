@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .parameter "x0"
 
     .prologue
-    .line 72
     invoke-direct {p0}, Lcom/android/server/MSimTelephonyRegistry$Record;-><init>()V
 
     return-void
@@ -56,7 +54,6 @@
     .locals 2
 
     .prologue
-    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

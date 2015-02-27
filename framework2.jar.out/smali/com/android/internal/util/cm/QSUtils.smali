@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +22,6 @@
 
     const/4 v1, 0x0
 
-    .line 91
     const-string v2, "adb_enabled"
 
     invoke-static {p0, v2, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
@@ -45,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 45
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
@@ -67,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 79
     invoke-static {}, Landroid/hardware/Camera;->getNumberOfCameras()I
 
     move-result v0
@@ -92,7 +88,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 95
     const-string v2, "sensor"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -101,7 +96,6 @@
 
     check-cast v0, Landroid/hardware/SensorManager;
 
-    .line 96
     .local v0, sm:Landroid/hardware/SensorManager;
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
@@ -131,7 +125,6 @@
     .parameter "ctx"
 
     .prologue
-    .line 74
     const-string v1, "battery"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -140,7 +133,6 @@
 
     check-cast v0, Landroid/os/BatteryManager;
 
-    .line 75
     .local v0, bm:Landroid/os/BatteryManager;
     invoke-virtual {v0}, Landroid/os/BatteryManager;->isDockBatterySupported()Z
 
@@ -154,7 +146,6 @@
     .parameter "context"
 
     .prologue
-    .line 83
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -173,12 +164,10 @@
     .parameter "ctx"
 
     .prologue
-    .line 25
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 26
     .local v0, res:Landroid/content/res/Resources;
     const v1, 0x1110069
 
@@ -196,7 +185,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 69
     const-string v2, "phone"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -205,7 +193,6 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 70
     .local v0, tm:Landroid/telephony/TelephonyManager;
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getLteOnCdmaMode()I
 
@@ -234,7 +221,6 @@
     .parameter "ctx"
 
     .prologue
-    .line 40
     const-string v1, "connectivity"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -243,7 +229,6 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 41
     .local v0, cm:Landroid/net/ConnectivityManager;
     const/4 v1, 0x0
 
@@ -259,7 +244,6 @@
     .parameter "ctx"
 
     .prologue
-    .line 65
     invoke-static {p0}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
@@ -282,12 +266,10 @@
     .parameter "ctx"
 
     .prologue
-    .line 53
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 54
     .local v1, res:Landroid/content/res/Resources;
     const v2, 0x1040115
 
@@ -295,7 +277,6 @@
 
     move-result-object v0
 
-    .line 56
     .local v0, perfProfileProp:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -319,7 +300,6 @@
     .parameter "context"
 
     .prologue
-    .line 87
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -338,7 +318,6 @@
     .parameter "ctx"
 
     .prologue
-    .line 30
     const-string v1, "connectivity"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -347,7 +326,6 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 31
     .local v0, cm:Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getTetherableUsbRegexs()[Ljava/lang/String;
 
@@ -373,7 +351,6 @@
     .parameter "ctx"
 
     .prologue
-    .line 35
     const-string v1, "display"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -382,7 +359,6 @@
 
     check-cast v0, Landroid/hardware/display/DisplayManager;
 
-    .line 36
     .local v0, dm:Landroid/hardware/display/DisplayManager;
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->getWifiDisplayStatus()Landroid/hardware/display/WifiDisplayStatus;
 
@@ -412,7 +388,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 60
     const-string v1, "expanded_desktop_style"
 
     const/4 v2, -0x3
@@ -436,7 +411,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 49
     const-string v1, "system_profiles_enabled"
 
     invoke-static {p0, v1, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I

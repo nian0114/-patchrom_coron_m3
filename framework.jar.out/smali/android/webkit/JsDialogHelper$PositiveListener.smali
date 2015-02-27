@@ -30,15 +30,12 @@
     .parameter "edit"
 
     .prologue
-    .line 144
     iput-object p1, p0, Landroid/webkit/JsDialogHelper$PositiveListener;->this$0:Landroid/webkit/JsDialogHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
     iput-object p2, p0, Landroid/webkit/JsDialogHelper$PositiveListener;->mEdit:Landroid/widget/EditText;
 
-    .line 146
     return-void
 .end method
 
@@ -50,12 +47,10 @@
     .parameter "which"
 
     .prologue
-    .line 150
     iget-object v0, p0, Landroid/webkit/JsDialogHelper$PositiveListener;->mEdit:Landroid/widget/EditText;
 
     if-nez v0, :cond_0
 
-    .line 151
     iget-object v0, p0, Landroid/webkit/JsDialogHelper$PositiveListener;->this$0:Landroid/webkit/JsDialogHelper;
 
     #getter for: Landroid/webkit/JsDialogHelper;->mResult:Landroid/webkit/JsPromptResult;
@@ -65,11 +60,9 @@
 
     invoke-virtual {v0}, Landroid/webkit/JsPromptResult;->confirm()V
 
-    .line 155
     :goto_0
     return-void
 
-    .line 153
     :cond_0
     iget-object v0, p0, Landroid/webkit/JsDialogHelper$PositiveListener;->this$0:Landroid/webkit/JsDialogHelper;
 

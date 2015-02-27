@@ -25,13 +25,10 @@
     .parameter "mdst"
 
     .prologue
-    .line 145
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 146
     iput-object p2, p0, Landroid/net/MobileDataStateTracker$MdstHandler;->mMdst:Landroid/net/MobileDataStateTracker;
 
-    .line 147
     return-void
 .end method
 
@@ -42,23 +39,19 @@
     .parameter "msg"
 
     .prologue
-    .line 151
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 173
     :cond_0
     :goto_0
     return-void
 
-    .line 153
     :sswitch_0
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     if-nez v0, :cond_0
 
-    .line 157
     iget-object v1, p0, Landroid/net/MobileDataStateTracker$MdstHandler;->mMdst:Landroid/net/MobileDataStateTracker;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -70,7 +63,6 @@
 
     goto :goto_0
 
-    .line 166
     :sswitch_1
     iget-object v0, p0, Landroid/net/MobileDataStateTracker$MdstHandler;->mMdst:Landroid/net/MobileDataStateTracker;
 
@@ -81,7 +73,6 @@
 
     goto :goto_0
 
-    .line 151
     nop
 
     :sswitch_data_0

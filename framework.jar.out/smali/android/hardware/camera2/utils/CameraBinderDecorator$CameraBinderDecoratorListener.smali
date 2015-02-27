@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .parameter "x0"
 
     .prologue
-    .line 56
     invoke-direct {p0}, Landroid/hardware/camera2/utils/CameraBinderDecorator$CameraBinderDecoratorListener;-><init>()V
 
     return-void
@@ -52,7 +50,6 @@
 
     const/4 v3, 0x1
 
-    .line 65
     invoke-virtual {p1}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
 
     move-result-object v1
@@ -61,7 +58,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 66
     check-cast p3, Ljava/lang/Integer;
 
     .end local p3
@@ -69,15 +65,12 @@
 
     move-result v0
 
-    .line 68
     .local v0, returnValue:I
     sparse-switch v0, :sswitch_data_0
 
-    .line 104
     :goto_0
     if-gez v0, :cond_0
 
-    .line 105
     new-instance v1, Ljava/lang/UnsupportedOperationException;
 
     const-string v2, "Unknown error %d"
@@ -100,7 +93,6 @@
 
     throw v1
 
-    .line 72
     :sswitch_0
     new-instance v1, Ljava/lang/SecurityException;
 
@@ -110,7 +102,6 @@
 
     throw v1
 
-    .line 78
     :sswitch_1
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -120,7 +111,6 @@
 
     throw v1
 
-    .line 80
     :sswitch_2
     new-instance v1, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -128,7 +118,6 @@
 
     invoke-static {v1}, Landroid/hardware/camera2/utils/UncheckedThrow;->throwAnyException(Ljava/lang/Exception;)V
 
-    .line 83
     :sswitch_3
     new-instance v1, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -136,7 +125,6 @@
 
     invoke-static {v1}, Landroid/hardware/camera2/utils/UncheckedThrow;->throwAnyException(Ljava/lang/Exception;)V
 
-    .line 86
     :sswitch_4
     new-instance v1, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -146,7 +134,6 @@
 
     invoke-static {v1}, Landroid/hardware/camera2/utils/UncheckedThrow;->throwAnyException(Ljava/lang/Exception;)V
 
-    .line 89
     :sswitch_5
     new-instance v1, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -156,7 +143,6 @@
 
     invoke-static {v1}, Landroid/hardware/camera2/utils/UncheckedThrow;->throwAnyException(Ljava/lang/Exception;)V
 
-    .line 92
     :sswitch_6
     new-instance v1, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -164,7 +150,6 @@
 
     invoke-static {v1}, Landroid/hardware/camera2/utils/UncheckedThrow;->throwAnyException(Ljava/lang/Exception;)V
 
-    .line 95
     :sswitch_7
     new-instance v1, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -176,13 +161,11 @@
 
     goto :goto_0
 
-    .line 109
     .end local v0           #returnValue:I
     :cond_0
     :sswitch_8
     return-void
 
-    .line 68
     :sswitch_data_0
     .sparse-switch
         -0x5f -> :sswitch_7
@@ -204,7 +187,6 @@
     .parameter "args"
 
     .prologue
-    .line 60
     return-void
 .end method
 
@@ -215,12 +197,10 @@
     .parameter "t"
 
     .prologue
-    .line 114
     instance-of v0, p3, Landroid/os/DeadObjectException;
 
     if-eqz v0, :cond_1
 
-    .line 115
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
     const/4 v1, 0x2
@@ -231,19 +211,16 @@
 
     invoke-static {v0}, Landroid/hardware/camera2/utils/UncheckedThrow;->throwAnyException(Ljava/lang/Exception;)V
 
-    .line 124
     :cond_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 119
     :cond_1
     instance-of v0, p3, Landroid/os/RemoteException;
 
     if-eqz v0, :cond_0
 
-    .line 120
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "An unknown RemoteException was thrown which should never happen."
@@ -259,6 +236,5 @@
     .parameter "args"
 
     .prologue
-    .line 129
     return-void
 .end method

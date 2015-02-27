@@ -37,10 +37,8 @@
     .locals 0
 
     .prologue
-    .line 262
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 263
     return-void
 .end method
 
@@ -51,18 +49,13 @@
     .parameter "target"
 
     .prologue
-    .line 265
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 266
     iput p1, p0, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
 
-    .line 267
     iput-object p2, p0, Lcom/android/internal/util/HanziToPinyin$Token;->source:Ljava/lang/String;
 
-    .line 268
     iput-object p3, p0, Lcom/android/internal/util/HanziToPinyin$Token;->target:Ljava/lang/String;
 
-    .line 269
     return-void
 .end method

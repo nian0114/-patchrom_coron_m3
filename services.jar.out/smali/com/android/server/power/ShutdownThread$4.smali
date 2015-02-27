@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 223
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,21 +38,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 225
     const/4 v0, 0x4
 
     if-ne p2, v0, :cond_0
 
-    .line 226
     invoke-static {v1}, Lcom/android/server/power/ShutdownThread;->access$002(Z)Z
 
-    .line 227
     invoke-static {v1}, Lcom/android/server/power/ShutdownThread;->access$102(Z)Z
 
-    .line 228
     invoke-interface {p1}, Landroid/content/DialogInterface;->cancel()V
 
-    .line 230
     :cond_0
     const/4 v0, 0x1
 

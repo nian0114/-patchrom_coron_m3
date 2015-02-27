@@ -46,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 304
     new-instance v0, Landroid/content/ComponentName$1;
 
     invoke-direct {v0}, Landroid/content/ComponentName$1;-><init>()V
@@ -70,25 +69,21 @@
     .end annotation
 
     .prologue
-    .line 76
     .local p2, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
-    .line 78
     invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
-    .line 79
     return-void
 .end method
 
@@ -98,10 +93,8 @@
     .parameter "cls"
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     if-nez p2, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -112,7 +105,6 @@
 
     throw v0
 
-    .line 64
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -120,10 +112,8 @@
 
     iput-object v0, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
-    .line 65
     iput-object p2, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
-    .line 66
     return-void
 .end method
 
@@ -132,30 +122,26 @@
     .parameter "in"
 
     .prologue
-    .line 325
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 326
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
-    .line 327
     iget-object v0, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "package name is null"
+    const-string v1, "package name is null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 329
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -163,7 +149,6 @@
 
     iput-object v0, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
-    .line 330
     iget-object v0, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
     if-nez v0, :cond_1
@@ -176,7 +161,6 @@
 
     throw v0
 
-    .line 332
     :cond_1
     return-void
 .end method
@@ -187,20 +171,16 @@
     .parameter "in"
 
     .prologue
-    .line 334
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 335
     iput-object p1, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
-    .line 336
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
-    .line 337
     return-void
 .end method
 
@@ -210,21 +190,18 @@
     .parameter "cls"
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "package name is null"
+    const-string v1, "package name is null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 49
     :cond_0
     if-nez p2, :cond_1
 
@@ -236,14 +213,11 @@
 
     throw v0
 
-    .line 50
     :cond_1
     iput-object p1, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
-    .line 51
     iput-object p2, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
-    .line 52
     return-void
 .end method
 
@@ -254,25 +228,21 @@
     .parameter "className"
 
     .prologue
-    .line 116
     invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 117
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 118
     .local v1, PN:I
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 119
     .local v0, CN:I
     if-le v0, v1, :cond_0
 
@@ -284,16 +254,13 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 120
     invoke-virtual {p0, p2, v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
-    .line 125
     .end local v0           #CN:I
     .end local v1           #PN:I
     :goto_0
     return-void
 
-    .line 124
     :cond_0
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -307,7 +274,6 @@
     .parameter "className"
 
     .prologue
-    .line 180
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -316,10 +282,8 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 181
     invoke-static {p0, p1, p2}, Landroid/content/ComponentName;->appendShortClassName(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 182
     return-void
 .end method
 
@@ -330,25 +294,21 @@
     .parameter "className"
 
     .prologue
-    .line 129
     invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 130
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 131
     .local v1, PN:I
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 132
     .local v0, CN:I
     if-le v0, v1, :cond_0
 
@@ -360,18 +320,15 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 133
     sub-int v2, v0, v1
 
     invoke-virtual {p0, p2, v1, v2}, Ljava/io/PrintWriter;->write(Ljava/lang/String;II)V
 
-    .line 138
     .end local v0           #CN:I
     .end local v1           #PN:I
     :goto_0
     return-void
 
-    .line 137
     :cond_0
     invoke-virtual {p0, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -385,18 +342,14 @@
     .parameter "className"
 
     .prologue
-    .line 186
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 187
     const/16 v0, 0x2f
 
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 188
     invoke-static {p0, p1, p2}, Landroid/content/ComponentName;->printShortClassName(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
     return-void
 .end method
 
@@ -405,12 +358,10 @@
     .parameter "in"
 
     .prologue
-    .line 300
     invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 301
     .local v0, pkg:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -434,14 +385,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 208
     const/16 v3, 0x2f
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->indexOf(I)I
 
     move-result v2
 
-    .line 209
     .local v2, sep:I
     if-ltz v2, :cond_0
 
@@ -453,21 +402,17 @@
 
     if-lt v3, v4, :cond_1
 
-    .line 210
     :cond_0
     const/4 v3, 0x0
 
-    .line 217
     :goto_0
     return-object v3
 
-    .line 212
     :cond_1
     invoke-virtual {p0, v5, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 213
     .local v1, pkg:Ljava/lang/String;
     add-int/lit8 v3, v2, 0x1
 
@@ -475,7 +420,6 @@
 
     move-result-object v0
 
-    .line 214
     .local v0, cls:Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -491,7 +435,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 215
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -508,7 +451,6 @@
 
     move-result-object v0
 
-    .line 217
     :cond_2
     new-instance v3, Landroid/content/ComponentName;
 
@@ -523,19 +465,15 @@
     .parameter "out"
 
     .prologue
-    .line 281
     if-eqz p0, :cond_0
 
-    .line 282
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/content/ComponentName;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 286
     :goto_0
     return-void
 
-    .line 284
     :cond_0
     const/4 v0, 0x0
 
@@ -551,14 +489,12 @@
     .parameter "sb"
 
     .prologue
-    .line 175
     iget-object v0, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
     iget-object v1, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
     invoke-static {p1, v0, v1}, Landroid/content/ComponentName;->appendShortString(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 176
     return-void
 .end method
 
@@ -566,7 +502,6 @@
     .locals 3
 
     .prologue
-    .line 82
     new-instance v0, Landroid/content/ComponentName;
 
     iget-object v1, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
@@ -587,7 +522,6 @@
     .end annotation
 
     .prologue
-    .line 35
     invoke-virtual {p0}, Landroid/content/ComponentName;->clone()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -600,7 +534,6 @@
     .parameter "that"
 
     .prologue
-    .line 255
     iget-object v1, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
     iget-object v2, p1, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
@@ -609,11 +542,9 @@
 
     move-result v0
 
-    .line 256
     .local v0, v:I
     if-eqz v0, :cond_0
 
-    .line 259
     .end local v0           #v:I
     :goto_0
     return v0
@@ -636,7 +567,6 @@
     .parameter "x0"
 
     .prologue
-    .line 35
     check-cast p1, Landroid/content/ComponentName;
 
     .end local p1
@@ -651,7 +581,6 @@
     .locals 1
 
     .prologue
-    .line 263
     const/4 v0, 0x0
 
     return v0
@@ -664,10 +593,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 236
     if-eqz p1, :cond_0
 
-    .line 237
     :try_start_0
     move-object v0, p1
 
@@ -675,7 +602,6 @@
 
     move-object v1, v0
 
-    .line 240
     .local v1, other:Landroid/content/ComponentName;
     iget-object v3, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
@@ -701,13 +627,11 @@
 
     const/4 v2, 0x1
 
-    .line 245
     .end local v1           #other:Landroid/content/ComponentName;
     :cond_0
     :goto_0
     return v2
 
-    .line 243
     :catch_0
     move-exception v3
 
@@ -718,7 +642,6 @@
     .locals 3
 
     .prologue
-    .line 168
     new-instance v0, Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
@@ -737,7 +660,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 169
     .local v0, sb:Ljava/lang/StringBuilder;
     iget-object v1, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
@@ -745,7 +667,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/content/ComponentName;->appendShortString(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 170
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -757,7 +678,6 @@
     .locals 2
 
     .prologue
-    .line 153
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -791,7 +711,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
     return-object v0
@@ -801,7 +720,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
     return-object v0
@@ -811,7 +729,6 @@
     .locals 4
 
     .prologue
-    .line 104
     iget-object v2, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
     iget-object v3, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
@@ -822,14 +739,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 105
     iget-object v2, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 106
     .local v1, PN:I
     iget-object v2, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
@@ -837,7 +752,6 @@
 
     move-result v0
 
-    .line 107
     .local v0, CN:I
     if-le v0, v1, :cond_0
 
@@ -851,14 +765,12 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 108
     iget-object v2, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
     invoke-virtual {v2, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 111
     .end local v0           #CN:I
     .end local v1           #PN:I
     :goto_0
@@ -874,7 +786,6 @@
     .locals 2
 
     .prologue
-    .line 250
     iget-object v0, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -896,12 +807,11 @@
     .locals 2
 
     .prologue
-    .line 225
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{"
+    const-string v1, "{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -925,7 +835,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -942,7 +852,6 @@
     .locals 2
 
     .prologue
-    .line 230
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -971,7 +880,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -990,16 +899,13 @@
     .parameter "flags"
 
     .prologue
-    .line 267
     iget-object v0, p0, Landroid/content/ComponentName;->mPackage:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 268
     iget-object v0, p0, Landroid/content/ComponentName;->mClass:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 269
     return-void
 .end method

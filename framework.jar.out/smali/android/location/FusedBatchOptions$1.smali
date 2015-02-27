@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .parameter "parcel"
 
     .prologue
-    .line 109
     new-instance v0, Landroid/location/FusedBatchOptions;
 
     invoke-direct {v0}, Landroid/location/FusedBatchOptions;-><init>()V
 
-    .line 110
     .local v0, options:Landroid/location/FusedBatchOptions;
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
@@ -58,28 +55,24 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/location/FusedBatchOptions;->setMaxPowerAllocationInMW(D)V
 
-    .line 111
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v1
 
     invoke-virtual {v0, v1, v2}, Landroid/location/FusedBatchOptions;->setPeriodInNS(J)V
 
-    .line 112
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/location/FusedBatchOptions;->setSourceToUse(I)V
 
-    .line 113
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/location/FusedBatchOptions;->setFlag(I)V
 
-    .line 114
     return-object v0
 .end method
 
@@ -88,7 +81,6 @@
     .parameter "x0"
 
     .prologue
-    .line 106
     invoke-virtual {p0, p1}, Landroid/location/FusedBatchOptions$1;->createFromParcel(Landroid/os/Parcel;)Landroid/location/FusedBatchOptions;
 
     move-result-object v0
@@ -101,7 +93,6 @@
     .parameter "size"
 
     .prologue
-    .line 119
     new-array v0, p1, [Landroid/location/FusedBatchOptions;
 
     return-object v0
@@ -112,7 +103,6 @@
     .parameter "x0"
 
     .prologue
-    .line 106
     invoke-virtual {p0, p1}, Landroid/location/FusedBatchOptions$1;->newArray(I)[Landroid/location/FusedBatchOptions;
 
     move-result-object v0

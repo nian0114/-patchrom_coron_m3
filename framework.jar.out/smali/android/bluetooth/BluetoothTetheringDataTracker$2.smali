@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 318
     iput-object p1, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     iput-object p2, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->val$linkProperties:Landroid/net/LinkProperties;
@@ -46,12 +45,10 @@
     .locals 9
 
     .prologue
-    .line 321
     new-instance v0, Landroid/net/DhcpResults;
 
     invoke-direct {v0}, Landroid/net/DhcpResults;-><init>()V
 
-    .line 322
     .local v0, dhcpResults:Landroid/net/DhcpResults;
     iget-object v3, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->val$linkProperties:Landroid/net/LinkProperties;
 
@@ -63,7 +60,6 @@
 
     move-result v2
 
-    .line 324
     .local v2, success:Z
     iget-object v3, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
@@ -74,7 +70,6 @@
 
     monitor-enter v4
 
-    .line 325
     :try_start_0
     iget-object v3, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->val$linkProperties:Landroid/net/LinkProperties;
 
@@ -95,25 +90,20 @@
 
     if-eq v3, v5, :cond_0
 
-    .line 326
     const-string v3, "BluetoothTethering"
 
-    const-string/jumbo v5, "obsolete DHCP run aborted"
+    const-string v5, "obsolete DHCP run aborted"
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
     monitor-exit v4
 
-    .line 343
     :goto_0
     return-void
 
-    .line 329
     :cond_0
     if-nez v2, :cond_1
 
-    .line 330
     const-string v3, "BluetoothTethering"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -140,12 +130,10 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
     monitor-exit v4
 
     goto :goto_0
 
-    .line 344
     :catchall_0
     move-exception v3
 
@@ -155,7 +143,6 @@
 
     throw v3
 
-    .line 333
     :cond_1
     :try_start_1
     iget-object v3, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
@@ -165,7 +152,6 @@
     #setter for: Landroid/bluetooth/BluetoothTetheringDataTracker;->mLinkProperties:Landroid/net/LinkProperties;
     invoke-static {v3, v5}, Landroid/bluetooth/BluetoothTetheringDataTracker;->access$302(Landroid/bluetooth/BluetoothTetheringDataTracker;Landroid/net/LinkProperties;)Landroid/net/LinkProperties;
 
-    .line 334
     iget-object v3, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     #getter for: Landroid/bluetooth/BluetoothTetheringDataTracker;->mNetworkInfoLock:Ljava/lang/Object;
@@ -177,7 +163,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 335
     :try_start_2
     iget-object v3, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
@@ -190,7 +175,6 @@
 
     invoke-virtual {v3, v6}, Landroid/net/NetworkInfo;->setIsAvailable(Z)V
 
-    .line 336
     iget-object v3, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     #getter for: Landroid/bluetooth/BluetoothTetheringDataTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -206,7 +190,6 @@
 
     invoke-virtual {v3, v6, v7, v8}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 337
     iget-object v3, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     #getter for: Landroid/bluetooth/BluetoothTetheringDataTracker;->mCsHandler:Landroid/os/Handler;
@@ -216,7 +199,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 338
     iget-object v3, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     #getter for: Landroid/bluetooth/BluetoothTetheringDataTracker;->mCsHandler:Landroid/os/Handler;
@@ -241,18 +223,15 @@
 
     move-result-object v1
 
-    .line 340
     .local v1, msg:Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 342
     .end local v1           #msg:Landroid/os/Message;
     :cond_2
     monitor-exit v5
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 343
     :try_start_3
     monitor-exit v4
     :try_end_3
@@ -260,7 +239,6 @@
 
     goto :goto_0
 
-    .line 342
     :catchall_1
     move-exception v3
 

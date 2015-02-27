@@ -56,29 +56,24 @@
     .parameter "callback"
 
     .prologue
-    .line 263
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 167
     new-instance v1, Landroid/wipower/WipowerManager$1;
 
     invoke-direct {v1, p0}, Landroid/wipower/WipowerManager$1;-><init>(Landroid/wipower/WipowerManager;)V
 
     iput-object v1, p0, Landroid/wipower/WipowerManager;->mWiPowerMangerCallback:Landroid/wipower/IWipowerManagerCallback;
 
-    .line 218
     new-instance v1, Landroid/wipower/WipowerManager$2;
 
     invoke-direct {v1, p0}, Landroid/wipower/WipowerManager$2;-><init>(Landroid/wipower/WipowerManager;)V
 
     iput-object v1, p0, Landroid/wipower/WipowerManager;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 264
     sget-object v1, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     if-nez v1, :cond_0
 
-    .line 266
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -100,7 +95,6 @@
 
     if-nez v1, :cond_0
 
-    .line 267
     const-string v1, "WipowerManager"
 
     const-string v2, "Could not bind to Wipower Service"
@@ -109,7 +103,6 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 274
     :cond_0
     :goto_0
     const-string v1, "WipowerManager"
@@ -118,28 +111,23 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     new-instance v1, Landroid/wipower/WipowerDynamicParam;
 
     invoke-direct {v1}, Landroid/wipower/WipowerDynamicParam;-><init>()V
 
     sput-object v1, Landroid/wipower/WipowerManager;->mPruData:Landroid/wipower/WipowerDynamicParam;
 
-    .line 276
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v1, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 277
     return-void
 
-    .line 269
     :catch_0
     move-exception v0
 
-    .line 270
     .local v0, e:Ljava/lang/SecurityException;
     const-string v1, "WipowerManager"
 
@@ -154,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-object v0, Landroid/wipower/WipowerManager;->mPruData:Landroid/wipower/WipowerDynamicParam;
 
     return-object v0
@@ -164,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-object v0, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     return-object v0
@@ -175,7 +161,6 @@
     .parameter "x0"
 
     .prologue
-    .line 54
     sput-object p0, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     return-object p0
@@ -186,7 +171,6 @@
     .parameter "x0"
 
     .prologue
-    .line 54
     iget-object v0, p0, Landroid/wipower/WipowerManager;->mWiPowerMangerCallback:Landroid/wipower/IWipowerManagerCallback;
 
     return-object v0
@@ -198,7 +182,6 @@
     .parameter "callback"
 
     .prologue
-    .line 245
     const-class v1, Landroid/wipower/WipowerManager;
 
     monitor-enter v1
@@ -210,7 +193,6 @@
 
     if-nez v0, :cond_0
 
-    .line 246
     const-string v0, "WipowerManager"
 
     const-string v2, "Wipower not supported"
@@ -219,30 +201,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 247
     const/4 v0, 0x0
 
-    .line 254
     :goto_0
     monitor-exit v1
 
     return-object v0
 
-    .line 250
     :cond_0
     :try_start_1
     sget-object v0, Landroid/wipower/WipowerManager;->mWipowerManager:Landroid/wipower/WipowerManager;
 
     if-nez v0, :cond_1
 
-    .line 251
     const-string v0, "WipowerManager"
 
     const-string v2, "Instantiate Singleton"
 
     invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     new-instance v0, Landroid/wipower/WipowerManager;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -253,7 +230,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager;->mWipowerManager:Landroid/wipower/WipowerManager;
 
-    .line 254
     :cond_1
     sget-object v0, Landroid/wipower/WipowerManager;->mWipowerManager:Landroid/wipower/WipowerManager;
     :try_end_1
@@ -261,7 +237,6 @@
 
     goto :goto_0
 
-    .line 245
     :catchall_0
     move-exception v0
 
@@ -278,8 +253,7 @@
 
     const/4 v1, 0x0
 
-    .line 281
-    const-string/jumbo v2, "ro.bluetooth.a4wp"
+    const-string v2, "ro.bluetooth.a4wp"
 
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -287,18 +261,15 @@
 
     if-ne v2, v0, :cond_0
 
-    .line 282
     const-string v1, "WipowerManager"
 
     const-string v2, "System.getProperty is true"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     :goto_0
     return v0
 
-    .line 285
     :cond_0
     const-string v0, "WipowerManager"
 
@@ -308,7 +279,6 @@
 
     move v0, v1
 
-    .line 286
     goto :goto_0
 .end method
 
@@ -319,27 +289,22 @@
     .parameter "enable"
 
     .prologue
-    .line 447
     const/4 v1, 0x0
 
-    .line 448
     .local v1, ret:Z
     sget-object v2, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     if-nez v2, :cond_0
 
-    .line 449
     const-string v2, "WipowerManager"
 
     const-string v3, "Service  not available"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 458
     :goto_0
     return v1
 
-    .line 452
     :cond_0
     :try_start_0
     sget-object v2, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
@@ -352,11 +317,9 @@
 
     goto :goto_0
 
-    .line 453
     :catch_0
     move-exception v0
 
-    .line 454
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "WipowerManager"
 
@@ -372,27 +335,22 @@
     .parameter "enable"
 
     .prologue
-    .line 468
     const/4 v1, 0x0
 
-    .line 469
     .local v1, ret:Z
     sget-object v2, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     if-nez v2, :cond_0
 
-    .line 470
     const-string v2, "WipowerManager"
 
     const-string v3, "Service  not available"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 479
     :goto_0
     return v1
 
-    .line 473
     :cond_0
     :try_start_0
     sget-object v2, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
@@ -405,11 +363,9 @@
 
     goto :goto_0
 
-    .line 474
     :catch_0
     move-exception v0
 
-    .line 475
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "WipowerManager"
 
@@ -424,32 +380,26 @@
     .locals 5
 
     .prologue
-    .line 395
     sget-object v2, Landroid/wipower/WipowerManager$PowerLevel;->POWER_LEVEL_UNKNOWN:Landroid/wipower/WipowerManager$PowerLevel;
 
-    .line 397
     .local v2, ret:Landroid/wipower/WipowerManager$PowerLevel;
     sget-object v3, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     if-nez v3, :cond_1
 
-    .line 398
     const-string v3, "WipowerManager"
 
     const-string v4, " Wipower Service not available"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 410
     :cond_0
     :goto_0
     return-object v2
 
-    .line 400
     :cond_1
     const/4 v1, 0x0
 
-    .line 402
     .local v1, res:B
     :try_start_0
     sget-object v3, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
@@ -460,7 +410,6 @@
 
     move-result v1
 
-    .line 406
     :goto_1
     if-nez v1, :cond_2
 
@@ -468,11 +417,9 @@
 
     goto :goto_0
 
-    .line 403
     :catch_0
     move-exception v0
 
-    .line 404
     .local v0, e:Landroid/os/RemoteException;
     const-string v3, "WipowerManager"
 
@@ -482,7 +429,6 @@
 
     goto :goto_1
 
-    .line 407
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_2
     const/4 v3, 0x1
@@ -493,7 +439,6 @@
 
     goto :goto_0
 
-    .line 408
     :cond_3
     const/4 v3, 0x2
 
@@ -508,31 +453,25 @@
     .locals 5
 
     .prologue
-    .line 420
     sget-object v2, Landroid/wipower/WipowerManager$WipowerState;->OFF:Landroid/wipower/WipowerManager$WipowerState;
 
-    .line 421
     .local v2, ret:Landroid/wipower/WipowerManager$WipowerState;
     sget-object v3, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     if-nez v3, :cond_0
 
-    .line 422
     const-string v3, "WipowerManager"
 
     const-string v4, " Wipower Service not available"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 437
     :goto_0
     return-object v2
 
-    .line 424
     :cond_0
     const/4 v1, 0x0
 
-    .line 426
     .local v1, res:I
     :try_start_0
     sget-object v3, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
@@ -543,20 +482,16 @@
 
     move-result v1
 
-    .line 430
     :goto_1
     if-nez v1, :cond_1
 
-    .line 431
     sget-object v2, Landroid/wipower/WipowerManager$WipowerState;->OFF:Landroid/wipower/WipowerManager$WipowerState;
 
     goto :goto_0
 
-    .line 427
     :catch_0
     move-exception v0
 
-    .line 428
     .local v0, e:Landroid/os/RemoteException;
     const-string v3, "WipowerManager"
 
@@ -566,7 +501,6 @@
 
     goto :goto_1
 
-    .line 434
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_1
     sget-object v2, Landroid/wipower/WipowerManager$WipowerState;->ON:Landroid/wipower/WipowerManager$WipowerState;
@@ -579,25 +513,21 @@
     .parameter "callback"
 
     .prologue
-    .line 487
     sget-object v0, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     if-nez v0, :cond_0
 
-    .line 488
     const-string v0, "WipowerManager"
 
-    const-string/jumbo v1, "registerCallback:Service  not available"
+    const-string v1, "registerCallback:Service  not available"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
     :cond_0
     sget-object v0, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 492
     return-void
 .end method
 
@@ -606,10 +536,8 @@
     .parameter "powerlevel"
 
     .prologue
-    .line 364
     const/4 v2, 0x0
 
-    .line 366
     .local v2, ret:Z
     invoke-static {}, Landroid/wipower/WipowerManager;->isWipowerSupported()Z
 
@@ -617,27 +545,22 @@
 
     if-nez v3, :cond_0
 
-    .line 367
     const-string v3, "WipowerManager"
 
     const-string v4, "Wipower not supported"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 368
     const/4 v3, 0x0
 
-    .line 384
     :goto_0
     return v3
 
-    .line 371
     :cond_0
     sget-object v3, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     if-nez v3, :cond_1
 
-    .line 372
     const-string v3, "WipowerManager"
 
     const-string v4, " Wipower Service not available"
@@ -647,14 +570,11 @@
     :goto_1
     move v3, v2
 
-    .line 384
     goto :goto_0
 
-    .line 374
     :cond_1
     const/4 v1, 0x0
 
-    .line 375
     .local v1, level:B
     sget-object v3, Landroid/wipower/WipowerManager$PowerLevel;->POWER_LEVEL_MINIMUM:Landroid/wipower/WipowerManager$PowerLevel;
 
@@ -662,7 +582,6 @@
 
     const/16 v1, 0xa
 
-    .line 379
     :cond_2
     :goto_2
     :try_start_0
@@ -676,7 +595,6 @@
 
     goto :goto_1
 
-    .line 376
     :cond_3
     sget-object v3, Landroid/wipower/WipowerManager$PowerLevel;->POWER_LEVEL_MEDIUM:Landroid/wipower/WipowerManager$PowerLevel;
 
@@ -686,7 +604,6 @@
 
     goto :goto_2
 
-    .line 377
     :cond_4
     sget-object v3, Landroid/wipower/WipowerManager$PowerLevel;->POWER_LEVEL_MAXIMUM:Landroid/wipower/WipowerManager$PowerLevel;
 
@@ -696,11 +613,9 @@
 
     goto :goto_2
 
-    .line 380
     :catch_0
     move-exception v0
 
-    .line 381
     .local v0, e:Landroid/os/RemoteException;
     const-string v3, "WipowerManager"
 
@@ -715,10 +630,8 @@
     .locals 4
 
     .prologue
-    .line 302
     const/4 v1, 0x0
 
-    .line 304
     .local v1, ret:Z
     invoke-static {}, Landroid/wipower/WipowerManager;->isWipowerSupported()Z
 
@@ -726,40 +639,33 @@
 
     if-nez v2, :cond_0
 
-    .line 305
     const-string v2, "WipowerManager"
 
     const-string v3, "Wipower not supported"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     const/4 v2, 0x0
 
-    .line 319
     :goto_0
     return v2
 
-    .line 309
     :cond_0
     sget-object v2, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     if-nez v2, :cond_1
 
-    .line 310
     const-string v2, "WipowerManager"
 
-    const-string/jumbo v3, "startCharging: Service  not available"
+    const-string v3, "startCharging: Service  not available"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
     move v2, v1
 
-    .line 319
     goto :goto_0
 
-    .line 313
     :cond_1
     :try_start_0
     sget-object v2, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
@@ -772,11 +678,9 @@
 
     goto :goto_1
 
-    .line 314
     :catch_0
     move-exception v0
 
-    .line 315
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "WipowerManager"
 
@@ -791,10 +695,8 @@
     .locals 4
 
     .prologue
-    .line 333
     const/4 v1, 0x0
 
-    .line 335
     .local v1, ret:Z
     invoke-static {}, Landroid/wipower/WipowerManager;->isWipowerSupported()Z
 
@@ -802,27 +704,22 @@
 
     if-nez v2, :cond_0
 
-    .line 336
     const-string v2, "WipowerManager"
 
     const-string v3, "Wipower not supported"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     const/4 v2, 0x0
 
-    .line 350
     :goto_0
     return v2
 
-    .line 340
     :cond_0
     sget-object v2, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     if-nez v2, :cond_1
 
-    .line 341
     const-string v2, "WipowerManager"
 
     const-string v3, " Wipower Service not available"
@@ -832,10 +729,8 @@
     :goto_1
     move v2, v1
 
-    .line 350
     goto :goto_0
 
-    .line 344
     :cond_1
     :try_start_0
     sget-object v2, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
@@ -848,11 +743,9 @@
 
     goto :goto_1
 
-    .line 345
     :catch_0
     move-exception v0
 
-    .line 346
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "WipowerManager"
 
@@ -868,25 +761,21 @@
     .parameter "callback"
 
     .prologue
-    .line 498
     sget-object v0, Landroid/wipower/WipowerManager;->mService:Landroid/wipower/IWipower;
 
     if-nez v0, :cond_0
 
-    .line 499
     const-string v0, "WipowerManager"
 
     const-string v1, "Service  not available"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 501
     :cond_0
     sget-object v0, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 502
     return-void
 .end method
 
@@ -895,19 +784,16 @@
     .parameter "alert"
 
     .prologue
-    .line 146
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
-    .line 147
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 149
     .local v1, n:I
     const/4 v0, 0x0
 
@@ -915,7 +801,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 150
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -926,12 +811,10 @@
 
     invoke-interface {v2, p1}, Landroid/wipower/WipowerManagerCallback;->onPowerApply(Landroid/wipower/WipowerManager$PowerApplyEvent;)V
 
-    .line 149
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 153
     .end local v0           #i:I
     .end local v1           #n:I
     :cond_0
@@ -943,19 +826,16 @@
     .parameter "alert"
 
     .prologue
-    .line 136
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
-    .line 137
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 138
     .local v1, n:I
     const-string v2, "WipowerManager"
 
@@ -985,14 +865,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 140
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1003,12 +881,10 @@
 
     invoke-interface {v2, p1}, Landroid/wipower/WipowerManagerCallback;->onWipowerAlert(Landroid/wipower/WipowerManager$WipowerAlert;)V
 
-    .line 139
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 143
     .end local v0           #i:I
     .end local v1           #n:I
     :cond_0
@@ -1020,19 +896,16 @@
     .parameter "pruData"
 
     .prologue
-    .line 125
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
-    .line 126
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 127
     .local v1, n:I
     const-string v2, "WipowerManager"
 
@@ -1062,14 +935,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 129
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1080,12 +951,10 @@
 
     invoke-interface {v2, p1}, Landroid/wipower/WipowerManagerCallback;->onWipowerData(Landroid/wipower/WipowerDynamicParam;)V
 
-    .line 128
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 132
     .end local v0           #i:I
     .end local v1           #n:I
     :cond_0
@@ -1096,19 +965,16 @@
     .locals 3
 
     .prologue
-    .line 158
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
-    .line 159
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 161
     .local v1, n:I
     const/4 v0, 0x0
 
@@ -1116,7 +982,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 162
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1127,12 +992,10 @@
 
     invoke-interface {v2}, Landroid/wipower/WipowerManagerCallback;->onWipowerReady()V
 
-    .line 161
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 165
     .end local v0           #i:I
     .end local v1           #n:I
     :cond_0
@@ -1144,19 +1007,16 @@
     .parameter "state"
 
     .prologue
-    .line 114
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
-    .line 115
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 116
     .local v1, n:I
     const-string v2, "WipowerManager"
 
@@ -1186,14 +1046,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 118
     sget-object v2, Landroid/wipower/WipowerManager;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1204,12 +1062,10 @@
 
     invoke-interface {v2, p1}, Landroid/wipower/WipowerManagerCallback;->onWipowerStateChange(Landroid/wipower/WipowerManager$WipowerState;)V
 
-    .line 117
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 121
     .end local v0           #i:I
     .end local v1           #n:I
     :cond_0

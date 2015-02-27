@@ -20,7 +20,6 @@
     .parameter "x0"
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/android/server/firewall/FilterFactory;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -39,7 +38,6 @@
     .end annotation
 
     .prologue
-    .line 43
     new-instance v0, Lcom/android/server/firewall/AndFilter;
 
     invoke-direct {v0}, Lcom/android/server/firewall/AndFilter;-><init>()V

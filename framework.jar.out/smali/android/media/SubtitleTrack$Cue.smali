@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 566
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +43,5 @@
     .parameter "timeMs"
 
     .prologue
-    .line 575
     return-void
 .end method

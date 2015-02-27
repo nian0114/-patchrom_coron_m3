@@ -42,7 +42,6 @@
     .locals 2
 
     .prologue
-    .line 2673
     new-instance v0, Landroid/util/Pools$SynchronizedPool;
 
     const/16 v1, 0x14
@@ -61,19 +60,14 @@
     .parameter "hierarchical"
 
     .prologue
-    .line 2714
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2715
     iput p1, p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->mRowCount:I
 
-    .line 2716
     iput p2, p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->mColumnCount:I
 
-    .line 2717
     iput-boolean p3, p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->mHierarchical:Z
 
-    .line 2718
     return-void
 .end method
 
@@ -83,16 +77,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2756
     iput v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->mRowCount:I
 
-    .line 2757
     iput v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->mColumnCount:I
 
-    .line 2758
     iput-boolean v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->mHierarchical:Z
 
-    .line 2759
     return-void
 .end method
 
@@ -103,7 +93,6 @@
     .parameter "hierarchical"
 
     .prologue
-    .line 2701
     sget-object v1, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v1}, Landroid/util/Pools$SynchronizedPool;->acquire()Ljava/lang/Object;
@@ -112,7 +101,6 @@
 
     check-cast v0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
-    .line 2702
     .local v0, info:Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
     if-eqz v0, :cond_0
 
@@ -135,7 +123,6 @@
     .parameter "other"
 
     .prologue
-    .line 2688
     iget v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->mRowCount:I
 
     iget v1, p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->mColumnCount:I
@@ -155,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 2735
     iget v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->mColumnCount:I
 
     return v0
@@ -165,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 2726
     iget v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->mRowCount:I
 
     return v0
@@ -175,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 2744
     iget-boolean v0, p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->mHierarchical:Z
 
     return v0
@@ -185,14 +169,11 @@
     .locals 1
 
     .prologue
-    .line 2751
     invoke-direct {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->clear()V
 
-    .line 2752
     sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v0, p0}, Landroid/util/Pools$SynchronizedPool;->release(Ljava/lang/Object;)Z
 
-    .line 2753
     return-void
 .end method

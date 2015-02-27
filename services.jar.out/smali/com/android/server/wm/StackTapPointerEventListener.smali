@@ -35,26 +35,20 @@
     .parameter "displayContent"
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 41
     iput-object p2, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 42
     iget-object v1, p2, Lcom/android/server/wm/DisplayContent;->mTouchExcludeRegion:Landroid/graphics/Region;
 
     iput-object v1, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mTouchExcludeRegion:Landroid/graphics/Region;
 
-    .line 43
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getDisplayInfo()Landroid/view/DisplayInfo;
 
     move-result-object v0
 
-    .line 44
     .local v0, info:Landroid/view/DisplayInfo;
     iget v1, v0, Landroid/view/DisplayInfo;->logicalDensityDpi:I
 
@@ -68,7 +62,6 @@
 
     iput v1, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mMotionSlop:I
 
-    .line 45
     return-void
 .end method
 
@@ -83,24 +76,20 @@
 
     const/4 v8, -0x1
 
-    .line 49
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 50
     .local v0, action:I
     and-int/lit16 v4, v0, 0xff
 
     packed-switch v4, :pswitch_data_0
 
-    .line 91
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 52
     :pswitch_1
     const/4 v4, 0x0
 
@@ -110,14 +99,12 @@
 
     iput v4, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mPointerId:I
 
-    .line 53
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v4
 
     iput v4, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mDownX:F
 
-    .line 54
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v4
@@ -126,29 +113,24 @@
 
     goto :goto_0
 
-    .line 57
     :pswitch_2
     iget v4, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mPointerId:I
 
     if-ltz v4, :cond_0
 
-    .line 58
     iget v4, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mPointerId:I
 
     invoke-virtual {p1, v4}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result v1
 
-    .line 59
     .local v1, index:I
     if-gez v1, :cond_1
 
-    .line 60
     iput v8, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mPointerId:I
 
     goto :goto_0
 
-    .line 64
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
@@ -196,13 +178,11 @@
 
     if-lez v4, :cond_0
 
-    .line 67
     :cond_2
     iput v8, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mPointerId:I
 
     goto :goto_0
 
-    .line 73
     .end local v1           #index:I
     :pswitch_3
     const v4, 0xff00
@@ -211,7 +191,6 @@
 
     shr-int/lit8 v1, v4, 0x8
 
-    .line 76
     .restart local v1       #index:I
     iget v4, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mPointerId:I
 
@@ -221,14 +200,12 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 77
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v4
 
     float-to-int v2, v4
 
-    .line 78
     .local v2, x:I
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getY(I)F
 
@@ -236,7 +213,6 @@
 
     float-to-int v3, v4
 
-    .line 79
     .local v3, y:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
@@ -288,7 +264,6 @@
 
     if-nez v4, :cond_3
 
-    .line 83
     iget-object v4, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v4, v4, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
@@ -303,13 +278,11 @@
 
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
-    .line 86
     :cond_3
     iput v8, p0, Lcom/android/server/wm/StackTapPointerEventListener;->mPointerId:I
 
     goto/16 :goto_0
 
-    .line 50
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

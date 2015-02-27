@@ -20,7 +20,6 @@
     .parameter "x0"
 
     .prologue
-    .line 283
     invoke-direct {p0, p1}, Lcom/android/server/firewall/StringFilter$ValueProvider;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -35,6 +34,5 @@
     .parameter "resolvedType"
 
     .prologue
-    .line 287
     return-object p3
 .end method

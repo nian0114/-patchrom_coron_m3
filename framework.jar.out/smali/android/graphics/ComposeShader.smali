@@ -29,24 +29,18 @@
     .parameter "mode"
 
     .prologue
-    .line 75
     invoke-direct {p0}, Landroid/graphics/Shader;-><init>()V
 
-    .line 76
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/graphics/ComposeShader;->mType:I
 
-    .line 77
     iput-object p1, p0, Landroid/graphics/ComposeShader;->mShaderA:Landroid/graphics/Shader;
 
-    .line 78
     iput-object p2, p0, Landroid/graphics/ComposeShader;->mShaderB:Landroid/graphics/Shader;
 
-    .line 79
     iput-object p3, p0, Landroid/graphics/ComposeShader;->mPorterDuffMode:Landroid/graphics/PorterDuff$Mode;
 
-    .line 80
     iget v0, p1, Landroid/graphics/Shader;->native_instance:I
 
     iget v1, p2, Landroid/graphics/Shader;->native_instance:I
@@ -59,7 +53,6 @@
 
     iput v0, p0, Landroid/graphics/ComposeShader;->native_instance:I
 
-    .line 82
     iget v0, p0, Landroid/graphics/ComposeShader;->native_instance:I
 
     iget v1, p1, Landroid/graphics/Shader;->native_shader:I
@@ -74,7 +67,6 @@
 
     iput v0, p0, Landroid/graphics/ComposeShader;->native_shader:I
 
-    .line 84
     return-void
 .end method
 
@@ -87,24 +79,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 51
     invoke-direct {p0}, Landroid/graphics/Shader;-><init>()V
 
-    .line 52
     const/4 v1, 0x1
 
     iput v1, p0, Landroid/graphics/ComposeShader;->mType:I
 
-    .line 53
     iput-object p1, p0, Landroid/graphics/ComposeShader;->mShaderA:Landroid/graphics/Shader;
 
-    .line 54
     iput-object p2, p0, Landroid/graphics/ComposeShader;->mShaderB:Landroid/graphics/Shader;
 
-    .line 55
     iput-object p3, p0, Landroid/graphics/ComposeShader;->mXferMode:Landroid/graphics/Xfermode;
 
-    .line 56
     iget v3, p1, Landroid/graphics/Shader;->native_instance:I
 
     iget v4, p2, Landroid/graphics/Shader;->native_instance:I
@@ -120,18 +106,15 @@
 
     iput v1, p0, Landroid/graphics/ComposeShader;->native_instance:I
 
-    .line 58
     instance-of v1, p3, Landroid/graphics/PorterDuffXfermode;
 
     if-eqz v1, :cond_2
 
-    .line 59
     check-cast p3, Landroid/graphics/PorterDuffXfermode;
 
     .end local p3
     iget-object v0, p3, Landroid/graphics/PorterDuffXfermode;->mode:Landroid/graphics/PorterDuff$Mode;
 
-    .line 60
     .local v0, pdMode:Landroid/graphics/PorterDuff$Mode;
     iget v1, p0, Landroid/graphics/ComposeShader;->native_instance:I
 
@@ -150,7 +133,6 @@
 
     iput v1, p0, Landroid/graphics/ComposeShader;->native_shader:I
 
-    .line 66
     .end local v0           #pdMode:Landroid/graphics/PorterDuff$Mode;
     :goto_1
     return-void
@@ -159,10 +141,8 @@
     :cond_1
     move v1, v2
 
-    .line 56
     goto :goto_0
 
-    .line 63
     :cond_2
     iget v1, p0, Landroid/graphics/ComposeShader;->native_instance:I
 
@@ -202,12 +182,10 @@
     .locals 4
 
     .prologue
-    .line 92
     iget v1, p0, Landroid/graphics/ComposeShader;->mType:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 100
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "ComposeShader should be created with either Xfermode or PorterDuffMode"
@@ -216,7 +194,6 @@
 
     throw v1
 
-    .line 94
     :pswitch_0
     new-instance v0, Landroid/graphics/ComposeShader;
 
@@ -236,15 +213,12 @@
 
     invoke-direct {v0, v1, v2, v3}, Landroid/graphics/ComposeShader;-><init>(Landroid/graphics/Shader;Landroid/graphics/Shader;Landroid/graphics/Xfermode;)V
 
-    .line 103
     .local v0, copy:Landroid/graphics/ComposeShader;
     :goto_0
     invoke-virtual {p0, v0}, Landroid/graphics/ComposeShader;->copyLocalMatrix(Landroid/graphics/Shader;)V
 
-    .line 104
     return-object v0
 
-    .line 97
     .end local v0           #copy:Landroid/graphics/ComposeShader;
     :pswitch_1
     new-instance v0, Landroid/graphics/ComposeShader;
@@ -265,11 +239,9 @@
 
     invoke-direct {v0, v1, v2, v3}, Landroid/graphics/ComposeShader;-><init>(Landroid/graphics/Shader;Landroid/graphics/Shader;Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 98
     .restart local v0       #copy:Landroid/graphics/ComposeShader;
     goto :goto_0
 
-    .line 92
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

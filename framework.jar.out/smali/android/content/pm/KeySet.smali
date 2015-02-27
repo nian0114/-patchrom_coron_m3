@@ -13,13 +13,10 @@
     .parameter "token"
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     iput-object p1, p0, Landroid/content/pm/KeySet;->token:Landroid/os/Binder;
 
-    .line 29
     return-void
 .end method
 
@@ -29,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 32
     iget-object v0, p0, Landroid/content/pm/KeySet;->token:Landroid/os/Binder;
 
     return-object v0

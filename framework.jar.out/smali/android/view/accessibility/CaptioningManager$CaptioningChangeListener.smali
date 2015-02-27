@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 369
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .parameter "enabled"
 
     .prologue
-    .line 376
     return-void
 .end method
 
@@ -41,7 +39,6 @@
     .parameter "fontScale"
 
     .prologue
-    .line 403
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .parameter "locale"
 
     .prologue
-    .line 394
     return-void
 .end method
 
@@ -59,6 +55,5 @@
     .parameter "userStyle"
 
     .prologue
-    .line 385
     return-void
 .end method

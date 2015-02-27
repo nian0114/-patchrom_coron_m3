@@ -48,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 98
     new-instance v0, Landroid/webkit/WebSettings$ZoomDensity;
 
     const-string v1, "FAR"
@@ -59,7 +58,6 @@
 
     sput-object v0, Landroid/webkit/WebSettings$ZoomDensity;->FAR:Landroid/webkit/WebSettings$ZoomDensity;
 
-    .line 99
     new-instance v0, Landroid/webkit/WebSettings$ZoomDensity;
 
     const-string v1, "MEDIUM"
@@ -70,7 +68,6 @@
 
     sput-object v0, Landroid/webkit/WebSettings$ZoomDensity;->MEDIUM:Landroid/webkit/WebSettings$ZoomDensity;
 
-    .line 100
     new-instance v0, Landroid/webkit/WebSettings$ZoomDensity;
 
     const-string v1, "CLOSE"
@@ -81,7 +78,6 @@
 
     sput-object v0, Landroid/webkit/WebSettings$ZoomDensity;->CLOSE:Landroid/webkit/WebSettings$ZoomDensity;
 
-    .line 97
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/webkit/WebSettings$ZoomDensity;
@@ -115,13 +111,10 @@
     .end annotation
 
     .prologue
-    .line 101
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 102
     iput p3, p0, Landroid/webkit/WebSettings$ZoomDensity;->value:I
 
-    .line 103
     return-void
 .end method
 
@@ -130,7 +123,6 @@
     .parameter "name"
 
     .prologue
-    .line 97
     const-class v0, Landroid/webkit/WebSettings$ZoomDensity;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -146,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 97
     sget-object v0, Landroid/webkit/WebSettings$ZoomDensity;->$VALUES:[Landroid/webkit/WebSettings$ZoomDensity;
 
     invoke-virtual {v0}, [Landroid/webkit/WebSettings$ZoomDensity;->clone()Ljava/lang/Object;
@@ -164,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget v0, p0, Landroid/webkit/WebSettings$ZoomDensity;->value:I
 
     return v0

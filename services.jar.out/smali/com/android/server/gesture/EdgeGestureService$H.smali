@@ -25,13 +25,10 @@
     .parameter "looper"
 
     .prologue
-    .line 341
     iput-object p1, p0, Lcom/android/server/gesture/EdgeGestureService$H;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
-    .line 342
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 343
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .parameter "sensitivity"
 
     .prologue
-    .line 373
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$H;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
     #getter for: Lcom/android/server/gesture/EdgeGestureService;->mLock:Ljava/lang/Object;
@@ -51,7 +47,6 @@
 
     monitor-enter v1
 
-    .line 374
     :try_start_0
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$H;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
@@ -62,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 375
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$H;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
     #getter for: Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
@@ -72,7 +66,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/gesture/EdgeGestureInputFilter;->updatePositions(I)V
 
-    .line 376
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$H;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
     #getter for: Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
@@ -82,14 +75,11 @@
 
     invoke-virtual {v0, p2}, Lcom/android/server/gesture/EdgeGestureInputFilter;->updateSensitivity(I)V
 
-    .line 378
     :cond_0
     monitor-exit v1
 
-    .line 379
     return-void
 
-    .line 378
     :catchall_0
     move-exception v0
 
@@ -107,24 +97,20 @@
     .parameter "m"
 
     .prologue
-    .line 347
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 370
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 354
     :pswitch_1
     const/16 v0, 0x7d17
 
     invoke-virtual {p0, v0}, Lcom/android/server/gesture/EdgeGestureService$H;->removeMessages(I)V
 
-    .line 355
     iget-object v1, p0, Lcom/android/server/gesture/EdgeGestureService$H;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
     iget v2, p1, Landroid/os/Message;->arg1:I
@@ -142,13 +128,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 357
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$H;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
     #calls: Lcom/android/server/gesture/EdgeGestureService;->updateMonitoring()V
     invoke-static {v0}, Lcom/android/server/gesture/EdgeGestureService;->access$800(Lcom/android/server/gesture/EdgeGestureService;)V
 
-    .line 358
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$H;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
     #getter for: Lcom/android/server/gesture/EdgeGestureService;->mGlobalPositions:I
@@ -167,14 +151,12 @@
 
     goto :goto_0
 
-    .line 362
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$H;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
     #calls: Lcom/android/server/gesture/EdgeGestureService;->updateMonitoring()V
     invoke-static {v0}, Lcom/android/server/gesture/EdgeGestureService;->access$800(Lcom/android/server/gesture/EdgeGestureService;)V
 
-    .line 367
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$H;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
     #getter for: Lcom/android/server/gesture/EdgeGestureService;->mGlobalPositions:I
@@ -193,7 +175,6 @@
 
     goto :goto_0
 
-    .line 347
     nop
 
     :pswitch_data_0

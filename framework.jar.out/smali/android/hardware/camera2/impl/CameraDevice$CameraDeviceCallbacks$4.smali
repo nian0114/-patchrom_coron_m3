@@ -36,7 +36,6 @@
     .parameter
 
     .prologue
-    .line 643
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks$4;->this$1:Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;
 
     iput-object p2, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks$4;->val$holder:Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;
@@ -56,7 +55,6 @@
     .locals 4
 
     .prologue
-    .line 646
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks$4;->this$1:Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;
 
     iget-object v0, v0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
@@ -68,7 +66,6 @@
 
     if-nez v0, :cond_0
 
-    .line 647
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks$4;->val$holder:Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->getListener()Landroid/hardware/camera2/CameraDevice$CaptureListener;
@@ -85,7 +82,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/camera2/CameraDevice$CaptureListener;->onCaptureCompleted(Landroid/hardware/camera2/CameraDevice;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
 
-    .line 652
     :cond_0
     return-void
 .end method

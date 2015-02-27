@@ -14,7 +14,6 @@
     .locals 3
 
     .prologue
-    .line 35
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -39,7 +38,6 @@
 
     sput-object v0, Lcom/android/server/am/BaiduBroadcastInjector;->SPECIAL_SMS_PACKAGE:[Ljava/lang/String;
 
-    .line 41
     sget-object v0, Lcom/android/server/am/BaiduBroadcastInjector;->SPECIAL_SMS_PACKAGE:[Ljava/lang/String;
 
     array-length v0, v0
@@ -53,7 +51,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -67,14 +64,12 @@
     .prologue
     const/4 v13, 0x0
 
-    .line 67
     iget-object v10, p1, Lcom/android/server/am/BroadcastRecord;->intent:Landroid/content/Intent;
 
     invoke-virtual {v10}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 68
     .local v0, action:Ljava/lang/String;
     const-string v10, "android.provider.Telephony.SMS_RECEIVED"
 
@@ -108,19 +103,16 @@
 
     if-eqz v10, :cond_2
 
-    .line 72
     :cond_0
     sget v10, Lcom/android/server/am/BaiduBroadcastInjector;->SPECIAL_SMS_PACKAGE_LEN:I
 
     new-array v9, v10, [Ljava/util/ArrayList;
 
-    .line 73
     .local v9, specialPackageIndex:[Ljava/util/ArrayList;
     sget v10, Lcom/android/server/am/BaiduBroadcastInjector;->SPECIAL_SMS_PACKAGE_LEN:I
 
     new-array v1, v10, [Z
 
-    .line 74
     .local v1, containsSpecial:[Z
     sget v10, Lcom/android/server/am/BaiduBroadcastInjector;->SPECIAL_SMS_PACKAGE_LEN:I
 
@@ -130,28 +122,23 @@
     :goto_0
     if-ltz v2, :cond_1
 
-    .line 75
     aput-boolean v13, v1, v2
 
-    .line 74
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
-    .line 77
     :cond_1
     iget-object v10, p1, Lcom/android/server/am/BroadcastRecord;->receivers:Ljava/util/List;
 
     if-nez v10, :cond_3
 
-    .line 126
     .end local v1           #containsSpecial:[Z
     .end local v2           #i:I
     .end local v9           #specialPackageIndex:[Ljava/util/ArrayList;
     :cond_2
     return-void
 
-    .line 80
     .restart local v1       #containsSpecial:[Z
     .restart local v2       #i:I
     .restart local v9       #specialPackageIndex:[Ljava/util/ArrayList;
@@ -162,28 +149,23 @@
 
     move-result v5
 
-    .line 81
     .local v5, len:I
     const/4 v3, -0x1
 
-    .line 82
     .local v3, index:I
     add-int/lit8 v2, v5, -0x1
 
     :goto_1
     if-ltz v2, :cond_9
 
-    .line 83
     const/4 v3, -0x1
 
-    .line 84
     iget-object v10, p1, Lcom/android/server/am/BroadcastRecord;->receivers:Ljava/util/List;
 
     invoke-interface {v10, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
-    .line 85
     .local v8, r:Ljava/lang/Object;
     instance-of v10, v8, Lcom/android/server/am/BroadcastFilter;
 
@@ -191,10 +173,8 @@
 
     move-object v4, v8
 
-    .line 86
     check-cast v4, Lcom/android/server/am/BroadcastFilter;
 
-    .line 87
     .local v4, info:Lcom/android/server/am/BroadcastFilter;
     iget-object v10, v4, Lcom/android/server/am/BroadcastFilter;->packageName:Ljava/lang/String;
 
@@ -202,7 +182,6 @@
 
     move-result v3
 
-    .line 95
     .end local v4           #info:Lcom/android/server/am/BroadcastFilter;
     :cond_4
     :goto_2
@@ -210,47 +189,38 @@
 
     if-le v3, v10, :cond_6
 
-    .line 96
     const/4 v10, 0x1
 
     aput-boolean v10, v1, v3
 
-    .line 97
     iget-object v10, p1, Lcom/android/server/am/BroadcastRecord;->receivers:Ljava/util/List;
 
     invoke-interface {v10, v8}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 98
     aget-object v6, v9, v3
 
-    .line 99
     .local v6, list:Ljava/util/ArrayList;
     if-nez v6, :cond_5
 
-    .line 100
     new-instance v6, Ljava/util/ArrayList;
 
     .end local v6           #list:Ljava/util/ArrayList;
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 101
     .restart local v6       #list:Ljava/util/ArrayList;
     aput-object v6, v9, v3
 
-    .line 103
     :cond_5
     aget-object v10, v9, v3
 
     invoke-virtual {v10, v13, v8}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 82
     .end local v6           #list:Ljava/util/ArrayList;
     :cond_6
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_1
 
-    .line 88
     :cond_7
     instance-of v10, v8, Landroid/content/pm/ResolveInfo;
 
@@ -258,10 +228,8 @@
 
     move-object v4, v8
 
-    .line 89
     check-cast v4, Landroid/content/pm/ResolveInfo;
 
-    .line 90
     .local v4, info:Landroid/content/pm/ResolveInfo;
     iget-object v10, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -271,7 +239,6 @@
 
     iget-object v7, v10, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 92
     .local v7, packageName:Ljava/lang/String;
     :goto_3
     invoke-static {p0, v7}, Lcom/android/server/am/BaiduBroadcastInjector;->isSpecialPackage(Landroid/content/Context;Ljava/lang/String;)I
@@ -280,7 +247,6 @@
 
     goto :goto_2
 
-    .line 90
     .end local v7           #packageName:Ljava/lang/String;
     :cond_8
     iget-object v10, v4, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -289,7 +255,6 @@
 
     goto :goto_3
 
-    .line 107
     .end local v4           #info:Landroid/content/pm/ResolveInfo;
     .end local v8           #r:Ljava/lang/Object;
     :cond_9
@@ -303,7 +268,6 @@
 
     if-nez v10, :cond_a
 
-    .line 108
     new-instance v10, Landroid/content/ComponentName;
 
     const-string v11, "com.baidu.antidisturbance"
@@ -314,7 +278,6 @@
 
     invoke-static {p0, v9, v0, v10}, Lcom/android/server/am/BaiduBroadcastInjector;->tryAddSpecial(Landroid/content/Context;[Ljava/util/ArrayList;Ljava/lang/String;Landroid/content/ComponentName;)V
 
-    .line 112
     :cond_a
     const-string v10, "com.baidu.trafficmonitor"
 
@@ -326,7 +289,6 @@
 
     if-nez v10, :cond_b
 
-    .line 113
     new-instance v10, Landroid/content/ComponentName;
 
     const-string v11, "com.baidu.trafficmonitor"
@@ -337,32 +299,25 @@
 
     invoke-static {p0, v9, v0, v10}, Lcom/android/server/am/BaiduBroadcastInjector;->tryAddSpecial(Landroid/content/Context;[Ljava/util/ArrayList;Ljava/lang/String;Landroid/content/ComponentName;)V
 
-    .line 117
     :cond_b
     sget v5, Lcom/android/server/am/BaiduBroadcastInjector;->SPECIAL_SMS_PACKAGE_LEN:I
 
-    .line 118
     add-int/lit8 v2, v5, -0x1
 
     :goto_4
     if-ltz v2, :cond_2
 
-    .line 119
     aget-object v6, v9, v2
 
-    .line 120
     .restart local v6       #list:Ljava/util/ArrayList;
     if-eqz v6, :cond_c
 
-    .line 121
     iget-object v10, p1, Lcom/android/server/am/BroadcastRecord;->receivers:Ljava/util/List;
 
     invoke-interface {v10, v13, v6}, Ljava/util/List;->addAll(ILjava/util/Collection;)Z
 
-    .line 122
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    .line 118
     :cond_c
     add-int/lit8 v2, v2, -0x1
 
@@ -379,10 +334,8 @@
 
     const/4 v3, -0x1
 
-    .line 44
     sget v1, Lcom/android/server/am/BaiduBroadcastInjector;->SPECIAL_SMS_PACKAGE_LEN:I
 
-    .line 45
     .local v1, len:I
     add-int/lit8 v0, v1, -0x1
 
@@ -390,7 +343,6 @@
     :goto_0
     if-ltz v0, :cond_4
 
-    .line 46
     sget-object v4, Lcom/android/server/am/BaiduBroadcastInjector;->SPECIAL_SMS_PACKAGE:[Ljava/lang/String;
 
     aget-object v4, v4, v0
@@ -401,7 +353,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 47
     const-string v4, "com.android.contacts"
 
     invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -410,7 +361,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 48
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -425,12 +375,10 @@
 
     const/4 v2, 0x1
 
-    .line 49
     .local v2, mmsHasPriority:Z
     :cond_0
     if-eqz v2, :cond_2
 
-    .line 59
     .end local v0           #i:I
     .end local v2           #mmsHasPriority:Z
     :cond_1
@@ -442,10 +390,8 @@
     :cond_2
     move v0, v3
 
-    .line 52
     goto :goto_1
 
-    .line 45
     .end local v2           #mmsHasPriority:Z
     :cond_3
     add-int/lit8 v0, v0, -0x1
@@ -455,7 +401,6 @@
     :cond_4
     move v0, v3
 
-    .line 59
     goto :goto_1
 .end method
 
@@ -467,23 +412,18 @@
     .parameter "component"
 
     .prologue
-    .line 129
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 130
     .local v2, intent:Landroid/content/Intent;
     if-eqz p3, :cond_0
 
-    .line 132
     invoke-virtual {v2, p3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 134
     :cond_0
     const/4 v1, -0x1
 
-    .line 137
     .local v1, index:I
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -500,7 +440,6 @@
 
     move-result-object v4
 
-    .line 141
     .local v4, resolveInfo:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -521,7 +460,6 @@
 
     check-cast v5, Landroid/content/pm/ResolveInfo;
 
-    .line 142
     .local v5, ri:Landroid/content/pm/ResolveInfo;
     invoke-virtual {p3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -537,7 +475,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 143
     iget-object v6, v5, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v6, v6, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -546,24 +483,19 @@
 
     move-result v1
 
-    .line 144
     aget-object v3, p1, v1
 
-    .line 145
     .local v3, list:Ljava/util/ArrayList;
     if-nez v3, :cond_2
 
-    .line 146
     new-instance v3, Ljava/util/ArrayList;
 
     .end local v3           #list:Ljava/util/ArrayList;
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 147
     .restart local v3       #list:Ljava/util/ArrayList;
     aput-object v3, p1, v1
 
-    .line 149
     :cond_2
     aget-object v6, p1, v1
 
@@ -575,7 +507,6 @@
 
     goto :goto_0
 
-    .line 152
     .end local v0           #i$:Ljava/util/Iterator;
     .end local v3           #list:Ljava/util/ArrayList;
     .end local v4           #resolveInfo:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
@@ -583,7 +514,6 @@
     :catch_0
     move-exception v6
 
-    .line 154
     :cond_3
     return-void
 .end method
@@ -594,9 +524,7 @@
     .parameter "record"
 
     .prologue
-    .line 63
     invoke-static {p0, p1}, Lcom/android/server/am/BaiduBroadcastInjector;->hookMessageBroadcast(Landroid/content/Context;Lcom/android/server/am/BroadcastRecord;)V
 
-    .line 64
     return-void
 .end method

@@ -26,10 +26,8 @@
     .parameter "srcQuality"
 
     .prologue
-    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 124
     const-string v0, "config.disable_media"
 
     const/4 v1, 0x0
@@ -40,18 +38,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 125
     new-instance v0, Landroid/media/SoundPool$SoundPoolStub;
 
     invoke-direct {v0}, Landroid/media/SoundPool$SoundPoolStub;-><init>()V
 
     iput-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
-    .line 129
     :goto_0
     return-void
 
-    .line 127
     :cond_0
     new-instance v0, Landroid/media/SoundPool$SoundPoolImpl;
 
@@ -68,12 +63,10 @@
     .locals 1
 
     .prologue
-    .line 274
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0}, Landroid/media/SoundPool$SoundPoolDelegate;->autoPause()V
 
-    .line 275
     return-void
 .end method
 
@@ -81,12 +74,10 @@
     .locals 1
 
     .prologue
-    .line 284
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0}, Landroid/media/SoundPool$SoundPoolDelegate;->autoResume()V
 
-    .line 285
     return-void
 .end method
 
@@ -97,7 +88,6 @@
     .parameter "priority"
 
     .prologue
-    .line 159
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/media/SoundPool$SoundPoolDelegate;->load(Landroid/content/Context;II)I
@@ -113,7 +103,6 @@
     .parameter "priority"
 
     .prologue
-    .line 171
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1, p2}, Landroid/media/SoundPool$SoundPoolDelegate;->load(Landroid/content/res/AssetFileDescriptor;I)I
@@ -131,7 +120,6 @@
     .parameter "priority"
 
     .prologue
-    .line 189
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     move-object v1, p1
@@ -155,7 +143,6 @@
     .parameter "priority"
 
     .prologue
-    .line 140
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1, p2}, Landroid/media/SoundPool$SoundPoolDelegate;->load(Ljava/lang/String;I)I
@@ -170,12 +157,10 @@
     .parameter "streamID"
 
     .prologue
-    .line 248
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1}, Landroid/media/SoundPool$SoundPoolDelegate;->pause(I)V
 
-    .line 249
     return-void
 .end method
 
@@ -189,7 +174,6 @@
     .parameter "rate"
 
     .prologue
-    .line 232
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     move v1, p1
@@ -215,12 +199,10 @@
     .locals 1
 
     .prologue
-    .line 398
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0}, Landroid/media/SoundPool$SoundPoolDelegate;->release()V
 
-    .line 399
     return-void
 .end method
 
@@ -229,12 +211,10 @@
     .parameter "streamID"
 
     .prologue
-    .line 262
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1}, Landroid/media/SoundPool$SoundPoolDelegate;->resume(I)V
 
-    .line 263
     return-void
 .end method
 
@@ -244,12 +224,10 @@
     .parameter "loop"
 
     .prologue
-    .line 353
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1, p2}, Landroid/media/SoundPool$SoundPoolDelegate;->setLoop(II)V
 
-    .line 354
     return-void
 .end method
 
@@ -258,12 +236,10 @@
     .parameter "listener"
 
     .prologue
-    .line 387
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1}, Landroid/media/SoundPool$SoundPoolDelegate;->setOnLoadCompleteListener(Landroid/media/SoundPool$OnLoadCompleteListener;)V
 
-    .line 388
     return-void
 .end method
 
@@ -273,12 +249,10 @@
     .parameter "priority"
 
     .prologue
-    .line 338
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1, p2}, Landroid/media/SoundPool$SoundPoolDelegate;->setPriority(II)V
 
-    .line 339
     return-void
 .end method
 
@@ -288,12 +262,10 @@
     .parameter "rate"
 
     .prologue
-    .line 369
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1, p2}, Landroid/media/SoundPool$SoundPoolDelegate;->setRate(IF)V
 
-    .line 370
     return-void
 .end method
 
@@ -303,10 +275,8 @@
     .parameter "volume"
 
     .prologue
-    .line 324
     invoke-virtual {p0, p1, p2, p2}, Landroid/media/SoundPool;->setVolume(IFF)V
 
-    .line 325
     return-void
 .end method
 
@@ -317,12 +287,10 @@
     .parameter "rightVolume"
 
     .prologue
-    .line 316
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/media/SoundPool$SoundPoolDelegate;->setVolume(IFF)V
 
-    .line 317
     return-void
 .end method
 
@@ -331,12 +299,10 @@
     .parameter "streamID"
 
     .prologue
-    .line 299
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1}, Landroid/media/SoundPool$SoundPoolDelegate;->stop(I)V
 
-    .line 300
     return-void
 .end method
 
@@ -345,7 +311,6 @@
     .parameter "soundID"
 
     .prologue
-    .line 203
     iget-object v0, p0, Landroid/media/SoundPool;->mImpl:Landroid/media/SoundPool$SoundPoolDelegate;
 
     invoke-interface {v0, p1}, Landroid/media/SoundPool$SoundPoolDelegate;->unload(I)Z

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 153
     iput-object p1, p0, Lcom/android/internal/app/ActionBarImpl$3;->this$0:Lcom/android/internal/app/ActionBarImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "animation"
 
     .prologue
-    .line 156
     iget-object v1, p0, Lcom/android/internal/app/ActionBarImpl$3;->this$0:Lcom/android/internal/app/ActionBarImpl;
 
     #getter for: Lcom/android/internal/app/ActionBarImpl;->mContainerView:Lcom/android/internal/widget/ActionBarContainer;
@@ -54,13 +52,11 @@
 
     move-result-object v0
 
-    .line 157
     .local v0, parent:Landroid/view/ViewParent;
     check-cast v0, Landroid/view/View;
 
     .end local v0           #parent:Landroid/view/ViewParent;
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 158
     return-void
 .end method

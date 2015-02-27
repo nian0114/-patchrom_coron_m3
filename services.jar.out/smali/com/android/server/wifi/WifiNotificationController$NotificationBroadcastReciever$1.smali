@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 289
     iput-object p1, p0, Lcom/android/server/wifi/WifiNotificationController$NotificationBroadcastReciever$1;->this$1:Lcom/android/server/wifi/WifiNotificationController$NotificationBroadcastReciever;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 291
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$NotificationBroadcastReciever$1;->this$1:Lcom/android/server/wifi/WifiNotificationController$NotificationBroadcastReciever;
 
     iget-object v1, v1, Lcom/android/server/wifi/WifiNotificationController$NotificationBroadcastReciever;->this$0:Lcom/android/server/wifi/WifiNotificationController;
@@ -59,12 +57,10 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    .line 293
     .local v0, wifiManager:Landroid/net/wifi/WifiManager;
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
 
-    .line 294
     return-void
 .end method

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 5851
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$IntentFirewallInterface;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .parameter "exported"
 
     .prologue
-    .line 5855
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$IntentFirewallInterface;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     move-object v1, p1
@@ -70,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 5861
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$IntentFirewallInterface;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     return-object v0

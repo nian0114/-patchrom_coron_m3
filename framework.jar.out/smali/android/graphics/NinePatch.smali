@@ -20,12 +20,10 @@
     .parameter "chunk"
 
     .prologue
-    .line 55
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/graphics/NinePatch;-><init>(Landroid/graphics/Bitmap;[BLjava/lang/String;)V
 
-    .line 56
     return-void
 .end method
 
@@ -36,16 +34,12 @@
     .parameter "srcName"
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     iput-object p1, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 68
     iput-object p3, p0, Landroid/graphics/NinePatch;->mSrcName:Ljava/lang/String;
 
-    .line 69
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->ni()I
@@ -58,7 +52,6 @@
 
     iput v0, p0, Landroid/graphics/NinePatch;->mNativeChunk:I
 
-    .line 70
     return-void
 .end method
 
@@ -67,25 +60,20 @@
     .parameter "patch"
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     iget-object v0, p1, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     iput-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 77
     iget-object v0, p1, Landroid/graphics/NinePatch;->mSrcName:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/graphics/NinePatch;->mSrcName:Ljava/lang/String;
 
-    .line 78
     iget-object v0, p1, Landroid/graphics/NinePatch;->mPaint:Landroid/graphics/Paint;
 
     if-eqz v0, :cond_0
 
-    .line 79
     new-instance v0, Landroid/graphics/Paint;
 
     iget-object v1, p1, Landroid/graphics/NinePatch;->mPaint:Landroid/graphics/Paint;
@@ -94,13 +82,11 @@
 
     iput-object v0, p0, Landroid/graphics/NinePatch;->mPaint:Landroid/graphics/Paint;
 
-    .line 83
     :cond_0
     iget v0, p1, Landroid/graphics/NinePatch;->mNativeChunk:I
 
     iput v0, p0, Landroid/graphics/NinePatch;->mNativeChunk:I
 
-    .line 84
     return-void
 .end method
 
@@ -130,12 +116,10 @@
     .parameter "location"
 
     .prologue
-    .line 151
     iget-object v0, p0, Landroid/graphics/NinePatch;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p0, p2, v0}, Landroid/graphics/Canvas;->drawPatch(Landroid/graphics/NinePatch;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 152
     return-void
 .end method
 
@@ -146,10 +130,8 @@
     .parameter "paint"
 
     .prologue
-    .line 163
     invoke-virtual {p1, p0, p2, p3}, Landroid/graphics/Canvas;->drawPatch(Landroid/graphics/NinePatch;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 164
     return-void
 .end method
 
@@ -159,12 +141,10 @@
     .parameter "location"
 
     .prologue
-    .line 141
     iget-object v0, p0, Landroid/graphics/NinePatch;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p0, p2, v0}, Landroid/graphics/Canvas;->drawPatch(Landroid/graphics/NinePatch;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 142
     return-void
 .end method
 
@@ -175,7 +155,6 @@
     .parameter "paint"
 
     .prologue
-    .line 172
     iget v0, p1, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget-object v1, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
@@ -201,10 +180,8 @@
 
     invoke-static/range {v0 .. v6}, Landroid/graphics/NinePatch;->nativeDraw(ILandroid/graphics/Rect;IIIII)V
 
-    .line 174
     return-void
 
-    .line 172
     :cond_0
     const/4 v4, 0x0
 
@@ -218,7 +195,6 @@
     .parameter "paint"
 
     .prologue
-    .line 167
     iget v0, p1, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget-object v1, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
@@ -244,10 +220,8 @@
 
     invoke-static/range {v0 .. v6}, Landroid/graphics/NinePatch;->nativeDraw(ILandroid/graphics/RectF;IIIII)V
 
-    .line 169
     return-void
 
-    .line 167
     :cond_0
     const/4 v4, 0x0
 
@@ -263,7 +237,6 @@
     .end annotation
 
     .prologue
-    .line 89
     :try_start_0
     iget v0, p0, Landroid/graphics/NinePatch;->mNativeChunk:I
 
@@ -271,13 +244,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 91
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 93
     return-void
 
-    .line 91
     :catchall_0
     move-exception v0
 
@@ -290,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 131
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -300,7 +269,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     iget v0, v0, Landroid/graphics/Bitmap;->mDensity:I
@@ -312,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 197
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
@@ -326,7 +293,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Landroid/graphics/NinePatch;->mSrcName:Ljava/lang/String;
 
     return-object v0
@@ -336,7 +302,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Landroid/graphics/NinePatch;->mPaint:Landroid/graphics/Paint;
 
     return-object v0
@@ -347,7 +312,6 @@
     .parameter "bounds"
 
     .prologue
-    .line 220
     iget-object v1, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->ni()I
@@ -360,7 +324,6 @@
 
     move-result v0
 
-    .line 221
     .local v0, r:I
     if-eqz v0, :cond_0
 
@@ -381,7 +344,6 @@
     .locals 1
 
     .prologue
-    .line 189
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
@@ -395,7 +357,6 @@
     .locals 1
 
     .prologue
-    .line 206
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->hasAlpha()Z
@@ -410,9 +371,7 @@
     .parameter "p"
 
     .prologue
-    .line 124
     iput-object p1, p0, Landroid/graphics/NinePatch;->mPaint:Landroid/graphics/Paint;
 
-    .line 125
     return-void
 .end method

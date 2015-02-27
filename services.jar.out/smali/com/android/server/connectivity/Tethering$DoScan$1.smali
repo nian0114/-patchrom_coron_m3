@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 615
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$DoScan$1;->this$1:Lcom/android/server/connectivity/Tethering$DoScan;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v1, 0x0
 
-    .line 618
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$DoScan$1;->this$1:Lcom/android/server/connectivity/Tethering$DoScan;
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$DoScan;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -89,7 +87,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 621
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$DoScan$1;->this$1:Lcom/android/server/connectivity/Tethering$DoScan;
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$DoScan;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -104,12 +101,10 @@
     #setter for: Lcom/android/server/connectivity/Tethering;->mLastWifiClientCount:I
     invoke-static {v0, v3}, Lcom/android/server/connectivity/Tethering;->access$502(Lcom/android/server/connectivity/Tethering;I)I
 
-    .line 622
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 623
     .local v2, intent:Landroid/content/Intent;
     const-string v0, "com.android.settings"
 
@@ -117,12 +112,10 @@
 
     invoke-virtual {v2, v0, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 625
     const/high16 v0, 0x4000
 
     invoke-virtual {v2, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 627
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$DoScan$1;->this$1:Lcom/android/server/connectivity/Tethering$DoScan;
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$DoScan;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -140,13 +133,11 @@
 
     move-result-object v7
 
-    .line 630
     .local v7, pi:Landroid/app/PendingIntent;
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v8
 
-    .line 632
     .local v8, r:Landroid/content/res/Resources;
     const v0, 0x10405a1
 
@@ -154,7 +145,6 @@
 
     move-result-object v9
 
-    .line 635
     .local v9, title:Ljava/lang/CharSequence;
     const/high16 v0, 0x112
 
@@ -186,7 +176,6 @@
 
     move-result-object v6
 
-    .line 638
     .local v6, message:Ljava/lang/CharSequence;
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$DoScan$1;->this$1:Lcom/android/server/connectivity/Tethering$DoScan;
 
@@ -208,7 +197,6 @@
 
     invoke-virtual {v0, v1, v9, v6, v7}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 640
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$DoScan$1;->this$1:Lcom/android/server/connectivity/Tethering$DoScan;
 
     iget-object v0, v0, Lcom/android/server/connectivity/Tethering$DoScan;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -242,7 +230,6 @@
 
     invoke-virtual {v0, v4, v1, v3, v5}, Landroid/app/NotificationManager;->notifyAsUser(Ljava/lang/String;ILandroid/app/Notification;Landroid/os/UserHandle;)V
 
-    .line 643
     .end local v2           #intent:Landroid/content/Intent;
     .end local v6           #message:Ljava/lang/CharSequence;
     .end local v7           #pi:Landroid/app/PendingIntent;

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,15 +23,12 @@
 
     const/4 v2, 0x0
 
-    .line 51
     if-eq p0, p1, :cond_1
 
-    .line 53
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 54
     .local v0, cal:Ljava/util/Calendar;
     const/16 v4, 0xb
 
@@ -50,11 +46,9 @@
 
     add-int v1, v4, v5
 
-    .line 56
     .local v1, minutes:I
     if-ge p1, p0, :cond_2
 
-    .line 58
     if-ge v1, p0, :cond_0
 
     if-ge v1, p1, :cond_1
@@ -62,14 +56,12 @@
     :cond_0
     move v2, v3
 
-    .line 64
     .end local v0           #cal:Ljava/util/Calendar;
     .end local v1           #minutes:I
     :cond_1
     :goto_0
     return v2
 
-    .line 61
     .restart local v0       #cal:Ljava/util/Calendar;
     .restart local v1       #minutes:I
     :cond_2
@@ -98,7 +90,6 @@
 
     const/4 v5, 0x0
 
-    .line 27
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
@@ -111,11 +102,9 @@
 
     if-eqz v6, :cond_0
 
-    .line 47
     :goto_0
     return v4
 
-    .line 34
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -131,7 +120,6 @@
 
     move v0, v4
 
-    .line 36
     .local v0, quietHoursEnabled:Z
     :goto_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -146,14 +134,12 @@
 
     move v2, v4
 
-    .line 39
     .local v2, quietHoursOption:Z
     :goto_2
     if-eqz v0, :cond_3
 
     if-eqz v2, :cond_3
 
-    .line 40
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -164,7 +150,6 @@
 
     move-result v3
 
-    .line 42
     .local v3, quietHoursStart:I
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -176,7 +161,6 @@
 
     move-result v1
 
-    .line 44
     .local v1, quietHoursEnd:I
     invoke-static {v3, v1}, Lcom/android/internal/util/cm/QuietHoursUtils;->inQuietHours(II)Z
 
@@ -191,20 +175,17 @@
     :cond_1
     move v0, v5
 
-    .line 34
     goto :goto_1
 
     .restart local v0       #quietHoursEnabled:Z
     :cond_2
     move v2, v5
 
-    .line 36
     goto :goto_2
 
     .restart local v2       #quietHoursOption:Z
     :cond_3
     move v4, v5
 
-    .line 47
     goto :goto_0
 .end method

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 334
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$2;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,12 +41,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 337
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 338
     .local v0, action:Ljava/lang/String;
     const-string v2, "android.intent.action.USER_SWITCHED"
 
@@ -57,7 +54,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 339
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$2;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     const-string v3, "android.intent.extra.user_handle"
@@ -69,12 +65,10 @@
     #calls: Lcom/android/server/accessibility/AccessibilityManagerService;->switchUser(I)V
     invoke-static {v2, v3}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$800(Lcom/android/server/accessibility/AccessibilityManagerService;I)V
 
-    .line 351
     :cond_0
     :goto_0
     return-void
 
-    .line 340
     :cond_1
     const-string v2, "android.intent.action.USER_REMOVED"
 
@@ -84,7 +78,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 341
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$2;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     const-string v3, "android.intent.extra.user_handle"
@@ -98,7 +91,6 @@
 
     goto :goto_0
 
-    .line 342
     :cond_2
     const-string v2, "android.intent.action.USER_PRESENT"
 
@@ -108,7 +100,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 344
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$2;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     #calls: Lcom/android/server/accessibility/AccessibilityManagerService;->getCurrentUserStateLocked()Lcom/android/server/accessibility/AccessibilityManagerService$UserState;
@@ -116,7 +107,6 @@
 
     move-result-object v1
 
-    .line 345
     .local v1, userState:Lcom/android/server/accessibility/AccessibilityManagerService$UserState;
     #getter for: Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationService:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
     invoke-static {v1}, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->access$300(Lcom/android/server/accessibility/AccessibilityManagerService$UserState;)Lcom/android/server/accessibility/AccessibilityManagerService$Service;
@@ -125,7 +115,6 @@
 
     if-nez v2, :cond_0
 
-    .line 346
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$2;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     #calls: Lcom/android/server/accessibility/AccessibilityManagerService;->readConfigurationForUserStateLocked(Lcom/android/server/accessibility/AccessibilityManagerService$UserState;)Z
@@ -135,7 +124,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 347
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$2;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     #calls: Lcom/android/server/accessibility/AccessibilityManagerService;->onUserStateChangedLocked(Lcom/android/server/accessibility/AccessibilityManagerService$UserState;)V

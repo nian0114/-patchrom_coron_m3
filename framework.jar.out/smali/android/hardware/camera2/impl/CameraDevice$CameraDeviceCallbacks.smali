@@ -32,7 +32,6 @@
     .parameter
 
     .prologue
-    .line 464
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     invoke-direct {p0}, Landroid/hardware/camera2/ICameraDeviceCallbacks$Stub;-><init>()V
@@ -46,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 494
     return-object p0
 .end method
 
@@ -55,10 +53,8 @@
     .parameter "errorCode"
 
     .prologue
-    .line 499
     const/4 v0, 0x0
 
-    .line 500
     .local v0, r:Ljava/lang/Runnable;
     iget-object v2, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
@@ -69,11 +65,9 @@
 
     if-eqz v2, :cond_0
 
-    .line 523
     :goto_0
     return-void
 
-    .line 502
     :cond_0
     iget-object v2, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
@@ -84,10 +78,8 @@
 
     monitor-enter v3
 
-    .line 503
     packed-switch p1, :pswitch_data_0
 
-    .line 508
     :try_start_0
     iget-object v2, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
@@ -116,7 +108,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 512
     :pswitch_0
     new-instance v1, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks$1;
 
@@ -126,7 +117,6 @@
     .local v1, r:Ljava/lang/Runnable;
     move-object v0, v1
 
-    .line 521
     .end local v1           #r:Ljava/lang/Runnable;
     .restart local v0       #r:Ljava/lang/Runnable;
     :goto_1
@@ -139,7 +129,6 @@
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 522
     monitor-exit v3
 
     goto :goto_0
@@ -153,7 +142,6 @@
 
     throw v2
 
-    .line 505
     :pswitch_1
     :try_start_1
     iget-object v2, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
@@ -165,10 +153,8 @@
 
     move-result-object v0
 
-    .line 506
     goto :goto_1
 
-    .line 503
     nop
 
     :pswitch_data_0
@@ -183,7 +169,6 @@
     .locals 3
 
     .prologue
-    .line 527
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #calls: Landroid/hardware/camera2/impl/CameraDevice;->isClosed()Z
@@ -193,11 +178,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 538
     :goto_0
     return-void
 
-    .line 529
     :cond_0
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
@@ -208,7 +191,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 530
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #getter for: Landroid/hardware/camera2/impl/CameraDevice;->TAG:Ljava/lang/String;
@@ -220,7 +202,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 532
     :cond_1
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
@@ -231,7 +212,6 @@
 
     monitor-enter v1
 
-    .line 533
     :try_start_0
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
@@ -242,7 +222,6 @@
 
     if-nez v0, :cond_2
 
-    .line 534
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #getter for: Landroid/hardware/camera2/impl/CameraDevice;->mDeviceHandler:Landroid/os/Handler;
@@ -259,7 +238,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 536
     :cond_2
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
@@ -268,7 +246,6 @@
     #setter for: Landroid/hardware/camera2/impl/CameraDevice;->mIdle:Z
     invoke-static {v0, v2}, Landroid/hardware/camera2/impl/CameraDevice;->access$702(Landroid/hardware/camera2/impl/CameraDevice;Z)Z
 
-    .line 537
     monitor-exit v1
 
     goto :goto_0
@@ -289,7 +266,6 @@
     .parameter "timestamp"
 
     .prologue
-    .line 542
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #getter for: Landroid/hardware/camera2/impl/CameraDevice;->DEBUG:Z
@@ -299,7 +275,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 543
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #getter for: Landroid/hardware/camera2/impl/CameraDevice;->TAG:Ljava/lang/String;
@@ -327,7 +302,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 548
     :cond_0
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
@@ -338,7 +312,6 @@
 
     monitor-enter v2
 
-    .line 549
     :try_start_0
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
@@ -353,19 +326,15 @@
 
     check-cast v0, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;
 
-    .line 550
     .local v0, holder:Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;
     monitor-exit v2
 
-    .line 552
     if-nez v0, :cond_2
 
-    .line 570
     :cond_1
     :goto_0
     return-void
 
-    .line 550
     .end local v0           #holder:Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;
     :catchall_0
     move-exception v1
@@ -376,7 +345,6 @@
 
     throw v1
 
-    .line 556
     .restart local v0       #holder:Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;
     :cond_2
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
@@ -388,7 +356,6 @@
 
     if-nez v1, :cond_1
 
-    .line 559
     invoke-virtual {v0}, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -413,7 +380,6 @@
     .end annotation
 
     .prologue
-    .line 575
     iget-object v8, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #getter for: Landroid/hardware/camera2/impl/CameraDevice;->DEBUG:Z
@@ -423,7 +389,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 576
     iget-object v8, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #getter for: Landroid/hardware/camera2/impl/CameraDevice;->TAG:Ljava/lang/String;
@@ -451,7 +416,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 580
     :cond_0
     sget-object v8, Landroid/hardware/camera2/CaptureResult;->QUIRKS_PARTIAL_RESULT:Landroid/hardware/camera2/CameraMetadata$Key;
 
@@ -461,7 +425,6 @@
 
     check-cast v4, Ljava/lang/Boolean;
 
-    .line 581
     .local v4, quirkPartial:Ljava/lang/Boolean;
     if-eqz v4, :cond_3
 
@@ -473,7 +436,6 @@
 
     const/4 v3, 0x1
 
-    .line 583
     .local v3, quirkIsPartialResult:Z
     :goto_0
     iget-object v8, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
@@ -485,7 +447,6 @@
 
     monitor-enter v9
 
-    .line 588
     :try_start_0
     iget-object v8, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
@@ -500,7 +461,6 @@
 
     check-cast v1, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;
 
-    .line 591
     .local v1, holder:Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;
     if-eqz v1, :cond_1
 
@@ -512,7 +472,6 @@
 
     if-nez v3, :cond_1
 
-    .line 592
     iget-object v8, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #getter for: Landroid/hardware/camera2/impl/CameraDevice;->mCaptureListenerMap:Landroid/util/SparseArray;
@@ -522,7 +481,6 @@
 
     invoke-virtual {v8, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 601
     :cond_1
     if-eqz v1, :cond_4
 
@@ -547,7 +505,6 @@
 
     if-lez v8, :cond_4
 
-    .line 603
     iget-object v8, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #getter for: Landroid/hardware/camera2/impl/CameraDevice;->mRepeatingRequestIdDeletedList:Ljava/util/ArrayList;
@@ -559,7 +516,6 @@
 
     move-result-object v2
 
-    .line 604
     .local v2, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_2
     :goto_1
@@ -569,7 +525,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 605
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v8
@@ -580,11 +535,9 @@
 
     move-result v0
 
-    .line 606
     .local v0, deletedRequestId:I
     if-ge v0, p1, :cond_2
 
-    .line 607
     iget-object v8, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #getter for: Landroid/hardware/camera2/impl/CameraDevice;->mCaptureListenerMap:Landroid/util/SparseArray;
@@ -594,12 +547,10 @@
 
     invoke-virtual {v8, v0}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 608
     invoke-interface {v2}, Ljava/util/Iterator;->remove()V
 
     goto :goto_1
 
-    .line 613
     .end local v0           #deletedRequestId:I
     .end local v1           #holder:Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;
     .end local v2           #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/Integer;>;"
@@ -612,14 +563,12 @@
 
     throw v8
 
-    .line 581
     .end local v3           #quirkIsPartialResult:Z
     :cond_3
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 613
     .restart local v1       #holder:Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;
     .restart local v3       #quirkIsPartialResult:Z
     :cond_4
@@ -628,15 +577,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 616
     if-nez v1, :cond_6
 
-    .line 657
     :cond_5
     :goto_2
     return-void
 
-    .line 620
     :cond_6
     iget-object v8, p0, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
@@ -647,32 +593,26 @@
 
     if-nez v8, :cond_5
 
-    .line 622
     invoke-virtual {v1}, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->getRequest()Landroid/hardware/camera2/CaptureRequest;
 
     move-result-object v5
 
-    .line 623
     .local v5, request:Landroid/hardware/camera2/CaptureRequest;
     new-instance v6, Landroid/hardware/camera2/CaptureResult;
 
     invoke-direct {v6, p2, v5, p1}, Landroid/hardware/camera2/CaptureResult;-><init>(Landroid/hardware/camera2/impl/CameraMetadataNative;Landroid/hardware/camera2/CaptureRequest;I)V
 
-    .line 625
     .local v6, resultAsCapture:Landroid/hardware/camera2/CaptureResult;
     const/4 v7, 0x0
 
-    .line 628
     .local v7, resultDispatch:Ljava/lang/Runnable;
     if-eqz v3, :cond_7
 
-    .line 630
     new-instance v7, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks$3;
 
     .end local v7           #resultDispatch:Ljava/lang/Runnable;
     invoke-direct {v7, p0, v1, v5, v6}, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks$3;-><init>(Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks;Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
 
-    .line 656
     .restart local v7       #resultDispatch:Ljava/lang/Runnable;
     :goto_3
     invoke-virtual {v1}, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->getHandler()Landroid/os/Handler;
@@ -683,7 +623,6 @@
 
     goto :goto_2
 
-    .line 643
     :cond_7
     new-instance v7, Landroid/hardware/camera2/impl/CameraDevice$CameraDeviceCallbacks$4;
 

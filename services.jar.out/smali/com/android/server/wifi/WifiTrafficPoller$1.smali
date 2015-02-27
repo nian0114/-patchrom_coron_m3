@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 79
     iput-object p1, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 82
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 84
     iget-object v1, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     const-string v0, "networkInfo"
@@ -67,7 +64,6 @@
     #setter for: Lcom/android/server/wifi/WifiTrafficPoller;->mNetworkInfo:Landroid/net/NetworkInfo;
     invoke-static {v1, v0}, Lcom/android/server/wifi/WifiTrafficPoller;->access$102(Lcom/android/server/wifi/WifiTrafficPoller;Landroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
 
-    .line 91
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
@@ -75,10 +71,8 @@
     #calls: Lcom/android/server/wifi/WifiTrafficPoller;->evaluateTrafficStatsPolling()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiTrafficPoller;->access$300(Lcom/android/server/wifi/WifiTrafficPoller;)V
 
-    .line 92
     return-void
 
-    .line 86
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -92,7 +86,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     #getter for: Lcom/android/server/wifi/WifiTrafficPoller;->mScreenOn:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -106,7 +99,6 @@
 
     goto :goto_0
 
-    .line 88
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -120,7 +112,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 89
     iget-object v0, p0, Lcom/android/server/wifi/WifiTrafficPoller$1;->this$0:Lcom/android/server/wifi/WifiTrafficPoller;
 
     #getter for: Lcom/android/server/wifi/WifiTrafficPoller;->mScreenOn:Ljava/util/concurrent/atomic/AtomicBoolean;

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .parameter "source"
 
     .prologue
-    .line 111
     new-instance v0, Landroid/content/PeriodicSync;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .parameter "x0"
 
     .prologue
-    .line 108
     invoke-virtual {p0, p1}, Landroid/content/PeriodicSync$1;->createFromParcel(Landroid/os/Parcel;)Landroid/content/PeriodicSync;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .parameter "size"
 
     .prologue
-    .line 116
     new-array v0, p1, [Landroid/content/PeriodicSync;
 
     return-object v0
@@ -84,7 +80,6 @@
     .parameter "x0"
 
     .prologue
-    .line 108
     invoke-virtual {p0, p1}, Landroid/content/PeriodicSync$1;->newArray(I)[Landroid/content/PeriodicSync;
 
     move-result-object v0

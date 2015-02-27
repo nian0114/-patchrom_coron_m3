@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 466
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfosCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfosCaller;
 
     const/4 v0, 0x0
@@ -51,12 +50,10 @@
     .end annotation
 
     .prologue
-    .line 469
     .local p1, printJobs:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrintJobInfo;>;"
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfosCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfosCaller;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfosCaller;->onRemoteMethodResult(Ljava/lang/Object;I)V
 
-    .line 470
     return-void
 .end method

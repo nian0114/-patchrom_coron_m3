@@ -30,16 +30,12 @@
     .parameter "service"
 
     .prologue
-    .line 1465
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1466
     iput-object p1, p0, Lcom/android/server/BackupManagerService$ObserveBaiduTransport;->mComponentName:Ljava/lang/String;
 
-    .line 1467
     iput-object p2, p0, Lcom/android/server/BackupManagerService$ObserveBaiduTransport;->mService:Lcom/android/server/BackupManagerService;
 
-    .line 1468
     return-void
 .end method
 
@@ -49,14 +45,12 @@
     .locals 4
 
     .prologue
-    .line 1471
     iget-object v0, p0, Lcom/android/server/BackupManagerService$ObserveBaiduTransport;->mService:Lcom/android/server/BackupManagerService;
 
     iget-object v1, v0, Lcom/android/server/BackupManagerService;->mBackupHandler:Lcom/android/server/BackupManagerService$BackupHandler;
 
     monitor-enter v1
 
-    .line 1473
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BackupManagerService$ObserveBaiduTransport;->mService:Lcom/android/server/BackupManagerService;
 
@@ -67,12 +61,10 @@
     #calls: Lcom/android/server/BackupManagerService;->registerTransport(Ljava/lang/String;Ljava/lang/String;Lcom/android/internal/backup/IBackupTransport;)V
     invoke-static {v0, v3, v2, v3}, Lcom/android/server/BackupManagerService;->access$500(Lcom/android/server/BackupManagerService;Ljava/lang/String;Ljava/lang/String;Lcom/android/internal/backup/IBackupTransport;)V
 
-    .line 1474
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1477
     iget-object v0, p0, Lcom/android/server/BackupManagerService$ObserveBaiduTransport;->mService:Lcom/android/server/BackupManagerService;
 
     iget-object v0, v0, Lcom/android/server/BackupManagerService;->mBackupHandler:Lcom/android/server/BackupManagerService$BackupHandler;
@@ -83,10 +75,8 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/BackupManagerService$BackupHandler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1483
     return-void
 
-    .line 1474
     :catchall_0
     move-exception v0
 

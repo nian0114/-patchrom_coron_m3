@@ -25,13 +25,10 @@
     .parameter "handler"
 
     .prologue
-    .line 307
     iput-object p1, p0, Lcom/android/server/wifi/WifiNotificationController$NotificationEnabledSettingObserver;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
-    .line 308
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 309
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 331
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$NotificationEnabledSettingObserver;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     #getter for: Lcom/android/server/wifi/WifiNotificationController;->mContext:Landroid/content/Context;
@@ -77,15 +73,12 @@
     .parameter "selfChange"
 
     .prologue
-    .line 322
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 324
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$NotificationEnabledSettingObserver;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     monitor-enter v1
 
-    .line 325
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiNotificationController$NotificationEnabledSettingObserver;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
@@ -96,19 +89,15 @@
     #setter for: Lcom/android/server/wifi/WifiNotificationController;->mNotificationEnabled:Z
     invoke-static {v0, v2}, Lcom/android/server/wifi/WifiNotificationController;->access$702(Lcom/android/server/wifi/WifiNotificationController;Z)Z
 
-    .line 326
     iget-object v0, p0, Lcom/android/server/wifi/WifiNotificationController$NotificationEnabledSettingObserver;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     #calls: Lcom/android/server/wifi/WifiNotificationController;->resetNotification()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiNotificationController;->access$100(Lcom/android/server/wifi/WifiNotificationController;)V
 
-    .line 327
     monitor-exit v1
 
-    .line 328
     return-void
 
-    .line 327
     :catchall_0
     move-exception v0
 
@@ -123,7 +112,6 @@
     .locals 4
 
     .prologue
-    .line 312
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$NotificationEnabledSettingObserver;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     #getter for: Lcom/android/server/wifi/WifiNotificationController;->mContext:Landroid/content/Context;
@@ -135,7 +123,6 @@
 
     move-result-object v0
 
-    .line 313
     .local v0, cr:Landroid/content/ContentResolver;
     const-string v1, "wifi_networks_available_notification_on"
 
@@ -147,12 +134,10 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 315
     iget-object v2, p0, Lcom/android/server/wifi/WifiNotificationController$NotificationEnabledSettingObserver;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     monitor-enter v2
 
-    .line 316
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$NotificationEnabledSettingObserver;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
@@ -163,13 +148,10 @@
     #setter for: Lcom/android/server/wifi/WifiNotificationController;->mNotificationEnabled:Z
     invoke-static {v1, v3}, Lcom/android/server/wifi/WifiNotificationController;->access$702(Lcom/android/server/wifi/WifiNotificationController;Z)Z
 
-    .line 317
     monitor-exit v2
 
-    .line 318
     return-void
 
-    .line 317
     :catchall_0
     move-exception v1
 

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Landroid/net/INetworkManagementEventObserver$Stub;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .parameter "scope"
 
     .prologue
-    .line 46
     return-void
 .end method
 
@@ -36,7 +34,6 @@
     .parameter "scope"
 
     .prologue
-    .line 41
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .parameter "iface"
 
     .prologue
-    .line 56
     return-void
 .end method
 
@@ -55,7 +51,6 @@
     .parameter "active"
 
     .prologue
-    .line 61
     return-void
 .end method
 
@@ -65,7 +60,6 @@
     .parameter "up"
 
     .prologue
-    .line 51
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .parameter "iface"
 
     .prologue
-    .line 36
     return-void
 .end method
 
@@ -84,7 +77,6 @@
     .parameter "up"
 
     .prologue
-    .line 31
     return-void
 .end method
 
@@ -94,6 +86,5 @@
     .parameter "iface"
 
     .prologue
-    .line 66
     return-void
 .end method

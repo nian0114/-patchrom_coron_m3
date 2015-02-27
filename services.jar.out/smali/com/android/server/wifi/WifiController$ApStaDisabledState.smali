@@ -32,15 +32,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 394
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
 
-    .line 395
     iput v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->mDeferredEnableSerialNumber:I
 
-    .line 396
     iput-boolean v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->mHaveDeferredEnable:Z
 
     return-void
@@ -51,7 +48,6 @@
     .parameter "msg"
 
     .prologue
-    .line 455
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
@@ -60,7 +56,6 @@
 
     sub-long v1, v3, v5
 
-    .line 456
     .local v1, delaySoFar:J
     iget-object v3, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -73,14 +68,11 @@
 
     if-ltz v3, :cond_0
 
-    .line 457
     const/4 v3, 0x0
 
-    .line 468
     :goto_0
     return v3
 
-    .line 460
     :cond_0
     iget-object v3, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -130,7 +122,6 @@
     #calls: Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/android/server/wifi/WifiController;->access$2200(Lcom/android/server/wifi/WifiController;Ljava/lang/String;)V
 
-    .line 464
     iget-object v3, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     const v4, 0x2600b
@@ -139,7 +130,6 @@
 
     move-result-object v0
 
-    .line 465
     .local v0, deferredMsg:Landroid/os/Message;
     invoke-static {p1}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
 
@@ -147,7 +137,6 @@
 
     iput-object v3, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 466
     iget v3, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->mDeferredEnableSerialNumber:I
 
     add-int/lit8 v3, v3, 0x1
@@ -156,7 +145,6 @@
 
     iput v3, v0, Landroid/os/Message;->arg1:I
 
-    .line 467
     iget-object v3, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v4, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
@@ -174,7 +162,6 @@
 
     invoke-virtual {v3, v0, v4, v5}, Lcom/android/server/wifi/WifiController;->sendMessageDelayed(Landroid/os/Message;J)V
 
-    .line 468
     const/4 v3, 0x1
 
     goto :goto_0
@@ -188,31 +175,26 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 401
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
 
     invoke-virtual {v0, v2}, Landroid/net/wifi/WifiStateMachine;->setSupplicantRunning(Z)V
 
-    .line 403
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->mDisabledTimestamp:J
 
-    .line 404
     iget v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->mDeferredEnableSerialNumber:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->mDeferredEnableSerialNumber:I
 
-    .line 405
     iput-boolean v2, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->mHaveDeferredEnable:Z
 
-    .line 406
     return-void
 .end method
 
@@ -225,16 +207,13 @@
 
     const/4 v1, 0x1
 
-    .line 409
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 451
     :goto_0
     return v0
 
-    .line 412
     :pswitch_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -246,26 +225,22 @@
 
     if-eqz v2, :cond_2
 
-    .line 413
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->doDeferEnable(Landroid/os/Message;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 414
     iget-boolean v2, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->mHaveDeferredEnable:Z
 
     if-eqz v2, :cond_0
 
-    .line 416
     iget v2, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->mDeferredEnableSerialNumber:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->mDeferredEnableSerialNumber:I
 
-    .line 418
     :cond_0
     iget-boolean v2, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->mHaveDeferredEnable:Z
 
@@ -280,10 +255,8 @@
     :goto_1
     move v0, v1
 
-    .line 451
     goto :goto_0
 
-    .line 421
     :cond_3
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -294,7 +267,6 @@
 
     if-nez v0, :cond_4
 
-    .line 422
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     #calls: Lcom/android/server/wifi/WifiController;->checkLocksAndTransitionWhenDeviceActive()V
@@ -302,7 +274,6 @@
 
     goto :goto_1
 
-    .line 424
     :cond_4
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -311,7 +282,6 @@
 
     goto :goto_1
 
-    .line 429
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -323,7 +293,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 430
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
@@ -338,13 +307,11 @@
 
     goto :goto_1
 
-    .line 434
     :pswitch_2
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     if-ne v0, v1, :cond_2
 
-    .line 435
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v2, v0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
@@ -355,7 +322,6 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/net/wifi/WifiStateMachine;->setHostApRunning(Landroid/net/wifi/WifiConfiguration;Z)V
 
-    .line 437
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
@@ -370,7 +336,6 @@
 
     goto :goto_1
 
-    .line 441
     :pswitch_3
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -378,7 +343,6 @@
 
     if-eq v0, v2, :cond_5
 
-    .line 442
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     const-string v2, "DEFERRED_TOGGLE ignored due to serial mismatch"
@@ -388,7 +352,6 @@
 
     goto :goto_1
 
-    .line 445
     :cond_5
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -397,7 +360,6 @@
     #calls: Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
     invoke-static {v0, v2}, Lcom/android/server/wifi/WifiController;->access$2000(Lcom/android/server/wifi/WifiController;Ljava/lang/String;)V
 
-    .line 446
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$ApStaDisabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -410,7 +372,6 @@
 
     goto :goto_1
 
-    .line 409
     nop
 
     :pswitch_data_0

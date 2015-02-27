@@ -110,54 +110,44 @@
 
     const/4 v1, -0x1
 
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin1RetryCount:I
 
-    .line 57
     iput v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin2RetryCount:I
 
-    .line 59
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
-    .line 73
     iput-boolean v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFdnAvailable:Z
 
-    .line 82
     new-instance v1, Landroid/os/RegistrantList;
 
     invoke-direct {v1}, Landroid/os/RegistrantList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mReadyRegistrants:Landroid/os/RegistrantList;
 
-    .line 83
     new-instance v1, Landroid/os/RegistrantList;
 
     invoke-direct {v1}, Landroid/os/RegistrantList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPinLockedRegistrants:Landroid/os/RegistrantList;
 
-    .line 84
     new-instance v1, Landroid/os/RegistrantList;
 
     invoke-direct {v1}, Landroid/os/RegistrantList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPersoLockedRegistrants:Landroid/os/RegistrantList;
 
-    .line 396
     new-instance v1, Lcom/android/internal/telephony/uicc/UiccCardApplication$1;
 
     invoke-direct {v1, p0}, Lcom/android/internal/telephony/uicc/UiccCardApplication$1;-><init>(Lcom/android/internal/telephony/uicc/UiccCardApplication;)V
 
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mHandler:Landroid/os/Handler;
 
-    .line 90
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -178,35 +168,28 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 91
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mUiccCard:Lcom/android/internal/telephony/uicc/UiccCard;
 
-    .line 92
     iget-object v1, p2, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->app_state:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    .line 93
     iget-object v1, p2, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->app_type:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppType:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
-    .line 94
     iget-object v1, p2, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->perso_substate:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPersoSubState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 95
     iget-object v1, p2, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->aid:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAid:Ljava/lang/String;
 
-    .line 96
     iget-object v1, p2, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->app_label:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppLabel:Ljava/lang/String;
 
-    .line 97
     iget v1, p2, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->pin1_replaced:I
 
     if-eqz v1, :cond_1
@@ -214,23 +197,18 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin1Replaced:Z
 
-    .line 98
     iget-object v0, p2, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->pin1:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin1State:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
-    .line 99
     iget-object v0, p2, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->pin2:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin2State:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
-    .line 101
     iput-object p3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mContext:Landroid/content/Context;
 
-    .line 102
     iput-object p4, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 104
     iget-object v0, p2, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->app_type:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->createIccFileHandler(Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;)Lcom/android/internal/telephony/uicc/IccFileHandler;
@@ -239,7 +217,6 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
-    .line 105
     iget-object v0, p2, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->app_type:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mContext:Landroid/content/Context;
@@ -252,24 +229,19 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccRecords:Lcom/android/internal/telephony/uicc/IccRecords;
 
-    .line 106
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     sget-object v1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_READY:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     if-ne v0, v1, :cond_0
 
-    .line 107
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->queryFdn()V
 
-    .line 108
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->queryPin1State()V
 
-    .line 110
     :cond_0
     return-void
 
-    .line 97
     :cond_1
     const/4 v0, 0x0
 
@@ -281,7 +253,6 @@
     .parameter "x0"
 
     .prologue
-    .line 39
     iget-boolean v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mDestroyed:Z
 
     return v0
@@ -293,7 +264,6 @@
     .parameter "x1"
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->loge(Ljava/lang/String;)V
 
     return-void
@@ -306,7 +276,6 @@
     .parameter "x2"
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->parsePinPukErrorResult(Landroid/os/AsyncResult;Z)V
 
     return-void
@@ -318,7 +287,6 @@
     .parameter "x1"
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->parsePinPukErrorResult(Landroid/os/AsyncResult;)I
 
     move-result v0
@@ -332,7 +300,6 @@
     .parameter "x1"
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->onQueryFdnEnabled(Landroid/os/AsyncResult;)V
 
     return-void
@@ -344,7 +311,6 @@
     .parameter "x1"
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->onChangeFdnDone(Landroid/os/AsyncResult;)V
 
     return-void
@@ -356,7 +322,6 @@
     .parameter "x1"
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->onQueryFacilityLock(Landroid/os/AsyncResult;)V
 
     return-void
@@ -368,7 +333,6 @@
     .parameter "x1"
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->onChangeFacilityLock(Landroid/os/AsyncResult;)V
 
     return-void
@@ -379,7 +343,6 @@
     .parameter "type"
 
     .prologue
-    .line 185
     sget-object v0, Lcom/android/internal/telephony/uicc/UiccCardApplication$2;->$SwitchMap$com$android$internal$telephony$uicc$IccCardApplicationStatus$AppType:[I
 
     invoke-virtual {p1}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;->ordinal()I
@@ -390,13 +353,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 197
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 187
     :pswitch_0
     new-instance v0, Lcom/android/internal/telephony/uicc/SIMFileHandler;
 
@@ -408,7 +369,6 @@
 
     goto :goto_0
 
-    .line 189
     :pswitch_1
     new-instance v0, Lcom/android/internal/telephony/uicc/RuimFileHandler;
 
@@ -420,7 +380,6 @@
 
     goto :goto_0
 
-    .line 191
     :pswitch_2
     new-instance v0, Lcom/android/internal/telephony/uicc/UsimFileHandler;
 
@@ -432,7 +391,6 @@
 
     goto :goto_0
 
-    .line 193
     :pswitch_3
     new-instance v0, Lcom/android/internal/telephony/uicc/CsimFileHandler;
 
@@ -444,7 +402,6 @@
 
     goto :goto_0
 
-    .line 195
     :pswitch_4
     new-instance v0, Lcom/android/internal/telephony/uicc/IsimFileHandler;
 
@@ -456,7 +413,6 @@
 
     goto :goto_0
 
-    .line 185
     nop
 
     :pswitch_data_0
@@ -476,7 +432,6 @@
     .parameter "ci"
 
     .prologue
-    .line 172
     sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;->APPTYPE_USIM:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
     if-eq p1, v0, :cond_0
@@ -485,17 +440,14 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 173
     :cond_0
     new-instance v0, Lcom/android/internal/telephony/uicc/SIMRecords;
 
     invoke-direct {v0, p0, p2, p3}, Lcom/android/internal/telephony/uicc/SIMRecords;-><init>(Lcom/android/internal/telephony/uicc/UiccCardApplication;Landroid/content/Context;Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 180
     :goto_0
     return-object v0
 
-    .line 174
     :cond_1
     sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;->APPTYPE_RUIM:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
@@ -505,7 +457,6 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 175
     :cond_2
     new-instance v0, Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -513,20 +464,17 @@
 
     goto :goto_0
 
-    .line 176
     :cond_3
     sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;->APPTYPE_ISIM:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
     if-ne p1, v0, :cond_4
 
-    .line 177
     new-instance v0, Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
     invoke-direct {v0, p0, p2, p3}, Lcom/android/internal/telephony/uicc/IsimUiccRecords;-><init>(Lcom/android/internal/telephony/uicc/UiccCardApplication;Landroid/content/Context;Lcom/android/internal/telephony/CommandsInterface;)V
 
     goto :goto_0
 
-    .line 180
     :cond_4
     const/4 v0, 0x0
 
@@ -538,12 +486,10 @@
     .parameter "msg"
 
     .prologue
-    .line 908
     const-string v0, "UiccCardApplication"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 909
     return-void
 .end method
 
@@ -552,12 +498,10 @@
     .parameter "msg"
 
     .prologue
-    .line 912
     const-string v0, "UiccCardApplication"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 913
     return-void
 .end method
 
@@ -568,17 +512,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 599
     iget-boolean v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mDestroyed:Z
 
     if-eqz v1, :cond_1
 
-    .line 614
     :cond_0
     :goto_0
     return-void
 
-    .line 603
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
@@ -592,7 +533,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 605
     new-instance v0, Landroid/os/AsyncResult;
 
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPersoSubState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
@@ -607,29 +547,24 @@
 
     invoke-direct {v0, v3, v1, v3}, Landroid/os/AsyncResult;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Throwable;)V
 
-    .line 606
     .local v0, ar:Landroid/os/AsyncResult;
     if-nez p1, :cond_2
 
-    .line 607
     const-string v1, "Notifying registrants: PERSO_LOCKED"
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 608
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPersoLockedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->notifyRegistrants(Landroid/os/AsyncResult;)V
 
     goto :goto_0
 
-    .line 610
     :cond_2
     const-string v1, "Notifying 1 registrant: PERSO_LOCKED"
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 611
     invoke-virtual {p1, v0}, Landroid/os/Registrant;->notifyRegistrant(Landroid/os/AsyncResult;)V
 
     goto :goto_0
@@ -642,17 +577,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 571
     iget-boolean v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mDestroyed:Z
 
     if-eqz v0, :cond_1
 
-    .line 591
     :cond_0
     :goto_0
     return-void
 
-    .line 575
     :cond_1
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
@@ -666,7 +598,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 577
     :cond_2
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin1State:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
@@ -680,7 +611,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 579
     :cond_3
     const-string v0, "Sanity check failed! APPSTATE is locked while PIN1 is not!!!"
 
@@ -688,29 +618,24 @@
 
     goto :goto_0
 
-    .line 583
     :cond_4
     if-nez p1, :cond_5
 
-    .line 584
     const-string v0, "Notifying registrants: LOCKED"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 585
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPinLockedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
     goto :goto_0
 
-    .line 587
     :cond_5
     const-string v0, "Notifying 1 registrant: LOCKED"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 588
     new-instance v0, Landroid/os/AsyncResult;
 
     invoke-direct {v0, v2, v2, v2}, Landroid/os/AsyncResult;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Throwable;)V
@@ -727,17 +652,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 544
     iget-boolean v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mDestroyed:Z
 
     if-eqz v0, :cond_1
 
-    .line 563
     :cond_0
     :goto_0
     return-void
 
-    .line 547
     :cond_1
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
@@ -745,7 +667,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 548
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin1State:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
     sget-object v1, Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;->PINSTATE_ENABLED_NOT_VERIFIED:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
@@ -764,7 +685,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 551
     :cond_2
     const-string v0, "Sanity check failed! APPSTATE is ready while PIN1 is not verified!!!"
 
@@ -772,29 +692,24 @@
 
     goto :goto_0
 
-    .line 555
     :cond_3
     if-nez p1, :cond_4
 
-    .line 556
     const-string v0, "Notifying registrants: READY"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 557
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mReadyRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
     goto :goto_0
 
-    .line 559
     :cond_4
     const-string v0, "Notifying 1 registrant: READY"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 560
     new-instance v0, Landroid/os/AsyncResult;
 
     invoke-direct {v0, v2, v2, v2}, Landroid/os/AsyncResult;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Throwable;)V
@@ -809,27 +724,22 @@
     .parameter "ar"
 
     .prologue
-    .line 326
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 327
     const/4 v0, -0x1
 
-    .line 329
     .local v0, attemptsRemaining:I
     :try_start_0
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_0
 
-    .line 330
     iget-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mDesiredPinLocked:Z
 
     iput-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccLockEnabled:Z
 
-    .line 331
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -852,13 +762,11 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 340
     :goto_0
     iget-object v1, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/Message;
 
-    .line 341
     .local v1, response:Landroid/os/Message;
     invoke-static {v1}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;)Landroid/os/AsyncResult;
 
@@ -868,37 +776,29 @@
 
     iput-object v4, v2, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    .line 342
     iput v0, v1, Landroid/os/Message;->arg1:I
 
-    .line 343
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 344
     monitor-exit v3
 
-    .line 345
     return-void
 
-    .line 334
     .end local v1           #response:Landroid/os/Message;
     :cond_0
     iget-object v2, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     if-eqz v2, :cond_1
 
-    .line 335
     const/4 v2, 0x1
 
     invoke-direct {p0, p1, v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->parsePinPukErrorResult(Landroid/os/AsyncResult;Z)V
 
-    .line 337
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->parsePinPukErrorResult(Landroid/os/AsyncResult;)I
 
     move-result v0
 
-    .line 338
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -923,7 +823,6 @@
 
     goto :goto_0
 
-    .line 344
     :catchall_0
     move-exception v2
 
@@ -939,27 +838,22 @@
     .parameter "ar"
 
     .prologue
-    .line 243
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 244
     const/4 v0, -0x1
 
-    .line 246
     .local v0, attemptsRemaining:I
     :try_start_0
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_0
 
-    .line 247
     iget-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mDesiredFdnEnabled:Z
 
     iput-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFdnEnabled:Z
 
-    .line 248
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -982,17 +876,14 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 257
     :goto_0
     iget-object v1, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/Message;
 
-    .line 258
     .local v1, response:Landroid/os/Message;
     iput v0, v1, Landroid/os/Message;->arg1:I
 
-    .line 259
     invoke-static {v1}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;)Landroid/os/AsyncResult;
 
     move-result-object v2
@@ -1001,34 +892,27 @@
 
     iput-object v4, v2, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    .line 260
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 261
     monitor-exit v3
 
-    .line 262
     return-void
 
-    .line 251
     .end local v1           #response:Landroid/os/Message;
     :cond_0
     iget-object v2, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     if-eqz v2, :cond_1
 
-    .line 252
     const/4 v2, 0x0
 
     invoke-direct {p0, p1, v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->parsePinPukErrorResult(Landroid/os/AsyncResult;Z)V
 
-    .line 254
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->parsePinPukErrorResult(Landroid/os/AsyncResult;)I
 
     move-result v0
 
-    .line 255
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1053,7 +937,6 @@
 
     goto :goto_0
 
-    .line 261
     :catchall_0
     move-exception v2
 
@@ -1071,18 +954,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 276
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 277
     :try_start_0
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_0
 
-    .line 278
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1105,14 +985,11 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 279
     monitor-exit v4
 
-    .line 322
     :goto_0
     return-void
 
-    .line 282
     :cond_0
     iget-object v2, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -1124,13 +1001,11 @@
 
     move-object v1, v0
 
-    .line 283
     .local v1, ints:[I
     array-length v2, v1
 
     if-eqz v2, :cond_5
 
-    .line 284
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1155,7 +1030,6 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 286
     const/4 v2, 0x0
 
     aget v2, v1, v2
@@ -1167,17 +1041,14 @@
     :goto_1
     iput-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccLockEnabled:Z
 
-    .line 288
     iget-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccLockEnabled:Z
 
     if-eqz v2, :cond_1
 
-    .line 289
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPinLockedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v2}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
-    .line 298
     :cond_1
     sget-object v2, Lcom/android/internal/telephony/uicc/UiccCardApplication$2;->$SwitchMap$com$android$internal$telephony$uicc$IccCardStatus$PinState:[I
 
@@ -1191,7 +1062,6 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 315
     :cond_2
     :goto_2
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1216,7 +1086,6 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 321
     :cond_3
     :goto_3
     monitor-exit v4
@@ -1237,37 +1106,31 @@
     :cond_4
     move v2, v3
 
-    .line 286
     goto :goto_1
 
-    .line 300
     :pswitch_0
     :try_start_1
     iget-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccLockEnabled:Z
 
     if-eqz v2, :cond_3
 
-    .line 301
     const-string v2, "QUERY_FACILITY_LOCK:enabled GET_SIM_STATUS.Pin1:disabled. Fixme"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->loge(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 309
     :pswitch_1
     iget-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccLockEnabled:Z
 
     if-nez v2, :cond_2
 
-    .line 310
     const-string v2, "QUERY_FACILITY_LOCK:disabled GET_SIM_STATUS.Pin1:enabled. Fixme"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->loge(Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 319
     :cond_5
     const-string v2, "Bogus facility lock response"
 
@@ -1277,7 +1140,6 @@
 
     goto :goto_3
 
-    .line 298
     nop
 
     :pswitch_data_0
@@ -1299,18 +1161,15 @@
 
     const/4 v4, 0x0
 
-    .line 218
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 219
     :try_start_0
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_0
 
-    .line 220
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1333,14 +1192,11 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 221
     monitor-exit v5
 
-    .line 240
     :goto_0
     return-void
 
-    .line 224
     :cond_0
     iget-object v2, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -1352,13 +1208,11 @@
 
     move-object v1, v0
 
-    .line 225
     .local v1, result:[I
     array-length v2, v1
 
     if-eqz v2, :cond_3
 
-    .line 227
     const/4 v2, 0x0
 
     aget v2, v1, v2
@@ -1367,17 +1221,14 @@
 
     if-ne v2, v6, :cond_1
 
-    .line 228
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFdnEnabled:Z
 
-    .line 229
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFdnAvailable:Z
 
-    .line 234
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1413,7 +1264,6 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 239
     :goto_2
     monitor-exit v5
 
@@ -1429,7 +1279,6 @@
 
     throw v2
 
-    .line 231
     .restart local v1       #result:[I
     :cond_1
     const/4 v2, 0x0
@@ -1444,7 +1293,6 @@
     :goto_3
     iput-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFdnEnabled:Z
 
-    .line 232
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFdnAvailable:Z
@@ -1454,10 +1302,8 @@
     :cond_2
     move v2, v4
 
-    .line 231
     goto :goto_3
 
-    .line 237
     :cond_3
     const-string v2, "Bogus facility lock response"
 
@@ -1473,7 +1319,6 @@
     .parameter "ar"
 
     .prologue
-    .line 351
     iget-object v3, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v3, [I
@@ -1482,35 +1327,27 @@
 
     check-cast v2, [I
 
-    .line 352
     .local v2, result:[I
     if-nez v2, :cond_0
 
-    .line 353
     const/4 v0, -0x1
 
-    .line 361
     :goto_0
     return v0
 
-    .line 355
     :cond_0
     array-length v1, v2
 
-    .line 356
     .local v1, length:I
     const/4 v0, -0x1
 
-    .line 357
     .local v0, attemptsRemaining:I
     if-lez v1, :cond_1
 
-    .line 358
     const/4 v3, 0x0
 
     aget v0, v2, v3
 
-    .line 360
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1545,7 +1382,6 @@
 
     const/4 v3, -0x1
 
-    .line 369
     iget-object v2, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [I
@@ -1554,34 +1390,26 @@
 
     check-cast v1, [I
 
-    .line 370
     .local v1, result:[I
     array-length v0, v1
 
-    .line 371
     .local v0, length:I
     iput v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin1RetryCount:I
 
-    .line 372
     iput v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin2RetryCount:I
 
-    .line 373
     if-lez v0, :cond_0
 
-    .line 374
     if-eqz p2, :cond_1
 
-    .line 375
     aget v2, v1, v4
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin1RetryCount:I
 
-    .line 380
     :cond_0
     :goto_0
     return-void
 
-    .line 377
     :cond_1
     aget v2, v1, v4
 
@@ -1594,10 +1422,8 @@
     .locals 7
 
     .prologue
-    .line 206
     const/4 v3, 0x7
 
-    .line 209
     .local v3, serviceClassX:I
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -1617,7 +1443,6 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/android/internal/telephony/CommandsInterface;->queryFacilityLockForApp(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Landroid/os/Message;)V
 
-    .line 212
     return-void
 .end method
 
@@ -1625,10 +1450,8 @@
     .locals 7
 
     .prologue
-    .line 266
     const/4 v3, 0x7
 
-    .line 269
     .local v3, serviceClassX:I
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -1648,7 +1471,6 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/android/internal/telephony/CommandsInterface;->queryFacilityLockForApp(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Landroid/os/Message;)V
 
-    .line 272
     return-void
 .end method
 
@@ -1661,18 +1483,15 @@
     .parameter "onComplete"
 
     .prologue
-    .line 882
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 883
     :try_start_0
     const-string v0, "changeIccFdnPassword"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 884
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAid:Ljava/lang/String;
@@ -1687,13 +1506,10 @@
 
     invoke-interface {v0, p1, p2, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->changeIccPin2ForApp(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 886
     monitor-exit v1
 
-    .line 887
     return-void
 
-    .line 886
     :catchall_0
     move-exception v0
 
@@ -1711,18 +1527,15 @@
     .parameter "onComplete"
 
     .prologue
-    .line 862
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 863
     :try_start_0
     const-string v0, "changeIccLockPassword"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 864
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAid:Ljava/lang/String;
@@ -1737,13 +1550,10 @@
 
     invoke-interface {v0, p1, p2, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->changeIccPinForApp(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 866
     monitor-exit v1
 
-    .line 867
     return-void
 
-    .line 866
     :catchall_0
     move-exception v0
 
@@ -1760,7 +1570,6 @@
     .parameter "onComplete"
 
     .prologue
-    .line 964
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mHandler:Landroid/os/Handler;
@@ -1773,7 +1582,6 @@
 
     invoke-interface {v0, p1, v1}, Lcom/android/internal/telephony/CommandsInterface;->iccCloseChannel(ILandroid/os/Message;)V
 
-    .line 966
     return-void
 .end method
 
@@ -1781,12 +1589,10 @@
     .locals 3
 
     .prologue
-    .line 161
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 162
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1810,12 +1616,10 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 163
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mDestroyed:Z
 
-    .line 164
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccRecords:Lcom/android/internal/telephony/uicc/IccRecords;
 
     if-eqz v0, :cond_0
@@ -1824,7 +1628,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/IccRecords;->dispose()V
 
-    .line 165
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
@@ -1834,24 +1637,19 @@
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/IccFileHandler;->dispose()V
 
-    .line 166
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccRecords:Lcom/android/internal/telephony/uicc/IccRecords;
 
-    .line 167
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
-    .line 168
     monitor-exit v1
 
-    .line 169
     return-void
 
-    .line 168
     :catchall_0
     move-exception v0
 
@@ -1869,7 +1667,6 @@
     .parameter "args"
 
     .prologue
-    .line 916
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1890,7 +1687,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 917
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1913,7 +1709,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 918
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1936,7 +1731,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 919
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1959,7 +1753,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 920
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1982,7 +1775,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 921
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2005,7 +1797,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 922
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2028,7 +1819,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 923
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2051,7 +1841,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 924
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2074,7 +1863,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 925
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2097,7 +1885,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 926
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2120,7 +1907,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 927
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2143,7 +1929,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 928
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2166,7 +1951,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 929
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2189,7 +1973,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 930
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2212,7 +1995,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 931
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2235,7 +2017,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 932
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2258,7 +2039,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 933
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2281,7 +2061,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 934
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2308,7 +2087,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 935
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -2321,7 +2099,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 936
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2364,12 +2141,10 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 935
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 939
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2397,7 +2172,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 940
     const/4 v0, 0x0
 
     :goto_1
@@ -2409,7 +2183,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 941
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2452,12 +2225,10 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 940
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 944
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2485,7 +2256,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 945
     const/4 v0, 0x0
 
     :goto_2
@@ -2497,7 +2267,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 946
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2540,16 +2309,13 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 945
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 949
     :cond_2
     invoke-virtual {p2}, Ljava/io/PrintWriter;->flush()V
 
-    .line 950
     return-void
 .end method
 
@@ -2565,7 +2331,6 @@
     .parameter "onComplete"
 
     .prologue
-    .line 954
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mHandler:Landroid/os/Handler;
@@ -2594,7 +2359,6 @@
 
     invoke-interface/range {v1 .. v9}, Lcom/android/internal/telephony/CommandsInterface;->iccExchangeApdu(IIIIIILjava/lang/String;Landroid/os/Message;)V
 
-    .line 956
     return-void
 .end method
 
@@ -2609,7 +2373,6 @@
     .parameter "onComplete"
 
     .prologue
-    .line 970
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v8, 0x0
@@ -2640,7 +2403,6 @@
 
     invoke-interface/range {v1 .. v10}, Lcom/android/internal/telephony/CommandsInterface;->iccIO(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 972
     return-void
 .end method
 
@@ -2648,12 +2410,10 @@
     .locals 2
 
     .prologue
-    .line 635
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 636
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAid:Ljava/lang/String;
 
@@ -2661,7 +2421,6 @@
 
     return-object v0
 
-    .line 637
     :catchall_0
     move-exception v0
 
@@ -2676,7 +2435,6 @@
     .locals 1
 
     .prologue
-    .line 641
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppLabel:Ljava/lang/String;
 
     return-object v0
@@ -2687,7 +2445,6 @@
     .parameter "onComplete"
 
     .prologue
-    .line 975
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mHandler:Landroid/os/Handler;
@@ -2700,7 +2457,6 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->iccGetAtr(Landroid/os/Message;)V
 
-    .line 976
     return-void
 .end method
 
@@ -2708,7 +2464,6 @@
     .locals 1
 
     .prologue
-    .line 790
     iget-boolean v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFdnAvailable:Z
 
     return v0
@@ -2718,12 +2473,10 @@
     .locals 2
 
     .prologue
-    .line 779
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 780
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFdnEnabled:Z
 
@@ -2731,7 +2484,6 @@
 
     return v0
 
-    .line 781
     :catchall_0
     move-exception v0
 
@@ -2746,12 +2498,10 @@
     .locals 2
 
     .prologue
-    .line 654
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 655
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
@@ -2759,7 +2509,6 @@
 
     return-object v0
 
-    .line 656
     :catchall_0
     move-exception v0
 
@@ -2774,7 +2523,6 @@
     .locals 1
 
     .prologue
-    .line 760
     iget-boolean v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccLockEnabled:Z
 
     return v0
@@ -2784,7 +2532,6 @@
     .locals 1
 
     .prologue
-    .line 386
     iget v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin1RetryCount:I
 
     return v0
@@ -2794,12 +2541,10 @@
     .locals 3
 
     .prologue
-    .line 893
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 894
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin2State:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
@@ -2819,7 +2564,6 @@
 
     goto :goto_0
 
-    .line 895
     :catchall_0
     move-exception v0
 
@@ -2834,7 +2578,6 @@
     .locals 1
 
     .prologue
-    .line 393
     iget v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin2RetryCount:I
 
     return v0
@@ -2844,12 +2587,10 @@
     .locals 3
 
     .prologue
-    .line 902
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 903
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin2State:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
@@ -2869,7 +2610,6 @@
 
     goto :goto_0
 
-    .line 904
     :catchall_0
     move-exception v0
 
@@ -2884,12 +2624,10 @@
     .locals 2
 
     .prologue
-    .line 660
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 661
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccRecords:Lcom/android/internal/telephony/uicc/IccRecords;
 
@@ -2897,7 +2635,6 @@
 
     return-object v0
 
-    .line 662
     :catchall_0
     move-exception v0
 
@@ -2912,12 +2649,10 @@
     .locals 2
 
     .prologue
-    .line 629
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 630
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPersoSubState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
@@ -2925,7 +2660,6 @@
 
     return-object v0
 
-    .line 631
     :catchall_0
     move-exception v0
 
@@ -2940,18 +2674,15 @@
     .locals 2
 
     .prologue
-    .line 645
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 646
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin1Replaced:Z
 
     if-eqz v0, :cond_0
 
-    .line 647
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mUiccCard:Lcom/android/internal/telephony/uicc/UiccCard;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/UiccCard;->getUniversalPinState()Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
@@ -2960,7 +2691,6 @@
 
     monitor-exit v1
 
-    .line 649
     :goto_0
     return-object v0
 
@@ -2971,7 +2701,6 @@
 
     goto :goto_0
 
-    .line 650
     :catchall_0
     move-exception v0
 
@@ -2986,12 +2715,10 @@
     .locals 2
 
     .prologue
-    .line 617
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 618
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
@@ -2999,7 +2726,6 @@
 
     return-object v0
 
-    .line 619
     :catchall_0
     move-exception v0
 
@@ -3014,12 +2740,10 @@
     .locals 2
 
     .prologue
-    .line 623
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 624
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppType:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
@@ -3027,7 +2751,6 @@
 
     return-object v0
 
-    .line 625
     :catchall_0
     move-exception v0
 
@@ -3042,7 +2765,6 @@
     .locals 2
 
     .prologue
-    .line 666
     sget-object v0, Lcom/android/internal/telephony/uicc/UiccCardApplication$2;->$SwitchMap$com$android$internal$telephony$uicc$IccCardApplicationStatus$PersoSubState:[I
 
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPersoSubState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
@@ -3055,19 +2777,16 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 672
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    .line 670
     :pswitch_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 666
     nop
 
     :pswitch_data_0
@@ -3083,20 +2802,16 @@
     .parameter "refreshResponse"
 
     .prologue
-    .line 466
     if-nez p1, :cond_1
 
-    .line 467
     const-string v0, "onRefresh received without input"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->loge(Ljava/lang/String;)V
 
-    .line 488
     :cond_0
     :goto_0
     return-void
 
-    .line 471
     :cond_1
     iget-object v0, p1, Lcom/android/internal/telephony/uicc/IccRefreshResponse;->aid:Ljava/lang/String;
 
@@ -3112,7 +2827,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 473
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3136,27 +2850,23 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 479
     iget v0, p1, Lcom/android/internal/telephony/uicc/IccRefreshResponse;->refreshResult:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 482
     :pswitch_0
     const-string v0, "onRefresh: Setting app state to unknown"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 485
     sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_UNKNOWN:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     goto :goto_0
 
-    .line 479
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3170,7 +2880,6 @@
     .parameter "onComplete"
 
     .prologue
-    .line 959
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mHandler:Landroid/os/Handler;
@@ -3183,7 +2892,6 @@
 
     invoke-interface {v0, p1, v1}, Lcom/android/internal/telephony/CommandsInterface;->iccOpenChannel(Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 961
     return-void
 .end method
 
@@ -3194,33 +2902,26 @@
     .parameter "obj"
 
     .prologue
-    .line 508
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 509
     :try_start_0
     new-instance v0, Landroid/os/Registrant;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 510
     .local v0, r:Landroid/os/Registrant;
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPinLockedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 511
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->notifyPinLockedRegistrantsIfNeeded(Landroid/os/Registrant;)V
 
-    .line 512
     monitor-exit v2
 
-    .line 513
     return-void
 
-    .line 512
     .end local v0           #r:Landroid/os/Registrant;
     :catchall_0
     move-exception v1
@@ -3239,33 +2940,26 @@
     .parameter "obj"
 
     .prologue
-    .line 525
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 526
     :try_start_0
     new-instance v0, Landroid/os/Registrant;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 527
     .local v0, r:Landroid/os/Registrant;
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPersoLockedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 528
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->notifyPersoLockedRegistrantsIfNeeded(Landroid/os/Registrant;)V
 
-    .line 529
     monitor-exit v2
 
-    .line 530
     return-void
 
-    .line 529
     .end local v0           #r:Landroid/os/Registrant;
     :catchall_0
     move-exception v1
@@ -3284,33 +2978,26 @@
     .parameter "obj"
 
     .prologue
-    .line 491
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 492
     :try_start_0
     new-instance v0, Landroid/os/Registrant;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 493
     .local v0, r:Landroid/os/Registrant;
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mReadyRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 494
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->notifyReadyRegistrantsIfNeeded(Landroid/os/Registrant;)V
 
-    .line 495
     monitor-exit v2
 
-    .line 496
     return-void
 
-    .line 495
     .end local v0           #r:Landroid/os/Registrant;
     :catchall_0
     move-exception v1
@@ -3329,20 +3016,16 @@
     .parameter "onComplete"
 
     .prologue
-    .line 833
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 835
     const/16 v4, 0xf
 
-    .line 840
     .local v4, serviceClassX:I
     :try_start_0
     iput-boolean p1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mDesiredFdnEnabled:Z
 
-    .line 842
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const-string v1, "FD"
@@ -3363,13 +3046,10 @@
 
     invoke-interface/range {v0 .. v6}, Lcom/android/internal/telephony/CommandsInterface;->setFacilityLockForApp(Ljava/lang/String;ZLjava/lang/String;ILjava/lang/String;Landroid/os/Message;)V
 
-    .line 845
     monitor-exit v7
 
-    .line 846
     return-void
 
-    .line 845
     :catchall_0
     move-exception v0
 
@@ -3387,20 +3067,16 @@
     .parameter "onComplete"
 
     .prologue
-    .line 806
     iget-object v7, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 808
     const/4 v4, 0x7
 
-    .line 812
     .local v4, serviceClassX:I
     :try_start_0
     iput-boolean p1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mDesiredPinLocked:Z
 
-    .line 814
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const-string v1, "SC"
@@ -3421,13 +3097,10 @@
 
     invoke-interface/range {v0 .. v6}, Lcom/android/internal/telephony/CommandsInterface;->setFacilityLockForApp(Ljava/lang/String;ZLjava/lang/String;ILjava/lang/String;Landroid/os/Message;)V
 
-    .line 817
     monitor-exit v7
 
-    .line 818
     return-void
 
-    .line 817
     :catchall_0
     move-exception v0
 
@@ -3445,12 +3118,10 @@
     .parameter "onComplete"
 
     .prologue
-    .line 746
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 747
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3472,18 +3143,14 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 748
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/android/internal/telephony/CommandsInterface;->supplyDepersonalization(Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 749
     monitor-exit v1
 
-    .line 750
     return-void
 
-    .line 749
     :catchall_0
     move-exception v0
 
@@ -3500,12 +3167,10 @@
     .parameter "onComplete"
 
     .prologue
-    .line 696
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 697
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -3521,13 +3186,10 @@
 
     invoke-interface {v0, p1, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->supplyIccPinForApp(Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 699
     monitor-exit v1
 
-    .line 700
     return-void
 
-    .line 699
     :catchall_0
     move-exception v0
 
@@ -3544,12 +3206,10 @@
     .parameter "onComplete"
 
     .prologue
-    .line 732
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 733
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -3565,13 +3225,10 @@
 
     invoke-interface {v0, p1, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->supplyIccPin2ForApp(Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 735
     monitor-exit v1
 
-    .line 736
     return-void
 
-    .line 735
     :catchall_0
     move-exception v0
 
@@ -3589,12 +3246,10 @@
     .parameter "onComplete"
 
     .prologue
-    .line 725
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 726
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -3610,13 +3265,10 @@
 
     invoke-interface {v0, p1, p2, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->supplyIccPukForApp(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 728
     monitor-exit v1
 
-    .line 729
     return-void
 
-    .line 728
     :catchall_0
     move-exception v0
 
@@ -3634,12 +3286,10 @@
     .parameter "onComplete"
 
     .prologue
-    .line 739
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 740
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -3655,13 +3305,10 @@
 
     invoke-interface {v0, p1, p2, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->supplyIccPuk2ForApp(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 742
     monitor-exit v1
 
-    .line 743
     return-void
 
-    .line 742
     :catchall_0
     move-exception v0
 
@@ -3677,24 +3324,19 @@
     .parameter "h"
 
     .prologue
-    .line 516
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 517
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPinLockedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->remove(Landroid/os/Handler;)V
 
-    .line 518
     monitor-exit v1
 
-    .line 519
     return-void
 
-    .line 518
     :catchall_0
     move-exception v0
 
@@ -3710,24 +3352,19 @@
     .parameter "h"
 
     .prologue
-    .line 533
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 534
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPersoLockedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->remove(Landroid/os/Handler;)V
 
-    .line 535
     monitor-exit v1
 
-    .line 536
     return-void
 
-    .line 535
     :catchall_0
     move-exception v0
 
@@ -3743,24 +3380,19 @@
     .parameter "h"
 
     .prologue
-    .line 499
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 500
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mReadyRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->remove(Landroid/os/Handler;)V
 
-    .line 501
     monitor-exit v1
 
-    .line 502
     return-void
 
-    .line 501
     :catchall_0
     move-exception v0
 
@@ -3778,30 +3410,24 @@
     .parameter "ci"
 
     .prologue
-    .line 113
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 114
     :try_start_0
     iget-boolean v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mDestroyed:Z
 
     if-eqz v3, :cond_0
 
-    .line 115
     const-string v3, "Application updated after destroyed! Fix me!"
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->loge(Ljava/lang/String;)V
 
-    .line 116
     monitor-exit v4
 
-    .line 158
     :goto_0
     return-void
 
-    .line 119
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3829,50 +3455,39 @@
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 120
     iput-object p2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mContext:Landroid/content/Context;
 
-    .line 121
     iput-object p3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 122
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppType:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
-    .line 123
     .local v1, oldAppType:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    .line 124
     .local v0, oldAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPersoSubState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 125
     .local v2, oldPersoSubState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
     iget-object v3, p1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->app_type:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
     iput-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppType:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
-    .line 126
     iget-object v3, p1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->app_state:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     iput-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    .line 127
     iget-object v3, p1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->perso_substate:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
     iput-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPersoSubState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 128
     iget-object v3, p1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->aid:Ljava/lang/String;
 
     iput-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAid:Ljava/lang/String;
 
-    .line 129
     iget-object v3, p1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->app_label:Ljava/lang/String;
 
     iput-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppLabel:Ljava/lang/String;
 
-    .line 130
     iget v3, p1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->pin1_replaced:I
 
     if-eqz v3, :cond_7
@@ -3882,22 +3497,18 @@
     :goto_1
     iput-boolean v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin1Replaced:Z
 
-    .line 131
     iget-object v3, p1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->pin1:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
     iput-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin1State:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
-    .line 132
     iget-object v3, p1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->pin2:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
     iput-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPin2State:Lcom/android/internal/telephony/uicc/IccCardStatus$PinState;
 
-    .line 134
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppType:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
     if-eq v3, v1, :cond_3
 
-    .line 135
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     if-eqz v3, :cond_1
@@ -3906,7 +3517,6 @@
 
     invoke-virtual {v3}, Lcom/android/internal/telephony/uicc/IccFileHandler;->dispose()V
 
-    .line 136
     :cond_1
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccRecords:Lcom/android/internal/telephony/uicc/IccRecords;
 
@@ -3916,7 +3526,6 @@
 
     invoke-virtual {v3}, Lcom/android/internal/telephony/uicc/IccRecords;->dispose()V
 
-    .line 137
     :cond_2
     iget-object v3, p1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->app_type:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
@@ -3926,7 +3535,6 @@
 
     iput-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
-    .line 138
     iget-object v3, p1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus;->app_type:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
 
     invoke-direct {p0, v3, p2, p3}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->createIccRecords(Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;Landroid/content/Context;Lcom/android/internal/telephony/CommandsInterface;)Lcom/android/internal/telephony/uicc/IccRecords;
@@ -3935,7 +3543,6 @@
 
     iput-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mIccRecords:Lcom/android/internal/telephony/uicc/IccRecords;
 
-    .line 141
     :cond_3
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mPersoSubState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
@@ -3947,18 +3554,15 @@
 
     if-eqz v3, :cond_4
 
-    .line 143
     const/4 v3, 0x0
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->notifyPersoLockedRegistrantsIfNeeded(Landroid/os/Registrant;)V
 
-    .line 146
     :cond_4
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     if-eq v3, v0, :cond_6
 
-    .line 147
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3995,31 +3599,25 @@
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 150
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccCardApplication;->mAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     sget-object v5, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_READY:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     if-ne v3, v5, :cond_5
 
-    .line 151
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->queryFdn()V
 
-    .line 152
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->queryPin1State()V
 
-    .line 154
     :cond_5
     const/4 v3, 0x0
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->notifyPinLockedRegistrantsIfNeeded(Landroid/os/Registrant;)V
 
-    .line 155
     const/4 v3, 0x0
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->notifyReadyRegistrantsIfNeeded(Landroid/os/Registrant;)V
 
-    .line 157
     :cond_6
     monitor-exit v4
 
@@ -4037,7 +3635,6 @@
 
     throw v3
 
-    .line 130
     .restart local v0       #oldAppState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
     .restart local v1       #oldAppType:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppType;
     .restart local v2       #oldPersoSubState:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;

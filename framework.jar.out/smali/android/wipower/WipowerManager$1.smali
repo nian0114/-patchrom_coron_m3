@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 168
     iput-object p1, p0, Landroid/wipower/WipowerManager$1;->this$0:Landroid/wipower/WipowerManager;
 
     invoke-direct {p0}, Landroid/wipower/IWipowerManagerCallback$Stub;-><init>()V
@@ -39,25 +38,20 @@
     .parameter "alert"
 
     .prologue
-    .line 195
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_0
 
-    .line 196
     sget-object v0, Landroid/wipower/WipowerManager$PowerApplyEvent;->ON:Landroid/wipower/WipowerManager$PowerApplyEvent;
 
-    .line 202
     .local v0, s:Landroid/wipower/WipowerManager$PowerApplyEvent;
     :goto_0
     iget-object v1, p0, Landroid/wipower/WipowerManager$1;->this$0:Landroid/wipower/WipowerManager;
 
     invoke-virtual {v1, v0}, Landroid/wipower/WipowerManager;->updatePowerApplyAlert(Landroid/wipower/WipowerManager$PowerApplyEvent;)V
 
-    .line 204
     return-void
 
-    .line 198
     .end local v0           #s:Landroid/wipower/WipowerManager$PowerApplyEvent;
     :cond_0
     sget-object v0, Landroid/wipower/WipowerManager$PowerApplyEvent;->OFF:Landroid/wipower/WipowerManager$PowerApplyEvent;
@@ -71,10 +65,8 @@
     .parameter "alert"
 
     .prologue
-    .line 184
     sget-object v0, Landroid/wipower/WipowerManager$WipowerAlert;->ALERT_NONE:Landroid/wipower/WipowerManager$WipowerAlert;
 
-    .line 185
     .local v0, wp_alert:Landroid/wipower/WipowerManager$WipowerAlert;
     const-string v1, "WipowerManager"
 
@@ -82,7 +74,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onWipowerAlert: alert"
+    const-string v3, "onWipowerAlert: alert"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -98,12 +90,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     iget-object v1, p0, Landroid/wipower/WipowerManager$1;->this$0:Landroid/wipower/WipowerManager;
 
     invoke-virtual {v1, v0}, Landroid/wipower/WipowerManager;->updateWipowerAlert(Landroid/wipower/WipowerManager$WipowerAlert;)V
 
-    .line 190
     return-void
 .end method
 
@@ -112,14 +102,13 @@
     .parameter "value"
 
     .prologue
-    .line 207
     const-string v0, "WipowerManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onWipowerData: "
+    const-string v2, "onWipowerData: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -135,21 +124,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     invoke-static {}, Landroid/wipower/WipowerManager;->access$000()Landroid/wipower/WipowerDynamicParam;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 209
     invoke-static {}, Landroid/wipower/WipowerManager;->access$000()Landroid/wipower/WipowerDynamicParam;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/wipower/WipowerDynamicParam;->setValue([B)V
 
-    .line 210
     iget-object v0, p0, Landroid/wipower/WipowerManager$1;->this$0:Landroid/wipower/WipowerManager;
 
     invoke-static {}, Landroid/wipower/WipowerManager;->access$000()Landroid/wipower/WipowerDynamicParam;
@@ -158,11 +144,9 @@
 
     invoke-virtual {v0, v1}, Landroid/wipower/WipowerManager;->updateWipowerData(Landroid/wipower/WipowerDynamicParam;)V
 
-    .line 215
     :goto_0
     return-void
 
-    .line 212
     :cond_0
     const-string v0, "WipowerManager"
 
@@ -178,15 +162,12 @@
     .parameter "state"
 
     .prologue
-    .line 173
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_0
 
-    .line 174
     sget-object v0, Landroid/wipower/WipowerManager$WipowerState;->ON:Landroid/wipower/WipowerManager$WipowerState;
 
-    .line 179
     .local v0, s:Landroid/wipower/WipowerManager$WipowerState;
     :goto_0
     const-string v1, "WipowerManager"
@@ -195,7 +176,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onWipowerStateChange: state"
+    const-string v3, "onWipowerStateChange: state"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -211,15 +192,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     iget-object v1, p0, Landroid/wipower/WipowerManager$1;->this$0:Landroid/wipower/WipowerManager;
 
     invoke-virtual {v1, v0}, Landroid/wipower/WipowerManager;->updateWipowerState(Landroid/wipower/WipowerManager$WipowerState;)V
 
-    .line 181
     return-void
 
-    .line 176
     .end local v0           #s:Landroid/wipower/WipowerManager$WipowerState;
     :cond_0
     sget-object v0, Landroid/wipower/WipowerManager$WipowerState;->OFF:Landroid/wipower/WipowerManager$WipowerState;

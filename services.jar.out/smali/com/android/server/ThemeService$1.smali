@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 936
     iput-object p1, p0, Lcom/android/server/ThemeService$1;->this$0:Lcom/android/server/ThemeService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 939
     iget-object v1, p0, Lcom/android/server/ThemeService$1;->this$0:Lcom/android/server/ThemeService;
 
     #getter for: Lcom/android/server/ThemeService;->mWallpaperChangedByUs:Z
@@ -50,14 +48,12 @@
 
     if-nez v1, :cond_0
 
-    .line 941
     new-instance v0, Ljava/util/HashMap;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 942
     .local v0, components:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "mods_homescreen"
 
@@ -65,18 +61,15 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 943
     iget-object v1, p0, Lcom/android/server/ThemeService$1;->this$0:Lcom/android/server/ThemeService;
 
     #calls: Lcom/android/server/ThemeService;->updateProvider(Ljava/util/Map;)V
     invoke-static {v1, v0}, Lcom/android/server/ThemeService;->access$700(Lcom/android/server/ThemeService;Ljava/util/Map;)V
 
-    .line 947
     .end local v0           #components:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :goto_0
     return-void
 
-    .line 945
     :cond_0
     iget-object v1, p0, Lcom/android/server/ThemeService$1;->this$0:Lcom/android/server/ThemeService;
 

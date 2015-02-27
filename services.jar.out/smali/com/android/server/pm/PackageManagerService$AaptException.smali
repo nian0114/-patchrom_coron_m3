@@ -25,12 +25,9 @@
     .parameter "message"
 
     .prologue
-    .line 5629
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$AaptException;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    .line 5630
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 5631
     return-void
 .end method

@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 1230
     iput-object p1, p0, Landroid/widget/AbsListView$1;->this$0:Landroid/widget/AbsListView;
 
     iput-boolean p2, p0, Landroid/widget/AbsListView$1;->val$enabled:Z
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 1233
     iget-object v0, p0, Landroid/widget/AbsListView$1;->this$0:Landroid/widget/AbsListView;
 
     iget-boolean v1, p0, Landroid/widget/AbsListView$1;->val$enabled:Z
@@ -54,6 +52,5 @@
     #calls: Landroid/widget/AbsListView;->setFastScrollerEnabledUiThread(Z)V
     invoke-static {v0, v1}, Landroid/widget/AbsListView;->access$000(Landroid/widget/AbsListView;Z)V
 
-    .line 1234
     return-void
 .end method

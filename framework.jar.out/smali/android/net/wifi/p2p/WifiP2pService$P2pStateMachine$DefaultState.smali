@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 485
     iput-object p1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -47,12 +46,10 @@
 
     const/4 v7, 0x2
 
-    .line 489
     iget v6, p1, Landroid/os/Message;->what:I
 
     sparse-switch v6, :sswitch_data_0
 
-    .line 667
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -75,17 +72,14 @@
 
     invoke-virtual {v3, v4}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 670
     :goto_0
     return v5
 
-    .line 491
     :sswitch_0
     iget v5, p1, Landroid/os/Message;->arg1:I
 
     if-nez v5, :cond_1
 
-    .line 493
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
     iget-object v5, v3, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->this$0:Landroid/net/wifi/p2p/WifiP2pService;
@@ -102,10 +96,8 @@
     :sswitch_1
     move v5, v4
 
-    .line 670
     goto :goto_0
 
-    .line 495
     :cond_1
     iget-object v5, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -131,7 +123,6 @@
 
     invoke-virtual {v5, v6}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 496
     iget-object v5, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
     iget-object v5, v5, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->this$0:Landroid/net/wifi/p2p/WifiP2pService;
@@ -141,20 +132,17 @@
 
     goto :goto_1
 
-    .line 501
     :sswitch_2
     iget v5, p1, Landroid/os/Message;->arg1:I
 
     if-ne v5, v7, :cond_2
 
-    .line 502
     iget-object v5, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
     const-string v6, "Send failed, client connection lost"
 
     invoke-virtual {v5, v6}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 506
     :goto_2
     iget-object v5, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -165,7 +153,6 @@
 
     goto :goto_1
 
-    .line 504
     :cond_2
     iget-object v5, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -193,13 +180,11 @@
 
     goto :goto_2
 
-    .line 510
     :sswitch_3
     new-instance v0, Lcom/android/internal/util/AsyncChannel;
 
     invoke-direct {v0}, Lcom/android/internal/util/AsyncChannel;-><init>()V
 
-    .line 511
     .local v0, ac:Lcom/android/internal/util/AsyncChannel;
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -222,7 +207,6 @@
 
     goto :goto_1
 
-    .line 514
     .end local v0           #ac:Lcom/android/internal/util/AsyncChannel;
     :sswitch_4
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
@@ -239,7 +223,6 @@
     #setter for: Landroid/net/wifi/p2p/WifiP2pService;->mDiscoveryBlocked:Z
     invoke-static {v6, v3}, Landroid/net/wifi/p2p/WifiP2pService;->access$502(Landroid/net/wifi/p2p/WifiP2pService;Z)Z
 
-    .line 517
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
     iget-object v3, v3, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->this$0:Landroid/net/wifi/p2p/WifiP2pService;
@@ -247,7 +230,6 @@
     #setter for: Landroid/net/wifi/p2p/WifiP2pService;->mDiscoveryPostponed:Z
     invoke-static {v3, v5}, Landroid/net/wifi/p2p/WifiP2pService;->access$602(Landroid/net/wifi/p2p/WifiP2pService;Z)Z
 
-    .line 518
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
     iget-object v3, v3, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->this$0:Landroid/net/wifi/p2p/WifiP2pService;
@@ -259,13 +241,11 @@
 
     if-eqz v3, :cond_0
 
-    .line 520
     :try_start_0
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/internal/util/StateMachine;
 
-    .line 521
     .local v2, m:Lcom/android/internal/util/StateMachine;
     iget v3, p1, Landroid/os/Message;->arg2:I
 
@@ -275,12 +255,10 @@
 
     goto/16 :goto_1
 
-    .line 522
     .end local v2           #m:Lcom/android/internal/util/StateMachine;
     :catch_0
     move-exception v1
 
-    .line 523
     .local v1, e:Ljava/lang/Exception;
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -288,7 +266,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "unable to send BLOCK_DISCOVERY response: "
+    const-string v6, "unable to send BLOCK_DISCOVERY response: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -310,10 +288,8 @@
     :cond_3
     move v3, v5
 
-    .line 514
     goto :goto_3
 
-    .line 528
     :sswitch_5
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -324,7 +300,6 @@
 
     goto/16 :goto_1
 
-    .line 532
     :sswitch_6
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -335,7 +310,6 @@
 
     goto/16 :goto_1
 
-    .line 536
     :sswitch_7
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -346,7 +320,6 @@
 
     goto/16 :goto_1
 
-    .line 540
     :sswitch_8
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -357,7 +330,6 @@
 
     goto/16 :goto_1
 
-    .line 544
     :sswitch_9
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -368,7 +340,6 @@
 
     goto/16 :goto_1
 
-    .line 548
     :sswitch_a
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -379,7 +350,6 @@
 
     goto/16 :goto_1
 
-    .line 552
     :sswitch_b
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -390,7 +360,6 @@
 
     goto/16 :goto_1
 
-    .line 556
     :sswitch_c
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -401,7 +370,6 @@
 
     goto/16 :goto_1
 
-    .line 560
     :sswitch_d
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -412,7 +380,6 @@
 
     goto/16 :goto_1
 
-    .line 564
     :sswitch_e
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -423,7 +390,6 @@
 
     goto/16 :goto_1
 
-    .line 568
     :sswitch_f
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -434,7 +400,6 @@
 
     goto/16 :goto_1
 
-    .line 572
     :sswitch_10
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -445,7 +410,6 @@
 
     goto/16 :goto_1
 
-    .line 577
     :sswitch_11
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -456,7 +420,6 @@
 
     goto/16 :goto_1
 
-    .line 582
     :sswitch_12
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -467,7 +430,6 @@
 
     goto/16 :goto_1
 
-    .line 586
     :sswitch_13
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -478,7 +440,6 @@
 
     goto/16 :goto_1
 
-    .line 590
     :sswitch_14
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -489,7 +450,6 @@
 
     goto/16 :goto_1
 
-    .line 594
     :sswitch_15
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -511,7 +471,6 @@
 
     goto/16 :goto_1
 
-    .line 598
     :sswitch_16
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -533,7 +492,6 @@
 
     goto/16 :goto_1
 
-    .line 602
     :sswitch_17
     iget-object v5, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -565,7 +523,6 @@
 
     goto/16 :goto_1
 
-    .line 606
     :sswitch_18
     iget-object v5, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -587,7 +544,6 @@
 
     goto/16 :goto_1
 
-    .line 610
     :sswitch_19
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -598,7 +554,6 @@
 
     goto/16 :goto_1
 
-    .line 653
     :sswitch_1a
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -615,7 +570,6 @@
 
     goto/16 :goto_1
 
-    .line 657
     :sswitch_1b
     iget-object v5, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -626,7 +580,6 @@
     #setter for: Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->mGroup:Landroid/net/wifi/p2p/WifiP2pGroup;
     invoke-static {v5, v3}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->access$1102(Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;Landroid/net/wifi/p2p/WifiP2pGroup;)Landroid/net/wifi/p2p/WifiP2pGroup;
 
-    .line 658
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -656,7 +609,6 @@
 
     invoke-virtual {v3, v5}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 659
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$DefaultState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
     #getter for: Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->mWifiNative:Landroid/net/wifi/WifiNative;
@@ -679,7 +631,6 @@
 
     goto/16 :goto_1
 
-    .line 489
     :sswitch_data_0
     .sparse-switch
         0x11000 -> :sswitch_0

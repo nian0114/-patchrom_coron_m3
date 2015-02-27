@@ -36,7 +36,6 @@
     .parameter
 
     .prologue
-    .line 4104
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$6;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$6;->val$i:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -60,7 +59,6 @@
 
     const/4 v6, 0x0
 
-    .line 4107
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$6;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/pm/PackageManagerService;->isFirstBoot()Z
@@ -69,12 +67,10 @@
 
     if-nez v0, :cond_0
 
-    .line 4108
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$6;->val$i:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    .line 4110
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -128,7 +124,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4117
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$6;->val$p:Landroid/content/pm/PackageParser$Package;
@@ -137,7 +132,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4118
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$6;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$6;->val$p:Landroid/content/pm/PackageParser$Package;
@@ -145,11 +139,9 @@
     #calls: Lcom/android/server/pm/PackageManagerService;->performDexOptLI(Landroid/content/pm/PackageParser$Package;ZZZ)I
     invoke-static {v0, v1, v6, v6, v7}, Lcom/android/server/pm/PackageManagerService;->access$2000(Lcom/android/server/pm/PackageManagerService;Landroid/content/pm/PackageParser$Package;ZZZ)I
 
-    .line 4120
     :cond_1
     return-void
 
-    .line 4114
     :catch_0
     move-exception v0
 

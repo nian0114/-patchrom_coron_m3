@@ -36,15 +36,11 @@
     .parameter "_uid"
 
     .prologue
-    .line 117
     invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 118
     iput-object p1, p0, Lcom/android/server/AppOpsService$Ops;->packageName:Ljava/lang/String;
 
-    .line 119
     iput p2, p0, Lcom/android/server/AppOpsService$Ops;->uid:I
 
-    .line 120
     return-void
 .end method

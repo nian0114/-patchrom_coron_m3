@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 101
     iput-object p1, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 6
 
     .prologue
-    .line 105
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     #getter for: Lcom/android/server/connectivity/PacManager;->mProxyLock:Ljava/lang/Object;
@@ -51,7 +49,6 @@
 
     monitor-enter v3
 
-    .line 106
     :try_start_0
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
@@ -66,11 +63,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 126
     :goto_0
     return-void
 
-    .line 108
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
@@ -88,7 +83,6 @@
 
     move-result-object v0
 
-    .line 113
     .local v0, file:Ljava/lang/String;
     :goto_1
     :try_start_2
@@ -96,10 +90,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 114
     if-eqz v0, :cond_2
 
-    .line 115
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     #getter for: Lcom/android/server/connectivity/PacManager;->mProxyLock:Ljava/lang/Object;
@@ -109,7 +101,6 @@
 
     monitor-enter v3
 
-    .line 116
     :try_start_3
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
@@ -124,19 +115,16 @@
 
     if-nez v2, :cond_1
 
-    .line 117
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     #calls: Lcom/android/server/connectivity/PacManager;->setCurrentProxyScript(Ljava/lang/String;)Z
     invoke-static {v2, v0}, Lcom/android/server/connectivity/PacManager;->access$400(Lcom/android/server/connectivity/PacManager;Ljava/lang/String;)Z
 
-    .line 119
     :cond_1
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 120
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     const/4 v3, 0x1
@@ -144,13 +132,11 @@
     #setter for: Lcom/android/server/connectivity/PacManager;->mHasDownloaded:Z
     invoke-static {v2, v3}, Lcom/android/server/connectivity/PacManager;->access$502(Lcom/android/server/connectivity/PacManager;Z)Z
 
-    .line 121
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     #calls: Lcom/android/server/connectivity/PacManager;->sendProxyIfNeeded()V
     invoke-static {v2}, Lcom/android/server/connectivity/PacManager;->access$600(Lcom/android/server/connectivity/PacManager;)V
 
-    .line 122
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 
     #calls: Lcom/android/server/connectivity/PacManager;->longSchedule()V
@@ -158,16 +144,13 @@
 
     goto :goto_0
 
-    .line 109
     .end local v0           #file:Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 110
     .local v1, ioe:Ljava/io/IOException;
     const/4 v0, 0x0
 
-    .line 111
     .restart local v0       #file:Ljava/lang/String;
     :try_start_4
     const-string v2, "PacManager"
@@ -194,7 +177,6 @@
 
     goto :goto_1
 
-    .line 113
     .end local v0           #file:Ljava/lang/String;
     .end local v1           #ioe:Ljava/io/IOException;
     :catchall_0
@@ -206,7 +188,6 @@
 
     throw v2
 
-    .line 119
     .restart local v0       #file:Ljava/lang/String;
     :catchall_1
     move-exception v2
@@ -218,7 +199,6 @@
 
     throw v2
 
-    .line 124
     :cond_2
     iget-object v2, p0, Lcom/android/server/connectivity/PacManager$1;->this$0:Lcom/android/server/connectivity/PacManager;
 

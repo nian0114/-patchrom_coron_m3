@@ -33,10 +33,8 @@
     .parameter "context"
 
     .prologue
-    .line 459
     iput-object p1, p0, Lcom/android/server/LockSettingsService$DatabaseHelper;->this$0:Lcom/android/server/LockSettingsService;
 
-    .line 460
     const-string v0, "locksettings.db"
 
     const/4 v1, 0x0
@@ -45,12 +43,10 @@
 
     invoke-direct {p0, p2, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    .line 461
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/LockSettingsService$DatabaseHelper;->setWriteAheadLoggingEnabled(Z)V
 
-    .line 462
     return-void
 .end method
 
@@ -59,12 +55,10 @@
     .parameter "db"
 
     .prologue
-    .line 465
     const-string v0, "CREATE TABLE locksettings (_id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,user INTEGER,value TEXT);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 471
     return-void
 .end method
 
@@ -75,18 +69,15 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 481
     const-string v1, "ro.lockscreen.disable.default"
 
     invoke-static {v1, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 483
     .local v0, lockScreenDisable:Z
     if-eqz v0, :cond_0
 
-    .line 484
     iget-object v1, p0, Lcom/android/server/LockSettingsService$DatabaseHelper;->this$0:Lcom/android/server/LockSettingsService;
 
     const-string v2, "lockscreen.disabled"
@@ -96,7 +87,6 @@
     #calls: Lcom/android/server/LockSettingsService;->writeToDb(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;I)V
     invoke-static {v1, p1, v2, v3, v4}, Lcom/android/server/LockSettingsService;->access$000(Lcom/android/server/LockSettingsService;Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 486
     :cond_0
     return-void
 .end method
@@ -109,10 +99,8 @@
     .parameter "value"
 
     .prologue
-    .line 517
     const/4 v0, 0x0
 
-    .line 519
     .local v0, stmt:Landroid/database/sqlite/SQLiteStatement;
     :try_start_0
     const-string v1, "INSERT OR REPLACE INTO locksettings(name,user,value) VALUES(?,?,?);"
@@ -121,19 +109,16 @@
 
     move-result-object v0
 
-    .line 521
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1, p2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    .line 522
     const/4 v1, 0x2
 
     int-to-long v2, p3
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
-    .line 523
     const/4 v3, 0x3
 
     if-eqz p4, :cond_1
@@ -143,27 +128,22 @@
     :goto_0
     invoke-virtual {v0, v3, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
-    .line 524
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 526
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->close()V
 
-    .line 528
     :cond_0
     return-void
 
-    .line 523
     :cond_1
     const-wide/16 v1, 0x0
 
     goto :goto_0
 
-    .line 526
     :catchall_0
     move-exception v1
 
@@ -180,7 +160,6 @@
     .parameter "db"
 
     .prologue
-    .line 504
     iget-object v6, p0, Lcom/android/server/LockSettingsService$DatabaseHelper;->this$0:Lcom/android/server/LockSettingsService;
 
     #getter for: Lcom/android/server/LockSettingsService;->mContext:Landroid/content/Context;
@@ -196,7 +175,6 @@
 
     check-cast v3, Landroid/os/UserManager;
 
-    .line 505
     .local v3, um:Landroid/os/UserManager;
     iget-object v6, p0, Lcom/android/server/LockSettingsService$DatabaseHelper;->this$0:Lcom/android/server/LockSettingsService;
 
@@ -209,13 +187,11 @@
 
     move-result-object v0
 
-    .line 506
     .local v0, cr:Landroid/content/ContentResolver;
     invoke-virtual {v3}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v5
 
-    .line 507
     .local v5, users:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     const/4 v2, 0x0
 
@@ -227,7 +203,6 @@
 
     if-ge v2, v6, :cond_0
 
-    .line 508
     invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -236,7 +211,6 @@
 
     iget v4, v6, Landroid/content/pm/UserInfo;->id:I
 
-    .line 509
     .local v4, userId:I
     iget-object v6, p0, Lcom/android/server/LockSettingsService$DatabaseHelper;->this$0:Lcom/android/server/LockSettingsService;
 
@@ -249,7 +223,6 @@
 
     move-result v1
 
-    .line 510
     .local v1, enabled:Z
     const-string v6, "LockSettingsDB"
 
@@ -304,17 +277,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 512
     const-string v6, "lockscreen.widgets_enabled"
 
     invoke-direct {p0, p1, v6, v4, v1}, Lcom/android/server/LockSettingsService$DatabaseHelper;->loadSetting(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;IZ)V
 
-    .line 507
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 514
     .end local v1           #enabled:Z
     .end local v4           #userId:I
     :cond_0
@@ -328,13 +298,10 @@
     .parameter "db"
 
     .prologue
-    .line 475
     invoke-direct {p0, p1}, Lcom/android/server/LockSettingsService$DatabaseHelper;->createTable(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 476
     invoke-direct {p0, p1}, Lcom/android/server/LockSettingsService$DatabaseHelper;->initializeDefaults(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 477
     return-void
 .end method
 
@@ -345,35 +312,28 @@
     .parameter "currentVersion"
 
     .prologue
-    .line 490
     move v0, p2
 
-    .line 491
     .local v0, upgradeVersion:I
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 494
     invoke-direct {p0, p1}, Lcom/android/server/LockSettingsService$DatabaseHelper;->maybeEnableWidgetSettingForUsers(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 495
     const/4 v0, 0x2
 
-    .line 498
     :cond_0
     const/4 v1, 0x2
 
     if-eq v0, v1, :cond_1
 
-    .line 499
     const-string v1, "LockSettingsDB"
 
     const-string v2, "Failed to upgrade database!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 501
     :cond_1
     return-void
 .end method

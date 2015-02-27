@@ -25,7 +25,6 @@
     .parameter "x0"
 
     .prologue
-    .line 49
     iput-object p1, p0, Lcom/android/server/ProfileTriggerHelper$1;->this$0:Lcom/android/server/ProfileTriggerHelper;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,11 +39,9 @@
     .parameter "selfChange"
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/ProfileTriggerHelper$1;->this$0:Lcom/android/server/ProfileTriggerHelper;
 
     invoke-virtual {v0}, Lcom/android/server/ProfileTriggerHelper;->updateEnabled()V
 
-    .line 53
     return-void
 .end method

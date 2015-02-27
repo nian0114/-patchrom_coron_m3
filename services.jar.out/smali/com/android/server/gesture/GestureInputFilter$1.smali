@@ -25,7 +25,6 @@
     .parameter "x0"
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/android/server/gesture/GestureInputFilter$1;->this$0:Lcom/android/server/gesture/GestureInputFilter;
 
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
@@ -40,16 +39,13 @@
     .parameter "orientation"
 
     .prologue
-    .line 83
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 87
     :goto_0
     return-void
 
-    .line 86
     :cond_0
     iget-object v0, p0, Lcom/android/server/gesture/GestureInputFilter$1;->this$0:Lcom/android/server/gesture/GestureInputFilter;
 

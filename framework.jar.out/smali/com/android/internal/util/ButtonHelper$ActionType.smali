@@ -64,7 +64,6 @@
 
     const/4 v3, 0x0
 
-    .line 23
     new-instance v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     const-string v1, "Null"
@@ -73,7 +72,6 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->Null:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 24
     new-instance v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     const-string v1, "Back"
@@ -82,7 +80,6 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->Back:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 25
     new-instance v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     const-string v1, "Home"
@@ -91,7 +88,6 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->Home:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 26
     new-instance v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     const-string v1, "Recent"
@@ -100,7 +96,6 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->Recent:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 27
     new-instance v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     const-string v1, "LastApp"
@@ -109,7 +104,6 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->LastApp:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 28
     new-instance v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     const-string v1, "KillApp"
@@ -120,7 +114,6 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->KillApp:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 29
     new-instance v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     const-string v1, "Notification"
@@ -131,7 +124,6 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->Notification:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 30
     new-instance v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     const-string v1, "PowerMenu"
@@ -142,7 +134,6 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->PowerMenu:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 31
     new-instance v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     const-string v1, "Search"
@@ -153,7 +144,6 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->Search:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 32
     new-instance v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     const-string v1, "VoiceAssist"
@@ -164,7 +154,6 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->VoiceAssist:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 33
     new-instance v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     const-string v1, "CustomApp"
@@ -175,7 +164,6 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->CustomApp:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 22
     const/16 v0, 0xb
 
     new-array v0, v0, [Lcom/android/internal/util/ButtonHelper$ActionType;
@@ -252,7 +240,6 @@
     .end annotation
 
     .prologue
-    .line 22
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -263,7 +250,6 @@
     .parameter "name"
 
     .prologue
-    .line 22
     const-class v0, Lcom/android/internal/util/ButtonHelper$ActionType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -279,7 +265,6 @@
     .locals 1
 
     .prologue
-    .line 22
     sget-object v0, Lcom/android/internal/util/ButtonHelper$ActionType;->$VALUES:[Lcom/android/internal/util/ButtonHelper$ActionType;
 
     invoke-virtual {v0}, [Lcom/android/internal/util/ButtonHelper$ActionType;->clone()Ljava/lang/Object;

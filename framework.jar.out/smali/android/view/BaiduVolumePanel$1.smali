@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 90
     iput-object p1, p0, Landroid/view/BaiduVolumePanel$1;->this$0:Landroid/view/BaiduVolumePanel;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,12 +41,10 @@
     .prologue
     const/16 v3, 0x3e8
 
-    .line 93
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 95
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.media.RINGER_MODE_CHANGED"
 
@@ -57,7 +54,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 96
     iget-object v1, p0, Landroid/view/BaiduVolumePanel$1;->this$0:Landroid/view/BaiduVolumePanel;
 
     invoke-static {}, Landroid/view/VolumePanel;->getMsgRingerModeChanged()I
@@ -66,7 +62,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/BaiduVolumePanel;->removeMessages(I)V
 
-    .line 97
     iget-object v1, p0, Landroid/view/BaiduVolumePanel$1;->this$0:Landroid/view/BaiduVolumePanel;
 
     iget-object v2, p0, Landroid/view/BaiduVolumePanel$1;->this$0:Landroid/view/BaiduVolumePanel;
@@ -81,12 +76,10 @@
 
     invoke-virtual {v1, v2}, Landroid/view/BaiduVolumePanel;->sendMessage(Landroid/os/Message;)Z
 
-    .line 103
     :cond_0
     :goto_0
     return-void
 
-    .line 98
     :cond_1
     const-string v1, "android.intent.action.THEME_CHANGED"
 
@@ -96,12 +89,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 100
     iget-object v1, p0, Landroid/view/BaiduVolumePanel$1;->this$0:Landroid/view/BaiduVolumePanel;
 
     invoke-virtual {v1, v3}, Landroid/view/BaiduVolumePanel;->removeMessages(I)V
 
-    .line 101
     iget-object v1, p0, Landroid/view/BaiduVolumePanel$1;->this$0:Landroid/view/BaiduVolumePanel;
 
     iget-object v2, p0, Landroid/view/BaiduVolumePanel$1;->this$0:Landroid/view/BaiduVolumePanel;

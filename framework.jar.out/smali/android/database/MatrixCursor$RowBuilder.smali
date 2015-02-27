@@ -31,15 +31,12 @@
     .parameter "row"
 
     .prologue
-    .line 201
     iput-object p1, p0, Landroid/database/MatrixCursor$RowBuilder;->this$0:Landroid/database/MatrixCursor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 202
     iput p2, p0, Landroid/database/MatrixCursor$RowBuilder;->row:I
 
-    .line 203
     #getter for: Landroid/database/MatrixCursor;->columnCount:I
     invoke-static {p1}, Landroid/database/MatrixCursor;->access$000(Landroid/database/MatrixCursor;)I
 
@@ -49,7 +46,6 @@
 
     iput v0, p0, Landroid/database/MatrixCursor$RowBuilder;->index:I
 
-    .line 204
     iget v0, p0, Landroid/database/MatrixCursor$RowBuilder;->index:I
 
     #getter for: Landroid/database/MatrixCursor;->columnCount:I
@@ -61,7 +57,6 @@
 
     iput v0, p0, Landroid/database/MatrixCursor$RowBuilder;->endIndex:I
 
-    .line 205
     return-void
 .end method
 
@@ -72,14 +67,12 @@
     .parameter "columnValue"
 
     .prologue
-    .line 215
     iget v0, p0, Landroid/database/MatrixCursor$RowBuilder;->index:I
 
     iget v1, p0, Landroid/database/MatrixCursor$RowBuilder;->endIndex:I
 
     if-ne v0, v1, :cond_0
 
-    .line 216
     new-instance v0, Landroid/database/CursorIndexOutOfBoundsException;
 
     const-string v1, "No more columns left."
@@ -88,7 +81,6 @@
 
     throw v0
 
-    .line 220
     :cond_0
     iget-object v0, p0, Landroid/database/MatrixCursor$RowBuilder;->this$0:Landroid/database/MatrixCursor;
 
@@ -105,7 +97,6 @@
 
     aput-object p1, v0, v1
 
-    .line 221
     return-object p0
 .end method
 
@@ -115,7 +106,6 @@
     .parameter "value"
 
     .prologue
-    .line 231
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -131,7 +121,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 232
     iget-object v1, p0, Landroid/database/MatrixCursor$RowBuilder;->this$0:Landroid/database/MatrixCursor;
 
     #getter for: Landroid/database/MatrixCursor;->columnNames:[Ljava/lang/String;
@@ -147,7 +136,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 233
     iget-object v1, p0, Landroid/database/MatrixCursor$RowBuilder;->this$0:Landroid/database/MatrixCursor;
 
     #getter for: Landroid/database/MatrixCursor;->data:[Ljava/lang/Object;
@@ -170,13 +158,11 @@
 
     aput-object p2, v1, v2
 
-    .line 231
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 236
     :cond_1
     return-object p0
 .end method

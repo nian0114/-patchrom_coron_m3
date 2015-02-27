@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "android.content.res.IThemeService"
 
     invoke-virtual {p0, p0, v0}, Landroid/content/res/IThemeService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -63,17 +60,13 @@
     .parameter "obj"
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "android.content.res.IThemeService"
 
@@ -81,7 +74,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, iin:Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -89,12 +81,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Landroid/content/res/IThemeService;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Landroid/content/res/IThemeService$Stub$Proxy;
 
@@ -110,7 +100,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -131,10 +120,8 @@
 
     const/4 v5, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 115
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v5
@@ -142,7 +129,6 @@
     :goto_0
     return v5
 
-    .line 43
     :sswitch_0
     const-string v4, "android.content.res.IThemeService"
 
@@ -150,13 +136,11 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v4, "android.content.res.IThemeService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
@@ -165,23 +149,19 @@
 
     move-result-object v0
 
-    .line 51
     .local v0, _arg0:Landroid/content/res/IThemeChangeListener;
     invoke-virtual {p0, v0}, Landroid/content/res/IThemeService$Stub;->requestThemeChangeUpdates(Landroid/content/res/IThemeChangeListener;)V
 
-    .line 52
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 57
     .end local v0           #_arg0:Landroid/content/res/IThemeChangeListener;
     :sswitch_2
     const-string v4, "android.content.res.IThemeService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 59
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
@@ -190,23 +170,19 @@
 
     move-result-object v0
 
-    .line 60
     .restart local v0       #_arg0:Landroid/content/res/IThemeChangeListener;
     invoke-virtual {p0, v0}, Landroid/content/res/IThemeService$Stub;->removeUpdates(Landroid/content/res/IThemeChangeListener;)V
 
-    .line 61
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 66
     .end local v0           #_arg0:Landroid/content/res/IThemeChangeListener;
     :sswitch_3
     const-string v4, "android.content.res.IThemeService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 68
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -215,22 +191,18 @@
 
     move-result-object v3
 
-    .line 69
     .local v3, cl:Ljava/lang/ClassLoader;
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->readHashMap(Ljava/lang/ClassLoader;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    .line 70
     .local v0, _arg0:Ljava/util/Map;
     invoke-virtual {p0, v0}, Landroid/content/res/IThemeService$Stub;->requestThemeChange(Ljava/util/Map;)V
 
-    .line 71
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 76
     .end local v0           #_arg0:Ljava/util/Map;
     .end local v3           #cl:Ljava/lang/ClassLoader;
     :sswitch_4
@@ -238,30 +210,24 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 77
     invoke-virtual {p0}, Landroid/content/res/IThemeService$Stub;->applyDefaultTheme()V
 
-    .line 78
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 83
     :sswitch_5
     const-string v6, "android.content.res.IThemeService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {p0}, Landroid/content/res/IThemeService$Stub;->isThemeApplying()Z
 
     move-result v2
 
-    .line 85
     .local v2, _result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 86
     if-eqz v2, :cond_0
 
     move v4, v5
@@ -271,42 +237,35 @@
 
     goto :goto_0
 
-    .line 91
     .end local v2           #_result:Z
     :sswitch_6
     const-string v4, "android.content.res.IThemeService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 92
     invoke-virtual {p0}, Landroid/content/res/IThemeService$Stub;->getProgress()I
 
     move-result v2
 
-    .line 93
     .local v2, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 94
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 99
     .end local v2           #_result:I
     :sswitch_7
     const-string v6, "android.content.res.IThemeService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 101
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
     if-eqz v6, :cond_2
 
-    .line 102
     sget-object v6, Landroid/graphics/Bitmap;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v6, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -315,24 +274,20 @@
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 108
     .local v0, _arg0:Landroid/graphics/Bitmap;
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 109
     .local v1, _arg1:Ljava/lang/String;
     invoke-virtual {p0, v0, v1}, Landroid/content/res/IThemeService$Stub;->cacheComposedIcon(Landroid/graphics/Bitmap;Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 110
     .local v2, _result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 111
     if-eqz v2, :cond_1
 
     move v4, v5
@@ -342,7 +297,6 @@
 
     goto/16 :goto_0
 
-    .line 105
     .end local v0           #_arg0:Landroid/graphics/Bitmap;
     .end local v1           #_arg1:Ljava/lang/String;
     .end local v2           #_result:Z
@@ -352,7 +306,6 @@
     .restart local v0       #_arg0:Landroid/graphics/Bitmap;
     goto :goto_1
 
-    .line 39
     nop
 
     :sswitch_data_0

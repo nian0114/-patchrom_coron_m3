@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 336
     iput-object p1, p0, Landroid/printservice/PrintService$1;->this$0:Landroid/printservice/PrintService;
 
     invoke-direct {p0}, Landroid/printservice/IPrintService$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .locals 2
 
     .prologue
-    .line 339
     iget-object v0, p0, Landroid/printservice/PrintService$1;->this$0:Landroid/printservice/PrintService;
 
     #getter for: Landroid/printservice/PrintService;->mHandler:Landroid/os/Handler;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 340
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .locals 2
 
     .prologue
-    .line 344
     iget-object v0, p0, Landroid/printservice/PrintService$1;->this$0:Landroid/printservice/PrintService;
 
     #getter for: Landroid/printservice/PrintService;->mHandler:Landroid/os/Handler;
@@ -70,7 +66,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 345
     return-void
 .end method
 
@@ -79,7 +74,6 @@
     .parameter "printJobInfo"
 
     .prologue
-    .line 389
     iget-object v0, p0, Landroid/printservice/PrintService$1;->this$0:Landroid/printservice/PrintService;
 
     #getter for: Landroid/printservice/PrintService;->mHandler:Landroid/os/Handler;
@@ -95,7 +89,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 391
     return-void
 .end method
 
@@ -104,7 +97,6 @@
     .parameter "printJobInfo"
 
     .prologue
-    .line 383
     iget-object v0, p0, Landroid/printservice/PrintService$1;->this$0:Landroid/printservice/PrintService;
 
     #getter for: Landroid/printservice/PrintService;->mHandler:Landroid/os/Handler;
@@ -120,7 +112,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 385
     return-void
 .end method
 
@@ -129,7 +120,6 @@
     .parameter "client"
 
     .prologue
-    .line 377
     iget-object v0, p0, Landroid/printservice/PrintService$1;->this$0:Landroid/printservice/PrintService;
 
     #getter for: Landroid/printservice/PrintService;->mHandler:Landroid/os/Handler;
@@ -145,7 +135,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 379
     return-void
 .end method
 
@@ -163,7 +152,6 @@
     .end annotation
 
     .prologue
-    .line 348
     .local p1, priorityList:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrinterId;>;"
     iget-object v0, p0, Landroid/printservice/PrintService$1;->this$0:Landroid/printservice/PrintService;
 
@@ -180,7 +168,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 350
     return-void
 .end method
 
@@ -189,7 +176,6 @@
     .parameter "printerId"
 
     .prologue
-    .line 365
     iget-object v0, p0, Landroid/printservice/PrintService$1;->this$0:Landroid/printservice/PrintService;
 
     #getter for: Landroid/printservice/PrintService;->mHandler:Landroid/os/Handler;
@@ -205,7 +191,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 367
     return-void
 .end method
 
@@ -213,7 +198,6 @@
     .locals 2
 
     .prologue
-    .line 354
     iget-object v0, p0, Landroid/printservice/PrintService$1;->this$0:Landroid/printservice/PrintService;
 
     #getter for: Landroid/printservice/PrintService;->mHandler:Landroid/os/Handler;
@@ -225,7 +209,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 355
     return-void
 .end method
 
@@ -234,7 +217,6 @@
     .parameter "printerId"
 
     .prologue
-    .line 371
     iget-object v0, p0, Landroid/printservice/PrintService$1;->this$0:Landroid/printservice/PrintService;
 
     #getter for: Landroid/printservice/PrintService;->mHandler:Landroid/os/Handler;
@@ -250,7 +232,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 373
     return-void
 .end method
 
@@ -268,7 +249,6 @@
     .end annotation
 
     .prologue
-    .line 359
     .local p1, printerIds:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrinterId;>;"
     iget-object v0, p0, Landroid/printservice/PrintService$1;->this$0:Landroid/printservice/PrintService;
 
@@ -285,6 +265,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 361
     return-void
 .end method

@@ -38,18 +38,15 @@
     .locals 2
 
     .prologue
-    .line 1347
     const-string v1, "SECONDARY_STORAGE"
 
     invoke-static {v1}, Ljava/lang/System;->getenv(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1348
     .local v0, secondary_storage:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 1349
     const-string v1, ":"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -58,7 +55,6 @@
 
     sput-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_PATHS:[Ljava/lang/String;
 
-    .line 1381
     :goto_0
     const-string v1, "internal"
 
@@ -68,7 +64,6 @@
 
     sput-object v1, Landroid/provider/MediaStore$Audio$Media;->INTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1388
     const-string v1, "external"
 
     invoke-static {v1}, Landroid/provider/MediaStore$Audio$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
@@ -79,7 +74,6 @@
 
     return-void
 
-    .line 1351
     :cond_0
     const/4 v1, 0x0
 
@@ -94,7 +88,6 @@
     .locals 0
 
     .prologue
-    .line 1342
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -105,7 +98,6 @@
     .parameter "volumeName"
 
     .prologue
-    .line 1363
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,7 +134,6 @@
     .parameter "path"
 
     .prologue
-    .line 1368
     sget-object v0, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_PATHS:[Ljava/lang/String;
 
     .local v0, arr$:[Ljava/lang/String;
@@ -157,7 +148,6 @@
 
     aget-object v1, v0, v2
 
-    .line 1369
     .local v1, ep:Ljava/lang/String;
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -165,22 +155,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 1370
     sget-object v4, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1374
     .end local v1           #ep:Ljava/lang/String;
     :goto_1
     return-object v4
 
-    .line 1368
     .restart local v1       #ep:Ljava/lang/String;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1374
     .end local v1           #ep:Ljava/lang/String;
     :cond_1
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;

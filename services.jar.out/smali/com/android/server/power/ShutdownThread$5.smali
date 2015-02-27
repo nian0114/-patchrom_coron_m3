@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 240
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$5;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +42,10 @@
     .parameter "which"
 
     .prologue
-    .line 242
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$5;->val$context:Landroid/content/Context;
 
     #calls: Lcom/android/server/power/ShutdownThread;->beginShutdownSequence(Landroid/content/Context;)V
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->access$200(Landroid/content/Context;)V
 
-    .line 243
     return-void
 .end method

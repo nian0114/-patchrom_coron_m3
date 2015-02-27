@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .parameter "in"
 
     .prologue
-    .line 58
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 59
     .local v0, hash:J
     new-instance v2, Landroid/bluetooth/BluetoothHidDeviceAppConfiguration;
 
@@ -64,7 +61,6 @@
     .parameter "x0"
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothHidDeviceAppConfiguration$1;->createFromParcel(Landroid/os/Parcel;)Landroid/bluetooth/BluetoothHidDeviceAppConfiguration;
 
     move-result-object v0
@@ -77,7 +73,6 @@
     .parameter "size"
 
     .prologue
-    .line 64
     new-array v0, p1, [Landroid/bluetooth/BluetoothHidDeviceAppConfiguration;
 
     return-object v0
@@ -88,7 +83,6 @@
     .parameter "x0"
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothHidDeviceAppConfiguration$1;->newArray(I)[Landroid/bluetooth/BluetoothHidDeviceAppConfiguration;
 
     move-result-object v0

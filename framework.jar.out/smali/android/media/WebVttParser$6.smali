@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 939
     iput-object p1, p0, Landroid/media/WebVttParser$6;->this$0:Landroid/media/WebVttParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,19 +41,16 @@
     .parameter "line"
 
     .prologue
-    .line 942
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 943
     iget-object v0, p0, Landroid/media/WebVttParser$6;->this$0:Landroid/media/WebVttParser;
 
     invoke-virtual {v0}, Landroid/media/WebVttParser;->yieldCue()V
 
-    .line 944
     iget-object v0, p0, Landroid/media/WebVttParser$6;->this$0:Landroid/media/WebVttParser;
 
     iget-object v1, p0, Landroid/media/WebVttParser$6;->this$0:Landroid/media/WebVttParser;
@@ -67,12 +63,10 @@
     #setter for: Landroid/media/WebVttParser;->mPhase:Landroid/media/WebVttParser$Phase;
     invoke-static {v0, v1}, Landroid/media/WebVttParser;->access$102(Landroid/media/WebVttParser;Landroid/media/WebVttParser$Phase;)Landroid/media/WebVttParser$Phase;
 
-    .line 949
     :cond_0
     :goto_0
     return-void
 
-    .line 946
     :cond_1
     iget-object v0, p0, Landroid/media/WebVttParser$6;->this$0:Landroid/media/WebVttParser;
 
@@ -83,7 +77,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 947
     iget-object v0, p0, Landroid/media/WebVttParser$6;->this$0:Landroid/media/WebVttParser;
 
     #getter for: Landroid/media/WebVttParser;->mCueTexts:Ljava/util/Vector;

@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 1708
     new-instance v0, Landroid/widget/HorizontalScrollView$SavedState$1;
 
     invoke-direct {v0}, Landroid/widget/HorizontalScrollView$SavedState$1;-><init>()V
@@ -53,17 +52,14 @@
     .parameter "source"
 
     .prologue
-    .line 1688
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1689
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/HorizontalScrollView$SavedState;->scrollPosition:I
 
-    .line 1690
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -75,10 +71,8 @@
     :goto_0
     iput-boolean v0, p0, Landroid/widget/HorizontalScrollView$SavedState;->isLayoutRtl:Z
 
-    .line 1691
     return-void
 
-    .line 1690
     :cond_0
     const/4 v0, 0x0
 
@@ -90,10 +84,8 @@
     .parameter "superState"
 
     .prologue
-    .line 1684
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1685
     return-void
 .end method
 
@@ -103,7 +95,6 @@
     .locals 2
 
     .prologue
-    .line 1702
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -150,7 +141,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -169,15 +160,12 @@
     .parameter "flags"
 
     .prologue
-    .line 1695
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1696
     iget v0, p0, Landroid/widget/HorizontalScrollView$SavedState;->scrollPosition:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1697
     iget-boolean v0, p0, Landroid/widget/HorizontalScrollView$SavedState;->isLayoutRtl:Z
 
     if-eqz v0, :cond_0
@@ -187,10 +175,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1698
     return-void
 
-    .line 1697
     :cond_0
     const/4 v0, 0x0
 

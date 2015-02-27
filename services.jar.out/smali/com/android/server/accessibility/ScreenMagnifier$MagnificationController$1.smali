@@ -42,14 +42,12 @@
     .parameter
 
     .prologue
-    .line 969
     iput-object p1, p0, Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController$1;->this$1:Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController;
 
     iput-object p2, p0, Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController$1;->val$this$0:Lcom/android/server/accessibility/ScreenMagnifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 970
     invoke-static {}, Landroid/view/MagnificationSpec;->obtain()Landroid/view/MagnificationSpec;
 
     move-result-object v0
@@ -68,10 +66,8 @@
     .parameter "toSpec"
 
     .prologue
-    .line 975
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController$1;->mTempTransformationSpec:Landroid/view/MagnificationSpec;
 
-    .line 976
     .local v0, result:Landroid/view/MagnificationSpec;
     iget v1, p2, Landroid/view/MagnificationSpec;->scale:F
 
@@ -87,7 +83,6 @@
 
     iput v1, v0, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 978
     iget v1, p2, Landroid/view/MagnificationSpec;->offsetX:F
 
     iget v2, p3, Landroid/view/MagnificationSpec;->offsetX:F
@@ -102,7 +97,6 @@
 
     iput v1, v0, Landroid/view/MagnificationSpec;->offsetX:F
 
-    .line 980
     iget v1, p2, Landroid/view/MagnificationSpec;->offsetY:F
 
     iget v2, p3, Landroid/view/MagnificationSpec;->offsetY:F
@@ -117,7 +111,6 @@
 
     iput v1, v0, Landroid/view/MagnificationSpec;->offsetY:F
 
-    .line 982
     return-object v0
 .end method
 
@@ -128,7 +121,6 @@
     .parameter "x2"
 
     .prologue
-    .line 969
     check-cast p2, Landroid/view/MagnificationSpec;
 
     .end local p2

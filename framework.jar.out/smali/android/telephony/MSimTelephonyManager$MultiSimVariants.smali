@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 73
     new-instance v0, Landroid/telephony/MSimTelephonyManager$MultiSimVariants;
 
     const-string v1, "DSDS"
@@ -57,7 +56,6 @@
 
     sput-object v0, Landroid/telephony/MSimTelephonyManager$MultiSimVariants;->DSDS:Landroid/telephony/MSimTelephonyManager$MultiSimVariants;
 
-    .line 74
     new-instance v0, Landroid/telephony/MSimTelephonyManager$MultiSimVariants;
 
     const-string v1, "DSDA"
@@ -66,7 +64,6 @@
 
     sput-object v0, Landroid/telephony/MSimTelephonyManager$MultiSimVariants;->DSDA:Landroid/telephony/MSimTelephonyManager$MultiSimVariants;
 
-    .line 75
     new-instance v0, Landroid/telephony/MSimTelephonyManager$MultiSimVariants;
 
     const-string v1, "TSTS"
@@ -75,7 +72,6 @@
 
     sput-object v0, Landroid/telephony/MSimTelephonyManager$MultiSimVariants;->TSTS:Landroid/telephony/MSimTelephonyManager$MultiSimVariants;
 
-    .line 76
     new-instance v0, Landroid/telephony/MSimTelephonyManager$MultiSimVariants;
 
     const-string v1, "UNKNOWN"
@@ -84,7 +80,6 @@
 
     sput-object v0, Landroid/telephony/MSimTelephonyManager$MultiSimVariants;->UNKNOWN:Landroid/telephony/MSimTelephonyManager$MultiSimVariants;
 
-    .line 72
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/telephony/MSimTelephonyManager$MultiSimVariants;
@@ -121,7 +116,6 @@
     .end annotation
 
     .prologue
-    .line 72
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -132,7 +126,6 @@
     .parameter "name"
 
     .prologue
-    .line 72
     const-class v0, Landroid/telephony/MSimTelephonyManager$MultiSimVariants;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -148,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 72
     sget-object v0, Landroid/telephony/MSimTelephonyManager$MultiSimVariants;->$VALUES:[Landroid/telephony/MSimTelephonyManager$MultiSimVariants;
 
     invoke-virtual {v0}, [Landroid/telephony/MSimTelephonyManager$MultiSimVariants;->clone()Ljava/lang/Object;

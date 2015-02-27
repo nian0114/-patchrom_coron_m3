@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 159
     iput-object p1, p0, Lcom/android/server/wm/AppTransition$1;->this$0:Lcom/android/server/wm/AppTransition;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,15 +43,12 @@
     .prologue
     const/high16 v1, 0x3e80
 
-    .line 163
     cmpg-float v0, p1, v1
 
     if-gez v0, :cond_0
 
-    .line 164
     div-float v0, p1, v1
 
-    .line 166
     :goto_0
     return v0
 

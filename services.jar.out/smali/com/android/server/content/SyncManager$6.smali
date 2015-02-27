@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 337
     iput-object p1, p0, Lcom/android/server/content/SyncManager$6;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 340
     const-string v1, "from_quickboot"
 
     const/4 v2, 0x0
@@ -49,15 +47,12 @@
 
     move-result v0
 
-    .line 341
     .local v0, fromQuickBoot:Z
     if-eqz v0, :cond_0
 
-    .line 345
     :goto_0
     return-void
 
-    .line 343
     :cond_0
     const-string v1, "SyncManager"
 
@@ -65,7 +60,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     iget-object v1, p0, Lcom/android/server/content/SyncManager$6;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-virtual {v1}, Lcom/android/server/content/SyncManager;->getSyncStorageEngine()Lcom/android/server/content/SyncStorageEngine;

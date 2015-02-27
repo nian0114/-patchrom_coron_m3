@@ -38,7 +38,6 @@
     .parameter
 
     .prologue
-    .line 187
     iput-object p1, p0, Lcom/android/server/print/UserState$1;->this$0:Lcom/android/server/print/UserState;
 
     iput-object p2, p0, Lcom/android/server/print/UserState$1;->val$printJob:Landroid/print/PrintJobInfo;
@@ -55,7 +54,6 @@
     .parameter "x0"
 
     .prologue
-    .line 187
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1
@@ -71,7 +69,6 @@
     .parameter "params"
 
     .prologue
-    .line 190
     iget-object v0, p0, Lcom/android/server/print/UserState$1;->this$0:Lcom/android/server/print/UserState;
 
     #getter for: Lcom/android/server/print/UserState;->mSpooler:Lcom/android/server/print/RemotePrintSpooler;
@@ -83,7 +80,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/print/RemotePrintSpooler;->createPrintJob(Landroid/print/PrintJobInfo;)V
 
-    .line 191
     const/4 v0, 0x0
 
     return-object v0

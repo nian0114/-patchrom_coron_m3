@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 439
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,18 +45,15 @@
     .parameter "r2"
 
     .prologue
-    .line 442
     iget v1, p2, Lcom/android/server/AssetAtlasService$WorkerResult;->count:I
 
     iget v2, p1, Lcom/android/server/AssetAtlasService$WorkerResult;->count:I
 
     sub-int v0, v1, v2
 
-    .line 443
     .local v0, delta:I
     if-eqz v0, :cond_0
 
-    .line 444
     .end local v0           #delta:I
     :goto_0
     return v0
@@ -87,7 +83,6 @@
     .parameter "x1"
 
     .prologue
-    .line 439
     check-cast p1, Lcom/android/server/AssetAtlasService$WorkerResult;
 
     .end local p1

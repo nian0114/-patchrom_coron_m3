@@ -34,38 +34,30 @@
     .parameter "context"
 
     .prologue
-    .line 76
     invoke-direct {p0}, Landroid/print/IPrintManager$Stub;-><init>()V
 
-    .line 68
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
-    .line 72
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/print/PrintManagerService;->mUserStates:Landroid/util/SparseArray;
 
-    .line 74
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/print/PrintManagerService;->mCurrentUserId:I
 
-    .line 77
     iput-object p1, p0, Lcom/android/server/print/PrintManagerService;->mContext:Landroid/content/Context;
 
-    .line 78
     invoke-direct {p0}, Lcom/android/server/print/PrintManagerService;->registerContentObservers()V
 
-    .line 79
     invoke-direct {p0}, Lcom/android/server/print/PrintManagerService;->registerBoradcastReceivers()V
 
-    .line 80
     return-void
 .end method
 
@@ -74,7 +66,6 @@
     .parameter "x0"
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -85,7 +76,6 @@
     .parameter "x0"
 
     .prologue
-    .line 61
     invoke-direct {p0}, Lcom/android/server/print/PrintManagerService;->getCurrentUserStateLocked()Lcom/android/server/print/UserState;
 
     move-result-object v0
@@ -99,7 +89,6 @@
     .parameter "x1"
 
     .prologue
-    .line 61
     invoke-direct {p0, p1}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v0
@@ -112,7 +101,6 @@
     .parameter "x0"
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/server/print/PrintManagerService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -126,7 +114,6 @@
     .parameter "x3"
 
     .prologue
-    .line 61
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/print/PrintManagerService;->showEnableInstalledPrintServiceNotification(Landroid/content/ComponentName;Ljava/lang/String;I)V
 
     return-void
@@ -138,7 +125,6 @@
     .parameter "x1"
 
     .prologue
-    .line 61
     invoke-direct {p0, p1}, Lcom/android/server/print/PrintManagerService;->switchUser(I)V
 
     return-void
@@ -150,7 +136,6 @@
     .parameter "x1"
 
     .prologue
-    .line 61
     invoke-direct {p0, p1}, Lcom/android/server/print/PrintManagerService;->removeUser(I)V
 
     return-void
@@ -160,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 524
     iget v0, p0, Lcom/android/server/print/PrintManagerService;->mCurrentUserId:I
 
     invoke-direct {p0, v0}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
@@ -175,7 +159,6 @@
     .parameter "userId"
 
     .prologue
-    .line 528
     iget-object v1, p0, Lcom/android/server/print/PrintManagerService;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -184,11 +167,9 @@
 
     check-cast v0, Lcom/android/server/print/UserState;
 
-    .line 529
     .local v0, userState:Lcom/android/server/print/UserState;
     if-nez v0, :cond_0
 
-    .line 530
     new-instance v0, Lcom/android/server/print/UserState;
 
     .end local v0           #userState:Lcom/android/server/print/UserState;
@@ -198,13 +179,11 @@
 
     invoke-direct {v0, v1, p1, v2}, Lcom/android/server/print/UserState;-><init>(Landroid/content/Context;ILjava/lang/Object;)V
 
-    .line 531
     .restart local v0       #userState:Lcom/android/server/print/UserState;
     iget-object v1, p0, Lcom/android/server/print/PrintManagerService;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 533
     :cond_0
     return-object v0
 .end method
@@ -213,12 +192,10 @@
     .locals 7
 
     .prologue
-    .line 400
     new-instance v6, Lcom/android/server/print/PrintManagerService$3;
 
     invoke-direct {v6, p0}, Lcom/android/server/print/PrintManagerService$3;-><init>(Lcom/android/server/print/PrintManagerService;)V
 
-    .line 502
     .local v6, monitor:Lcom/android/internal/content/PackageMonitor;
     iget-object v0, p0, Lcom/android/server/print/PrintManagerService;->mContext:Landroid/content/Context;
 
@@ -236,23 +213,19 @@
 
     invoke-virtual {v6, v0, v1, v2, v4}, Lcom/android/internal/content/PackageMonitor;->register(Landroid/content/Context;Landroid/os/Looper;Landroid/os/UserHandle;Z)V
 
-    .line 506
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 507
     .local v3, intentFilter:Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 508
     const-string v0, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 510
     iget-object v0, p0, Lcom/android/server/print/PrintManagerService;->mContext:Landroid/content/Context;
 
     new-instance v1, Lcom/android/server/print/PrintManagerService$4;
@@ -269,7 +242,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 521
     return-void
 .end method
 
@@ -277,14 +249,12 @@
     .locals 5
 
     .prologue
-    .line 380
     const-string v2, "enabled_print_services"
 
     invoke-static {v2}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 383
     .local v0, enabledPrintServicesUri:Landroid/net/Uri;
     new-instance v1, Lcom/android/server/print/PrintManagerService$2;
 
@@ -294,7 +264,6 @@
 
     invoke-direct {v1, p0, v2, v0}, Lcom/android/server/print/PrintManagerService$2;-><init>(Lcom/android/server/print/PrintManagerService;Landroid/os/Handler;Landroid/net/Uri;)V
 
-    .line 395
     .local v1, observer:Landroid/database/ContentObserver;
     iget-object v2, p0, Lcom/android/server/print/PrintManagerService;->mContext:Landroid/content/Context;
 
@@ -308,7 +277,6 @@
 
     invoke-virtual {v2, v0, v3, v1, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 397
     return-void
 .end method
 
@@ -317,12 +285,10 @@
     .parameter "removedUserId"
 
     .prologue
-    .line 558
     iget-object v2, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 559
     :try_start_0
     iget-object v1, p0, Lcom/android/server/print/PrintManagerService;->mUserStates:Landroid/util/SparseArray;
 
@@ -332,26 +298,20 @@
 
     check-cast v0, Lcom/android/server/print/UserState;
 
-    .line 560
     .local v0, userState:Lcom/android/server/print/UserState;
     if-eqz v0, :cond_0
 
-    .line 561
     invoke-virtual {v0}, Lcom/android/server/print/UserState;->destroyLocked()V
 
-    .line 562
     iget-object v1, p0, Lcom/android/server/print/PrintManagerService;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 564
     :cond_0
     monitor-exit v2
 
-    .line 565
     return-void
 
-    .line 564
     .end local v0           #userState:Lcom/android/server/print/UserState;
     :catchall_0
     move-exception v1
@@ -368,12 +328,10 @@
     .parameter "appId"
 
     .prologue
-    .line 568
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 569
     .local v1, callingUid:I
     if-eqz v1, :cond_0
 
@@ -385,21 +343,17 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 584
     :cond_0
     return p1
 
-    .line 573
     :cond_1
     invoke-static {v1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
 
-    .line 574
     .local v0, callingAppId:I
     if-eq p1, v0, :cond_0
 
-    .line 577
     iget-object v2, p0, Lcom/android/server/print/PrintManagerService;->mContext:Landroid/content/Context;
 
     const-string v3, "com.android.printspooler.permission.ACCESS_ALL_PRINT_JOBS"
@@ -410,7 +364,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 580
     new-instance v2, Ljava/lang/SecurityException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -465,7 +418,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 616
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -474,13 +426,11 @@
 
     move-object p1, v3
 
-    .line 627
     .end local p1
     :cond_0
     :goto_0
     return-object p1
 
-    .line 619
     .restart local p1
     :cond_1
     iget-object v4, p0, Lcom/android/server/print/PrintManagerService;->mContext:Landroid/content/Context;
@@ -497,11 +447,9 @@
 
     move-result-object v2
 
-    .line 621
     .local v2, packages:[Ljava/lang/String;
     array-length v1, v2
 
-    .line 622
     .local v1, packageCount:I
     const/4 v0, 0x0
 
@@ -509,7 +457,6 @@
     :goto_1
     if-ge v0, v1, :cond_2
 
-    .line 623
     aget-object v4, v2, v0
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -518,7 +465,6 @@
 
     if-nez v4, :cond_0
 
-    .line 622
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -526,7 +472,6 @@
     :cond_2
     move-object p1, v3
 
-    .line 627
     goto :goto_0
 .end method
 
@@ -537,12 +482,10 @@
     .prologue
     const/4 v4, -0x3
 
-    .line 588
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 589
     .local v0, callingUid:I
     if-eqz v0, :cond_0
 
@@ -554,24 +497,20 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 609
     .end local p1
     :cond_0
     :goto_0
     return p1
 
-    .line 593
     .restart local p1
     :cond_1
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 594
     .local v1, callingUserId:I
     if-eq v1, p1, :cond_0
 
-    .line 597
     iget-object v2, p0, Lcom/android/server/print/PrintManagerService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.INTERACT_ACROSS_USERS_FULL"
@@ -592,16 +531,13 @@
 
     if-eqz v2, :cond_4
 
-    .line 601
     :cond_2
     if-ne p1, v4, :cond_3
 
     move p1, v1
 
-    .line 602
     goto :goto_0
 
-    .line 604
     :cond_3
     new-instance v2, Ljava/lang/SecurityException;
 
@@ -649,7 +585,6 @@
 
     throw v2
 
-    .line 608
     :cond_4
     const/4 v2, -0x2
 
@@ -657,13 +592,11 @@
 
     if-ne p1, v4, :cond_6
 
-    .line 609
     :cond_5
     iget p1, p0, Lcom/android/server/print/PrintManagerService;->mCurrentUserId:I
 
     goto :goto_0
 
-    .line 611
     :cond_6
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -685,12 +618,10 @@
 
     const/4 v1, 0x0
 
-    .line 632
     new-instance v5, Landroid/os/UserHandle;
 
     invoke-direct {v5, p3}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 634
     .local v5, userHandle:Landroid/os/UserHandle;
     new-instance v2, Landroid/content/Intent;
 
@@ -698,7 +629,6 @@
 
     invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 635
     .local v2, intent:Landroid/content/Intent;
     const-string v0, "EXTRA_PRINT_SERVICE_COMPONENT_NAME"
 
@@ -708,7 +638,6 @@
 
     invoke-virtual {v2, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 637
     iget-object v0, p0, Lcom/android/server/print/PrintManagerService;->mContext:Landroid/content/Context;
 
     const/high16 v3, 0x5000
@@ -719,7 +648,6 @@
 
     move-result-object v9
 
-    .line 640
     .local v9, pendingIntent:Landroid/app/PendingIntent;
     new-instance v0, Landroid/app/Notification$Builder;
 
@@ -781,7 +709,6 @@
 
     move-result-object v6
 
-    .line 649
     .local v6, builder:Landroid/app/Notification$Builder;
     iget-object v0, p0, Lcom/android/server/print/PrintManagerService;->mContext:Landroid/content/Context;
 
@@ -793,7 +720,6 @@
 
     check-cast v7, Landroid/app/NotificationManager;
 
-    .line 652
     .local v7, notificationManager:Landroid/app/NotificationManager;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -829,7 +755,6 @@
 
     move-result-object v8
 
-    .line 653
     .local v8, notificationTag:Ljava/lang/String;
     invoke-virtual {v6}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
 
@@ -837,7 +762,6 @@
 
     invoke-virtual {v7, v8, v1, v0, v5}, Landroid/app/NotificationManager;->notifyAsUser(Ljava/lang/String;ILandroid/app/Notification;Landroid/os/UserHandle;)V
 
-    .line 655
     return-void
 .end method
 
@@ -846,29 +770,23 @@
     .parameter "newUserId"
 
     .prologue
-    .line 538
     iget-object v2, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 539
     :try_start_0
     iget v1, p0, Lcom/android/server/print/PrintManagerService;->mCurrentUserId:I
 
     if-ne p1, v1, :cond_0
 
-    .line 540
     monitor-exit v2
 
-    .line 555
     :goto_0
     return-void
 
-    .line 542
     :cond_0
     iput p1, p0, Lcom/android/server/print/PrintManagerService;->mCurrentUserId:I
 
-    .line 543
     iget-object v1, p0, Lcom/android/server/print/PrintManagerService;->mUserStates:Landroid/util/SparseArray;
 
     iget v3, p0, Lcom/android/server/print/PrintManagerService;->mCurrentUserId:I
@@ -879,37 +797,30 @@
 
     check-cast v0, Lcom/android/server/print/UserState;
 
-    .line 544
     .local v0, userState:Lcom/android/server/print/UserState;
     if-nez v0, :cond_1
 
-    .line 545
     invoke-direct {p0}, Lcom/android/server/print/PrintManagerService;->getCurrentUserStateLocked()Lcom/android/server/print/UserState;
 
     move-result-object v0
 
-    .line 546
     invoke-virtual {v0}, Lcom/android/server/print/UserState;->updateIfNeededLocked()V
 
-    .line 550
     :goto_1
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 554
     invoke-virtual {v0}, Lcom/android/server/print/UserState;->removeObsoletePrintJobs()V
 
     goto :goto_0
 
-    .line 548
     :cond_1
     :try_start_1
     invoke-virtual {v0}, Lcom/android/server/print/UserState;->updateIfNeededLocked()V
 
     goto :goto_1
 
-    .line 550
     .end local v0           #userState:Lcom/android/server/print/UserState;
     :catchall_0
     move-exception v1
@@ -935,54 +846,44 @@
     .end annotation
 
     .prologue
-    .line 323
     invoke-direct {p0, p3}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v3
 
-    .line 324
     .local v3, resolvedUserId:I
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingAppEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 326
     .local v2, resolvedAppId:I
     iget-object v6, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 327
     :try_start_0
     invoke-direct {p0, v3}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v4
 
-    .line 328
     .local v4, userState:Lcom/android/server/print/UserState;
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 329
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 331
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v4, p1, v2}, Lcom/android/server/print/UserState;->addPrintJobStateChangeListener(Landroid/print/IPrintJobStateChangeListener;I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 333
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 335
     return-void
 
-    .line 328
     .end local v0           #identity:J
     .end local v4           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -995,7 +896,6 @@
 
     throw v5
 
-    .line 333
     .restart local v0       #identity:J
     .restart local v4       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -1013,54 +913,44 @@
     .parameter "userId"
 
     .prologue
-    .line 152
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingAppEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 153
     .local v2, resolvedAppId:I
     invoke-direct {p0, p3}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v3
 
-    .line 155
     .local v3, resolvedUserId:I
     iget-object v6, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 156
     :try_start_0
     invoke-direct {p0, v3}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v4
 
-    .line 157
     .local v4, userState:Lcom/android/server/print/UserState;
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 158
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 160
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v4, p1, v2}, Lcom/android/server/print/UserState;->cancelPrintJob(Landroid/print/PrintJobId;I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 162
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 164
     return-void
 
-    .line 157
     .end local v0           #identity:J
     .end local v4           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -1073,7 +963,6 @@
 
     throw v5
 
-    .line 162
     .restart local v0       #identity:J
     .restart local v4       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -1090,48 +979,39 @@
     .parameter "userId"
 
     .prologue
-    .line 215
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 217
     .local v2, resolvedUserId:I
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 218
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v3
 
-    .line 219
     .local v3, userState:Lcom/android/server/print/UserState;
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 220
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 222
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v3, p1}, Lcom/android/server/print/UserState;->createPrinterDiscoverySession(Landroid/print/IPrinterDiscoveryObserver;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 224
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 226
     return-void
 
-    .line 219
     .end local v0           #identity:J
     .end local v3           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -1144,7 +1024,6 @@
 
     throw v4
 
-    .line 224
     .restart local v0       #identity:J
     .restart local v3       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -1161,48 +1040,39 @@
     .parameter "userId"
 
     .prologue
-    .line 231
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 233
     .local v2, resolvedUserId:I
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 234
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v3
 
-    .line 235
     .local v3, userState:Lcom/android/server/print/UserState;
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 236
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 238
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v3, p1}, Lcom/android/server/print/UserState;->destroyPrinterDiscoverySession(Landroid/print/IPrinterDiscoveryObserver;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 240
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 242
     return-void
 
-    .line 235
     .end local v0           #identity:J
     .end local v3           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -1215,7 +1085,6 @@
 
     throw v4
 
-    .line 240
     .restart local v0       #identity:J
     .restart local v3       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -1233,7 +1102,6 @@
     .parameter "args"
 
     .prologue
-    .line 355
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mContext:Landroid/content/Context;
 
     const-string v6, "android.permission.DUMP"
@@ -1244,7 +1112,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 357
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1283,17 +1150,14 @@
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 377
     :goto_0
     return-void
 
-    .line 363
     :cond_0
     iget-object v6, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 364
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -1301,21 +1165,18 @@
 
     move-result-wide v1
 
-    .line 366
     .local v1, identity:J
     :try_start_1
     const-string v5, "PRINT MANAGER STATE (dumpsys print)"
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 367
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {v5}, Landroid/util/SparseArray;->size()I
 
     move-result v4
 
-    .line 368
     .local v4, userStateCount:I
     const/4 v0, 0x0
 
@@ -1323,7 +1184,6 @@
     :goto_1
     if-ge v0, v4, :cond_1
 
-    .line 369
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {v5, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -1332,23 +1192,19 @@
 
     check-cast v3, Lcom/android/server/print/UserState;
 
-    .line 370
     .local v3, userState:Lcom/android/server/print/UserState;
     const-string v5, ""
 
     invoke-virtual {v3, p1, p2, v5}, Lcom/android/server/print/UserState;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 371
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 368
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 374
     .end local v0           #i:I
     .end local v3           #userState:Lcom/android/server/print/UserState;
     .end local v4           #userStateCount:I
@@ -1360,7 +1216,6 @@
 
     throw v5
 
-    .line 376
     .end local v1           #identity:J
     :catchall_1
     move-exception v5
@@ -1371,7 +1226,6 @@
 
     throw v5
 
-    .line 374
     .restart local v0       #i:I
     .restart local v1       #identity:J
     .restart local v4       #userStateCount:I
@@ -1379,7 +1233,6 @@
     :try_start_3
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 376
     monitor-exit v6
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -1401,35 +1254,29 @@
     .end annotation
 
     .prologue
-    .line 184
     invoke-direct {p0, p1}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 186
     .local v2, resolvedUserId:I
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 187
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v3
 
-    .line 188
     .local v3, userState:Lcom/android/server/print/UserState;
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 189
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 191
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v3}, Lcom/android/server/print/UserState;->getEnabledPrintServices()Ljava/util/List;
@@ -1438,13 +1285,10 @@
 
     move-result-object v4
 
-    .line 193
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 191
     return-object v4
 
-    .line 188
     .end local v0           #identity:J
     .end local v3           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -1457,7 +1301,6 @@
 
     throw v4
 
-    .line 193
     .restart local v0       #identity:J
     .restart local v3       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -1482,35 +1325,29 @@
     .end annotation
 
     .prologue
-    .line 199
     invoke-direct {p0, p1}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 201
     .local v2, resolvedUserId:I
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 202
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v3
 
-    .line 203
     .local v3, userState:Lcom/android/server/print/UserState;
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 204
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 206
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v3}, Lcom/android/server/print/UserState;->getInstalledPrintServices()Ljava/util/List;
@@ -1519,13 +1356,10 @@
 
     move-result-object v4
 
-    .line 208
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 206
     return-object v4
 
-    .line 203
     .end local v0           #identity:J
     .end local v3           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -1538,7 +1372,6 @@
 
     throw v4
 
-    .line 208
     .restart local v0       #identity:J
     .restart local v3       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -1556,41 +1389,34 @@
     .parameter "userId"
 
     .prologue
-    .line 136
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingAppEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 137
     .local v2, resolvedAppId:I
     invoke-direct {p0, p3}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v3
 
-    .line 139
     .local v3, resolvedUserId:I
     iget-object v6, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 140
     :try_start_0
     invoke-direct {p0, v3}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v4
 
-    .line 141
     .local v4, userState:Lcom/android/server/print/UserState;
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 142
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 144
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v4, p1, v2}, Lcom/android/server/print/UserState;->getPrintJobInfo(Landroid/print/PrintJobId;I)Landroid/print/PrintJobInfo;
@@ -1599,13 +1425,10 @@
 
     move-result-object v5
 
-    .line 146
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 144
     return-object v5
 
-    .line 141
     .end local v0           #identity:J
     .end local v4           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -1618,7 +1441,6 @@
 
     throw v5
 
-    .line 146
     .restart local v0       #identity:J
     .restart local v4       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -1644,41 +1466,34 @@
     .end annotation
 
     .prologue
-    .line 120
     invoke-direct {p0, p1}, Lcom/android/server/print/PrintManagerService;->resolveCallingAppEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 121
     .local v2, resolvedAppId:I
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v3
 
-    .line 123
     .local v3, resolvedUserId:I
     iget-object v6, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 124
     :try_start_0
     invoke-direct {p0, v3}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v4
 
-    .line 125
     .local v4, userState:Lcom/android/server/print/UserState;
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 126
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 128
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v4, v2}, Lcom/android/server/print/UserState;->getPrintJobInfos(I)Ljava/util/List;
@@ -1687,13 +1502,10 @@
 
     move-result-object v5
 
-    .line 130
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 128
     return-object v5
 
-    .line 125
     .end local v0           #identity:J
     .end local v4           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -1706,7 +1518,6 @@
 
     throw v5
 
-    .line 130
     .restart local v0       #identity:J
     .restart local v4       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -1727,42 +1538,35 @@
     .parameter "userId"
 
     .prologue
-    .line 102
     invoke-direct {p0, p5}, Lcom/android/server/print/PrintManagerService;->resolveCallingAppEnforcingPermissions(I)I
 
     move-result v5
 
-    .line 103
     .local v5, resolvedAppId:I
     invoke-direct {p0, p6}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v8
 
-    .line 104
     .local v8, resolvedUserId:I
     invoke-direct {p0, p4}, Lcom/android/server/print/PrintManagerService;->resolveCallingPackageNameEnforcingSecurity(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 106
     .local v4, resolvedPackageName:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 107
     :try_start_0
     invoke-direct {p0, v8}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v0
 
-    .line 108
     .local v0, userState:Lcom/android/server/print/UserState;
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 109
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
@@ -1774,7 +1578,6 @@
 
     move-object v3, p3
 
-    .line 111
     :try_start_1
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/print/UserState;->print(Ljava/lang/String;Landroid/print/IPrintDocumentAdapter;Landroid/print/PrintAttributes;Ljava/lang/String;I)Landroid/os/Bundle;
     :try_end_1
@@ -1782,13 +1585,10 @@
 
     move-result-object v1
 
-    .line 114
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 111
     return-object v1
 
-    .line 108
     .end local v0           #userState:Lcom/android/server/print/UserState;
     .end local v6           #identity:J
     :catchall_0
@@ -1801,7 +1601,6 @@
 
     throw v1
 
-    .line 114
     .restart local v0       #userState:Lcom/android/server/print/UserState;
     .restart local v6       #identity:J
     :catchall_1
@@ -1818,48 +1617,39 @@
     .parameter "userId"
 
     .prologue
-    .line 340
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 342
     .local v2, resolvedUserId:I
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 343
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v3
 
-    .line 344
     .local v3, userState:Lcom/android/server/print/UserState;
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 345
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 347
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v3, p1}, Lcom/android/server/print/UserState;->removePrintJobStateChangeListener(Landroid/print/IPrintJobStateChangeListener;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 349
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 351
     return-void
 
-    .line 344
     .end local v0           #identity:J
     .end local v3           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -1872,7 +1662,6 @@
 
     throw v4
 
-    .line 349
     .restart local v0       #identity:J
     .restart local v3       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -1890,54 +1679,44 @@
     .parameter "userId"
 
     .prologue
-    .line 168
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingAppEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 169
     .local v2, resolvedAppId:I
     invoke-direct {p0, p3}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v3
 
-    .line 171
     .local v3, resolvedUserId:I
     iget-object v6, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 172
     :try_start_0
     invoke-direct {p0, v3}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v4
 
-    .line 173
     .local v4, userState:Lcom/android/server/print/UserState;
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 174
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 176
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v4, p1, v2}, Lcom/android/server/print/UserState;->restartPrintJob(Landroid/print/PrintJobId;I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 178
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 180
     return-void
 
-    .line 173
     .end local v0           #identity:J
     .end local v4           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -1950,7 +1729,6 @@
 
     throw v5
 
-    .line 178
     .restart local v0       #identity:J
     .restart local v4       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -1978,49 +1756,40 @@
     .end annotation
 
     .prologue
-    .line 247
     .local p2, priorityList:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrinterId;>;"
     invoke-direct {p0, p3}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 249
     .local v2, resolvedUserId:I
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 250
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v3
 
-    .line 251
     .local v3, userState:Lcom/android/server/print/UserState;
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 252
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 254
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v3, p1, p2}, Lcom/android/server/print/UserState;->startPrinterDiscovery(Landroid/print/IPrinterDiscoveryObserver;Ljava/util/List;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 256
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 258
     return-void
 
-    .line 251
     .end local v0           #identity:J
     .end local v3           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -2033,7 +1802,6 @@
 
     throw v4
 
-    .line 256
     .restart local v0       #identity:J
     .restart local v3       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -2050,48 +1818,39 @@
     .parameter "userId"
 
     .prologue
-    .line 292
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 294
     .local v2, resolvedUserId:I
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 295
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v3
 
-    .line 296
     .local v3, userState:Lcom/android/server/print/UserState;
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 297
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 299
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v3, p1}, Lcom/android/server/print/UserState;->startPrinterStateTracking(Landroid/print/PrinterId;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 301
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 303
     return-void
 
-    .line 296
     .end local v0           #identity:J
     .end local v3           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -2104,7 +1863,6 @@
 
     throw v4
 
-    .line 301
     .restart local v0       #identity:J
     .restart local v3       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -2121,48 +1879,39 @@
     .parameter "userId"
 
     .prologue
-    .line 262
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 264
     .local v2, resolvedUserId:I
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 265
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v3
 
-    .line 266
     .local v3, userState:Lcom/android/server/print/UserState;
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 267
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 269
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v3, p1}, Lcom/android/server/print/UserState;->stopPrinterDiscovery(Landroid/print/IPrinterDiscoveryObserver;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 271
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 273
     return-void
 
-    .line 266
     .end local v0           #identity:J
     .end local v3           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -2175,7 +1924,6 @@
 
     throw v4
 
-    .line 271
     .restart local v0       #identity:J
     .restart local v3       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -2192,48 +1940,39 @@
     .parameter "userId"
 
     .prologue
-    .line 307
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 309
     .local v2, resolvedUserId:I
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 310
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v3
 
-    .line 311
     .local v3, userState:Lcom/android/server/print/UserState;
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 312
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 314
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v3, p1}, Lcom/android/server/print/UserState;->stopPrinterStateTracking(Landroid/print/PrinterId;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 316
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 318
     return-void
 
-    .line 311
     .end local v0           #identity:J
     .end local v3           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -2246,7 +1985,6 @@
 
     throw v4
 
-    .line 316
     .restart local v0       #identity:J
     .restart local v3       #userState:Lcom/android/server/print/UserState;
     :catchall_1
@@ -2261,7 +1999,6 @@
     .locals 2
 
     .prologue
-    .line 83
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -2272,7 +2009,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 97
     return-void
 .end method
 
@@ -2291,49 +2027,40 @@
     .end annotation
 
     .prologue
-    .line 277
     .local p1, printerIds:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrinterId;>;"
     invoke-direct {p0, p2}, Lcom/android/server/print/PrintManagerService;->resolveCallingUserEnforcingPermissions(I)I
 
     move-result v2
 
-    .line 279
     .local v2, resolvedUserId:I
     iget-object v5, p0, Lcom/android/server/print/PrintManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 280
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/print/PrintManagerService;->getOrCreateUserStateLocked(I)Lcom/android/server/print/UserState;
 
     move-result-object v3
 
-    .line 281
     .local v3, userState:Lcom/android/server/print/UserState;
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 282
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 284
     .local v0, identity:J
     :try_start_1
     invoke-virtual {v3, p1}, Lcom/android/server/print/UserState;->validatePrinters(Ljava/util/List;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 286
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 288
     return-void
 
-    .line 281
     .end local v0           #identity:J
     .end local v3           #userState:Lcom/android/server/print/UserState;
     :catchall_0
@@ -2346,7 +2073,6 @@
 
     throw v4
 
-    .line 286
     .restart local v0       #identity:J
     .restart local v3       #userState:Lcom/android/server/print/UserState;
     :catchall_1

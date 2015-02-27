@@ -37,7 +37,6 @@
     .parameter
 
     .prologue
-    .line 160
     iput-object p1, p0, Lcom/android/server/AssetAtlasService$1;->this$0:Lcom/android/server/AssetAtlasService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .parameter "b2"
 
     .prologue
-    .line 163
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -64,7 +62,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 164
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
@@ -75,7 +72,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 166
     :goto_0
     return v0
 
@@ -99,7 +95,6 @@
     .parameter "x1"
 
     .prologue
-    .line 160
     check-cast p1, Landroid/graphics/Bitmap;
 
     .end local p1

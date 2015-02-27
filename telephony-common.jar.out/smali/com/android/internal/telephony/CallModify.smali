@@ -52,47 +52,38 @@
     .locals 1
 
     .prologue
-    .line 34
     const/4 v0, 0x0
 
     sput v0, Lcom/android/internal/telephony/CallModify;->E_SUCCESS:I
 
-    .line 35
     const/4 v0, 0x1
 
     sput v0, Lcom/android/internal/telephony/CallModify;->E_RADIO_NOT_AVAILABLE:I
 
-    .line 36
     const/4 v0, 0x2
 
     sput v0, Lcom/android/internal/telephony/CallModify;->E_GENERIC_FAILURE:I
 
-    .line 37
     const/4 v0, 0x6
 
     sput v0, Lcom/android/internal/telephony/CallModify;->E_REQUEST_NOT_SUPPORTED:I
 
-    .line 38
     const/4 v0, 0x7
 
     sput v0, Lcom/android/internal/telephony/CallModify;->E_CANCELLED:I
 
-    .line 39
     const/16 v0, 0x10
 
     sput v0, Lcom/android/internal/telephony/CallModify;->E_UNUSED:I
 
-    .line 40
     const/16 v0, 0x1b
 
     sput v0, Lcom/android/internal/telephony/CallModify;->E_INVALID_PARAMETER:I
 
-    .line 41
     const/16 v0, 0x1c
 
     sput v0, Lcom/android/internal/telephony/CallModify;->E_REJECTED_BY_REMOTE:I
 
-    .line 42
     const/16 v0, 0x1d
 
     sput v0, Lcom/android/internal/telephony/CallModify;->E_IMS_DEREGISTERED:I
@@ -104,7 +95,6 @@
     .locals 2
 
     .prologue
-    .line 60
     new-instance v0, Lcom/android/internal/telephony/CallDetails;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/CallDetails;-><init>()V
@@ -113,7 +103,6 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/telephony/CallModify;-><init>(Lcom/android/internal/telephony/CallDetails;I)V
 
-    .line 61
     return-void
 .end method
 
@@ -123,12 +112,10 @@
     .parameter "callIndex"
 
     .prologue
-    .line 70
     sget v0, Lcom/android/internal/telephony/CallModify;->E_SUCCESS:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/telephony/CallModify;-><init>(Lcom/android/internal/telephony/CallDetails;II)V
 
-    .line 71
     return-void
 .end method
 
@@ -139,19 +126,14 @@
     .parameter "err"
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     iput-object p1, p0, Lcom/android/internal/telephony/CallModify;->call_details:Lcom/android/internal/telephony/CallDetails;
 
-    .line 75
     iput p2, p0, Lcom/android/internal/telephony/CallModify;->call_index:I
 
-    .line 76
     iput p3, p0, Lcom/android/internal/telephony/CallModify;->error:I
 
-    .line 77
     return-void
 .end method
 
@@ -160,25 +142,20 @@
     .parameter "callmodify"
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     iget-object v0, p1, Lcom/android/internal/telephony/CallModify;->call_details:Lcom/android/internal/telephony/CallDetails;
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallModify;->setCallDetails(Lcom/android/internal/telephony/CallDetails;)V
 
-    .line 65
     iget v0, p1, Lcom/android/internal/telephony/CallModify;->call_index:I
 
     iput v0, p0, Lcom/android/internal/telephony/CallModify;->call_index:I
 
-    .line 66
     iget v0, p1, Lcom/android/internal/telephony/CallModify;->error:I
 
     iput v0, p0, Lcom/android/internal/telephony/CallModify;->error:I
 
-    .line 67
     return-void
 .end method
 
@@ -189,7 +166,6 @@
     .parameter "errorType"
 
     .prologue
-    .line 104
     const-string v0, "E_REJECTED_BY_REMOTE"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -198,14 +174,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 105
     sget v0, Lcom/android/internal/telephony/CallModify;->E_REJECTED_BY_REMOTE:I
 
-    .line 119
     :goto_0
     return v0
 
-    .line 106
     :cond_0
     const-string v0, "E_INVALID_PARAMETER"
 
@@ -215,12 +188,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 107
     sget v0, Lcom/android/internal/telephony/CallModify;->E_INVALID_PARAMETER:I
 
     goto :goto_0
 
-    .line 108
     :cond_1
     const-string v0, "E_CANCELLED"
 
@@ -230,12 +201,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 109
     sget v0, Lcom/android/internal/telephony/CallModify;->E_CANCELLED:I
 
     goto :goto_0
 
-    .line 110
     :cond_2
     const-string v0, "E_UNUSED"
 
@@ -245,12 +214,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 111
     sget v0, Lcom/android/internal/telephony/CallModify;->E_UNUSED:I
 
     goto :goto_0
 
-    .line 112
     :cond_3
     const-string v0, "E_RADIO_NOT_AVAILABLE"
 
@@ -260,12 +227,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 113
     sget v0, Lcom/android/internal/telephony/CallModify;->E_RADIO_NOT_AVAILABLE:I
 
     goto :goto_0
 
-    .line 114
     :cond_4
     const-string v0, "E_REQUEST_NOT_SUPPORTED"
 
@@ -275,12 +240,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 115
     sget v0, Lcom/android/internal/telephony/CallModify;->E_REQUEST_NOT_SUPPORTED:I
 
     goto :goto_0
 
-    .line 116
     :cond_5
     const-string v0, "E_IMS_DEREGISTERED"
 
@@ -290,12 +253,10 @@
 
     if-eqz v0, :cond_6
 
-    .line 117
     sget v0, Lcom/android/internal/telephony/CallModify;->E_IMS_DEREGISTERED:I
 
     goto :goto_0
 
-    .line 119
     :cond_6
     sget v0, Lcom/android/internal/telephony/CallModify;->E_GENERIC_FAILURE:I
 
@@ -306,7 +267,6 @@
     .locals 2
 
     .prologue
-    .line 87
     iget v0, p0, Lcom/android/internal/telephony/CallModify;->error:I
 
     sget v1, Lcom/android/internal/telephony/CallModify;->E_UNUSED:I
@@ -335,14 +295,12 @@
     .parameter "calldetails"
 
     .prologue
-    .line 80
     new-instance v0, Lcom/android/internal/telephony/CallDetails;
 
     invoke-direct {v0, p1}, Lcom/android/internal/telephony/CallDetails;-><init>(Lcom/android/internal/telephony/CallDetails;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallModify;->call_details:Lcom/android/internal/telephony/CallDetails;
 
-    .line 81
     return-void
 .end method
 
@@ -350,7 +308,6 @@
     .locals 2
 
     .prologue
-    .line 95
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

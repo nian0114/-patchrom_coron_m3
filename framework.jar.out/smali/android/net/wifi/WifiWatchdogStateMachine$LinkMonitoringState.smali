@@ -32,7 +32,6 @@
     .parameter
 
     .prologue
-    .line 750
     iput-object p1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -48,10 +47,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 761
     iput v5, p0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->mSampleCount:I
 
-    .line 762
     iget-object v0, p0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     new-instance v1, Landroid/net/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;
@@ -65,7 +62,6 @@
     #setter for: Landroid/net/wifi/WifiWatchdogStateMachine;->mCurrentLoss:Landroid/net/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;
     invoke-static {v0, v1}, Landroid/net/wifi/WifiWatchdogStateMachine;->access$3702(Landroid/net/wifi/WifiWatchdogStateMachine;Landroid/net/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;)Landroid/net/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;
 
-    .line 763
     iget-object v0, p0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     iget-object v1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
@@ -84,7 +80,6 @@
 
     invoke-virtual {v0, v1}, Landroid/net/wifi/WifiWatchdogStateMachine;->sendMessage(Landroid/os/Message;)V
 
-    .line 764
     return-void
 .end method
 
@@ -93,21 +88,17 @@
     .parameter "msg"
 
     .prologue
-    .line 768
     move-object/from16 v0, p1
 
     iget v13, v0, Landroid/os/Message;->what:I
 
     sparse-switch v13, :sswitch_data_0
 
-    .line 852
     const/4 v13, 0x0
 
-    .line 854
     :goto_0
     return v13
 
-    .line 770
     :sswitch_0
     move-object/from16 v0, p0
 
@@ -129,7 +120,6 @@
     #setter for: Landroid/net/wifi/WifiWatchdogStateMachine;->mCurrentSignalLevel:I
     invoke-static {v13, v14}, Landroid/net/wifi/WifiWatchdogStateMachine;->access$102(Landroid/net/wifi/WifiWatchdogStateMachine;I)I
 
-    .line 771
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
@@ -143,7 +133,6 @@
 
     if-gt v13, v14, :cond_1
 
-    .line 854
     :cond_0
     :goto_1
     :sswitch_1
@@ -151,7 +140,6 @@
 
     goto :goto_0
 
-    .line 775
     :cond_1
     move-object/from16 v0, p0
 
@@ -171,7 +159,6 @@
 
     goto :goto_1
 
-    .line 780
     :sswitch_2
     move-object/from16 v0, p0
 
@@ -191,7 +178,6 @@
 
     goto :goto_1
 
-    .line 784
     :sswitch_3
     move-object/from16 v0, p0
 
@@ -204,7 +190,6 @@
 
     if-nez v13, :cond_2
 
-    .line 785
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
@@ -223,7 +208,6 @@
 
     goto :goto_1
 
-    .line 786
     :cond_2
     move-object/from16 v0, p1
 
@@ -240,7 +224,6 @@
 
     if-ne v13, v14, :cond_0
 
-    .line 787
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
@@ -254,7 +237,6 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 788
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
@@ -287,7 +269,6 @@
 
     goto :goto_1
 
-    .line 794
     :sswitch_4
     move-object/from16 v0, p1
 
@@ -295,11 +276,9 @@
 
     check-cast v4, Landroid/net/wifi/RssiPacketCountInfo;
 
-    .line 795
     .local v4, info:Landroid/net/wifi/RssiPacketCountInfo;
     iget v10, v4, Landroid/net/wifi/RssiPacketCountInfo;->rssi:I
 
-    .line 796
     .local v10, rssi:I
     move-object/from16 v0, p0
 
@@ -309,21 +288,17 @@
 
     div-int/lit8 v7, v13, 0x2
 
-    .line 797
     .local v7, mrssi:I
     iget v11, v4, Landroid/net/wifi/RssiPacketCountInfo;->txbad:I
 
-    .line 798
     .local v11, txbad:I
     iget v12, v4, Landroid/net/wifi/RssiPacketCountInfo;->txgood:I
 
-    .line 803
     .local v12, txgood:I
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
 
-    .line 804
     .local v8, now:J
     move-object/from16 v0, p0
 
@@ -347,14 +322,12 @@
 
     if-gez v13, :cond_3
 
-    .line 807
     move-object/from16 v0, p0
 
     iget v13, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->mLastTxBad:I
 
     sub-int v1, v11, v13
 
-    .line 808
     .local v1, dbad:I
     move-object/from16 v0, p0
 
@@ -362,22 +335,18 @@
 
     sub-int v2, v12, v13
 
-    .line 809
     .local v2, dgood:I
     add-int v3, v1, v2
 
-    .line 811
     .local v3, dtotal:I
     if-lez v3, :cond_3
 
-    .line 813
     int-to-double v13, v1
 
     int-to-double v15, v3
 
     div-double v5, v13, v15
 
-    .line 815
     .local v5, loss:D
     move-object/from16 v0, p0
 
@@ -390,7 +359,6 @@
 
     invoke-virtual {v13, v5, v6, v3}, Landroid/net/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->update(DI)V
 
-    .line 824
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
@@ -402,7 +370,6 @@
 
     invoke-virtual {v13, v7, v5, v6, v3}, Landroid/net/wifi/WifiWatchdogStateMachine$BssidStatistics;->updateLoss(IDI)V
 
-    .line 827
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
@@ -443,7 +410,6 @@
 
     if-lez v13, :cond_4
 
-    .line 829
     move-object/from16 v0, p0
 
     iget v13, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->mSampleCount:I
@@ -458,7 +424,6 @@
 
     if-lt v13, v14, :cond_3
 
-    .line 830
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
@@ -474,7 +439,6 @@
 
     if-eqz v13, :cond_3
 
-    .line 831
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
@@ -484,14 +448,12 @@
     #calls: Landroid/net/wifi/WifiWatchdogStateMachine;->sendLinkStatusNotification(Z)V
     invoke-static {v13, v14}, Landroid/net/wifi/WifiWatchdogStateMachine;->access$900(Landroid/net/wifi/WifiWatchdogStateMachine;Z)V
 
-    .line 832
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     invoke-static {v13}, Landroid/net/wifi/WifiWatchdogStateMachine;->access$2504(Landroid/net/wifi/WifiWatchdogStateMachine;)I
 
-    .line 840
     .end local v1           #dbad:I
     .end local v2           #dgood:I
     .end local v3           #dtotal:I
@@ -510,24 +472,20 @@
     #setter for: Landroid/net/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastTimeSample:J
     invoke-static {v13, v8, v9}, Landroid/net/wifi/WifiWatchdogStateMachine$BssidStatistics;->access$4102(Landroid/net/wifi/WifiWatchdogStateMachine$BssidStatistics;J)J
 
-    .line 841
     move-object/from16 v0, p0
 
     iput v11, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->mLastTxBad:I
 
-    .line 842
     move-object/from16 v0, p0
 
     iput v12, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->mLastTxGood:I
 
-    .line 843
     move-object/from16 v0, p0
 
     iput v10, v0, Landroid/net/wifi/WifiWatchdogStateMachine$LinkMonitoringState;->mLastRssi:I
 
     goto/16 :goto_1
 
-    .line 835
     .restart local v1       #dbad:I
     .restart local v2       #dgood:I
     .restart local v3       #dtotal:I
@@ -541,7 +499,6 @@
 
     goto :goto_2
 
-    .line 768
     :sswitch_data_0
     .sparse-switch
         0x21003 -> :sswitch_0

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 326
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate$3;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 329
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate$3;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;->mScrim:Landroid/view/View;
@@ -53,6 +51,5 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 330
     return-void
 .end method

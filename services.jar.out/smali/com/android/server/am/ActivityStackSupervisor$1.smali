@@ -39,7 +39,6 @@
     .parameter
 
     .prologue
-    .line 1900
     iput-object p1, p0, Lcom/android/server/am/ActivityStackSupervisor$1;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityStackSupervisor$1;->val$thumbnailThread:Landroid/app/IApplicationThread;
@@ -65,12 +64,10 @@
 
     const/4 v1, 0x0
 
-    .line 1903
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$1;->val$thumbnailThread:Landroid/app/IApplicationThread;
 
     if-eqz v0, :cond_0
 
-    .line 1905
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$1;->val$thumbnailThread:Landroid/app/IApplicationThread;
 
@@ -80,7 +77,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1913
     :cond_0
     :goto_0
     const/4 v13, 0x0
@@ -91,7 +87,6 @@
 
     if-ge v13, v0, :cond_1
 
-    .line 1914
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$1;->val$thumbnails:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -100,7 +95,6 @@
 
     check-cast v7, Lcom/android/server/am/ActivityRecord;
 
-    .line 1915
     .local v7, r:Lcom/android/server/am/ActivityRecord;
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$1;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -116,18 +110,15 @@
 
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/am/ActivityManagerService;->sendPendingThumbnail(Lcom/android/server/am/ActivityRecord;Landroid/os/IBinder;Landroid/graphics/Bitmap;Ljava/lang/CharSequence;Z)V
 
-    .line 1913
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_1
 
-    .line 1906
     .end local v7           #r:Lcom/android/server/am/ActivityRecord;
     .end local v13           #i:I
     :catch_0
     move-exception v12
 
-    .line 1907
     .local v12, e:Ljava/lang/Exception;
     const-string v0, "ActivityManager"
 
@@ -135,7 +126,6 @@
 
     invoke-static {v0, v2, v12}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1908
     iget-object v0, p0, Lcom/android/server/am/ActivityStackSupervisor$1;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityStackSupervisor;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -150,7 +140,6 @@
 
     goto :goto_0
 
-    .line 1917
     .end local v12           #e:Ljava/lang/Exception;
     .restart local v13       #i:I
     :cond_1

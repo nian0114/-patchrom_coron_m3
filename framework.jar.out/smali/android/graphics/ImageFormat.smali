@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,10 +48,8 @@
 
     const/16 v0, 0x10
 
-    .line 230
     sparse-switch p0, :sswitch_data_0
 
-    .line 252
     const/4 v0, -0x1
 
     :goto_0
@@ -62,10 +59,8 @@
     :sswitch_1
     move v0, v1
 
-    .line 238
     goto :goto_0
 
-    .line 240
     :sswitch_2
     const/16 v0, 0x8
 
@@ -74,16 +69,13 @@
     :sswitch_3
     move v0, v1
 
-    .line 244
     goto :goto_0
 
     :sswitch_4
     move v0, v1
 
-    .line 246
     goto :goto_0
 
-    .line 230
     :sswitch_data_0
     .sparse-switch
         0x4 -> :sswitch_0

@@ -32,19 +32,16 @@
     .locals 2
 
     .prologue
-    .line 508
     const-wide/16 v0, 0x1388
 
     invoke-direct {p0, v0, v1}, Landroid/util/TimedRemoteCaller;-><init>(J)V
 
-    .line 509
     new-instance v0, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller$1;-><init>(Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;)V
 
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;->mCallback:Landroid/print/IPrintSpoolerCallbacks;
 
-    .line 515
     return-void
 .end method
 
@@ -64,12 +61,10 @@
     .end annotation
 
     .prologue
-    .line 519
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;->onBeforeRemoteCall()I
 
     move-result v5
 
-    .line 520
     .local v5, sequence:I
     iget-object v4, p0, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;->mCallback:Landroid/print/IPrintSpoolerCallbacks;
 
@@ -83,7 +78,6 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/print/IPrintSpooler;->setPrintJobState(Landroid/print/PrintJobId;ILjava/lang/String;Landroid/print/IPrintSpoolerCallbacks;I)V
 
-    .line 521
     invoke-virtual {p0, v5}, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;->getResultTimed(I)Ljava/lang/Object;
 
     move-result-object v0

@@ -44,7 +44,6 @@
     .locals 5
 
     .prologue
-    .line 63
     new-instance v0, Ljava/util/UUID;
 
     const-wide v1, 0x110f00001000L
@@ -55,7 +54,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothLEServiceUuid;->BLE_SERVICE_EXAMPLE_UUID_VALUE:Ljava/util/UUID;
 
-    .line 105
     new-instance v0, Landroid/bluetooth/BluetoothLEServiceUuid$1;
 
     invoke-direct {v0}, Landroid/bluetooth/BluetoothLEServiceUuid$1;-><init>()V
@@ -71,16 +69,12 @@
     .parameter "id"
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     iput-byte p1, p0, Landroid/bluetooth/BluetoothLEServiceUuid;->type:B
 
-    .line 75
     iput-object p2, p0, Landroid/bluetooth/BluetoothLEServiceUuid;->id:Ljava/util/UUID;
 
-    .line 76
     return-void
 .end method
 
@@ -89,18 +83,14 @@
     .parameter "id"
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     const/4 v0, 0x0
 
     iput-byte v0, p0, Landroid/bluetooth/BluetoothLEServiceUuid;->type:B
 
-    .line 69
     iput-object p1, p0, Landroid/bluetooth/BluetoothLEServiceUuid;->id:Ljava/util/UUID;
 
-    .line 70
     return-void
 .end method
 
@@ -110,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 95
     const/4 v0, 0x0
 
     return v0
@@ -120,7 +109,6 @@
     .locals 2
 
     .prologue
-    .line 85
     iget-object v0, p0, Landroid/bluetooth/BluetoothLEServiceUuid;->id:Ljava/util/UUID;
 
     invoke-virtual {v0}, Ljava/util/UUID;->getLeastSignificantBits()J
@@ -134,7 +122,6 @@
     .locals 2
 
     .prologue
-    .line 90
     iget-object v0, p0, Landroid/bluetooth/BluetoothLEServiceUuid;->id:Ljava/util/UUID;
 
     invoke-virtual {v0}, Ljava/util/UUID;->getMostSignificantBits()J
@@ -148,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-byte v0, p0, Landroid/bluetooth/BluetoothLEServiceUuid;->type:B
 
     return v0
@@ -160,25 +146,21 @@
     .parameter "flags"
 
     .prologue
-    .line 100
     iget-byte v0, p0, Landroid/bluetooth/BluetoothLEServiceUuid;->type:B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 101
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothLEServiceUuid;->getLeastSignificantBits()J
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 102
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothLEServiceUuid;->getMostSignificantBits()J
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 103
     return-void
 .end method

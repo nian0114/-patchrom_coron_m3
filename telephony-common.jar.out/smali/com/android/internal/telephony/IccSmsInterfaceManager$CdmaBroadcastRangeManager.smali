@@ -35,12 +35,10 @@
     .parameter
 
     .prologue
-    .line 855
     iput-object p1, p0, Lcom/android/internal/telephony/IccSmsInterfaceManager$CdmaBroadcastRangeManager;->this$0:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
     invoke-direct {p0}, Lcom/android/internal/telephony/IntRangeManager;-><init>()V
 
-    .line 856
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -59,7 +57,6 @@
     .parameter "selected"
 
     .prologue
-    .line 875
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManager$CdmaBroadcastRangeManager;->mConfigList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/cdma/CdmaSmsBroadcastConfigInfo;
@@ -70,7 +67,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 877
     return-void
 .end method
 
@@ -78,7 +74,6 @@
     .locals 3
 
     .prologue
-    .line 885
     iget-object v1, p0, Lcom/android/internal/telephony/IccSmsInterfaceManager$CdmaBroadcastRangeManager;->mConfigList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -87,14 +82,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 886
     const/4 v1, 0x1
 
-    .line 890
     :goto_0
     return v1
 
-    .line 888
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/IccSmsInterfaceManager$CdmaBroadcastRangeManager;->mConfigList:Ljava/util/ArrayList;
 
@@ -112,7 +104,6 @@
 
     check-cast v0, [Lcom/android/internal/telephony/cdma/CdmaSmsBroadcastConfigInfo;
 
-    .line 890
     .local v0, configs:[Lcom/android/internal/telephony/cdma/CdmaSmsBroadcastConfigInfo;
     iget-object v1, p0, Lcom/android/internal/telephony/IccSmsInterfaceManager$CdmaBroadcastRangeManager;->this$0:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
@@ -128,11 +119,9 @@
     .locals 1
 
     .prologue
-    .line 865
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManager$CdmaBroadcastRangeManager;->mConfigList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 866
     return-void
 .end method

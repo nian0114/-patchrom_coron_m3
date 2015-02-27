@@ -24,13 +24,10 @@
     .parameter "renderer"
 
     .prologue
-    .line 134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 135
     iput p1, p0, Landroid/view/GLES20Canvas$CanvasFinalizer;->mRenderer:I
 
-    .line 136
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 141
     :try_start_0
     iget v0, p0, Landroid/view/GLES20Canvas$CanvasFinalizer;->mRenderer:I
 
@@ -54,13 +50,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 143
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 145
     return-void
 
-    .line 143
     :catchall_0
     move-exception v0
 

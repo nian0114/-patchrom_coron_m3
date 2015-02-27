@@ -33,17 +33,14 @@
     .parameter "viewRootImpl"
 
     .prologue
-    .line 6470
     invoke-direct {p0}, Landroid/view/accessibility/IAccessibilityInteractionConnection$Stub;-><init>()V
 
-    .line 6471
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl$AccessibilityInteractionConnection;->mViewRootImpl:Ljava/lang/ref/WeakReference;
 
-    .line 6472
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .parameter "spec"
 
     .prologue
-    .line 6478
     iget-object v0, p0, Landroid/view/ViewRootImpl$AccessibilityInteractionConnection;->mViewRootImpl:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -69,7 +65,6 @@
 
     check-cast v10, Landroid/view/ViewRootImpl;
 
-    .line 6479
     .local v10, viewRootImpl:Landroid/view/ViewRootImpl;
     if-eqz v10, :cond_0
 
@@ -77,7 +72,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 6480
     invoke-virtual {v10}, Landroid/view/ViewRootImpl;->getAccessibilityInteractionController()Landroid/view/AccessibilityInteractionController;
 
     move-result-object v0
@@ -98,11 +92,9 @@
 
     invoke-virtual/range {v0 .. v9}, Landroid/view/AccessibilityInteractionController;->findAccessibilityNodeInfoByAccessibilityIdClientThread(JILandroid/view/accessibility/IAccessibilityInteractionConnectionCallback;IIJLandroid/view/MagnificationSpec;)V
 
-    .line 6492
     :goto_0
     return-void
 
-    .line 6487
     :cond_0
     const/4 v0, 0x0
 
@@ -113,7 +105,6 @@
 
     goto :goto_0
 
-    .line 6488
     :catch_0
     move-exception v0
 
@@ -132,7 +123,6 @@
     .parameter "spec"
 
     .prologue
-    .line 6539
     iget-object v2, p0, Landroid/view/ViewRootImpl$AccessibilityInteractionConnection;->mViewRootImpl:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -141,7 +131,6 @@
 
     check-cast v13, Landroid/view/ViewRootImpl;
 
-    .line 6540
     .local v13, viewRootImpl:Landroid/view/ViewRootImpl;
     if-eqz v13, :cond_0
 
@@ -149,7 +138,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6541
     invoke-virtual {v13}, Landroid/view/ViewRootImpl;->getAccessibilityInteractionController()Landroid/view/AccessibilityInteractionController;
 
     move-result-object v2
@@ -172,11 +160,9 @@
 
     invoke-virtual/range {v2 .. v12}, Landroid/view/AccessibilityInteractionController;->findAccessibilityNodeInfosByTextClientThread(JLjava/lang/String;ILandroid/view/accessibility/IAccessibilityInteractionConnectionCallback;IIJLandroid/view/MagnificationSpec;)V
 
-    .line 6553
     :goto_0
     return-void
 
-    .line 6548
     :cond_0
     const/4 v2, 0x0
 
@@ -191,7 +177,6 @@
 
     goto :goto_0
 
-    .line 6549
     :catch_0
     move-exception v2
 
@@ -210,7 +195,6 @@
     .parameter "spec"
 
     .prologue
-    .line 6519
     iget-object v2, p0, Landroid/view/ViewRootImpl$AccessibilityInteractionConnection;->mViewRootImpl:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -219,7 +203,6 @@
 
     check-cast v13, Landroid/view/ViewRootImpl;
 
-    .line 6520
     .local v13, viewRootImpl:Landroid/view/ViewRootImpl;
     if-eqz v13, :cond_0
 
@@ -227,7 +210,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6521
     invoke-virtual {v13}, Landroid/view/ViewRootImpl;->getAccessibilityInteractionController()Landroid/view/AccessibilityInteractionController;
 
     move-result-object v2
@@ -250,11 +232,9 @@
 
     invoke-virtual/range {v2 .. v12}, Landroid/view/AccessibilityInteractionController;->findAccessibilityNodeInfosByViewIdClientThread(JLjava/lang/String;ILandroid/view/accessibility/IAccessibilityInteractionConnectionCallback;IIJLandroid/view/MagnificationSpec;)V
 
-    .line 6533
     :goto_0
     return-void
 
-    .line 6528
     :cond_0
     const/4 v2, 0x0
 
@@ -269,7 +249,6 @@
 
     goto :goto_0
 
-    .line 6529
     :catch_0
     move-exception v2
 
@@ -288,7 +267,6 @@
     .parameter "spec"
 
     .prologue
-    .line 6559
     iget-object v2, p0, Landroid/view/ViewRootImpl$AccessibilityInteractionConnection;->mViewRootImpl:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -297,7 +275,6 @@
 
     check-cast v13, Landroid/view/ViewRootImpl;
 
-    .line 6560
     .local v13, viewRootImpl:Landroid/view/ViewRootImpl;
     if-eqz v13, :cond_0
 
@@ -305,7 +282,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6561
     invoke-virtual {v13}, Landroid/view/ViewRootImpl;->getAccessibilityInteractionController()Landroid/view/AccessibilityInteractionController;
 
     move-result-object v2
@@ -328,11 +304,9 @@
 
     invoke-virtual/range {v2 .. v12}, Landroid/view/AccessibilityInteractionController;->findFocusClientThread(JIILandroid/view/accessibility/IAccessibilityInteractionConnectionCallback;IIJLandroid/view/MagnificationSpec;)V
 
-    .line 6572
     :goto_0
     return-void
 
-    .line 6567
     :cond_0
     const/4 v2, 0x0
 
@@ -347,7 +321,6 @@
 
     goto :goto_0
 
-    .line 6568
     :catch_0
     move-exception v2
 
@@ -366,7 +339,6 @@
     .parameter "spec"
 
     .prologue
-    .line 6578
     iget-object v2, p0, Landroid/view/ViewRootImpl$AccessibilityInteractionConnection;->mViewRootImpl:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -375,7 +347,6 @@
 
     check-cast v13, Landroid/view/ViewRootImpl;
 
-    .line 6579
     .local v13, viewRootImpl:Landroid/view/ViewRootImpl;
     if-eqz v13, :cond_0
 
@@ -383,7 +354,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6580
     invoke-virtual {v13}, Landroid/view/ViewRootImpl;->getAccessibilityInteractionController()Landroid/view/AccessibilityInteractionController;
 
     move-result-object v2
@@ -406,11 +376,9 @@
 
     invoke-virtual/range {v2 .. v12}, Landroid/view/AccessibilityInteractionController;->focusSearchClientThread(JIILandroid/view/accessibility/IAccessibilityInteractionConnectionCallback;IIJLandroid/view/MagnificationSpec;)V
 
-    .line 6591
     :goto_0
     return-void
 
-    .line 6586
     :cond_0
     const/4 v2, 0x0
 
@@ -425,7 +393,6 @@
 
     goto :goto_0
 
-    .line 6587
     :catch_0
     move-exception v2
 
@@ -444,7 +411,6 @@
     .parameter "interrogatingTid"
 
     .prologue
-    .line 6499
     iget-object v2, p0, Landroid/view/ViewRootImpl$AccessibilityInteractionConnection;->mViewRootImpl:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -453,7 +419,6 @@
 
     check-cast v13, Landroid/view/ViewRootImpl;
 
-    .line 6500
     .local v13, viewRootImpl:Landroid/view/ViewRootImpl;
     if-eqz v13, :cond_0
 
@@ -461,7 +426,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6501
     invoke-virtual {v13}, Landroid/view/ViewRootImpl;->getAccessibilityInteractionController()Landroid/view/AccessibilityInteractionController;
 
     move-result-object v2
@@ -484,11 +448,9 @@
 
     invoke-virtual/range {v2 .. v12}, Landroid/view/AccessibilityInteractionController;->performAccessibilityActionClientThread(JILandroid/os/Bundle;ILandroid/view/accessibility/IAccessibilityInteractionConnectionCallback;IIJ)V
 
-    .line 6512
     :goto_0
     return-void
 
-    .line 6507
     :cond_0
     const/4 v2, 0x0
 
@@ -503,7 +465,6 @@
 
     goto :goto_0
 
-    .line 6508
     :catch_0
     move-exception v2
 

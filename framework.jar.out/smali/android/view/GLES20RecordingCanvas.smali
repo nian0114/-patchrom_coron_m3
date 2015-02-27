@@ -27,7 +27,6 @@
     .locals 2
 
     .prologue
-    .line 33
     new-instance v0, Landroid/util/Pools$SynchronizedPool;
 
     const/16 v1, 0x19
@@ -45,10 +44,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 39
     invoke-direct {p0, v0, v0}, Landroid/view/GLES20Canvas;-><init>(ZZ)V
 
-    .line 40
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .parameter "displayList"
 
     .prologue
-    .line 43
     sget-object v1, Landroid/view/GLES20RecordingCanvas;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v1}, Landroid/util/Pools$SynchronizedPool;->acquire()Ljava/lang/Object;
@@ -66,22 +62,18 @@
 
     check-cast v0, Landroid/view/GLES20RecordingCanvas;
 
-    .line 44
     .local v0, canvas:Landroid/view/GLES20RecordingCanvas;
     if-nez v0, :cond_0
 
-    .line 45
     new-instance v0, Landroid/view/GLES20RecordingCanvas;
 
     .end local v0           #canvas:Landroid/view/GLES20RecordingCanvas;
     invoke-direct {v0}, Landroid/view/GLES20RecordingCanvas;-><init>()V
 
-    .line 47
     .restart local v0       #canvas:Landroid/view/GLES20RecordingCanvas;
     :cond_0
     iput-object p0, v0, Landroid/view/GLES20RecordingCanvas;->mDisplayList:Landroid/view/GLES20DisplayList;
 
-    .line 48
     return-object v0
 .end method
 
@@ -94,12 +86,10 @@
     .parameter "flags"
 
     .prologue
-    .line 67
     invoke-super {p0, p1, p2, p3}, Landroid/view/GLES20Canvas;->drawDisplayList(Landroid/view/DisplayList;Landroid/graphics/Rect;I)I
 
     move-result v0
 
-    .line 68
     .local v0, status:I
     iget-object v1, p0, Landroid/view/GLES20RecordingCanvas;->mDisplayList:Landroid/view/GLES20DisplayList;
 
@@ -109,7 +99,6 @@
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 69
     return v0
 .end method
 
@@ -118,7 +107,6 @@
     .parameter "nativeDisplayList"
 
     .prologue
-    .line 62
     invoke-virtual {p0, p1}, Landroid/view/GLES20RecordingCanvas;->getDisplayList(I)I
 
     move-result v0
@@ -130,20 +118,16 @@
     .locals 1
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/view/GLES20RecordingCanvas;->mDisplayList:Landroid/view/GLES20DisplayList;
 
-    .line 53
     invoke-virtual {p0}, Landroid/view/GLES20RecordingCanvas;->resetDisplayListRenderer()V
 
-    .line 54
     sget-object v0, Landroid/view/GLES20RecordingCanvas;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v0, p0}, Landroid/util/Pools$SynchronizedPool;->release(Ljava/lang/Object;)Z
 
-    .line 55
     return-void
 .end method
 
@@ -151,11 +135,9 @@
     .locals 1
 
     .prologue
-    .line 58
     iget-object v0, p0, Landroid/view/GLES20RecordingCanvas;->mDisplayList:Landroid/view/GLES20DisplayList;
 
     invoke-virtual {v0}, Landroid/view/GLES20DisplayList;->clearReferences()V
 
-    .line 59
     return-void
 .end method

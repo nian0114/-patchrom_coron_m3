@@ -28,7 +28,6 @@
     .parameter
 
     .prologue
-    .line 129
     iput-object p1, p0, Landroid/webkit/JsDialogHelper$CancelListener;->this$0:Landroid/webkit/JsDialogHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "x1"
 
     .prologue
-    .line 129
     invoke-direct {p0, p1}, Landroid/webkit/JsDialogHelper$CancelListener;-><init>(Landroid/webkit/JsDialogHelper;)V
 
     return-void
@@ -55,7 +53,6 @@
     .parameter "dialog"
 
     .prologue
-    .line 133
     iget-object v0, p0, Landroid/webkit/JsDialogHelper$CancelListener;->this$0:Landroid/webkit/JsDialogHelper;
 
     #getter for: Landroid/webkit/JsDialogHelper;->mResult:Landroid/webkit/JsPromptResult;
@@ -65,7 +62,6 @@
 
     invoke-virtual {v0}, Landroid/webkit/JsPromptResult;->cancel()V
 
-    .line 134
     return-void
 .end method
 
@@ -75,7 +71,6 @@
     .parameter "which"
 
     .prologue
-    .line 137
     iget-object v0, p0, Landroid/webkit/JsDialogHelper$CancelListener;->this$0:Landroid/webkit/JsDialogHelper;
 
     #getter for: Landroid/webkit/JsDialogHelper;->mResult:Landroid/webkit/JsPromptResult;
@@ -85,6 +80,5 @@
 
     invoke-virtual {v0}, Landroid/webkit/JsPromptResult;->cancel()V
 
-    .line 138
     return-void
 .end method

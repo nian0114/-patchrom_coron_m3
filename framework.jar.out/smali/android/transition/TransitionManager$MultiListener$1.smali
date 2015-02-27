@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 278
     iput-object p1, p0, Landroid/transition/TransitionManager$MultiListener$1;->this$0:Landroid/transition/TransitionManager$MultiListener;
 
     iput-object p2, p0, Landroid/transition/TransitionManager$MultiListener$1;->val$runningTransitions:Landroid/util/ArrayMap;
@@ -44,7 +43,6 @@
     .parameter "transition"
 
     .prologue
-    .line 281
     iget-object v1, p0, Landroid/transition/TransitionManager$MultiListener$1;->val$runningTransitions:Landroid/util/ArrayMap;
 
     iget-object v2, p0, Landroid/transition/TransitionManager$MultiListener$1;->this$0:Landroid/transition/TransitionManager$MultiListener;
@@ -57,10 +55,8 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 283
     .local v0, currentTransitions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/transition/Transition;>;"
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 284
     return-void
 .end method

@@ -26,12 +26,9 @@
     .parameter "s"
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput-object p1, p0, Landroid/renderscript/ScriptGroup$IO;->mKID:Landroid/renderscript/Script$KernelID;
 
-    .line 55
     return-void
 .end method

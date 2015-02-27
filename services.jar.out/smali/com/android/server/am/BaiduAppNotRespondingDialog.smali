@@ -37,32 +37,25 @@
 
     const/4 v8, 0x1
 
-    .line 42
     invoke-direct {p0, p2}, Lcom/android/server/am/BaseErrorDialog;-><init>(Landroid/content/Context;)V
 
-    .line 105
     new-instance v5, Lcom/android/server/am/BaiduAppNotRespondingDialog$1;
 
     invoke-direct {v5, p0}, Lcom/android/server/am/BaiduAppNotRespondingDialog$1;-><init>(Lcom/android/server/am/BaiduAppNotRespondingDialog;)V
 
     iput-object v5, p0, Lcom/android/server/am/BaiduAppNotRespondingDialog;->mHandler:Landroid/os/Handler;
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/am/BaiduAppNotRespondingDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 45
     iput-object p3, p0, Lcom/android/server/am/BaiduAppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
-    .line 46
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    .line 48
     .local v3, res:Landroid/content/res/Resources;
     invoke-virtual {p0, v7}, Lcom/android/server/am/BaiduAppNotRespondingDialog;->setCancelable(Z)V
 
-    .line 51
     if-eqz p4, :cond_1
 
     iget-object v5, p4, Lcom/android/server/am/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
@@ -75,12 +68,10 @@
 
     move-result-object v1
 
-    .line 54
     .local v1, name1:Ljava/lang/CharSequence;
     :goto_0
     const/4 v2, 0x0
 
-    .line 55
     .local v2, name2:Ljava/lang/CharSequence;
     iget-object v5, p3, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
@@ -102,13 +93,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 57
     if-eqz v1, :cond_2
 
-    .line 58
     const v4, #android:string@anr_activity_application#t
 
-    .line 74
     .local v4, resid:I
     :goto_1
     if-eqz v2, :cond_5
@@ -134,7 +122,6 @@
     :goto_2
     invoke-virtual {p0, v5}, Lcom/android/server/am/BaiduAppNotRespondingDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 78
     const/4 v5, -0x2
 
     const v6, #android:string@force_close#t
@@ -151,7 +138,6 @@
 
     invoke-virtual {p0, v5, v6, v7}, Lcom/android/server/am/BaiduAppNotRespondingDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 81
     const/4 v5, -0x3
 
     const v6, #android:string@wait#t
@@ -168,7 +154,6 @@
 
     invoke-virtual {p0, v5, v6, v7}, Lcom/android/server/am/BaiduAppNotRespondingDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 86
     const/4 v5, -0x1
 
     const v6, #android:string@report#t
@@ -187,7 +172,6 @@
 
     invoke-virtual {p0, v5, v6, v7}, Lcom/android/server/am/BaiduAppNotRespondingDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 91
     const v5, #android:string@anr_title#t
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
@@ -196,10 +180,8 @@
 
     invoke-virtual {p0, v5}, Lcom/android/server/am/BaiduAppNotRespondingDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 92
     if-eqz p5, :cond_0
 
-    .line 93
     invoke-virtual {p0}, Lcom/android/server/am/BaiduAppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v5
@@ -208,7 +190,6 @@
 
     invoke-virtual {v5, v6}, Landroid/view/Window;->setType(I)V
 
-    .line 95
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/am/BaiduAppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
@@ -218,7 +199,6 @@
 
     move-result-object v0
 
-    .line 96
     .local v0, attrs:Landroid/view/WindowManager$LayoutParams;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -244,22 +224,18 @@
 
     invoke-virtual {v0, v5}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 97
     const/16 v5, 0x110
 
     iput v5, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 99
     invoke-virtual {p0}, Lcom/android/server/am/BaiduAppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v5
 
     invoke-virtual {v5, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 100
     return-void
 
-    .line 51
     .end local v0           #attrs:Landroid/view/WindowManager$LayoutParams;
     .end local v1           #name1:Ljava/lang/CharSequence;
     .end local v2           #name2:Ljava/lang/CharSequence;
@@ -269,47 +245,38 @@
 
     goto/16 :goto_0
 
-    .line 60
     .restart local v1       #name1:Ljava/lang/CharSequence;
     .restart local v2       #name2:Ljava/lang/CharSequence;
     :cond_2
     move-object v1, v2
 
-    .line 61
     iget-object v2, p3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 62
     const v4, #android:string@anr_application_process#t
 
     .restart local v4       #resid:I
     goto/16 :goto_1
 
-    .line 65
     .end local v4           #resid:I
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 66
     iget-object v2, p3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 67
     const v4, #android:string@anr_activity_process#t
 
     .restart local v4       #resid:I
     goto/16 :goto_1
 
-    .line 69
     .end local v4           #resid:I
     :cond_4
     iget-object v1, p3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 70
     const v4, #android:string@anr_process#t
 
     .restart local v4       #resid:I
     goto/16 :goto_1
 
-    .line 74
     :cond_5
     new-array v5, v8, [Ljava/lang/Object;
 
@@ -331,7 +298,6 @@
     .parameter "x0"
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/android/server/am/BaiduAppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
     return-object v0
@@ -342,7 +308,6 @@
     .parameter "x0"
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/android/server/am/BaiduAppNotRespondingDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
     return-object v0
@@ -354,7 +319,6 @@
     .locals 0
 
     .prologue
-    .line 103
     return-void
 .end method
 
@@ -364,7 +328,6 @@
     .parameter "packageName"
 
     .prologue
-    .line 153
     :try_start_0
     new-instance v0, Landroid/content/Intent;
 
@@ -372,23 +335,19 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 154
     .local v0, intent:Landroid/content/Intent;
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 155
     const-string v1, "type"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 156
     const-string v1, "package"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 157
     invoke-virtual {p0}, Lcom/android/server/am/BaiduAppNotRespondingDialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -397,12 +356,10 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 160
     .end local v0           #intent:Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 158
     :catch_0
     move-exception v1
 

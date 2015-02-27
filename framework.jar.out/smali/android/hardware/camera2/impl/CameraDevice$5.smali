@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 107
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraDevice$5;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 109
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$5;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #calls: Landroid/hardware/camera2/impl/CameraDevice;->isClosed()Z
@@ -51,7 +49,6 @@
 
     if-nez v0, :cond_0
 
-    .line 110
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$5;->this$0:Landroid/hardware/camera2/impl/CameraDevice;
 
     #getter for: Landroid/hardware/camera2/impl/CameraDevice;->mDeviceListener:Landroid/hardware/camera2/CameraDevice$StateListener;
@@ -63,7 +60,6 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateListener;->onClosed(Landroid/hardware/camera2/CameraDevice;)V
 
-    .line 112
     :cond_0
     return-void
 .end method

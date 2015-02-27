@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 241
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,11 +35,9 @@
     .parameter "which"
 
     .prologue
-    .line 243
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->access$002(Z)Z
 
-    .line 244
     return-void
 .end method

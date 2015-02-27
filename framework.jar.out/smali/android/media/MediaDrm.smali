@@ -58,15 +58,12 @@
     .locals 1
 
     .prologue
-    .line 701
-    const-string/jumbo v0, "media_jni"
+    const-string v0, "media_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 702
     invoke-static {}, Landroid/media/MediaDrm;->native_init()V
 
-    .line 703
     return-void
 .end method
 
@@ -80,10 +77,8 @@
     .end annotation
 
     .prologue
-    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 152
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -91,14 +86,12 @@
     .local v0, looper:Landroid/os/Looper;
     if-eqz v0, :cond_0
 
-    .line 153
     new-instance v1, Landroid/media/MediaDrm$EventHandler;
 
     invoke-direct {v1, p0, p0, v0}, Landroid/media/MediaDrm$EventHandler;-><init>(Landroid/media/MediaDrm;Landroid/media/MediaDrm;Landroid/os/Looper;)V
 
     iput-object v1, p0, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
-    .line 163
     :goto_0
     new-instance v1, Ljava/lang/ref/WeakReference;
 
@@ -110,10 +103,8 @@
 
     invoke-direct {p0, v1, v2}, Landroid/media/MediaDrm;->native_setup(Ljava/lang/Object;[B)V
 
-    .line 165
     return-void
 
-    .line 154
     :cond_0
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -121,7 +112,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 155
     new-instance v1, Landroid/media/MediaDrm$EventHandler;
 
     invoke-direct {v1, p0, p0, v0}, Landroid/media/MediaDrm$EventHandler;-><init>(Landroid/media/MediaDrm;Landroid/media/MediaDrm;Landroid/os/Looper;)V
@@ -130,7 +120,6 @@
 
     goto :goto_0
 
-    .line 157
     :cond_1
     const/4 v1, 0x0
 
@@ -144,7 +133,6 @@
     .parameter "x0"
 
     .prologue
-    .line 96
     iget v0, p0, Landroid/media/MediaDrm;->mNativeContext:I
 
     return v0
@@ -155,7 +143,6 @@
     .parameter "x0"
 
     .prologue
-    .line 96
     iget-object v0, p0, Landroid/media/MediaDrm;->mOnEventListener:Landroid/media/MediaDrm$OnEventListener;
 
     return-object v0
@@ -168,7 +155,6 @@
     .parameter "x2"
 
     .prologue
-    .line 96
     invoke-static {p0, p1, p2}, Landroid/media/MediaDrm;->setCipherAlgorithmNative(Landroid/media/MediaDrm;[BLjava/lang/String;)V
 
     return-void
@@ -181,7 +167,6 @@
     .parameter "x2"
 
     .prologue
-    .line 96
     invoke-static {p0, p1, p2}, Landroid/media/MediaDrm;->setMacAlgorithmNative(Landroid/media/MediaDrm;[BLjava/lang/String;)V
 
     return-void
@@ -196,7 +181,6 @@
     .parameter "x4"
 
     .prologue
-    .line 96
     invoke-static {p0, p1, p2, p3, p4}, Landroid/media/MediaDrm;->encryptNative(Landroid/media/MediaDrm;[B[B[B[B)[B
 
     move-result-object v0
@@ -213,7 +197,6 @@
     .parameter "x4"
 
     .prologue
-    .line 96
     invoke-static {p0, p1, p2, p3, p4}, Landroid/media/MediaDrm;->decryptNative(Landroid/media/MediaDrm;[B[B[B[B)[B
 
     move-result-object v0
@@ -229,7 +212,6 @@
     .parameter "x3"
 
     .prologue
-    .line 96
     invoke-static {p0, p1, p2, p3}, Landroid/media/MediaDrm;->signNative(Landroid/media/MediaDrm;[B[B[B)[B
 
     move-result-object v0
@@ -246,7 +228,6 @@
     .parameter "x4"
 
     .prologue
-    .line 96
     invoke-static {p0, p1, p2, p3, p4}, Landroid/media/MediaDrm;->verifyNative(Landroid/media/MediaDrm;[B[B[B[B)Z
 
     move-result v0
@@ -265,24 +246,20 @@
     .parameter "uuid"
 
     .prologue
-    .line 127
     invoke-virtual {p0}, Ljava/util/UUID;->getMostSignificantBits()J
 
     move-result-wide v3
 
-    .line 128
     .local v3, msb:J
     invoke-virtual {p0}, Ljava/util/UUID;->getLeastSignificantBits()J
 
     move-result-wide v1
 
-    .line 130
     .local v1, lsb:J
     const/16 v6, 0x10
 
     new-array v5, v6, [B
 
-    .line 131
     .local v5, uuidBytes:[B
     const/4 v0, 0x0
 
@@ -292,7 +269,6 @@
 
     if-ge v0, v6, :cond_0
 
-    .line 132
     rsub-int/lit8 v6, v0, 0x7
 
     mul-int/lit8 v6, v6, 0x8
@@ -305,7 +281,6 @@
 
     aput-byte v6, v5, v0
 
-    .line 133
     add-int/lit8 v6, v0, 0x8
 
     rsub-int/lit8 v7, v0, 0x7
@@ -320,12 +295,10 @@
 
     aput-byte v7, v5, v6
 
-    .line 131
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 136
     :cond_0
     return-object v5
 .end method
@@ -335,7 +308,6 @@
     .parameter "uuid"
 
     .prologue
-    .line 111
     invoke-static {p0}, Landroid/media/MediaDrm;->getByteArrayFromUUID(Ljava/util/UUID;)[B
 
     move-result-object v0
@@ -355,7 +327,6 @@
     .parameter "mimeType"
 
     .prologue
-    .line 123
     invoke-static {p0}, Landroid/media/MediaDrm;->getByteArrayFromUUID(Ljava/util/UUID;)[B
 
     move-result-object v0
@@ -387,7 +358,6 @@
     .parameter "obj"
 
     .prologue
-    .line 275
     check-cast p0, Ljava/lang/ref/WeakReference;
 
     .end local p0
@@ -397,22 +367,18 @@
 
     check-cast v1, Landroid/media/MediaDrm;
 
-    .line 276
     .local v1, md:Landroid/media/MediaDrm;
     if-nez v1, :cond_1
 
-    .line 283
     :cond_0
     :goto_0
     return-void
 
-    .line 279
     :cond_1
     iget-object v2, v1, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
     if-eqz v2, :cond_0
 
-    .line 280
     iget-object v2, v1, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
     const/16 v3, 0xc8
@@ -421,7 +387,6 @@
 
     move-result-object v0
 
-    .line 281
     .local v0, m:Landroid/os/Message;
     iget-object v2, v1, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
@@ -451,10 +416,8 @@
     .locals 0
 
     .prologue
-    .line 690
     invoke-direct {p0}, Landroid/media/MediaDrm;->native_finalize()V
 
-    .line 691
     return-void
 .end method
 
@@ -465,7 +428,6 @@
     .parameter "macAlgorithm"
 
     .prologue
-    .line 685
     new-instance v0, Landroid/media/MediaDrm$CryptoSession;
 
     move-object v1, p0
@@ -579,10 +541,8 @@
     .parameter "listener"
 
     .prologue
-    .line 174
     iput-object p1, p0, Landroid/media/MediaDrm;->mOnEventListener:Landroid/media/MediaDrm$OnEventListener;
 
-    .line 175
     return-void
 .end method
 

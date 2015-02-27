@@ -149,95 +149,80 @@
     .parameter "userId"
 
     .prologue
-    .line 2973
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2920
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mClients:Landroid/os/RemoteCallbackList;
 
-    .line 2923
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mInteractionConnections:Landroid/util/SparseArray;
 
-    .line 2926
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mWindowTokens:Landroid/util/SparseArray;
 
-    .line 2930
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mBoundServices:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 2933
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mComponentNameToServiceMap:Ljava/util/Map;
 
-    .line 2936
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mInstalledServices:Ljava/util/List;
 
-    .line 2939
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mBindingServices:Ljava/util/Set;
 
-    .line 2941
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mEnabledServices:Ljava/util/Set;
 
-    .line 2943
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mTouchExplorationGrantedServices:Ljava/util/Set;
 
-    .line 2946
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mHandledFeedbackTypes:I
 
-    .line 2948
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mLastSentClientState:I
 
-    .line 2960
     new-instance v0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/accessibility/AccessibilityManagerService$UserState$1;-><init>(Lcom/android/server/accessibility/AccessibilityManagerService$UserState;)V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationSerivceOnwerDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
-    .line 2974
     iput p2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUserId:I
 
-    .line 2975
     return-void
 .end method
 
@@ -246,7 +231,6 @@
     .parameter "x0"
 
     .prologue
-    .line 2915
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationSerivceOnwerDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
     return-object v0
@@ -257,7 +241,6 @@
     .parameter "x0"
 
     .prologue
-    .line 2915
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationServiceOwner:Landroid/os/IBinder;
 
     return-object v0
@@ -269,7 +252,6 @@
     .parameter "x1"
 
     .prologue
-    .line 2915
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationServiceOwner:Landroid/os/IBinder;
 
     return-object p1
@@ -280,7 +262,6 @@
     .parameter "x0"
 
     .prologue
-    .line 2915
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationServiceClient:Landroid/accessibilityservice/IAccessibilityServiceClient;
 
     return-object v0
@@ -292,7 +273,6 @@
     .parameter "x1"
 
     .prologue
-    .line 2915
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationServiceClient:Landroid/accessibilityservice/IAccessibilityServiceClient;
 
     return-object p1
@@ -303,7 +283,6 @@
     .parameter "x0"
 
     .prologue
-    .line 2915
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationService:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
     return-object v0
@@ -315,7 +294,6 @@
     .parameter "x1"
 
     .prologue
-    .line 2915
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationService:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
     return-object p1
@@ -329,18 +307,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3016
     iput-object v3, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationService:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
-    .line 3017
     iput-object v3, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationServiceClient:Landroid/accessibilityservice/IAccessibilityServiceClient;
 
-    .line 3018
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationServiceOwner:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
 
-    .line 3019
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationServiceOwner:Landroid/os/IBinder;
 
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationSerivceOnwerDeathRecipient:Landroid/os/IBinder$DeathRecipient;
@@ -349,10 +323,8 @@
 
     invoke-interface {v0, v1, v2}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 3021
     iput-object v3, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationServiceOwner:Landroid/os/IBinder;
 
-    .line 3023
     :cond_0
     return-void
 .end method
@@ -361,19 +333,15 @@
     .locals 2
 
     .prologue
-    .line 2978
     const/4 v0, 0x0
 
-    .line 2979
     .local v0, clientState:I
     iget-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mIsAccessibilityEnabled:Z
 
     if-eqz v1, :cond_0
 
-    .line 2980
     or-int/lit8 v0, v0, 0x1
 
-    .line 2983
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mIsAccessibilityEnabled:Z
 
@@ -383,10 +351,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 2984
     or-int/lit8 v0, v0, 0x2
 
-    .line 2986
     :cond_1
     return v0
 .end method
@@ -397,63 +363,49 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2991
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationService:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
     if-eqz v0, :cond_0
 
-    .line 2992
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mUiAutomationService:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/AccessibilityManagerService$Service;->binderDied()V
 
-    .line 2996
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     #calls: Lcom/android/server/accessibility/AccessibilityManagerService;->unbindAllServicesLocked(Lcom/android/server/accessibility/AccessibilityManagerService$UserState;)V
     invoke-static {v0, p0}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$4300(Lcom/android/server/accessibility/AccessibilityManagerService;Lcom/android/server/accessibility/AccessibilityManagerService$UserState;)V
 
-    .line 2999
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mBoundServices:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->clear()V
 
-    .line 3000
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mBindingServices:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 3003
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mHandledFeedbackTypes:I
 
-    .line 3004
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mLastSentClientState:I
 
-    .line 3007
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mEnabledServices:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 3008
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mTouchExplorationGrantedServices:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 3009
     iput-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mIsAccessibilityEnabled:Z
 
-    .line 3010
     iput-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mIsTouchExplorationEnabled:Z
 
-    .line 3011
     iput-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mIsEnhancedWebAccessibilityEnabled:Z
 
-    .line 3012
     iput-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mIsDisplayMagnificationEnabled:Z
 
-    .line 3013
     return-void
 .end method

@@ -49,43 +49,36 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 65
     invoke-direct {p0}, Landroid/net/BaseNetworkStateTracker;-><init>()V
 
-    .line 50
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 51
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mPrivateDnsRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 52
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mDefaultRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 54
     sget-object v0, Landroid/net/NetworkInfo$State;->UNKNOWN:Landroid/net/NetworkInfo$State;
 
     iput-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mLastState:Landroid/net/NetworkInfo$State;
 
-    .line 63
     new-instance v0, Landroid/net/SamplingDataTracker;
 
     invoke-direct {v0}, Landroid/net/SamplingDataTracker;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mSamplingDataTracker:Landroid/net/SamplingDataTracker;
 
-    .line 66
     new-instance v0, Landroid/net/NetworkInfo;
 
     const-string v1, ""
@@ -94,29 +87,24 @@
 
     iput-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 67
     new-instance v0, Landroid/net/LinkProperties;
 
     invoke-direct {v0}, Landroid/net/LinkProperties;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
-    .line 68
     new-instance v0, Landroid/net/LinkCapabilities;
 
     invoke-direct {v0}, Landroid/net/LinkCapabilities;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mLinkCapabilities:Landroid/net/LinkCapabilities;
 
-    .line 70
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v0, v2}, Landroid/net/NetworkInfo;->setIsAvailable(Z)V
 
-    .line 71
     invoke-virtual {p0, v2}, Landroid/net/wifi/WifiStateTracker;->setTeardownRequested(Z)V
 
-    .line 72
     return-void
 .end method
 
@@ -125,7 +113,6 @@
     .parameter "x0"
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mLastState:Landroid/net/NetworkInfo$State;
 
     return-object v0
@@ -137,7 +124,6 @@
     .parameter "x1"
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/net/wifi/WifiStateTracker;->mLastState:Landroid/net/NetworkInfo$State;
 
     return-object p1
@@ -149,7 +135,6 @@
     .parameter "x1"
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/net/wifi/WifiStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     return-object p1
@@ -160,7 +145,6 @@
     .parameter "x0"
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     return-object v0
@@ -171,7 +155,6 @@
     .parameter "x0"
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mSamplingDataTracker:Landroid/net/SamplingDataTracker;
 
     return-object v0
@@ -182,7 +165,6 @@
     .parameter "x0"
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     return-object v0
@@ -193,7 +175,6 @@
     .parameter "x0"
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mCsHandler:Landroid/os/Handler;
 
     return-object v0
@@ -205,7 +186,6 @@
     .parameter "x1"
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/net/wifi/WifiStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     return-object p1
@@ -216,7 +196,6 @@
     .parameter "x0"
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     return-object v0
@@ -228,7 +207,6 @@
     .parameter "x1"
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/net/wifi/WifiStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     return-object p1
@@ -239,7 +217,6 @@
     .parameter "x0"
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     return-object v0
@@ -251,7 +228,6 @@
     .parameter "x1"
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/net/wifi/WifiStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     return-object p1
@@ -263,7 +239,6 @@
     .parameter "x1"
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/net/wifi/WifiStateTracker;->mLinkCapabilities:Landroid/net/LinkCapabilities;
 
     return-object p1
@@ -274,7 +249,6 @@
     .parameter "x0"
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mLinkCapabilities:Landroid/net/LinkCapabilities;
 
     return-object v0
@@ -286,7 +260,6 @@
     .parameter "x1"
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/net/wifi/WifiStateTracker;->mLinkCapabilities:Landroid/net/LinkCapabilities;
 
     return-object p1
@@ -298,7 +271,6 @@
     .parameter "x1"
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/net/wifi/WifiStateTracker;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     return-object p1
@@ -309,7 +281,6 @@
     .parameter "x0"
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     return-object v0
@@ -322,12 +293,10 @@
     .parameter "link"
 
     .prologue
-    .line 329
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v0, p1}, Landroid/net/LinkProperties;->addStackedLink(Landroid/net/LinkProperties;)Z
 
-    .line 330
     return-void
 .end method
 
@@ -335,12 +304,10 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->captivePortalCheckComplete()V
 
-    .line 124
     return-void
 .end method
 
@@ -349,7 +316,6 @@
     .parameter "isCaptivePortal"
 
     .prologue
-    .line 129
     return-void
 .end method
 
@@ -358,12 +324,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 251
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mDefaultRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 252
     return-void
 .end method
 
@@ -371,7 +335,6 @@
     .locals 2
 
     .prologue
-    .line 201
     new-instance v0, Landroid/net/LinkCapabilities;
 
     iget-object v1, p0, Landroid/net/wifi/WifiStateTracker;->mLinkCapabilities:Landroid/net/LinkCapabilities;
@@ -385,7 +348,6 @@
     .locals 2
 
     .prologue
-    .line 190
     new-instance v0, Landroid/net/LinkProperties;
 
     iget-object v1, p0, Landroid/net/wifi/WifiStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
@@ -399,26 +361,21 @@
     .locals 6
 
     .prologue
-    .line 210
     iget-object v2, p0, Landroid/net/wifi/WifiStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     if-nez v2, :cond_1
 
-    .line 212
     const/4 v0, 0x0
 
-    .line 237
     :cond_0
     :goto_0
     return-object v0
 
-    .line 215
     :cond_1
     new-instance v0, Landroid/net/WifiLinkQualityInfo;
 
     invoke-direct {v0}, Landroid/net/WifiLinkQualityInfo;-><init>()V
 
-    .line 216
     .local v0, li:Landroid/net/WifiLinkQualityInfo;
     iget-object v2, p0, Landroid/net/wifi/WifiStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
@@ -428,20 +385,17 @@
 
     invoke-virtual {v0, v2}, Landroid/net/WifiLinkQualityInfo;->setNetworkType(I)V
 
-    .line 218
     iget-object v2, p0, Landroid/net/wifi/WifiStateTracker;->mSamplingDataTracker:Landroid/net/SamplingDataTracker;
 
     iget-object v3, v2, Landroid/net/SamplingDataTracker;->mSamplingDataLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 219
     :try_start_0
     iget-object v2, p0, Landroid/net/wifi/WifiStateTracker;->mSamplingDataTracker:Landroid/net/SamplingDataTracker;
 
     invoke-virtual {v2, v0}, Landroid/net/SamplingDataTracker;->setCommonLinkQualityInfoFields(Landroid/net/LinkQualityInfo;)V
 
-    .line 220
     iget-object v2, p0, Landroid/net/wifi/WifiStateTracker;->mSamplingDataTracker:Landroid/net/SamplingDataTracker;
 
     invoke-virtual {v2}, Landroid/net/SamplingDataTracker;->getSampledTxPacketCount()J
@@ -450,7 +404,6 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/net/WifiLinkQualityInfo;->setTxGood(J)V
 
-    .line 221
     iget-object v2, p0, Landroid/net/wifi/WifiStateTracker;->mSamplingDataTracker:Landroid/net/SamplingDataTracker;
 
     invoke-virtual {v2}, Landroid/net/SamplingDataTracker;->getSampledTxPacketErrorCount()J
@@ -459,17 +412,14 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/net/WifiLinkQualityInfo;->setTxBad(J)V
 
-    .line 222
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 227
     iget-object v2, p0, Landroid/net/wifi/WifiStateTracker;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     if-eqz v2, :cond_0
 
-    .line 228
     iget-object v2, p0, Landroid/net/wifi/WifiStateTracker;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
@@ -478,18 +428,15 @@
 
     invoke-virtual {v0, v2}, Landroid/net/WifiLinkQualityInfo;->setBssid(Ljava/lang/String;)V
 
-    .line 230
     iget-object v2, p0, Landroid/net/wifi/WifiStateTracker;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiInfo;->getRssi()I
 
     move-result v1
 
-    .line 231
     .local v1, rssi:I
     invoke-virtual {v0, v1}, Landroid/net/WifiLinkQualityInfo;->setRssi(I)V
 
-    .line 233
     iget-object v2, p0, Landroid/net/wifi/WifiStateTracker;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     const/16 v2, 0x64
@@ -502,7 +449,6 @@
 
     goto :goto_0
 
-    .line 222
     .end local v1           #rssi:I
     :catchall_0
     move-exception v2
@@ -519,7 +465,6 @@
     .locals 2
 
     .prologue
-    .line 182
     new-instance v0, Landroid/net/NetworkInfo;
 
     iget-object v1, p0, Landroid/net/wifi/WifiStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -533,8 +478,7 @@
     .locals 1
 
     .prologue
-    .line 259
-    const-string/jumbo v0, "net.tcp.buffersize.wifi"
+    const-string v0, "net.tcp.buffersize.wifi"
 
     return-object v0
 .end method
@@ -543,8 +487,7 @@
     .locals 1
 
     .prologue
-    .line 268
-    const-string/jumbo v0, "net.tcp.delack.wifi"
+    const-string v0, "net.tcp.delack.wifi"
 
     return-object v0
 .end method
@@ -553,8 +496,7 @@
     .locals 1
 
     .prologue
-    .line 277
-    const-string/jumbo v0, "net.tcp.usercfg.wifi"
+    const-string v0, "net.tcp.usercfg.wifi"
 
     return-object v0
 .end method
@@ -563,7 +505,6 @@
     .locals 1
 
     .prologue
-    .line 150
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isAvailable()Z
@@ -577,7 +518,6 @@
     .locals 1
 
     .prologue
-    .line 244
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mDefaultRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -591,7 +531,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mPrivateDnsRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -605,7 +544,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -620,12 +558,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 174
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mPrivateDnsRouteSet:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 175
     return-void
 .end method
 
@@ -633,19 +569,16 @@
     .locals 2
 
     .prologue
-    .line 113
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 114
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->startWifi()Z
 
-    .line 115
     const/4 v0, 0x1
 
     return v0
@@ -656,12 +589,10 @@
     .parameter "link"
 
     .prologue
-    .line 334
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v0, p1}, Landroid/net/LinkProperties;->removeStackedLink(Landroid/net/LinkProperties;)Z
 
-    .line 335
     return-void
 .end method
 
@@ -670,7 +601,6 @@
     .parameter "met"
 
     .prologue
-    .line 325
     return-void
 .end method
 
@@ -679,7 +609,6 @@
     .parameter "enabled"
 
     .prologue
-    .line 161
     return-void
 .end method
 
@@ -688,12 +617,10 @@
     .parameter "turnOn"
 
     .prologue
-    .line 136
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v0, p1}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
 
-    .line 137
     const/4 v0, 0x1
 
     return v0
@@ -704,12 +631,10 @@
     .parameter "isRequested"
 
     .prologue
-    .line 76
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 77
     return-void
 .end method
 
@@ -718,7 +643,6 @@
     .parameter "enabled"
 
     .prologue
-    .line 155
     const-string v0, "WifiStateTracker"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -747,7 +671,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     return-void
 .end method
 
@@ -757,16 +680,13 @@
     .parameter "target"
 
     .prologue
-    .line 87
     iput-object p2, p0, Landroid/net/wifi/WifiStateTracker;->mCsHandler:Landroid/os/Handler;
 
-    .line 88
     iput-object p1, p0, Landroid/net/wifi/WifiStateTracker;->mContext:Landroid/content/Context;
 
-    .line 90
     iget-object v1, p0, Landroid/net/wifi/WifiStateTracker;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "wifi"
+    const-string v2, "wifi"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -776,23 +696,19 @@
 
     iput-object v1, p0, Landroid/net/wifi/WifiStateTracker;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    .line 91
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 92
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "android.net.wifi.STATE_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 93
     const-string v1, "android.net.wifi.LINK_CONFIGURATION_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 95
     new-instance v1, Landroid/net/wifi/WifiStateTracker$WifiStateReceiver;
 
     const/4 v2, 0x0
@@ -801,14 +717,12 @@
 
     iput-object v1, p0, Landroid/net/wifi/WifiStateTracker;->mWifiStateReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 96
     iget-object v1, p0, Landroid/net/wifi/WifiStateTracker;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Landroid/net/wifi/WifiStateTracker;->mWifiStateReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 97
     return-void
 .end method
 
@@ -817,12 +731,10 @@
     .parameter "s"
 
     .prologue
-    .line 344
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mSamplingDataTracker:Landroid/net/SamplingDataTracker;
 
     invoke-virtual {v0, p1}, Landroid/net/SamplingDataTracker;->startSampling(Landroid/net/SamplingDataTracker$SamplingSnapshot;)V
 
-    .line 345
     return-void
 .end method
 
@@ -831,12 +743,10 @@
     .parameter "s"
 
     .prologue
-    .line 349
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mSamplingDataTracker:Landroid/net/SamplingDataTracker;
 
     invoke-virtual {v0, p1}, Landroid/net/SamplingDataTracker;->stopSampling(Landroid/net/SamplingDataTracker$SamplingSnapshot;)V
 
-    .line 350
     return-void
 .end method
 
@@ -845,7 +755,6 @@
     .parameter "messenger"
 
     .prologue
-    .line 340
     return-void
 .end method
 
@@ -855,16 +764,13 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 104
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mTeardownRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 105
     iget-object v0, p0, Landroid/net/wifi/WifiStateTracker;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->stopWifi()Z
 
-    .line 106
     return v1
 .end method

@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 98
     new-instance v0, Lcom/android/internal/view/InputBindResult$1;
 
     invoke-direct {v0}, Lcom/android/internal/view/InputBindResult$1;-><init>()V
@@ -51,10 +50,8 @@
     .parameter "source"
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -65,14 +62,12 @@
 
     iput-object v0, p0, Lcom/android/internal/view/InputBindResult;->method:Lcom/android/internal/view/IInputMethodSession;
 
-    .line 61
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 62
     sget-object v0, Landroid/view/InputChannel;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -83,7 +78,6 @@
 
     iput-object v0, p0, Lcom/android/internal/view/InputBindResult;->channel:Landroid/view/InputChannel;
 
-    .line 66
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -91,17 +85,14 @@
 
     iput-object v0, p0, Lcom/android/internal/view/InputBindResult;->id:Ljava/lang/String;
 
-    .line 67
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/view/InputBindResult;->sequence:I
 
-    .line 68
     return-void
 
-    .line 64
     :cond_0
     const/4 v0, 0x0
 
@@ -118,22 +109,16 @@
     .parameter "_sequence"
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-object p1, p0, Lcom/android/internal/view/InputBindResult;->method:Lcom/android/internal/view/IInputMethodSession;
 
-    .line 54
     iput-object p2, p0, Lcom/android/internal/view/InputBindResult;->channel:Landroid/view/InputChannel;
 
-    .line 55
     iput-object p3, p0, Lcom/android/internal/view/InputBindResult;->id:Ljava/lang/String;
 
-    .line 56
     iput p4, p0, Lcom/android/internal/view/InputBindResult;->sequence:I
 
-    .line 57
     return-void
 .end method
 
@@ -143,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 113
     iget-object v0, p0, Lcom/android/internal/view/InputBindResult;->channel:Landroid/view/InputChannel;
 
     if-eqz v0, :cond_0
@@ -167,7 +151,6 @@
     .locals 2
 
     .prologue
-    .line 72
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -227,41 +210,33 @@
     .parameter "flags"
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/android/internal/view/InputBindResult;->method:Lcom/android/internal/view/IInputMethodSession;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
 
-    .line 85
     iget-object v0, p0, Lcom/android/internal/view/InputBindResult;->channel:Landroid/view/InputChannel;
 
     if-eqz v0, :cond_0
 
-    .line 86
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 87
     iget-object v0, p0, Lcom/android/internal/view/InputBindResult;->channel:Landroid/view/InputChannel;
 
     invoke-virtual {v0, p1, p2}, Landroid/view/InputChannel;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 91
     :goto_0
     iget-object v0, p0, Lcom/android/internal/view/InputBindResult;->id:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 92
     iget v0, p0, Lcom/android/internal/view/InputBindResult;->sequence:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 93
     return-void
 
-    .line 89
     :cond_0
     const/4 v0, 0x0
 

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 82
     iput-object p1, p0, Landroid/telephony/TelephonyManager$Listener$1;->this$0:Landroid/telephony/TelephonyManager$Listener;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,7 +38,6 @@
     .parameter "msg"
 
     .prologue
-    .line 85
     iget-object v0, p0, Landroid/telephony/TelephonyManager$Listener$1;->this$0:Landroid/telephony/TelephonyManager$Listener;
 
     iget-object v1, v0, Landroid/telephony/TelephonyManager$Listener;->mListener:Landroid/telephony/CallStateListener;
@@ -54,6 +52,5 @@
 
     invoke-interface {v1, v2, v3, v0}, Landroid/telephony/CallStateListener;->onCallStateChanged(IILjava/lang/String;)V
 
-    .line 86
     return-void
 .end method

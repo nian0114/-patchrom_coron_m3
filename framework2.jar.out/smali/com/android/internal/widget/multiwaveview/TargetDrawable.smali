@@ -44,21 +44,18 @@
     .prologue
     const/4 v1, 0x3
 
-    .line 30
     new-array v0, v1, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->STATE_ACTIVE:[I
 
-    .line 33
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->STATE_INACTIVE:[I
 
-    .line 36
     new-array v0, v1, [I
 
     fill-array-data v0, :array_2
@@ -67,7 +64,6 @@
 
     return-void
 
-    .line 30
     nop
 
     :array_0
@@ -77,7 +73,6 @@
         0x64t 0xfft 0xfet 0xfet
     .end array-data
 
-    .line 33
     :array_1
     .array-data 0x4
         0x9et 0x0t 0x1t 0x1t
@@ -85,7 +80,6 @@
         0x64t 0xfft 0xfet 0xfet
     .end array-data
 
-    .line 36
     :array_2
     .array-data 0x4
         0x9et 0x0t 0x1t 0x1t
@@ -104,42 +98,30 @@
 
     const/4 v0, 0x0
 
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationX:F
 
-    .line 41
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationY:F
 
-    .line 42
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mPositionX:F
 
-    .line 43
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mPositionY:F
 
-    .line 44
     iput v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleX:F
 
-    .line 45
     iput v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleY:F
 
-    .line 46
     iput v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mAlpha:F
 
-    .line 48
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mEnabled:Z
 
-    .line 52
     iput p2, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mResourceId:I
 
-    .line 53
     invoke-virtual {p0, p1, p2}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->setDrawable(Landroid/content/res/Resources;I)V
 
-    .line 54
     return-void
 .end method
 
@@ -153,41 +135,30 @@
 
     const/4 v0, 0x0
 
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationX:F
 
-    .line 41
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationY:F
 
-    .line 42
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mPositionX:F
 
-    .line 43
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mPositionY:F
 
-    .line 44
     iput v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleX:F
 
-    .line 45
     iput v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleY:F
 
-    .line 46
     iput v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mAlpha:F
 
-    .line 48
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mEnabled:Z
 
-    .line 73
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mResourceId:I
 
-    .line 75
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
@@ -197,18 +168,14 @@
     :goto_0
     iput-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 76
     invoke-direct {p0}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->resizeDrawables()V
 
-    .line 77
     sget-object v0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->STATE_INACTIVE:[I
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->setState([I)V
 
-    .line 78
     return-void
 
-    .line 75
     :cond_0
     const/4 v0, 0x0
 
@@ -224,41 +191,30 @@
 
     const/4 v0, 0x0
 
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationX:F
 
-    .line 41
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationY:F
 
-    .line 42
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mPositionX:F
 
-    .line 43
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mPositionY:F
 
-    .line 44
     iput v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleX:F
 
-    .line 45
     iput v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleY:F
 
-    .line 46
     iput v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mAlpha:F
 
-    .line 48
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mEnabled:Z
 
-    .line 81
     iget v0, p1, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mResourceId:I
 
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mResourceId:I
 
-    .line 83
     iget-object v0, p1, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
@@ -272,18 +228,14 @@
     :goto_0
     iput-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 84
     invoke-direct {p0}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->resizeDrawables()V
 
-    .line 85
     sget-object v0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->STATE_INACTIVE:[I
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->setState([I)V
 
-    .line 86
     return-void
 
-    .line 83
     :cond_0
     const/4 v0, 0x0
 
@@ -296,27 +248,22 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 138
     iget-object v5, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v5, v5, Landroid/graphics/drawable/StateListDrawable;
 
     if-eqz v5, :cond_1
 
-    .line 139
     iget-object v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v1, Landroid/graphics/drawable/StateListDrawable;
 
-    .line 140
     .local v1, d:Landroid/graphics/drawable/StateListDrawable;
     const/4 v4, 0x0
 
-    .line 141
     .local v4, maxWidth:I
     const/4 v3, 0x0
 
-    .line 142
     .local v3, maxHeight:I
     const/4 v2, 0x0
 
@@ -328,12 +275,10 @@
 
     if-ge v2, v5, :cond_0
 
-    .line 143
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/StateListDrawable;->getStateDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 144
     .local v0, childDrawable:Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -343,7 +288,6 @@
 
     move-result v4
 
-    .line 145
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v5
@@ -352,17 +296,14 @@
 
     move-result v3
 
-    .line 142
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 149
     .end local v0           #childDrawable:Landroid/graphics/drawable/Drawable;
     :cond_0
     invoke-virtual {v1, v8, v8, v4, v3}, Landroid/graphics/drawable/StateListDrawable;->setBounds(IIII)V
 
-    .line 150
     const/4 v2, 0x0
 
     :goto_1
@@ -372,21 +313,17 @@
 
     if-ge v2, v5, :cond_2
 
-    .line 151
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/StateListDrawable;->getStateDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 154
     .restart local v0       #childDrawable:Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0, v8, v8, v4, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 150
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 156
     .end local v0           #childDrawable:Landroid/graphics/drawable/Drawable;
     .end local v1           #d:Landroid/graphics/drawable/StateListDrawable;
     .end local v2           #i:I
@@ -397,7 +334,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 157
     iget-object v5, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     iget-object v6, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -414,7 +350,6 @@
 
     invoke-virtual {v5, v8, v8, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 160
     :cond_2
     return-void
 .end method
@@ -428,7 +363,6 @@
     .prologue
     const/high16 v4, -0x4100
 
-    .line 231
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
@@ -437,18 +371,15 @@
 
     if-nez v0, :cond_1
 
-    .line 241
     :cond_0
     :goto_0
     return-void
 
-    .line 234
     :cond_1
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->save(I)I
 
-    .line 235
     iget v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleX:F
 
     iget v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleY:F
@@ -459,7 +390,6 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->scale(FFFF)V
 
-    .line 236
     iget v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationX:F
 
     iget v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mPositionX:F
@@ -474,7 +404,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 237
     invoke-virtual {p0}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->getWidth()I
 
     move-result v0
@@ -493,7 +422,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 238
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mAlpha:F
@@ -508,12 +436,10 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 239
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 240
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_0
@@ -523,7 +449,6 @@
     .locals 1
 
     .prologue
-    .line 199
     iget v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mAlpha:F
 
     return v0
@@ -533,7 +458,6 @@
     .locals 1
 
     .prologue
-    .line 227
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -543,7 +467,6 @@
     .locals 1
 
     .prologue
-    .line 223
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
@@ -567,7 +490,6 @@
     .locals 1
 
     .prologue
-    .line 211
     iget v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mPositionX:F
 
     return v0
@@ -577,7 +499,6 @@
     .locals 1
 
     .prologue
-    .line 215
     iget v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mPositionY:F
 
     return v0
@@ -587,7 +508,6 @@
     .locals 1
 
     .prologue
-    .line 248
     iget v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mResourceId:I
 
     return v0
@@ -597,7 +517,6 @@
     .locals 1
 
     .prologue
-    .line 191
     iget v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleX:F
 
     return v0
@@ -607,7 +526,6 @@
     .locals 1
 
     .prologue
-    .line 195
     iget v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleY:F
 
     return v0
@@ -617,7 +535,6 @@
     .locals 1
 
     .prologue
-    .line 219
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
@@ -641,7 +558,6 @@
     .locals 1
 
     .prologue
-    .line 183
     iget v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationX:F
 
     return v0
@@ -651,7 +567,6 @@
     .locals 1
 
     .prologue
-    .line 187
     iget v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationY:F
 
     return v0
@@ -664,19 +579,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 96
     iget-object v2, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v2, v2, Landroid/graphics/drawable/StateListDrawable;
 
     if-eqz v2, :cond_0
 
-    .line 97
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Landroid/graphics/drawable/StateListDrawable;
 
-    .line 99
     .local v0, d:Landroid/graphics/drawable/StateListDrawable;
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/StateListDrawable;->getStateDrawableIndex([I)I
 
@@ -688,7 +600,6 @@
 
     const/4 v1, 0x1
 
-    .line 101
     .end local v0           #d:Landroid/graphics/drawable/StateListDrawable;
     :cond_0
     return v1
@@ -698,25 +609,21 @@
     .locals 5
 
     .prologue
-    .line 110
     iget-object v3, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v3, v3, Landroid/graphics/drawable/StateListDrawable;
 
     if-eqz v3, :cond_1
 
-    .line 111
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Landroid/graphics/drawable/StateListDrawable;
 
-    .line 112
     .local v0, d:Landroid/graphics/drawable/StateListDrawable;
     invoke-virtual {v0}, Landroid/graphics/drawable/StateListDrawable;->getState()[I
 
     move-result-object v2
 
-    .line 113
     .local v2, states:[I
     const/4 v1, 0x0
 
@@ -726,24 +633,20 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 114
     aget v3, v2, v1
 
     const v4, 0x101009c
 
     if-ne v3, v4, :cond_0
 
-    .line 115
     const/4 v3, 0x1
 
-    .line 119
     .end local v0           #d:Landroid/graphics/drawable/StateListDrawable;
     .end local v1           #i:I
     .end local v2           #states:[I
     :goto_1
     return v3
 
-    .line 113
     .restart local v0       #d:Landroid/graphics/drawable/StateListDrawable;
     .restart local v1       #i:I
     .restart local v2       #states:[I
@@ -752,7 +655,6 @@
 
     goto :goto_0
 
-    .line 119
     .end local v0           #d:Landroid/graphics/drawable/StateListDrawable;
     .end local v1           #i:I
     .end local v2           #states:[I
@@ -766,7 +668,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
@@ -791,10 +692,8 @@
     .parameter "alpha"
 
     .prologue
-    .line 179
     iput p1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mAlpha:F
 
-    .line 180
     return-void
 .end method
 
@@ -806,12 +705,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 59
     if-nez p2, :cond_1
 
     move-object v0, v1
 
-    .line 61
     .local v0, drawable:Landroid/graphics/drawable/Drawable;
     :goto_0
     if-eqz v0, :cond_0
@@ -823,18 +720,14 @@
     :cond_0
     iput-object v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 62
     invoke-direct {p0}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->resizeDrawables()V
 
-    .line 63
     sget-object v1, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->STATE_INACTIVE:[I
 
     invoke-virtual {p0, v1}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->setState([I)V
 
-    .line 64
     return-void
 
-    .line 59
     .end local v0           #drawable:Landroid/graphics/drawable/Drawable;
     :cond_1
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -849,7 +742,6 @@
     .parameter "drawable"
 
     .prologue
-    .line 67
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
@@ -859,18 +751,14 @@
     :goto_0
     iput-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 68
     invoke-direct {p0}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->resizeDrawables()V
 
-    .line 69
     sget-object v0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->STATE_INACTIVE:[I
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->setState([I)V
 
-    .line 70
     return-void
 
-    .line 67
     :cond_0
     const/4 v0, 0x0
 
@@ -882,10 +770,8 @@
     .parameter "enabled"
 
     .prologue
-    .line 244
     iput-boolean p1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mEnabled:Z
 
-    .line 245
     return-void
 .end method
 
@@ -894,10 +780,8 @@
     .parameter "x"
 
     .prologue
-    .line 203
     iput p1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mPositionX:F
 
-    .line 204
     return-void
 .end method
 
@@ -906,10 +790,8 @@
     .parameter "y"
 
     .prologue
-    .line 207
     iput p1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mPositionY:F
 
-    .line 208
     return-void
 .end method
 
@@ -918,10 +800,8 @@
     .parameter "x"
 
     .prologue
-    .line 171
     iput p1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleX:F
 
-    .line 172
     return-void
 .end method
 
@@ -930,10 +810,8 @@
     .parameter "y"
 
     .prologue
-    .line 175
     iput p1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mScaleY:F
 
-    .line 176
     return-void
 .end method
 
@@ -942,23 +820,19 @@
     .parameter "state"
 
     .prologue
-    .line 89
     iget-object v1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v1, v1, Landroid/graphics/drawable/StateListDrawable;
 
     if-eqz v1, :cond_0
 
-    .line 90
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Landroid/graphics/drawable/StateListDrawable;
 
-    .line 91
     .local v0, d:Landroid/graphics/drawable/StateListDrawable;
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/StateListDrawable;->setState([I)Z
 
-    .line 93
     .end local v0           #d:Landroid/graphics/drawable/StateListDrawable;
     :cond_0
     return-void
@@ -969,10 +843,8 @@
     .parameter "x"
 
     .prologue
-    .line 163
     iput p1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationX:F
 
-    .line 164
     return-void
 .end method
 
@@ -981,9 +853,7 @@
     .parameter "y"
 
     .prologue
-    .line 167
     iput p1, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationY:F
 
-    .line 168
     return-void
 .end method

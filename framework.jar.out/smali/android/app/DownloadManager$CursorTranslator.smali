@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 1328
     const-class v0, Landroid/app/DownloadManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -55,13 +54,10 @@
     .parameter "baseUri"
 
     .prologue
-    .line 1332
     invoke-direct {p0, p1}, Landroid/database/CursorWrapper;-><init>(Landroid/database/Cursor;)V
 
-    .line 1333
     iput-object p2, p0, Landroid/app/DownloadManager$CursorTranslator;->mBaseUri:Landroid/net/Uri;
 
-    .line 1334
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .parameter "status"
 
     .prologue
-    .line 1408
     const/16 v0, 0x190
 
     if-gt v0, p1, :cond_0
@@ -88,72 +83,59 @@
 
     if-ge p1, v0, :cond_2
 
-    .line 1411
     :cond_1
     int-to-long v0, p1
 
-    .line 1441
     :goto_0
     return-wide v0
 
-    .line 1414
     :cond_2
     sparse-switch p1, :sswitch_data_0
 
-    .line 1441
     const-wide/16 v0, 0x3e8
 
     goto :goto_0
 
-    .line 1416
     :sswitch_0
     const-wide/16 v0, 0x3e9
 
     goto :goto_0
 
-    .line 1420
     :sswitch_1
     const-wide/16 v0, 0x3ea
 
     goto :goto_0
 
-    .line 1423
     :sswitch_2
     const-wide/16 v0, 0x3ec
 
     goto :goto_0
 
-    .line 1426
     :sswitch_3
     const-wide/16 v0, 0x3ed
 
     goto :goto_0
 
-    .line 1429
     :sswitch_4
     const-wide/16 v0, 0x3ee
 
     goto :goto_0
 
-    .line 1432
     :sswitch_5
     const-wide/16 v0, 0x3ef
 
     goto :goto_0
 
-    .line 1435
     :sswitch_6
     const-wide/16 v0, 0x3f0
 
     goto :goto_0
 
-    .line 1438
     :sswitch_7
     const-wide/16 v0, 0x3f1
 
     goto :goto_0
 
-    .line 1414
     :sswitch_data_0
     .sparse-switch
         0xc6 -> :sswitch_4
@@ -172,7 +154,6 @@
     .locals 7
 
     .prologue
-    .line 1359
     const-string v5, "destination"
 
     invoke-virtual {p0, v5}, Landroid/app/DownloadManager$CursorTranslator;->getColumnIndex(Ljava/lang/String;)I
@@ -183,7 +164,6 @@
 
     move-result-wide v0
 
-    .line 1360
     .local v0, destinationType:J
     const-wide/16 v5, 0x4
 
@@ -203,7 +183,6 @@
 
     if-nez v5, :cond_2
 
-    .line 1363
     :cond_0
     const-string v5, "local_filename"
 
@@ -215,19 +194,15 @@
 
     move-result-object v4
 
-    .line 1364
     .local v4, localPath:Ljava/lang/String;
     if-nez v4, :cond_1
 
-    .line 1365
     const/4 v5, 0x0
 
-    .line 1372
     .end local v4           #localPath:Ljava/lang/String;
     :goto_0
     return-object v5
 
-    .line 1367
     .restart local v4       #localPath:Ljava/lang/String;
     :cond_1
     new-instance v5, Ljava/io/File;
@@ -244,7 +219,6 @@
 
     goto :goto_0
 
-    .line 1371
     .end local v4           #localPath:Ljava/lang/String;
     :cond_2
     const-string v5, "_id"
@@ -257,7 +231,6 @@
 
     move-result-wide v2
 
-    .line 1372
     .local v2, downloadId:J
     iget-object v5, p0, Landroid/app/DownloadManager$CursorTranslator;->mBaseUri:Landroid/net/Uri;
 
@@ -277,40 +250,33 @@
     .parameter "status"
 
     .prologue
-    .line 1389
     packed-switch p1, :pswitch_data_0
 
-    .line 1403
     const-wide/16 v0, 0x4
 
     :goto_0
     return-wide v0
 
-    .line 1391
     :pswitch_0
     const-wide/16 v0, 0x1
 
     goto :goto_0
 
-    .line 1394
     :pswitch_1
     const-wide/16 v0, 0x2
 
     goto :goto_0
 
-    .line 1397
     :pswitch_2
     const-wide/16 v0, 0x3
 
     goto :goto_0
 
-    .line 1400
     :pswitch_3
     const-wide/16 v0, 0x5
 
     goto :goto_0
 
-    .line 1389
     :pswitch_data_0
     .packed-switch 0xc2
         :pswitch_0
@@ -325,20 +291,17 @@
     .parameter "status"
 
     .prologue
-    .line 1376
     invoke-direct {p0, p1}, Landroid/app/DownloadManager$CursorTranslator;->translateStatus(I)I
 
     move-result v0
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 1384
     const-wide/16 v0, 0x0
 
     :goto_0
     return-wide v0
 
-    .line 1378
     :sswitch_0
     invoke-direct {p0, p1}, Landroid/app/DownloadManager$CursorTranslator;->getErrorCode(I)J
 
@@ -346,7 +309,6 @@
 
     goto :goto_0
 
-    .line 1381
     :sswitch_1
     invoke-direct {p0, p1}, Landroid/app/DownloadManager$CursorTranslator;->getPausedReason(I)J
 
@@ -354,7 +316,6 @@
 
     goto :goto_0
 
-    .line 1376
     :sswitch_data_0
     .sparse-switch
         0x4 -> :sswitch_1
@@ -367,10 +328,8 @@
     .parameter "status"
 
     .prologue
-    .line 1446
     packed-switch p1, :pswitch_data_0
 
-    .line 1464
     :pswitch_0
     sget-boolean v0, Landroid/app/DownloadManager$CursorTranslator;->$assertionsDisabled:Z
 
@@ -388,39 +347,32 @@
 
     throw v0
 
-    .line 1448
     :pswitch_1
     const/4 v0, 0x1
 
-    .line 1465
     :goto_0
     return v0
 
-    .line 1451
     :pswitch_2
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 1458
     :pswitch_3
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 1461
     :pswitch_4
     const/16 v0, 0x8
 
     goto :goto_0
 
-    .line 1465
     :cond_0
     const/16 v0, 0x10
 
     goto :goto_0
 
-    .line 1446
     nop
 
     :pswitch_data_0
@@ -446,7 +398,6 @@
     .parameter "columnIndex"
 
     .prologue
-    .line 1338
     invoke-virtual {p0, p1}, Landroid/app/DownloadManager$CursorTranslator;->getLong(I)J
 
     move-result-wide v0
@@ -461,12 +412,11 @@
     .parameter "columnIndex"
 
     .prologue
-    .line 1343
     invoke-virtual {p0, p1}, Landroid/app/DownloadManager$CursorTranslator;->getColumnName(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "reason"
+    const-string v1, "reason"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -474,8 +424,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1344
-    const-string/jumbo v0, "status"
+    const-string v0, "status"
 
     invoke-virtual {p0, v0}, Landroid/app/DownloadManager$CursorTranslator;->getColumnIndex(Ljava/lang/String;)I
 
@@ -489,17 +438,15 @@
 
     move-result-wide v0
 
-    .line 1348
     :goto_0
     return-wide v0
 
-    .line 1345
     :cond_0
     invoke-virtual {p0, p1}, Landroid/app/DownloadManager$CursorTranslator;->getColumnName(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "status"
+    const-string v1, "status"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -507,8 +454,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1346
-    const-string/jumbo v0, "status"
+    const-string v0, "status"
 
     invoke-virtual {p0, v0}, Landroid/app/DownloadManager$CursorTranslator;->getColumnIndex(Ljava/lang/String;)I
 
@@ -526,7 +472,6 @@
 
     goto :goto_0
 
-    .line 1348
     :cond_1
     invoke-super {p0, p1}, Landroid/database/CursorWrapper;->getLong(I)J
 
@@ -540,7 +485,6 @@
     .parameter "columnIndex"
 
     .prologue
-    .line 1354
     invoke-virtual {p0, p1}, Landroid/app/DownloadManager$CursorTranslator;->getColumnName(I)Ljava/lang/String;
 
     move-result-object v0

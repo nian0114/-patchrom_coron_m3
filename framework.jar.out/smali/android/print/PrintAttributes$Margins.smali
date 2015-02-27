@@ -35,7 +35,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1040
     new-instance v0, Landroid/print/PrintAttributes$Margins;
 
     invoke-direct {v0, v1, v1, v1, v1}, Landroid/print/PrintAttributes$Margins;-><init>(IIII)V
@@ -53,22 +52,16 @@
     .parameter "bottomMils"
 
     .prologue
-    .line 1055
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1056
     iput p2, p0, Landroid/print/PrintAttributes$Margins;->mTopMils:I
 
-    .line 1057
     iput p1, p0, Landroid/print/PrintAttributes$Margins;->mLeftMils:I
 
-    .line 1058
     iput p3, p0, Landroid/print/PrintAttributes$Margins;->mRightMils:I
 
-    .line 1059
     iput p4, p0, Landroid/print/PrintAttributes$Margins;->mBottomMils:I
 
-    .line 1060
     return-void
 .end method
 
@@ -77,7 +70,6 @@
     .parameter "parcel"
 
     .prologue
-    .line 1106
     new-instance v0, Landroid/print/PrintAttributes$Margins;
 
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
@@ -112,24 +104,19 @@
 
     const/4 v2, 0x0
 
-    .line 1126
     if-ne p0, p1, :cond_1
 
-    .line 1148
     :cond_0
     :goto_0
     return v1
 
-    .line 1129
     :cond_1
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 1130
     goto :goto_0
 
-    .line 1132
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -143,16 +130,13 @@
 
     move v1, v2
 
-    .line 1133
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 1135
     check-cast v0, Landroid/print/PrintAttributes$Margins;
 
-    .line 1136
     .local v0, other:Landroid/print/PrintAttributes$Margins;
     iget v3, p0, Landroid/print/PrintAttributes$Margins;->mBottomMils:I
 
@@ -162,10 +146,8 @@
 
     move v1, v2
 
-    .line 1137
     goto :goto_0
 
-    .line 1139
     :cond_4
     iget v3, p0, Landroid/print/PrintAttributes$Margins;->mLeftMils:I
 
@@ -175,10 +157,8 @@
 
     move v1, v2
 
-    .line 1140
     goto :goto_0
 
-    .line 1142
     :cond_5
     iget v3, p0, Landroid/print/PrintAttributes$Margins;->mRightMils:I
 
@@ -188,10 +168,8 @@
 
     move v1, v2
 
-    .line 1143
     goto :goto_0
 
-    .line 1145
     :cond_6
     iget v3, p0, Landroid/print/PrintAttributes$Margins;->mTopMils:I
 
@@ -201,7 +179,6 @@
 
     move v1, v2
 
-    .line 1146
     goto :goto_0
 .end method
 
@@ -209,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 1095
     iget v0, p0, Landroid/print/PrintAttributes$Margins;->mBottomMils:I
 
     return v0
@@ -219,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 1068
     iget v0, p0, Landroid/print/PrintAttributes$Margins;->mLeftMils:I
 
     return v0
@@ -229,7 +204,6 @@
     .locals 1
 
     .prologue
-    .line 1086
     iget v0, p0, Landroid/print/PrintAttributes$Margins;->mRightMils:I
 
     return v0
@@ -239,7 +213,6 @@
     .locals 1
 
     .prologue
-    .line 1077
     iget v0, p0, Landroid/print/PrintAttributes$Margins;->mTopMils:I
 
     return v0
@@ -249,41 +222,34 @@
     .locals 4
 
     .prologue
-    .line 1115
     const/16 v0, 0x1f
 
-    .line 1116
     .local v0, prime:I
     const/4 v1, 0x1
 
-    .line 1117
     .local v1, result:I
     iget v2, p0, Landroid/print/PrintAttributes$Margins;->mBottomMils:I
 
     add-int/lit8 v1, v2, 0x1f
 
-    .line 1118
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/print/PrintAttributes$Margins;->mLeftMils:I
 
     add-int v1, v2, v3
 
-    .line 1119
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/print/PrintAttributes$Margins;->mRightMils:I
 
     add-int v1, v2, v3
 
-    .line 1120
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/print/PrintAttributes$Margins;->mTopMils:I
 
     add-int v1, v2, v3
 
-    .line 1121
     return v1
 .end method
 
@@ -291,18 +257,15 @@
     .locals 3
 
     .prologue
-    .line 1153
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1154
     .local v0, builder:Ljava/lang/StringBuilder;
     const-string v1, "Margins{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1155
     const-string v1, "leftMils: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -313,7 +276,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1156
     const-string v1, ", topMils: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -324,7 +286,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1157
     const-string v1, ", rightMils: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -335,7 +296,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1158
     const-string v1, ", bottomMils: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -346,12 +306,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1159
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1160
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -364,26 +322,21 @@
     .parameter "parcel"
 
     .prologue
-    .line 1099
     iget v0, p0, Landroid/print/PrintAttributes$Margins;->mLeftMils:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1100
     iget v0, p0, Landroid/print/PrintAttributes$Margins;->mTopMils:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1101
     iget v0, p0, Landroid/print/PrintAttributes$Margins;->mRightMils:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1102
     iget v0, p0, Landroid/print/PrintAttributes$Margins;->mBottomMils:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1103
     return-void
 .end method

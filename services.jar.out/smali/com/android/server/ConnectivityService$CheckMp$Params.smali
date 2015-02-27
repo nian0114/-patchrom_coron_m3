@@ -30,19 +30,14 @@
     .parameter "cb"
 
     .prologue
-    .line 4372
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4373
     iput-object p1, p0, Lcom/android/server/ConnectivityService$CheckMp$Params;->mUrl:Ljava/lang/String;
 
-    .line 4374
     iput-wide p2, p0, Lcom/android/server/ConnectivityService$CheckMp$Params;->mTimeOutMs:J
 
-    .line 4375
     iput-object p4, p0, Lcom/android/server/ConnectivityService$CheckMp$Params;->mCb:Lcom/android/server/ConnectivityService$CheckMp$CallBack;
 
-    .line 4376
     return-void
 .end method
 
@@ -51,7 +46,6 @@
     .parameter "x0"
 
     .prologue
-    .line 4367
     iget-object v0, p0, Lcom/android/server/ConnectivityService$CheckMp$Params;->mUrl:Ljava/lang/String;
 
     return-object v0
@@ -62,7 +56,6 @@
     .parameter "x0"
 
     .prologue
-    .line 4367
     iget-wide v0, p0, Lcom/android/server/ConnectivityService$CheckMp$Params;->mTimeOutMs:J
 
     return-wide v0
@@ -73,7 +66,6 @@
     .parameter "x0"
 
     .prologue
-    .line 4367
     iget-object v0, p0, Lcom/android/server/ConnectivityService$CheckMp$Params;->mCb:Lcom/android/server/ConnectivityService$CheckMp$CallBack;
 
     return-object v0
@@ -85,7 +77,6 @@
     .locals 3
 
     .prologue
-    .line 4380
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

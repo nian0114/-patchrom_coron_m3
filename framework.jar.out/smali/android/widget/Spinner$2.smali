@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 769
     iput-object p1, p0, Landroid/widget/Spinner$2;->this$0:Landroid/widget/Spinner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 772
     iget-object v1, p0, Landroid/widget/Spinner$2;->this$0:Landroid/widget/Spinner;
 
     #getter for: Landroid/widget/Spinner;->mPopup:Landroid/widget/Spinner$SpinnerPopup;
@@ -55,7 +53,6 @@
 
     if-nez v1, :cond_0
 
-    .line 773
     iget-object v1, p0, Landroid/widget/Spinner$2;->this$0:Landroid/widget/Spinner;
 
     #getter for: Landroid/widget/Spinner;->mPopup:Landroid/widget/Spinner$SpinnerPopup;
@@ -77,7 +74,6 @@
 
     invoke-interface {v1, v2, v3}, Landroid/widget/Spinner$SpinnerPopup;->show(II)V
 
-    .line 775
     :cond_0
     iget-object v1, p0, Landroid/widget/Spinner$2;->this$0:Landroid/widget/Spinner;
 
@@ -85,14 +81,11 @@
 
     move-result-object v0
 
-    .line 776
     .local v0, vto:Landroid/view/ViewTreeObserver;
     if-eqz v0, :cond_1
 
-    .line 777
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 779
     :cond_1
     return-void
 .end method

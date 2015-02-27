@@ -32,15 +32,12 @@
     .parameter "outAttrs"
 
     .prologue
-    .line 5782
     iput-object p1, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5783
     iput-object p2, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->mOutAttrs:Landroid/view/inputmethod/EditorInfo;
 
-    .line 5784
     return-void
 .end method
 
@@ -48,12 +45,10 @@
     .locals 2
 
     .prologue
-    .line 5787
     iget-object v0, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->mTarget:Landroid/view/inputmethod/InputConnection;
 
     if-nez v0, :cond_0
 
-    .line 5788
     iget-object v0, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->this$0:Landroid/widget/AbsListView;
 
     #calls: Landroid/widget/AbsListView;->getTextFilterInput()Landroid/widget/EditText;
@@ -69,7 +64,6 @@
 
     iput-object v0, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->mTarget:Landroid/view/inputmethod/InputConnection;
 
-    .line 5790
     :cond_0
     iget-object v0, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->mTarget:Landroid/view/inputmethod/InputConnection;
 
@@ -82,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 5899
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -99,7 +92,6 @@
     .parameter "states"
 
     .prologue
-    .line 5909
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -116,7 +108,6 @@
     .parameter "text"
 
     .prologue
-    .line 5879
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -133,7 +124,6 @@
     .parameter "correctionInfo"
 
     .prologue
-    .line 5884
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -151,7 +141,6 @@
     .parameter "newCursorPosition"
 
     .prologue
-    .line 5874
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -169,7 +158,6 @@
     .parameter "afterLength"
 
     .prologue
-    .line 5854
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -185,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 5904
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -201,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 5869
     iget-object v0, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->mTarget:Landroid/view/inputmethod/InputConnection;
 
     if-eqz v0, :cond_0
@@ -231,14 +217,12 @@
     .parameter "reqModes"
 
     .prologue
-    .line 5843
     iget-object v0, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->mTarget:Landroid/view/inputmethod/InputConnection;
 
     if-nez v0, :cond_0
 
     const/16 v0, 0x4000
 
-    .line 5844
     :goto_0
     return v0
 
@@ -258,7 +242,6 @@
     .parameter "flags"
 
     .prologue
-    .line 5849
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -275,14 +258,12 @@
     .parameter "flags"
 
     .prologue
-    .line 5837
     iget-object v0, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->mTarget:Landroid/view/inputmethod/InputConnection;
 
     if-nez v0, :cond_0
 
     const-string v0, ""
 
-    .line 5838
     :goto_0
     return-object v0
 
@@ -302,14 +283,12 @@
     .parameter "flags"
 
     .prologue
-    .line 5831
     iget-object v0, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->mTarget:Landroid/view/inputmethod/InputConnection;
 
     if-nez v0, :cond_0
 
     const-string v0, ""
 
-    .line 5832
     :goto_0
     return-object v0
 
@@ -329,14 +308,12 @@
     .parameter "flags"
 
     .prologue
-    .line 5825
     iget-object v0, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->mTarget:Landroid/view/inputmethod/InputConnection;
 
     if-nez v0, :cond_0
 
     const-string v0, ""
 
-    .line 5826
     :goto_0
     return-object v0
 
@@ -355,7 +332,6 @@
     .parameter "id"
 
     .prologue
-    .line 5894
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -374,12 +350,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5804
     const/4 v2, 0x6
 
     if-ne p1, v2, :cond_1
 
-    .line 5805
     iget-object v2, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v2}, Landroid/widget/AbsListView;->getContext()Landroid/content/Context;
@@ -394,11 +368,9 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 5807
     .local v0, imm:Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_0
 
-    .line 5808
     iget-object v2, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v2}, Landroid/widget/AbsListView;->getWindowToken()Landroid/os/IBinder;
@@ -407,11 +379,9 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 5810
     :cond_0
     const/4 v1, 0x1
 
-    .line 5812
     .end local v0           #imm:Landroid/view/inputmethod/InputMethodManager;
     :cond_1
     return v1
@@ -423,7 +393,6 @@
     .parameter "data"
 
     .prologue
-    .line 5914
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -440,7 +409,6 @@
     .parameter "enabled"
 
     .prologue
-    .line 5797
     iget-object v0, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->this$0:Landroid/widget/AbsListView;
 
     #getter for: Landroid/widget/AbsListView;->mDefInputConnection:Landroid/view/inputmethod/InputConnection;
@@ -460,7 +428,6 @@
     .parameter "event"
 
     .prologue
-    .line 5820
     iget-object v0, p0, Landroid/widget/AbsListView$InputConnectionWrapper;->this$0:Landroid/widget/AbsListView;
 
     #getter for: Landroid/widget/AbsListView;->mDefInputConnection:Landroid/view/inputmethod/InputConnection;
@@ -481,7 +448,6 @@
     .parameter "end"
 
     .prologue
-    .line 5864
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -499,7 +465,6 @@
     .parameter "newCursorPosition"
 
     .prologue
-    .line 5859
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
@@ -517,7 +482,6 @@
     .parameter "end"
 
     .prologue
-    .line 5889
     invoke-direct {p0}, Landroid/widget/AbsListView$InputConnectionWrapper;->getTarget()Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0

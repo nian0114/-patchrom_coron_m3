@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 103
     new-instance v0, Landroid/hardware/location/GeofenceHardwareRequestParcelable$1;
 
     invoke-direct {v0}, Landroid/hardware/location/GeofenceHardwareRequestParcelable$1;-><init>()V
@@ -46,16 +45,12 @@
     .parameter "request"
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput p1, p0, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->mId:I
 
-    .line 34
     iput-object p2, p0, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->mRequest:Landroid/hardware/location/GeofenceHardwareRequest;
 
-    .line 35
     return-void
 .end method
 
@@ -65,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 136
     const/4 v0, 0x0
 
     return v0
@@ -75,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget v0, p0, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->mId:I
 
     return v0
@@ -85,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->mRequest:Landroid/hardware/location/GeofenceHardwareRequest;
 
     invoke-virtual {v0}, Landroid/hardware/location/GeofenceHardwareRequest;->getLastTransition()I
@@ -99,7 +91,6 @@
     .locals 2
 
     .prologue
-    .line 48
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->mRequest:Landroid/hardware/location/GeofenceHardwareRequest;
 
     invoke-virtual {v0}, Landroid/hardware/location/GeofenceHardwareRequest;->getLatitude()D
@@ -113,7 +104,6 @@
     .locals 2
 
     .prologue
-    .line 55
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->mRequest:Landroid/hardware/location/GeofenceHardwareRequest;
 
     invoke-virtual {v0}, Landroid/hardware/location/GeofenceHardwareRequest;->getLongitude()D
@@ -127,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->mRequest:Landroid/hardware/location/GeofenceHardwareRequest;
 
     invoke-virtual {v0}, Landroid/hardware/location/GeofenceHardwareRequest;->getMonitorTransitions()I
@@ -141,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->mRequest:Landroid/hardware/location/GeofenceHardwareRequest;
 
     invoke-virtual {v0}, Landroid/hardware/location/GeofenceHardwareRequest;->getNotificationResponsiveness()I
@@ -155,7 +143,6 @@
     .locals 2
 
     .prologue
-    .line 62
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->mRequest:Landroid/hardware/location/GeofenceHardwareRequest;
 
     invoke-virtual {v0}, Landroid/hardware/location/GeofenceHardwareRequest;->getRadius()D
@@ -169,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->mRequest:Landroid/hardware/location/GeofenceHardwareRequest;
 
     invoke-virtual {v0}, Landroid/hardware/location/GeofenceHardwareRequest;->getType()I
@@ -183,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->mRequest:Landroid/hardware/location/GeofenceHardwareRequest;
 
     invoke-virtual {v0}, Landroid/hardware/location/GeofenceHardwareRequest;->getUnknownTimer()I
@@ -199,69 +184,59 @@
     .parameter "flags"
 
     .prologue
-    .line 141
     invoke-virtual {p0}, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->getType()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 142
     invoke-virtual {p0}, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->getLatitude()D
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 143
     invoke-virtual {p0}, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->getLongitude()D
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 144
     invoke-virtual {p0}, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->getRadius()D
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 145
     invoke-virtual {p0}, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->getLastTransition()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 146
     invoke-virtual {p0}, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->getMonitorTransitions()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 147
     invoke-virtual {p0}, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->getUnknownTimer()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 148
     invoke-virtual {p0}, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->getNotificationResponsiveness()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 149
     invoke-virtual {p0}, Landroid/hardware/location/GeofenceHardwareRequestParcelable;->getId()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 150
     return-void
 .end method

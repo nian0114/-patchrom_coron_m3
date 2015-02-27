@@ -102,18 +102,14 @@
 
     const/4 v3, 0x3
 
-    .line 246
     sput v4, Landroid/hardware/Sensor;->REPORTING_MODE_CONTINUOUS:I
 
-    .line 249
     const/4 v0, 0x2
 
     sput v0, Landroid/hardware/Sensor;->REPORTING_MODE_ON_CHANGE:I
 
-    .line 252
     sput v3, Landroid/hardware/Sensor;->REPORTING_MODE_ONE_SHOT:I
 
-    .line 260
     const/16 v0, 0x2a
 
     new-array v0, v0, [I
@@ -327,10 +323,8 @@
     .locals 0
 
     .prologue
-    .line 339
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 340
     return-void
 .end method
 
@@ -340,10 +334,8 @@
     .parameter "sdkLevel"
 
     .prologue
-    .line 304
     iget v1, p0, Landroid/hardware/Sensor;->mType:I
 
-    .line 307
     .local v1, type:I
     const/16 v2, 0xb
 
@@ -353,20 +345,16 @@
 
     if-gt p1, v2, :cond_0
 
-    .line 309
     const/4 v2, 0x3
 
-    .line 321
     :goto_0
     return v2
 
-    .line 311
     :cond_0
     mul-int/lit8 v2, v1, 0x2
 
     add-int/lit8 v0, v2, 0x1
 
-    .line 312
     .local v0, offset:I
     sget-object v2, Landroid/hardware/Sensor;->sSensorReportingModes:[I
 
@@ -374,12 +362,10 @@
 
     if-lt v0, v2, :cond_1
 
-    .line 319
     const/16 v2, 0x10
 
     goto :goto_0
 
-    .line 321
     :cond_1
     sget-object v2, Landroid/hardware/Sensor;->sSensorReportingModes:[I
 
@@ -393,12 +379,10 @@
     .parameter "sensor"
 
     .prologue
-    .line 286
     iget v2, p0, Landroid/hardware/Sensor;->mType:I
 
     mul-int/lit8 v1, v2, 0x2
 
-    .line 287
     .local v1, offset:I
     sget-object v2, Landroid/hardware/Sensor;->sSensorReportingModes:[I
 
@@ -406,38 +390,30 @@
 
     if-lt v1, v2, :cond_2
 
-    .line 291
     iget v0, p0, Landroid/hardware/Sensor;->mMinDelay:I
 
-    .line 292
     .local v0, minDelay:I
     if-nez v0, :cond_0
 
-    .line 293
     sget v2, Landroid/hardware/Sensor;->REPORTING_MODE_ON_CHANGE:I
 
-    .line 300
     .end local v0           #minDelay:I
     :goto_0
     return v2
 
-    .line 294
     .restart local v0       #minDelay:I
     :cond_0
     if-gez v0, :cond_1
 
-    .line 295
     sget v2, Landroid/hardware/Sensor;->REPORTING_MODE_ONE_SHOT:I
 
     goto :goto_0
 
-    .line 297
     :cond_1
     sget v2, Landroid/hardware/Sensor;->REPORTING_MODE_CONTINUOUS:I
 
     goto :goto_0
 
-    .line 300
     .end local v0           #minDelay:I
     :cond_2
     sget-object v2, Landroid/hardware/Sensor;->sSensorReportingModes:[I
@@ -453,7 +429,6 @@
     .locals 1
 
     .prologue
-    .line 415
     iget v0, p0, Landroid/hardware/Sensor;->mFifoMaxEventCount:I
 
     return v0
@@ -463,7 +438,6 @@
     .locals 1
 
     .prologue
-    .line 405
     iget v0, p0, Landroid/hardware/Sensor;->mFifoReservedEventCount:I
 
     return v0
@@ -473,7 +447,6 @@
     .locals 1
 
     .prologue
-    .line 420
     iget v0, p0, Landroid/hardware/Sensor;->mHandle:I
 
     return v0
@@ -483,7 +456,6 @@
     .locals 1
 
     .prologue
-    .line 374
     iget v0, p0, Landroid/hardware/Sensor;->mMaxRange:F
 
     return v0
@@ -493,7 +465,6 @@
     .locals 1
 
     .prologue
-    .line 397
     iget v0, p0, Landroid/hardware/Sensor;->mMinDelay:I
 
     return v0
@@ -503,7 +474,6 @@
     .locals 1
 
     .prologue
-    .line 346
     iget-object v0, p0, Landroid/hardware/Sensor;->mName:Ljava/lang/String;
 
     return-object v0
@@ -513,7 +483,6 @@
     .locals 1
 
     .prologue
-    .line 388
     iget v0, p0, Landroid/hardware/Sensor;->mPower:F
 
     return v0
@@ -523,7 +492,6 @@
     .locals 1
 
     .prologue
-    .line 381
     iget v0, p0, Landroid/hardware/Sensor;->mResolution:F
 
     return v0
@@ -533,7 +501,6 @@
     .locals 1
 
     .prologue
-    .line 360
     iget v0, p0, Landroid/hardware/Sensor;->mType:I
 
     return v0
@@ -543,7 +510,6 @@
     .locals 1
 
     .prologue
-    .line 353
     iget-object v0, p0, Landroid/hardware/Sensor;->mVendor:Ljava/lang/String;
 
     return-object v0
@@ -553,7 +519,6 @@
     .locals 1
 
     .prologue
-    .line 367
     iget v0, p0, Landroid/hardware/Sensor;->mVersion:I
 
     return v0
@@ -565,13 +530,10 @@
     .parameter "res"
 
     .prologue
-    .line 424
     iput p1, p0, Landroid/hardware/Sensor;->mMaxRange:F
 
-    .line 425
     iput p2, p0, Landroid/hardware/Sensor;->mResolution:F
 
-    .line 426
     return-void
 .end method
 
@@ -579,12 +541,11 @@
     .locals 2
 
     .prologue
-    .line 430
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{Sensor name=\""
+    const-string v1, "{Sensor name=\""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -680,7 +641,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

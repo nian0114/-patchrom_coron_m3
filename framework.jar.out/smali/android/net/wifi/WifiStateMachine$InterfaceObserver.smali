@@ -27,16 +27,12 @@
     .parameter "wifiStateMachine"
 
     .prologue
-    .line 245
     iput-object p1, p0, Landroid/net/wifi/WifiStateMachine$InterfaceObserver;->this$0:Landroid/net/wifi/WifiStateMachine;
 
-    .line 246
     invoke-direct {p0}, Lcom/android/server/net/BaseNetworkObserver;-><init>()V
 
-    .line 247
     iput-object p2, p0, Landroid/net/wifi/WifiStateMachine$InterfaceObserver;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
 
-    .line 248
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .parameter "scope"
 
     .prologue
-    .line 263
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$InterfaceObserver;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
 
     #getter for: Landroid/net/wifi/WifiStateMachine;->mInterfaceName:Ljava/lang/String;
@@ -64,7 +59,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 268
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$InterfaceObserver;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
 
     const v1, 0x2008d
@@ -75,7 +69,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/net/wifi/WifiStateMachine;->sendMessage(ILjava/lang/Object;)V
 
-    .line 270
     :cond_0
     return-void
 .end method
@@ -88,7 +81,6 @@
     .parameter "scope"
 
     .prologue
-    .line 252
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$InterfaceObserver;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
 
     #getter for: Landroid/net/wifi/WifiStateMachine;->mInterfaceName:Ljava/lang/String;
@@ -102,7 +94,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 257
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$InterfaceObserver;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
 
     const v1, 0x2008c
@@ -113,7 +104,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/net/wifi/WifiStateMachine;->sendMessage(ILjava/lang/Object;)V
 
-    .line 259
     :cond_0
     return-void
 .end method

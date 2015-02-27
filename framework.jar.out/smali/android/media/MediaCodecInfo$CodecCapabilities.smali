@@ -125,7 +125,6 @@
     .locals 0
 
     .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -140,7 +139,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 156
     const-string v1, "adaptive-playback"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -149,7 +147,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 157
     iget v1, p0, Landroid/media/MediaCodecInfo$CodecCapabilities;->flags:I
 
     and-int/lit8 v1, v1, 0x1
@@ -158,7 +155,6 @@
 
     const/4 v0, 0x1
 
-    .line 159
     :cond_0
     return v0
 .end method

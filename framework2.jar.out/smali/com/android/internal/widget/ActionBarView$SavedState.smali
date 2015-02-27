@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 1365
     new-instance v0, Lcom/android/internal/widget/ActionBarView$SavedState$1;
 
     invoke-direct {v0}, Lcom/android/internal/widget/ActionBarView$SavedState$1;-><init>()V
@@ -53,17 +52,14 @@
     .parameter "in"
 
     .prologue
-    .line 1353
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1354
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/widget/ActionBarView$SavedState;->expandedMenuItemId:I
 
-    .line 1355
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -75,10 +71,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/internal/widget/ActionBarView$SavedState;->isOverflowOpen:Z
 
-    .line 1356
     return-void
 
-    .line 1355
     :cond_0
     const/4 v0, 0x0
 
@@ -91,7 +85,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1344
     invoke-direct {p0, p1}, Lcom/android/internal/widget/ActionBarView$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -102,10 +95,8 @@
     .parameter "superState"
 
     .prologue
-    .line 1349
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1350
     return-void
 .end method
 
@@ -117,15 +108,12 @@
     .parameter "flags"
 
     .prologue
-    .line 1360
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1361
     iget v0, p0, Lcom/android/internal/widget/ActionBarView$SavedState;->expandedMenuItemId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1362
     iget-boolean v0, p0, Lcom/android/internal/widget/ActionBarView$SavedState;->isOverflowOpen:Z
 
     if-eqz v0, :cond_0
@@ -135,10 +123,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1363
     return-void
 
-    .line 1362
     :cond_0
     const/4 v0, 0x0
 

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 979
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,14 +46,12 @@
 
     const/4 v2, 0x0
 
-    .line 983
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget v3, v3, Lcom/android/internal/policy/impl/PhoneWindowManager;->mLongPressOnPowerBehavior:I
 
     if-gez v3, :cond_0
 
-    .line 984
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v4, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -73,13 +70,11 @@
 
     iput v4, v3, Lcom/android/internal/policy/impl/PhoneWindowManager;->mLongPressOnPowerBehavior:I
 
-    .line 987
     :cond_0
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget v0, v3, Lcom/android/internal/policy/impl/PhoneWindowManager;->mLongPressOnPowerBehavior:I
 
-    .line 988
     .local v0, resolvedBehavior:I
     invoke-static {}, Landroid/os/FactoryTest;->isLongPressOnPowerOffEnabled()Z
 
@@ -87,25 +82,20 @@
 
     if-eqz v3, :cond_1
 
-    .line 989
     const/4 v0, 0x3
 
-    .line 992
     :cond_1
     packed-switch v0, :pswitch_data_0
 
-    .line 1019
     :goto_0
     :pswitch_0
     return-void
 
-    .line 996
     :pswitch_1
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-boolean v1, v3, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPowerKeyHandled:Z
 
-    .line 997
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -116,7 +106,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 998
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const-string v2, "globalactions"
@@ -125,7 +114,6 @@
 
     goto :goto_0
 
-    .line 1000
     :cond_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -135,13 +123,11 @@
 
     if-nez v1, :cond_3
 
-    .line 1001
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     #calls: Lcom/android/internal/policy/impl/PhoneWindowManager;->performAuditoryFeedbackForAccessibilityIfNeed()V
     invoke-static {v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$400(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
-    .line 1003
     :cond_3
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -149,20 +135,17 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/policy/impl/PhoneWindowManager;->sendCloseSystemWindows(Ljava/lang/String;)V
 
-    .line 1004
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->showGlobalActionsDialog()V
 
     goto :goto_0
 
-    .line 1009
     :pswitch_2
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-boolean v1, v3, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPowerKeyHandled:Z
 
-    .line 1010
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/PhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -173,7 +156,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 1011
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const-string v2, "globalactions"
@@ -182,20 +164,17 @@
 
     goto :goto_0
 
-    .line 1013
     :cond_4
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v3, v6, v2, v2}, Lcom/android/internal/policy/impl/PhoneWindowManager;->performHapticFeedbackLw(Landroid/view/WindowManagerPolicy$WindowState;IZ)Z
 
-    .line 1014
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const-string v4, "globalactions"
 
     invoke-virtual {v3, v4}, Lcom/android/internal/policy/impl/PhoneWindowManager;->sendCloseSystemWindows(Ljava/lang/String;)V
 
-    .line 1015
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/PhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -214,7 +193,6 @@
 
     goto :goto_1
 
-    .line 992
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -63,10 +63,8 @@
     .locals 0
 
     .prologue
-    .line 611
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 792
     return-void
 .end method
 
@@ -77,21 +75,17 @@
     .prologue
     const/high16 v2, 0x3f80
 
-    .line 769
     const/high16 v1, 0x42c8
 
     div-float/2addr p0, v1
 
-    .line 770
     new-instance v0, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v0}, Landroid/graphics/ColorMatrix;-><init>()V
 
-    .line 771
     .local v0, cm:Landroid/graphics/ColorMatrix;
     invoke-virtual {v0, v2, v2, v2, p0}, Landroid/graphics/ColorMatrix;->setScale(FFFF)V
 
-    .line 773
     return-object v0
 .end method
 
@@ -100,23 +94,19 @@
     .parameter "brightness"
 
     .prologue
-    .line 748
     const/high16 v1, 0x42c8
 
     div-float/2addr p0, v1
 
-    .line 749
     new-instance v0, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v0}, Landroid/graphics/ColorMatrix;-><init>()V
 
-    .line 750
     .local v0, cm:Landroid/graphics/ColorMatrix;
     const/high16 v1, 0x3f80
 
     invoke-virtual {v0, p0, p0, p0, v1}, Landroid/graphics/ColorMatrix;->setScale(FFFF)V
 
-    .line 752
     return-object v0
 .end method
 
@@ -129,14 +119,12 @@
 
     const/4 v4, 0x0
 
-    .line 756
     const/high16 v2, 0x42c8
 
     div-float v2, p0, v2
 
     add-float p0, v2, v5
 
-    .line 757
     const/high16 v2, -0x4100
 
     mul-float/2addr v2, p0
@@ -149,7 +137,6 @@
 
     mul-float v1, v2, v3
 
-    .line 758
     .local v1, o:F
     const/16 v2, 0x14
 
@@ -235,7 +222,6 @@
 
     aput v4, v0, v2
 
-    .line 765
     .local v0, matrix:[F
     new-instance v2, Landroid/graphics/ColorMatrix;
 
@@ -253,12 +239,10 @@
 
     const/4 v10, 0x0
 
-    .line 703
     new-instance v0, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v0}, Landroid/graphics/ColorMatrix;-><init>()V
 
-    .line 704
     .local v0, cm:Landroid/graphics/ColorMatrix;
     const/high16 v7, 0x4334
 
@@ -268,12 +252,10 @@
 
     mul-float p0, v7, v8
 
-    .line 705
     cmpl-float v7, p0, v10
 
     if-eqz v7, :cond_0
 
-    .line 706
     float-to-double v7, p0
 
     invoke-static {v7, v8}, Ljava/lang/Math;->cos(D)D
@@ -282,7 +264,6 @@
 
     double-to-float v1, v7
 
-    .line 707
     .local v1, cosVal:F
     float-to-double v7, p0
 
@@ -292,19 +273,15 @@
 
     double-to-float v6, v7
 
-    .line 708
     .local v6, sinVal:F
     const v4, 0x3e5a1cac
 
-    .line 709
     .local v4, lumR:F
     const v3, 0x3f370a3d
 
-    .line 710
     .local v3, lumG:F
     const v2, 0x3d9374bc
 
-    .line 711
     .local v2, lumB:F
     const/16 v7, 0x19
 
@@ -516,11 +493,9 @@
 
     aput v11, v5, v7
 
-    .line 723
     .local v5, mat:[F
     invoke-virtual {v0, v5}, Landroid/graphics/ColorMatrix;->set([F)V
 
-    .line 725
     .end local v1           #cosVal:F
     .end local v2           #lumB:F
     .end local v3           #lumG:F
@@ -536,21 +511,17 @@
     .parameter "saturation"
 
     .prologue
-    .line 729
     const/high16 v1, 0x42c8
 
     div-float/2addr p0, v1
 
-    .line 730
     new-instance v0, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v0}, Landroid/graphics/ColorMatrix;-><init>()V
 
-    .line 731
     .local v0, cm:Landroid/graphics/ColorMatrix;
     invoke-virtual {v0, p0}, Landroid/graphics/ColorMatrix;->setSaturation(F)V
 
-    .line 733
     return-object v0
 .end method
 
@@ -563,7 +534,6 @@
 
     const/4 v7, 0x0
 
-    .line 777
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v5
@@ -574,7 +544,6 @@
 
     div-float v0, v5, v6
 
-    .line 778
     .local v0, alpha:F
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
@@ -584,7 +553,6 @@
 
     mul-float v4, v5, v0
 
-    .line 779
     .local v4, red:F
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
@@ -594,7 +562,6 @@
 
     mul-float v2, v5, v0
 
-    .line 780
     .local v2, green:F
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
@@ -604,7 +571,6 @@
 
     mul-float v1, v5, v0
 
-    .line 782
     .local v1, blue:F
     const/16 v5, 0x14
 
@@ -690,7 +656,6 @@
 
     aput v7, v3, v5
 
-    .line 789
     .local v3, matrix:[F
     new-instance v5, Landroid/graphics/ColorMatrix;
 
@@ -706,7 +671,6 @@
     .parameter "max"
 
     .prologue
-    .line 693
     invoke-static {p1, p0}, Ljava/lang/Math;->max(II)I
 
     move-result v0
@@ -724,7 +688,6 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 686
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -736,17 +699,14 @@
 
     move-result p1
 
-    .line 688
     .end local p1
     :goto_0
     return p1
 
-    .line 687
     .restart local p1
     :catch_0
     move-exception v0
 
-    .line 688
     .local v0, e:Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -755,14 +715,12 @@
     .locals 2
 
     .prologue
-    .line 737
     const/16 v1, 0x14
 
     new-array v0, v1, [F
 
     fill-array-data v0, :array_0
 
-    .line 744
     .local v0, matrix:[F
     new-instance v1, Landroid/graphics/ColorMatrix;
 
@@ -770,7 +728,6 @@
 
     return-object v1
 
-    .line 737
     nop
 
     :array_0
@@ -816,12 +773,10 @@
 
     const/4 v8, 0x0
 
-    .line 634
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 635
     .local v7, tag:Ljava/lang/String;
     const-string v9, "filter"
 
@@ -831,24 +786,20 @@
 
     if-nez v9, :cond_0
 
-    .line 681
     :goto_0
     return v8
 
-    .line 637
     :cond_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
     move-result v1
 
-    .line 639
     .local v1, attrCount:I
     const/4 v0, 0x0
 
     .local v0, attr:Ljava/lang/String;
     move v2, v1
 
-    .line 641
     .end local v1           #attrCount:I
     .local v2, attrCount:I
     :goto_1
@@ -858,14 +809,12 @@
     .restart local v1       #attrCount:I
     if-lez v2, :cond_1
 
-    .line 642
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 643
     .local v3, attrName:Ljava/lang/String;
-    const-string/jumbo v9, "name"
+    const-string v9, "name"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -873,7 +822,6 @@
 
     if-eqz v9, :cond_9
 
-    .line 644
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -884,7 +832,6 @@
     .restart local v2       #attrCount:I
     goto :goto_1
 
-    .line 647
     .end local v2           #attrCount:I
     .end local v3           #attrName:Ljava/lang/String;
     .restart local v1       #attrCount:I
@@ -893,7 +840,6 @@
 
     move-result-object v4
 
-    .line 648
     .local v4, content:Ljava/lang/String;
     if-eqz v0, :cond_2
 
@@ -905,12 +851,10 @@
 
     if-lez v9, :cond_2
 
-    .line 649
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 650
     const-string v9, "hue"
 
     invoke-virtual {v9, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -919,7 +863,6 @@
 
     if-eqz v9, :cond_3
 
-    .line 651
     invoke-static {v4, v8}, Landroid/app/IconPackHelper$ColorFilterUtils;->getInt(Ljava/lang/String;I)I
 
     move-result v8
@@ -932,13 +875,11 @@
 
     move-result v6
 
-    .line 652
     .local v6, intValue:I
     int-to-float v8, v6
 
     invoke-virtual {p1, v8}, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->hue(F)Landroid/app/IconPackHelper$ColorFilterUtils$Builder;
 
-    .line 681
     .end local v6           #intValue:I
     :cond_2
     :goto_2
@@ -946,9 +887,8 @@
 
     goto :goto_0
 
-    .line 653
     :cond_3
-    const-string/jumbo v9, "saturation"
+    const-string v9, "saturation"
 
     invoke-virtual {v9, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -956,7 +896,6 @@
 
     if-eqz v9, :cond_4
 
-    .line 654
     invoke-static {v4, v10}, Landroid/app/IconPackHelper$ColorFilterUtils;->getInt(Ljava/lang/String;I)I
 
     move-result v9
@@ -965,7 +904,6 @@
 
     move-result v6
 
-    .line 656
     .restart local v6       #intValue:I
     int-to-float v8, v6
 
@@ -973,7 +911,6 @@
 
     goto :goto_2
 
-    .line 657
     .end local v6           #intValue:I
     :cond_4
     const-string v9, "invert"
@@ -984,8 +921,7 @@
 
     if-eqz v9, :cond_5
 
-    .line 658
-    const-string/jumbo v8, "true"
+    const-string v8, "true"
 
     invoke-virtual {v8, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -993,12 +929,10 @@
 
     if-eqz v8, :cond_2
 
-    .line 659
     invoke-virtual {p1}, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->invertColors()Landroid/app/IconPackHelper$ColorFilterUtils$Builder;
 
     goto :goto_2
 
-    .line 661
     :cond_5
     const-string v9, "brightness"
 
@@ -1008,7 +942,6 @@
 
     if-eqz v9, :cond_6
 
-    .line 662
     invoke-static {v4, v10}, Landroid/app/IconPackHelper$ColorFilterUtils;->getInt(Ljava/lang/String;I)I
 
     move-result v9
@@ -1017,7 +950,6 @@
 
     move-result v6
 
-    .line 664
     .restart local v6       #intValue:I
     int-to-float v8, v6
 
@@ -1025,7 +957,6 @@
 
     goto :goto_2
 
-    .line 665
     .end local v6           #intValue:I
     :cond_6
     const-string v9, "contrast"
@@ -1036,7 +967,6 @@
 
     if-eqz v9, :cond_7
 
-    .line 666
     invoke-static {v4, v8}, Landroid/app/IconPackHelper$ColorFilterUtils;->getInt(Ljava/lang/String;I)I
 
     move-result v8
@@ -1047,7 +977,6 @@
 
     move-result v6
 
-    .line 668
     .restart local v6       #intValue:I
     int-to-float v8, v6
 
@@ -1055,7 +984,6 @@
 
     goto :goto_2
 
-    .line 669
     .end local v6           #intValue:I
     :cond_7
     const-string v9, "alpha"
@@ -1066,7 +994,6 @@
 
     if-eqz v9, :cond_8
 
-    .line 670
     invoke-static {v4, v10}, Landroid/app/IconPackHelper$ColorFilterUtils;->getInt(Ljava/lang/String;I)I
 
     move-result v9
@@ -1075,7 +1002,6 @@
 
     move-result v6
 
-    .line 671
     .restart local v6       #intValue:I
     int-to-float v8, v6
 
@@ -1083,10 +1009,9 @@
 
     goto :goto_2
 
-    .line 672
     .end local v6           #intValue:I
     :cond_8
-    const-string/jumbo v8, "tint"
+    const-string v8, "tint"
 
     invoke-virtual {v8, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1094,13 +1019,11 @@
 
     if-eqz v8, :cond_2
 
-    .line 674
     :try_start_0
     invoke-static {v4}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result v6
 
-    .line 675
     .restart local v6       #intValue:I
     invoke-virtual {p1, v6}, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->tint(I)Landroid/app/IconPackHelper$ColorFilterUtils$Builder;
     :try_end_0
@@ -1108,12 +1031,10 @@
 
     goto :goto_2
 
-    .line 676
     .end local v6           #intValue:I
     :catch_0
     move-exception v5
 
-    .line 677
     .local v5, e:Ljava/lang/IllegalArgumentException;
     invoke-static {}, Landroid/app/IconPackHelper;->access$000()Ljava/lang/String;
 

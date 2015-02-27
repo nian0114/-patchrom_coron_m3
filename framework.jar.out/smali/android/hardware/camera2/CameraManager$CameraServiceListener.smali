@@ -48,12 +48,10 @@
     .parameter
 
     .prologue
-    .line 401
     iput-object p1, p0, Landroid/hardware/camera2/CameraManager$CameraServiceListener;->this$0:Landroid/hardware/camera2/CameraManager;
 
     invoke-direct {p0}, Landroid/hardware/ICameraServiceListener$Stub;-><init>()V
 
-    .line 417
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -69,7 +67,6 @@
     .parameter "x1"
 
     .prologue
-    .line 401
     invoke-direct {p0, p1}, Landroid/hardware/camera2/CameraManager$CameraServiceListener;-><init>(Landroid/hardware/camera2/CameraManager;)V
 
     return-void
@@ -80,22 +77,18 @@
     .parameter "status"
 
     .prologue
-    .line 427
     packed-switch p1, :pswitch_data_0
 
-    .line 431
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 429
     :pswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 427
     nop
 
     :pswitch_data_0
@@ -109,22 +102,18 @@
     .parameter "status"
 
     .prologue
-    .line 436
     sparse-switch p1, :sswitch_data_0
 
-    .line 443
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 441
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 436
     nop
 
     :sswitch_data_0
@@ -142,7 +131,6 @@
     .locals 0
 
     .prologue
-    .line 423
     return-object p0
 .end method
 
@@ -157,7 +145,6 @@
     .end annotation
 
     .prologue
-    .line 449
     iget-object v6, p0, Landroid/hardware/camera2/CameraManager$CameraServiceListener;->this$0:Landroid/hardware/camera2/CameraManager;
 
     #getter for: Landroid/hardware/camera2/CameraManager;->mLock:Ljava/lang/Object;
@@ -167,7 +154,6 @@
 
     monitor-enter v7
 
-    .line 451
     :try_start_0
     const-string v6, "CameraServiceListener"
 
@@ -199,12 +185,10 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 456
     .local v2, id:Ljava/lang/String;
     invoke-direct {p0, p1}, Landroid/hardware/camera2/CameraManager$CameraServiceListener;->validStatus(I)Z
 
@@ -212,7 +196,6 @@
 
     if-nez v6, :cond_0
 
-    .line 457
     const-string v6, "CameraServiceListener"
 
     const-string v8, "Ignoring invalid device %d status 0x%x"
@@ -243,14 +226,11 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 459
     monitor-exit v7
 
-    .line 518
     :goto_0
     return-void
 
-    .line 462
     :cond_0
     iget-object v6, p0, Landroid/hardware/camera2/CameraManager$CameraServiceListener;->mDeviceStatus:Landroid/util/ArrayMap;
 
@@ -264,7 +244,6 @@
 
     check-cast v5, Ljava/lang/Integer;
 
-    .line 464
     .local v5, oldStatus:Ljava/lang/Integer;
     if-eqz v5, :cond_1
 
@@ -274,7 +253,6 @@
 
     if-ne v6, p1, :cond_1
 
-    .line 465
     const-string v6, "CameraServiceListener"
 
     const-string v8, "Device status changed to 0x%x, which is what it already was"
@@ -297,12 +275,10 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 468
     monitor-exit v7
 
     goto :goto_0
 
-    .line 517
     .end local v2           #id:Ljava/lang/String;
     .end local v5           #oldStatus:Ljava/lang/Integer;
     :catchall_0
@@ -314,7 +290,6 @@
 
     throw v6
 
-    .line 484
     .restart local v2       #id:Ljava/lang/String;
     .restart local v5       #oldStatus:Ljava/lang/Integer;
     :cond_1
@@ -335,7 +310,6 @@
 
     if-ne v6, v8, :cond_2
 
-    .line 486
     const-string v6, "CameraServiceListener"
 
     const-string v8, "Device status was previously available (%d),  and is now again available (%d)so no new client visible update will be sent"
@@ -374,12 +348,10 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 492
     monitor-exit v7
 
     goto :goto_0
 
-    .line 495
     :cond_2
     iget-object v6, p0, Landroid/hardware/camera2/CameraManager$CameraServiceListener;->this$0:Landroid/hardware/camera2/CameraManager;
 
@@ -392,7 +364,6 @@
 
     move-result v4
 
-    .line 496
     .local v4, listenerCount:I
     const/4 v1, 0x0
 
@@ -400,7 +371,6 @@
     :goto_1
     if-ge v1, v4, :cond_4
 
-    .line 497
     iget-object v6, p0, Landroid/hardware/camera2/CameraManager$CameraServiceListener;->this$0:Landroid/hardware/camera2/CameraManager;
 
     #getter for: Landroid/hardware/camera2/CameraManager;->mListenerMap:Landroid/util/ArrayMap;
@@ -414,7 +384,6 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 498
     .local v0, handler:Landroid/os/Handler;
     iget-object v6, p0, Landroid/hardware/camera2/CameraManager$CameraServiceListener;->this$0:Landroid/hardware/camera2/CameraManager;
 
@@ -429,7 +398,6 @@
 
     check-cast v3, Landroid/hardware/camera2/CameraManager$AvailabilityListener;
 
-    .line 499
     .local v3, listener:Landroid/hardware/camera2/CameraManager$AvailabilityListener;
     invoke-direct {p0, p1}, Landroid/hardware/camera2/CameraManager$CameraServiceListener;->isAvailable(I)Z
 
@@ -437,20 +405,17 @@
 
     if-eqz v6, :cond_3
 
-    .line 500
     new-instance v6, Landroid/hardware/camera2/CameraManager$CameraServiceListener$1;
 
     invoke-direct {v6, p0, v3, v2}, Landroid/hardware/camera2/CameraManager$CameraServiceListener$1;-><init>(Landroid/hardware/camera2/CameraManager$CameraServiceListener;Landroid/hardware/camera2/CameraManager$AvailabilityListener;Ljava/lang/String;)V
 
     invoke-virtual {v0, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 496
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 508
     :cond_3
     new-instance v6, Landroid/hardware/camera2/CameraManager$CameraServiceListener$2;
 
@@ -460,7 +425,6 @@
 
     goto :goto_2
 
-    .line 517
     .end local v0           #handler:Landroid/os/Handler;
     .end local v3           #listener:Landroid/hardware/camera2/CameraManager$AvailabilityListener;
     :cond_4

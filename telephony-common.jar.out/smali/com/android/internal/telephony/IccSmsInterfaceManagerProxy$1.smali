@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 41
     iput-object p1, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy$1;->this$0:Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 44
     invoke-virtual {p0}, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy$1;->getResultCode()I
 
     move-result v1
@@ -49,17 +47,14 @@
 
     if-eq v1, v8, :cond_0
 
-    .line 80
     :goto_0
     return-void
 
-    .line 47
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy$1;->getResultData()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 48
     .local v3, destAddr:Ljava/lang/String;
     const-string v1, "scAddr"
 
@@ -69,7 +64,6 @@
 
     move-result-object v4
 
-    .line 49
     .local v4, scAddr:Ljava/lang/String;
     const-string v1, "callingPackage"
 
@@ -79,7 +73,6 @@
 
     move-result-object v2
 
-    .line 50
     .local v2, callingPackage:Ljava/lang/String;
     const-string v1, "parts"
 
@@ -89,7 +82,6 @@
 
     move-result-object v5
 
-    .line 51
     .local v5, parts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v1, "sentIntents"
 
@@ -99,7 +91,6 @@
 
     move-result-object v6
 
-    .line 53
     .local v6, sentIntents:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
     const-string v1, "deliveryIntents"
 
@@ -109,7 +100,6 @@
 
     move-result-object v7
 
-    .line 56
     .local v7, deliveryIntents:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
     const-string v1, "callingUid"
 
@@ -123,7 +113,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 57
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -156,7 +145,6 @@
 
     move-result-object v2
 
-    .line 60
     :cond_1
     const-string v1, "multipart"
 
@@ -170,7 +158,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 61
     iget-object v1, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy$1;->this$0:Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;
 
     #getter for: Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
@@ -182,11 +169,9 @@
 
     goto :goto_0
 
-    .line 66
     :cond_2
     const/4 v13, 0x0
 
-    .line 67
     .local v13, sentIntent:Landroid/app/PendingIntent;
     if-eqz v6, :cond_3
 
@@ -196,7 +181,6 @@
 
     if-lez v1, :cond_3
 
-    .line 68
     const/4 v1, 0x0
 
     invoke-virtual {v6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -206,12 +190,10 @@
     .end local v13           #sentIntent:Landroid/app/PendingIntent;
     check-cast v13, Landroid/app/PendingIntent;
 
-    .line 70
     .restart local v13       #sentIntent:Landroid/app/PendingIntent;
     :cond_3
     const/4 v14, 0x0
 
-    .line 71
     .local v14, deliveryIntent:Landroid/app/PendingIntent;
     if-eqz v7, :cond_4
 
@@ -221,7 +203,6 @@
 
     if-lez v1, :cond_4
 
-    .line 72
     const/4 v1, 0x0
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -231,12 +212,10 @@
     .end local v14           #deliveryIntent:Landroid/app/PendingIntent;
     check-cast v14, Landroid/app/PendingIntent;
 
-    .line 74
     .restart local v14       #deliveryIntent:Landroid/app/PendingIntent;
     :cond_4
     const/4 v12, 0x0
 
-    .line 75
     .local v12, text:Ljava/lang/String;
     if-eqz v5, :cond_5
 
@@ -246,7 +225,6 @@
 
     if-lez v1, :cond_5
 
-    .line 76
     const/4 v1, 0x0
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -256,7 +234,6 @@
     .end local v12           #text:Ljava/lang/String;
     check-cast v12, Ljava/lang/String;
 
-    .line 78
     .restart local v12       #text:Ljava/lang/String;
     :cond_5
     iget-object v1, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy$1;->this$0:Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;

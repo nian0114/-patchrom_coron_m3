@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 124
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .parameter "actionBarImpl"
 
     .prologue
-    .line 126
     #getter for: Lcom/android/internal/app/ActionBarImpl;->mActionView:Lcom/android/internal/widget/ActionBarView;
     invoke-static {p0}, Lcom/android/internal/app/ActionBarImpl;->access$1100(Lcom/android/internal/app/ActionBarImpl;)Lcom/android/internal/widget/ActionBarView;
 
@@ -38,6 +36,5 @@
 
     invoke-static {v0}, Lcom/android/internal/widget/ActionBarView$BaiduInjector;->reloadHomeIcon(Lcom/android/internal/widget/ActionBarView;)V
 
-    .line 127
     return-void
 .end method

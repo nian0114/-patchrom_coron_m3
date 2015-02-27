@@ -30,9 +30,7 @@
     .parameter "info"
 
     .prologue
-    .line 135
     invoke-direct {p0, p1}, Landroid/content/pm/PermissionInfo;-><init>(Landroid/content/pm/PermissionInfo;)V
 
-    .line 136
     return-void
 .end method

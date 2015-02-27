@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 358
     iput-object p1, p0, Lcom/android/server/print/RemotePrintService$7;->this$0:Lcom/android/server/print/RemotePrintService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 361
     iget-object v0, p0, Lcom/android/server/print/RemotePrintService$7;->this$0:Lcom/android/server/print/RemotePrintService;
 
     #calls: Lcom/android/server/print/RemotePrintService;->handleStopPrinterDiscovery()V
     invoke-static {v0}, Lcom/android/server/print/RemotePrintService;->access$700(Lcom/android/server/print/RemotePrintService;)V
 
-    .line 362
     return-void
 .end method

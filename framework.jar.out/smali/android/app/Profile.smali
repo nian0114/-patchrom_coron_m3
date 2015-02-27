@@ -126,7 +126,6 @@
     .locals 1
 
     .prologue
-    .line 219
     new-instance v0, Landroid/app/Profile$1;
 
     invoke-direct {v0}, Landroid/app/Profile$1;-><init>()V
@@ -143,71 +142,58 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 243
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->mSecondaryUuids:Ljava/util/ArrayList;
 
-    .line 54
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
-    .line 58
     iput-boolean v1, p0, Landroid/app/Profile;->mStatusBarIndicator:Z
 
-    .line 70
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->streams:Ljava/util/Map;
 
-    .line 72
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
 
-    .line 74
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->connections:Ljava/util/Map;
 
-    .line 76
     new-instance v0, Landroid/app/RingModeSettings;
 
     invoke-direct {v0}, Landroid/app/RingModeSettings;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->mRingMode:Landroid/app/RingModeSettings;
 
-    .line 78
     new-instance v0, Landroid/app/AirplaneModeSettings;
 
     invoke-direct {v0}, Landroid/app/AirplaneModeSettings;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->mAirplaneMode:Landroid/app/AirplaneModeSettings;
 
-    .line 80
     iput v1, p0, Landroid/app/Profile;->mScreenLockMode:I
 
-    .line 82
     iput v1, p0, Landroid/app/Profile;->mExpandedDesktopMode:I
 
-    .line 244
     invoke-virtual {p0, p1}, Landroid/app/Profile;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 245
     return-void
 .end method
 
@@ -217,7 +203,6 @@
     .parameter "x1"
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Landroid/app/Profile;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -228,7 +213,6 @@
     .parameter "name"
 
     .prologue
-    .line 232
     const/4 v0, -0x1
 
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
@@ -237,7 +221,6 @@
 
     invoke-direct {p0, p1, v0, v1}, Landroid/app/Profile;-><init>(Ljava/lang/String;ILjava/util/UUID;)V
 
-    .line 233
     return-void
 .end method
 
@@ -250,83 +233,66 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 235
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->mSecondaryUuids:Ljava/util/ArrayList;
 
-    .line 54
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
-    .line 58
     iput-boolean v1, p0, Landroid/app/Profile;->mStatusBarIndicator:Z
 
-    .line 70
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->streams:Ljava/util/Map;
 
-    .line 72
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
 
-    .line 74
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->connections:Ljava/util/Map;
 
-    .line 76
     new-instance v0, Landroid/app/RingModeSettings;
 
     invoke-direct {v0}, Landroid/app/RingModeSettings;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->mRingMode:Landroid/app/RingModeSettings;
 
-    .line 78
     new-instance v0, Landroid/app/AirplaneModeSettings;
 
     invoke-direct {v0}, Landroid/app/AirplaneModeSettings;-><init>()V
 
     iput-object v0, p0, Landroid/app/Profile;->mAirplaneMode:Landroid/app/AirplaneModeSettings;
 
-    .line 80
     iput v1, p0, Landroid/app/Profile;->mScreenLockMode:I
 
-    .line 82
     iput v1, p0, Landroid/app/Profile;->mExpandedDesktopMode:I
 
-    .line 236
     iput-object p1, p0, Landroid/app/Profile;->mName:Ljava/lang/String;
 
-    .line 237
     iput p2, p0, Landroid/app/Profile;->mNameResId:I
 
-    .line 238
     iput-object p3, p0, Landroid/app/Profile;->mUuid:Ljava/util/UUID;
 
-    .line 239
     iput v1, p0, Landroid/app/Profile;->mProfileType:I
 
-    .line 240
     iput-boolean v1, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 241
     return-void
 .end method
 
@@ -342,10 +308,9 @@
     .end annotation
 
     .prologue
-    .line 646
     const/4 v15, 0x0
 
-    const-string/jumbo v16, "nameres"
+    const-string v16, "nameres"
 
     move-object/from16 v0, p0
 
@@ -355,24 +320,20 @@
 
     move-result-object v14
 
-    .line 647
     .local v14, value:Ljava/lang/String;
     const/4 v10, -0x1
 
-    .line 648
     .local v10, profileNameResId:I
     const/4 v9, 0x0
 
-    .line 650
     .local v9, profileName:Ljava/lang/String;
     if-eqz v14, :cond_0
 
-    .line 651
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v15
 
-    const-string/jumbo v16, "string"
+    const-string v16, "string"
 
     const-string v17, "android"
 
@@ -384,10 +345,8 @@
 
     move-result v10
 
-    .line 652
     if-lez v10, :cond_0
 
-    .line 653
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v15
@@ -396,14 +355,12 @@
 
     move-result-object v9
 
-    .line 657
     :cond_0
     if-nez v9, :cond_1
 
-    .line 658
     const/4 v15, 0x0
 
-    const-string/jumbo v16, "name"
+    const-string v16, "name"
 
     move-object/from16 v0, p0
 
@@ -413,18 +370,16 @@
 
     move-result-object v9
 
-    .line 661
     :cond_1
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v11
 
-    .line 663
     .local v11, profileUuid:Ljava/util/UUID;
     const/4 v15, 0x0
 
     :try_start_0
-    const-string/jumbo v16, "uuid"
+    const-string v16, "uuid"
 
     move-object/from16 v0, p0
 
@@ -441,38 +396,32 @@
 
     move-result-object v11
 
-    .line 680
     :goto_0
     new-instance v8, Landroid/app/Profile;
 
     invoke-direct {v8, v9, v10, v11}, Landroid/app/Profile;-><init>(Ljava/lang/String;ILjava/util/UUID;)V
 
-    .line 681
     .local v8, profile:Landroid/app/Profile;
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v5
 
-    .line 682
     .local v5, event:I
     :goto_1
     const/4 v15, 0x3
 
     if-eq v5, v15, :cond_e
 
-    .line 683
     const/4 v15, 0x2
 
     if-ne v5, v15, :cond_c
 
-    .line 684
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 685
     .local v6, name:Ljava/lang/String;
-    const-string/jumbo v15, "uuids"
+    const-string v15, "uuids"
 
     invoke-virtual {v6, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -480,16 +429,14 @@
 
     if-eqz v15, :cond_2
 
-    .line 686
     invoke-static/range {p0 .. p1}, Landroid/app/Profile;->readSecondaryUuidsFromXml(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v15
 
     invoke-virtual {v8, v15}, Landroid/app/Profile;->setSecondaryUuids(Ljava/util/List;)V
 
-    .line 688
     :cond_2
-    const-string/jumbo v15, "statusbar"
+    const-string v15, "statusbar"
 
     invoke-virtual {v6, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -497,12 +444,11 @@
 
     if-eqz v15, :cond_3
 
-    .line 689
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v15
 
-    const-string/jumbo v16, "yes"
+    const-string v16, "yes"
 
     invoke-virtual/range {v15 .. v16}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -510,9 +456,8 @@
 
     invoke-virtual {v8, v15}, Landroid/app/Profile;->setStatusBarIndicator(Z)V
 
-    .line 691
     :cond_3
-    const-string/jumbo v15, "profiletype"
+    const-string v15, "profiletype"
 
     invoke-virtual {v6, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -520,12 +465,11 @@
 
     if-eqz v15, :cond_4
 
-    .line 692
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v15
 
-    const-string/jumbo v16, "toggle"
+    const-string v16, "toggle"
 
     invoke-virtual/range {v15 .. v16}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -538,9 +482,8 @@
     :goto_2
     invoke-virtual {v8, v15}, Landroid/app/Profile;->setProfileType(I)V
 
-    .line 694
     :cond_4
-    const-string/jumbo v15, "ringModeDescriptor"
+    const-string v15, "ringModeDescriptor"
 
     invoke-virtual {v6, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -548,16 +491,13 @@
 
     if-eqz v15, :cond_5
 
-    .line 695
     invoke-static/range {p0 .. p1}, Landroid/app/RingModeSettings;->fromXml(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/Context;)Landroid/app/RingModeSettings;
 
     move-result-object v13
 
-    .line 696
     .local v13, smd:Landroid/app/RingModeSettings;
     invoke-virtual {v8, v13}, Landroid/app/Profile;->setRingMode(Landroid/app/RingModeSettings;)V
 
-    .line 698
     .end local v13           #smd:Landroid/app/RingModeSettings;
     :cond_5
     const-string v15, "airplaneModeDescriptor"
@@ -568,19 +508,16 @@
 
     if-eqz v15, :cond_6
 
-    .line 699
     invoke-static/range {p0 .. p1}, Landroid/app/AirplaneModeSettings;->fromXml(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/Context;)Landroid/app/AirplaneModeSettings;
 
     move-result-object v2
 
-    .line 700
     .local v2, amd:Landroid/app/AirplaneModeSettings;
     invoke-virtual {v8, v2}, Landroid/app/Profile;->setAirplaneMode(Landroid/app/AirplaneModeSettings;)V
 
-    .line 702
     .end local v2           #amd:Landroid/app/AirplaneModeSettings;
     :cond_6
-    const-string/jumbo v15, "screen-lock-mode"
+    const-string v15, "screen-lock-mode"
 
     invoke-virtual {v6, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -588,7 +525,6 @@
 
     if-eqz v15, :cond_7
 
-    .line 703
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v15
@@ -603,7 +539,6 @@
 
     invoke-virtual {v8, v15}, Landroid/app/Profile;->setScreenLockMode(I)V
 
-    .line 705
     :cond_7
     const-string v15, "expanded-desktop-mode"
 
@@ -613,7 +548,6 @@
 
     if-eqz v15, :cond_8
 
-    .line 706
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v15
@@ -628,9 +562,8 @@
 
     invoke-virtual {v8, v15}, Landroid/app/Profile;->setExpandedDesktopMode(I)V
 
-    .line 708
     :cond_8
-    const-string/jumbo v15, "profileGroup"
+    const-string v15, "profileGroup"
 
     invoke-virtual {v6, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -638,19 +571,16 @@
 
     if-eqz v15, :cond_9
 
-    .line 709
     invoke-static/range {p0 .. p1}, Landroid/app/ProfileGroup;->fromXml(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/Context;)Landroid/app/ProfileGroup;
 
     move-result-object v7
 
-    .line 710
     .local v7, pg:Landroid/app/ProfileGroup;
     invoke-virtual {v8, v7}, Landroid/app/Profile;->addProfileGroup(Landroid/app/ProfileGroup;)V
 
-    .line 712
     .end local v7           #pg:Landroid/app/ProfileGroup;
     :cond_9
-    const-string/jumbo v15, "streamDescriptor"
+    const-string v15, "streamDescriptor"
 
     invoke-virtual {v6, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -658,16 +588,13 @@
 
     if-eqz v15, :cond_a
 
-    .line 713
     invoke-static/range {p0 .. p1}, Landroid/app/StreamSettings;->fromXml(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/Context;)Landroid/app/StreamSettings;
 
     move-result-object v12
 
-    .line 714
     .local v12, sd:Landroid/app/StreamSettings;
     invoke-virtual {v8, v12}, Landroid/app/Profile;->setStreamSettings(Landroid/app/StreamSettings;)V
 
-    .line 716
     .end local v12           #sd:Landroid/app/StreamSettings;
     :cond_a
     const-string v15, "connectionDescriptor"
@@ -678,12 +605,10 @@
 
     if-eqz v15, :cond_b
 
-    .line 717
     invoke-static/range {p0 .. p1}, Landroid/app/ConnectionSettings;->fromXml(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/Context;)Landroid/app/ConnectionSettings;
 
     move-result-object v3
 
-    .line 718
     .local v3, cs:Landroid/app/ConnectionSettings;
     iget-object v15, v8, Landroid/app/Profile;->connections:Ljava/util/Map;
 
@@ -699,10 +624,9 @@
 
     invoke-interface {v15, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 720
     .end local v3           #cs:Landroid/app/ConnectionSettings;
     :cond_b
-    const-string/jumbo v15, "triggers"
+    const-string v15, "triggers"
 
     invoke-virtual {v6, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -710,14 +634,12 @@
 
     if-eqz v15, :cond_c
 
-    .line 721
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
     invoke-static {v0, v1, v8}, Landroid/app/Profile;->readTriggersFromXml(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/Context;Landroid/app/Profile;)V
 
-    .line 724
     .end local v6           #name:Ljava/lang/String;
     :cond_c
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -726,13 +648,11 @@
 
     goto/16 :goto_1
 
-    .line 664
     .end local v5           #event:I
     .end local v8           #profile:Landroid/app/Profile;
     :catch_0
     move-exception v4
 
-    .line 665
     .local v4, e:Ljava/lang/NullPointerException;
     const-string v15, "Profile"
 
@@ -774,12 +694,10 @@
 
     goto/16 :goto_0
 
-    .line 671
     .end local v4           #e:Ljava/lang/NullPointerException;
     :catch_1
     move-exception v4
 
-    .line 672
     .local v4, e:Ljava/lang/IllegalArgumentException;
     const-string v15, "Profile"
 
@@ -821,7 +739,6 @@
 
     goto/16 :goto_0
 
-    .line 692
     .end local v4           #e:Ljava/lang/IllegalArgumentException;
     .restart local v5       #event:I
     .restart local v6       #name:Ljava/lang/String;
@@ -831,14 +748,12 @@
 
     goto/16 :goto_2
 
-    .line 728
     .end local v6           #name:Ljava/lang/String;
     :cond_e
     const/4 v15, 0x0
 
     iput-boolean v15, v8, Landroid/app/Profile;->mDirty:Z
 
-    .line 730
     return-object v8
 .end method
 
@@ -867,18 +782,15 @@
     .end annotation
 
     .prologue
-    .line 602
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 603
     .local v3, uuids:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/UUID;>;"
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v1
 
-    .line 604
     .local v1, event:I
     :goto_0
     const/4 v4, 0x3
@@ -889,7 +801,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "uuids"
+    const-string v5, "uuids"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -897,20 +809,17 @@
 
     if-nez v4, :cond_2
 
-    .line 605
     :cond_0
     const/4 v4, 0x2
 
     if-ne v1, v4, :cond_1
 
-    .line 606
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 607
     .local v2, name:Ljava/lang/String;
-    const-string/jumbo v4, "uuid"
+    const-string v4, "uuid"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -918,7 +827,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 609
     :try_start_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
@@ -933,7 +841,6 @@
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 617
     .end local v2           #name:Ljava/lang/String;
     :cond_1
     :goto_1
@@ -943,12 +850,10 @@
 
     goto :goto_0
 
-    .line 610
     .restart local v2       #name:Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 611
     .local v0, e:Ljava/lang/NullPointerException;
     const-string v4, "Profile"
 
@@ -958,12 +863,10 @@
 
     goto :goto_1
 
-    .line 612
     .end local v0           #e:Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 613
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v4, "Profile"
 
@@ -973,7 +876,6 @@
 
     goto :goto_1
 
-    .line 619
     .end local v0           #e:Ljava/lang/IllegalArgumentException;
     .end local v2           #name:Ljava/lang/String;
     :cond_2
@@ -993,12 +895,10 @@
     .end annotation
 
     .prologue
-    .line 624
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v0
 
-    .line 625
     .local v0, event:I
     :goto_0
     const/4 v2, 0x3
@@ -1009,7 +909,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "triggers"
+    const-string v3, "triggers"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1017,22 +917,18 @@
 
     if-nez v2, :cond_2
 
-    .line 626
     :cond_0
     const/4 v2, 0x2
 
     if-ne v0, v2, :cond_1
 
-    .line 627
     invoke-static {p0, p1}, Landroid/app/Profile$ProfileTrigger;->fromXml(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/Context;)Landroid/app/Profile$ProfileTrigger;
 
     move-result-object v1
 
-    .line 628
     .local v1, trigger:Landroid/app/Profile$ProfileTrigger;
     if-eqz v1, :cond_1
 
-    .line 629
     iget-object v2, p2, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
 
     #getter for: Landroid/app/Profile$ProfileTrigger;->mId:Ljava/lang/String;
@@ -1042,7 +938,6 @@
 
     invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 632
     .end local v1           #trigger:Landroid/app/Profile$ProfileTrigger;
     :cond_1
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -1051,7 +946,6 @@
 
     goto :goto_0
 
-    .line 634
     :cond_2
     return-void
 .end method
@@ -1063,27 +957,22 @@
     .parameter "value"
 
     .prologue
-    .line 300
     invoke-virtual {p1}, Landroid/app/ProfileGroup;->isDefaultGroup()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 302
     iget-object v0, p0, Landroid/app/Profile;->mDefaultGroup:Landroid/app/ProfileGroup;
 
     if-eqz v0, :cond_0
 
-    .line 309
     :goto_0
     return-void
 
-    .line 305
     :cond_0
     iput-object p1, p0, Landroid/app/Profile;->mDefaultGroup:Landroid/app/ProfileGroup;
 
-    .line 307
     :cond_1
     iget-object v0, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
@@ -1093,7 +982,6 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 308
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
@@ -1106,20 +994,16 @@
     .parameter "uuid"
 
     .prologue
-    .line 438
     if-eqz p1, :cond_0
 
-    .line 439
     iget-object v0, p0, Landroid/app/Profile;->mSecondaryUuids:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 440
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 442
     :cond_0
     return-void
 .end method
@@ -1129,12 +1013,10 @@
     .parameter "obj"
 
     .prologue
-    .line 289
     move-object v0, p1
 
     check-cast v0, Landroid/app/Profile;
 
-    .line 290
     .local v0, tmp:Landroid/app/Profile;
     iget-object v1, p0, Landroid/app/Profile;->mName:Ljava/lang/String;
 
@@ -1146,14 +1028,11 @@
 
     if-gez v1, :cond_0
 
-    .line 291
     const/4 v1, -0x1
 
-    .line 295
     :goto_0
     return v1
 
-    .line 292
     :cond_0
     iget-object v1, p0, Landroid/app/Profile;->mName:Ljava/lang/String;
 
@@ -1165,12 +1044,10 @@
 
     if-lez v1, :cond_1
 
-    .line 293
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 295
     :cond_1
     const/4 v1, 0x0
 
@@ -1181,7 +1058,6 @@
     .locals 1
 
     .prologue
-    .line 335
     const/4 v0, 0x0
 
     return v0
@@ -1196,7 +1072,6 @@
 
     const/4 v5, 0x0
 
-    .line 736
     const-string v6, "audio"
 
     invoke-virtual {p1, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1205,7 +1080,6 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 737
     .local v0, am:Landroid/media/AudioManager;
     iget-object v6, p0, Landroid/app/Profile;->streams:Ljava/util/Map;
 
@@ -1232,7 +1106,6 @@
 
     check-cast v3, Landroid/app/StreamSettings;
 
-    .line 738
     .local v3, sd:Landroid/app/StreamSettings;
     invoke-virtual {v3}, Landroid/app/StreamSettings;->isOverride()Z
 
@@ -1240,7 +1113,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 739
     invoke-virtual {v3}, Landroid/app/StreamSettings;->getStreamId()I
 
     move-result v6
@@ -1253,7 +1125,6 @@
 
     goto :goto_0
 
-    .line 743
     .end local v3           #sd:Landroid/app/StreamSettings;
     :cond_1
     iget-object v6, p0, Landroid/app/Profile;->connections:Ljava/util/Map;
@@ -1280,7 +1151,6 @@
 
     check-cast v1, Landroid/app/ConnectionSettings;
 
-    .line 744
     .local v1, cs:Landroid/app/ConnectionSettings;
     invoke-virtual {v1}, Landroid/app/ConnectionSettings;->isOverride()Z
 
@@ -1288,29 +1158,24 @@
 
     if-eqz v6, :cond_2
 
-    .line 745
     invoke-virtual {v1, p1}, Landroid/app/ConnectionSettings;->processOverride(Landroid/content/Context;)V
 
     goto :goto_1
 
-    .line 749
     .end local v1           #cs:Landroid/app/ConnectionSettings;
     :cond_3
     iget-object v6, p0, Landroid/app/Profile;->mRingMode:Landroid/app/RingModeSettings;
 
     invoke-virtual {v6, p1}, Landroid/app/RingModeSettings;->processOverride(Landroid/content/Context;)V
 
-    .line 751
     iget-object v6, p0, Landroid/app/Profile;->mAirplaneMode:Landroid/app/AirplaneModeSettings;
 
     invoke-virtual {v6, p1}, Landroid/app/AirplaneModeSettings;->processOverride(Landroid/content/Context;)V
 
-    .line 754
     iget v6, p0, Landroid/app/Profile;->mExpandedDesktopMode:I
 
     if-eqz v6, :cond_4
 
-    .line 755
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
@@ -1326,14 +1191,12 @@
 
     invoke-static {v6, v7, v4, v5}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 760
     :cond_4
     return-void
 
     :cond_5
     move v4, v5
 
-    .line 755
     goto :goto_2
 .end method
 
@@ -1341,7 +1204,6 @@
     .locals 1
 
     .prologue
-    .line 499
     iget-object v0, p0, Landroid/app/Profile;->mAirplaneMode:Landroid/app/AirplaneModeSettings;
 
     return-object v0
@@ -1360,7 +1222,6 @@
     .end annotation
 
     .prologue
-    .line 790
     iget-object v0, p0, Landroid/app/Profile;->connections:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -1374,7 +1235,6 @@
     .locals 1
 
     .prologue
-    .line 329
     iget-object v0, p0, Landroid/app/Profile;->mDefaultGroup:Landroid/app/ProfileGroup;
 
     return-object v0
@@ -1384,7 +1244,6 @@
     .locals 1
 
     .prologue
-    .line 485
     iget v0, p0, Landroid/app/Profile;->mExpandedDesktopMode:I
 
     return v0
@@ -1394,7 +1253,6 @@
     .locals 1
 
     .prologue
-    .line 400
     iget-object v0, p0, Landroid/app/Profile;->mName:Ljava/lang/String;
 
     return-object v0
@@ -1405,7 +1263,6 @@
     .parameter "uuid"
 
     .prologue
-    .line 325
     iget-object v0, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1421,7 +1278,6 @@
     .locals 2
 
     .prologue
-    .line 321
     iget-object v0, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -1449,7 +1305,6 @@
     .locals 1
 
     .prologue
-    .line 411
     iget v0, p0, Landroid/app/Profile;->mProfileType:I
 
     return v0
@@ -1459,7 +1314,6 @@
     .locals 1
 
     .prologue
-    .line 463
     iget-object v0, p0, Landroid/app/Profile;->mRingMode:Landroid/app/RingModeSettings;
 
     return-object v0
@@ -1469,7 +1323,6 @@
     .locals 1
 
     .prologue
-    .line 472
     iget v0, p0, Landroid/app/Profile;->mScreenLockMode:I
 
     return v0
@@ -1479,7 +1332,6 @@
     .locals 2
 
     .prologue
-    .line 426
     iget-object v0, p0, Landroid/app/Profile;->mSecondaryUuids:Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroid/app/Profile;->mSecondaryUuids:Ljava/util/ArrayList;
@@ -1504,7 +1356,6 @@
     .parameter "connectionId"
 
     .prologue
-    .line 780
     iget-object v0, p0, Landroid/app/Profile;->connections:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1525,7 +1376,6 @@
     .parameter "streamId"
 
     .prologue
-    .line 764
     iget-object v0, p0, Landroid/app/Profile;->streams:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1545,7 +1395,6 @@
     .locals 1
 
     .prologue
-    .line 445
     iget-boolean v0, p0, Landroid/app/Profile;->mStatusBarIndicator:Z
 
     return v0
@@ -1564,7 +1413,6 @@
     .end annotation
 
     .prologue
-    .line 775
     iget-object v0, p0, Landroid/app/Profile;->streams:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -1580,7 +1428,6 @@
     .parameter "id"
 
     .prologue
-    .line 248
     if-eqz p2, :cond_0
 
     iget-object v1, p0, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
@@ -1593,29 +1440,24 @@
 
     move-object v0, v1
 
-    .line 249
     .local v0, trigger:Landroid/app/Profile$ProfileTrigger;
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 250
     #getter for: Landroid/app/Profile$ProfileTrigger;->mState:I
     invoke-static {v0}, Landroid/app/Profile$ProfileTrigger;->access$200(Landroid/app/Profile$ProfileTrigger;)I
 
     move-result v1
 
-    .line 252
     :goto_1
     return v1
 
-    .line 248
     .end local v0           #trigger:Landroid/app/Profile$ProfileTrigger;
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 252
     .restart local v0       #trigger:Landroid/app/Profile$ProfileTrigger;
     :cond_1
     const/4 v1, 0x2
@@ -1637,12 +1479,10 @@
     .end annotation
 
     .prologue
-    .line 256
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 257
     .local v2, result:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/app/Profile$ProfileTrigger;>;"
     iget-object v4, p0, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
 
@@ -1669,7 +1509,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 258
     .local v1, profileTrigger:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Landroid/app/Profile$ProfileTrigger;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -1677,7 +1516,6 @@
 
     check-cast v3, Landroid/app/Profile$ProfileTrigger;
 
-    .line 259
     .local v3, trigger:Landroid/app/Profile$ProfileTrigger;
     invoke-virtual {v3}, Landroid/app/Profile$ProfileTrigger;->getType()I
 
@@ -1685,12 +1523,10 @@
 
     if-ne v4, p1, :cond_0
 
-    .line 260
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 263
     .end local v1           #profileTrigger:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Landroid/app/Profile$ProfileTrigger;>;"
     .end local v3           #trigger:Landroid/app/Profile$ProfileTrigger;
     :cond_1
@@ -1701,7 +1537,6 @@
     .locals 1
 
     .prologue
-    .line 421
     iget-object v0, p0, Landroid/app/Profile;->mUuid:Ljava/util/UUID;
 
     if-nez v0, :cond_0
@@ -1712,7 +1547,6 @@
 
     iput-object v0, p0, Landroid/app/Profile;->mUuid:Ljava/util/UUID;
 
-    .line 422
     :cond_0
     iget-object v0, p0, Landroid/app/Profile;->mUuid:Ljava/util/UUID;
 
@@ -1725,22 +1559,18 @@
     .parameter "context"
 
     .prologue
-    .line 538
     const-string v6, "<profile "
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 539
     iget v6, p0, Landroid/app/Profile;->mNameResId:I
 
     if-lez v6, :cond_0
 
-    .line 540
-    const-string/jumbo v6, "nameres=\""
+    const-string v6, "nameres=\""
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 541
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -1753,13 +1583,11 @@
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 546
     :goto_0
     const-string v6, "\" uuid=\""
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 547
     invoke-virtual {p0}, Landroid/app/Profile;->getUuid()Ljava/util/UUID;
 
     move-result-object v6
@@ -1774,17 +1602,14 @@
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 548
     const-string v6, "\">\n"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 550
     const-string v6, "<uuids>"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 551
     iget-object v6, p0, Landroid/app/Profile;->mSecondaryUuids:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1805,13 +1630,11 @@
 
     check-cast v5, Ljava/util/UUID;
 
-    .line 552
     .local v5, u:Ljava/util/UUID;
     const-string v6, "<uuid>"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 553
     invoke-virtual {v5}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
     move-result-object v6
@@ -1822,22 +1645,19 @@
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 554
     const-string v6, "</uuid>"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 543
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v5           #u:Ljava/util/UUID;
     :cond_0
-    const-string/jumbo v6, "name=\""
+    const-string v6, "name=\""
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 544
     invoke-virtual {p0}, Landroid/app/Profile;->getName()Ljava/lang/String;
 
     move-result-object v6
@@ -1850,98 +1670,82 @@
 
     goto :goto_0
 
-    .line 556
     .restart local v1       #i$:Ljava/util/Iterator;
     :cond_1
     const-string v6, "</uuids>\n"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 558
     const-string v6, "<profiletype>"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 559
     invoke-virtual {p0}, Landroid/app/Profile;->getProfileType()I
 
     move-result v6
 
     if-nez v6, :cond_2
 
-    const-string/jumbo v6, "toggle"
+    const-string v6, "toggle"
 
     :goto_2
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 560
     const-string v6, "</profiletype>\n"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 562
     const-string v6, "<statusbar>"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 563
     invoke-virtual {p0}, Landroid/app/Profile;->getStatusBarIndicator()Z
 
     move-result v6
 
     if-eqz v6, :cond_3
 
-    const-string/jumbo v6, "yes"
+    const-string v6, "yes"
 
     :goto_3
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 564
     const-string v6, "</statusbar>\n"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 566
     const-string v6, "<screen-lock-mode>"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 567
     iget v6, p0, Landroid/app/Profile;->mScreenLockMode:I
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 568
     const-string v6, "</screen-lock-mode>\n"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 570
     const-string v6, "<expanded-desktop-mode>"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 571
     iget v6, p0, Landroid/app/Profile;->mExpandedDesktopMode:I
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 572
     const-string v6, "</expanded-desktop-mode>\n"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 574
     iget-object v6, p0, Landroid/app/Profile;->mAirplaneMode:Landroid/app/AirplaneModeSettings;
 
     invoke-virtual {v6, p1, p2}, Landroid/app/AirplaneModeSettings;->getXmlString(Ljava/lang/StringBuilder;Landroid/content/Context;)V
 
-    .line 576
     iget-object v6, p0, Landroid/app/Profile;->mRingMode:Landroid/app/RingModeSettings;
 
     invoke-virtual {v6, p1, p2}, Landroid/app/RingModeSettings;->getXmlString(Ljava/lang/StringBuilder;Landroid/content/Context;)V
 
-    .line 578
     iget-object v6, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
     invoke-interface {v6}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -1965,26 +1769,22 @@
 
     check-cast v2, Landroid/app/ProfileGroup;
 
-    .line 579
     .local v2, pGroup:Landroid/app/ProfileGroup;
     invoke-virtual {v2, p1, p2}, Landroid/app/ProfileGroup;->getXmlString(Ljava/lang/StringBuilder;Landroid/content/Context;)V
 
     goto :goto_4
 
-    .line 559
     .end local v2           #pGroup:Landroid/app/ProfileGroup;
     :cond_2
     const-string v6, "conditional"
 
     goto :goto_2
 
-    .line 563
     :cond_3
-    const-string/jumbo v6, "no"
+    const-string v6, "no"
 
     goto :goto_3
 
-    .line 581
     :cond_4
     iget-object v6, p0, Landroid/app/Profile;->streams:Ljava/util/Map;
 
@@ -2009,13 +1809,11 @@
 
     check-cast v3, Landroid/app/StreamSettings;
 
-    .line 582
     .local v3, sd:Landroid/app/StreamSettings;
     invoke-virtual {v3, p1, p2}, Landroid/app/StreamSettings;->getXmlString(Ljava/lang/StringBuilder;Landroid/content/Context;)V
 
     goto :goto_5
 
-    .line 584
     .end local v3           #sd:Landroid/app/StreamSettings;
     :cond_5
     iget-object v6, p0, Landroid/app/Profile;->connections:Ljava/util/Map;
@@ -2041,13 +1839,11 @@
 
     check-cast v0, Landroid/app/ConnectionSettings;
 
-    .line 585
     .local v0, cs:Landroid/app/ConnectionSettings;
     invoke-virtual {v0, p1, p2}, Landroid/app/ConnectionSettings;->getXmlString(Ljava/lang/StringBuilder;Landroid/content/Context;)V
 
     goto :goto_6
 
-    .line 587
     .end local v0           #cs:Landroid/app/ConnectionSettings;
     :cond_6
     iget-object v6, p0, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
@@ -2058,12 +1854,10 @@
 
     if-nez v6, :cond_8
 
-    .line 588
     const-string v6, "<triggers>\n"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 589
     iget-object v6, p0, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
 
     invoke-interface {v6}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -2087,31 +1881,26 @@
 
     check-cast v4, Landroid/app/Profile$ProfileTrigger;
 
-    .line 590
     .local v4, trigger:Landroid/app/Profile$ProfileTrigger;
     invoke-virtual {v4, p1, p2}, Landroid/app/Profile$ProfileTrigger;->getXmlString(Ljava/lang/StringBuilder;Landroid/content/Context;)V
 
     goto :goto_7
 
-    .line 592
     .end local v4           #trigger:Landroid/app/Profile$ProfileTrigger;
     :cond_7
     const-string v6, "</triggers>\n"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 595
     :cond_8
     const-string v6, "</profile>\n"
 
     invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 596
     const/4 v6, 0x0
 
     iput-boolean v6, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 597
     return-void
 .end method
 
@@ -2121,7 +1910,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 454
     iget v1, p0, Landroid/app/Profile;->mProfileType:I
 
     if-ne v1, v0, :cond_0
@@ -2141,17 +1929,14 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 509
     iget-boolean v5, p0, Landroid/app/Profile;->mDirty:Z
 
     if-eqz v5, :cond_1
 
-    .line 533
     :cond_0
     :goto_0
     return v4
 
-    .line 512
     :cond_1
     iget-object v5, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
@@ -2177,7 +1962,6 @@
 
     check-cast v1, Landroid/app/ProfileGroup;
 
-    .line 513
     .local v1, group:Landroid/app/ProfileGroup;
     invoke-virtual {v1}, Landroid/app/ProfileGroup;->isDirty()Z
 
@@ -2187,7 +1971,6 @@
 
     goto :goto_0
 
-    .line 517
     .end local v1           #group:Landroid/app/ProfileGroup;
     :cond_3
     iget-object v5, p0, Landroid/app/Profile;->streams:Ljava/util/Map;
@@ -2213,7 +1996,6 @@
 
     check-cast v3, Landroid/app/StreamSettings;
 
-    .line 518
     .local v3, stream:Landroid/app/StreamSettings;
     invoke-virtual {v3}, Landroid/app/StreamSettings;->isDirty()Z
 
@@ -2223,7 +2005,6 @@
 
     goto :goto_0
 
-    .line 522
     .end local v3           #stream:Landroid/app/StreamSettings;
     :cond_5
     iget-object v5, p0, Landroid/app/Profile;->connections:Ljava/util/Map;
@@ -2249,7 +2030,6 @@
 
     check-cast v0, Landroid/app/ConnectionSettings;
 
-    .line 523
     .local v0, conn:Landroid/app/ConnectionSettings;
     invoke-virtual {v0}, Landroid/app/ConnectionSettings;->isDirty()Z
 
@@ -2259,7 +2039,6 @@
 
     goto :goto_0
 
-    .line 527
     .end local v0           #conn:Landroid/app/ConnectionSettings;
     :cond_7
     iget-object v5, p0, Landroid/app/Profile;->mRingMode:Landroid/app/RingModeSettings;
@@ -2270,7 +2049,6 @@
 
     if-nez v5, :cond_0
 
-    .line 530
     iget-object v5, p0, Landroid/app/Profile;->mAirplaneMode:Landroid/app/AirplaneModeSettings;
 
     invoke-virtual {v5}, Landroid/app/AirplaneModeSettings;->isDirty()Z
@@ -2279,7 +2057,6 @@
 
     if-nez v5, :cond_0
 
-    .line 533
     const/4 v4, 0x0
 
     goto :goto_0
@@ -2296,21 +2073,18 @@
 
     const/4 v13, 0x0
 
-    .line 367
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v9
 
     iput-object v9, p0, Landroid/app/Profile;->mName:Ljava/lang/String;
 
-    .line 368
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     iput v9, p0, Landroid/app/Profile;->mNameResId:I
 
-    .line 369
     sget-object v9, Landroid/os/ParcelUuid;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v9, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -2325,7 +2099,6 @@
 
     iput-object v9, p0, Landroid/app/Profile;->mUuid:Ljava/util/UUID;
 
-    .line 370
     invoke-virtual {p1, v13}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
 
     move-result-object v0
@@ -2345,10 +2118,8 @@
     .local v6, parcel:Landroid/os/Parcelable;
     move-object v8, v6
 
-    .line 371
     check-cast v8, Landroid/os/ParcelUuid;
 
-    .line 372
     .local v8, u:Landroid/os/ParcelUuid;
     iget-object v9, p0, Landroid/app/Profile;->mSecondaryUuids:Ljava/util/ArrayList;
 
@@ -2358,12 +2129,10 @@
 
     invoke-virtual {v9, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 370
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 374
     .end local v6           #parcel:Landroid/os/Parcelable;
     .end local v8           #u:Landroid/os/ParcelUuid;
     :cond_0
@@ -2378,14 +2147,12 @@
     :goto_1
     iput-boolean v9, p0, Landroid/app/Profile;->mStatusBarIndicator:Z
 
-    .line 375
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     iput v9, p0, Landroid/app/Profile;->mProfileType:I
 
-    .line 376
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
@@ -2395,7 +2162,6 @@
     :goto_2
     iput-boolean v10, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 377
     invoke-virtual {p1, v13}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
 
     move-result-object v0
@@ -2412,10 +2178,8 @@
     .local v2, group:Landroid/os/Parcelable;
     move-object v3, v2
 
-    .line 378
     check-cast v3, Landroid/app/ProfileGroup;
 
-    .line 379
     .local v3, grp:Landroid/app/ProfileGroup;
     iget-object v9, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
@@ -2425,17 +2189,14 @@
 
     invoke-interface {v9, v10, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 380
     invoke-virtual {v3}, Landroid/app/ProfileGroup;->isDefaultGroup()Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    .line 381
     iput-object v3, p0, Landroid/app/Profile;->mDefaultGroup:Landroid/app/ProfileGroup;
 
-    .line 377
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
@@ -2446,16 +2207,13 @@
     :cond_2
     move v9, v11
 
-    .line 374
     goto :goto_1
 
     :cond_3
     move v10, v11
 
-    .line 376
     goto :goto_2
 
-    .line 384
     :cond_4
     invoke-virtual {p1, v13}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
 
@@ -2473,10 +2231,8 @@
     .restart local v6       #parcel:Landroid/os/Parcelable;
     move-object v7, v6
 
-    .line 385
     check-cast v7, Landroid/app/StreamSettings;
 
-    .line 386
     .local v7, stream:Landroid/app/StreamSettings;
     iget-object v9, p0, Landroid/app/Profile;->streams:Ljava/util/Map;
 
@@ -2490,12 +2246,10 @@
 
     invoke-interface {v9, v10, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 384
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_4
 
-    .line 388
     .end local v6           #parcel:Landroid/os/Parcelable;
     .end local v7           #stream:Landroid/app/StreamSettings;
     :cond_5
@@ -2515,10 +2269,8 @@
     .restart local v6       #parcel:Landroid/os/Parcelable;
     move-object v1, v6
 
-    .line 389
     check-cast v1, Landroid/app/ConnectionSettings;
 
-    .line 390
     .local v1, connection:Landroid/app/ConnectionSettings;
     iget-object v9, p0, Landroid/app/Profile;->connections:Ljava/util/Map;
 
@@ -2532,12 +2284,10 @@
 
     invoke-interface {v9, v10, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 388
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_5
 
-    .line 392
     .end local v1           #connection:Landroid/app/ConnectionSettings;
     .end local v6           #parcel:Landroid/os/Parcelable;
     :cond_6
@@ -2549,7 +2299,6 @@
 
     iput-object v9, p0, Landroid/app/Profile;->mRingMode:Landroid/app/RingModeSettings;
 
-    .line 393
     invoke-virtual {p1, v13}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v9
@@ -2558,26 +2307,22 @@
 
     iput-object v9, p0, Landroid/app/Profile;->mAirplaneMode:Landroid/app/AirplaneModeSettings;
 
-    .line 394
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     iput v9, p0, Landroid/app/Profile;->mScreenLockMode:I
 
-    .line 395
     iget-object v9, p0, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
 
     invoke-virtual {p1, v9, v13}, Landroid/os/Parcel;->readMap(Ljava/util/Map;Ljava/lang/ClassLoader;)V
 
-    .line 396
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
     iput v9, p0, Landroid/app/Profile;->mExpandedDesktopMode:I
 
-    .line 397
     return-void
 .end method
 
@@ -2586,7 +2331,6 @@
     .parameter "uuid"
 
     .prologue
-    .line 313
     iget-object v0, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2601,16 +2345,13 @@
 
     if-nez v0, :cond_0
 
-    .line 314
     iget-object v0, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 318
     :goto_0
     return-void
 
-    .line 316
     :cond_0
     const-string v0, "Profile"
 
@@ -2642,15 +2383,12 @@
     .parameter "descriptor"
 
     .prologue
-    .line 503
     iput-object p1, p0, Landroid/app/Profile;->mAirplaneMode:Landroid/app/AirplaneModeSettings;
 
-    .line 504
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 505
     return-void
 .end method
 
@@ -2660,13 +2398,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 458
     iput v0, p0, Landroid/app/Profile;->mProfileType:I
 
-    .line 459
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 460
     return-void
 .end method
 
@@ -2675,7 +2410,6 @@
     .parameter "descriptor"
 
     .prologue
-    .line 785
     iget-object v0, p0, Landroid/app/Profile;->connections:Ljava/util/Map;
 
     invoke-virtual {p1}, Landroid/app/ConnectionSettings;->getConnectionId()I
@@ -2688,7 +2422,6 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 786
     return-void
 .end method
 
@@ -2697,29 +2430,24 @@
     .parameter "expandedDesktopMode"
 
     .prologue
-    .line 489
     if-ltz p1, :cond_0
 
     const/4 v0, 0x2
 
     if-le p1, v0, :cond_1
 
-    .line 491
     :cond_0
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/Profile;->mExpandedDesktopMode:I
 
-    .line 495
     :goto_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 496
     return-void
 
-    .line 493
     :cond_1
     iput p1, p0, Landroid/app/Profile;->mExpandedDesktopMode:I
 
@@ -2731,20 +2459,16 @@
     .parameter "name"
 
     .prologue
-    .line 405
     iput-object p1, p0, Landroid/app/Profile;->mName:Ljava/lang/String;
 
-    .line 406
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/app/Profile;->mNameResId:I
 
-    .line 407
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 408
     return-void
 .end method
 
@@ -2753,15 +2477,12 @@
     .parameter "type"
 
     .prologue
-    .line 416
     iput p1, p0, Landroid/app/Profile;->mProfileType:I
 
-    .line 417
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 418
     return-void
 .end method
 
@@ -2770,15 +2491,12 @@
     .parameter "descriptor"
 
     .prologue
-    .line 467
     iput-object p1, p0, Landroid/app/Profile;->mRingMode:Landroid/app/RingModeSettings;
 
-    .line 468
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 469
     return-void
 .end method
 
@@ -2787,29 +2505,24 @@
     .parameter "screenLockMode"
 
     .prologue
-    .line 476
     if-ltz p1, :cond_0
 
     const/4 v0, 0x2
 
     if-le p1, v0, :cond_1
 
-    .line 477
     :cond_0
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/Profile;->mScreenLockMode:I
 
-    .line 481
     :goto_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 482
     return-void
 
-    .line 479
     :cond_1
     iput p1, p0, Landroid/app/Profile;->mScreenLockMode:I
 
@@ -2830,26 +2543,21 @@
     .end annotation
 
     .prologue
-    .line 430
     .local p1, uuids:Ljava/util/List;,"Ljava/util/List<Ljava/util/UUID;>;"
     iget-object v0, p0, Landroid/app/Profile;->mSecondaryUuids:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 431
     if-eqz p1, :cond_0
 
-    .line 432
     iget-object v0, p0, Landroid/app/Profile;->mSecondaryUuids:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 433
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 435
     :cond_0
     return-void
 .end method
@@ -2859,15 +2567,12 @@
     .parameter "newStatusBarIndicator"
 
     .prologue
-    .line 449
     iput-boolean p1, p0, Landroid/app/Profile;->mStatusBarIndicator:Z
 
-    .line 450
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 451
     return-void
 .end method
 
@@ -2876,7 +2581,6 @@
     .parameter "descriptor"
 
     .prologue
-    .line 769
     iget-object v0, p0, Landroid/app/Profile;->streams:Ljava/util/Map;
 
     invoke-virtual {p1}, Landroid/app/StreamSettings;->getStreamId()I
@@ -2889,12 +2593,10 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 770
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Profile;->mDirty:Z
 
-    .line 771
     return-void
 .end method
 
@@ -2908,7 +2610,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 267
     if-eqz p2, :cond_0
 
     if-ltz p1, :cond_0
@@ -2921,12 +2622,10 @@
 
     if-le p3, v1, :cond_1
 
-    .line 286
     :cond_0
     :goto_0
     return-void
 
-    .line 273
     :cond_1
     iget-object v1, p0, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
 
@@ -2936,38 +2635,31 @@
 
     check-cast v0, Landroid/app/Profile$ProfileTrigger;
 
-    .line 275
     .local v0, trigger:Landroid/app/Profile$ProfileTrigger;
     const/4 v1, 0x2
 
     if-ne p3, v1, :cond_3
 
-    .line 276
     if-eqz v0, :cond_2
 
-    .line 277
     iget-object v1, p0, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
 
     invoke-interface {v1, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 285
     :cond_2
     :goto_1
     iput-boolean v3, p0, Landroid/app/Profile;->mDirty:Z
 
     goto :goto_0
 
-    .line 279
     :cond_3
     if-eqz v0, :cond_4
 
-    .line 280
     #setter for: Landroid/app/Profile$ProfileTrigger;->mState:I
     invoke-static {v0, p3}, Landroid/app/Profile$ProfileTrigger;->access$202(Landroid/app/Profile$ProfileTrigger;I)I
 
     goto :goto_1
 
-    .line 282
     :cond_4
     iget-object v1, p0, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
 
@@ -2985,7 +2677,6 @@
     .parameter "context"
 
     .prologue
-    .line 638
     iget-object v2, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -3010,13 +2701,11 @@
 
     check-cast v1, Landroid/app/ProfileGroup;
 
-    .line 639
     .local v1, pg:Landroid/app/ProfileGroup;
     invoke-virtual {v1, p1}, Landroid/app/ProfileGroup;->validateOverrideUris(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 641
     .end local v1           #pg:Landroid/app/ProfileGroup;
     :cond_0
     return-void
@@ -3032,17 +2721,14 @@
 
     const/4 v5, 0x0
 
-    .line 341
     iget-object v3, p0, Landroid/app/Profile;->mName:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 342
     iget v3, p0, Landroid/app/Profile;->mNameResId:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 343
     new-instance v3, Landroid/os/ParcelUuid;
 
     iget-object v6, p0, Landroid/app/Profile;->mUuid:Ljava/util/UUID;
@@ -3051,7 +2737,6 @@
 
     invoke-virtual {v3, p1, v5}, Landroid/os/ParcelUuid;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 344
     new-instance v2, Ljava/util/ArrayList;
 
     iget-object v3, p0, Landroid/app/Profile;->mSecondaryUuids:Ljava/util/ArrayList;
@@ -3062,7 +2747,6 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 345
     .local v2, uuids:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/ParcelUuid;>;"
     iget-object v3, p0, Landroid/app/Profile;->mSecondaryUuids:Ljava/util/ArrayList;
 
@@ -3084,7 +2768,6 @@
 
     check-cast v1, Ljava/util/UUID;
 
-    .line 346
     .local v1, u:Ljava/util/UUID;
     new-instance v3, Landroid/os/ParcelUuid;
 
@@ -3094,7 +2777,6 @@
 
     goto :goto_0
 
-    .line 348
     .end local v1           #u:Ljava/util/UUID;
     :cond_0
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -3111,7 +2793,6 @@
 
     invoke-virtual {p1, v3, p2}, Landroid/os/Parcel;->writeParcelableArray([Landroid/os/Parcelable;I)V
 
-    .line 349
     iget-boolean v3, p0, Landroid/app/Profile;->mStatusBarIndicator:Z
 
     if-eqz v3, :cond_1
@@ -3121,12 +2802,10 @@
     :goto_1
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 350
     iget v3, p0, Landroid/app/Profile;->mProfileType:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 351
     iget-boolean v3, p0, Landroid/app/Profile;->mDirty:Z
 
     if-eqz v3, :cond_2
@@ -3134,7 +2813,6 @@
     :goto_2
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 352
     iget-object v3, p0, Landroid/app/Profile;->profileGroups:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -3157,7 +2835,6 @@
 
     invoke-virtual {p1, v3, p2}, Landroid/os/Parcel;->writeParcelableArray([Landroid/os/Parcelable;I)V
 
-    .line 354
     iget-object v3, p0, Landroid/app/Profile;->streams:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -3180,7 +2857,6 @@
 
     invoke-virtual {p1, v3, p2}, Landroid/os/Parcel;->writeParcelableArray([Landroid/os/Parcelable;I)V
 
-    .line 356
     iget-object v3, p0, Landroid/app/Profile;->connections:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -3203,43 +2879,35 @@
 
     invoke-virtual {p1, v3, p2}, Landroid/os/Parcel;->writeParcelableArray([Landroid/os/Parcelable;I)V
 
-    .line 358
     iget-object v3, p0, Landroid/app/Profile;->mRingMode:Landroid/app/RingModeSettings;
 
     invoke-virtual {p1, v3, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 359
     iget-object v3, p0, Landroid/app/Profile;->mAirplaneMode:Landroid/app/AirplaneModeSettings;
 
     invoke-virtual {p1, v3, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 360
     iget v3, p0, Landroid/app/Profile;->mScreenLockMode:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 361
     iget-object v3, p0, Landroid/app/Profile;->mTriggers:Ljava/util/Map;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeMap(Ljava/util/Map;)V
 
-    .line 362
     iget v3, p0, Landroid/app/Profile;->mExpandedDesktopMode:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 363
     return-void
 
     :cond_1
     move v3, v5
 
-    .line 349
     goto :goto_1
 
     :cond_2
     move v4, v5
 
-    .line 351
     goto :goto_2
 .end method

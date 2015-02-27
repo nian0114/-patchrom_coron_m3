@@ -85,61 +85,46 @@
 
     const/4 v3, 0x0
 
-    .line 169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     iput-object v3, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 53
     iput-object v3, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mContext:Landroid/content/Context;
 
-    .line 54
     iput-object v3, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
-    .line 55
     iput-object v3, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
-    .line 57
     iput-boolean v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mAutoConnect:Z
 
-    .line 59
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mStateLock:Ljava/lang/Object;
 
-    .line 61
     iput-object v3, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mTimer:Ljava/util/Timer;
 
-    .line 62
     const/16 v1, 0x7530
 
     iput v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mTimeOutValue:I
 
-    .line 63
     iput-boolean v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->isWriteThresholdNeedToBeCalled:Z
 
-    .line 126
     new-instance v1, Landroid/bluetooth/BluetoothLwPwrProximityMonitor$1;
 
     invoke-direct {v1, p0}, Landroid/bluetooth/BluetoothLwPwrProximityMonitor$1;-><init>(Landroid/bluetooth/BluetoothLwPwrProximityMonitor;)V
 
     iput-object v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattCallback:Landroid/bluetooth/BluetoothGattCallback;
 
-    .line 170
     iput-object p1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mContext:Landroid/content/Context;
 
-    .line 171
     const/4 v1, 0x4
 
     iput v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
-    .line 172
     iput-object p3, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mMonitorCbk:Landroid/bluetooth/BluetoothRssiMonitorCallback;
 
-    .line 175
     :try_start_0
     new-instance v1, Landroid/bluetooth/BluetoothDevice;
 
@@ -149,7 +134,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 181
     :goto_0
     invoke-static {}, Landroid/bluetooth/QBluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/QBluetoothAdapter;
 
@@ -157,7 +141,6 @@
 
     iput-object v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
-    .line 182
     iget-object v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-eqz v1, :cond_0
@@ -166,22 +149,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 183
     iput v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
-    .line 188
     :goto_1
     return-void
 
-    .line 176
     :catch_0
     move-exception v0
 
-    .line 177
     .local v0, e:Ljava/lang/IllegalArgumentException;
     iput-object v3, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 178
     const-string v1, "BluetoothLwPwrProximityMonitor"
 
     const-string v2, ""
@@ -190,12 +168,10 @@
 
     goto :goto_0
 
-    .line 185
     .end local v0           #e:Ljava/lang/IllegalArgumentException;
     :cond_0
     iput-object v3, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 186
     iput-object v3, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     goto :goto_1
@@ -206,7 +182,6 @@
     .parameter "x0"
 
     .prologue
-    .line 49
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mStateLock:Ljava/lang/Object;
 
     return-object v0
@@ -217,7 +192,6 @@
     .parameter "x0"
 
     .prologue
-    .line 49
     iget v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
     return v0
@@ -230,7 +204,6 @@
     .parameter "x2"
 
     .prologue
-    .line 49
     invoke-direct {p0, p1, p2}, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->setTimer(Ljava/util/TimerTask;I)V
 
     return-void
@@ -242,7 +215,6 @@
     .parameter "x1"
 
     .prologue
-    .line 49
     iput p1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
     return p1
@@ -253,7 +225,6 @@
     .parameter "x0"
 
     .prologue
-    .line 49
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     return-object v0
@@ -264,7 +235,6 @@
     .parameter "x0"
 
     .prologue
-    .line 49
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
     return-object v0
@@ -275,7 +245,6 @@
     .parameter "x0"
 
     .prologue
-    .line 49
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mMonitorCbk:Landroid/bluetooth/BluetoothRssiMonitorCallback;
 
     return-object v0
@@ -286,7 +255,6 @@
     .parameter "x0"
 
     .prologue
-    .line 49
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
     return-object v0
@@ -297,7 +265,6 @@
     .parameter "x0"
 
     .prologue
-    .line 49
     invoke-direct {p0}, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->cancelTimer()V
 
     return-void
@@ -308,7 +275,6 @@
     .parameter "x0"
 
     .prologue
-    .line 49
     iget v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mLowerLimit:I
 
     return v0
@@ -319,7 +285,6 @@
     .parameter "x0"
 
     .prologue
-    .line 49
     iget v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mUpperLimit:I
 
     return v0
@@ -329,30 +294,25 @@
     .locals 2
 
     .prologue
-    .line 205
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
     const-string v1, "cancelTimer()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mTimer:Ljava/util/Timer;
 
     if-eqz v0, :cond_0
 
-    .line 207
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mTimer:Ljava/util/Timer;
 
     invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
 
-    .line 209
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mTimer:Ljava/util/Timer;
 
-    .line 210
     return-void
 .end method
 
@@ -362,14 +322,13 @@
     .parameter "delay"
 
     .prologue
-    .line 199
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setTimer() delay="
+    const-string v2, "setTimer() delay="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -385,21 +344,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mTimer:Ljava/util/Timer;
 
-    .line 201
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mTimer:Ljava/util/Timer;
 
     int-to-long v1, p2
 
     invoke-virtual {v0, p1, v1, v2}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
-    .line 202
     return-void
 .end method
 
@@ -413,33 +369,27 @@
 
     const/4 v3, 0x3
 
-    .line 299
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
     const-string v1, "close()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     iget v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
     if-ne v2, v0, :cond_0
 
-    .line 321
     :goto_0
     return-void
 
-    .line 303
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mStateLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 304
     :try_start_0
     invoke-direct {p0}, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->cancelTimer()V
 
-    .line 305
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-eqz v0, :cond_4
@@ -452,7 +402,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 306
     iget v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
     const/4 v2, 0x1
@@ -463,7 +412,6 @@
 
     if-ne v0, v3, :cond_3
 
-    .line 308
     :cond_1
     iget v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
@@ -475,19 +423,16 @@
 
     invoke-virtual {v0, p0, v2}, Landroid/bluetooth/QBluetoothAdapter;->enableRssiMonitor(Landroid/bluetooth/QBluetoothAdapter$LeLppCallback;Z)Z
 
-    .line 309
     :cond_2
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothGatt;->disconnect()V
 
-    .line 311
     :cond_3
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothGatt;->close()V
 
-    .line 312
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     iget-object v2, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
@@ -500,7 +445,6 @@
 
     invoke-virtual {v0, p0, v2, v3}, Landroid/bluetooth/QBluetoothAdapter;->registerLppClient(Landroid/bluetooth/QBluetoothAdapter$LeLppCallback;Ljava/lang/String;Z)Z
 
-    .line 314
     :cond_4
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
@@ -508,32 +452,26 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     const/4 v0, 0x4
 
     iput v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
-    .line 316
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 317
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
-    .line 318
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
-    .line 319
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mMonitorCbk:Landroid/bluetooth/BluetoothRssiMonitorCallback;
 
-    .line 320
     monitor-exit v1
 
     goto :goto_0
@@ -557,19 +495,15 @@
     .end annotation
 
     .prologue
-    .line 192
     :try_start_0
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 194
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 196
     return-void
 
-    .line 194
     :catchall_0
     move-exception v0
 
@@ -586,14 +520,13 @@
     .prologue
     const/4 v3, 0x3
 
-    .line 351
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onEnableRssiMonitor() enable="
+    const-string v2, "onEnableRssiMonitor() enable="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -619,12 +552,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     iget-object v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mStateLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 353
     :try_start_0
     iget v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
@@ -632,31 +563,26 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 354
     if-nez p2, :cond_2
 
     if-eqz p1, :cond_2
 
-    .line 355
     const/4 v0, 0x3
 
     iput v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
-    .line 356
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
     const-string v2, "Monitor is started successfully"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
     :cond_0
     :goto_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 367
     iget v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
     if-ne v0, v3, :cond_1
@@ -665,40 +591,33 @@
 
     if-eqz v0, :cond_1
 
-    .line 368
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
     const-string v1, "Notify users that monitor has been started successfully"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mMonitorCbk:Landroid/bluetooth/BluetoothRssiMonitorCallback;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothRssiMonitorCallback;->onStarted()V
 
-    .line 371
     :cond_1
     return-void
 
-    .line 358
     :cond_2
     :try_start_1
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
     if-eqz v0, :cond_0
 
-    .line 359
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothGatt;->disconnect()V
 
-    .line 360
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
-    .line 361
     new-instance v0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor$DisconnectTimeOutTask;
 
     const/4 v2, 0x0
@@ -711,7 +630,6 @@
 
     goto :goto_0
 
-    .line 365
     :catchall_0
     move-exception v0
 
@@ -730,14 +648,13 @@
     .parameter "status"
 
     .prologue
-    .line 343
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onReadRssiThreshold() LowerLimit="
+    const-string v2, "onReadRssiThreshold() LowerLimit="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -783,12 +700,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mMonitorCbk:Landroid/bluetooth/BluetoothRssiMonitorCallback;
 
     if-eqz v0, :cond_0
 
-    .line 346
     iget-object v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mMonitorCbk:Landroid/bluetooth/BluetoothRssiMonitorCallback;
 
     if-nez p4, :cond_1
@@ -798,11 +713,9 @@
     :goto_0
     invoke-virtual {v1, p1, p2, p3, v0}, Landroid/bluetooth/BluetoothRssiMonitorCallback;->onReadRssiThreshold(IIII)V
 
-    .line 348
     :cond_0
     return-void
 
-    .line 346
     :cond_1
     const/4 v0, 0x1
 
@@ -815,14 +728,13 @@
     .parameter "rssi"
 
     .prologue
-    .line 374
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onRssiThresholdEvent() event="
+    const-string v2, "onRssiThresholdEvent() event="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -848,7 +760,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 375
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mMonitorCbk:Landroid/bluetooth/BluetoothRssiMonitorCallback;
 
     if-eqz v0, :cond_0
@@ -857,7 +768,6 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/bluetooth/BluetoothRssiMonitorCallback;->onAlert(II)V
 
-    .line 376
     :cond_0
     return-void
 .end method
@@ -866,19 +776,16 @@
     .locals 3
 
     .prologue
-    .line 380
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
-    const-string/jumbo v1, "onUpdateLease()"
+    const-string v1, "onUpdateLease()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 381
     iget-object v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mStateLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 382
     :try_start_0
     iget v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
@@ -902,7 +809,6 @@
 
     goto :goto_0
 
-    .line 383
     :catchall_0
     move-exception v0
 
@@ -920,14 +826,13 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 324
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onWriteRssiThreshold() status="
+    const-string v2, "onWriteRssiThreshold() status="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -943,57 +848,46 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     iget-object v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mStateLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 326
     :try_start_0
     iget v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
     if-ne v0, v3, :cond_0
 
-    .line 327
     if-nez p1, :cond_1
 
-    .line 328
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 329
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, p0, v2}, Landroid/bluetooth/QBluetoothAdapter;->enableRssiMonitor(Landroid/bluetooth/QBluetoothAdapter$LeLppCallback;Z)Z
 
-    .line 339
     :cond_0
     :goto_0
     monitor-exit v1
 
-    .line 340
     return-void
 
-    .line 332
     :cond_1
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
     if-eqz v0, :cond_0
 
-    .line 333
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothGatt;->disconnect()V
 
-    .line 334
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
-    .line 335
     new-instance v0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor$DisconnectTimeOutTask;
 
     const/4 v2, 0x0
@@ -1006,7 +900,6 @@
 
     goto :goto_0
 
-    .line 339
     :catchall_0
     move-exception v0
 
@@ -1021,19 +914,16 @@
     .locals 3
 
     .prologue
-    .line 267
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
-    const-string/jumbo v1, "readRssiThreshold()"
+    const-string v1, "readRssiThreshold()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     iget-object v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mStateLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 269
     :try_start_0
     iget v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
@@ -1041,44 +931,36 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 270
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 271
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     invoke-virtual {v0, p0}, Landroid/bluetooth/QBluetoothAdapter;->readRssiThreshold(Landroid/bluetooth/QBluetoothAdapter$LeLppCallback;)Z
 
-    .line 272
     const/4 v0, 0x1
 
     monitor-exit v1
 
-    .line 277
     :goto_0
     return v0
 
-    .line 275
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 276
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
-    const-string/jumbo v1, "readRssiThreshold() fail"
+    const-string v1, "readRssiThreshold() fail"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 275
     :catchall_0
     move-exception v0
 
@@ -1100,14 +982,13 @@
 
     const/4 v1, 0x0
 
-    .line 214
     const-string v3, "BluetoothLwPwrProximityMonitor"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "start() low="
+    const-string v5, "start() low="
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1133,35 +1014,28 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
     iput-boolean v2, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->isWriteThresholdNeedToBeCalled:Z
 
-    .line 216
     iget-object v3, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mStateLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 217
     :try_start_0
     iget v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
     if-eqz v4, :cond_0
 
-    .line 218
     const-string v2, "BluetoothLwPwrProximityMonitor"
 
-    const-string/jumbo v4, "start() invalid state, monitor is not idle"
+    const-string v4, "start() invalid state, monitor is not idle"
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     monitor-exit v3
 
-    .line 262
     :goto_0
     return v1
 
-    .line 221
     :cond_0
     iget-object v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
@@ -1179,19 +1053,16 @@
 
     if-nez v4, :cond_1
 
-    .line 222
     const-string v2, "BluetoothLwPwrProximityMonitor"
 
     const-string v4, "cannot register LPP Client"
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     monitor-exit v3
 
     goto :goto_0
 
-    .line 260
     :catchall_0
     move-exception v1
 
@@ -1201,28 +1072,23 @@
 
     throw v1
 
-    .line 225
     :cond_1
     const/4 v4, 0x1
 
     :try_start_1
     iput v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
-    .line 226
     iput p1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mLowerLimit:I
 
-    .line 227
     iput p2, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mUpperLimit:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 230
     :try_start_2
     iget-object v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
     if-nez v4, :cond_2
 
-    .line 231
     iget-object v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
     iget-object v5, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mContext:Landroid/content/Context;
@@ -1237,12 +1103,10 @@
 
     iput-object v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
-    .line 232
     iget-object v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
     if-nez v4, :cond_4
 
-    .line 233
     iget-object v2, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     iget-object v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
@@ -1255,7 +1119,6 @@
 
     invoke-virtual {v2, p0, v4, v5}, Landroid/bluetooth/QBluetoothAdapter;->registerLppClient(Landroid/bluetooth/QBluetoothAdapter$LeLppCallback;Ljava/lang/String;Z)Z
 
-    .line 234
     const/4 v2, 0x0
 
     iput v2, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
@@ -1263,7 +1126,6 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 235
     :try_start_3
     monitor-exit v3
     :try_end_3
@@ -1271,7 +1133,6 @@
 
     goto :goto_0
 
-    .line 238
     :cond_2
     :try_start_4
     iget-object v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
@@ -1282,7 +1143,6 @@
 
     if-nez v4, :cond_3
 
-    .line 239
     iget-object v2, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     iget-object v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
@@ -1295,7 +1155,6 @@
 
     invoke-virtual {v2, p0, v4, v5}, Landroid/bluetooth/QBluetoothAdapter;->registerLppClient(Landroid/bluetooth/QBluetoothAdapter$LeLppCallback;Ljava/lang/String;Z)Z
 
-    .line 240
     const/4 v2, 0x0
 
     iput v2, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
@@ -1303,7 +1162,6 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/lang/IllegalStateException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 241
     :try_start_5
     monitor-exit v3
     :try_end_5
@@ -1311,7 +1169,6 @@
 
     goto :goto_0
 
-    .line 244
     :cond_3
     :try_start_6
     iget v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
@@ -1322,12 +1179,10 @@
 
     if-eqz v4, :cond_4
 
-    .line 245
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->isWriteThresholdNeedToBeCalled:Z
 
-    .line 246
     iget-object v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     iget v5, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mLowerLimit:I
@@ -1340,17 +1195,14 @@
 
     if-nez v4, :cond_4
 
-    .line 247
     iget-object v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
     invoke-virtual {v4}, Landroid/bluetooth/BluetoothGatt;->disconnect()V
 
-    .line 248
     const/4 v4, 0x2
 
     iput v4, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
-    .line 249
     new-instance v4, Landroid/bluetooth/BluetoothLwPwrProximityMonitor$DisconnectTimeOutTask;
 
     const/4 v5, 0x0
@@ -1364,7 +1216,6 @@
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
     .catch Ljava/lang/IllegalStateException; {:try_start_6 .. :try_end_6} :catch_0
 
-    .line 259
     :cond_4
     :try_start_7
     new-instance v1, Landroid/bluetooth/BluetoothLwPwrProximityMonitor$ConnectTimeOutTask;
@@ -1377,12 +1228,10 @@
 
     invoke-direct {p0, v1, v4}, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->setTimer(Ljava/util/TimerTask;I)V
 
-    .line 260
     monitor-exit v3
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 261
     const-string v1, "BluetoothLwPwrProximityMonitor"
 
     const-string v3, "Monitor is starting"
@@ -1391,14 +1240,11 @@
 
     move v1, v2
 
-    .line 262
     goto/16 :goto_0
 
-    .line 254
     :catch_0
     move-exception v0
 
-    .line 255
     .local v0, e:Ljava/lang/IllegalStateException;
     :try_start_8
     iget-object v2, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
@@ -1413,12 +1259,10 @@
 
     invoke-virtual {v2, p0, v4, v5}, Landroid/bluetooth/QBluetoothAdapter;->registerLppClient(Landroid/bluetooth/QBluetoothAdapter$LeLppCallback;Ljava/lang/String;Z)Z
 
-    .line 256
     const/4 v2, 0x0
 
     iput v2, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
-    .line 257
     monitor-exit v3
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
@@ -1430,19 +1274,16 @@
     .locals 4
 
     .prologue
-    .line 282
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
-    const-string/jumbo v1, "stop()"
+    const-string v1, "stop()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     iget-object v1, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mStateLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 284
     :try_start_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
@@ -1468,28 +1309,23 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 287
     :cond_0
     invoke-direct {p0}, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->cancelTimer()V
 
-    .line 288
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, p0, v2}, Landroid/bluetooth/QBluetoothAdapter;->enableRssiMonitor(Landroid/bluetooth/QBluetoothAdapter$LeLppCallback;Z)Z
 
-    .line 289
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mGattProfile:Landroid/bluetooth/BluetoothGatt;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothGatt;->disconnect()V
 
-    .line 290
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mState:I
 
-    .line 291
     new-instance v0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor$DisconnectTimeOutTask;
 
     const/4 v2, 0x0
@@ -1500,7 +1336,6 @@
 
     invoke-direct {p0, v0, v2}, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->setTimer(Ljava/util/TimerTask;I)V
 
-    .line 292
     iget-object v0, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mQAdapter:Landroid/bluetooth/QBluetoothAdapter;
 
     iget-object v2, p0, Landroid/bluetooth/BluetoothLwPwrProximityMonitor;->mDevice:Landroid/bluetooth/BluetoothDevice;
@@ -1513,21 +1348,17 @@
 
     invoke-virtual {v0, p0, v2, v3}, Landroid/bluetooth/QBluetoothAdapter;->registerLppClient(Landroid/bluetooth/QBluetoothAdapter$LeLppCallback;Ljava/lang/String;Z)Z
 
-    .line 293
     const-string v0, "BluetoothLwPwrProximityMonitor"
 
     const-string v2, "Monitor is stopping"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
     :cond_1
     monitor-exit v1
 
-    .line 296
     return-void
 
-    .line 295
     :catchall_0
     move-exception v0
 

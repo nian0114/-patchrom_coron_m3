@@ -51,28 +51,23 @@
     .parameter "userId"
 
     .prologue
-    .line 82
     iput-object p1, p0, Lcom/android/server/ClipboardService$PerUserClipboard;->this$0:Lcom/android/server/ClipboardService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/ClipboardService$PerUserClipboard;->primaryClipListeners:Landroid/os/RemoteCallbackList;
 
-    .line 79
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/ClipboardService$PerUserClipboard;->activePermissionOwners:Ljava/util/HashSet;
 
-    .line 83
     iput p2, p0, Lcom/android/server/ClipboardService$PerUserClipboard;->userId:I
 
-    .line 84
     return-void
 .end method

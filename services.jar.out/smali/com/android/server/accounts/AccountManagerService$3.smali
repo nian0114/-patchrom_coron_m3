@@ -35,7 +35,6 @@
     .parameter
 
     .prologue
-    .line 611
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$3;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iput-object p7, p0, Lcom/android/server/accounts/AccountManagerService$3;->val$account:Landroid/accounts/Account;
@@ -54,10 +53,8 @@
     .parameter "result"
 
     .prologue
-    .line 625
     if-eqz p1, :cond_1
 
-    .line 626
     const-string v0, "booleanResult"
 
     const/4 v1, 0x0
@@ -68,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 628
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$3;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$3;->val$account:Landroid/accounts/Account;
@@ -77,12 +73,10 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lcom/android/server/accounts/AccountManagerService;->completeCloningAccount(Landroid/os/Bundle;Landroid/accounts/Account;Lcom/android/server/accounts/AccountManagerService$UserAccounts;)V
 
-    .line 634
     :cond_0
     :goto_0
     return-void
 
-    .line 632
     :cond_1
     invoke-super {p0, p1}, Lcom/android/server/accounts/AccountManagerService$Session;->onResult(Landroid/os/Bundle;)V
 
@@ -98,14 +92,12 @@
     .end annotation
 
     .prologue
-    .line 620
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$3;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$3;->val$account:Landroid/accounts/Account;
 
     invoke-interface {v0, p0, v1}, Landroid/accounts/IAccountAuthenticator;->getAccountCredentialsForCloning(Landroid/accounts/IAccountAuthenticatorResponse;Landroid/accounts/Account;)V
 
-    .line 621
     return-void
 .end method
 
@@ -114,7 +106,6 @@
     .parameter "now"
 
     .prologue
-    .line 614
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

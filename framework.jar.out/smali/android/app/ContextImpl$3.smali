@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 332
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .parameter "ctx"
 
     .prologue
-    .line 334
     new-instance v0, Landroid/view/accessibility/CaptioningManager;
 
     invoke-direct {v0, p1}, Landroid/view/accessibility/CaptioningManager;-><init>(Landroid/content/Context;)V

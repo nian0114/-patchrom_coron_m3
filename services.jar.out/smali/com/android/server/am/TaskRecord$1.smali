@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 420
     iput-object p1, p0, Lcom/android/server/am/TaskRecord$1;->this$0:Lcom/android/server/am/TaskRecord;
 
     iput-object p2, p0, Lcom/android/server/am/TaskRecord$1;->val$thumbs:Lcom/android/server/am/TaskAccessInfo;
@@ -44,7 +43,6 @@
     .parameter "index"
 
     .prologue
-    .line 423
     if-ltz p1, :cond_0
 
     iget-object v2, p0, Lcom/android/server/am/TaskRecord$1;->val$thumbs:Lcom/android/server/am/TaskAccessInfo;
@@ -57,15 +55,12 @@
 
     if-lt p1, v2, :cond_1
 
-    .line 424
     :cond_0
     const/4 v2, 0x0
 
-    .line 431
     :goto_0
     return-object v2
 
-    .line 426
     :cond_1
     iget-object v2, p0, Lcom/android/server/am/TaskRecord$1;->val$thumbs:Lcom/android/server/am/TaskAccessInfo;
 
@@ -77,7 +72,6 @@
 
     check-cast v1, Lcom/android/server/am/TaskAccessInfo$SubTask;
 
-    .line 427
     .local v1, sub:Lcom/android/server/am/TaskAccessInfo$SubTask;
     iget-object v2, p0, Lcom/android/server/am/TaskRecord$1;->this$0:Lcom/android/server/am/TaskRecord;
 
@@ -85,7 +79,6 @@
 
     iget-object v0, v2, Lcom/android/server/am/ActivityStack;->mResumedActivity:Lcom/android/server/am/ActivityRecord;
 
-    .line 428
     .local v0, resumedActivity:Lcom/android/server/am/ActivityRecord;
     if-eqz v0, :cond_2
 
@@ -95,7 +88,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 429
     iget-object v2, p0, Lcom/android/server/am/TaskRecord$1;->this$0:Lcom/android/server/am/TaskRecord;
 
     iget-object v2, v2, Lcom/android/server/am/TaskRecord;->stack:Lcom/android/server/am/ActivityStack;
@@ -106,7 +98,6 @@
 
     goto :goto_0
 
-    .line 431
     :cond_2
     iget-object v2, v1, Lcom/android/server/am/TaskAccessInfo$SubTask;->holder:Lcom/android/server/am/ThumbnailHolder;
 

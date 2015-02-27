@@ -29,25 +29,20 @@
     .parameter "handler"
 
     .prologue
-    .line 1261
     iput-object p1, p0, Landroid/media/AudioTrack$NativeEventHandlerDelegate;->this$0:Landroid/media/AudioTrack;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1264
     if-eqz p4, :cond_0
 
-    .line 1265
     invoke-virtual {p4}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v2
 
-    .line 1272
     .local v2, looper:Landroid/os/Looper;
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 1274
     new-instance v0, Landroid/media/AudioTrack$NativeEventHandlerDelegate$1;
 
     move-object v1, p0
@@ -62,11 +57,9 @@
 
     iput-object v0, p0, Landroid/media/AudioTrack$NativeEventHandlerDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 1300
     :goto_1
     return-void
 
-    .line 1268
     .end local v2           #looper:Landroid/os/Looper;
     :cond_0
     #getter for: Landroid/media/AudioTrack;->mInitializationLooper:Landroid/os/Looper;
@@ -77,7 +70,6 @@
     .restart local v2       #looper:Landroid/os/Looper;
     goto :goto_0
 
-    .line 1298
     :cond_1
     const/4 v0, 0x0
 
@@ -92,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 1303
     iget-object v0, p0, Landroid/media/AudioTrack$NativeEventHandlerDelegate;->mHandler:Landroid/os/Handler;
 
     return-object v0

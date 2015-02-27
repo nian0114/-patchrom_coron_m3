@@ -30,17 +30,13 @@
     .parameter "syncResult"
 
     .prologue
-    .line 810
     iput-object p1, p0, Lcom/android/server/content/SyncManager$SyncHandlerMessagePayload;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 811
     iput-object p2, p0, Lcom/android/server/content/SyncManager$SyncHandlerMessagePayload;->activeSyncContext:Lcom/android/server/content/SyncManager$ActiveSyncContext;
 
-    .line 812
     iput-object p3, p0, Lcom/android/server/content/SyncManager$SyncHandlerMessagePayload;->syncResult:Landroid/content/SyncResult;
 
-    .line 813
     return-void
 .end method

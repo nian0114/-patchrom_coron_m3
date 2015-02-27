@@ -92,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 214
     const/4 v0, 0x0
 
     sput-object v0, Landroid/os/BatteryManager;->mService:Landroid/app/IBatteryService;
@@ -104,10 +103,8 @@
     .locals 0
 
     .prologue
-    .line 217
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 218
     return-void
 .end method
 
@@ -117,13 +114,10 @@
     .parameter "context"
 
     .prologue
-    .line 224
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 225
     sput-object p1, Landroid/os/BatteryManager;->mService:Landroid/app/IBatteryService;
 
-    .line 226
     return-void
 .end method
 
@@ -135,7 +129,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 233
     :try_start_0
     sget-object v1, Landroid/os/BatteryManager;->mService:Landroid/app/IBatteryService;
 
@@ -153,12 +146,10 @@
 
     const/4 v0, 0x1
 
-    .line 237
     :cond_0
     :goto_0
     return v0
 
-    .line 234
     :catch_0
     move-exception v1
 

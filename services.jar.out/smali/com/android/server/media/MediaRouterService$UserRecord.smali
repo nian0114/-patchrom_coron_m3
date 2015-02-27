@@ -44,29 +44,24 @@
     .parameter "userId"
 
     .prologue
-    .line 555
     iput-object p1, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 550
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientRecords:Ljava/util/ArrayList;
 
-    .line 556
     iput p2, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mUserId:I
 
-    .line 557
     new-instance v0, Lcom/android/server/media/MediaRouterService$UserHandler;
 
     invoke-direct {v0, p1, p0}, Lcom/android/server/media/MediaRouterService$UserHandler;-><init>(Lcom/android/server/media/MediaRouterService;Lcom/android/server/media/MediaRouterService$UserRecord;)V
 
     iput-object v0, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mHandler:Lcom/android/server/media/MediaRouterService$UserHandler;
 
-    .line 558
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .parameter "prefix"
 
     .prologue
-    .line 561
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,7 +91,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 563
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,7 +109,6 @@
 
     move-result-object v2
 
-    .line 564
     .local v2, indent:Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientRecords:Ljava/util/ArrayList;
 
@@ -124,18 +116,15 @@
 
     move-result v0
 
-    .line 565
     .local v0, clientCount:I
     if-eqz v0, :cond_0
 
-    .line 566
     const/4 v1, 0x0
 
     .local v1, i:I
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 567
     iget-object v3, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -146,12 +135,10 @@
 
     invoke-virtual {v3, p1, v2}, Lcom/android/server/media/MediaRouterService$ClientRecord;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 566
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 570
     .end local v1           #i:I
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
@@ -174,7 +161,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 573
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -196,7 +182,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 574
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -223,7 +208,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 575
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -250,7 +234,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 577
     iget-object v3, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mHandler:Lcom/android/server/media/MediaRouterService$UserHandler;
 
     new-instance v4, Lcom/android/server/media/MediaRouterService$UserRecord$1;
@@ -265,7 +248,6 @@
 
     if-nez v3, :cond_2
 
-    .line 583
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -286,7 +268,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 585
     :cond_2
     return-void
 .end method
@@ -295,7 +276,6 @@
     .locals 2
 
     .prologue
-    .line 589
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

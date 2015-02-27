@@ -33,21 +33,15 @@
     .parameter "_stack"
 
     .prologue
-    .line 368
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 369
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$PendingActivityLaunch;->r:Lcom/android/server/am/ActivityRecord;
 
-    .line 370
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$PendingActivityLaunch;->sourceRecord:Lcom/android/server/am/ActivityRecord;
 
-    .line 371
     iput p3, p0, Lcom/android/server/am/ActivityManagerService$PendingActivityLaunch;->startFlags:I
 
-    .line 372
     iput-object p4, p0, Lcom/android/server/am/ActivityManagerService$PendingActivityLaunch;->stack:Lcom/android/server/am/ActivityStack;
 
-    .line 373
     return-void
 .end method

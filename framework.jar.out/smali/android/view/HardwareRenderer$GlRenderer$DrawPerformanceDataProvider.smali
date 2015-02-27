@@ -35,15 +35,12 @@
     .parameter "graphType"
 
     .prologue
-    .line 1802
     iput-object p1, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->this$0:Landroid/view/HardwareRenderer$GlRenderer;
 
     invoke-direct {p0, p1}, Landroid/view/HardwareRenderer$GraphDataProvider;-><init>(Landroid/view/HardwareRenderer;)V
 
-    .line 1803
     iput p2, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mGraphType:I
 
-    .line 1804
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 1858
     iget-object v0, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->this$0:Landroid/view/HardwareRenderer$GlRenderer;
 
     iget v0, v0, Landroid/view/HardwareRenderer$GlRenderer;->mProfileCurrentFrame:I
@@ -67,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 1838
     iget-object v0, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->this$0:Landroid/view/HardwareRenderer$GlRenderer;
 
     iget-object v0, v0, Landroid/view/HardwareRenderer$GlRenderer;->mProfileData:[F
@@ -79,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 1853
     const/4 v0, 0x3
 
     return v0
@@ -89,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 1848
     iget-object v0, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->this$0:Landroid/view/HardwareRenderer$GlRenderer;
 
     iget-object v0, v0, Landroid/view/HardwareRenderer$GlRenderer;->mProfileData:[F
@@ -105,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 1818
     iget v0, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mGraphType:I
 
     return v0
@@ -115,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 1833
     iget v0, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mHorizontalMargin:I
 
     return v0
@@ -125,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 1828
     iget v0, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mHorizontalUnit:I
 
     return v0
@@ -135,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 1843
     const/high16 v0, 0x4180
 
     return v0
@@ -145,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 1823
     iget v0, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mVerticalUnit:I
 
     return v0
@@ -156,10 +144,8 @@
     .parameter "metrics"
 
     .prologue
-    .line 1808
     iget v0, p1, Landroid/util/DisplayMetrics;->density:F
 
-    .line 1810
     .local v0, density:F
     const/4 v1, 0x7
 
@@ -170,7 +156,6 @@
 
     iput v1, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mVerticalUnit:I
 
-    .line 1811
     const/4 v1, 0x3
 
     #calls: Landroid/view/HardwareRenderer$GlRenderer;->dpToPx(IF)I
@@ -180,7 +165,6 @@
 
     iput v1, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mHorizontalUnit:I
 
-    .line 1812
     const/4 v1, 0x0
 
     #calls: Landroid/view/HardwareRenderer$GlRenderer;->dpToPx(IF)I
@@ -190,7 +174,6 @@
 
     iput v1, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mHorizontalMargin:I
 
-    .line 1813
     const/4 v1, 0x2
 
     #calls: Landroid/view/HardwareRenderer$GlRenderer;->dpToPx(IF)I
@@ -200,7 +183,6 @@
 
     iput v1, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mThresholdStroke:I
 
-    .line 1814
     return-void
 .end method
 
@@ -209,12 +191,10 @@
     .parameter "paint"
 
     .prologue
-    .line 1875
     const v0, -0x30a055b3
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1876
     iget v0, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mGraphType:I
 
     const/4 v1, 0x1
@@ -227,7 +207,6 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 1877
     :cond_0
     return-void
 .end method
@@ -238,7 +217,6 @@
     .parameter "elementIndex"
 
     .prologue
-    .line 1863
     invoke-static {}, Landroid/view/HardwareRenderer$GlRenderer;->access$400()[I
 
     move-result-object v0
@@ -247,7 +225,6 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1864
     iget v0, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mGraphType:I
 
     const/4 v1, 0x1
@@ -260,7 +237,6 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 1865
     :cond_0
     return-void
 .end method
@@ -270,18 +246,15 @@
     .parameter "paint"
 
     .prologue
-    .line 1869
     const v0, -0xa055b3
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1870
     iget v0, p0, Landroid/view/HardwareRenderer$GlRenderer$DrawPerformanceDataProvider;->mThresholdStroke:I
 
     int-to-float v0, v0
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 1871
     return-void
 .end method

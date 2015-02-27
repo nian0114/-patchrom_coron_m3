@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 46
     iput-object p1, p0, Lcom/android/server/TorchService$1;->this$0:Lcom/android/server/TorchService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/android/server/TorchService$1;->this$0:Lcom/android/server/TorchService;
 
     #getter for: Lcom/android/server/TorchService;->mStopTorchLock:Ljava/lang/Object;
@@ -50,7 +48,6 @@
 
     monitor-enter v1
 
-    .line 51
     :try_start_0
     iget-object v0, p0, Lcom/android/server/TorchService$1;->this$0:Lcom/android/server/TorchService;
 
@@ -61,13 +58,10 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 52
     monitor-exit v1
 
-    .line 53
     return-void
 
-    .line 52
     :catchall_0
     move-exception v0
 

@@ -29,12 +29,10 @@
     .parameter
 
     .prologue
-    .line 916
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$ProfileChooseAction;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 917
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/impl/GlobalActions;->access$300(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/content/Context;
 
@@ -50,7 +48,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$ProfileChooseAction;->mProfileManager:Landroid/app/ProfileManager;
 
-    .line 918
     return-void
 .end method
 
@@ -66,14 +63,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 927
     const v4, 0x1090045
 
     invoke-virtual {p4, v4, p3, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v3
 
-    .line 929
     .local v3, v:Landroid/view/View;
     const v4, 0x1020006
 
@@ -83,7 +78,6 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 930
     .local v0, icon:Landroid/widget/ImageView;
     const v4, 0x102000b
 
@@ -93,7 +87,6 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 931
     .local v1, messageView:Landroid/widget/TextView;
     const v4, 0x102029a
 
@@ -103,14 +96,11 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 932
     .local v2, statusView:Landroid/widget/TextView;
     if-eqz v2, :cond_0
 
-    .line 933
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 934
     iget-object v4, p0, Lcom/android/internal/policy/impl/GlobalActions$ProfileChooseAction;->mProfileManager:Landroid/app/ProfileManager;
 
     invoke-virtual {v4}, Landroid/app/ProfileManager;->getActiveProfile()Landroid/app/Profile;
@@ -123,11 +113,9 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 937
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 938
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -140,16 +128,13 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 941
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 942
     const v4, 0x1040074
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(I)V
 
-    .line 945
     :cond_2
     return-object v3
 .end method
@@ -158,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 921
     const/4 v0, 0x1
 
     return v0

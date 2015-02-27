@@ -25,17 +25,14 @@
     .parameter "looper"
 
     .prologue
-    .line 2911
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
-    .line 2912
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 2913
     return-void
 .end method
 
@@ -46,16 +43,13 @@
     .parameter "msg"
 
     .prologue
-    .line 2917
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2935
     :goto_0
     return-void
 
-    .line 2919
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -64,7 +58,6 @@
 
     goto :goto_0
 
-    .line 2922
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -73,7 +66,6 @@
 
     goto :goto_0
 
-    .line 2925
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -82,7 +74,6 @@
 
     goto :goto_0
 
-    .line 2928
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -91,14 +82,12 @@
 
     goto :goto_0
 
-    .line 2931
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
     #calls: Lcom/android/server/power/PowerManagerService;->cleanupProximity()V
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$800(Lcom/android/server/power/PowerManagerService;)V
 
-    .line 2932
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Runnable;
@@ -107,7 +96,6 @@
 
     goto :goto_0
 
-    .line 2917
     nop
 
     :pswitch_data_0

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 5289
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$25;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$25;->val$screenOnListener:Landroid/view/WindowManagerPolicy$ScreenOnListener;
@@ -44,14 +43,12 @@
     .parameter "data"
 
     .prologue
-    .line 5292
     const-string v0, "WindowManager"
 
     const-string v1, "Lock screen displayed!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5293
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$25;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$25;->val$screenOnListener:Landroid/view/WindowManagerPolicy$ScreenOnListener;
@@ -59,6 +56,5 @@
     #calls: Lcom/android/internal/policy/impl/PhoneWindowManager;->finishScreenTurningOn(Landroid/view/WindowManagerPolicy$ScreenOnListener;)V
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$1700(Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/view/WindowManagerPolicy$ScreenOnListener;)V
 
-    .line 5294
     return-void
 .end method

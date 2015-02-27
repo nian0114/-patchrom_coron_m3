@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,7 +47,6 @@
     .end annotation
 
     .prologue
-    .line 48
     const-class v0, Landroid/hardware/camera2/Size;
 
     return-object v0
@@ -59,7 +57,6 @@
     .parameter "nativeType"
 
     .prologue
-    .line 58
     const/16 v0, 0x8
 
     return v0
@@ -72,7 +69,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 53
     if-ne p1, v0, :cond_0
 
     :goto_0
@@ -94,14 +90,11 @@
     .prologue
     const/16 v1, 0x8
 
-    .line 28
     if-eqz p4, :cond_0
 
-    .line 35
     :goto_0
     return v1
 
-    .line 32
     :cond_0
     invoke-virtual {p1}, Landroid/hardware/camera2/Size;->getWidth()I
 
@@ -109,7 +102,6 @@
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 33
     invoke-virtual {p1}, Landroid/hardware/camera2/Size;->getHeight()I
 
     move-result v0
@@ -127,7 +119,6 @@
     .parameter "x3"
 
     .prologue
-    .line 22
     check-cast p1, Landroid/hardware/camera2/Size;
 
     .end local p1
@@ -144,18 +135,15 @@
     .parameter "nativeType"
 
     .prologue
-    .line 40
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
 
-    .line 41
     .local v1, width:I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 43
     .local v0, height:I
     new-instance v2, Landroid/hardware/camera2/Size;
 
@@ -170,7 +158,6 @@
     .parameter "x1"
 
     .prologue
-    .line 22
     invoke-virtual {p0, p1, p2}, Landroid/hardware/camera2/impl/MetadataMarshalSize;->unmarshal(Ljava/nio/ByteBuffer;I)Landroid/hardware/camera2/Size;
 
     move-result-object v0

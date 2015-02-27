@@ -24,17 +24,14 @@
     .parameter
 
     .prologue
-    .line 180
     iput-object p1, p0, Landroid/net/wifi/WifiConfigStore$WpaConfigFileObserver;->this$0:Landroid/net/wifi/WifiConfigStore;
 
-    .line 181
     const-string v0, "/data/misc/wifi/wpa_supplicant.conf"
 
     const/16 v1, 0x8
 
     invoke-direct {p0, v0, v1}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
 
-    .line 182
     return-void
 .end method
 
@@ -46,19 +43,16 @@
     .parameter "path"
 
     .prologue
-    .line 186
     const/16 v0, 0x8
 
     if-ne p1, v0, :cond_0
 
-    .line 187
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/misc/wifi/wpa_supplicant.conf"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 190
     :cond_0
     return-void
 .end method

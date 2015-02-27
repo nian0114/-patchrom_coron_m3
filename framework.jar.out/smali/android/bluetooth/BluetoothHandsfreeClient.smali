@@ -205,48 +205,39 @@
     .parameter "l"
 
     .prologue
-    .line 408
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 373
     new-instance v2, Landroid/bluetooth/BluetoothHandsfreeClient$1;
 
     invoke-direct {v2, p0}, Landroid/bluetooth/BluetoothHandsfreeClient$1;-><init>(Landroid/bluetooth/BluetoothHandsfreeClient;)V
 
     iput-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mBluetoothStateChangeCallback:Landroid/bluetooth/IBluetoothStateChangeCallback;
 
-    .line 1123
     new-instance v2, Landroid/bluetooth/BluetoothHandsfreeClient$2;
 
     invoke-direct {v2, p0}, Landroid/bluetooth/BluetoothHandsfreeClient$2;-><init>(Landroid/bluetooth/BluetoothHandsfreeClient;)V
 
     iput-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 409
     iput-object p1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mContext:Landroid/content/Context;
 
-    .line 410
     iput-object p2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
 
-    .line 411
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
-    .line 413
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v2}, Landroid/bluetooth/BluetoothAdapter;->getBluetoothManager()Landroid/bluetooth/IBluetoothManager;
 
     move-result-object v1
 
-    .line 414
     .local v1, mgr:Landroid/bluetooth/IBluetoothManager;
     if-eqz v1, :cond_0
 
-    .line 416
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mBluetoothStateChangeCallback:Landroid/bluetooth/IBluetoothStateChangeCallback;
 
@@ -254,7 +245,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 422
     :cond_0
     :goto_0
     new-instance v2, Landroid/content/Intent;
@@ -277,22 +267,18 @@
 
     if-nez v2, :cond_1
 
-    .line 423
     const-string v2, "BluetoothHandsfreeClient"
 
     const-string v3, "Could not bind to Bluetooth Handsfree Client Service"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
     :cond_1
     return-void
 
-    .line 417
     :catch_0
     move-exception v0
 
-    .line 418
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BluetoothHandsfreeClient"
 
@@ -308,7 +294,6 @@
     .parameter "x0"
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mConnection:Landroid/content/ServiceConnection;
 
     return-object v0
@@ -319,7 +304,6 @@
     .parameter "x0"
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     return-object v0
@@ -331,7 +315,6 @@
     .parameter "x1"
 
     .prologue
-    .line 42
     iput-object p1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     return-object p1
@@ -342,7 +325,6 @@
     .parameter "x0"
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -353,7 +335,6 @@
     .parameter "x0"
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
 
     return-object v0
@@ -363,7 +344,6 @@
     .locals 2
 
     .prologue
-    .line 1144
     iget-object v0, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getState()I
@@ -376,7 +356,6 @@
 
     const/4 v0, 0x1
 
-    .line 1145
     :goto_0
     return v0
 
@@ -393,15 +372,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1149
     if-nez p1, :cond_1
 
-    .line 1152
     :cond_0
     :goto_0
     return v0
 
-    .line 1151
     :cond_1
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
@@ -423,12 +399,10 @@
     .parameter "msg"
 
     .prologue
-    .line 1156
     const-string v0, "BluetoothHandsfreeClient"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1157
     return-void
 .end method
 
@@ -440,12 +414,10 @@
     .parameter "flag"
 
     .prologue
-    .line 725
     const-string v1, "acceptCall()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 726
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -462,7 +434,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 729
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -472,15 +443,12 @@
 
     move-result v1
 
-    .line 735
     :goto_0
     return v1
 
-    .line 730
     :catch_0
     move-exception v0
 
-    .line 731
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -494,7 +462,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 734
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -507,7 +474,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 735
     :cond_1
     const/4 v1, 0x0
 
@@ -519,12 +485,10 @@
     .parameter "device"
 
     .prologue
-    .line 1007
     const-string v1, "acceptIncomingConnect"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 1008
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -535,7 +499,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1010
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -545,11 +508,9 @@
 
     move-result v1
 
-    .line 1016
     :goto_0
     return v1
 
-    .line 1011
     :catch_0
     move-exception v0
 
@@ -562,14 +523,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1016
     .end local v0           #e:Landroid/os/RemoteException;
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1013
     :cond_0
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -577,7 +536,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1014
     const-string v1, "BluetoothHandsfreeClient"
 
     new-instance v2, Ljava/lang/Throwable;
@@ -599,18 +557,15 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 436
     iget-object v3, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v3}, Landroid/bluetooth/BluetoothAdapter;->getBluetoothManager()Landroid/bluetooth/IBluetoothManager;
 
     move-result-object v1
 
-    .line 437
     .local v1, mgr:Landroid/bluetooth/IBluetoothManager;
     if-eqz v1, :cond_0
 
-    .line 439
     :try_start_0
     iget-object v3, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mBluetoothStateChangeCallback:Landroid/bluetooth/IBluetoothStateChangeCallback;
 
@@ -618,14 +573,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 445
     :cond_0
     :goto_0
     iget-object v4, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mConnection:Landroid/content/ServiceConnection;
 
     monitor-enter v4
 
-    .line 446
     :try_start_1
     iget-object v3, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
     :try_end_1
@@ -633,13 +586,11 @@
 
     if-eqz v3, :cond_1
 
-    .line 448
     const/4 v3, 0x0
 
     :try_start_2
     iput-object v3, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
-    .line 449
     iget-object v3, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mContext:Landroid/content/Context;
 
     iget-object v5, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mConnection:Landroid/content/ServiceConnection;
@@ -649,7 +600,6 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 454
     :cond_1
     :goto_1
     :try_start_3
@@ -657,17 +607,13 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 455
     iput-object v6, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
 
-    .line 456
     return-void
 
-    .line 440
     :catch_0
     move-exception v0
 
-    .line 441
     .local v0, e:Ljava/lang/Exception;
     const-string v3, "BluetoothHandsfreeClient"
 
@@ -677,12 +623,10 @@
 
     goto :goto_0
 
-    .line 450
     .end local v0           #e:Ljava/lang/Exception;
     :catch_1
     move-exception v2
 
-    .line 451
     .local v2, re:Ljava/lang/Exception;
     :try_start_4
     const-string v3, "BluetoothHandsfreeClient"
@@ -693,7 +637,6 @@
 
     goto :goto_1
 
-    .line 454
     .end local v2           #re:Ljava/lang/Exception;
     :catchall_0
     move-exception v3
@@ -712,7 +655,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 472
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -739,7 +681,6 @@
 
     invoke-static {v2}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 473
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v2, :cond_1
@@ -756,7 +697,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 476
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -766,16 +706,13 @@
 
     move-result v1
 
-    .line 483
     :cond_0
     :goto_0
     return v1
 
-    .line 477
     :catch_0
     move-exception v0
 
-    .line 478
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BluetoothHandsfreeClient"
 
@@ -791,7 +728,6 @@
 
     goto :goto_0
 
-    .line 482
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_1
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -811,7 +747,6 @@
     .locals 3
 
     .prologue
-    .line 1064
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -822,7 +757,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1066
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -832,15 +766,12 @@
 
     move-result v1
 
-    .line 1074
     :goto_0
     return v1
 
-    .line 1067
     :catch_0
     move-exception v0
 
-    .line 1068
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -850,14 +781,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1074
     .end local v0           #e:Landroid/os/RemoteException;
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1071
     :cond_0
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -865,7 +794,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1072
     const-string v1, "BluetoothHandsfreeClient"
 
     new-instance v2, Ljava/lang/Throwable;
@@ -887,12 +815,10 @@
     .parameter "number"
 
     .prologue
-    .line 913
     const-string v1, "dial()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 914
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -909,7 +835,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 917
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -919,15 +844,12 @@
 
     move-result v1
 
-    .line 923
     :goto_0
     return v1
 
-    .line 918
     :catch_0
     move-exception v0
 
-    .line 919
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -941,7 +863,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 922
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -954,7 +875,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 923
     :cond_1
     const/4 v1, 0x0
 
@@ -967,12 +887,10 @@
     .parameter "location"
 
     .prologue
-    .line 938
     const-string v1, "dialMemory()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 939
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -989,7 +907,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 942
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -999,15 +916,12 @@
 
     move-result v1
 
-    .line 948
     :goto_0
     return v1
 
-    .line 943
     :catch_0
     move-exception v0
 
-    .line 944
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1021,7 +935,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 947
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -1034,7 +947,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 948
     :cond_1
     const/4 v1, 0x0
 
@@ -1048,7 +960,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 496
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1075,7 +986,6 @@
 
     invoke-static {v2}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 497
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v2, :cond_1
@@ -1092,7 +1002,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 500
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1102,16 +1011,13 @@
 
     move-result v1
 
-    .line 507
     :cond_0
     :goto_0
     return v1
 
-    .line 501
     :catch_0
     move-exception v0
 
-    .line 502
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BluetoothHandsfreeClient"
 
@@ -1127,7 +1033,6 @@
 
     goto :goto_0
 
-    .line 506
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_1
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -1147,7 +1052,6 @@
     .locals 3
 
     .prologue
-    .line 1088
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -1158,7 +1062,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1090
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1168,15 +1071,12 @@
 
     move-result v1
 
-    .line 1098
     :goto_0
     return v1
 
-    .line 1091
     :catch_0
     move-exception v0
 
-    .line 1092
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1186,14 +1086,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1098
     .end local v0           #e:Landroid/os/RemoteException;
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1095
     :cond_0
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1201,7 +1099,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1096
     const-string v1, "BluetoothHandsfreeClient"
 
     new-instance v2, Ljava/lang/Throwable;
@@ -1223,12 +1120,10 @@
     .parameter "index"
 
     .prologue
-    .line 835
     const-string v1, "enterPrivateMode()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 836
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -1245,7 +1140,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 839
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1255,15 +1149,12 @@
 
     move-result v1
 
-    .line 845
     :goto_0
     return v1
 
-    .line 840
     :catch_0
     move-exception v0
 
-    .line 841
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1277,7 +1168,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 844
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -1290,7 +1180,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 845
     :cond_1
     const/4 v1, 0x0
 
@@ -1302,12 +1191,10 @@
     .parameter "device"
 
     .prologue
-    .line 864
     const-string v1, "explicitCallTransfer()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 865
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -1324,7 +1211,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 868
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1334,15 +1220,12 @@
 
     move-result v1
 
-    .line 874
     :goto_0
     return v1
 
-    .line 869
     :catch_0
     move-exception v0
 
-    .line 870
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1356,7 +1239,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 873
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -1369,7 +1251,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 874
     :cond_1
     const/4 v1, 0x0
 
@@ -1381,7 +1262,6 @@
     .parameter "device"
 
     .prologue
-    .line 1042
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -1392,7 +1272,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1044
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1402,11 +1281,9 @@
 
     move-result v1
 
-    .line 1050
     :goto_0
     return v1
 
-    .line 1045
     :catch_0
     move-exception v0
 
@@ -1419,14 +1296,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1050
     .end local v0           #e:Landroid/os/RemoteException;
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1047
     :cond_0
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1434,7 +1309,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1048
     const-string v1, "BluetoothHandsfreeClient"
 
     new-instance v2, Ljava/lang/Throwable;
@@ -1463,7 +1337,6 @@
     .end annotation
 
     .prologue
-    .line 518
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -1474,7 +1347,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 520
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1484,15 +1356,12 @@
 
     move-result-object v1
 
-    .line 527
     :goto_0
     return-object v1
 
-    .line 521
     :catch_0
     move-exception v0
 
-    .line 522
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1506,14 +1375,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 523
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     goto :goto_0
 
-    .line 526
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -1526,7 +1393,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 527
     :cond_1
     new-instance v1, Ljava/util/ArrayList;
 
@@ -1542,7 +1408,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 562
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v2, :cond_1
@@ -1559,7 +1424,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 565
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1569,16 +1433,13 @@
 
     move-result v1
 
-    .line 572
     :cond_0
     :goto_0
     return v1
 
-    .line 566
     :catch_0
     move-exception v0
 
-    .line 567
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BluetoothHandsfreeClient"
 
@@ -1594,7 +1455,6 @@
 
     goto :goto_0
 
-    .line 571
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_1
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -1615,12 +1475,10 @@
     .parameter "device"
 
     .prologue
-    .line 699
     const-string v1, "getCurrentCalls()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 700
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -1637,7 +1495,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 703
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1647,15 +1504,12 @@
 
     move-result-object v1
 
-    .line 709
     :goto_0
     return-object v1
 
-    .line 704
     :catch_0
     move-exception v0
 
-    .line 705
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1669,7 +1523,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 708
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -1682,7 +1535,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 709
     :cond_1
     const/4 v1, 0x0
 
@@ -1694,7 +1546,6 @@
     .parameter "device"
 
     .prologue
-    .line 1109
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -1705,7 +1556,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1111
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1715,15 +1565,12 @@
 
     move-result-object v1
 
-    .line 1119
     :goto_0
     return-object v1
 
-    .line 1112
     :catch_0
     move-exception v0
 
-    .line 1113
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1733,14 +1580,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1119
     .end local v0           #e:Landroid/os/RemoteException;
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1116
     :cond_0
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1748,7 +1593,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1117
     const-string v1, "BluetoothHandsfreeClient"
 
     new-instance v2, Ljava/lang/Throwable;
@@ -1780,12 +1624,10 @@
     .end annotation
 
     .prologue
-    .line 678
     const-string v1, "getCurrentCalls()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 679
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -1802,7 +1644,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 682
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1812,15 +1653,12 @@
 
     move-result-object v1
 
-    .line 688
     :goto_0
     return-object v1
 
-    .line 683
     :catch_0
     move-exception v0
 
-    .line 684
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1834,7 +1672,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 687
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -1847,7 +1684,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 688
     :cond_1
     const/4 v1, 0x0
 
@@ -1868,7 +1704,6 @@
     .end annotation
 
     .prologue
-    .line 541
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -1879,7 +1714,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 543
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1889,15 +1723,12 @@
 
     move-result-object v1
 
-    .line 550
     :goto_0
     return-object v1
 
-    .line 544
     :catch_0
     move-exception v0
 
-    .line 545
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1911,14 +1742,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 546
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     goto :goto_0
 
-    .line 549
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -1931,7 +1760,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 550
     :cond_1
     new-instance v1, Ljava/util/ArrayList;
 
@@ -1945,12 +1773,10 @@
     .parameter "device"
 
     .prologue
-    .line 990
     const-string v1, "getLastVoiceTagNumber()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 991
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -1967,7 +1793,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 994
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -1977,15 +1802,12 @@
 
     move-result v1
 
-    .line 1000
     :goto_0
     return v1
 
-    .line 995
     :catch_0
     move-exception v0
 
-    .line 996
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -1999,7 +1821,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 999
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -2012,7 +1833,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1000
     :cond_1
     const/4 v1, 0x0
 
@@ -2026,7 +1846,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 604
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v2, :cond_1
@@ -2043,7 +1862,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 607
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -2053,16 +1871,13 @@
 
     move-result v1
 
-    .line 614
     :cond_0
     :goto_0
     return v1
 
-    .line 608
     :catch_0
     move-exception v0
 
-    .line 609
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BluetoothHandsfreeClient"
 
@@ -2078,7 +1893,6 @@
 
     goto :goto_0
 
-    .line 613
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_1
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -2099,12 +1913,10 @@
     .parameter "device"
 
     .prologue
-    .line 748
     const-string v1, "holdCall()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 749
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -2121,7 +1933,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 752
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -2131,15 +1942,12 @@
 
     move-result v1
 
-    .line 758
     :goto_0
     return v1
 
-    .line 753
     :catch_0
     move-exception v0
 
-    .line 754
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -2153,7 +1961,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 757
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -2166,7 +1973,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 758
     :cond_1
     const/4 v1, 0x0
 
@@ -2178,12 +1984,10 @@
     .parameter "device"
 
     .prologue
-    .line 888
-    const-string/jumbo v1, "redial()"
+    const-string v1, "redial()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 889
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -2200,7 +2004,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 892
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -2210,15 +2013,12 @@
 
     move-result v1
 
-    .line 898
     :goto_0
     return v1
 
-    .line 893
     :catch_0
     move-exception v0
 
-    .line 894
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -2232,7 +2032,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 897
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -2245,7 +2044,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 898
     :cond_1
     const/4 v1, 0x0
 
@@ -2257,12 +2055,10 @@
     .parameter "device"
 
     .prologue
-    .line 775
-    const-string/jumbo v1, "rejectCall()"
+    const-string v1, "rejectCall()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 776
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -2279,7 +2075,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 779
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -2289,15 +2084,12 @@
 
     move-result v1
 
-    .line 785
     :goto_0
     return v1
 
-    .line 780
     :catch_0
     move-exception v0
 
-    .line 781
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -2311,7 +2103,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 784
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -2324,7 +2115,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 785
     :cond_1
     const/4 v1, 0x0
 
@@ -2336,17 +2126,14 @@
     .parameter "device"
 
     .prologue
-    .line 1023
-    const-string/jumbo v1, "rejectIncomingConnect"
+    const-string v1, "rejectIncomingConnect"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 1024
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
 
-    .line 1026
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -2356,11 +2143,9 @@
 
     move-result v1
 
-    .line 1032
     :goto_0
     return v1
 
-    .line 1027
     :catch_0
     move-exception v0
 
@@ -2373,14 +2158,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1032
     .end local v0           #e:Landroid/os/RemoteException;
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1029
     :cond_0
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -2388,7 +2171,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1030
     const-string v1, "BluetoothHandsfreeClient"
 
     new-instance v2, Ljava/lang/Throwable;
@@ -2410,12 +2192,10 @@
     .parameter "code"
 
     .prologue
-    .line 963
-    const-string/jumbo v1, "sendDTMF()"
+    const-string v1, "sendDTMF()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 964
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -2432,7 +2212,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 967
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -2442,15 +2221,12 @@
 
     move-result v1
 
-    .line 973
     :goto_0
     return v1
 
-    .line 968
     :catch_0
     move-exception v0
 
-    .line 969
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -2464,7 +2240,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 972
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -2477,7 +2252,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 973
     :cond_1
     const/4 v1, 0x0
 
@@ -2492,12 +2266,11 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 581
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "setPriority("
+    const-string v3, "setPriority("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2529,7 +2302,6 @@
 
     invoke-static {v2}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 582
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v2, :cond_2
@@ -2546,19 +2318,16 @@
 
     if-eqz v2, :cond_2
 
-    .line 584
     if-eqz p2, :cond_1
 
     const/16 v2, 0x64
 
     if-eq p2, v2, :cond_1
 
-    .line 596
     :cond_0
     :goto_0
     return v1
 
-    .line 589
     :cond_1
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -2571,11 +2340,9 @@
 
     goto :goto_0
 
-    .line 590
     :catch_0
     move-exception v0
 
-    .line 591
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BluetoothHandsfreeClient"
 
@@ -2591,7 +2358,6 @@
 
     goto :goto_0
 
-    .line 595
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_2
     iget-object v2, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -2612,12 +2378,10 @@
     .parameter "device"
 
     .prologue
-    .line 631
-    const-string/jumbo v1, "startVoiceRecognition()"
+    const-string v1, "startVoiceRecognition()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 632
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -2634,7 +2398,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 635
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -2644,15 +2407,12 @@
 
     move-result v1
 
-    .line 641
     :goto_0
     return v1
 
-    .line 636
     :catch_0
     move-exception v0
 
-    .line 637
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -2666,7 +2426,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 640
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -2679,7 +2438,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 641
     :cond_1
     const/4 v1, 0x0
 
@@ -2691,12 +2449,10 @@
     .parameter "device"
 
     .prologue
-    .line 658
-    const-string/jumbo v1, "stopVoiceRecognition()"
+    const-string v1, "stopVoiceRecognition()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 659
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -2713,7 +2469,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 662
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -2723,15 +2478,12 @@
 
     move-result v1
 
-    .line 668
     :goto_0
     return v1
 
-    .line 663
     :catch_0
     move-exception v0
 
-    .line 664
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -2745,7 +2497,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 667
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -2758,7 +2509,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 668
     :cond_1
     const/4 v1, 0x0
 
@@ -2771,12 +2521,10 @@
     .parameter "index"
 
     .prologue
-    .line 805
-    const-string/jumbo v1, "terminateCall()"
+    const-string v1, "terminateCall()"
 
     invoke-static {v1}, Landroid/bluetooth/BluetoothHandsfreeClient;->log(Ljava/lang/String;)V
 
-    .line 806
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
     if-eqz v1, :cond_0
@@ -2793,7 +2541,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 809
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
 
@@ -2803,15 +2550,12 @@
 
     move-result v1
 
-    .line 815
     :goto_0
     return v1
 
-    .line 810
     :catch_0
     move-exception v0
 
-    .line 811
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHandsfreeClient"
 
@@ -2825,7 +2569,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 814
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHandsfreeClient;->mService:Landroid/bluetooth/IBluetoothHandsfreeClient;
@@ -2838,7 +2581,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 815
     :cond_1
     const/4 v1, 0x0
 

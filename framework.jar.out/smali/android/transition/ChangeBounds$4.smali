@@ -33,7 +33,6 @@
     .parameter
 
     .prologue
-    .line 298
     iput-object p1, p0, Landroid/transition/ChangeBounds$4;->this$0:Landroid/transition/ChangeBounds;
 
     iput-object p2, p0, Landroid/transition/ChangeBounds$4;->val$sceneRoot:Landroid/view/ViewGroup;
@@ -54,7 +53,6 @@
     .parameter "animation"
 
     .prologue
-    .line 301
     iget-object v0, p0, Landroid/transition/ChangeBounds$4;->val$sceneRoot:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
@@ -65,13 +63,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroupOverlay;->remove(Landroid/graphics/drawable/Drawable;)V
 
-    .line 302
     iget-object v0, p0, Landroid/transition/ChangeBounds$4;->val$view:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 303
     return-void
 .end method

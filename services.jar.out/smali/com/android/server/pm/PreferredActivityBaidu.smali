@@ -14,13 +14,10 @@
     .parameter "componentName"
 
     .prologue
-    .line 12
     invoke-direct {p0, p1}, Landroid/content/IntentFilter;-><init>(Landroid/content/IntentFilter;)V
 
-    .line 13
     iput-object p2, p0, Lcom/android/server/pm/PreferredActivityBaidu;->mComponentName:Landroid/content/ComponentName;
 
-    .line 14
     return-void
 .end method
 
@@ -30,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 17
     iget-object v0, p0, Lcom/android/server/pm/PreferredActivityBaidu;->mComponentName:Landroid/content/ComponentName;
 
     return-object v0

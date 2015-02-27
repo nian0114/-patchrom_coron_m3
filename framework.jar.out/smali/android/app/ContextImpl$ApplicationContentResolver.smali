@@ -28,10 +28,8 @@
     .parameter "user"
 
     .prologue
-    .line 2252
     invoke-direct {p0, p1}, Landroid/content/ContentResolver;-><init>(Landroid/content/Context;)V
 
-    .line 2253
     invoke-static {p2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -40,7 +38,6 @@
 
     iput-object v0, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mMainThread:Landroid/app/ActivityThread;
 
-    .line 2254
     invoke-static {p3}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -49,7 +46,6 @@
 
     iput-object v0, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mUser:Landroid/os/UserHandle;
 
-    .line 2255
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .parameter "auth"
 
     .prologue
-    .line 2264
     iget-object v0, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mMainThread:Landroid/app/ActivityThread;
 
     iget-object v1, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mUser:Landroid/os/UserHandle;
@@ -85,7 +80,6 @@
     .parameter "auth"
 
     .prologue
-    .line 2259
     iget-object v0, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mMainThread:Landroid/app/ActivityThread;
 
     iget-object v1, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mUser:Landroid/os/UserHandle;
@@ -109,7 +103,6 @@
     .parameter "auth"
 
     .prologue
-    .line 2274
     iget-object v0, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mMainThread:Landroid/app/ActivityThread;
 
     iget-object v1, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mUser:Landroid/os/UserHandle;
@@ -132,7 +125,6 @@
     .parameter "icp"
 
     .prologue
-    .line 2289
     iget-object v0, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mMainThread:Landroid/app/ActivityThread;
 
     invoke-interface {p1}, Landroid/content/IContentProvider;->asBinder()Landroid/os/IBinder;
@@ -141,7 +133,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ActivityThread;->appNotRespondingViaProvider(Landroid/os/IBinder;)V
 
-    .line 2290
     return-void
 .end method
 
@@ -150,7 +141,6 @@
     .parameter "provider"
 
     .prologue
-    .line 2269
     iget-object v0, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mMainThread:Landroid/app/ActivityThread;
 
     const/4 v1, 0x1
@@ -167,7 +157,6 @@
     .parameter "icp"
 
     .prologue
-    .line 2279
     iget-object v0, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mMainThread:Landroid/app/ActivityThread;
 
     const/4 v1, 0x0
@@ -184,7 +173,6 @@
     .parameter "icp"
 
     .prologue
-    .line 2284
     iget-object v0, p0, Landroid/app/ContextImpl$ApplicationContentResolver;->mMainThread:Landroid/app/ActivityThread;
 
     invoke-interface {p1}, Landroid/content/IContentProvider;->asBinder()Landroid/os/IBinder;
@@ -195,6 +183,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/ActivityThread;->handleUnstableProviderDied(Landroid/os/IBinder;Z)V
 
-    .line 2285
     return-void
 .end method

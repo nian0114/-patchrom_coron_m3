@@ -40,20 +40,16 @@
     .parameter "name"
 
     .prologue
-    .line 1720
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1718
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/content/SyncManager$AuthoritySyncStats;->accountMap:Ljava/util/Map;
 
-    .line 1721
     iput-object p1, p0, Lcom/android/server/content/SyncManager$AuthoritySyncStats;->name:Ljava/lang/String;
 
-    .line 1722
     return-void
 .end method
 
@@ -63,7 +59,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1714
     invoke-direct {p0, p1}, Lcom/android/server/content/SyncManager$AuthoritySyncStats;-><init>(Ljava/lang/String;)V
 
     return-void

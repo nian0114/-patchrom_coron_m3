@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 4258
     iput-object p1, p0, Lcom/android/server/ConnectivityService$5;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Lcom/android/server/ConnectivityService$CheckMp$CallBack;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v5, 0x0
 
-    .line 4261
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,7 +65,6 @@
     #calls: Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->access$300(Ljava/lang/String;)V
 
-    .line 4262
     iget-object v3, p0, Lcom/android/server/ConnectivityService$5;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mNetTrackers:[Landroid/net/NetworkStateTracker;
@@ -81,7 +78,6 @@
 
     move-result-object v1
 
-    .line 4264
     .local v1, ni:Landroid/net/NetworkInfo;
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -89,7 +85,6 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 4315
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -111,7 +106,6 @@
     #calls: Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->access$4500(Ljava/lang/String;)V
 
-    .line 4319
     :goto_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService$5;->this$0:Lcom/android/server/ConnectivityService;
 
@@ -122,10 +116,8 @@
 
     invoke-virtual {v3, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 4320
     return-void
 
-    .line 4269
     :pswitch_0
     const-string v3, "CheckMp.onComplete: ignore, connected or no connection"
 
@@ -134,21 +126,18 @@
 
     goto :goto_0
 
-    .line 4273
     :pswitch_1
     const-string v3, "CheckMp.onComplete: warm sim"
 
     #calls: Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->access$300(Ljava/lang/String;)V
 
-    .line 4274
     iget-object v3, p0, Lcom/android/server/ConnectivityService$5;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-virtual {v3}, Lcom/android/server/ConnectivityService;->getMobileProvisioningUrl()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 4275
     .local v2, url:Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -156,14 +145,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 4276
     iget-object v3, p0, Lcom/android/server/ConnectivityService$5;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-virtual {v3}, Lcom/android/server/ConnectivityService;->getMobileRedirectedProvisioningUrl()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 4278
     :cond_0
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -171,7 +158,6 @@
 
     if-nez v3, :cond_1
 
-    .line 4279
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -193,7 +179,6 @@
     #calls: Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->access$300(Ljava/lang/String;)V
 
-    .line 4280
     iget-object v3, p0, Lcom/android/server/ConnectivityService$5;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
@@ -205,7 +190,6 @@
 
     goto :goto_0
 
-    .line 4284
     :cond_1
     const-string v3, "CheckMp.onComplete: warm (redirected), no url"
 
@@ -214,7 +198,6 @@
 
     goto :goto_0
 
-    .line 4289
     .end local v2           #url:Ljava/lang/String;
     :pswitch_2
     iget-object v3, p0, Lcom/android/server/ConnectivityService$5;->this$0:Lcom/android/server/ConnectivityService;
@@ -223,7 +206,6 @@
 
     move-result-object v2
 
-    .line 4290
     .restart local v2       #url:Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -231,7 +213,6 @@
 
     if-nez v3, :cond_2
 
-    .line 4291
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -253,7 +234,6 @@
     #calls: Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->access$300(Ljava/lang/String;)V
 
-    .line 4292
     iget-object v3, p0, Lcom/android/server/ConnectivityService$5;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
@@ -263,7 +243,6 @@
     #calls: Lcom/android/server/ConnectivityService;->setProvNotificationVisible(ZILjava/lang/String;Ljava/lang/String;)V
     invoke-static {v3, v6, v7, v4, v2}, Lcom/android/server/ConnectivityService;->access$4200(Lcom/android/server/ConnectivityService;ZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 4297
     iget-object v3, p0, Lcom/android/server/ConnectivityService$5;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mIsProvisioningNetwork:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -273,7 +252,6 @@
 
     invoke-virtual {v3, v6}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 4298
     iget-object v3, p0, Lcom/android/server/ConnectivityService$5;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mNetTrackers:[Landroid/net/NetworkStateTracker;
@@ -285,13 +263,11 @@
 
     check-cast v0, Landroid/net/MobileDataStateTracker;
 
-    .line 4300
     .local v0, mdst:Landroid/net/MobileDataStateTracker;
     invoke-virtual {v0, v5}, Landroid/net/MobileDataStateTracker;->setInternalDataEnable(Z)V
 
     goto/16 :goto_0
 
-    .line 4302
     .end local v0           #mdst:Landroid/net/MobileDataStateTracker;
     :cond_2
     const-string v3, "CheckMp.onComplete: warm (no dns/tcp), no url"
@@ -301,7 +277,6 @@
 
     goto/16 :goto_0
 
-    .line 4310
     .end local v2           #url:Ljava/lang/String;
     :pswitch_3
     const-string v3, "CheckMp.onComplete: provisioning started"
@@ -309,7 +284,6 @@
     #calls: Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->access$300(Ljava/lang/String;)V
 
-    .line 4311
     iget-object v3, p0, Lcom/android/server/ConnectivityService$5;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mIsStartingProvisioning:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -321,7 +295,6 @@
 
     goto/16 :goto_0
 
-    .line 4264
     nop
 
     :pswitch_data_0

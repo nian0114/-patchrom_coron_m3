@@ -40,7 +40,6 @@
     .parameter
 
     .prologue
-    .line 1220
     iput-object p1, p0, Landroid/speech/tts/TextToSpeech$11;->this$0:Landroid/speech/tts/TextToSpeech;
 
     iput-object p2, p0, Landroid/speech/tts/TextToSpeech$11;->val$loc:Ljava/util/Locale;
@@ -64,13 +63,11 @@
     .prologue
     const/4 v6, -0x2
 
-    .line 1223
     const/4 v2, 0x0
 
     .local v2, language:Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 1226
     .local v0, country:Ljava/lang/String;
     :try_start_0
     iget-object v3, p0, Landroid/speech/tts/TextToSpeech$11;->val$loc:Ljava/util/Locale;
@@ -81,7 +78,6 @@
 
     move-result-object v2
 
-    .line 1233
     :try_start_1
     iget-object v3, p0, Landroid/speech/tts/TextToSpeech$11;->val$loc:Ljava/util/Locale;
 
@@ -91,7 +87,6 @@
 
     move-result-object v0
 
-    .line 1239
     iget-object v3, p0, Landroid/speech/tts/TextToSpeech$11;->val$loc:Ljava/util/Locale;
 
     invoke-virtual {v3}, Ljava/util/Locale;->getVariant()Ljava/lang/String;
@@ -109,11 +104,9 @@
     :goto_0
     return-object v3
 
-    .line 1227
     :catch_0
     move-exception v1
 
-    .line 1228
     .local v1, e:Ljava/util/MissingResourceException;
     const-string v3, "TextToSpeech"
 
@@ -139,19 +132,16 @@
 
     invoke-static {v3, v4, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1229
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     goto :goto_0
 
-    .line 1234
     .end local v1           #e:Ljava/util/MissingResourceException;
     :catch_1
     move-exception v1
 
-    .line 1235
     .restart local v1       #e:Ljava/util/MissingResourceException;
     const-string v3, "TextToSpeech"
 
@@ -177,7 +167,6 @@
 
     invoke-static {v3, v4, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1236
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -195,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 1220
     invoke-virtual {p0, p1}, Landroid/speech/tts/TextToSpeech$11;->run(Landroid/speech/tts/ITextToSpeechService;)Ljava/lang/Integer;
 
     move-result-object v0

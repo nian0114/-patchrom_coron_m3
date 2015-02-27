@@ -27,13 +27,10 @@
     .parameter "orgUri"
 
     .prologue
-    .line 4392
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4393
     iput-object p1, p0, Lcom/android/server/ConnectivityService$CheckMp$CheckMpHostnameVerifier;->mOrgUri:Landroid/net/Uri;
 
-    .line 4394
     return-void
 .end method
 
@@ -45,12 +42,10 @@
     .parameter "session"
 
     .prologue
-    .line 4398
     invoke-static {}, Ljavax/net/ssl/HttpsURLConnection;->getDefaultHostnameVerifier()Ljavax/net/ssl/HostnameVerifier;
 
     move-result-object v0
 
-    .line 4399
     .local v0, hv:Ljavax/net/ssl/HostnameVerifier;
     iget-object v3, p0, Lcom/android/server/ConnectivityService$CheckMp$CheckMpHostnameVerifier;->mOrgUri:Landroid/net/Uri;
 
@@ -58,7 +53,6 @@
 
     move-result-object v1
 
-    .line 4400
     .local v1, orgUriHost:Ljava/lang/String;
     invoke-interface {v0, v1, p2}, Ljavax/net/ssl/HostnameVerifier;->verify(Ljava/lang/String;Ljavax/net/ssl/SSLSession;)Z
 
@@ -75,7 +69,6 @@
     :cond_0
     const/4 v2, 0x1
 
-    .line 4402
     .local v2, retVal:Z
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
@@ -119,10 +112,8 @@
     #calls: Lcom/android/server/ConnectivityService$CheckMp;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/server/ConnectivityService$CheckMp;->access$4700(Ljava/lang/String;)V
 
-    .line 4405
     return v2
 
-    .line 4400
     .end local v2           #retVal:Z
     :cond_1
     const/4 v2, 0x0

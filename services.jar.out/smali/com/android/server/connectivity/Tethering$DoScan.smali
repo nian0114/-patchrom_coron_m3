@@ -37,7 +37,6 @@
     .parameter
 
     .prologue
-    .line 601
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$DoScan;->this$0:Lcom/android/server/connectivity/Tethering;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -51,7 +50,6 @@
     .parameter "x1"
 
     .prologue
-    .line 601
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/Tethering$DoScan;-><init>(Lcom/android/server/connectivity/Tethering;)V
 
     return-void
@@ -62,7 +60,6 @@
     .parameter "x0"
 
     .prologue
-    .line 601
     iget v0, p0, Lcom/android/server/connectivity/Tethering$DoScan;->mCurrentClientCount:I
 
     return v0
@@ -75,7 +72,6 @@
     .parameter "x0"
 
     .prologue
-    .line 601
     check-cast p1, [Ljava/lang/String;
 
     .end local p1
@@ -91,7 +87,6 @@
     .parameter "params"
 
     .prologue
-    .line 607
     const/4 v1, 0x1
 
     iget-object v2, p0, Lcom/android/server/connectivity/Tethering$DoScan;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -105,7 +100,6 @@
 
     move-result-object v0
 
-    .line 609
     .local v0, currentClientList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/util/wifi/ClientsList$ClientScanResult;>;"
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -113,7 +107,6 @@
 
     iput v1, p0, Lcom/android/server/connectivity/Tethering$DoScan;->mCurrentClientCount:I
 
-    .line 610
     const/4 v1, 0x0
 
     return-object v1
@@ -124,7 +117,6 @@
     .parameter "x0"
 
     .prologue
-    .line 601
     check-cast p1, Ljava/lang/String;
 
     .end local p1
@@ -138,7 +130,6 @@
     .parameter "result"
 
     .prologue
-    .line 615
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/connectivity/Tethering$DoScan;->this$0:Lcom/android/server/connectivity/Tethering;
@@ -156,6 +147,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 645
     return-void
 .end method

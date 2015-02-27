@@ -27,13 +27,10 @@
     .parameter "parent"
 
     .prologue
-    .line 389
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 390
     iput-object p2, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$BtdtHandler;->mBtdt:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
-    .line 391
     return-void
 .end method
 
@@ -46,17 +43,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 395
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 432
     :cond_0
     :goto_0
     return-void
 
-    .line 397
     :sswitch_0
     const-string v2, "BluetoothTethering"
 
@@ -64,17 +58,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 398
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     if-nez v2, :cond_0
 
-    .line 399
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/util/AsyncChannel;
 
-    .line 400
     .local v0, ac:Lcom/android/internal/util/AsyncChannel;
     iget-object v2, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$BtdtHandler;->mBtdt:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
@@ -89,7 +80,6 @@
 
     if-nez v2, :cond_1
 
-    .line 401
     const-string v2, "BluetoothTethering"
 
     const-string v3, "Trying to set mAsyncChannel twice!"
@@ -98,16 +88,13 @@
 
     goto :goto_0
 
-    .line 403
     :cond_1
     const v2, 0x11001
 
     invoke-virtual {v0, v2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 405
     iput-object v0, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$BtdtHandler;->mStackChannel:Lcom/android/internal/util/AsyncChannel;
 
-    .line 406
     const-string v2, "BluetoothTethering"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -134,7 +121,6 @@
 
     goto :goto_0
 
-    .line 411
     .end local v0           #ac:Lcom/android/internal/util/AsyncChannel;
     :sswitch_1
     const-string v2, "BluetoothTethering"
@@ -143,17 +129,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 412
     iget-object v2, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$BtdtHandler;->mStackChannel:Lcom/android/internal/util/AsyncChannel;
 
     if-eqz v2, :cond_0
 
-    .line 413
     iget-object v2, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$BtdtHandler;->mBtdt:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     invoke-virtual {v2}, Landroid/bluetooth/BluetoothTetheringDataTracker;->stopReverseTether()V
 
-    .line 414
     iget-object v2, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$BtdtHandler;->mBtdt:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     #getter for: Landroid/bluetooth/BluetoothTetheringDataTracker;->mAsyncChannel:Ljava/util/concurrent/atomic/AtomicReference;
@@ -163,7 +146,6 @@
 
     invoke-virtual {v2, v5}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 416
     const-string v2, "BluetoothTethering"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -188,17 +170,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 417
     iget-object v2, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$BtdtHandler;->mStackChannel:Lcom/android/internal/util/AsyncChannel;
 
     invoke-virtual {v2}, Lcom/android/internal/util/AsyncChannel;->disconnect()V
 
-    .line 418
     iput-object v5, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$BtdtHandler;->mStackChannel:Lcom/android/internal/util/AsyncChannel;
 
     goto/16 :goto_0
 
-    .line 422
     :sswitch_2
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -208,7 +187,6 @@
 
     check-cast v1, Landroid/net/LinkProperties;
 
-    .line 423
     .local v1, linkProperties:Landroid/net/LinkProperties;
     const-string v2, "BluetoothTethering"
 
@@ -232,14 +210,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 424
     iget-object v2, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$BtdtHandler;->mBtdt:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     invoke-virtual {v2, v1}, Landroid/bluetooth/BluetoothTetheringDataTracker;->startReverseTether(Landroid/net/LinkProperties;)V
 
     goto/16 :goto_0
 
-    .line 427
     .end local v1           #linkProperties:Landroid/net/LinkProperties;
     :sswitch_3
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -250,7 +226,6 @@
 
     check-cast v1, Landroid/net/LinkProperties;
 
-    .line 428
     .restart local v1       #linkProperties:Landroid/net/LinkProperties;
     const-string v2, "BluetoothTethering"
 
@@ -274,14 +249,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 429
     iget-object v2, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$BtdtHandler;->mBtdt:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     invoke-virtual {v2}, Landroid/bluetooth/BluetoothTetheringDataTracker;->stopReverseTether()V
 
     goto/16 :goto_0
 
-    .line 395
     nop
 
     :sswitch_data_0

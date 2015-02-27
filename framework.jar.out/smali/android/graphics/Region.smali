@@ -49,7 +49,6 @@
     .locals 2
 
     .prologue
-    .line 27
     new-instance v0, Landroid/util/Pools$SynchronizedPool;
 
     const/16 v1, 0xa
@@ -58,7 +57,6 @@
 
     sput-object v0, Landroid/graphics/Region;->sPool:Landroid/util/Pools$SynchronizedPool;
 
-    .line 337
     new-instance v0, Landroid/graphics/Region$1;
 
     invoke-direct {v0}, Landroid/graphics/Region$1;-><init>()V
@@ -72,14 +70,12 @@
     .locals 1
 
     .prologue
-    .line 57
     invoke-static {}, Landroid/graphics/Region;->nativeConstructor()I
 
     move-result v0
 
     invoke-direct {p0, v0}, Landroid/graphics/Region;-><init>(I)V
 
-    .line 58
     return-void
 .end method
 
@@ -88,24 +84,19 @@
     .parameter "ni"
 
     .prologue
-    .line 388
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 389
     if-nez p1, :cond_0
 
-    .line 390
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
 
     throw v0
 
-    .line 392
     :cond_0
     iput p1, p0, Landroid/graphics/Region;->mNativeRegion:I
 
-    .line 393
     return-void
 .end method
 
@@ -115,10 +106,8 @@
     .parameter "dummy"
 
     .prologue
-    .line 398
     invoke-direct {p0, p1}, Landroid/graphics/Region;-><init>(I)V
 
-    .line 399
     return-void
 .end method
 
@@ -130,22 +119,18 @@
     .parameter "bottom"
 
     .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     invoke-static {}, Landroid/graphics/Region;->nativeConstructor()I
 
     move-result v0
 
     iput v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
-    .line 78
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     invoke-static {v0, p1, p2, p3, p4}, Landroid/graphics/Region;->nativeSetRect(IIIII)Z
 
-    .line 79
     return-void
 .end method
 
@@ -154,17 +139,14 @@
     .parameter "r"
 
     .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     invoke-static {}, Landroid/graphics/Region;->nativeConstructor()I
 
     move-result v0
 
     iput v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
-    .line 71
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     iget v1, p1, Landroid/graphics/Rect;->left:I
@@ -177,7 +159,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/graphics/Region;->nativeSetRect(IIIII)Z
 
-    .line 72
     return-void
 .end method
 
@@ -186,21 +167,18 @@
     .parameter "region"
 
     .prologue
-    .line 63
     invoke-static {}, Landroid/graphics/Region;->nativeConstructor()I
 
     move-result v0
 
     invoke-direct {p0, v0}, Landroid/graphics/Region;-><init>(I)V
 
-    .line 64
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     iget v1, p1, Landroid/graphics/Region;->mNativeRegion:I
 
     invoke-static {v0, v1}, Landroid/graphics/Region;->nativeSetRegion(II)V
 
-    .line 65
     return-void
 .end method
 
@@ -209,7 +187,6 @@
     .parameter "x0"
 
     .prologue
-    .line 23
     invoke-static {p0}, Landroid/graphics/Region;->nativeCreateFromParcel(Landroid/os/Parcel;)I
 
     move-result v0
@@ -263,7 +240,6 @@
     .locals 2
 
     .prologue
-    .line 308
     sget-object v1, Landroid/graphics/Region;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v1}, Landroid/util/Pools$SynchronizedPool;->acquire()Ljava/lang/Object;
@@ -272,7 +248,6 @@
 
     check-cast v0, Landroid/graphics/Region;
 
-    .line 309
     .local v0, region:Landroid/graphics/Region;
     if-eqz v0, :cond_0
 
@@ -295,16 +270,13 @@
     .parameter "other"
 
     .prologue
-    .line 320
     invoke-static {}, Landroid/graphics/Region;->obtain()Landroid/graphics/Region;
 
     move-result-object v0
 
-    .line 321
     .local v0, region:Landroid/graphics/Region;
     invoke-virtual {v0, p0}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z
 
-    .line 322
     return-object v0
 .end method
 
@@ -317,7 +289,6 @@
     .locals 1
 
     .prologue
-    .line 357
     const/4 v0, 0x0
 
     return v0
@@ -328,28 +299,23 @@
     .parameter "obj"
 
     .prologue
-    .line 373
     if-eqz p1, :cond_0
 
     instance-of v1, p1, Landroid/graphics/Region;
 
     if-nez v1, :cond_1
 
-    .line 374
     :cond_0
     const/4 v1, 0x0
 
-    .line 377
     :goto_0
     return v1
 
     :cond_1
     move-object v0, p1
 
-    .line 376
     check-cast v0, Landroid/graphics/Region;
 
-    .line 377
     .local v0, peer:Landroid/graphics/Region;
     iget v1, p0, Landroid/graphics/Region;->mNativeRegion:I
 
@@ -371,7 +337,6 @@
     .end annotation
 
     .prologue
-    .line 382
     :try_start_0
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
@@ -379,13 +344,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 384
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 386
     return-void
 
-    .line 384
     :catchall_0
     move-exception v0
 
@@ -398,12 +360,10 @@
     .locals 3
 
     .prologue
-    .line 157
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
-    .line 158
     .local v0, path:Landroid/graphics/Path;
     iget v1, p0, Landroid/graphics/Region;->mNativeRegion:I
 
@@ -413,7 +373,6 @@
 
     invoke-static {v1, v2}, Landroid/graphics/Region;->nativeGetBoundaryPath(II)Z
 
-    .line 159
     return-object v0
 .end method
 
@@ -422,7 +381,6 @@
     .parameter "path"
 
     .prologue
-    .line 167
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     invoke-virtual {p1}, Landroid/graphics/Path;->ni()I
@@ -440,18 +398,15 @@
     .locals 2
 
     .prologue
-    .line 136
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 137
     .local v0, r:Landroid/graphics/Rect;
     iget v1, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     invoke-static {v1, v0}, Landroid/graphics/Region;->nativeGetBounds(ILandroid/graphics/Rect;)Z
 
-    .line 138
     return-object v0
 .end method
 
@@ -460,17 +415,14 @@
     .parameter "r"
 
     .prologue
-    .line 146
     if-nez p1, :cond_0
 
-    .line 147
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 149
     :cond_0
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
@@ -494,7 +446,6 @@
     .locals 1
 
     .prologue
-    .line 402
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     return v0
@@ -509,7 +460,6 @@
     .parameter "op"
 
     .prologue
-    .line 268
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     iget v5, p5, Landroid/graphics/Region$Op;->nativeInt:I
@@ -535,7 +485,6 @@
     .parameter "op"
 
     .prologue
-    .line 259
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     iget v1, p1, Landroid/graphics/Rect;->left:I
@@ -562,7 +511,6 @@
     .parameter "op"
 
     .prologue
-    .line 285
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     iget v1, p2, Landroid/graphics/Region;->mNativeRegion:I
@@ -582,7 +530,6 @@
     .parameter "op"
 
     .prologue
-    .line 277
     invoke-virtual {p0, p0, p1, p2}, Landroid/graphics/Region;->op(Landroid/graphics/Region;Landroid/graphics/Region;Landroid/graphics/Region$Op;)Z
 
     move-result v0
@@ -597,7 +544,6 @@
     .parameter "op"
 
     .prologue
-    .line 294
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     iget v1, p1, Landroid/graphics/Region;->mNativeRegion:I
@@ -621,7 +567,6 @@
     .parameter "r"
 
     .prologue
-    .line 182
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I
@@ -645,7 +590,6 @@
     .parameter "r"
 
     .prologue
-    .line 200
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I
@@ -668,15 +612,12 @@
     .locals 1
 
     .prologue
-    .line 331
     invoke-virtual {p0}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 332
     sget-object v0, Landroid/graphics/Region;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v0, p0}, Landroid/util/Pools$SynchronizedPool;->release(Ljava/lang/Object;)Z
 
-    .line 333
     return-void
 .end method
 
@@ -685,12 +626,10 @@
     .parameter "scale"
 
     .prologue
-    .line 240
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/graphics/Region;->scale(FLandroid/graphics/Region;)V
 
-    .line 241
     return-void
 .end method
 
@@ -705,7 +644,6 @@
     .parameter "bottom"
 
     .prologue
-    .line 103
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     invoke-static {v0, p1, p2, p3, p4}, Landroid/graphics/Region;->nativeSetRect(IIIII)Z
@@ -720,7 +658,6 @@
     .parameter "r"
 
     .prologue
-    .line 97
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     iget v1, p1, Landroid/graphics/Rect;->left:I
@@ -743,14 +680,12 @@
     .parameter "region"
 
     .prologue
-    .line 90
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     iget v1, p1, Landroid/graphics/Region;->mNativeRegion:I
 
     invoke-static {v0, v1}, Landroid/graphics/Region;->nativeSetRegion(II)V
 
-    .line 91
     const/4 v0, 0x1
 
     return v0
@@ -762,12 +697,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 84
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     invoke-static {v0, v1, v1, v1, v1}, Landroid/graphics/Region;->nativeSetRect(IIIII)Z
 
-    .line 85
     return-void
 .end method
 
@@ -777,7 +710,6 @@
     .parameter "clip"
 
     .prologue
-    .line 113
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     invoke-virtual {p1}, Landroid/graphics/Path;->ni()I
@@ -797,7 +729,6 @@
     .locals 1
 
     .prologue
-    .line 299
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     invoke-static {v0}, Landroid/graphics/Region;->nativeToString(I)Ljava/lang/String;
@@ -813,12 +744,10 @@
     .parameter "dy"
 
     .prologue
-    .line 221
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/graphics/Region;->translate(IILandroid/graphics/Region;)V
 
-    .line 222
     return-void
 .end method
 
@@ -830,7 +759,6 @@
     .parameter "r"
 
     .prologue
-    .line 251
     sget-object v0, Landroid/graphics/Region$Op;->UNION:Landroid/graphics/Region$Op;
 
     invoke-virtual {p0, p1, v0}, Landroid/graphics/Region;->op(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
@@ -846,7 +774,6 @@
     .parameter "flags"
 
     .prologue
-    .line 366
     iget v0, p0, Landroid/graphics/Region;->mNativeRegion:I
 
     invoke-static {v0, p1}, Landroid/graphics/Region;->nativeWriteToParcel(ILandroid/os/Parcel;)Z
@@ -855,14 +782,12 @@
 
     if-nez v0, :cond_0
 
-    .line 367
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
 
     throw v0
 
-    .line 369
     :cond_0
     return-void
 .end method

@@ -44,31 +44,24 @@
     .parameter "callback"
 
     .prologue
-    .line 507
     invoke-direct {p0}, Landroid/bluetooth/IQBluetoothAdapterCallback$Stub;-><init>()V
 
-    .line 508
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mAdapter:Ljava/lang/ref/WeakReference;
 
-    .line 509
     iput-object p2, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mQBluetoothAdapterService:Landroid/bluetooth/IQBluetooth;
 
-    .line 510
     iput-object p3, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mServiceFilter:[Landroid/bluetooth/BluetoothLEServiceUuid;
 
-    .line 511
     iput-object p4, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mClient:Landroid/bluetooth/BluetoothAdapter$LeScanCallback;
 
-    .line 512
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mScanToken:I
 
-    .line 513
     return-void
 .end method
 
@@ -81,7 +74,6 @@
     .parameter "status"
 
     .prologue
-    .line 575
     return-void
 .end method
 
@@ -94,7 +86,6 @@
     .parameter "status"
 
     .prologue
-    .line 572
     return-void
 .end method
 
@@ -105,7 +96,6 @@
     .parameter "rssi"
 
     .prologue
-    .line 578
     return-void
 .end method
 
@@ -116,10 +106,8 @@
     .parameter "advData"
 
     .prologue
-    .line 552
     monitor-enter p0
 
-    .line 553
     :try_start_0
     iget v2, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mScanToken:I
 
@@ -127,17 +115,14 @@
 
     monitor-exit p0
 
-    .line 565
     :goto_0
     return-void
 
-    .line 554
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 556
     :try_start_1
     iget-object v2, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mAdapter:Ljava/lang/ref/WeakReference;
 
@@ -147,11 +132,9 @@
 
     check-cast v0, Landroid/bluetooth/QBluetoothAdapter;
 
-    .line 557
     .local v0, adapter:Landroid/bluetooth/QBluetoothAdapter;
     if-nez v0, :cond_1
 
-    .line 558
     const-string v2, "QBluetoothAdapter"
 
     const-string v3, "OnScanResult, QBluetoothAdapter null"
@@ -162,12 +145,10 @@
 
     goto :goto_0
 
-    .line 562
     .end local v0           #adapter:Landroid/bluetooth/QBluetoothAdapter;
     :catch_0
     move-exception v1
 
-    .line 563
     .local v1, e:Ljava/lang/Exception;
     const-string v2, "QBluetoothAdapter"
 
@@ -193,7 +174,6 @@
 
     goto :goto_0
 
-    .line 554
     .end local v1           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v2
@@ -205,7 +185,6 @@
 
     throw v2
 
-    .line 561
     .restart local v0       #adapter:Landroid/bluetooth/QBluetoothAdapter;
     :cond_1
     :try_start_3
@@ -230,7 +209,6 @@
     .locals 3
 
     .prologue
-    .line 581
     iget-object v1, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mAdapter:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -239,21 +217,17 @@
 
     check-cast v0, Landroid/bluetooth/QBluetoothAdapter;
 
-    .line 582
     .local v0, adapter:Landroid/bluetooth/QBluetoothAdapter;
     if-nez v0, :cond_0
 
-    .line 583
     const-string v1, "QBluetoothAdapter"
 
-    const-string/jumbo v2, "onUpdateLease(), QBluetoothAdapter null"
+    const-string v2, "onUpdateLease(), QBluetoothAdapter null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 584
     const/4 v1, 0x0
 
-    .line 586
     :goto_0
     return v1
 
@@ -269,7 +243,6 @@
     .parameter "status"
 
     .prologue
-    .line 568
     return-void
 .end method
 
@@ -279,14 +252,11 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 516
     const/4 v1, 0x0
 
-    .line 517
     .local v1, started:Z
     monitor-enter p0
 
-    .line 518
     :try_start_0
     iget v2, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mScanToken:I
 
@@ -298,7 +268,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 521
     :try_start_1
     iget-object v2, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mQBluetoothAdapterService:Landroid/bluetooth/IQBluetooth;
 
@@ -310,7 +279,6 @@
 
     iput v2, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mScanToken:I
 
-    .line 522
     iget v2, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mScanToken:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -318,23 +286,18 @@
 
     if-eq v2, v4, :cond_0
 
-    .line 523
     const/4 v1, 0x1
 
-    .line 530
     :cond_0
     :goto_0
     :try_start_2
     monitor-exit p0
 
-    .line 531
     return v1
 
-    .line 525
     :catch_0
     move-exception v0
 
-    .line 526
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "QBluetoothAdapter"
 
@@ -342,12 +305,10 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 527
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 530
     .end local v0           #e:Landroid/os/RemoteException;
     :catchall_0
     move-exception v2
@@ -365,10 +326,8 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 535
     monitor-enter p0
 
-    .line 536
     :try_start_0
     iget v1, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mScanToken:I
 
@@ -380,7 +339,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 539
     :try_start_1
     iget-object v1, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mQBluetoothAdapterService:Landroid/bluetooth/IQBluetooth;
 
@@ -391,25 +349,20 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 543
     :goto_0
     const/4 v1, -0x1
 
     :try_start_2
     iput v1, p0, Landroid/bluetooth/QBluetoothAdapter$LEExtendedScanClientWrapper;->mScanToken:I
 
-    .line 545
     :cond_0
     monitor-exit p0
 
-    .line 546
     return-void
 
-    .line 540
     :catch_0
     move-exception v0
 
-    .line 541
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "QBluetoothAdapter"
 
@@ -419,7 +372,6 @@
 
     goto :goto_0
 
-    .line 545
     .end local v0           #e:Landroid/os/RemoteException;
     :catchall_0
     move-exception v1

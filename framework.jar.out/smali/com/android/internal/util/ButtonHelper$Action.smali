@@ -26,13 +26,10 @@
     .parameter "type"
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput-object p1, p0, Lcom/android/internal/util/ButtonHelper$Action;->type:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 46
     return-void
 .end method
 
@@ -41,17 +38,14 @@
     .parameter "action"
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     invoke-static {p1}, Lcom/android/internal/util/ButtonHelper$ActionType;->valueOf(Ljava/lang/String;)Lcom/android/internal/util/ButtonHelper$ActionType;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/util/ButtonHelper$Action;->type:Lcom/android/internal/util/ButtonHelper$ActionType;
 
-    .line 42
     return-void
 .end method
 
@@ -61,17 +55,14 @@
     .locals 2
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/android/internal/util/ButtonHelper$Action;->type:Lcom/android/internal/util/ButtonHelper$ActionType;
 
     sget-object v1, Lcom/android/internal/util/ButtonHelper$ActionType;->CustomApp:Lcom/android/internal/util/ButtonHelper$ActionType;
 
     if-eq v0, v1, :cond_0
 
-    .line 68
     const/4 v0, 0x0
 
-    .line 70
     :goto_0
     return-object v0
 
@@ -93,17 +84,14 @@
     .locals 2
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/android/internal/util/ButtonHelper$Action;->type:Lcom/android/internal/util/ButtonHelper$ActionType;
 
     sget-object v1, Lcom/android/internal/util/ButtonHelper$ActionType;->CustomApp:Lcom/android/internal/util/ButtonHelper$ActionType;
 
     if-ne v0, v1, :cond_0
 
-    .line 50
     const/4 v0, 0x1
 
-    .line 52
     :goto_0
     return v0
 
@@ -118,14 +106,12 @@
     .parameter "args"
 
     .prologue
-    .line 57
     iget-object v1, p0, Lcom/android/internal/util/ButtonHelper$Action;->type:Lcom/android/internal/util/ButtonHelper$ActionType;
 
     sget-object v2, Lcom/android/internal/util/ButtonHelper$ActionType;->CustomApp:Lcom/android/internal/util/ButtonHelper$ActionType;
 
     if-ne v1, v2, :cond_0
 
-    .line 59
     const/4 v1, 0x0
 
     :try_start_0
@@ -137,16 +123,13 @@
     :try_end_0
     .catch Ljava/net/URISyntaxException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 64
     :cond_0
     :goto_0
     return-void
 
-    .line 60
     :catch_0
     move-exception v0
 
-    .line 61
     .local v0, e:Ljava/net/URISyntaxException;
     invoke-virtual {v0}, Ljava/net/URISyntaxException;->printStackTrace()V
 
@@ -157,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/android/internal/util/ButtonHelper$Action;->type:Lcom/android/internal/util/ButtonHelper$ActionType;
 
     invoke-virtual {v0}, Lcom/android/internal/util/ButtonHelper$ActionType;->name()Ljava/lang/String;

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 138
     iput-object p1, p0, Lcom/android/server/ServiceWatcher$1;->this$0:Lcom/android/server/ServiceWatcher;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 141
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 142
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.USER_SWITCHED"
 
@@ -55,12 +52,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 143
     iget-object v1, p0, Lcom/android/server/ServiceWatcher$1;->this$0:Lcom/android/server/ServiceWatcher;
 
     invoke-virtual {v1}, Lcom/android/server/ServiceWatcher;->switchUser()V
 
-    .line 145
     :cond_0
     return-void
 .end method

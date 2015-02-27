@@ -37,22 +37,16 @@
     .parameter "variant"
 
     .prologue
-    .line 753
     iput-object p1, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
-    .line 754
     invoke-direct/range {p0 .. p5}, Landroid/speech/tts/TextToSpeechService$SpeechItem;-><init>(Landroid/speech/tts/TextToSpeechService;Ljava/lang/Object;IILandroid/os/Bundle;)V
 
-    .line 755
     iput-object p6, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->mLanguage:Ljava/lang/String;
 
-    .line 756
     iput-object p7, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->mCountry:Ljava/lang/String;
 
-    .line 757
     iput-object p8, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->mVariant:Ljava/lang/String;
 
-    .line 758
     return-void
 .end method
 
@@ -62,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 762
     const/4 v0, 0x1
 
     return v0
@@ -72,7 +65,6 @@
     .locals 5
 
     .prologue
-    .line 767
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
     iget-object v2, p0, Landroid/speech/tts/TextToSpeechService$LoadLanguageItem;->mLanguage:Ljava/lang/String;
@@ -85,7 +77,6 @@
 
     move-result v0
 
-    .line 768
     .local v0, result:I
     if-eqz v0, :cond_0
 
@@ -97,11 +88,9 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 771
     :cond_0
     const/4 v1, 0x0
 
-    .line 773
     :goto_0
     return v1
 
@@ -115,6 +104,5 @@
     .locals 0
 
     .prologue
-    .line 779
     return-void
 .end method

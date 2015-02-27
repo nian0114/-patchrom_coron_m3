@@ -32,26 +32,20 @@
     .parameter "macAlgorithm"
 
     .prologue
-    .line 608
     iput-object p1, p0, Landroid/media/MediaDrm$CryptoSession;->this$0:Landroid/media/MediaDrm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 609
     iput-object p3, p0, Landroid/media/MediaDrm$CryptoSession;->mSessionId:[B
 
-    .line 610
     iput-object p2, p0, Landroid/media/MediaDrm$CryptoSession;->mDrm:Landroid/media/MediaDrm;
 
-    .line 611
     #calls: Landroid/media/MediaDrm;->setCipherAlgorithmNative(Landroid/media/MediaDrm;[BLjava/lang/String;)V
     invoke-static {p2, p3, p4}, Landroid/media/MediaDrm;->access$200(Landroid/media/MediaDrm;[BLjava/lang/String;)V
 
-    .line 612
     #calls: Landroid/media/MediaDrm;->setMacAlgorithmNative(Landroid/media/MediaDrm;[BLjava/lang/String;)V
     invoke-static {p2, p3, p5}, Landroid/media/MediaDrm;->access$300(Landroid/media/MediaDrm;[BLjava/lang/String;)V
 
-    .line 613
     return-void
 .end method
 
@@ -64,7 +58,6 @@
     .parameter "iv"
 
     .prologue
-    .line 634
     iget-object v0, p0, Landroid/media/MediaDrm$CryptoSession;->mDrm:Landroid/media/MediaDrm;
 
     iget-object v1, p0, Landroid/media/MediaDrm$CryptoSession;->mSessionId:[B
@@ -84,7 +77,6 @@
     .parameter "iv"
 
     .prologue
-    .line 623
     iget-object v0, p0, Landroid/media/MediaDrm$CryptoSession;->mDrm:Landroid/media/MediaDrm;
 
     iget-object v1, p0, Landroid/media/MediaDrm$CryptoSession;->mSessionId:[B
@@ -103,7 +95,6 @@
     .parameter "message"
 
     .prologue
-    .line 644
     iget-object v0, p0, Landroid/media/MediaDrm$CryptoSession;->mDrm:Landroid/media/MediaDrm;
 
     iget-object v1, p0, Landroid/media/MediaDrm$CryptoSession;->mSessionId:[B
@@ -123,7 +114,6 @@
     .parameter "signature"
 
     .prologue
-    .line 657
     iget-object v0, p0, Landroid/media/MediaDrm$CryptoSession;->mDrm:Landroid/media/MediaDrm;
 
     iget-object v1, p0, Landroid/media/MediaDrm$CryptoSession;->mSessionId:[B

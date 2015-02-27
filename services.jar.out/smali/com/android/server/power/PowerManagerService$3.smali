@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 1296
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iput-wide p2, p0, Lcom/android/server/power/PowerManagerService$3;->val$eventTime:J
@@ -46,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 1299
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iget-wide v1, p0, Lcom/android/server/power/PowerManagerService$3;->val$eventTime:J
@@ -54,6 +52,5 @@
     #calls: Lcom/android/server/power/PowerManagerService;->wakeUpInternal(J)V
     invoke-static {v0, v1, v2}, Lcom/android/server/power/PowerManagerService;->access$700(Lcom/android/server/power/PowerManagerService;J)V
 
-    .line 1300
     return-void
 .end method

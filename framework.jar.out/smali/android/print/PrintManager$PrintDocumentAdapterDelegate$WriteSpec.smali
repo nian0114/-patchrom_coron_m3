@@ -32,7 +32,6 @@
     .parameter
 
     .prologue
-    .line 738
     iput-object p1, p0, Landroid/print/PrintManager$PrintDocumentAdapterDelegate$WriteSpec;->this$0:Landroid/print/PrintManager$PrintDocumentAdapterDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .parameter "x1"
 
     .prologue
-    .line 738
     invoke-direct {p0, p1}, Landroid/print/PrintManager$PrintDocumentAdapterDelegate$WriteSpec;-><init>(Landroid/print/PrintManager$PrintDocumentAdapterDelegate;)V
 
     return-void

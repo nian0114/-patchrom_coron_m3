@@ -32,7 +32,6 @@
     .parameter
 
     .prologue
-    .line 121
     iput-object p1, p0, Lcom/android/internal/app/PlatLogoActivity$1;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iput-object p2, p0, Lcom/android/internal/app/PlatLogoActivity$1;->val$letter:Landroid/widget/TextView;
@@ -49,32 +48,27 @@
     .parameter "v"
 
     .prologue
-    .line 125
     iget v1, p0, Lcom/android/internal/app/PlatLogoActivity$1;->clicks:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/android/internal/app/PlatLogoActivity$1;->clicks:I
 
-    .line 126
     iget v1, p0, Lcom/android/internal/app/PlatLogoActivity$1;->clicks:I
 
     const/4 v2, 0x6
 
     if-lt v1, v2, :cond_0
 
-    .line 127
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$1;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget-object v1, v1, Lcom/android/internal/app/PlatLogoActivity;->mContent:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->performLongClick()Z
 
-    .line 136
     :goto_0
     return-void
 
-    .line 130
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$1;->val$letter:Landroid/widget/TextView;
 
@@ -84,7 +78,6 @@
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 131
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$1;->val$letter:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getRotation()F
@@ -97,7 +90,6 @@
 
     int-to-float v0, v1
 
-    .line 132
     .local v0, offset:F
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$1;->val$letter:Landroid/widget/TextView;
 

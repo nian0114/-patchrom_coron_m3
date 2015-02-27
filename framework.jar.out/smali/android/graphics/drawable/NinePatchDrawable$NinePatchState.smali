@@ -39,7 +39,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 452
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
@@ -54,7 +53,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;-><init>(Landroid/graphics/NinePatch;Landroid/graphics/Rect;Landroid/graphics/Rect;ZZ)V
 
-    .line 453
     return-void
 .end method
 
@@ -67,7 +65,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 456
     move-object v0, p0
 
     move-object v1, p1
@@ -80,7 +77,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;-><init>(Landroid/graphics/NinePatch;Landroid/graphics/Rect;Landroid/graphics/Rect;ZZ)V
 
-    .line 457
     return-void
 .end method
 
@@ -93,34 +89,26 @@
     .parameter "autoMirror"
 
     .prologue
-    .line 460
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 448
     const/16 v0, 0xa0
 
     iput v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mTargetDensity:I
 
-    .line 461
     iput-object p1, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mNinePatch:Landroid/graphics/NinePatch;
 
-    .line 462
     iput-object p2, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mPadding:Landroid/graphics/Rect;
 
-    .line 463
     invoke-static {p3}, Landroid/graphics/Insets;->of(Landroid/graphics/Rect;)Landroid/graphics/Insets;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mOpticalInsets:Landroid/graphics/Insets;
 
-    .line 464
     iput-boolean p4, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mDither:Z
 
-    .line 465
     iput-boolean p5, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mAutoMirrored:Z
 
-    .line 466
     return-void
 .end method
 
@@ -129,50 +117,40 @@
     .parameter "state"
 
     .prologue
-    .line 470
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 448
     const/16 v0, 0xa0
 
     iput v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mTargetDensity:I
 
-    .line 472
     iget-object v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mNinePatch:Landroid/graphics/NinePatch;
 
     iput-object v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mNinePatch:Landroid/graphics/NinePatch;
 
-    .line 474
     iget-object v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mPadding:Landroid/graphics/Rect;
 
     iput-object v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mPadding:Landroid/graphics/Rect;
 
-    .line 475
     iget-object v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mOpticalInsets:Landroid/graphics/Insets;
 
     iput-object v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mOpticalInsets:Landroid/graphics/Insets;
 
-    .line 476
     iget-boolean v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mDither:Z
 
     iput-boolean v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mDither:Z
 
-    .line 477
     iget v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mChangingConfigurations:I
 
     iput v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mChangingConfigurations:I
 
-    .line 478
     iget v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mTargetDensity:I
 
     iput v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mTargetDensity:I
 
-    .line 479
     iget-boolean v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mAutoMirrored:Z
 
     iput-boolean v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mAutoMirrored:Z
 
-    .line 480
     return-void
 .end method
 
@@ -182,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 484
     iget-object v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mNinePatch:Landroid/graphics/NinePatch;
 
     invoke-virtual {v0}, Landroid/graphics/NinePatch;->getBitmap()Landroid/graphics/Bitmap;
@@ -196,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 499
     iget v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mChangingConfigurations:I
 
     return v0
@@ -208,7 +184,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 489
     new-instance v0, Landroid/graphics/drawable/NinePatchDrawable;
 
     invoke-direct {v0, p0, v1, v1}, Landroid/graphics/drawable/NinePatchDrawable;-><init>(Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;Landroid/content/res/Resources;Landroid/graphics/drawable/NinePatchDrawable$1;)V
@@ -221,7 +196,6 @@
     .parameter "res"
 
     .prologue
-    .line 494
     new-instance v0, Landroid/graphics/drawable/NinePatchDrawable;
 
     const/4 v1, 0x0

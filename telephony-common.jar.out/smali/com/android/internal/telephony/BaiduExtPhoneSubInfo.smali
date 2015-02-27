@@ -17,13 +17,10 @@
     .parameter "phoneSubInfo"
 
     .prologue
-    .line 28
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/PhoneSubInfoProxy;-><init>(Lcom/android/internal/telephony/PhoneSubInfo;)V
 
-    .line 29
     iput-object p1, p0, Lcom/android/internal/telephony/BaiduExtPhoneSubInfo;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
-    .line 30
     return-void
 .end method
 
@@ -42,30 +39,23 @@
     .end annotation
 
     .prologue
-    .line 35
     const/16 v1, 0x2712
 
     if-ne p1, v1, :cond_0
 
-    .line 36
     const-string v1, "com.android.internal.telephony.BaiduExtIPhoneSubInfo"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 38
     const-string v0, ""
 
-    .line 39
     .local v0, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 40
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 41
     const/4 v1, 0x1
 
-    .line 43
     .end local v0           #_result:Ljava/lang/String;
     :goto_0
     return v1

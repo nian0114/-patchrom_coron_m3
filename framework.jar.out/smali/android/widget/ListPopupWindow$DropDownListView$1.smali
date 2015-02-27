@@ -29,7 +29,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1396
     invoke-direct {p0, p1}, Landroid/util/IntProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -42,7 +41,6 @@
     .parameter "object"
 
     .prologue
-    .line 1404
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getAlpha()I
 
     move-result v0
@@ -59,7 +57,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1396
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     .end local p1
@@ -76,10 +73,8 @@
     .parameter "value"
 
     .prologue
-    .line 1399
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 1400
     return-void
 .end method
 
@@ -89,7 +84,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1396
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     .end local p1

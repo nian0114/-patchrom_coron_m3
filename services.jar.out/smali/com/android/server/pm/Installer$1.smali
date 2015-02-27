@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 278
     iput-object p1, p0, Lcom/android/server/pm/Installer$1;->this$0:Lcom/android/server/pm/Installer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +40,8 @@
     .locals 2
 
     .prologue
-    .line 281
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 282
     iget-object v0, p0, Lcom/android/server/pm/Installer$1;->this$0:Lcom/android/server/pm/Installer;
 
     new-instance v1, Landroid/os/Handler;
@@ -53,15 +50,12 @@
 
     iput-object v1, v0, Lcom/android/server/pm/Installer;->mHandler:Landroid/os/Handler;
 
-    .line 283
     iget-object v0, p0, Lcom/android/server/pm/Installer$1;->this$0:Lcom/android/server/pm/Installer;
 
     #calls: Lcom/android/server/pm/Installer;->checkPoller()V
     invoke-static {v0}, Lcom/android/server/pm/Installer;->access$000(Lcom/android/server/pm/Installer;)V
 
-    .line 284
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 285
     return-void
 .end method

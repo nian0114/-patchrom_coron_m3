@@ -69,7 +69,6 @@
     .locals 3
 
     .prologue
-    .line 64
     const-class v0, Landroid/app/IconPackHelper;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -78,7 +77,6 @@
 
     sput-object v0, Landroid/app/IconPackHelper;->TAG:Ljava/lang/String;
 
-    .line 88
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "iconback"
@@ -89,7 +87,6 @@
 
     sput-object v0, Landroid/app/IconPackHelper;->ICON_BACK_COMPONENT:Landroid/content/ComponentName;
 
-    .line 89
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "iconmask"
@@ -100,7 +97,6 @@
 
     sput-object v0, Landroid/app/IconPackHelper;->ICON_MASK_COMPONENT:Landroid/content/ComponentName;
 
-    .line 90
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "iconupon"
@@ -111,10 +107,9 @@
 
     sput-object v0, Landroid/app/IconPackHelper;->ICON_UPON_COMPONENT:Landroid/content/ComponentName;
 
-    .line 91
     new-instance v0, Landroid/content/ComponentName;
 
-    const-string/jumbo v1, "scale"
+    const-string v1, "scale"
 
     const-string v2, ""
 
@@ -122,7 +117,6 @@
 
     sput-object v0, Landroid/app/IconPackHelper;->ICON_SCALE_COMPONENT:Landroid/content/ComponentName;
 
-    .line 92
     return-void
 .end method
 
@@ -131,25 +125,20 @@
     .parameter "context"
 
     .prologue
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     const/4 v1, 0x0
 
     iput v1, p0, Landroid/app/IconPackHelper;->mIconBackCount:I
 
-    .line 95
     iput-object p1, p0, Landroid/app/IconPackHelper;->mContext:Landroid/content/Context;
 
-    .line 96
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Landroid/app/IconPackHelper;->mIconPackResourceMap:Ljava/util/Map;
 
-    .line 97
     const-string v1, "activity"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -158,7 +147,6 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 98
     .local v0, am:Landroid/app/ActivityManager;
     new-instance v1, Landroid/app/ComposedIconInfo;
 
@@ -166,7 +154,6 @@
 
     iput-object v1, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
-    .line 99
     iget-object v1, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getLauncherLargeIconSize()I
@@ -175,7 +162,6 @@
 
     iput v2, v1, Landroid/app/ComposedIconInfo;->iconSize:I
 
-    .line 100
     iget-object v1, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getLauncherLargeIconDensity()I
@@ -184,14 +170,12 @@
 
     iput v2, v1, Landroid/app/ComposedIconInfo;->iconDensity:I
 
-    .line 101
     new-instance v1, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;
 
     invoke-direct {v1}, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;-><init>()V
 
     iput-object v1, p0, Landroid/app/IconPackHelper;->mFilterBuilder:Landroid/app/IconPackHelper$ColorFilterUtils$Builder;
 
-    .line 102
     return-void
 .end method
 
@@ -199,7 +183,6 @@
     .locals 1
 
     .prologue
-    .line 63
     sget-object v0, Landroid/app/IconPackHelper;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -216,7 +199,6 @@
     .end annotation
 
     .prologue
-    .line 263
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
@@ -227,43 +209,35 @@
 
     move-result-object v8
 
-    .line 264
     .local v8, info:Landroid/content/pm/PackageInfo;
     iget-object v5, v8, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, v5, Landroid/content/pm/ApplicationInfo;->publicSourceDir:Ljava/lang/String;
 
-    .line 269
     .local v1, themeApk:Ljava/lang/String;
     iget-boolean v5, v8, Landroid/content/pm/PackageInfo;->isLegacyIconPackApk:Z
 
     if-eqz v5, :cond_0
 
-    .line 270
     const-string v2, ""
 
-    .line 271
     .local v2, iconResPath:Ljava/lang/String;
     const-string v3, ""
 
-    .line 272
     .local v3, iconApkPath:Ljava/lang/String;
     const-string v4, ""
 
-    .line 279
     .local v4, prefixPath:Ljava/lang/String;
     :goto_0
     new-instance v0, Landroid/content/res/AssetManager;
 
     invoke-direct {v0}, Landroid/content/res/AssetManager;-><init>()V
 
-    .line 280
     .local v0, assets:Landroid/content/res/AssetManager;
     const/16 v5, 0x62
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/res/AssetManager;->addIconPath(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 283
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
@@ -272,7 +246,6 @@
 
     move-result-object v7
 
-    .line 284
     .local v7, dm:Landroid/util/DisplayMetrics;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -282,17 +255,14 @@
 
     move-result-object v6
 
-    .line 285
     .local v6, config:Landroid/content/res/Configuration;
     new-instance v9, Landroid/content/res/Resources;
 
     invoke-direct {v9, v0, v7, v6}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
 
-    .line 286
     .local v9, res:Landroid/content/res/Resources;
     return-object v9
 
-    .line 274
     .end local v0           #assets:Landroid/content/res/AssetManager;
     .end local v2           #iconResPath:Ljava/lang/String;
     .end local v3           #iconApkPath:Ljava/lang/String;
@@ -303,13 +273,11 @@
     :cond_0
     const-string v4, "assets/icons/"
 
-    .line 275
     .restart local v4       #prefixPath:Ljava/lang/String;
     invoke-static {p1}, Landroid/content/pm/ThemeUtils;->getIconPackApkPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 276
     .restart local v3       #iconApkPath:Ljava/lang/String;
     invoke-static {p1}, Landroid/content/pm/ThemeUtils;->getIconPackResPath(Ljava/lang/String;)Ljava/lang/String;
 
@@ -324,7 +292,6 @@
     .parameter "resource"
 
     .prologue
-    .line 384
     iget-object v1, p0, Landroid/app/IconPackHelper;->mLoadedIconPackResource:Landroid/content/res/Resources;
 
     const-string v2, "drawable"
@@ -335,7 +302,6 @@
 
     move-result v0
 
-    .line 385
     .local v0, resId:I
     return v0
 .end method
@@ -345,7 +311,6 @@
     .parameter "component"
 
     .prologue
-    .line 255
     iget-object v1, p0, Landroid/app/IconPackHelper;->mIconPackResourceMap:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -354,7 +319,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 256
     .local v0, item:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -362,12 +326,10 @@
 
     if-nez v1, :cond_0
 
-    .line 257
     invoke-direct {p0, v0}, Landroid/app/IconPackHelper;->getResourceIdForDrawable(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 259
     :goto_0
     return v1
 
@@ -382,7 +344,6 @@
     .parameter "tag"
 
     .prologue
-    .line 169
     const-string v0, "iconmask"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -425,7 +386,6 @@
     .prologue
     const/high16 v9, 0x3f80
 
-    .line 228
     iget-object v3, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     sget-object v4, Landroid/app/IconPackHelper;->ICON_MASK_COMPONENT:Landroid/content/ComponentName;
@@ -436,7 +396,6 @@
 
     iput v4, v3, Landroid/app/ComposedIconInfo;->iconMask:I
 
-    .line 229
     iget-object v3, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     sget-object v4, Landroid/app/IconPackHelper;->ICON_UPON_COMPONENT:Landroid/content/ComponentName;
@@ -447,12 +406,10 @@
 
     iput v4, v3, Landroid/app/ComposedIconInfo;->iconUpon:I
 
-    .line 232
     iget v3, p0, Landroid/app/IconPackHelper;->mIconBackCount:I
 
     if-lez v3, :cond_0
 
-    .line 233
     iget-object v3, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     iget v4, p0, Landroid/app/IconPackHelper;->mIconBackCount:I
@@ -461,7 +418,6 @@
 
     iput-object v4, v3, Landroid/app/ComposedIconInfo;->iconBacks:[I
 
-    .line 234
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -470,7 +426,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 235
     iget-object v3, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     iget-object v3, v3, Landroid/app/ComposedIconInfo;->iconBacks:[I
@@ -505,12 +460,10 @@
 
     aput v4, v3, v1
 
-    .line 234
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 242
     .end local v1           #i:I
     :cond_0
     iget-object v3, p0, Landroid/app/IconPackHelper;->mIconPackResourceMap:Ljava/util/Map;
@@ -523,11 +476,9 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 243
     .local v2, scale:Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    .line 245
     :try_start_0
     iget-object v3, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
@@ -543,15 +494,12 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 252
     :goto_1
     return-void
 
-    .line 246
     :catch_0
     move-exception v0
 
-    .line 247
     .local v0, e:Ljava/lang/NumberFormatException;
     iget-object v3, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
@@ -559,7 +507,6 @@
 
     goto :goto_1
 
-    .line 250
     .end local v0           #e:Ljava/lang/NumberFormatException;
     :cond_1
     iget-object v3, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
@@ -600,22 +547,18 @@
 
     const/4 v7, 0x0
 
-    .line 106
     iput v8, p0, Landroid/app/IconPackHelper;->mIconBackCount:I
 
-    .line 107
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v2
 
-    .line 110
     .local v2, eventType:I
     :cond_0
     const/4 v5, 0x2
 
     if-eq v2, v5, :cond_2
 
-    .line 165
     :cond_1
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -624,10 +567,8 @@
 
     if-ne v2, v9, :cond_0
 
-    .line 166
     return-void
 
-    .line 114
     :cond_2
     invoke-direct {p0, p1, p2}, Landroid/app/IconPackHelper;->parseComposedIconComponent(Lorg/xmlpull/v1/XmlPullParser;Ljava/util/Map;)Z
 
@@ -635,7 +576,6 @@
 
     if-nez v5, :cond_1
 
-    .line 118
     iget-object v5, p0, Landroid/app/IconPackHelper;->mFilterBuilder:Landroid/app/IconPackHelper$ColorFilterUtils$Builder;
 
     invoke-static {p1, v5}, Landroid/app/IconPackHelper$ColorFilterUtils;->parseIconFilter(Lorg/xmlpull/v1/XmlPullParser;Landroid/app/IconPackHelper$ColorFilterUtils$Builder;)Z
@@ -644,12 +584,11 @@
 
     if-nez v5, :cond_1
 
-    .line 122
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v5
 
-    const-string/jumbo v6, "scale"
+    const-string v6, "scale"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -657,30 +596,25 @@
 
     if-eqz v5, :cond_4
 
-    .line 123
     const-string v5, "factor"
 
     invoke-interface {p1, v7, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 124
     .local v3, factor:Ljava/lang/String;
     if-nez v3, :cond_3
 
-    .line 125
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
     move-result v5
 
     if-ne v5, v9, :cond_3
 
-    .line 126
     invoke-interface {p1, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 129
     :cond_3
     sget-object v5, Landroid/app/IconPackHelper;->ICON_SCALE_COMPONENT:Landroid/content/ComponentName;
 
@@ -688,7 +622,6 @@
 
     goto :goto_0
 
-    .line 133
     .end local v3           #factor:Ljava/lang/String;
     :cond_4
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -703,14 +636,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 137
     const-string v5, "component"
 
     invoke-interface {p1, v7, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 138
     .local v0, component:Ljava/lang/String;
     const-string v5, "drawable"
 
@@ -718,7 +649,6 @@
 
     move-result-object v1
 
-    .line 141
     .local v1, drawable:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -732,7 +662,6 @@
 
     if-nez v5, :cond_1
 
-    .line 146
     const-string v5, "ComponentInfo{"
 
     invoke-virtual {v0, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -741,7 +670,7 @@
 
     if-eqz v5, :cond_1
 
-    const-string/jumbo v5, "}"
+    const-string v5, "}"
 
     invoke-virtual {v0, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -763,7 +692,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 152
     const/16 v5, 0xe
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -780,10 +708,8 @@
 
     move-result-object v0
 
-    .line 154
     const/4 v4, 0x0
 
-    .line 155
     .local v4, name:Landroid/content/ComponentName;
     const-string v5, "/"
 
@@ -793,7 +719,6 @@
 
     if-nez v5, :cond_5
 
-    .line 157
     new-instance v4, Landroid/content/ComponentName;
 
     .end local v4           #name:Landroid/content/ComponentName;
@@ -805,17 +730,14 @@
 
     invoke-direct {v4, v5, v6}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 162
     .restart local v4       #name:Landroid/content/ComponentName;
     :goto_1
     if-eqz v4, :cond_1
 
-    .line 163
     invoke-interface {p2, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_0
 
-    .line 159
     :cond_5
     invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -846,12 +768,10 @@
 
     const/4 v3, 0x0
 
-    .line 177
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 178
     .local v2, tag:Ljava/lang/String;
     invoke-direct {p0, v2}, Landroid/app/IconPackHelper;->isComposedIconComponent(Ljava/lang/String;)Z
 
@@ -859,12 +779,10 @@
 
     if-nez v5, :cond_1
 
-    .line 198
     :cond_0
     :goto_0
     return v3
 
-    .line 182
     :cond_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
@@ -872,7 +790,6 @@
 
     if-lt v5, v4, :cond_0
 
-    .line 183
     const-string v5, "iconback"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -881,14 +798,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 184
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
     move-result v5
 
     iput v5, p0, Landroid/app/IconPackHelper;->mIconBackCount:I
 
-    .line 185
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -897,7 +812,6 @@
 
     if-ge v0, v5, :cond_3
 
-    .line 186
     const-string v5, "iconback%d"
 
     new-array v6, v4, [Ljava/lang/Object;
@@ -912,12 +826,10 @@
 
     move-result-object v2
 
-    .line 187
     invoke-interface {p1, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 188
     .local v1, icon:Ljava/lang/String;
     new-instance v5, Landroid/content/ComponentName;
 
@@ -927,12 +839,10 @@
 
     invoke-interface {p2, v5, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 185
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 191
     .end local v0           #i:I
     .end local v1           #icon:Ljava/lang/String;
     :cond_2
@@ -940,7 +850,6 @@
 
     move-result-object v1
 
-    .line 192
     .restart local v1       #icon:Ljava/lang/String;
     new-instance v3, Landroid/content/ComponentName;
 
@@ -954,7 +863,6 @@
     :cond_3
     move v3, v4
 
-    .line 195
     goto :goto_0
 .end method
 
@@ -963,7 +871,6 @@
     .parameter "iconInfo"
 
     .prologue
-    .line 429
     if-eqz p0, :cond_1
 
     iget-object v0, p0, Landroid/app/ComposedIconInfo;->iconBacks:[I
@@ -1000,7 +907,6 @@
     .locals 1
 
     .prologue
-    .line 224
     iget-object v0, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     return-object v0
@@ -1011,18 +917,15 @@
     .parameter "info"
 
     .prologue
-    .line 417
     invoke-virtual {p0, p1}, Landroid/app/IconPackHelper;->getResourceIdForActivityIcon(Landroid/content/pm/ActivityInfo;)I
 
     move-result v0
 
-    .line 418
     .local v0, id:I
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 419
     :goto_0
     return-object v1
 
@@ -1044,18 +947,15 @@
     .parameter "density"
 
     .prologue
-    .line 423
     invoke-virtual {p0, p1}, Landroid/app/IconPackHelper;->getResourceIdForActivityIcon(Landroid/content/pm/ActivityInfo;)I
 
     move-result v0
 
-    .line 424
     .local v0, id:I
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 425
     :goto_0
     return-object v1
 
@@ -1090,20 +990,16 @@
     .end annotation
 
     .prologue
-    .line 290
     const/16 v19, 0x0
 
-    .line 291
     .local v19, parser:Lorg/xmlpull/v1/XmlPullParser;
     const/16 v17, 0x0
 
-    .line 292
     .local v17, inputStream:Ljava/io/InputStream;
     new-instance v15, Ljava/util/HashMap;
 
     invoke-direct {v15}, Ljava/util/HashMap;-><init>()V
 
-    .line 295
     .local v15, iconPackResources:Ljava/util/Map;,"Ljava/util/Map<Landroid/content/ComponentName;Ljava/lang/String;>;"
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
@@ -1116,18 +1012,15 @@
 
     move-result-object v17
 
-    .line 296
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
     move-result-object v10
 
-    .line 297
     .local v10, factory:Lorg/xmlpull/v1/XmlPullParserFactory;
     invoke-virtual {v10}, Lorg/xmlpull/v1/XmlPullParserFactory;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v19
 
-    .line 298
     const-string v21, "UTF-8"
 
     move-object/from16 v0, v19
@@ -1140,13 +1033,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 308
     .end local v10           #factory:Lorg/xmlpull/v1/XmlPullParserFactory;
     :cond_0
     :goto_0
     if-eqz v19, :cond_3
 
-    .line 310
     :try_start_1
     move-object/from16 v0, p0
 
@@ -1158,7 +1049,6 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 318
     move-object/from16 v0, v19
 
     instance-of v0, v0, Landroid/content/res/XmlResourceParser;
@@ -1167,27 +1057,23 @@
 
     if-eqz v21, :cond_2
 
-    .line 319
     check-cast v19, Landroid/content/res/XmlResourceParser;
 
     .end local v19           #parser:Lorg/xmlpull/v1/XmlPullParser;
     invoke-interface/range {v19 .. v19}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 374
     :cond_1
     :goto_1
     return-object v15
 
-    .line 299
     .restart local v19       #parser:Lorg/xmlpull/v1/XmlPullParser;
     :catch_0
     move-exception v8
 
-    .line 302
     .local v8, e:Ljava/lang/Exception;
     const-string v21, "appfilter"
 
-    const-string/jumbo v22, "xml"
+    const-string v22, "xml"
 
     move-object/from16 v0, p1
 
@@ -1201,11 +1087,9 @@
 
     move-result v20
 
-    .line 303
     .local v20, resId:I
     if-eqz v20, :cond_0
 
-    .line 304
     move-object/from16 v0, p1
 
     move/from16 v1, v20
@@ -1216,13 +1100,11 @@
 
     goto :goto_0
 
-    .line 320
     .end local v8           #e:Ljava/lang/Exception;
     .end local v20           #resId:I
     :cond_2
     if-eqz v17, :cond_1
 
-    .line 322
     :try_start_2
     invoke-virtual/range {v17 .. v17}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -1230,24 +1112,20 @@
 
     goto :goto_1
 
-    .line 323
     :catch_1
     move-exception v21
 
     goto :goto_1
 
-    .line 312
     :catch_2
     move-exception v8
 
-    .line 313
     .local v8, e:Lorg/xmlpull/v1/XmlPullParserException;
     :try_start_3
     invoke-virtual {v8}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 318
     move-object/from16 v0, v19
 
     instance-of v0, v0, Landroid/content/res/XmlResourceParser;
@@ -1256,17 +1134,15 @@
 
     if-eqz v21, :cond_6
 
-    .line 319
     check-cast v19, Landroid/content/res/XmlResourceParser;
 
     .end local v19           #parser:Lorg/xmlpull/v1/XmlPullParser;
     invoke-interface/range {v19 .. v19}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 330
     .end local v8           #e:Lorg/xmlpull/v1/XmlPullParserException;
     :cond_3
     :goto_2
-    const-string/jumbo v21, "theme_iconpack"
+    const-string v21, "theme_iconpack"
 
     const-string v22, "array"
 
@@ -1282,11 +1158,9 @@
 
     move-result v6
 
-    .line 331
     .local v6, arrayId:I
     if-nez v6, :cond_4
 
-    .line 332
     const-string v21, "icon_pack"
 
     const-string v22, "array"
@@ -1303,22 +1177,18 @@
 
     move-result v6
 
-    .line 335
     :cond_4
     if-eqz v6, :cond_1
 
-    .line 336
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v14
 
-    .line 337
     .local v14, iconPack:[Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 338
     .local v7, compName:Landroid/content/ComponentName;
     move-object v5, v14
 
@@ -1338,7 +1208,6 @@
 
     aget-object v9, v5, v11
 
-    .line 340
     .local v9, entry:Ljava/lang/String;
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1346,14 +1215,12 @@
 
     if-eqz v21, :cond_a
 
-    .line 338
     :cond_5
     :goto_4
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_3
 
-    .line 320
     .end local v5           #arr$:[Ljava/lang/String;
     .end local v6           #arrayId:I
     .end local v7           #compName:Landroid/content/ComponentName;
@@ -1366,7 +1233,6 @@
     :cond_6
     if-eqz v17, :cond_3
 
-    .line 322
     :try_start_4
     invoke-virtual/range {v17 .. v17}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -1374,25 +1240,21 @@
 
     goto :goto_2
 
-    .line 323
     :catch_3
     move-exception v21
 
     goto :goto_2
 
-    .line 314
     .end local v8           #e:Lorg/xmlpull/v1/XmlPullParserException;
     :catch_4
     move-exception v8
 
-    .line 315
     .local v8, e:Ljava/io/IOException;
     :try_start_5
     invoke-virtual {v8}, Ljava/io/IOException;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 318
     move-object/from16 v0, v19
 
     instance-of v0, v0, Landroid/content/res/XmlResourceParser;
@@ -1401,7 +1263,6 @@
 
     if-eqz v21, :cond_7
 
-    .line 319
     check-cast v19, Landroid/content/res/XmlResourceParser;
 
     .end local v19           #parser:Lorg/xmlpull/v1/XmlPullParser;
@@ -1409,12 +1270,10 @@
 
     goto :goto_2
 
-    .line 320
     .restart local v19       #parser:Lorg/xmlpull/v1/XmlPullParser;
     :cond_7
     if-eqz v17, :cond_3
 
-    .line 322
     :try_start_6
     invoke-virtual/range {v17 .. v17}, Ljava/io/InputStream;->close()V
     :try_end_6
@@ -1422,13 +1281,11 @@
 
     goto :goto_2
 
-    .line 323
     :catch_5
     move-exception v21
 
     goto :goto_2
 
-    .line 318
     .end local v8           #e:Ljava/io/IOException;
     :catchall_0
     move-exception v21
@@ -1441,23 +1298,19 @@
 
     if-eqz v22, :cond_9
 
-    .line 319
     check-cast v19, Landroid/content/res/XmlResourceParser;
 
     .end local v19           #parser:Lorg/xmlpull/v1/XmlPullParser;
     invoke-interface/range {v19 .. v19}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 324
     :cond_8
     :goto_5
     throw v21
 
-    .line 320
     .restart local v19       #parser:Lorg/xmlpull/v1/XmlPullParser;
     :cond_9
     if-eqz v17, :cond_8
 
-    .line 322
     :try_start_7
     invoke-virtual/range {v17 .. v17}, Ljava/io/InputStream;->close()V
     :try_end_7
@@ -1465,13 +1318,11 @@
 
     goto :goto_5
 
-    .line 323
     :catch_6
     move-exception v22
 
     goto :goto_5
 
-    .line 344
     .end local v19           #parser:Lorg/xmlpull/v1/XmlPullParser;
     .restart local v5       #arr$:[Ljava/lang/String;
     .restart local v6       #arrayId:I
@@ -1483,7 +1334,6 @@
     :cond_a
     move-object v12, v9
 
-    .line 345
     .local v12, icon:Ljava/lang/String;
     const-string v21, "_"
 
@@ -1497,7 +1347,6 @@
 
     move-result-object v9
 
-    .line 347
     new-instance v7, Landroid/content/ComponentName;
 
     .end local v7           #compName:Landroid/content/ComponentName;
@@ -1513,11 +1362,9 @@
 
     invoke-direct {v7, v0, v1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 348
     .restart local v7       #compName:Landroid/content/ComponentName;
     invoke-interface {v15, v7, v12}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 350
     const-string v21, "."
 
     move-object/from16 v0, v21
@@ -1526,7 +1373,6 @@
 
     move-result v4
 
-    .line 351
     .local v4, activityIndex:I
     if-lez v4, :cond_5
 
@@ -1540,7 +1386,6 @@
 
     if-eq v4, v0, :cond_5
 
-    .line 355
     const/16 v21, 0x0
 
     move/from16 v0, v21
@@ -1549,7 +1394,6 @@
 
     move-result-object v16
 
-    .line 356
     .local v16, iconPackage:Ljava/lang/String;
     invoke-static/range {v16 .. v16}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1557,7 +1401,6 @@
 
     if-nez v21, :cond_5
 
-    .line 360
     add-int/lit8 v21, v4, 0x1
 
     move/from16 v0, v21
@@ -1566,7 +1409,6 @@
 
     move-result-object v13
 
-    .line 361
     .local v13, iconActivity:Ljava/lang/String;
     invoke-static {v13}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1574,17 +1416,14 @@
 
     if-nez v21, :cond_5
 
-    .line 366
     invoke-virtual/range {v16 .. v16}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v16
 
-    .line 367
     invoke-virtual {v13}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 369
     new-instance v21, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
@@ -1613,7 +1452,6 @@
 
     move-result-object v13
 
-    .line 370
     new-instance v7, Landroid/content/ComponentName;
 
     .end local v7           #compName:Landroid/content/ComponentName;
@@ -1621,7 +1459,6 @@
 
     invoke-direct {v7, v0, v13}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 371
     .restart local v7       #compName:Landroid/content/ComponentName;
     invoke-interface {v15, v7, v12}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1635,7 +1472,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 389
     invoke-virtual {p0}, Landroid/app/IconPackHelper;->isIconPackLoaded()Z
 
     move-result v4
@@ -1644,12 +1480,10 @@
 
     move v2, v3
 
-    .line 406
     :cond_0
     :goto_0
     return v2
 
-    .line 392
     :cond_1
     new-instance v0, Landroid/content/ComponentName;
 
@@ -1667,7 +1501,6 @@
 
     invoke-direct {v0, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 394
     .local v0, compName:Landroid/content/ComponentName;
     iget-object v4, p0, Landroid/app/IconPackHelper;->mIconPackResourceMap:Ljava/util/Map;
 
@@ -1677,20 +1510,16 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 395
     .local v1, drawable:Ljava/lang/String;
     if-eqz v1, :cond_2
 
-    .line 396
     invoke-direct {p0, v1}, Landroid/app/IconPackHelper;->getResourceIdForDrawable(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 397
     .local v2, resId:I
     if-nez v2, :cond_0
 
-    .line 401
     .end local v2           #resId:I
     :cond_2
     new-instance v0, Landroid/content/ComponentName;
@@ -1706,7 +1535,6 @@
 
     invoke-direct {v0, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 402
     .restart local v0       #compName:Landroid/content/ComponentName;
     iget-object v4, p0, Landroid/app/IconPackHelper;->mIconPackResourceMap:Ljava/util/Map;
 
@@ -1717,16 +1545,13 @@
     .end local v1           #drawable:Ljava/lang/String;
     check-cast v1, Ljava/lang/String;
 
-    .line 403
     .restart local v1       #drawable:Ljava/lang/String;
     if-nez v1, :cond_3
 
     move v2, v3
 
-    .line 404
     goto :goto_0
 
-    .line 406
     :cond_3
     invoke-direct {p0, v1}, Landroid/app/IconPackHelper;->getResourceIdForDrawable(Ljava/lang/String;)I
 
@@ -1740,21 +1565,17 @@
     .parameter "pkgName"
 
     .prologue
-    .line 410
     new-instance v0, Landroid/content/pm/ActivityInfo;
 
     invoke-direct {v0}, Landroid/content/pm/ActivityInfo;-><init>()V
 
-    .line 411
     .local v0, info:Landroid/content/pm/ActivityInfo;
     iput-object p1, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 412
     const-string v1, ""
 
     iput-object v1, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 413
     invoke-virtual {p0, v0}, Landroid/app/IconPackHelper;->getResourceIdForActivityIcon(Landroid/content/pm/ActivityInfo;)I
 
     move-result v1
@@ -1766,7 +1587,6 @@
     .locals 1
 
     .prologue
-    .line 378
     iget-object v0, p0, Landroid/app/IconPackHelper;->mLoadedIconPackResource:Landroid/content/res/Resources;
 
     if-eqz v0, :cond_0
@@ -1804,21 +1624,16 @@
 
     const/4 v4, 0x0
 
-    .line 202
     if-nez p1, :cond_1
 
-    .line 203
     iput-object v4, p0, Landroid/app/IconPackHelper;->mLoadedIconPackResource:Landroid/content/res/Resources;
 
-    .line 204
     iput-object v4, p0, Landroid/app/IconPackHelper;->mLoadedIconPackName:Ljava/lang/String;
 
-    .line 205
     iget-object v2, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     iput-object v4, v2, Landroid/app/ComposedIconInfo;->iconBacks:[I
 
-    .line 206
     iget-object v2, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     iget-object v3, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
@@ -1827,35 +1642,29 @@
 
     iput v5, v2, Landroid/app/ComposedIconInfo;->iconMask:I
 
-    .line 207
     iget-object v2, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     const/4 v3, 0x0
 
     iput v3, v2, Landroid/app/ComposedIconInfo;->iconScale:F
 
-    .line 208
     iget-object v2, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     iput-object v4, v2, Landroid/app/ComposedIconInfo;->colorFilter:[F
 
-    .line 221
     :cond_0
     :goto_0
     return-void
 
-    .line 210
     :cond_1
     iput v5, p0, Landroid/app/IconPackHelper;->mIconBackCount:I
 
-    .line 211
     iget-object v2, p0, Landroid/app/IconPackHelper;->mContext:Landroid/content/Context;
 
     invoke-static {v2, p1}, Landroid/app/IconPackHelper;->createIconResource(Landroid/content/Context;Ljava/lang/String;)Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 212
     .local v1, res:Landroid/content/res/Resources;
     invoke-virtual {p0, v1, p1}, Landroid/app/IconPackHelper;->getIconResMapFromXml(Landroid/content/res/Resources;Ljava/lang/String;)Ljava/util/Map;
 
@@ -1863,27 +1672,21 @@
 
     iput-object v2, p0, Landroid/app/IconPackHelper;->mIconPackResourceMap:Ljava/util/Map;
 
-    .line 213
     iput-object v1, p0, Landroid/app/IconPackHelper;->mLoadedIconPackResource:Landroid/content/res/Resources;
 
-    .line 214
     iput-object p1, p0, Landroid/app/IconPackHelper;->mLoadedIconPackName:Ljava/lang/String;
 
-    .line 215
     invoke-direct {p0}, Landroid/app/IconPackHelper;->loadComposedIconComponents()V
 
-    .line 216
     iget-object v2, p0, Landroid/app/IconPackHelper;->mFilterBuilder:Landroid/app/IconPackHelper$ColorFilterUtils$Builder;
 
     invoke-virtual {v2}, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->build()Landroid/graphics/ColorMatrix;
 
     move-result-object v0
 
-    .line 217
     .local v0, cm:Landroid/graphics/ColorMatrix;
     if-eqz v0, :cond_0
 
-    .line 218
     iget-object v3, p0, Landroid/app/IconPackHelper;->mComposedIconInfo:Landroid/app/ComposedIconInfo;
 
     invoke-virtual {v0}, Landroid/graphics/ColorMatrix;->getArray()[F

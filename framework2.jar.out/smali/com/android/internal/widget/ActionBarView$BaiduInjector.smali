@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 156
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,12 +33,10 @@
     .parameter "v"
 
     .prologue
-    .line 236
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarView$HomeView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 237
     .local v0, context:Landroid/content/Context;
     const/high16 v1, 0x40c0
 
@@ -59,7 +56,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/widget/ActionBarView$HomeView;->setmUpWidth(I)V
 
-    .line 238
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 169
     #getter for: Lcom/android/internal/widget/ActionBarView;->mHomeLayout:Lcom/android/internal/widget/ActionBarView$HomeView;
     invoke-static {p0}, Lcom/android/internal/widget/ActionBarView;->access$900(Lcom/android/internal/widget/ActionBarView;)Lcom/android/internal/widget/ActionBarView$HomeView;
 
@@ -104,7 +99,6 @@
 
     if-nez v3, :cond_4
 
-    .line 175
     #getter for: Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
     invoke-static {p0}, Lcom/android/internal/widget/ActionBarView;->access$iget-mContext-498a0a(Lcom/android/internal/widget/ActionBarView;)Landroid/content/Context;
 
@@ -114,7 +108,6 @@
 
     move-result-object v0
 
-    .line 176
     .local v0, appInfo:Landroid/content/pm/ApplicationInfo;
     #getter for: Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
     invoke-static {p0}, Lcom/android/internal/widget/ActionBarView;->access$iget-mContext-498a0a(Lcom/android/internal/widget/ActionBarView;)Landroid/content/Context;
@@ -125,16 +118,13 @@
 
     move-result-object v2
 
-    .line 178
     .local v2, pm:Landroid/content/pm/PackageManager;
     iget-boolean v3, p0, Lcom/android/internal/widget/ActionBarView;->mUseActivityLogo:Z
 
     if-eqz v3, :cond_1
 
-    .line 179
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/ActionBarView;->setmLogo(Landroid/graphics/drawable/Drawable;)V
 
-    .line 180
     #getter for: Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
     invoke-static {p0}, Lcom/android/internal/widget/ActionBarView;->access$iget-mContext-498a0a(Lcom/android/internal/widget/ActionBarView;)Landroid/content/Context;
 
@@ -144,7 +134,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 182
     :try_start_0
     #getter for: Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
     invoke-static {p0}, Lcom/android/internal/widget/ActionBarView;->access$iget-mContext-498a0a(Lcom/android/internal/widget/ActionBarView;)Landroid/content/Context;
@@ -165,7 +154,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 191
     :cond_0
     :goto_0
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarView;->getmLogo()Landroid/graphics/drawable/Drawable;
@@ -174,23 +162,19 @@
 
     if-nez v3, :cond_1
 
-    .line 194
     invoke-virtual {v0, v2}, Landroid/content/pm/ApplicationInfo;->loadLogo(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
     invoke-virtual {p0, v3}, Lcom/android/internal/widget/ActionBarView;->setmLogo(Landroid/graphics/drawable/Drawable;)V
 
-    .line 198
     :cond_1
     iget-boolean v3, p0, Lcom/android/internal/widget/ActionBarView;->mUseActivityIcon:Z
 
     if-eqz v3, :cond_3
 
-    .line 199
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/ActionBarView;->setmIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 200
     #getter for: Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
     invoke-static {p0}, Lcom/android/internal/widget/ActionBarView;->access$iget-mContext-498a0a(Lcom/android/internal/widget/ActionBarView;)Landroid/content/Context;
 
@@ -200,7 +184,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 202
     :try_start_1
     #getter for: Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
     invoke-static {p0}, Lcom/android/internal/widget/ActionBarView;->access$iget-mContext-498a0a(Lcom/android/internal/widget/ActionBarView;)Landroid/content/Context;
@@ -221,7 +204,6 @@
     :try_end_1
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 211
     :cond_2
     :goto_1
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarView;->getmIcon()Landroid/graphics/drawable/Drawable;
@@ -230,14 +212,12 @@
 
     if-nez v3, :cond_3
 
-    .line 214
     invoke-virtual {v0, v2}, Landroid/content/pm/ApplicationInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
     invoke-virtual {p0, v3}, Lcom/android/internal/widget/ActionBarView;->setmIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 218
     :cond_3
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarView;->getmLogo()Landroid/graphics/drawable/Drawable;
 
@@ -254,7 +234,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 220
     #getter for: Lcom/android/internal/widget/ActionBarView;->mHomeLayout:Lcom/android/internal/widget/ActionBarView$HomeView;
     invoke-static {p0}, Lcom/android/internal/widget/ActionBarView;->access$900(Lcom/android/internal/widget/ActionBarView;)Lcom/android/internal/widget/ActionBarView$HomeView;
 
@@ -266,20 +245,17 @@
 
     invoke-virtual {v3, v4}, Lcom/android/internal/widget/ActionBarView$HomeView;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 229
     .end local v0           #appInfo:Landroid/content/pm/ApplicationInfo;
     .end local v2           #pm:Landroid/content/pm/PackageManager;
     :cond_4
     :goto_2
     return-void
 
-    .line 187
     .restart local v0       #appInfo:Landroid/content/pm/ApplicationInfo;
     .restart local v2       #pm:Landroid/content/pm/PackageManager;
     :catch_0
     move-exception v1
 
-    .line 188
     .local v1, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v3, "ActionBarView"
 
@@ -289,12 +265,10 @@
 
     goto :goto_0
 
-    .line 207
     .end local v1           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v1
 
-    .line 208
     .restart local v1       #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v3, "ActionBarView"
 
@@ -304,7 +278,6 @@
 
     goto :goto_1
 
-    .line 223
     .end local v1           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_5
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarView;->getmIcon()Landroid/graphics/drawable/Drawable;
@@ -313,7 +286,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 224
     #getter for: Lcom/android/internal/widget/ActionBarView;->mHomeLayout:Lcom/android/internal/widget/ActionBarView$HomeView;
     invoke-static {p0}, Lcom/android/internal/widget/ActionBarView;->access$900(Lcom/android/internal/widget/ActionBarView;)Lcom/android/internal/widget/ActionBarView$HomeView;
 
@@ -333,7 +305,6 @@
     .parameter "actionBarView"
 
     .prologue
-    .line 164
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarView;->getmIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -345,10 +316,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/internal/widget/ActionBarView;->mUseActivityIcon:Z
 
-    .line 165
     return-void
 
-    .line 164
     :cond_0
     const/4 v0, 0x0
 
@@ -360,7 +329,6 @@
     .parameter "abv"
 
     .prologue
-    .line 160
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarView;->getmLogo()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -372,10 +340,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/internal/widget/ActionBarView;->mUseActivityLogo:Z
 
-    .line 161
     return-void
 
-    .line 160
     :cond_0
     const/4 v0, 0x0
 
@@ -387,11 +353,9 @@
     .parameter "actionBarView"
 
     .prologue
-    .line 233
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/widget/ActionBarView;->mUseCustomIcon:Z
 
-    .line 234
     return-void
 .end method

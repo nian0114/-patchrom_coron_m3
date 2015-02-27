@@ -46,7 +46,6 @@
     .parameter
 
     .prologue
-    .line 445
     iput-object p1, p0, Landroid/media/SubtitleTrack$CueList$1;->this$0:Landroid/media/SubtitleTrack$CueList;
 
     iput-wide p2, p0, Landroid/media/SubtitleTrack$CueList$1;->val$lastTimeMs:J
@@ -78,7 +77,6 @@
     .prologue
     const-wide/16 v7, 0x1
 
-    .line 448
     iget-object v1, p0, Landroid/media/SubtitleTrack$CueList$1;->this$0:Landroid/media/SubtitleTrack$CueList;
 
     iget-boolean v1, v1, Landroid/media/SubtitleTrack$CueList;->DEBUG:Z
@@ -91,7 +89,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "slice ("
+    const-string v3, "slice ("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -127,7 +125,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     :cond_0
     :try_start_0
     new-instance v1, Landroid/media/SubtitleTrack$CueList$EntryIterator;
@@ -165,15 +162,12 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 453
     :goto_0
     return-object v1
 
-    .line 452
     :catch_0
     move-exception v0
 
-    .line 453
     .local v0, e:Ljava/lang/IllegalArgumentException;
     new-instance v1, Landroid/media/SubtitleTrack$CueList$EntryIterator;
 

@@ -25,13 +25,10 @@
     .parameter "handler"
 
     .prologue
-    .line 1364
     iput-object p1, p0, Lcom/android/server/NotificationManagerService$QuietHoursSettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
-    .line 1365
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1366
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1369
     iget-object v1, p0, Lcom/android/server/NotificationManagerService$QuietHoursSettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
     iget-object v1, v1, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
@@ -52,7 +48,6 @@
 
     move-result-object v0
 
-    .line 1370
     .local v0, resolver:Landroid/content/ContentResolver;
     const-string v1, "quiet_hours_enabled"
 
@@ -62,7 +57,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1372
     const-string v1, "quiet_hours_start"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -71,7 +65,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1374
     const-string v1, "quiet_hours_end"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -80,7 +73,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1376
     const-string v1, "quiet_hours_mute"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -89,7 +81,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1378
     const-string v1, "quiet_hours_still"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -98,7 +89,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1380
     const-string v1, "quiet_hours_dim"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -107,10 +97,8 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1382
     invoke-virtual {p0}, Lcom/android/server/NotificationManagerService$QuietHoursSettingsObserver;->update()V
 
-    .line 1383
     return-void
 .end method
 
@@ -119,16 +107,13 @@
     .parameter "selfChange"
 
     .prologue
-    .line 1386
     invoke-virtual {p0}, Lcom/android/server/NotificationManagerService$QuietHoursSettingsObserver;->update()V
 
-    .line 1387
     iget-object v0, p0, Lcom/android/server/NotificationManagerService$QuietHoursSettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
     #calls: Lcom/android/server/NotificationManagerService;->updateNotificationPulse()V
     invoke-static {v0}, Lcom/android/server/NotificationManagerService;->access$1600(Lcom/android/server/NotificationManagerService;)V
 
-    .line 1388
     return-void
 .end method
 
@@ -136,7 +121,6 @@
     .locals 2
 
     .prologue
-    .line 1391
     iget-object v1, p0, Lcom/android/server/NotificationManagerService$QuietHoursSettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
     iget-object v1, v1, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
@@ -145,7 +129,6 @@
 
     move-result-object v0
 
-    .line 1392
     .local v0, resolver:Landroid/content/ContentResolver;
     return-void
 .end method

@@ -24,13 +24,10 @@
     .parameter "rule"
 
     .prologue
-    .line 484
     invoke-direct {p0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 485
     iput-object p1, p0, Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;->rule:Lcom/android/server/firewall/IntentFirewall$Rule;
 
-    .line 486
     return-void
 .end method
 
@@ -39,7 +36,6 @@
     .parameter "x0"
 
     .prologue
-    .line 481
     iget-object v0, p0, Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;->rule:Lcom/android/server/firewall/IntentFirewall$Rule;
 
     return-object v0

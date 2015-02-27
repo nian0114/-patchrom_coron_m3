@@ -17,25 +17,20 @@
     .parameter "orig"
 
     .prologue
-    .line 43
     invoke-direct {p0, p1}, Lcom/android/server/pm/PackageSettingBase;-><init>(Lcom/android/server/pm/PackageSettingBase;)V
 
-    .line 45
     iget v0, p1, Lcom/android/server/pm/PackageSetting;->appId:I
 
     iput v0, p0, Lcom/android/server/pm/PackageSetting;->appId:I
 
-    .line 46
     iget-object v0, p1, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
-    .line 47
     iget-object v0, p1, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
-    .line 48
     return-void
 .end method
 
@@ -50,10 +45,8 @@
     .parameter "pkgFlags"
 
     .prologue
-    .line 34
     invoke-direct/range {p0 .. p7}, Lcom/android/server/pm/PackageSettingBase;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;Ljava/io/File;Ljava/lang/String;II)V
 
-    .line 36
     return-void
 .end method
 
@@ -63,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
     if-eqz v0, :cond_0
@@ -85,7 +77,6 @@
     .locals 2
 
     .prologue
-    .line 62
     iget v0, p0, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
 
     const/high16 v1, 0x4000
@@ -109,7 +100,6 @@
     .locals 2
 
     .prologue
-    .line 52
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

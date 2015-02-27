@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 9511
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$15;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,13 +39,11 @@
     .parameter "intent"
 
     .prologue
-    .line 9514
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$15;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mServices:Lcom/android/server/am/ActiveServices;
 
     invoke-virtual {v0}, Lcom/android/server/am/ActiveServices;->onBootCompleted()V
 
-    .line 9515
     return-void
 .end method

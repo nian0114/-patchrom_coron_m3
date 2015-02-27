@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 266
     iput-object p1, p0, Landroid/transition/ChangeBounds$3;->this$0:Landroid/transition/ChangeBounds;
 
     iput-object p2, p0, Landroid/transition/ChangeBounds$3;->val$view:Landroid/view/View;
@@ -44,13 +43,11 @@
     .parameter "animation"
 
     .prologue
-    .line 269
     iget-object v0, p0, Landroid/transition/ChangeBounds$3;->val$view:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
 
-    .line 270
     return-void
 .end method

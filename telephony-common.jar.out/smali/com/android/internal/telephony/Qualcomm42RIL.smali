@@ -34,10 +34,8 @@
     .parameter "cdmaSubscription"
 
     .prologue
-    .line 43
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/RIL;-><init>(Landroid/content/Context;II)V
 
-    .line 44
     return-void
 .end method
 
@@ -48,12 +46,10 @@
     .parameter "result"
 
     .prologue
-    .line 51
     const-string v0, "[STUB] > getCellInfoList"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/Qualcomm42RIL;->riljLog(Ljava/lang/String;)V
 
-    .line 52
     return-void
 .end method
 
@@ -63,14 +59,12 @@
     .parameter "result"
 
     .prologue
-    .line 96
     const/16 v1, 0x6f
 
     invoke-static {v1, p2}, Lcom/android/internal/telephony/RILRequest;->obtain(ILandroid/os/Message;)Lcom/android/internal/telephony/RILRequest;
 
     move-result-object v0
 
-    .line 100
     .local v0, rr:Lcom/android/internal/telephony/RILRequest;
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
@@ -78,12 +72,10 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 101
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 103
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -128,10 +120,8 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/Qualcomm42RIL;->riljLog(Ljava/lang/String;)V
 
-    .line 106
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/Qualcomm42RIL;->send(Lcom/android/internal/telephony/RILRequest;)V
 
-    .line 107
     return-void
 .end method
 
@@ -140,14 +130,12 @@
     .parameter "result"
 
     .prologue
-    .line 63
     const/16 v1, 0x6d
 
     invoke-static {v1, p1}, Lcom/android/internal/telephony/RILRequest;->obtain(ILandroid/os/Message;)Lcom/android/internal/telephony/RILRequest;
 
     move-result-object v0
 
-    .line 66
     .local v0, rr:Lcom/android/internal/telephony/RILRequest;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -183,10 +171,8 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/Qualcomm42RIL;->riljLog(Ljava/lang/String;)V
 
-    .line 68
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/Qualcomm42RIL;->send(Lcom/android/internal/telephony/RILRequest;)V
 
-    .line 69
     return-void
 .end method
 
@@ -196,12 +182,10 @@
     .parameter "response"
 
     .prologue
-    .line 59
     const-string v0, "[STUB] > setCellInfoListRate"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/Qualcomm42RIL;->riljLog(Ljava/lang/String;)V
 
-    .line 60
     return-void
 .end method
 
@@ -210,14 +194,12 @@
     .parameter "result"
 
     .prologue
-    .line 89
     const/16 v1, 0x77
 
     invoke-static {v1, p1}, Lcom/android/internal/telephony/RILRequest;->obtain(ILandroid/os/Message;)Lcom/android/internal/telephony/RILRequest;
 
     move-result-object v0
 
-    .line 90
     .local v0, rr:Lcom/android/internal/telephony/RILRequest;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -253,10 +235,8 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/Qualcomm42RIL;->riljLog(Ljava/lang/String;)V
 
-    .line 91
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/Qualcomm42RIL;->send(Lcom/android/internal/telephony/RILRequest;)V
 
-    .line 92
     return-void
 .end method
 
@@ -269,14 +249,12 @@
     .parameter "result"
 
     .prologue
-    .line 74
     const/16 v1, 0x76
 
     invoke-static {v1, p5}, Lcom/android/internal/telephony/RILRequest;->obtain(ILandroid/os/Message;)Lcom/android/internal/telephony/RILRequest;
 
     move-result-object v0
 
-    .line 76
     .local v0, rr:Lcom/android/internal/telephony/RILRequest;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -352,29 +330,23 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/Qualcomm42RIL;->riljLog(Ljava/lang/String;)V
 
-    .line 80
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 81
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {v1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 82
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {v1, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 83
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {v1, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 85
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/Qualcomm42RIL;->send(Lcom/android/internal/telephony/RILRequest;)V
 
-    .line 86
     return-void
 .end method

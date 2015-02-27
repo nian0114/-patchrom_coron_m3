@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,7 +47,6 @@
     .end annotation
 
     .prologue
-    .line 55
     const-class v0, Landroid/graphics/Rect;
 
     return-object v0
@@ -59,7 +57,6 @@
     .parameter "nativeType"
 
     .prologue
-    .line 65
     const/16 v0, 0x10
 
     return v0
@@ -72,7 +69,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 60
     if-ne p1, v0, :cond_0
 
     :goto_0
@@ -94,32 +90,26 @@
     .prologue
     const/16 v1, 0x10
 
-    .line 27
     if-eqz p4, :cond_0
 
-    .line 36
     :goto_0
     return v1
 
-    .line 31
     :cond_0
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 32
     iget v0, p1, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 33
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 34
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result v0
@@ -137,7 +127,6 @@
     .parameter "x3"
 
     .prologue
-    .line 22
     check-cast p1, Landroid/graphics/Rect;
 
     .end local p1
@@ -154,38 +143,31 @@
     .parameter "nativeType"
 
     .prologue
-    .line 42
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v2
 
-    .line 43
     .local v2, left:I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v4
 
-    .line 44
     .local v4, top:I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v5
 
-    .line 45
     .local v5, width:I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
 
-    .line 47
     .local v1, height:I
     add-int v3, v2, v5
 
-    .line 48
     .local v3, right:I
     add-int v0, v4, v1
 
-    .line 50
     .local v0, bottom:I
     new-instance v6, Landroid/graphics/Rect;
 
@@ -200,7 +182,6 @@
     .parameter "x1"
 
     .prologue
-    .line 22
     invoke-virtual {p0, p1, p2}, Landroid/hardware/camera2/impl/MetadataMarshalRect;->unmarshal(Ljava/nio/ByteBuffer;I)Landroid/graphics/Rect;
 
     move-result-object v0

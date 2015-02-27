@@ -28,7 +28,6 @@
     .parameter
 
     .prologue
-    .line 186
     iput-object p1, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$1;->this$0:Lcom/android/internal/view/menu/ActionMenuPresenter;
 
     iput-object p3, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$1;->val$item:Lcom/android/internal/view/menu/MenuItemImpl;
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 189
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$1;->this$0:Lcom/android/internal/view/menu/ActionMenuPresenter;
 
     #getter for: Lcom/android/internal/view/menu/ActionMenuPresenter;->mActionButtonPopup:Lcom/android/internal/view/menu/ActionMenuPresenter$ActionButtonSubmenu;
@@ -78,7 +76,6 @@
     .locals 2
 
     .prologue
-    .line 194
     iget-object v1, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$1;->this$0:Lcom/android/internal/view/menu/ActionMenuPresenter;
 
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$1;->val$item:Lcom/android/internal/view/menu/MenuItemImpl;
@@ -100,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 199
     iget-object v0, p0, Lcom/android/internal/view/menu/ActionMenuPresenter$1;->this$0:Lcom/android/internal/view/menu/ActionMenuPresenter;
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/ActionMenuPresenter;->dismissPopupMenus()Z

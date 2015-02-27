@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,10 +18,8 @@
     .parameter "e"
 
     .prologue
-    .line 33
     invoke-static {p0}, Landroid/hardware/camera2/utils/UncheckedThrow;->throwAnyImpl(Ljava/lang/Exception;)V
 
-    .line 34
     return-void
 .end method
 
@@ -46,6 +43,5 @@
     .end annotation
 
     .prologue
-    .line 38
     throw p0
 .end method

@@ -28,13 +28,10 @@
     .parameter "name"
 
     .prologue
-    .line 1730
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1731
     iput-object p1, p0, Lcom/android/server/content/SyncManager$AccountSyncStats;->name:Ljava/lang/String;
 
-    .line 1732
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1725
     invoke-direct {p0, p1}, Lcom/android/server/content/SyncManager$AccountSyncStats;-><init>(Ljava/lang/String;)V
 
     return-void

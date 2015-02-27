@@ -24,19 +24,14 @@
 
     const v0, 0x7fffffff
 
-    .line 26
     invoke-direct {p0}, Landroid/net/LinkQualityInfo;-><init>()V
 
-    .line 29
     iput v0, p0, Landroid/net/WifiLinkQualityInfo;->mType:I
 
-    .line 34
     iput v0, p0, Landroid/net/WifiLinkQualityInfo;->mRssi:I
 
-    .line 37
     iput-wide v1, p0, Landroid/net/WifiLinkQualityInfo;->mTxGood:J
 
-    .line 38
     iput-wide v1, p0, Landroid/net/WifiLinkQualityInfo;->mTxBad:J
 
     return-void
@@ -47,51 +42,43 @@
     .parameter "in"
 
     .prologue
-    .line 61
     new-instance v0, Landroid/net/WifiLinkQualityInfo;
 
     invoke-direct {v0}, Landroid/net/WifiLinkQualityInfo;-><init>()V
 
-    .line 63
     .local v0, li:Landroid/net/WifiLinkQualityInfo;
     invoke-virtual {v0, p0}, Landroid/net/WifiLinkQualityInfo;->initializeFromParcel(Landroid/os/Parcel;)V
 
-    .line 65
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, v0, Landroid/net/WifiLinkQualityInfo;->mType:I
 
-    .line 66
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, v0, Landroid/net/WifiLinkQualityInfo;->mRssi:I
 
-    .line 67
     invoke-virtual {p0}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v1
 
     iput-wide v1, v0, Landroid/net/WifiLinkQualityInfo;->mTxGood:J
 
-    .line 68
     invoke-virtual {p0}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v1
 
     iput-wide v1, v0, Landroid/net/WifiLinkQualityInfo;->mTxBad:J
 
-    .line 70
     invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/net/WifiLinkQualityInfo;->mBssid:Ljava/lang/String;
 
-    .line 72
     return-object v0
 .end method
 
@@ -101,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Landroid/net/WifiLinkQualityInfo;->mBssid:Ljava/lang/String;
 
     return-object v0
@@ -111,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget v0, p0, Landroid/net/WifiLinkQualityInfo;->mRssi:I
 
     return v0
@@ -121,7 +106,6 @@
     .locals 2
 
     .prologue
-    .line 140
     iget-wide v0, p0, Landroid/net/WifiLinkQualityInfo;->mTxBad:J
 
     return-wide v0
@@ -131,7 +115,6 @@
     .locals 2
 
     .prologue
-    .line 125
     iget-wide v0, p0, Landroid/net/WifiLinkQualityInfo;->mTxGood:J
 
     return-wide v0
@@ -141,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget v0, p0, Landroid/net/WifiLinkQualityInfo;->mType:I
 
     return v0
@@ -152,10 +134,8 @@
     .parameter "bssid"
 
     .prologue
-    .line 102
     iput-object p1, p0, Landroid/net/WifiLinkQualityInfo;->mBssid:Ljava/lang/String;
 
-    .line 103
     return-void
 .end method
 
@@ -164,10 +144,8 @@
     .parameter "rssi"
 
     .prologue
-    .line 117
     iput p1, p0, Landroid/net/WifiLinkQualityInfo;->mRssi:I
 
-    .line 118
     return-void
 .end method
 
@@ -176,10 +154,8 @@
     .parameter "txBad"
 
     .prologue
-    .line 147
     iput-wide p1, p0, Landroid/net/WifiLinkQualityInfo;->mTxBad:J
 
-    .line 148
     return-void
 .end method
 
@@ -188,10 +164,8 @@
     .parameter "txGood"
 
     .prologue
-    .line 132
     iput-wide p1, p0, Landroid/net/WifiLinkQualityInfo;->mTxGood:J
 
-    .line 133
     return-void
 .end method
 
@@ -200,10 +174,8 @@
     .parameter "type"
 
     .prologue
-    .line 87
     iput p1, p0, Landroid/net/WifiLinkQualityInfo;->mType:I
 
-    .line 88
     return-void
 .end method
 
@@ -213,36 +185,29 @@
     .parameter "flags"
 
     .prologue
-    .line 46
     const/4 v0, 0x2
 
     invoke-super {p0, p1, p2, v0}, Landroid/net/LinkQualityInfo;->writeToParcel(Landroid/os/Parcel;II)V
 
-    .line 48
     iget v0, p0, Landroid/net/WifiLinkQualityInfo;->mType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 49
     iget v0, p0, Landroid/net/WifiLinkQualityInfo;->mRssi:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 50
     iget-wide v0, p0, Landroid/net/WifiLinkQualityInfo;->mTxGood:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 51
     iget-wide v0, p0, Landroid/net/WifiLinkQualityInfo;->mTxBad:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 53
     iget-object v0, p0, Landroid/net/WifiLinkQualityInfo;->mBssid:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 54
     return-void
 .end method

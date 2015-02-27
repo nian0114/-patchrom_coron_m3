@@ -58,7 +58,6 @@
 
     const/4 v3, 0x0
 
-    .line 72
     new-instance v0, Landroid/wipower/WipowerManager$WipowerAlert;
 
     const-string v1, "ALERT_NONE"
@@ -67,7 +66,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$WipowerAlert;->ALERT_NONE:Landroid/wipower/WipowerManager$WipowerAlert;
 
-    .line 73
     new-instance v0, Landroid/wipower/WipowerManager$WipowerAlert;
 
     const-string v1, "ALERT_OVER_VOLTAGE"
@@ -76,7 +74,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$WipowerAlert;->ALERT_OVER_VOLTAGE:Landroid/wipower/WipowerManager$WipowerAlert;
 
-    .line 74
     new-instance v0, Landroid/wipower/WipowerManager$WipowerAlert;
 
     const-string v1, "ALERT_OVER_CURRENT"
@@ -85,7 +82,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$WipowerAlert;->ALERT_OVER_CURRENT:Landroid/wipower/WipowerManager$WipowerAlert;
 
-    .line 75
     new-instance v0, Landroid/wipower/WipowerManager$WipowerAlert;
 
     const-string v1, "ALERT_OVER_TEMPERATURE"
@@ -94,7 +90,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$WipowerAlert;->ALERT_OVER_TEMPERATURE:Landroid/wipower/WipowerManager$WipowerAlert;
 
-    .line 76
     new-instance v0, Landroid/wipower/WipowerManager$WipowerAlert;
 
     const-string v1, "ALERT_SELF_PROTECTION"
@@ -103,7 +98,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$WipowerAlert;->ALERT_SELF_PROTECTION:Landroid/wipower/WipowerManager$WipowerAlert;
 
-    .line 77
     new-instance v0, Landroid/wipower/WipowerManager$WipowerAlert;
 
     const-string v1, "ALERT_CHARGE_COMPLETE"
@@ -114,7 +108,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$WipowerAlert;->ALERT_CHARGE_COMPLETE:Landroid/wipower/WipowerManager$WipowerAlert;
 
-    .line 78
     new-instance v0, Landroid/wipower/WipowerManager$WipowerAlert;
 
     const-string v1, "ALERT_WIRED_CHARGER_DETECTED"
@@ -125,7 +118,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$WipowerAlert;->ALERT_WIRED_CHARGER_DETECTED:Landroid/wipower/WipowerManager$WipowerAlert;
 
-    .line 79
     new-instance v0, Landroid/wipower/WipowerManager$WipowerAlert;
 
     const-string v1, "ALERT_CHARGE_PORT"
@@ -136,7 +128,6 @@
 
     sput-object v0, Landroid/wipower/WipowerManager$WipowerAlert;->ALERT_CHARGE_PORT:Landroid/wipower/WipowerManager$WipowerAlert;
 
-    .line 71
     const/16 v0, 0x8
 
     new-array v0, v0, [Landroid/wipower/WipowerManager$WipowerAlert;
@@ -195,7 +186,6 @@
     .end annotation
 
     .prologue
-    .line 71
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -206,7 +196,6 @@
     .parameter "name"
 
     .prologue
-    .line 71
     const-class v0, Landroid/wipower/WipowerManager$WipowerAlert;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -222,7 +211,6 @@
     .locals 1
 
     .prologue
-    .line 71
     sget-object v0, Landroid/wipower/WipowerManager$WipowerAlert;->$VALUES:[Landroid/wipower/WipowerManager$WipowerAlert;
 
     invoke-virtual {v0}, [Landroid/wipower/WipowerManager$WipowerAlert;->clone()Ljava/lang/Object;

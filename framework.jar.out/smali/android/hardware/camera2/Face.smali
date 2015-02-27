@@ -34,7 +34,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 130
     const/4 v3, -0x1
 
     move-object v0, p0
@@ -49,7 +48,6 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/hardware/camera2/Face;-><init>(Landroid/graphics/Rect;IILandroid/graphics/Point;Landroid/graphics/Point;Landroid/graphics/Point;)V
 
-    .line 132
     return-void
 .end method
 
@@ -65,15 +63,12 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
     const-string v0, "bounds"
 
     invoke-static {v0, p1}, Landroid/hardware/camera2/Face;->checkNotNull(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 88
     const/4 v0, 0x1
 
     if-lt p2, v0, :cond_0
@@ -82,7 +77,6 @@
 
     if-le p2, v0, :cond_1
 
-    .line 89
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -92,13 +86,11 @@
 
     throw v0
 
-    .line 90
     :cond_1
     if-gez p3, :cond_2
 
     if-eq p3, v1, :cond_2
 
-    .line 91
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Id out of range"
@@ -107,45 +99,34 @@
 
     throw v0
 
-    .line 93
     :cond_2
     if-ne p3, v1, :cond_3
 
-    .line 94
     const-string v0, "leftEyePosition"
 
     invoke-static {v0, p4}, Landroid/hardware/camera2/Face;->checkNull(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 95
-    const-string/jumbo v0, "rightEyePosition"
+    const-string v0, "rightEyePosition"
 
     invoke-static {v0, p5}, Landroid/hardware/camera2/Face;->checkNull(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 96
-    const-string/jumbo v0, "mouthPosition"
+    const-string v0, "mouthPosition"
 
     invoke-static {v0, p6}, Landroid/hardware/camera2/Face;->checkNull(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 99
     :cond_3
     iput-object p1, p0, Landroid/hardware/camera2/Face;->mBounds:Landroid/graphics/Rect;
 
-    .line 100
     iput p2, p0, Landroid/hardware/camera2/Face;->mScore:I
 
-    .line 101
     iput p3, p0, Landroid/hardware/camera2/Face;->mId:I
 
-    .line 102
     iput-object p4, p0, Landroid/hardware/camera2/Face;->mLeftEye:Landroid/graphics/Point;
 
-    .line 103
     iput-object p5, p0, Landroid/hardware/camera2/Face;->mRightEye:Landroid/graphics/Point;
 
-    .line 104
     iput-object p6, p0, Landroid/hardware/camera2/Face;->mMouth:Landroid/graphics/Point;
 
-    .line 105
     return-void
 .end method
 
@@ -155,10 +136,8 @@
     .parameter "obj"
 
     .prologue
-    .line 252
     if-nez p1, :cond_0
 
-    .line 253
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -183,7 +162,6 @@
 
     throw v0
 
-    .line 255
     :cond_0
     return-void
 .end method
@@ -194,10 +172,8 @@
     .parameter "obj"
 
     .prologue
-    .line 258
     if-eqz p1, :cond_0
 
-    .line 259
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -222,7 +198,6 @@
 
     throw v0
 
-    .line 261
     :cond_0
     return-void
 .end method
@@ -233,7 +208,6 @@
     .locals 1
 
     .prologue
-    .line 145
     iget-object v0, p0, Landroid/hardware/camera2/Face;->mBounds:Landroid/graphics/Rect;
 
     return-object v0
@@ -243,7 +217,6 @@
     .locals 1
 
     .prologue
-    .line 189
     iget v0, p0, Landroid/hardware/camera2/Face;->mId:I
 
     return v0
@@ -253,7 +226,6 @@
     .locals 1
 
     .prologue
-    .line 205
     iget-object v0, p0, Landroid/hardware/camera2/Face;->mLeftEye:Landroid/graphics/Point;
 
     return-object v0
@@ -263,7 +235,6 @@
     .locals 1
 
     .prologue
-    .line 238
     iget-object v0, p0, Landroid/hardware/camera2/Face;->mMouth:Landroid/graphics/Point;
 
     return-object v0
@@ -273,7 +244,6 @@
     .locals 1
 
     .prologue
-    .line 221
     iget-object v0, p0, Landroid/hardware/camera2/Face;->mRightEye:Landroid/graphics/Point;
 
     return-object v0
@@ -283,7 +253,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget v0, p0, Landroid/hardware/camera2/Face;->mScore:I
 
     return v0
@@ -293,8 +262,7 @@
     .locals 4
 
     .prologue
-    .line 246
-    const-string/jumbo v0, "{ bounds: %s, score: %s, id: %d, leftEyePosition: %s, rightEyePosition: %s, mouthPosition: %s }"
+    const-string v0, "{ bounds: %s, score: %s, id: %d, leftEyePosition: %s, rightEyePosition: %s, mouthPosition: %s }"
 
     const/4 v1, 0x6
 

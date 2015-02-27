@@ -52,24 +52,20 @@
     .parameter "format"
 
     .prologue
-    .line 992
     invoke-direct {p0, p2}, Landroid/media/SubtitleTrack;-><init>(Landroid/media/MediaFormat;)V
 
-    .line 980
     new-instance v0, Landroid/media/WebVttParser;
 
     invoke-direct {v0, p0}, Landroid/media/WebVttParser;-><init>(Landroid/media/WebVttCueListener;)V
 
     iput-object v0, p0, Landroid/media/WebVttTrack;->mParser:Landroid/media/WebVttParser;
 
-    .line 981
     new-instance v0, Landroid/media/UnstyledTextExtractor;
 
     invoke-direct {v0}, Landroid/media/UnstyledTextExtractor;-><init>()V
 
     iput-object v0, p0, Landroid/media/WebVttTrack;->mExtractor:Landroid/media/UnstyledTextExtractor;
 
-    .line 983
     new-instance v0, Landroid/media/Tokenizer;
 
     iget-object v1, p0, Landroid/media/WebVttTrack;->mExtractor:Landroid/media/UnstyledTextExtractor;
@@ -78,24 +74,20 @@
 
     iput-object v0, p0, Landroid/media/WebVttTrack;->mTokenizer:Landroid/media/Tokenizer;
 
-    .line 984
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
     iput-object v0, p0, Landroid/media/WebVttTrack;->mTimestamps:Ljava/util/Vector;
 
-    .line 987
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/media/WebVttTrack;->mRegions:Ljava/util/Map;
 
-    .line 994
     iput-object p1, p0, Landroid/media/WebVttTrack;->mRenderingWidget:Landroid/media/WebVttRenderingWidget;
 
-    .line 995
     return-void
 .end method
 
@@ -105,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 977
     invoke-virtual {p0}, Landroid/media/WebVttTrack;->getRenderingWidget()Landroid/media/WebVttRenderingWidget;
 
     move-result-object v0
@@ -117,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 999
     iget-object v0, p0, Landroid/media/WebVttTrack;->mRenderingWidget:Landroid/media/WebVttRenderingWidget;
 
     return-object v0
@@ -128,14 +118,12 @@
     .parameter "cue"
 
     .prologue
-    .line 1024
     move-object/from16 v0, p0
 
     iget-object v12, v0, Landroid/media/WebVttTrack;->mParser:Landroid/media/WebVttParser;
 
     monitor-enter v12
 
-    .line 1026
     :try_start_0
     move-object/from16 v0, p1
 
@@ -147,7 +135,6 @@
 
     if-eqz v11, :cond_0
 
-    .line 1027
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/media/WebVttTrack;->mRegions:Ljava/util/Map;
@@ -166,7 +153,6 @@
 
     iput-object v11, v0, Landroid/media/TextTrackCue;->mRegion:Landroid/media/TextTrackRegion;
 
-    .line 1030
     :cond_0
     move-object/from16 v0, p0
 
@@ -198,7 +184,6 @@
 
     invoke-static {v11, v13}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1033
     :cond_1
     move-object/from16 v0, p0
 
@@ -206,7 +191,6 @@
 
     invoke-virtual {v11}, Landroid/media/Tokenizer;->reset()V
 
-    .line 1034
     move-object/from16 v0, p1
 
     iget-object v1, v0, Landroid/media/TextTrackCue;->mStrings:[Ljava/lang/String;
@@ -223,7 +207,6 @@
 
     aget-object v9, v1, v3
 
-    .line 1035
     .local v9, s:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -231,12 +214,10 @@
 
     invoke-virtual {v11, v9}, Landroid/media/Tokenizer;->tokenize(Ljava/lang/String;)V
 
-    .line 1034
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 1037
     .end local v9           #s:Ljava/lang/String;
     :cond_2
     move-object/from16 v0, p0
@@ -251,7 +232,6 @@
 
     iput-object v11, v0, Landroid/media/TextTrackCue;->mLines:[[Landroid/media/TextTrackCueSpan;
 
-    .line 1038
     move-object/from16 v0, p0
 
     iget-boolean v11, v0, Landroid/media/WebVttTrack;->DEBUG:Z
@@ -288,7 +268,6 @@
 
     invoke-static {v11, v13}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1044
     :cond_3
     move-object/from16 v0, p1
 
@@ -310,7 +289,6 @@
 
     aget-object v8, v1, v4
 
-    .line 1045
     .local v8, line:[Landroid/media/TextTrackCueSpan;
     move-object v2, v8
 
@@ -327,7 +305,6 @@
 
     aget-object v10, v2, v3
 
-    .line 1046
     .local v10, span:Landroid/media/TextTrackCueSpan;
     iget-wide v13, v10, Landroid/media/TextTrackCueSpan;->mTimestampMs:J
 
@@ -365,7 +342,6 @@
 
     if-nez v11, :cond_4
 
-    .line 1049
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/media/WebVttTrack;->mTimestamps:Ljava/util/Vector;
@@ -378,13 +354,11 @@
 
     invoke-virtual {v11, v13}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 1045
     :cond_4
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    .line 1044
     .end local v10           #span:Landroid/media/TextTrackCueSpan;
     :cond_5
     add-int/lit8 v3, v4, 0x1
@@ -395,7 +369,6 @@
     .restart local v4       #i$:I
     goto :goto_1
 
-    .line 1054
     .end local v2           #arr$:[Landroid/media/TextTrackCueSpan;
     .end local v7           #len$:I
     .end local v8           #line:[Landroid/media/TextTrackCueSpan;
@@ -410,7 +383,6 @@
 
     if-lez v11, :cond_8
 
-    .line 1055
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/media/WebVttTrack;->mTimestamps:Ljava/util/Vector;
@@ -425,7 +397,6 @@
 
     iput-object v11, v0, Landroid/media/TextTrackCue;->mInnerTimesMs:[J
 
-    .line 1056
     const/4 v5, 0x0
 
     .local v5, ix:I
@@ -440,7 +411,6 @@
 
     if-ge v5, v11, :cond_7
 
-    .line 1057
     move-object/from16 v0, p1
 
     iget-object v13, v0, Landroid/media/TextTrackCue;->mInnerTimesMs:[J
@@ -461,12 +431,10 @@
 
     aput-wide v14, v13, v5
 
-    .line 1056
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_3
 
-    .line 1059
     :cond_7
     move-object/from16 v0, p0
 
@@ -474,7 +442,6 @@
 
     invoke-virtual {v11}, Ljava/util/Vector;->clear()V
 
-    .line 1064
     .end local v5           #ix:I
     :goto_4
     move-object/from16 v0, p0
@@ -489,18 +456,14 @@
 
     iput-wide v13, v0, Landroid/media/TextTrackCue;->mRunID:J
 
-    .line 1065
     monitor-exit v12
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1067
     invoke-virtual/range {p0 .. p1}, Landroid/media/WebVttTrack;->addCue(Landroid/media/SubtitleTrack$Cue;)Z
 
-    .line 1068
     return-void
 
-    .line 1061
     :cond_8
     const/4 v11, 0x0
 
@@ -511,7 +474,6 @@
 
     goto :goto_4
 
-    .line 1065
     .end local v4           #i$:I
     :catchall_0
     move-exception v11
@@ -530,12 +492,10 @@
     .parameter "runID"
 
     .prologue
-    .line 1005
     iget-object v1, p0, Landroid/media/WebVttTrack;->mParser:Landroid/media/WebVttParser;
 
     monitor-enter v1
 
-    .line 1006
     :try_start_0
     iget-object v0, p0, Landroid/media/WebVttTrack;->mCurrentRunID:Ljava/lang/Long;
 
@@ -551,7 +511,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1007
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -588,7 +547,6 @@
 
     throw v0
 
-    .line 1019
     :catchall_0
     move-exception v0
 
@@ -598,7 +556,6 @@
 
     throw v0
 
-    .line 1011
     :cond_0
     :try_start_1
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -607,39 +564,31 @@
 
     iput-object v0, p0, Landroid/media/WebVttTrack;->mCurrentRunID:Ljava/lang/Long;
 
-    .line 1012
     iget-object v0, p0, Landroid/media/WebVttTrack;->mParser:Landroid/media/WebVttParser;
 
     invoke-virtual {v0, p1}, Landroid/media/WebVttParser;->parse(Ljava/lang/String;)V
 
-    .line 1013
     if-eqz p2, :cond_1
 
-    .line 1014
     invoke-virtual {p0, p3, p4}, Landroid/media/WebVttTrack;->finishedRun(J)V
 
-    .line 1015
     iget-object v0, p0, Landroid/media/WebVttTrack;->mParser:Landroid/media/WebVttParser;
 
     invoke-virtual {v0}, Landroid/media/WebVttParser;->eos()V
 
-    .line 1016
     iget-object v0, p0, Landroid/media/WebVttTrack;->mRegions:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 1017
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/WebVttTrack;->mCurrentRunID:Ljava/lang/Long;
 
-    .line 1019
     :cond_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1020
     return-void
 .end method
 
@@ -648,12 +597,10 @@
     .parameter "region"
 
     .prologue
-    .line 1072
     iget-object v1, p0, Landroid/media/WebVttTrack;->mParser:Landroid/media/WebVttParser;
 
     monitor-enter v1
 
-    .line 1073
     :try_start_0
     iget-object v0, p0, Landroid/media/WebVttTrack;->mRegions:Ljava/util/Map;
 
@@ -661,13 +608,10 @@
 
     invoke-interface {v0, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1074
     monitor-exit v1
 
-    .line 1075
     return-void
 
-    .line 1074
     :catchall_0
     move-exception v0
 
@@ -692,17 +636,14 @@
     .end annotation
 
     .prologue
-    .line 1079
     .local p1, activeCues:Ljava/util/Vector;,"Ljava/util/Vector<Landroid/media/SubtitleTrack$Cue;>;"
     iget-boolean v1, p0, Landroid/media/WebVttTrack;->mVisible:Z
 
     if-nez v1, :cond_0
 
-    .line 1095
     :goto_0
     return-void
 
-    .line 1084
     :cond_0
     iget-boolean v1, p0, Landroid/media/WebVttTrack;->DEBUG:Z
 
@@ -712,7 +653,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1086
     :try_start_0
     const-string v1, "WebVttTrack"
 
@@ -758,7 +698,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1094
     :cond_1
     :goto_1
     iget-object v1, p0, Landroid/media/WebVttTrack;->mRenderingWidget:Landroid/media/WebVttRenderingWidget;
@@ -767,11 +706,9 @@
 
     goto :goto_0
 
-    .line 1089
     :catch_0
     move-exception v0
 
-    .line 1090
     .local v0, e:Ljava/lang/IllegalStateException;
     const-string v1, "WebVttTrack"
 

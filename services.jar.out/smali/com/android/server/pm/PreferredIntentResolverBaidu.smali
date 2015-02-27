@@ -24,7 +24,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Lcom/android/server/IntentResolver;-><init>()V
 
     return-void
@@ -35,38 +34,31 @@
     .parameter "context"
 
     .prologue
-    .line 66
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 67
     .local v1, filter:Landroid/content/IntentFilter;
     const-string v5, "android.intent.action.VIEW"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 68
     const-string v5, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 69
     const-string v5, "android.intent.category.BROWSABLE"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 70
     const-string v5, "http"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 71
     const-string v5, "https"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 72
     new-instance v5, Lcom/android/server/pm/PreferredActivityBaidu;
 
     new-instance v6, Landroid/content/ComponentName;
@@ -81,29 +73,24 @@
 
     invoke-virtual {p0, v5}, Lcom/android/server/pm/PreferredIntentResolverBaidu;->addFilter(Landroid/content/IntentFilter;)V
 
-    .line 75
     new-instance v1, Landroid/content/IntentFilter;
 
     .end local v1           #filter:Landroid/content/IntentFilter;
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 76
     .restart local v1       #filter:Landroid/content/IntentFilter;
     const-string v5, "android.intent.action.MAIN"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 77
     const-string v5, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 78
     const-string v5, "android.intent.category.HOME"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 79
     new-instance v5, Lcom/android/server/pm/PreferredActivityBaidu;
 
     new-instance v6, Landroid/content/ComponentName;
@@ -118,29 +105,24 @@
 
     invoke-virtual {p0, v5}, Lcom/android/server/pm/PreferredIntentResolverBaidu;->addFilter(Landroid/content/IntentFilter;)V
 
-    .line 82
     new-instance v1, Landroid/content/IntentFilter;
 
     .end local v1           #filter:Landroid/content/IntentFilter;
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 83
     .restart local v1       #filter:Landroid/content/IntentFilter;
     const-string v5, "android.intent.action.SENDTO"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 84
     const-string v5, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 85
     const-string v5, "smsto"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 86
     new-instance v5, Lcom/android/server/pm/PreferredActivityBaidu;
 
     new-instance v6, Landroid/content/ComponentName;
@@ -155,34 +137,28 @@
 
     invoke-virtual {p0, v5}, Lcom/android/server/pm/PreferredIntentResolverBaidu;->addFilter(Landroid/content/IntentFilter;)V
 
-    .line 89
     new-instance v1, Landroid/content/IntentFilter;
 
     .end local v1           #filter:Landroid/content/IntentFilter;
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 90
     .restart local v1       #filter:Landroid/content/IntentFilter;
     const-string v5, "android.intent.action.VIEW"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 91
     const-string v5, "android.intent.action.DIAL"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 92
     const-string v5, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 93
     const-string v5, "tel"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 94
     new-instance v5, Lcom/android/server/pm/PreferredActivityBaidu;
 
     new-instance v6, Landroid/content/ComponentName;
@@ -197,24 +173,20 @@
 
     invoke-virtual {p0, v5}, Lcom/android/server/pm/PreferredIntentResolverBaidu;->addFilter(Landroid/content/IntentFilter;)V
 
-    .line 97
     new-instance v1, Landroid/content/IntentFilter;
 
     .end local v1           #filter:Landroid/content/IntentFilter;
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 98
     .restart local v1       #filter:Landroid/content/IntentFilter;
     const-string v5, "android.media.action.IMAGE_CAPTURE"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 99
     const-string v5, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 100
     new-instance v5, Lcom/android/server/pm/PreferredActivityBaidu;
 
     new-instance v6, Landroid/content/ComponentName;
@@ -229,29 +201,24 @@
 
     invoke-virtual {p0, v5}, Lcom/android/server/pm/PreferredIntentResolverBaidu;->addFilter(Landroid/content/IntentFilter;)V
 
-    .line 103
     new-instance v1, Landroid/content/IntentFilter;
 
     .end local v1           #filter:Landroid/content/IntentFilter;
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 104
     .restart local v1       #filter:Landroid/content/IntentFilter;
     const-string v5, "android.intent.action.VIEW"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 105
     const-string v5, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 106
     const-string v5, "android.intent.category.BROWSABLE"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 108
     :try_start_0
     const-string v5, "image/*"
 
@@ -259,7 +226,6 @@
     :try_end_0
     .catch Landroid/content/IntentFilter$MalformedMimeTypeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 112
     :goto_0
     new-instance v5, Lcom/android/server/pm/PreferredActivityBaidu;
 
@@ -275,29 +241,24 @@
 
     invoke-virtual {p0, v5}, Lcom/android/server/pm/PreferredIntentResolverBaidu;->addFilter(Landroid/content/IntentFilter;)V
 
-    .line 115
     new-instance v1, Landroid/content/IntentFilter;
 
     .end local v1           #filter:Landroid/content/IntentFilter;
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 116
     .restart local v1       #filter:Landroid/content/IntentFilter;
     const-string v5, "android.intent.action.VIEW"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 117
     const-string v5, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 118
     const-string v5, "android.intent.category.BROWSABLE"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 120
     :try_start_1
     const-string v5, "audio/*"
 
@@ -305,7 +266,6 @@
     :try_end_1
     .catch Landroid/content/IntentFilter$MalformedMimeTypeException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 124
     :goto_1
     new-instance v5, Lcom/android/server/pm/PreferredActivityBaidu;
 
@@ -321,44 +281,36 @@
 
     invoke-virtual {p0, v5}, Lcom/android/server/pm/PreferredIntentResolverBaidu;->addFilter(Landroid/content/IntentFilter;)V
 
-    .line 127
     new-instance v1, Landroid/content/IntentFilter;
 
     .end local v1           #filter:Landroid/content/IntentFilter;
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 128
     .restart local v1       #filter:Landroid/content/IntentFilter;
     const-string v5, "android.intent.action.VIEW"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 129
     const-string v5, "android.intent.action.SENDTO"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 130
     const-string v5, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 131
     const-string v5, "android.intent.category.BROWSABLE"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 132
     const-string v5, "mailto"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 133
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
-    .line 134
     .local v4, pm:Landroid/content/pm/PackageManager;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -368,7 +320,6 @@
 
     invoke-direct {v2, v5, v6}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 135
     .local v2, hasAccountEmail:Landroid/content/ComponentName;
     new-instance v3, Landroid/content/ComponentName;
 
@@ -378,7 +329,6 @@
 
     invoke-direct {v3, v5, v6}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 136
     .local v3, hasNoAccountEmail:Landroid/content/ComponentName;
     :try_start_2
     invoke-virtual {v4, v3}, Landroid/content/pm/PackageManager;->getComponentEnabledSetting(Landroid/content/ComponentName;)I
@@ -454,24 +404,20 @@
     .parameter "context"
 
     .prologue
-    .line 145
     sget-object v0, Lcom/android/server/pm/PreferredIntentResolverBaidu;->mInstance:Lcom/android/server/pm/PreferredIntentResolverBaidu;
 
     if-nez v0, :cond_0
 
-    .line 146
     new-instance v0, Lcom/android/server/pm/PreferredIntentResolverBaidu;
 
     invoke-direct {v0}, Lcom/android/server/pm/PreferredIntentResolverBaidu;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/PreferredIntentResolverBaidu;->mInstance:Lcom/android/server/pm/PreferredIntentResolverBaidu;
 
-    .line 147
     sget-object v0, Lcom/android/server/pm/PreferredIntentResolverBaidu;->mInstance:Lcom/android/server/pm/PreferredIntentResolverBaidu;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/PreferredIntentResolverBaidu;->addDefault(Landroid/content/Context;)V
 
-    .line 149
     :cond_0
     sget-object v0, Lcom/android/server/pm/PreferredIntentResolverBaidu;->mInstance:Lcom/android/server/pm/PreferredIntentResolverBaidu;
 
@@ -486,7 +432,6 @@
     .parameter "x1"
 
     .prologue
-    .line 33
     check-cast p1, Lcom/android/server/pm/PreferredActivityBaidu;
 
     .end local p1
@@ -513,7 +458,6 @@
     .end annotation
 
     .prologue
-    .line 44
     .local p2, dest:Ljava/util/List;,"Ljava/util/List<Lcom/android/server/pm/PreferredActivityBaidu;>;"
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -525,7 +469,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 45
     invoke-virtual {p1}, Lcom/android/server/pm/PreferredActivityBaidu;->getmComponentName()Landroid/content/ComponentName;
 
     move-result-object v2
@@ -546,20 +489,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 46
     const/4 v1, 0x0
 
-    .line 49
     :goto_1
     return v1
 
-    .line 44
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 49
     :cond_1
     const/4 v1, 0x1
 
@@ -573,7 +512,6 @@
     .parameter "x2"
 
     .prologue
-    .line 33
     check-cast p3, Lcom/android/server/pm/PreferredActivityBaidu;
 
     .end local p3
@@ -589,7 +527,6 @@
     .parameter "filter"
 
     .prologue
-    .line 62
     return-void
 .end method
 
@@ -599,7 +536,6 @@
     .parameter "x1"
 
     .prologue
-    .line 33
     check-cast p2, Lcom/android/server/pm/PreferredActivityBaidu;
 
     .end local p2
@@ -616,7 +552,6 @@
     .parameter "info"
 
     .prologue
-    .line 55
     invoke-virtual {p2}, Lcom/android/server/pm/PreferredActivityBaidu;->getmComponentName()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -637,7 +572,6 @@
     .parameter "x0"
 
     .prologue
-    .line 33
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PreferredIntentResolverBaidu;->newArray(I)[Lcom/android/server/pm/PreferredActivityBaidu;
 
     move-result-object v0
@@ -650,7 +584,6 @@
     .parameter "size"
 
     .prologue
-    .line 38
     new-array v0, p1, [Lcom/android/server/pm/PreferredActivityBaidu;
 
     return-object v0

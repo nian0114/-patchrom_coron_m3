@@ -52,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 798
     new-instance v0, Landroid/app/AppOpsManager$PackageOps$1;
 
     invoke-direct {v0}, Landroid/app/AppOpsManager$PackageOps$1;-><init>()V
@@ -67,36 +66,30 @@
     .parameter "source"
 
     .prologue
-    .line 788
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 789
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/app/AppOpsManager$PackageOps;->mPackageName:Ljava/lang/String;
 
-    .line 790
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Landroid/app/AppOpsManager$PackageOps;->mUid:I
 
-    .line 791
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Landroid/app/AppOpsManager$PackageOps;->mEntries:Ljava/util/List;
 
-    .line 792
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 793
     .local v0, N:I
     const/4 v1, 0x0
 
@@ -104,7 +97,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 794
     iget-object v2, p0, Landroid/app/AppOpsManager$PackageOps;->mEntries:Ljava/util/List;
 
     sget-object v3, Landroid/app/AppOpsManager$OpEntry;->CREATOR:Landroid/os/Parcelable$Creator;
@@ -115,12 +107,10 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 793
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 796
     :cond_0
     return-void
 .end method
@@ -143,20 +133,15 @@
     .end annotation
 
     .prologue
-    .line 755
     .local p3, entries:Ljava/util/List;,"Ljava/util/List<Landroid/app/AppOpsManager$OpEntry;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 756
     iput-object p1, p0, Landroid/app/AppOpsManager$PackageOps;->mPackageName:Ljava/lang/String;
 
-    .line 757
     iput p2, p0, Landroid/app/AppOpsManager$PackageOps;->mUid:I
 
-    .line 758
     iput-object p3, p0, Landroid/app/AppOpsManager$PackageOps;->mEntries:Ljava/util/List;
 
-    .line 759
     return-void
 .end method
 
@@ -166,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 775
     const/4 v0, 0x0
 
     return v0
@@ -185,7 +169,6 @@
     .end annotation
 
     .prologue
-    .line 770
     iget-object v0, p0, Landroid/app/AppOpsManager$PackageOps;->mEntries:Ljava/util/List;
 
     return-object v0
@@ -195,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 762
     iget-object v0, p0, Landroid/app/AppOpsManager$PackageOps;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -205,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 766
     iget v0, p0, Landroid/app/AppOpsManager$PackageOps;->mUid:I
 
     return v0
@@ -217,17 +198,14 @@
     .parameter "flags"
 
     .prologue
-    .line 780
     iget-object v1, p0, Landroid/app/AppOpsManager$PackageOps;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 781
     iget v1, p0, Landroid/app/AppOpsManager$PackageOps;->mUid:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 782
     iget-object v1, p0, Landroid/app/AppOpsManager$PackageOps;->mEntries:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -236,7 +214,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 783
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -249,7 +226,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 784
     iget-object v1, p0, Landroid/app/AppOpsManager$PackageOps;->mEntries:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -260,12 +236,10 @@
 
     invoke-virtual {v1, p1, p2}, Landroid/app/AppOpsManager$OpEntry;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 783
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 786
     :cond_0
     return-void
 .end method

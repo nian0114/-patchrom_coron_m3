@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 708
     iput-object p1, p0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .parameter "line"
 
     .prologue
-    .line 787
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 788
     iget-object v4, p0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
     iget-object v5, p0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
@@ -62,12 +59,10 @@
     #setter for: Landroid/media/WebVttParser;->mPhase:Landroid/media/WebVttParser$Phase;
     invoke-static {v4, v5}, Landroid/media/WebVttParser;->access$102(Landroid/media/WebVttParser;Landroid/media/WebVttParser$Phase;)Landroid/media/WebVttParser$Phase;
 
-    .line 805
     :cond_0
     :goto_0
     return-void
 
-    .line 789
     :cond_1
     const-string v4, "-->"
 
@@ -77,7 +72,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 790
     iget-object v4, p0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
     iget-object v5, p0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
@@ -90,7 +84,6 @@
     #setter for: Landroid/media/WebVttParser;->mPhase:Landroid/media/WebVttParser$Phase;
     invoke-static {v4, v5}, Landroid/media/WebVttParser;->access$102(Landroid/media/WebVttParser;Landroid/media/WebVttParser$Phase;)Landroid/media/WebVttParser$Phase;
 
-    .line 791
     iget-object v4, p0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
     #getter for: Landroid/media/WebVttParser;->mPhase:Landroid/media/WebVttParser$Phase;
@@ -102,7 +95,6 @@
 
     goto :goto_0
 
-    .line 793
     :cond_2
     const/16 v4, 0x3a
 
@@ -110,7 +102,6 @@
 
     move-result v0
 
-    .line 794
     .local v0, colonAt:I
     if-lez v0, :cond_3
 
@@ -122,16 +113,14 @@
 
     if-lt v0, v4, :cond_4
 
-    .line 795
     :cond_3
     iget-object v4, p0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
-    const-string/jumbo v5, "meta data header has invalid format"
+    const-string v5, "meta data header has invalid format"
 
     #calls: Landroid/media/WebVttParser;->log_warning(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v4, v5, p1}, Landroid/media/WebVttParser;->access$000(Landroid/media/WebVttParser;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 797
     :cond_4
     const/4 v4, 0x0
 
@@ -139,7 +128,6 @@
 
     move-result-object v1
 
-    .line 798
     .local v1, name:Ljava/lang/String;
     add-int/lit8 v4, v0, 0x1
 
@@ -147,7 +135,6 @@
 
     move-result-object v3
 
-    .line 800
     .local v3, value:Ljava/lang/String;
     const-string v4, "Region"
 
@@ -157,12 +144,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 801
     invoke-virtual {p0, v3}, Landroid/media/WebVttParser$3;->parseRegion(Ljava/lang/String;)Landroid/media/TextTrackRegion;
 
     move-result-object v2
 
-    .line 802
     .local v2, region:Landroid/media/TextTrackRegion;
     iget-object v4, p0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
@@ -181,12 +166,10 @@
     .parameter "s"
 
     .prologue
-    .line 710
     new-instance v27, Landroid/media/TextTrackRegion;
 
     invoke-direct/range {v27 .. v27}, Landroid/media/TextTrackRegion;-><init>()V
 
-    .line 711
     .local v27, region:Landroid/media/TextTrackRegion;
     const-string v2, " +"
 
@@ -216,7 +199,6 @@
 
     aget-object v28, v20, v24
 
-    .line 712
     .local v28, setting:Ljava/lang/String;
     const/16 v2, 0x3d
 
@@ -226,7 +208,6 @@
 
     move-result v23
 
-    .line 713
     .local v23, equalAt:I
     if-lez v23, :cond_0
 
@@ -240,14 +221,12 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 711
     :cond_0
     :goto_1
     add-int/lit8 v24, v24, 0x1
 
     goto :goto_0
 
-    .line 717
     :cond_1
     const/4 v2, 0x0
 
@@ -259,7 +238,6 @@
 
     move-result-object v4
 
-    .line 718
     .local v4, name:Ljava/lang/String;
     add-int/lit8 v2, v23, 0x1
 
@@ -269,7 +247,6 @@
 
     move-result-object v7
 
-    .line 719
     .local v7, value:Ljava/lang/String;
     const-string v2, "id"
 
@@ -279,16 +256,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 720
     move-object/from16 v0, v27
 
     iput-object v7, v0, Landroid/media/TextTrackRegion;->mId:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 721
     :cond_2
-    const-string/jumbo v2, "width"
+    const-string v2, "width"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -296,7 +271,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 723
     :try_start_0
     invoke-static {v7}, Landroid/media/WebVttParser;->parseFloatPercentage(Ljava/lang/String;)F
 
@@ -310,17 +284,15 @@
 
     goto :goto_1
 
-    .line 724
     :catch_0
     move-exception v22
 
-    .line 725
     .local v22, e:Ljava/lang/NumberFormatException;
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
-    const-string/jumbo v3, "region setting"
+    const-string v3, "region setting"
 
     const-string v5, "has invalid value"
 
@@ -333,7 +305,6 @@
 
     goto :goto_1
 
-    .line 728
     .end local v22           #e:Ljava/lang/NumberFormatException;
     :cond_3
     const-string v2, "lines"
@@ -344,17 +315,14 @@
 
     if-eqz v2, :cond_5
 
-    .line 730
     :try_start_1
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v26
 
-    .line 731
     .local v26, lines:I
     if-ltz v26, :cond_4
 
-    .line 732
     move/from16 v0, v26
 
     move-object/from16 v1, v27
@@ -365,18 +333,16 @@
 
     goto :goto_1
 
-    .line 736
     .end local v26           #lines:I
     :catch_1
     move-exception v22
 
-    .line 737
     .restart local v22       #e:Ljava/lang/NumberFormatException;
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
-    const-string/jumbo v3, "region setting"
+    const-string v3, "region setting"
 
     const-string v5, "is not numeric"
 
@@ -385,7 +351,6 @@
 
     goto :goto_1
 
-    .line 734
     .end local v22           #e:Ljava/lang/NumberFormatException;
     .restart local v26       #lines:I
     :cond_4
@@ -394,7 +359,7 @@
 
     iget-object v2, v0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
-    const-string/jumbo v3, "region setting"
+    const-string v3, "region setting"
 
     const-string v5, "is negative"
 
@@ -405,10 +370,9 @@
 
     goto :goto_1
 
-    .line 739
     .end local v26           #lines:I
     :cond_5
-    const-string/jumbo v2, "regionanchor"
+    const-string v2, "regionanchor"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -416,7 +380,7 @@
 
     if-nez v2, :cond_6
 
-    const-string/jumbo v2, "viewportanchor"
+    const-string v2, "viewportanchor"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -424,7 +388,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 741
     :cond_6
     const-string v2, ","
 
@@ -432,16 +395,14 @@
 
     move-result v21
 
-    .line 742
     .local v21, commaAt:I
     if-gez v21, :cond_7
 
-    .line 743
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
-    const-string/jumbo v3, "region setting"
+    const-string v3, "region setting"
 
     const-string v5, "contains no comma"
 
@@ -450,7 +411,6 @@
 
     goto/16 :goto_1
 
-    .line 747
     :cond_7
     const/4 v2, 0x0
 
@@ -460,7 +420,6 @@
 
     move-result-object v13
 
-    .line 748
     .local v13, anchorX:Ljava/lang/String;
     add-int/lit8 v2, v21, 0x1
 
@@ -468,7 +427,6 @@
 
     move-result-object v19
 
-    .line 752
     .local v19, anchorY:Ljava/lang/String;
     :try_start_3
     invoke-static {v13}, Landroid/media/WebVttParser;->parseFloatPercentage(Ljava/lang/String;)F
@@ -477,7 +435,6 @@
 
     move-result v29
 
-    .line 759
     .local v29, x:F
     :try_start_4
     invoke-static/range {v19 .. v19}, Landroid/media/WebVttParser;->parseFloatPercentage(Ljava/lang/String;)F
@@ -486,7 +443,6 @@
 
     move-result v30
 
-    .line 766
     .local v30, y:F
     const/4 v2, 0x0
 
@@ -498,14 +454,12 @@
 
     if-ne v2, v3, :cond_8
 
-    .line 767
     move/from16 v0, v29
 
     move-object/from16 v1, v27
 
     iput v0, v1, Landroid/media/TextTrackRegion;->mAnchorPointX:F
 
-    .line 768
     move/from16 v0, v30
 
     move-object/from16 v1, v27
@@ -514,19 +468,17 @@
 
     goto/16 :goto_1
 
-    .line 753
     .end local v29           #x:F
     .end local v30           #y:F
     :catch_2
     move-exception v22
 
-    .line 754
     .restart local v22       #e:Ljava/lang/NumberFormatException;
     move-object/from16 v0, p0
 
     iget-object v8, v0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
-    const-string/jumbo v9, "region setting"
+    const-string v9, "region setting"
 
     const-string v11, "has invalid x component"
 
@@ -541,19 +493,17 @@
 
     goto/16 :goto_1
 
-    .line 760
     .end local v22           #e:Ljava/lang/NumberFormatException;
     .restart local v29       #x:F
     :catch_3
     move-exception v22
 
-    .line 761
     .restart local v22       #e:Ljava/lang/NumberFormatException;
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
-    const-string/jumbo v15, "region setting"
+    const-string v15, "region setting"
 
     const-string v17, "has invalid y component"
 
@@ -568,7 +518,6 @@
 
     goto/16 :goto_1
 
-    .line 770
     .end local v22           #e:Ljava/lang/NumberFormatException;
     .restart local v30       #y:F
     :cond_8
@@ -578,7 +527,6 @@
 
     iput v0, v1, Landroid/media/TextTrackRegion;->mViewportAnchorPointX:F
 
-    .line 771
     move/from16 v0, v30
 
     move-object/from16 v1, v27
@@ -587,14 +535,13 @@
 
     goto/16 :goto_1
 
-    .line 773
     .end local v13           #anchorX:Ljava/lang/String;
     .end local v19           #anchorY:Ljava/lang/String;
     .end local v21           #commaAt:I
     .end local v29           #x:F
     .end local v30           #y:F
     :cond_9
-    const-string/jumbo v2, "scroll"
+    const-string v2, "scroll"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -602,8 +549,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 774
-    const-string/jumbo v2, "up"
+    const-string v2, "up"
 
     invoke-virtual {v7, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -611,7 +557,6 @@
 
     if-eqz v2, :cond_a
 
-    .line 775
     const/16 v2, 0x12d
 
     move-object/from16 v0, v27
@@ -620,13 +565,12 @@
 
     goto/16 :goto_1
 
-    .line 778
     :cond_a
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/WebVttParser$3;->this$0:Landroid/media/WebVttParser;
 
-    const-string/jumbo v3, "region setting"
+    const-string v3, "region setting"
 
     const-string v5, "has invalid value"
 
@@ -635,7 +579,6 @@
 
     goto/16 :goto_1
 
-    .line 782
     .end local v4           #name:Ljava/lang/String;
     .end local v7           #value:Ljava/lang/String;
     .end local v23           #equalAt:I

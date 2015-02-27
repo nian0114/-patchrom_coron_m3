@@ -24,10 +24,8 @@
     .parameter "handler"
 
     .prologue
-    .line 256
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 257
     return-void
 .end method
 
@@ -37,13 +35,10 @@
     .parameter "am"
 
     .prologue
-    .line 251
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 252
     iput-object p2, p0, Landroid/content/res/BaiduAssetManager$BaiduMContentObserver;->mAssetManager:Landroid/content/res/BaiduAssetManager;
 
-    .line 253
     return-void
 .end method
 
@@ -54,11 +49,9 @@
     .parameter "selfChange"
 
     .prologue
-    .line 261
     iget-object v0, p0, Landroid/content/res/BaiduAssetManager$BaiduMContentObserver;->mAssetManager:Landroid/content/res/BaiduAssetManager;
 
     invoke-static {v0}, Landroid/content/res/BaiduAssetManager$BaiduChannelInjector;->readChannelPkgsBackgroud(Landroid/content/res/BaiduAssetManager;)V
 
-    .line 262
     return-void
 .end method

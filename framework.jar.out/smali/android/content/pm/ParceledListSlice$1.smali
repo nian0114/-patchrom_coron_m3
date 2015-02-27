@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 129
     .local p0, this:Landroid/content/pm/ParceledListSlice$1;,"Landroid/content/pm/ParceledListSlice.1;"
     iput-object p1, p0, Landroid/content/pm/ParceledListSlice$1;->this$0:Landroid/content/pm/ParceledListSlice;
 
@@ -61,25 +60,20 @@
     .local p0, this:Landroid/content/pm/ParceledListSlice$1;,"Landroid/content/pm/ParceledListSlice.1;"
     const/4 v2, 0x1
 
-    .line 133
     if-eq p1, v2, :cond_0
 
-    .line 134
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
 
-    .line 148
     :goto_0
     return v1
 
-    .line 136
     :cond_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 137
     .local v0, i:I
     invoke-static {}, Landroid/content/pm/ParceledListSlice;->access$000()Z
 
@@ -123,7 +117,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     :cond_1
     :goto_1
     iget v1, p0, Landroid/content/pm/ParceledListSlice$1;->val$N:I
@@ -138,10 +131,8 @@
 
     if-ge v1, v3, :cond_3
 
-    .line 139
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 140
     iget-object v1, p0, Landroid/content/pm/ParceledListSlice$1;->this$0:Landroid/content/pm/ParceledListSlice;
 
     #getter for: Landroid/content/pm/ParceledListSlice;->mList:Ljava/util/List;
@@ -159,7 +150,6 @@
 
     invoke-interface {v1, p3, v3}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 141
     invoke-static {}, Landroid/content/pm/ParceledListSlice;->access$000()Z
 
     move-result v1
@@ -211,19 +201,16 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 144
     :cond_3
     iget v1, p0, Landroid/content/pm/ParceledListSlice$1;->val$N:I
 
     if-ge v0, v1, :cond_5
 
-    .line 145
     invoke-static {}, Landroid/content/pm/ParceledListSlice;->access$000()Z
 
     move-result v1
@@ -266,7 +253,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     :cond_4
     const/4 v1, 0x0
 
@@ -275,6 +261,5 @@
     :cond_5
     move v1, v2
 
-    .line 148
     goto/16 :goto_0
 .end method

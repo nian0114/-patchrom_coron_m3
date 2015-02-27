@@ -25,17 +25,14 @@
     .parameter "looper"
 
     .prologue
-    .line 267
     iput-object p1, p0, Landroid/print/PrinterDiscoverySession$SessionHandler;->this$0:Landroid/print/PrinterDiscoverySession;
 
-    .line 268
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 269
     return-void
 .end method
 
@@ -46,22 +43,18 @@
     .parameter "message"
 
     .prologue
-    .line 274
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 285
     :goto_0
     return-void
 
-    .line 276
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/util/List;
 
-    .line 277
     .local v1, printers:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrinterInfo;>;"
     iget-object v2, p0, Landroid/print/PrinterDiscoverySession$SessionHandler;->this$0:Landroid/print/PrinterDiscoverySession;
 
@@ -70,14 +63,12 @@
 
     goto :goto_0
 
-    .line 281
     .end local v1           #printers:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrinterInfo;>;"
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/List;
 
-    .line 282
     .local v0, printerIds:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrinterId;>;"
     iget-object v2, p0, Landroid/print/PrinterDiscoverySession$SessionHandler;->this$0:Landroid/print/PrinterDiscoverySession;
 
@@ -86,7 +77,6 @@
 
     goto :goto_0
 
-    .line 274
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

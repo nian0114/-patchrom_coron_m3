@@ -34,16 +34,12 @@
     .parameter "context"
 
     .prologue
-    .line 265
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu;
 
-    .line 266
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 267
     iput-object p3, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mContext:Landroid/content/Context;
 
-    .line 268
     return-void
 .end method
 
@@ -59,14 +55,12 @@
 
     const/4 v2, 0x0
 
-    .line 291
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 292
     .local v0, resolver:Landroid/content/ContentResolver;
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mLongPressPowerWhenLockUri:Landroid/net/Uri;
 
@@ -76,7 +70,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 293
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu;
 
     const-string v4, "disable_power_menu_when_lock"
@@ -91,7 +84,6 @@
     #setter for: Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu;->isEnablePowerLongPressWhenLock:Z
     invoke-static {v3, v1}, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu;->access$iput-isEnablePowerLongPressWhenLock-6099bd(Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu;Z)Z
 
-    .line 299
     :cond_0
     :goto_1
     return-void
@@ -99,10 +91,8 @@
     :cond_1
     move v1, v2
 
-    .line 293
     goto :goto_0
 
-    .line 294
     :cond_2
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mVolumeRevokeUri:Landroid/net/Uri;
 
@@ -112,7 +102,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 295
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu;
 
     const-string v4, "volume_revoke"
@@ -134,7 +123,6 @@
 
     goto :goto_2
 
-    .line 296
     :cond_4
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mHardwareKeyLongPressUri:Landroid/net/Uri;
 
@@ -144,7 +132,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 297
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu;
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mContext:Landroid/content/Context;
@@ -166,14 +153,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 271
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 273
     .local v0, resolver:Landroid/content/ContentResolver;
     const-string v1, "disable_power_menu_when_lock"
 
@@ -183,12 +168,10 @@
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mLongPressPowerWhenLockUri:Landroid/net/Uri;
 
-    .line 274
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mLongPressPowerWhenLockUri:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 275
     const-string v1, "volume_revoke"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -197,15 +180,12 @@
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mVolumeRevokeUri:Landroid/net/Uri;
 
-    .line 276
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mVolumeRevokeUri:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 278
     if-eqz p1, :cond_0
 
-    .line 279
     sget-object v1, Lcom/android/internal/util/ButtonHelper;->HARDWARE_KEY_CONFIG:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -214,12 +194,10 @@
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mHardwareKeyLongPressUri:Landroid/net/Uri;
 
-    .line 281
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mHardwareKeyLongPressUri:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 283
     :cond_0
     return-void
 .end method
@@ -228,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 286
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManagerBaidu$KeySettingsObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -237,6 +214,5 @@
 
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 287
     return-void
 .end method

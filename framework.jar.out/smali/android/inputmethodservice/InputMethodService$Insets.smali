@@ -39,10 +39,8 @@
     .locals 1
 
     .prologue
-    .line 555
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 584
     new-instance v0, Landroid/graphics/Region;
 
     invoke-direct {v0}, Landroid/graphics/Region;-><init>()V

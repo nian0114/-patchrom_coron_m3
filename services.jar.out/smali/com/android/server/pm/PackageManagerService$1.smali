@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 1305
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$1;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$1;->val$lib:Ljava/lang/String;
@@ -46,7 +45,6 @@
     .locals 4
 
     .prologue
-    .line 1308
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$1;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
@@ -59,6 +57,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/pm/Installer;->dexopt(Ljava/lang/String;IZ)I
 
-    .line 1309
     return-void
 .end method

@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 105
     new-instance v0, Lcom/android/server/connectivity/Tethering$IPAddrType;
 
     const-string v1, "V4"
@@ -85,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 105
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +94,6 @@
     .parameter "name"
 
     .prologue
-    .line 105
     const-class v0, Lcom/android/server/connectivity/Tethering$IPAddrType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 105
     sget-object v0, Lcom/android/server/connectivity/Tethering$IPAddrType;->$VALUES:[Lcom/android/server/connectivity/Tethering$IPAddrType;
 
     invoke-virtual {v0}, [Lcom/android/server/connectivity/Tethering$IPAddrType;->clone()Ljava/lang/Object;

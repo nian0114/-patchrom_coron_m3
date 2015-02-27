@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 4077
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .parameter "in"
 
     .prologue
-    .line 4079
     new-instance v0, Landroid/widget/Editor$TextModifyOperation;
 
     const/4 v1, 0x0
@@ -61,7 +59,6 @@
     .parameter "loader"
 
     .prologue
-    .line 4083
     new-instance v0, Landroid/widget/Editor$TextModifyOperation;
 
     invoke-direct {v0, p1, p2}, Landroid/widget/Editor$TextModifyOperation;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
@@ -74,7 +71,6 @@
     .parameter "x0"
 
     .prologue
-    .line 4077
     invoke-virtual {p0, p1}, Landroid/widget/Editor$TextModifyOperation$1;->createFromParcel(Landroid/os/Parcel;)Landroid/widget/Editor$TextModifyOperation;
 
     move-result-object v0
@@ -88,7 +84,6 @@
     .parameter "x1"
 
     .prologue
-    .line 4077
     invoke-virtual {p0, p1, p2}, Landroid/widget/Editor$TextModifyOperation$1;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/widget/Editor$TextModifyOperation;
 
     move-result-object v0
@@ -101,7 +96,6 @@
     .parameter "size"
 
     .prologue
-    .line 4087
     new-array v0, p1, [Landroid/widget/Editor$TextModifyOperation;
 
     return-object v0
@@ -112,7 +106,6 @@
     .parameter "x0"
 
     .prologue
-    .line 4077
     invoke-virtual {p0, p1}, Landroid/widget/Editor$TextModifyOperation$1;->newArray(I)[Landroid/widget/Editor$TextModifyOperation;
 
     move-result-object v0

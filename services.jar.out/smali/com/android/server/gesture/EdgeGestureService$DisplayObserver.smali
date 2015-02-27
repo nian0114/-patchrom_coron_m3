@@ -37,22 +37,18 @@
     .parameter "handler"
 
     .prologue
-    .line 389
     iput-object p1, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 387
     new-instance v1, Landroid/view/DisplayInfo;
 
     invoke-direct {v1}, Landroid/view/DisplayInfo;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
-    .line 390
     iput-object p3, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->mHandler:Landroid/os/Handler;
 
-    .line 391
     const-string v1, "display"
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -63,7 +59,6 @@
 
     iput-object v1, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
-    .line 393
     const-string v1, "window"
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -72,7 +67,6 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 396
     .local v0, windowManager:Landroid/view/WindowManager;
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -80,10 +74,8 @@
 
     iput-object v1, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->mDefaultDisplay:Landroid/view/Display;
 
-    .line 397
     invoke-direct {p0}, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->updateDisplayInfo()V
 
-    .line 398
     return-void
 .end method
 
@@ -91,7 +83,6 @@
     .locals 4
 
     .prologue
-    .line 404
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->mDefaultDisplay:Landroid/view/Display;
 
     iget-object v1, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
@@ -102,7 +93,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 405
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
     #getter for: Lcom/android/server/gesture/EdgeGestureService;->mLock:Ljava/lang/Object;
@@ -112,7 +102,6 @@
 
     monitor-enter v1
 
-    .line 406
     :try_start_0
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
@@ -123,7 +112,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 407
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->this$0:Lcom/android/server/gesture/EdgeGestureService;
 
     #getter for: Lcom/android/server/gesture/EdgeGestureService;->mInputFilter:Lcom/android/server/gesture/EdgeGestureInputFilter;
@@ -137,15 +125,12 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/gesture/EdgeGestureInputFilter;->updateDisplay(Landroid/view/Display;Landroid/view/DisplayInfo;)V
 
-    .line 409
     :cond_0
     monitor-exit v1
 
-    .line 413
     :goto_0
     return-void
 
-    .line 409
     :catchall_0
     move-exception v0
 
@@ -155,7 +140,6 @@
 
     throw v0
 
-    .line 411
     :cond_1
     const-string v0, "EdgeGestureService"
 
@@ -172,17 +156,14 @@
     .locals 2
 
     .prologue
-    .line 416
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     iget-object v1, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p0, v1}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
-    .line 417
     invoke-direct {p0}, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->updateDisplayInfo()V
 
-    .line 418
     return-void
 .end method
 
@@ -191,7 +172,6 @@
     .parameter "displayId"
 
     .prologue
-    .line 427
     return-void
 .end method
 
@@ -200,10 +180,8 @@
     .parameter "displayId"
 
     .prologue
-    .line 436
     invoke-direct {p0}, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->updateDisplayInfo()V
 
-    .line 437
     return-void
 .end method
 
@@ -212,7 +190,6 @@
     .parameter "displayId"
 
     .prologue
-    .line 432
     return-void
 .end method
 
@@ -220,11 +197,9 @@
     .locals 1
 
     .prologue
-    .line 421
     iget-object v0, p0, Lcom/android/server/gesture/EdgeGestureService$DisplayObserver;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v0, p0}, Landroid/hardware/display/DisplayManager;->unregisterDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;)V
 
-    .line 422
     return-void
 .end method

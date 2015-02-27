@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcom/android/server/media/MediaRouterService$1;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 102
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -53,12 +51,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$1;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-virtual {v0}, Lcom/android/server/media/MediaRouterService;->switchUser()V
 
-    .line 105
     :cond_0
     return-void
 .end method

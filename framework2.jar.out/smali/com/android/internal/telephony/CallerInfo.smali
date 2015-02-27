@@ -80,7 +80,6 @@
     .locals 2
 
     .prologue
-    .line 51
     const-string v0, "CallerInfo"
 
     const/4 v1, 0x2
@@ -100,16 +99,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 141
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 143
     iput-boolean v0, p0, Lcom/android/internal/telephony/CallerInfo;->mIsEmergency:Z
 
-    .line 144
     iput-boolean v0, p0, Lcom/android/internal/telephony/CallerInfo;->mIsVoiceMail:Z
 
-    .line 145
     return-void
 .end method
 
@@ -120,7 +115,6 @@
     .parameter "previousResult"
 
     .prologue
-    .line 311
     iget-boolean v1, p2, Lcom/android/internal/telephony/CallerInfo;->contactExists:Z
 
     if-nez v1, :cond_0
@@ -131,12 +125,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 313
     invoke-static {p1}, Landroid/telephony/PhoneNumberUtils;->getUsernameFromUriNumber(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 314
     .local v0, username:Ljava/lang/String;
     invoke-static {v0}, Landroid/telephony/PhoneNumberUtils;->isGlobalPhoneNumber(Ljava/lang/String;)Z
 
@@ -144,7 +136,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 315
     sget-object v1, Landroid/provider/ContactsContract$PhoneLookup;->CONTENT_FILTER_URI:Landroid/net/Uri;
 
     invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
@@ -159,7 +150,6 @@
 
     move-result-object p2
 
-    .line 320
     .end local v0           #username:Ljava/lang/String;
     :cond_0
     return-object p2
@@ -171,23 +161,18 @@
     .parameter "number"
 
     .prologue
-    .line 340
     invoke-static {p0, p1}, Lcom/android/internal/telephony/CallerInfo;->getCallerInfo(Landroid/content/Context;Ljava/lang/String;)Lcom/android/internal/telephony/CallerInfo;
 
     move-result-object v1
 
-    .line 341
     .local v1, info:Lcom/android/internal/telephony/CallerInfo;
     const/4 v0, 0x0
 
-    .line 343
     .local v0, callerID:Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 344
     iget-object v2, v1, Lcom/android/internal/telephony/CallerInfo;->name:Ljava/lang/String;
 
-    .line 346
     .local v2, name:Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -195,16 +180,13 @@
 
     if-nez v3, :cond_1
 
-    .line 347
     move-object v0, v2
 
-    .line 353
     .end local v2           #name:Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 349
     .restart local v2       #name:Ljava/lang/String;
     :cond_1
     move-object v0, p1
@@ -220,7 +202,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 255
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -259,34 +240,25 @@
 
     const/4 v9, -0x1
 
-    .line 156
     new-instance v1, Lcom/android/internal/telephony/CallerInfo;
 
     invoke-direct {v1}, Lcom/android/internal/telephony/CallerInfo;-><init>()V
 
-    .line 157
     .local v1, info:Lcom/android/internal/telephony/CallerInfo;
     iput v5, v1, Lcom/android/internal/telephony/CallerInfo;->photoResource:I
 
-    .line 158
     iput-object v10, v1, Lcom/android/internal/telephony/CallerInfo;->phoneLabel:Ljava/lang/String;
 
-    .line 159
     iput v5, v1, Lcom/android/internal/telephony/CallerInfo;->numberType:I
 
-    .line 160
     iput-object v10, v1, Lcom/android/internal/telephony/CallerInfo;->numberLabel:Ljava/lang/String;
 
-    .line 161
     iput-object v10, v1, Lcom/android/internal/telephony/CallerInfo;->cachedPhoto:Landroid/graphics/drawable/Drawable;
 
-    .line 162
     iput-boolean v5, v1, Lcom/android/internal/telephony/CallerInfo;->isCachedPhotoCurrent:Z
 
-    .line 163
     iput-boolean v5, v1, Lcom/android/internal/telephony/CallerInfo;->contactExists:Z
 
-    .line 165
     sget-boolean v3, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
 
     if-eqz v3, :cond_0
@@ -297,36 +269,30 @@
 
     invoke-static {v3, v6}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 167
     :cond_0
     if-eqz p2, :cond_7
 
-    .line 168
     invoke-interface {p2}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
-    .line 176
     const-string v3, "display_name"
 
     invoke-interface {p2, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 177
     .local v0, columnIndex:I
     if-eq v0, v9, :cond_1
 
-    .line 178
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v1, Lcom/android/internal/telephony/CallerInfo;->name:Ljava/lang/String;
 
-    .line 182
     :cond_1
     const-string v3, "number"
 
@@ -334,17 +300,14 @@
 
     move-result v0
 
-    .line 183
     if-eq v0, v9, :cond_2
 
-    .line 184
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v1, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
-    .line 188
     :cond_2
     const-string v3, "normalized_number"
 
@@ -352,17 +315,14 @@
 
     move-result v0
 
-    .line 189
     if-eq v0, v9, :cond_3
 
-    .line 190
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v1, Lcom/android/internal/telephony/CallerInfo;->normalizedNumber:Ljava/lang/String;
 
-    .line 194
     :cond_3
     const-string v3, "label"
 
@@ -370,35 +330,29 @@
 
     move-result v0
 
-    .line 195
     if-eq v0, v9, :cond_4
 
-    .line 196
     const-string v3, "type"
 
     invoke-interface {p2, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 197
     .local v2, typeColumnIndex:I
     if-eq v2, v9, :cond_4
 
-    .line 198
     invoke-interface {p2, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v3
 
     iput v3, v1, Lcom/android/internal/telephony/CallerInfo;->numberType:I
 
-    .line 199
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v1, Lcom/android/internal/telephony/CallerInfo;->numberLabel:Ljava/lang/String;
 
-    .line 200
     iget v3, v1, Lcom/android/internal/telephony/CallerInfo;->numberType:I
 
     iget-object v6, v1, Lcom/android/internal/telephony/CallerInfo;->numberLabel:Ljava/lang/String;
@@ -413,24 +367,20 @@
 
     iput-object v3, v1, Lcom/android/internal/telephony/CallerInfo;->phoneLabel:Ljava/lang/String;
 
-    .line 207
     .end local v2           #typeColumnIndex:I
     :cond_4
     invoke-static {p1, p2}, Lcom/android/internal/telephony/CallerInfo;->getColumnIndexForPersonId(Landroid/net/Uri;Landroid/database/Cursor;)I
 
     move-result v0
 
-    .line 208
     if-eq v0, v9, :cond_8
 
-    .line 209
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v6
 
     iput-wide v6, v1, Lcom/android/internal/telephony/CallerInfo;->person_id:J
 
-    .line 210
     sget-boolean v3, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
 
     if-eqz v3, :cond_5
@@ -459,7 +409,6 @@
 
     invoke-static {v3, v6}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     :cond_5
     :goto_0
     const-string v3, "custom_ringtone"
@@ -468,7 +417,6 @@
 
     move-result v0
 
-    .line 222
     if-eq v0, v9, :cond_9
 
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -477,7 +425,6 @@
 
     if-eqz v3, :cond_9
 
-    .line 223
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -488,7 +435,6 @@
 
     iput-object v3, v1, Lcom/android/internal/telephony/CallerInfo;->contactRingtoneUri:Landroid/net/Uri;
 
-    .line 230
     :goto_1
     const-string v3, "send_to_voicemail"
 
@@ -496,7 +442,6 @@
 
     move-result v0
 
-    .line 231
     if-eq v0, v9, :cond_a
 
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getInt(I)I
@@ -529,13 +474,10 @@
 
     iput-object v3, v1, Lcom/android/internal/telephony/CallerInfo;->name:Ljava/lang/String;
 
-    .line 240
     iput-object p1, v1, Lcom/android/internal/telephony/CallerInfo;->contactRefUri:Landroid/net/Uri;
 
-    .line 242
     return-object v1
 
-    .line 213
     .restart local v0       #columnIndex:I
     :cond_8
     const-string v3, "CallerInfo"
@@ -562,7 +504,6 @@
 
     goto :goto_0
 
-    .line 225
     :cond_9
     iput-object v10, v1, Lcom/android/internal/telephony/CallerInfo;->contactRingtoneUri:Landroid/net/Uri;
 
@@ -571,7 +512,6 @@
     :cond_a
     move v3, v5
 
-    .line 231
     goto :goto_2
 .end method
 
@@ -581,7 +521,6 @@
     .parameter "number"
 
     .prologue
-    .line 270
     sget-boolean v2, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
 
     if-eqz v2, :cond_0
@@ -592,7 +531,6 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     :cond_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -600,15 +538,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 273
     const/4 v1, 0x0
 
-    .line 296
     :cond_1
     :goto_0
     return-object v1
 
-    .line 279
     :cond_2
     invoke-static {p1, p0}, Landroid/telephony/PhoneNumberUtils;->isLocalEmergencyNumber(Ljava/lang/String;Landroid/content/Context;)Z
 
@@ -616,7 +551,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 280
     new-instance v2, Lcom/android/internal/telephony/CallerInfo;
 
     invoke-direct {v2}, Lcom/android/internal/telephony/CallerInfo;-><init>()V
@@ -627,7 +561,6 @@
 
     goto :goto_0
 
-    .line 281
     :cond_3
     invoke-static {p1}, Landroid/telephony/PhoneNumberUtils;->isVoiceMailNumber(Ljava/lang/String;)Z
 
@@ -635,7 +568,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 282
     new-instance v2, Lcom/android/internal/telephony/CallerInfo;
 
     invoke-direct {v2}, Lcom/android/internal/telephony/CallerInfo;-><init>()V
@@ -646,7 +578,6 @@
 
     goto :goto_0
 
-    .line 285
     :cond_4
     sget-object v2, Landroid/provider/ContactsContract$PhoneLookup;->CONTENT_FILTER_URI:Landroid/net/Uri;
 
@@ -658,19 +589,16 @@
 
     move-result-object v0
 
-    .line 287
     .local v0, contactUri:Landroid/net/Uri;
     invoke-static {p0, v0}, Lcom/android/internal/telephony/CallerInfo;->getCallerInfo(Landroid/content/Context;Landroid/net/Uri;)Lcom/android/internal/telephony/CallerInfo;
 
     move-result-object v1
 
-    .line 288
     .local v1, info:Lcom/android/internal/telephony/CallerInfo;
     invoke-static {p0, p1, v1}, Lcom/android/internal/telephony/CallerInfo;->doSecondaryLookupIfNecessary(Landroid/content/Context;Ljava/lang/String;Lcom/android/internal/telephony/CallerInfo;)Lcom/android/internal/telephony/CallerInfo;
 
     move-result-object v1
 
-    .line 292
     iget-object v2, v1, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -679,7 +607,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 293
     iput-object p1, v1, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
     goto :goto_0
@@ -691,7 +618,6 @@
     .parameter "cursor"
 
     .prologue
-    .line 474
     sget-boolean v3, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
 
     if-eqz v3, :cond_0
@@ -724,17 +650,14 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 480
     :cond_0
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 481
     .local v2, url:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 482
     .local v1, columnName:Ljava/lang/String;
     const-string v3, "content://com.android.contacts/data/phones"
 
@@ -744,7 +667,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 485
     sget-boolean v3, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
 
     if-eqz v3, :cond_1
@@ -755,11 +677,9 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 486
     :cond_1
     const-string v1, "contact_id"
 
-    .line 502
     :goto_0
     if-eqz v1, :cond_8
 
@@ -767,7 +687,6 @@
 
     move-result v0
 
-    .line 503
     .local v0, columnIndex:I
     :goto_1
     sget-boolean v3, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
@@ -812,11 +731,9 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 505
     :cond_2
     return v0
 
-    .line 487
     .end local v0           #columnIndex:I
     :cond_3
     const-string v3, "content://com.android.contacts/data"
@@ -827,7 +744,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 490
     sget-boolean v3, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
 
     if-eqz v3, :cond_4
@@ -838,13 +754,11 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 492
     :cond_4
     const-string v1, "contact_id"
 
     goto :goto_0
 
-    .line 493
     :cond_5
     const-string v3, "content://com.android.contacts/phone_lookup"
 
@@ -854,7 +768,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 497
     sget-boolean v3, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
 
     if-eqz v3, :cond_6
@@ -865,13 +778,11 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 498
     :cond_6
     const-string v1, "_id"
 
     goto :goto_0
 
-    .line 500
     :cond_7
     const-string v3, "CallerInfo"
 
@@ -903,7 +814,6 @@
 
     goto :goto_0
 
-    .line 502
     :cond_8
     const/4 v0, -0x1
 
@@ -915,7 +825,6 @@
     .parameter "context"
 
     .prologue
-    .line 585
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -933,10 +842,8 @@
     .parameter "locale"
 
     .prologue
-    .line 565
     const/4 v1, 0x0
 
-    .line 566
     .local v1, countryIso:Ljava/lang/String;
     const-string v3, "country_detector"
 
@@ -946,36 +853,29 @@
 
     check-cast v2, Landroid/location/CountryDetector;
 
-    .line 568
     .local v2, detector:Landroid/location/CountryDetector;
     if-eqz v2, :cond_0
 
-    .line 569
     invoke-virtual {v2}, Landroid/location/CountryDetector;->detectCountry()Landroid/location/Country;
 
     move-result-object v0
 
-    .line 570
     .local v0, country:Landroid/location/Country;
     if-eqz v0, :cond_2
 
-    .line 571
     invoke-virtual {v0}, Landroid/location/Country;->getCountryIso()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 576
     .end local v0           #country:Landroid/location/Country;
     :cond_0
     :goto_0
     if-nez v1, :cond_1
 
-    .line 577
     invoke-virtual {p1}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 578
     const-string v3, "CallerInfo"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -998,11 +898,9 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 581
     :cond_1
     return-object v1
 
-    .line 573
     .restart local v0       #country:Landroid/location/Country;
     :cond_2
     const-string v3, "CallerInfo"
@@ -1022,7 +920,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 530
     sget-boolean v7, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
 
     if-eqz v7, :cond_0
@@ -1055,7 +952,6 @@
 
     invoke-static {v7, v8}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 532
     :cond_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1063,24 +959,20 @@
 
     if-eqz v7, :cond_2
 
-    .line 556
     :cond_1
     :goto_0
     return-object v1
 
-    .line 536
     :cond_2
     invoke-static {}, Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->getInstance()Lcom/android/i18n/phonenumbers/PhoneNumberUtil;
 
     move-result-object v6
 
-    .line 537
     .local v6, util:Lcom/android/i18n/phonenumbers/PhoneNumberUtil;
     invoke-static {}, Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;->getInstance()Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;
 
     move-result-object v3
 
-    .line 539
     .local v3, geocoder:Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1092,17 +984,14 @@
 
     iget-object v4, v7, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 540
     .local v4, locale:Ljava/util/Locale;
     invoke-static {p0, v4}, Lcom/android/internal/telephony/CallerInfo;->getCurrentCountryIso(Landroid/content/Context;Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 541
     .local v0, countryIso:Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 543
     .local v5, pn:Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;
     :try_start_0
     sget-boolean v7, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
@@ -1147,13 +1036,11 @@
 
     invoke-static {v7, v8}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 545
     :cond_3
     invoke-virtual {v6, p1, v0}, Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->parse(Ljava/lang/String;Ljava/lang/String;)Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;
 
     move-result-object v5
 
-    .line 546
     sget-boolean v7, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
 
     if-eqz v7, :cond_4
@@ -1182,17 +1069,14 @@
     :try_end_0
     .catch Lcom/android/i18n/phonenumbers/NumberParseException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 551
     :cond_4
     :goto_1
     if-eqz v5, :cond_1
 
-    .line 552
     invoke-virtual {v3, v5, v4}, Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;->getDescriptionForNumber(Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 553
     .local v1, description:Ljava/lang/String;
     sget-boolean v7, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
 
@@ -1228,12 +1112,10 @@
 
     goto/16 :goto_0
 
-    .line 547
     .end local v1           #description:Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 548
     .local v2, e:Lcom/android/i18n/phonenumbers/NumberParseException;
     const-string v7, "CallerInfo"
 
@@ -1271,7 +1153,6 @@
     .parameter "s"
 
     .prologue
-    .line 424
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -1280,7 +1161,6 @@
 
     if-lez v0, :cond_1
 
-    .line 427
     .end local p0
     :cond_0
     :goto_0
@@ -1299,7 +1179,6 @@
     .locals 1
 
     .prologue
-    .line 362
     iget-boolean v0, p0, Lcom/android/internal/telephony/CallerInfo;->mIsEmergency:Z
 
     return v0
@@ -1309,7 +1188,6 @@
     .locals 1
 
     .prologue
-    .line 369
     iget-boolean v0, p0, Lcom/android/internal/telephony/CallerInfo;->mIsVoiceMail:Z
 
     return v0
@@ -1343,12 +1221,10 @@
     .locals 4
 
     .prologue
-    .line 403
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/internal/telephony/CallerInfo;->mIsVoiceMail:Z
 
-    .line 406
     :try_start_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -1358,22 +1234,18 @@
 
     move-result-object v1
 
-    .line 408
     .local v1, voiceMailLabel:Ljava/lang/String;
     iput-object v1, p0, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 420
     .end local v1           #voiceMailLabel:Ljava/lang/String;
     :goto_0
     return-object p0
 
-    .line 409
     :catch_0
     move-exception v0
 
-    .line 415
     .local v0, se:Ljava/lang/SecurityException;
     const-string v2, "CallerInfo"
 
@@ -1388,10 +1260,8 @@
     .locals 4
 
     .prologue
-    .line 594
     const/4 v0, 0x0
 
-    .line 624
     .local v0, VERBOSE_DEBUG:Z
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1512,7 +1382,6 @@
     .parameter "fallbackNumber"
 
     .prologue
-    .line 521
     iget-object v1, p0, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1523,7 +1392,6 @@
 
     move-object v0, p2
 
-    .line 522
     .local v0, number:Ljava/lang/String;
     :goto_0
     invoke-static {p1, v0}, Lcom/android/internal/telephony/CallerInfo;->getGeoDescription(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
@@ -1532,10 +1400,8 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/CallerInfo;->geoDescription:Ljava/lang/String;
 
-    .line 523
     return-void
 
-    .line 521
     .end local v0           #number:Ljava/lang/String;
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;

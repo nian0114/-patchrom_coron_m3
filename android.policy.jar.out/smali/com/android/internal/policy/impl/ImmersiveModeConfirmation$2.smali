@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 317
     iput-object p1, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$2;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$2;->val$pkg:Ljava/lang/String;
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 320
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$2;->val$pkg:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -66,7 +64,6 @@
 
     if-nez v0, :cond_0
 
-    .line 322
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$2;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
 
     #getter for: Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;->mConfirmedPackages:Landroid/util/ArraySet;
@@ -78,19 +75,16 @@
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 323
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$2;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
 
     #calls: Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;->saveSetting()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;->access$1000(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;)V
 
-    .line 325
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$2;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
 
     #calls: Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;->handleHide()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;->access$1100(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;)V
 
-    .line 326
     return-void
 .end method

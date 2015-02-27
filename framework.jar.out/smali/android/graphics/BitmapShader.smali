@@ -19,24 +19,18 @@
     .parameter "tileY"
 
     .prologue
-    .line 41
     invoke-direct {p0}, Landroid/graphics/Shader;-><init>()V
 
-    .line 42
     iput-object p1, p0, Landroid/graphics/BitmapShader;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 43
     iput-object p2, p0, Landroid/graphics/BitmapShader;->mTileX:Landroid/graphics/Shader$TileMode;
 
-    .line 44
     iput-object p3, p0, Landroid/graphics/BitmapShader;->mTileY:Landroid/graphics/Shader$TileMode;
 
-    .line 45
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->ni()I
 
     move-result v0
 
-    .line 46
     .local v0, b:I
     iget v1, p2, Landroid/graphics/Shader$TileMode;->nativeInt:I
 
@@ -48,7 +42,6 @@
 
     iput v1, p0, Landroid/graphics/BitmapShader;->native_instance:I
 
-    .line 47
     iget v1, p0, Landroid/graphics/BitmapShader;->native_instance:I
 
     iget v2, p2, Landroid/graphics/Shader$TileMode;->nativeInt:I
@@ -61,7 +54,6 @@
 
     iput v1, p0, Landroid/graphics/BitmapShader;->native_shader:I
 
-    .line 48
     return-void
 .end method
 
@@ -77,7 +69,6 @@
     .locals 4
 
     .prologue
-    .line 55
     new-instance v0, Landroid/graphics/BitmapShader;
 
     iget-object v1, p0, Landroid/graphics/BitmapShader;->mBitmap:Landroid/graphics/Bitmap;
@@ -88,10 +79,8 @@
 
     invoke-direct {v0, v1, v2, v3}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
 
-    .line 56
     .local v0, copy:Landroid/graphics/BitmapShader;
     invoke-virtual {p0, v0}, Landroid/graphics/BitmapShader;->copyLocalMatrix(Landroid/graphics/Shader;)V
 
-    .line 57
     return-object v0
 .end method

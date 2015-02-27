@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 700
     iput-object p1, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 703
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 704
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.net.ConnectivityService.action.PKT_CNT_SAMPLE_INTERVAL_ELAPSED"
 
@@ -55,7 +52,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 705
     iget-object v1, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -78,7 +74,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 708
     :cond_0
     return-void
 .end method

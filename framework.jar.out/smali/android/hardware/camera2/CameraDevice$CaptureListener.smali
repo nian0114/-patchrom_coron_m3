@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 597
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .parameter "result"
 
     .prologue
-    .line 683
     return-void
 .end method
 
@@ -45,7 +43,6 @@
     .parameter "failure"
 
     .prologue
-    .line 712
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .parameter "result"
 
     .prologue
-    .line 661
     return-void
 .end method
 
@@ -67,7 +63,6 @@
     .parameter "frameNumber"
 
     .prologue
-    .line 735
     return-void
 .end method
 
@@ -78,6 +73,5 @@
     .parameter "timestamp"
 
     .prologue
-    .line 631
     return-void
 .end method

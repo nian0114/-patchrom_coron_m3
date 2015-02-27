@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 400
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/app/LoadedApk$WarningContextClassLoader;->warned:Z
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 398
     invoke-direct {p0}, Ljava/lang/ClassLoader;-><init>()V
 
     return-void
@@ -46,7 +44,6 @@
     .parameter "x0"
 
     .prologue
-    .line 398
     invoke-direct {p0}, Landroid/app/LoadedApk$WarningContextClassLoader;-><init>()V
 
     return-void
@@ -57,22 +54,18 @@
     .parameter "methodName"
 
     .prologue
-    .line 403
     sget-boolean v0, Landroid/app/LoadedApk$WarningContextClassLoader;->warned:Z
 
     if-eqz v0, :cond_0
 
-    .line 414
     :goto_0
     return-void
 
-    .line 406
     :cond_0
     const/4 v0, 0x1
 
     sput-boolean v0, Landroid/app/LoadedApk$WarningContextClassLoader;->warned:Z
 
-    .line 407
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -83,7 +76,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setContextClassLoader(Ljava/lang/ClassLoader;)V
 
-    .line 408
     const-string v0, "ActivityThread"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -118,13 +110,13 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "that host multiple applications. You should explicitly "
+    const-string v2, "that host multiple applications. You should explicitly "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    const-string/jumbo v2, "specify a context class loader. For example: "
+    const-string v2, "specify a context class loader. For example: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -151,19 +143,16 @@
     .locals 1
 
     .prologue
-    .line 452
     const-string v0, "clearAssertionStatus"
 
     invoke-direct {p0, v0}, Landroid/app/LoadedApk$WarningContextClassLoader;->warn(Ljava/lang/String;)V
 
-    .line 453
     invoke-virtual {p0}, Landroid/app/LoadedApk$WarningContextClassLoader;->getParent()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/ClassLoader;->clearAssertionStatus()V
 
-    .line 454
     return-void
 .end method
 
@@ -172,12 +161,10 @@
     .parameter "resName"
 
     .prologue
-    .line 417
     const-string v0, "getResource"
 
     invoke-direct {p0, v0}, Landroid/app/LoadedApk$WarningContextClassLoader;->warn(Ljava/lang/String;)V
 
-    .line 418
     invoke-virtual {p0}, Landroid/app/LoadedApk$WarningContextClassLoader;->getParent()Ljava/lang/ClassLoader;
 
     move-result-object v0
@@ -194,12 +181,10 @@
     .parameter "resName"
 
     .prologue
-    .line 427
     const-string v0, "getResourceAsStream"
 
     invoke-direct {p0, v0}, Landroid/app/LoadedApk$WarningContextClassLoader;->warn(Ljava/lang/String;)V
 
-    .line 428
     invoke-virtual {p0}, Landroid/app/LoadedApk$WarningContextClassLoader;->getParent()Ljava/lang/ClassLoader;
 
     move-result-object v0
@@ -233,12 +218,10 @@
     .end annotation
 
     .prologue
-    .line 422
     const-string v0, "getResources"
 
     invoke-direct {p0, v0}, Landroid/app/LoadedApk$WarningContextClassLoader;->warn(Ljava/lang/String;)V
 
-    .line 423
     invoke-virtual {p0}, Landroid/app/LoadedApk$WarningContextClassLoader;->getParent()Ljava/lang/ClassLoader;
 
     move-result-object v0
@@ -270,12 +253,10 @@
     .end annotation
 
     .prologue
-    .line 432
     const-string v0, "loadClass"
 
     invoke-direct {p0, v0}, Landroid/app/LoadedApk$WarningContextClassLoader;->warn(Ljava/lang/String;)V
 
-    .line 433
     invoke-virtual {p0}, Landroid/app/LoadedApk$WarningContextClassLoader;->getParent()Ljava/lang/ClassLoader;
 
     move-result-object v0
@@ -293,19 +274,16 @@
     .parameter "enable"
 
     .prologue
-    .line 437
-    const-string/jumbo v0, "setClassAssertionStatus"
+    const-string v0, "setClassAssertionStatus"
 
     invoke-direct {p0, v0}, Landroid/app/LoadedApk$WarningContextClassLoader;->warn(Ljava/lang/String;)V
 
-    .line 438
     invoke-virtual {p0}, Landroid/app/LoadedApk$WarningContextClassLoader;->getParent()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Ljava/lang/ClassLoader;->setClassAssertionStatus(Ljava/lang/String;Z)V
 
-    .line 439
     return-void
 .end method
 
@@ -314,19 +292,16 @@
     .parameter "enable"
 
     .prologue
-    .line 447
-    const-string/jumbo v0, "setDefaultAssertionStatus"
+    const-string v0, "setDefaultAssertionStatus"
 
     invoke-direct {p0, v0}, Landroid/app/LoadedApk$WarningContextClassLoader;->warn(Ljava/lang/String;)V
 
-    .line 448
     invoke-virtual {p0}, Landroid/app/LoadedApk$WarningContextClassLoader;->getParent()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Ljava/lang/ClassLoader;->setDefaultAssertionStatus(Z)V
 
-    .line 449
     return-void
 .end method
 
@@ -336,18 +311,15 @@
     .parameter "enable"
 
     .prologue
-    .line 442
-    const-string/jumbo v0, "setPackageAssertionStatus"
+    const-string v0, "setPackageAssertionStatus"
 
     invoke-direct {p0, v0}, Landroid/app/LoadedApk$WarningContextClassLoader;->warn(Ljava/lang/String;)V
 
-    .line 443
     invoke-virtual {p0}, Landroid/app/LoadedApk$WarningContextClassLoader;->getParent()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Ljava/lang/ClassLoader;->setPackageAssertionStatus(Ljava/lang/String;Z)V
 
-    .line 444
     return-void
 .end method

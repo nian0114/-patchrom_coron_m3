@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 137
     iput-object p1, p0, Landroid/widget/ActivityChooserView$2;->this$0:Landroid/widget/ActivityChooserView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 140
     iget-object v0, p0, Landroid/widget/ActivityChooserView$2;->this$0:Landroid/widget/ActivityChooserView;
 
     invoke-virtual {v0}, Landroid/widget/ActivityChooserView;->isShowingPopup()Z
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 141
     iget-object v0, p0, Landroid/widget/ActivityChooserView$2;->this$0:Landroid/widget/ActivityChooserView;
 
     invoke-virtual {v0}, Landroid/widget/ActivityChooserView;->isShown()Z
@@ -59,7 +56,6 @@
 
     if-nez v0, :cond_1
 
-    .line 142
     iget-object v0, p0, Landroid/widget/ActivityChooserView$2;->this$0:Landroid/widget/ActivityChooserView;
 
     #calls: Landroid/widget/ActivityChooserView;->getListPopupWindow()Landroid/widget/ListPopupWindow;
@@ -69,12 +65,10 @@
 
     invoke-virtual {v0}, Landroid/widget/ListPopupWindow;->dismiss()V
 
-    .line 150
     :cond_0
     :goto_0
     return-void
 
-    .line 144
     :cond_1
     iget-object v0, p0, Landroid/widget/ActivityChooserView$2;->this$0:Landroid/widget/ActivityChooserView;
 
@@ -85,14 +79,12 @@
 
     invoke-virtual {v0}, Landroid/widget/ListPopupWindow;->show()V
 
-    .line 145
     iget-object v0, p0, Landroid/widget/ActivityChooserView$2;->this$0:Landroid/widget/ActivityChooserView;
 
     iget-object v0, v0, Landroid/widget/ActivityChooserView;->mProvider:Landroid/view/ActionProvider;
 
     if-eqz v0, :cond_0
 
-    .line 146
     iget-object v0, p0, Landroid/widget/ActivityChooserView$2;->this$0:Landroid/widget/ActivityChooserView;
 
     iget-object v0, v0, Landroid/widget/ActivityChooserView;->mProvider:Landroid/view/ActionProvider;

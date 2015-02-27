@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 400
     iput-object p1, p0, Landroid/media/RemoteControlClient$MetadataEditor;->this$0:Landroid/media/RemoteControlClient;
 
     invoke-direct {p0}, Landroid/media/MediaMetadataEditor;-><init>()V
@@ -44,7 +43,6 @@
     .parameter "x1"
 
     .prologue
-    .line 397
     invoke-direct {p0, p1}, Landroid/media/RemoteControlClient$MetadataEditor;-><init>(Landroid/media/RemoteControlClient;)V
 
     return-void
@@ -56,7 +54,6 @@
     .locals 5
 
     .prologue
-    .line 502
     monitor-enter p0
 
     :try_start_0
@@ -64,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 503
     const-string v0, "RemoteControlClient"
 
     const-string v1, "Can\'t apply a previously applied MetadataEditor"
@@ -73,13 +69,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 528
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 506
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->this$0:Landroid/media/RemoteControlClient;
@@ -93,7 +87,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 508
     :try_start_2
     iget-object v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->this$0:Landroid/media/RemoteControlClient;
 
@@ -106,7 +99,6 @@
     #setter for: Landroid/media/RemoteControlClient;->mMetadata:Landroid/os/Bundle;
     invoke-static {v0, v2}, Landroid/media/RemoteControlClient;->access$102(Landroid/media/RemoteControlClient;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 510
     iget-object v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->this$0:Landroid/media/RemoteControlClient;
 
     #getter for: Landroid/media/RemoteControlClient;->mMetadata:Landroid/os/Bundle;
@@ -124,7 +116,6 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 511
     iget-object v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->this$0:Landroid/media/RemoteControlClient;
 
     #getter for: Landroid/media/RemoteControlClient;->mOriginalArtwork:Landroid/graphics/Bitmap;
@@ -149,7 +140,6 @@
 
     if-nez v0, :cond_1
 
-    .line 512
     iget-object v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->this$0:Landroid/media/RemoteControlClient;
 
     #getter for: Landroid/media/RemoteControlClient;->mOriginalArtwork:Landroid/graphics/Bitmap;
@@ -159,7 +149,6 @@
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 514
     :cond_1
     iget-object v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->this$0:Landroid/media/RemoteControlClient;
 
@@ -168,12 +157,10 @@
     #setter for: Landroid/media/RemoteControlClient;->mOriginalArtwork:Landroid/graphics/Bitmap;
     invoke-static {v0, v2}, Landroid/media/RemoteControlClient;->access$202(Landroid/media/RemoteControlClient;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 515
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->mEditorArtwork:Landroid/graphics/Bitmap;
 
-    .line 516
     iget-boolean v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->mMetadataChanged:Z
 
     iget-boolean v2, p0, Landroid/media/RemoteControlClient$MetadataEditor;->mArtworkChanged:Z
@@ -182,7 +169,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 518
     iget-object v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->this$0:Landroid/media/RemoteControlClient;
 
     const/4 v2, 0x0
@@ -194,14 +180,12 @@
     #calls: Landroid/media/RemoteControlClient;->sendMetadataWithArtwork_syncCacheLock(Landroid/media/IRemoteControlDisplay;II)V
     invoke-static {v0, v2, v3, v4}, Landroid/media/RemoteControlClient;->access$300(Landroid/media/RemoteControlClient;Landroid/media/IRemoteControlDisplay;II)V
 
-    .line 526
     :cond_2
     :goto_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->mApplied:Z
 
-    .line 527
     monitor-exit v1
 
     goto :goto_0
@@ -218,7 +202,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 502
     :catchall_1
     move-exception v0
 
@@ -226,14 +209,12 @@
 
     throw v0
 
-    .line 519
     :cond_3
     :try_start_4
     iget-boolean v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->mMetadataChanged:Z
 
     if-eqz v0, :cond_4
 
-    .line 521
     iget-object v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->this$0:Landroid/media/RemoteControlClient;
 
     const/4 v2, 0x0
@@ -243,13 +224,11 @@
 
     goto :goto_1
 
-    .line 522
     :cond_4
     iget-boolean v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->mArtworkChanged:Z
 
     if-eqz v0, :cond_2
 
-    .line 524
     iget-object v0, p0, Landroid/media/RemoteControlClient$MetadataEditor;->this$0:Landroid/media/RemoteControlClient;
 
     const/4 v2, 0x0
@@ -270,7 +249,6 @@
     .locals 1
 
     .prologue
-    .line 492
     monitor-enter p0
 
     :try_start_0
@@ -278,12 +256,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 493
     monitor-exit p0
 
     return-void
 
-    .line 492
     :catchall_0
     move-exception v0
 
@@ -301,7 +277,6 @@
     .end annotation
 
     .prologue
-    .line 405
     new-instance v0, Ljava/lang/CloneNotSupportedException;
 
     invoke-direct {v0}, Ljava/lang/CloneNotSupportedException;-><init>()V
@@ -320,7 +295,6 @@
     .end annotation
 
     .prologue
-    .line 397
     invoke-virtual {p0, p1, p2}, Landroid/media/RemoteControlClient$MetadataEditor;->putBitmap(ILandroid/graphics/Bitmap;)Landroid/media/RemoteControlClient$MetadataEditor;
 
     move-result-object v0
@@ -339,7 +313,6 @@
     .end annotation
 
     .prologue
-    .line 480
     monitor-enter p0
 
     :try_start_0
@@ -347,12 +320,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 481
     monitor-exit p0
 
     return-object p0
 
-    .line 480
     :catchall_0
     move-exception v0
 
@@ -372,7 +343,6 @@
     .end annotation
 
     .prologue
-    .line 397
     invoke-virtual {p0, p1, p2, p3}, Landroid/media/RemoteControlClient$MetadataEditor;->putLong(IJ)Landroid/media/RemoteControlClient$MetadataEditor;
 
     move-result-object v0
@@ -391,7 +361,6 @@
     .end annotation
 
     .prologue
-    .line 463
     monitor-enter p0
 
     :try_start_0
@@ -399,12 +368,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 464
     monitor-exit p0
 
     return-object p0
 
-    .line 463
     :catchall_0
     move-exception v0
 
@@ -424,7 +391,6 @@
     .end annotation
 
     .prologue
-    .line 397
     invoke-virtual {p0, p1, p2}, Landroid/media/RemoteControlClient$MetadataEditor;->putString(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;
 
     move-result-object v0
@@ -443,7 +409,6 @@
     .end annotation
 
     .prologue
-    .line 442
     monitor-enter p0
 
     :try_start_0
@@ -451,12 +416,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 443
     monitor-exit p0
 
     return-object p0
 
-    .line 442
     :catchall_0
     move-exception v0
 

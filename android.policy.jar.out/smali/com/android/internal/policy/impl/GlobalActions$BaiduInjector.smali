@@ -33,33 +33,28 @@
     .locals 1
 
     .prologue
-    .line 1059
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     sput-object v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mScreenshotHandler:Landroid/os/Handler;
 
-    .line 1060
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mScreenshotLock:Ljava/lang/Object;
 
-    .line 1061
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mScreenshotConnection:Landroid/content/ServiceConnection;
 
-    .line 1064
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$1;
 
     invoke-direct {v0}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$1;-><init>()V
 
     sput-object v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mTakeScreenshot:Ljava/lang/Runnable;
 
-    .line 1073
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$2;
 
     invoke-direct {v0}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$2;-><init>()V
@@ -73,7 +68,6 @@
     .locals 0
 
     .prologue
-    .line 1057
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -83,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 1057
     sget-object v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mScreenshotLock:Ljava/lang/Object;
 
     return-object v0
@@ -93,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 1057
     sget-object v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mGlobalActions:Lcom/android/internal/policy/impl/GlobalActions;
 
     return-object v0
@@ -104,7 +96,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1057
     invoke-static {p0}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->takeScreenShot(Landroid/content/Context;)V
 
     return-void
@@ -114,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 1057
     sget-object v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mScreenshotConnection:Landroid/content/ServiceConnection;
 
     return-object v0
@@ -125,7 +115,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1057
     sput-object p0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mScreenshotConnection:Landroid/content/ServiceConnection;
 
     return-object p0
@@ -135,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 1057
     sget-object v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mScreenshotHandler:Landroid/os/Handler;
 
     return-object v0
@@ -145,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 1057
     sget-object v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mScreenshotTimeout:Ljava/lang/Runnable;
 
     return-object v0
@@ -155,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 1057
     sget-object v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mTakeScreenshot:Ljava/lang/Runnable;
 
     return-object v0
@@ -194,10 +180,8 @@
     .parameter "globalActions"
 
     .prologue
-    .line 1136
     sput-object p0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mGlobalActions:Lcom/android/internal/policy/impl/GlobalActions;
 
-    .line 1137
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mItems:Ljava/util/ArrayList;
     invoke-static {p0}, Lcom/android/internal/policy/impl/GlobalActions;->access$1500(Lcom/android/internal/policy/impl/GlobalActions;)Ljava/util/ArrayList;
 
@@ -213,7 +197,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1154
     return-void
 .end method
 
@@ -222,7 +205,6 @@
     .parameter "context"
 
     .prologue
-    .line 1087
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v3, "com.android.systemui"
@@ -231,22 +213,18 @@
 
     invoke-direct {v0, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1088
     .local v0, cn:Landroid/content/ComponentName;
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 1089
     .local v2, intent:Landroid/content/Intent;
     invoke-virtual {v2, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1090
     new-instance v1, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$3;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$3;-><init>(Landroid/content/Context;)V
 
-    .line 1128
     .local v1, conn:Landroid/content/ServiceConnection;
     const/4 v3, 0x1
 
@@ -256,10 +234,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 1129
     sput-object v1, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mScreenshotConnection:Landroid/content/ServiceConnection;
 
-    .line 1130
     sget-object v3, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mScreenshotHandler:Landroid/os/Handler;
 
     sget-object v4, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->mScreenshotTimeout:Ljava/lang/Runnable;
@@ -268,7 +244,6 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1132
     :cond_0
     return-void
 .end method

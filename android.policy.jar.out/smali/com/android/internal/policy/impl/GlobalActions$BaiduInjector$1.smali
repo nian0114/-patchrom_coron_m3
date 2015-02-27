@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 1064
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,14 +33,12 @@
     .locals 2
 
     .prologue
-    .line 1068
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->access$sget-mScreenshotLock-0429bb()Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 1069
     :try_start_0
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->access$sget-mGlobalActions-a61d42()Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -55,13 +52,10 @@
     #calls: Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->takeScreenShot(Landroid/content/Context;)V
     invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->access$invoke-takeScreenShot-e80c68(Landroid/content/Context;)V
 
-    .line 1070
     monitor-exit v1
 
-    .line 1071
     return-void
 
-    .line 1070
     :catchall_0
     move-exception v0
 

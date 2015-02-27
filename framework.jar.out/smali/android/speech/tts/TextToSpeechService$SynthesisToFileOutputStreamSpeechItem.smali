@@ -32,16 +32,12 @@
     .parameter "fileOutputStream"
 
     .prologue
-    .line 666
     iput-object p1, p0, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
-    .line 667
     invoke-direct/range {p0 .. p6}, Landroid/speech/tts/TextToSpeechService$SynthesisSpeechItem;-><init>(Landroid/speech/tts/TextToSpeechService;Ljava/lang/Object;IILandroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 668
     iput-object p7, p0, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItem;->mFileOutputStream:Ljava/io/FileOutputStream;
 
-    .line 669
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 673
     new-instance v0, Landroid/speech/tts/FileSynthesisCallback;
 
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItem;->mFileOutputStream:Ljava/io/FileOutputStream;
@@ -69,22 +64,17 @@
     .locals 4
 
     .prologue
-    .line 678
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItem;->dispatchOnStart()V
 
-    .line 679
     invoke-super {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisSpeechItem;->playImpl()I
 
     move-result v1
 
-    .line 680
     .local v1, status:I
     if-nez v1, :cond_0
 
-    .line 681
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItem;->dispatchOnDone()V
 
-    .line 686
     :goto_0
     :try_start_0
     iget-object v2, p0, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItem;->mFileOutputStream:Ljava/io/FileOutputStream;
@@ -93,21 +83,17 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 690
     :goto_1
     return v1
 
-    .line 683
     :cond_0
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisToFileOutputStreamSpeechItem;->dispatchOnError()V
 
     goto :goto_0
 
-    .line 687
     :catch_0
     move-exception v0
 
-    .line 688
     .local v0, e:Ljava/io/IOException;
     const-string v2, "TextToSpeechService"
 

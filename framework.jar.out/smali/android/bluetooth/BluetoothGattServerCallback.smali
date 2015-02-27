@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .parameter "characteristic"
 
     .prologue
-    .line 64
     return-void
 .end method
 
@@ -39,7 +37,6 @@
     .parameter "value"
 
     .prologue
-    .line 85
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .parameter "newState"
 
     .prologue
-    .line 39
     return-void
 .end method
 
@@ -62,7 +58,6 @@
     .parameter "descriptor"
 
     .prologue
-    .line 100
     return-void
 .end method
 
@@ -77,7 +72,6 @@
     .parameter "value"
 
     .prologue
-    .line 121
     return-void
 .end method
 
@@ -88,7 +82,6 @@
     .parameter "execute"
 
     .prologue
-    .line 135
     return-void
 .end method
 
@@ -98,6 +91,5 @@
     .parameter "service"
 
     .prologue
-    .line 49
     return-void
 .end method

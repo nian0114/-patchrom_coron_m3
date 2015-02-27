@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 178
     iput-object p1, p0, Lcom/android/internal/widget/multiwaveview/GlowPadView$3;->this$0:Lcom/android/internal/widget/multiwaveview/GlowPadView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .parameter "animation"
 
     .prologue
-    .line 180
     iget-object v0, p0, Lcom/android/internal/widget/multiwaveview/GlowPadView$3;->this$0:Lcom/android/internal/widget/multiwaveview/GlowPadView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->invalidate()V
 
-    .line 181
     return-void
 .end method

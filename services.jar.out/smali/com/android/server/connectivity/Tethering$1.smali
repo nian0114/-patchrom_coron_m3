@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 198
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 201
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     const/4 v1, 0x0
@@ -48,6 +46,5 @@
     #setter for: Lcom/android/server/connectivity/Tethering;->mUiContext:Landroid/content/Context;
     invoke-static {v0, v1}, Lcom/android/server/connectivity/Tethering;->access$102(Lcom/android/server/connectivity/Tethering;Landroid/content/Context;)Landroid/content/Context;
 
-    .line 202
     return-void
 .end method

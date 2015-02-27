@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 337
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,20 +33,17 @@
     .locals 1
 
     .prologue
-    .line 340
     invoke-static {}, Lcom/android/server/BatteryService$BaiduInjector;->access$sget-mShutdownTimer-1aeba9()Landroid/os/CountDownTimer;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
-    .line 341
     invoke-static {}, Lcom/android/server/BatteryService$BaiduInjector;->access$sget-mDialog-066056()Landroid/app/AlertDialog;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 342
     return-void
 .end method

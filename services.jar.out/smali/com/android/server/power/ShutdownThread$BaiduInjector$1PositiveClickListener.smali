@@ -32,7 +32,6 @@
     .end annotation
 
     .prologue
-    .line 235
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$BaiduInjector$1PositiveClickListener;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,12 +47,10 @@
     .parameter "which"
 
     .prologue
-    .line 237
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$BaiduInjector$1PositiveClickListener;->val$context:Landroid/content/Context;
 
     #calls: Lcom/android/server/power/ShutdownThread;->beginShutdownSequence(Landroid/content/Context;)V
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->access$200(Landroid/content/Context;)V
 
-    .line 238
     return-void
 .end method

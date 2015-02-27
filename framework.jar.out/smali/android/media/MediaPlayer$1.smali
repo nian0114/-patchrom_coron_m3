@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1740
     iput-object p1, p0, Landroid/media/MediaPlayer$1;->this$0:Landroid/media/MediaPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +42,10 @@
     .parameter "data"
 
     .prologue
-    .line 1743
     invoke-virtual {p2}, Landroid/media/SubtitleData;->getTrackIndex()I
 
     move-result v1
 
-    .line 1744
     .local v1, index:I
     iget-object v5, p0, Landroid/media/MediaPlayer$1;->this$0:Landroid/media/MediaPlayer;
 
@@ -61,12 +58,10 @@
 
     if-lt v1, v5, :cond_1
 
-    .line 1760
     :cond_0
     :goto_0
     return-void
 
-    .line 1747
     :cond_1
     iget-object v5, p0, Landroid/media/MediaPlayer$1;->this$0:Landroid/media/MediaPlayer;
 
@@ -77,11 +72,9 @@
 
     aget-object v4, v5, v1
 
-    .line 1748
     .local v4, track:Landroid/media/SubtitleTrack;
     if-eqz v4, :cond_0
 
-    .line 1750
     :try_start_0
     invoke-virtual {p2}, Landroid/media/SubtitleData;->getStartTimeUs()J
 
@@ -91,7 +84,6 @@
 
     add-long v2, v5, v7
 
-    .line 1752
     .local v2, runID:J
     new-instance v5, Ljava/lang/String;
 
@@ -107,7 +99,6 @@
 
     invoke-virtual {v4, v5, v6, v2, v3}, Landroid/media/SubtitleTrack;->onData(Ljava/lang/String;ZJ)V
 
-    .line 1753
     invoke-virtual {p2}, Landroid/media/SubtitleData;->getStartTimeUs()J
 
     move-result-wide v5
@@ -128,12 +119,10 @@
 
     goto :goto_0
 
-    .line 1756
     .end local v2           #runID:J
     :catch_0
     move-exception v0
 
-    .line 1757
     .local v0, e:Ljava/io/UnsupportedEncodingException;
     const-string v5, "MediaPlayer"
 
@@ -141,7 +130,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "subtitle data for track "
+    const-string v7, "subtitle data for track "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

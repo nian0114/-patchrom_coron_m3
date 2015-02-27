@@ -78,7 +78,6 @@
     .parameter "persistentDataStore"
 
     .prologue
-    .line 106
     const-string v5, "WifiDisplayAdapter"
 
     move-object v0, p0
@@ -93,36 +92,30 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/display/DisplayAdapter;-><init>(Lcom/android/server/display/DisplayManagerService$SyncRoot;Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/display/DisplayAdapter$Listener;Ljava/lang/String;)V
 
-    .line 94
     sget-object v0, Landroid/hardware/display/WifiDisplay;->EMPTY_ARRAY:[Landroid/hardware/display/WifiDisplay;
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplays:[Landroid/hardware/display/WifiDisplay;
 
-    .line 95
     sget-object v0, Landroid/hardware/display/WifiDisplay;->EMPTY_ARRAY:[Landroid/hardware/display/WifiDisplay;
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
-    .line 96
     sget-object v0, Landroid/hardware/display/WifiDisplay;->EMPTY_ARRAY:[Landroid/hardware/display/WifiDisplay;
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mRememberedDisplays:[Landroid/hardware/display/WifiDisplay;
 
-    .line 527
     new-instance v0, Lcom/android/server/display/WifiDisplayAdapter$8;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/WifiDisplayAdapter$8;-><init>(Lcom/android/server/display/WifiDisplayAdapter;)V
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 538
     new-instance v0, Lcom/android/server/display/WifiDisplayAdapter$9;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/WifiDisplayAdapter$9;-><init>(Lcom/android/server/display/WifiDisplayAdapter;)V
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mWifiDisplayListener:Lcom/android/server/display/WifiDisplayController$Listener;
 
-    .line 107
     new-instance v0, Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayHandler;
 
     invoke-virtual {p3}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -133,10 +126,8 @@
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mHandler:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayHandler;
 
-    .line 108
     iput-object p5, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
-    .line 109
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -149,7 +140,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mSupportsProtectedBuffers:Z
 
-    .line 111
     const-string v0, "notification"
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -160,7 +150,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mNotificationManager:Landroid/app/NotificationManager;
 
-    .line 113
     return-void
 .end method
 
@@ -169,7 +158,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
     return-object v0
@@ -181,7 +169,6 @@
     .parameter "x1"
 
     .prologue
-    .line 68
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
     return-object p1
@@ -192,7 +179,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mWifiDisplayListener:Lcom/android/server/display/WifiDisplayController$Listener;
 
     return-object v0
@@ -203,7 +189,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->updateDisplaysLocked()V
 
     return-void
@@ -214,7 +199,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     iget v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mActiveDisplayState:I
 
     return v0
@@ -226,7 +210,6 @@
     .parameter "x1"
 
     .prologue
-    .line 68
     iput p1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mActiveDisplayState:I
 
     return p1
@@ -237,7 +220,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
     return-object v0
@@ -249,7 +231,6 @@
     .parameter "x1"
 
     .prologue
-    .line 68
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
     return-object p1
@@ -260,7 +241,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->scheduleUpdateNotificationLocked()V
 
     return-void
@@ -276,7 +256,6 @@
     .parameter "x5"
 
     .prologue
-    .line 68
     invoke-direct/range {p0 .. p5}, Lcom/android/server/display/WifiDisplayAdapter;->addDisplayDeviceLocked(Landroid/hardware/display/WifiDisplay;Landroid/view/Surface;III)V
 
     return-void
@@ -288,7 +267,6 @@
     .parameter "x1"
 
     .prologue
-    .line 68
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mSessionInfo:Landroid/hardware/display/WifiDisplaySessionInfo;
 
     return-object p1
@@ -300,7 +278,6 @@
     .parameter "x1"
 
     .prologue
-    .line 68
     invoke-direct {p0, p1}, Lcom/android/server/display/WifiDisplayAdapter;->renameDisplayDeviceLocked(Ljava/lang/String;)V
 
     return-void
@@ -311,7 +288,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->removeDisplayDeviceLocked()V
 
     return-void
@@ -322,7 +298,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->handleSendStatusChangeBroadcast()V
 
     return-void
@@ -333,7 +308,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->handleUpdateNotification()V
 
     return-void
@@ -344,7 +318,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     return-object v0
@@ -355,7 +328,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mHandler:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayHandler;
 
     return-object v0
@@ -366,7 +338,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     iget v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mFeatureState:I
 
     return v0
@@ -378,7 +349,6 @@
     .parameter "x1"
 
     .prologue
-    .line 68
     iput p1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mFeatureState:I
 
     return p1
@@ -389,7 +359,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->scheduleStatusChangedBroadcastLocked()V
 
     return-void
@@ -400,7 +369,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     iget v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mScanState:I
 
     return v0
@@ -412,7 +380,6 @@
     .parameter "x1"
 
     .prologue
-    .line 68
     iput p1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mScanState:I
 
     return p1
@@ -423,7 +390,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     return-object v0
@@ -434,7 +400,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
     return-object v0
@@ -446,7 +411,6 @@
     .parameter "x1"
 
     .prologue
-    .line 68
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
     return-object p1
@@ -457,7 +421,6 @@
     .parameter "x0"
 
     .prologue
-    .line 68
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->fixRememberedDisplayNamesFromAvailableDisplaysLocked()V
 
     return-void
@@ -472,10 +435,8 @@
     .parameter "flags"
 
     .prologue
-    .line 374
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->removeDisplayDeviceLocked()V
 
-    .line 376
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/PersistentDataStore;->rememberWifiDisplay(Landroid/hardware/display/WifiDisplay;)Z
@@ -484,18 +445,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 377
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     invoke-virtual {v0}, Lcom/android/server/display/PersistentDataStore;->saveIfNeeded()V
 
-    .line 378
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->updateRememberedDisplaysLocked()V
 
-    .line 379
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->scheduleStatusChangedBroadcastLocked()V
 
-    .line 382
     :cond_0
     and-int/lit8 v0, p5, 0x1
 
@@ -503,49 +460,39 @@
 
     const/4 v10, 0x1
 
-    .line 383
     .local v10, secure:Z
     :goto_0
     const/16 v7, 0x40
 
-    .line 384
     .local v7, deviceFlags:I
     if-eqz v10, :cond_1
 
-    .line 385
     or-int/lit8 v7, v7, 0x4
 
-    .line 386
     iget-boolean v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mSupportsProtectedBuffers:Z
 
     if-eqz v0, :cond_1
 
-    .line 387
     or-int/lit8 v7, v7, 0x8
 
-    .line 391
     :cond_1
     const/high16 v6, 0x4270
 
-    .line 393
     .local v6, refreshRate:F
     invoke-virtual {p1}, Landroid/hardware/display/WifiDisplay;->getFriendlyDisplayName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 394
     .local v3, name:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/hardware/display/WifiDisplay;->getDeviceAddress()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 395
     .local v8, address:Ljava/lang/String;
     invoke-static {v3, v10}, Landroid/view/SurfaceControl;->createDisplay(Ljava/lang/String;Z)Landroid/os/IBinder;
 
     move-result-object v2
 
-    .line 396
     .local v2, displayToken:Landroid/os/IBinder;
     new-instance v0, Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;
 
@@ -561,17 +508,14 @@
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayDevice:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;
 
-    .line 398
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayDevice:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/display/WifiDisplayAdapter;->sendDisplayDeviceEventLocked(Lcom/android/server/display/DisplayDevice;I)V
 
-    .line 399
     return-void
 
-    .line 382
     .end local v2           #displayToken:Landroid/os/IBinder;
     .end local v3           #name:Ljava/lang/String;
     .end local v6           #refreshRate:F
@@ -589,7 +533,6 @@
     .parameter "address"
 
     .prologue
-    .line 364
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
     .local v0, arr$:[Landroid/hardware/display/WifiDisplay;
@@ -604,7 +547,6 @@
 
     aget-object v1, v0, v2
 
-    .line 365
     .local v1, display:Landroid/hardware/display/WifiDisplay;
     invoke-virtual {v1}, Landroid/hardware/display/WifiDisplay;->getDeviceAddress()Ljava/lang/String;
 
@@ -616,19 +558,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 369
     .end local v1           #display:Landroid/hardware/display/WifiDisplay;
     :goto_1
     return-object v1
 
-    .line 364
     .restart local v1       #display:Landroid/hardware/display/WifiDisplay;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 369
     .end local v1           #display:Landroid/hardware/display/WifiDisplay;
     :cond_1
     const/4 v1, 0x0
@@ -640,10 +579,8 @@
     .locals 5
 
     .prologue
-    .line 344
     const/4 v1, 0x0
 
-    .line 345
     .local v1, changed:Z
     const/4 v2, 0x0
 
@@ -655,12 +592,10 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 346
     iget-object v4, p0, Lcom/android/server/display/WifiDisplayAdapter;->mRememberedDisplays:[Landroid/hardware/display/WifiDisplay;
 
     aget-object v3, v4, v2
 
-    .line 347
     .local v3, rememberedDisplay:Landroid/hardware/display/WifiDisplay;
     invoke-virtual {v3}, Landroid/hardware/display/WifiDisplay;->getDeviceAddress()Ljava/lang/String;
 
@@ -670,7 +605,6 @@
 
     move-result-object v0
 
-    .line 349
     .local v0, availableDisplay:Landroid/hardware/display/WifiDisplay;
     if-eqz v0, :cond_0
 
@@ -680,12 +614,10 @@
 
     if-nez v4, :cond_0
 
-    .line 354
     iget-object v4, p0, Lcom/android/server/display/WifiDisplayAdapter;->mRememberedDisplays:[Landroid/hardware/display/WifiDisplay;
 
     aput-object v0, v4, v2
 
-    .line 355
     iget-object v4, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     invoke-virtual {v4, v0}, Lcom/android/server/display/PersistentDataStore;->rememberWifiDisplay(Landroid/hardware/display/WifiDisplay;)Z
@@ -694,24 +626,20 @@
 
     or-int/2addr v1, v4
 
-    .line 345
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 358
     .end local v0           #availableDisplay:Landroid/hardware/display/WifiDisplay;
     .end local v3           #rememberedDisplay:Landroid/hardware/display/WifiDisplay;
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 359
     iget-object v4, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     invoke-virtual {v4}, Lcom/android/server/display/PersistentDataStore;->saveIfNeeded()V
 
-    .line 361
     :cond_2
     return-void
 .end method
@@ -720,46 +648,38 @@
     .locals 4
 
     .prologue
-    .line 434
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     move-result-object v2
 
     monitor-enter v2
 
-    .line 435
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPendingStatusChangeBroadcast:Z
 
     if-nez v1, :cond_0
 
-    .line 436
     monitor-exit v2
 
-    .line 448
     :goto_0
     return-void
 
-    .line 439
     :cond_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPendingStatusChangeBroadcast:Z
 
-    .line 440
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.hardware.display.action.WIFI_DISPLAY_STATUS_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 441
     .local v0, intent:Landroid/content/Intent;
     const/high16 v1, 0x4000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 442
     const-string v1, "android.hardware.display.extra.WIFI_DISPLAY_STATUS"
 
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getWifiDisplayStatusLocked()Landroid/hardware/display/WifiDisplayStatus;
@@ -768,12 +688,10 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 444
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 447
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -784,7 +702,6 @@
 
     goto :goto_0
 
-    .line 444
     .end local v0           #intent:Landroid/content/Intent;
     :catchall_0
     move-exception v1
@@ -801,47 +718,38 @@
     .locals 12
 
     .prologue
-    .line 454
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     move-result-object v3
 
     monitor-enter v3
 
-    .line 455
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPendingNotificationUpdate:Z
 
     if-nez v1, :cond_1
 
-    .line 456
     monitor-exit v3
 
-    .line 525
     :cond_0
     :goto_0
     return-void
 
-    .line 459
     :cond_1
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPendingNotificationUpdate:Z
 
-    .line 460
     iget v10, p0, Lcom/android/server/display/WifiDisplayAdapter;->mActiveDisplayState:I
 
-    .line 461
     .local v10, state:I
     iget-object v7, p0, Lcom/android/server/display/WifiDisplayAdapter;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
-    .line 462
     .local v7, display:Landroid/hardware/display/WifiDisplay;
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 465
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mNotificationManager:Landroid/app/NotificationManager;
 
     const/4 v3, 0x0
@@ -852,7 +760,6 @@
 
     invoke-virtual {v1, v3, v4, v5}, Landroid/app/NotificationManager;->cancelAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)V
 
-    .line 468
     const/4 v1, 0x1
 
     if-eq v10, v1, :cond_2
@@ -861,32 +768,27 @@
 
     if-ne v10, v1, :cond_0
 
-    .line 470
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 474
     .local v0, context:Landroid/content/Context;
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mSettingsPendingIntent:Landroid/app/PendingIntent;
 
     if-nez v1, :cond_3
 
-    .line 475
     new-instance v2, Landroid/content/Intent;
 
     const-string v1, "android.settings.WIFI_DISPLAY_SETTINGS"
 
     invoke-direct {v2, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 476
     .local v2, settingsIntent:Landroid/content/Intent;
     const/high16 v1, 0x1420
 
     invoke-virtual {v2, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 479
     const/4 v1, 0x0
 
     const/4 v3, 0x0
@@ -901,21 +803,18 @@
 
     iput-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mSettingsPendingIntent:Landroid/app/PendingIntent;
 
-    .line 483
     .end local v2           #settingsIntent:Landroid/content/Intent;
     :cond_3
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisconnectPendingIntent:Landroid/app/PendingIntent;
 
     if-nez v1, :cond_4
 
-    .line 484
     new-instance v6, Landroid/content/Intent;
 
     const-string v1, "android.server.display.wfd.DISCONNECT"
 
     invoke-direct {v6, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 485
     .local v6, disconnectIntent:Landroid/content/Intent;
     const/4 v1, 0x0
 
@@ -929,20 +828,17 @@
 
     iput-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisconnectPendingIntent:Landroid/app/PendingIntent;
 
-    .line 490
     .end local v6           #disconnectIntent:Landroid/content/Intent;
     :cond_4
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
-    .line 492
     .local v9, r:Landroid/content/res/Resources;
     const/4 v1, 0x1
 
     if-ne v10, v1, :cond_5
 
-    .line 493
     new-instance v1, Landroid/app/Notification$Builder;
 
     invoke-direct {v1, v0}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
@@ -1015,7 +911,6 @@
 
     move-result-object v8
 
-    .line 521
     .local v8, notification:Landroid/app/Notification;
     :goto_1
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mNotificationManager:Landroid/app/NotificationManager;
@@ -1030,7 +925,6 @@
 
     goto/16 :goto_0
 
-    .line 462
     .end local v0           #context:Landroid/content/Context;
     .end local v7           #display:Landroid/hardware/display/WifiDisplay;
     .end local v8           #notification:Landroid/app/Notification;
@@ -1046,7 +940,6 @@
 
     throw v1
 
-    .line 507
     .restart local v0       #context:Landroid/content/Context;
     .restart local v7       #display:Landroid/hardware/display/WifiDisplay;
     .restart local v9       #r:Landroid/content/res/Resources;
@@ -1132,29 +1025,24 @@
     .locals 2
 
     .prologue
-    .line 402
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayDevice:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;
 
     if-eqz v0, :cond_0
 
-    .line 403
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayDevice:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;->destroyLocked()V
 
-    .line 404
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayDevice:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;
 
     const/4 v1, 0x3
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/display/WifiDisplayAdapter;->sendDisplayDeviceEventLocked(Lcom/android/server/display/DisplayDevice;I)V
 
-    .line 405
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayDevice:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;
 
-    .line 407
     :cond_0
     return-void
 .end method
@@ -1164,7 +1052,6 @@
     .parameter "name"
 
     .prologue
-    .line 410
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayDevice:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;
 
     if-eqz v0, :cond_0
@@ -1181,19 +1068,16 @@
 
     if-nez v0, :cond_0
 
-    .line 411
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayDevice:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;->setNameLocked(Ljava/lang/String;)V
 
-    .line 412
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayDevice:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayDevice;
 
     const/4 v1, 0x2
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/display/WifiDisplayAdapter;->sendDisplayDeviceEventLocked(Lcom/android/server/display/DisplayDevice;I)V
 
-    .line 414
     :cond_0
     return-void
 .end method
@@ -1204,25 +1088,20 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 417
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mCurrentStatus:Landroid/hardware/display/WifiDisplayStatus;
 
-    .line 418
     iget-boolean v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPendingStatusChangeBroadcast:Z
 
     if-nez v0, :cond_0
 
-    .line 419
     iput-boolean v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPendingStatusChangeBroadcast:Z
 
-    .line 420
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mHandler:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayHandler;
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayHandler;->sendEmptyMessage(I)Z
 
-    .line 422
     :cond_0
     return-void
 .end method
@@ -1231,24 +1110,20 @@
     .locals 2
 
     .prologue
-    .line 425
     iget-boolean v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPendingNotificationUpdate:Z
 
     if-nez v0, :cond_0
 
-    .line 426
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPendingNotificationUpdate:Z
 
-    .line 427
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mHandler:Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayHandler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayHandler;->sendEmptyMessage(I)Z
 
-    .line 429
     :cond_0
     return-void
 .end method
@@ -1257,7 +1132,6 @@
     .locals 15
 
     .prologue
-    .line 308
     new-instance v10, Ljava/util/ArrayList;
 
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
@@ -1272,7 +1146,6 @@
 
     invoke-direct {v10, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 310
     .local v10, displays:Ljava/util/List;,"Ljava/util/List<Landroid/hardware/display/WifiDisplay;>;"
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
@@ -1280,7 +1153,6 @@
 
     new-array v14, v0, [Z
 
-    .line 311
     .local v14, remembered:[Z
     iget-object v7, p0, Lcom/android/server/display/WifiDisplayAdapter;->mRememberedDisplays:[Landroid/hardware/display/WifiDisplay;
 
@@ -1296,11 +1168,9 @@
 
     aget-object v9, v7, v12
 
-    .line 312
     .local v9, d:Landroid/hardware/display/WifiDisplay;
     const/4 v8, 0x0
 
-    .line 313
     .local v8, available:Z
     const/4 v11, 0x0
 
@@ -1312,7 +1182,6 @@
 
     if-ge v11, v0, :cond_0
 
-    .line 314
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
     aget-object v0, v0, v11
@@ -1323,16 +1192,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 315
     const/4 v8, 0x1
 
     aput-boolean v8, v14, v11
 
-    .line 319
     :cond_0
     if-nez v8, :cond_1
 
-    .line 320
     new-instance v0, Landroid/hardware/display/WifiDisplay;
 
     invoke-virtual {v9}, Landroid/hardware/display/WifiDisplay;->getDeviceAddress()Ljava/lang/String;
@@ -1357,19 +1223,16 @@
 
     invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 311
     :cond_1
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_0
 
-    .line 313
     :cond_2
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_1
 
-    .line 324
     .end local v8           #available:Z
     .end local v9           #d:Landroid/hardware/display/WifiDisplay;
     .end local v11           #i:I
@@ -1384,12 +1247,10 @@
 
     if-ge v11, v0, :cond_4
 
-    .line 325
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
     aget-object v9, v0, v11
 
-    .line 326
     .restart local v9       #d:Landroid/hardware/display/WifiDisplay;
     new-instance v0, Landroid/hardware/display/WifiDisplay;
 
@@ -1417,12 +1278,10 @@
 
     invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 324
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_2
 
-    .line 329
     .end local v9           #d:Landroid/hardware/display/WifiDisplay;
     :cond_4
     sget-object v0, Landroid/hardware/display/WifiDisplay;->EMPTY_ARRAY:[Landroid/hardware/display/WifiDisplay;
@@ -1435,7 +1294,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplays:[Landroid/hardware/display/WifiDisplay;
 
-    .line 330
     return-void
 .end method
 
@@ -1443,7 +1301,6 @@
     .locals 2
 
     .prologue
-    .line 333
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     invoke-virtual {v0}, Lcom/android/server/display/PersistentDataStore;->getRememberedWifiDisplays()[Landroid/hardware/display/WifiDisplay;
@@ -1452,7 +1309,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mRememberedDisplays:[Landroid/hardware/display/WifiDisplay;
 
-    .line 334
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
@@ -1463,7 +1319,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
-    .line 335
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
@@ -1474,10 +1329,8 @@
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
-    .line 336
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->updateDisplaysLocked()V
 
-    .line 337
     return-void
 .end method
 
@@ -1488,10 +1341,8 @@
     .parameter "pw"
 
     .prologue
-    .line 117
     invoke-super {p0, p1}, Lcom/android/server/display/DisplayAdapter;->dumpLocked(Ljava/io/PrintWriter;)V
 
-    .line 119
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1516,7 +1367,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 120
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1539,7 +1389,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 121
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1562,7 +1411,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 122
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1585,7 +1433,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 123
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1608,7 +1455,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 124
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1635,7 +1481,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 125
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1662,7 +1507,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 126
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1689,7 +1533,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 127
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1712,7 +1555,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 128
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1735,7 +1577,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 129
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1758,38 +1599,31 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 132
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
     if-nez v1, :cond_0
 
-    .line 133
     const-string v1, "mDisplayController=null"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 140
     :goto_0
     return-void
 
-    .line 135
     :cond_0
     const-string v1, "mDisplayController:"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 136
     new-instance v0, Lcom/android/internal/util/IndentingPrintWriter;
 
     const-string v1, "  "
 
     invoke-direct {v0, p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;-><init>(Ljava/io/Writer;Ljava/lang/String;)V
 
-    .line 137
     .local v0, ipw:Lcom/android/internal/util/IndentingPrintWriter;
     invoke-virtual {v0}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 138
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -1807,12 +1641,10 @@
     .locals 7
 
     .prologue
-    .line 295
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mCurrentStatus:Landroid/hardware/display/WifiDisplayStatus;
 
     if-nez v0, :cond_0
 
-    .line 296
     new-instance v0, Landroid/hardware/display/WifiDisplayStatus;
 
     iget v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mFeatureState:I
@@ -1831,7 +1663,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mCurrentStatus:Landroid/hardware/display/WifiDisplayStatus;
 
-    .line 304
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mCurrentStatus:Landroid/hardware/display/WifiDisplayStatus;
 
@@ -1842,13 +1673,10 @@
     .locals 2
 
     .prologue
-    .line 144
     invoke-super {p0}, Lcom/android/server/display/DisplayAdapter;->registerLocked()V
 
-    .line 146
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->updateRememberedDisplaysLocked()V
 
-    .line 148
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1859,7 +1687,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 158
     return-void
 .end method
 
@@ -1868,7 +1695,6 @@
     .parameter "address"
 
     .prologue
-    .line 195
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1879,7 +1705,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 203
     return-void
 .end method
 
@@ -1887,7 +1712,6 @@
     .locals 2
 
     .prologue
-    .line 240
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1898,7 +1722,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 248
     return-void
 .end method
 
@@ -1907,7 +1730,6 @@
     .parameter "address"
 
     .prologue
-    .line 283
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/PersistentDataStore;->forgetWifiDisplay(Ljava/lang/String;)Z
@@ -1916,18 +1738,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 284
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     invoke-virtual {v0}, Lcom/android/server/display/PersistentDataStore;->saveIfNeeded()V
 
-    .line 285
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->updateRememberedDisplaysLocked()V
 
-    .line 286
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->scheduleStatusChangedBroadcastLocked()V
 
-    .line 289
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
@@ -1945,10 +1763,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 290
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->requestDisconnectLocked()V
 
-    .line 292
     :cond_1
     return-void
 .end method
@@ -1957,7 +1773,6 @@
     .locals 2
 
     .prologue
-    .line 210
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1968,7 +1783,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 218
     return-void
 .end method
 
@@ -1980,15 +1794,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 255
     if-eqz p2, :cond_1
 
-    .line 256
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 257
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -2001,11 +1812,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 258
     :cond_0
     const/4 p2, 0x0
 
-    .line 262
     :cond_1
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
@@ -2013,7 +1822,6 @@
 
     move-result-object v7
 
-    .line 263
     .local v7, display:Landroid/hardware/display/WifiDisplay;
     if-eqz v7, :cond_4
 
@@ -2027,7 +1835,6 @@
 
     if-nez v1, :cond_4
 
-    .line 264
     new-instance v0, Landroid/hardware/display/WifiDisplay;
 
     invoke-virtual {v7}, Landroid/hardware/display/WifiDisplay;->getDeviceName()Ljava/lang/String;
@@ -2044,7 +1851,6 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/hardware/display/WifiDisplay;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZ)V
 
-    .line 266
     .end local v7           #display:Landroid/hardware/display/WifiDisplay;
     .local v0, display:Landroid/hardware/display/WifiDisplay;
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
@@ -2055,18 +1861,14 @@
 
     if-eqz v1, :cond_2
 
-    .line 267
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     invoke-virtual {v1}, Lcom/android/server/display/PersistentDataStore;->saveIfNeeded()V
 
-    .line 268
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->updateRememberedDisplaysLocked()V
 
-    .line 269
     invoke-direct {p0}, Lcom/android/server/display/WifiDisplayAdapter;->scheduleStatusChangedBroadcastLocked()V
 
-    .line 273
     :cond_2
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
@@ -2085,7 +1887,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 274
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
     invoke-virtual {v1}, Landroid/hardware/display/WifiDisplay;->getFriendlyDisplayName()Ljava/lang/String;
@@ -2094,7 +1895,6 @@
 
     invoke-direct {p0, v1}, Lcom/android/server/display/WifiDisplayAdapter;->renameDisplayDeviceLocked(Ljava/lang/String;)V
 
-    .line 276
     :cond_3
     return-void
 
@@ -2112,7 +1912,6 @@
     .locals 2
 
     .prologue
-    .line 225
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -2123,7 +1922,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 233
     return-void
 .end method
 
@@ -2131,7 +1929,6 @@
     .locals 2
 
     .prologue
-    .line 165
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -2142,7 +1939,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 173
     return-void
 .end method
 
@@ -2150,7 +1946,6 @@
     .locals 2
 
     .prologue
-    .line 180
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -2161,6 +1956,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 188
     return-void
 .end method

@@ -29,14 +29,12 @@
     .parameter
 
     .prologue
-    .line 172
     iput-object p1, p0, Landroid/transition/ChangeBounds$1;->this$0:Landroid/transition/ChangeBounds;
 
     iput-object p2, p0, Landroid/transition/ChangeBounds$1;->val$parent:Landroid/view/ViewGroup;
 
     invoke-direct {p0}, Landroid/transition/Transition$TransitionListenerAdapter;-><init>()V
 
-    .line 173
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/transition/ChangeBounds$1;->mCanceled:Z
@@ -51,19 +49,16 @@
     .parameter "transition"
 
     .prologue
-    .line 177
     iget-object v0, p0, Landroid/transition/ChangeBounds$1;->val$parent:Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
 
-    .line 178
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/transition/ChangeBounds$1;->mCanceled:Z
 
-    .line 179
     return-void
 .end method
 
@@ -72,19 +67,16 @@
     .parameter "transition"
 
     .prologue
-    .line 183
     iget-boolean v0, p0, Landroid/transition/ChangeBounds$1;->mCanceled:Z
 
     if-nez v0, :cond_0
 
-    .line 184
     iget-object v0, p0, Landroid/transition/ChangeBounds$1;->val$parent:Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
 
-    .line 186
     :cond_0
     return-void
 .end method
@@ -94,14 +86,12 @@
     .parameter "transition"
 
     .prologue
-    .line 190
     iget-object v0, p0, Landroid/transition/ChangeBounds$1;->val$parent:Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
 
-    .line 191
     return-void
 .end method
 
@@ -110,13 +100,11 @@
     .parameter "transition"
 
     .prologue
-    .line 195
     iget-object v0, p0, Landroid/transition/ChangeBounds$1;->val$parent:Landroid/view/ViewGroup;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
 
-    .line 196
     return-void
 .end method

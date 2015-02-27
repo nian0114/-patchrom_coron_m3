@@ -39,13 +39,10 @@
     .parameter "policyMask"
 
     .prologue
-    .line 1086
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1087
     iput p1, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
-    .line 1088
     return-void
 .end method
 
@@ -55,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 1097
     iget v0, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
     return v0
@@ -66,7 +62,6 @@
     .parameter "info"
 
     .prologue
-    .line 1265
     if-eqz p1, :cond_0
 
     move-object/from16 v0, p1
@@ -91,20 +86,17 @@
 
     if-nez v20, :cond_2
 
-    .line 1266
     :cond_0
     const-string v20, "StrictMode"
 
-    const-string/jumbo v21, "unexpected null stacktrace"
+    const-string v21, "unexpected null stacktrace"
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1372
     :cond_1
     :goto_0
     return-void
 
-    .line 1270
     :cond_2
     invoke-static {}, Landroid/os/StrictMode;->access$800()Z
 
@@ -140,7 +132,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1272
     :cond_3
     move-object/from16 v0, p1
 
@@ -156,7 +147,6 @@
 
     if-eqz v20, :cond_8
 
-    .line 1273
     invoke-static {}, Landroid/os/StrictMode;->access$900()Ljava/lang/ThreadLocal;
 
     move-result-object v20
@@ -167,11 +157,9 @@
 
     check-cast v18, Ljava/util/ArrayList;
 
-    .line 1274
     .local v18, violations:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/StrictMode$ViolationInfo;>;"
     if-nez v18, :cond_6
 
-    .line 1275
     new-instance v18, Ljava/util/ArrayList;
 
     .end local v18           #violations:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/StrictMode$ViolationInfo;>;"
@@ -183,7 +171,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 1276
     .restart local v18       #violations:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/StrictMode$ViolationInfo;>;"
     invoke-static {}, Landroid/os/StrictMode;->access$900()Ljava/lang/ThreadLocal;
 
@@ -195,7 +182,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 1281
     :cond_4
     invoke-virtual/range {v18 .. v18}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -215,7 +201,6 @@
 
     check-cast v12, Landroid/os/StrictMode$ViolationInfo;
 
-    .line 1282
     .local v12, previous:Landroid/os/StrictMode$ViolationInfo;
     move-object/from16 v0, p1
 
@@ -247,7 +232,6 @@
 
     goto/16 :goto_0
 
-    .line 1277
     .end local v6           #i$:Ljava/util/Iterator;
     .end local v12           #previous:Landroid/os/StrictMode$ViolationInfo;
     :cond_6
@@ -265,7 +249,6 @@
 
     goto/16 :goto_0
 
-    .line 1287
     .restart local v6       #i$:Ljava/util/Iterator;
     :cond_7
     move-object/from16 v0, v18
@@ -276,7 +259,6 @@
 
     goto/16 :goto_0
 
-    .line 1292
     .end local v6           #i$:Ljava/util/Iterator;
     .end local v18           #violations:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/StrictMode$ViolationInfo;>;"
     :cond_8
@@ -288,11 +270,9 @@
 
     move-result-object v4
 
-    .line 1293
     .local v4, crashFingerprint:Ljava/lang/Integer;
     const-wide/16 v8, 0x0
 
-    .line 1294
     .local v8, lastViolationTime:J
     move-object/from16 v0, p0
 
@@ -302,7 +282,6 @@
 
     if-eqz v20, :cond_d
 
-    .line 1295
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mLastViolationTime:Landroid/util/ArrayMap;
@@ -317,16 +296,13 @@
 
     check-cast v19, Ljava/lang/Long;
 
-    .line 1296
     .local v19, vtime:Ljava/lang/Long;
     if-eqz v19, :cond_9
 
-    .line 1297
     invoke-virtual/range {v19 .. v19}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v8
 
-    .line 1302
     .end local v19           #vtime:Ljava/lang/Long;
     :cond_9
     :goto_1
@@ -334,7 +310,6 @@
 
     move-result-wide v10
 
-    .line 1303
     .local v10, now:J
     move-object/from16 v0, p0
 
@@ -352,7 +327,6 @@
 
     invoke-virtual {v0, v4, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1304
     const-wide/16 v20, 0x0
 
     cmp-long v20, v8, v20
@@ -361,7 +335,6 @@
 
     const-wide v14, 0x7fffffffffffffffL
 
-    .line 1307
     .local v14, timeSinceLastViolationMillis:J
     :goto_2
     move-object/from16 v0, p1
@@ -380,7 +353,6 @@
 
     if-lez v20, :cond_a
 
-    .line 1309
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/StrictMode$ViolationInfo;->durationMillis:I
@@ -395,7 +367,6 @@
 
     if-eq v0, v1, :cond_f
 
-    .line 1310
     const-string v20, "StrictMode"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -446,12 +417,10 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1321
     :cond_a
     :goto_3
     const/16 v17, 0x0
 
-    .line 1323
     .local v17, violationMaskSubset:I
     move-object/from16 v0, p1
 
@@ -469,10 +438,8 @@
 
     if-lez v20, :cond_b
 
-    .line 1325
     or-int/lit8 v17, v17, 0x20
 
-    .line 1328
     :cond_b
     move-object/from16 v0, p1
 
@@ -494,18 +461,15 @@
 
     if-nez v20, :cond_c
 
-    .line 1329
     move/from16 v0, v17
 
     or-int/lit16 v0, v0, 0x80
 
     move/from16 v17, v0
 
-    .line 1332
     :cond_c
     if-eqz v17, :cond_12
 
-    .line 1333
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/StrictMode$ViolationInfo;->crashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
@@ -523,16 +487,13 @@
 
     move-result v16
 
-    .line 1334
     .local v16, violationBit:I
     or-int v17, v17, v16
 
-    .line 1335
     invoke-static {}, Landroid/os/StrictMode;->getThreadPolicyMask()I
 
     move-result v13
 
-    .line 1337
     .local v13, savedPolicyMask:I
     move-object/from16 v0, p1
 
@@ -556,12 +517,10 @@
 
     const/4 v7, 0x1
 
-    .line 1338
     .local v7, justDropBox:Z
     :goto_4
     if-eqz v7, :cond_11
 
-    .line 1345
     move/from16 v0, v17
 
     move-object/from16 v1, p1
@@ -571,7 +530,6 @@
 
     goto/16 :goto_0
 
-    .line 1300
     .end local v7           #justDropBox:Z
     .end local v10           #now:J
     .end local v13           #savedPolicyMask:I
@@ -593,14 +551,12 @@
 
     goto/16 :goto_1
 
-    .line 1304
     .restart local v10       #now:J
     :cond_e
     sub-long v14, v10, v8
 
     goto/16 :goto_2
 
-    .line 1313
     .restart local v14       #timeSinceLastViolationMillis:J
     :cond_f
     const-string v20, "StrictMode"
@@ -639,7 +595,6 @@
 
     goto/16 :goto_3
 
-    .line 1337
     .restart local v13       #savedPolicyMask:I
     .restart local v16       #violationBit:I
     .restart local v17       #violationMaskSubset:I
@@ -648,7 +603,6 @@
 
     goto :goto_4
 
-    .line 1355
     .restart local v7       #justDropBox:Z
     :cond_11
     const/16 v20, 0x0
@@ -657,7 +611,6 @@
     #calls: Landroid/os/StrictMode;->setThreadPolicyMask(I)V
     invoke-static/range {v20 .. v20}, Landroid/os/StrictMode;->access$1200(I)V
 
-    .line 1357
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v20
@@ -679,11 +632,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1365
     #calls: Landroid/os/StrictMode;->setThreadPolicyMask(I)V
     invoke-static {v13}, Landroid/os/StrictMode;->access$1200(I)V
 
-    .line 1369
     .end local v7           #justDropBox:Z
     .end local v13           #savedPolicyMask:I
     .end local v16           #violationBit:I
@@ -699,20 +650,17 @@
 
     if-eqz v20, :cond_1
 
-    .line 1370
     #calls: Landroid/os/StrictMode;->executeDeathPenalty(Landroid/os/StrictMode$ViolationInfo;)V
     invoke-static/range {p1 .. p1}, Landroid/os/StrictMode;->access$1300(Landroid/os/StrictMode$ViolationInfo;)V
 
     goto/16 :goto_0
 
-    .line 1361
     .restart local v7       #justDropBox:Z
     .restart local v13       #savedPolicyMask:I
     .restart local v16       #violationBit:I
     :catch_0
     move-exception v5
 
-    .line 1362
     .local v5, e:Landroid/os/RemoteException;
     :try_start_1
     const-string v20, "StrictMode"
@@ -727,7 +675,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1365
     #calls: Landroid/os/StrictMode;->setThreadPolicyMask(I)V
     invoke-static {v13}, Landroid/os/StrictMode;->access$1200(I)V
 
@@ -750,12 +697,10 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 1176
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 1194
     .local v0, looper:Landroid/os/Looper;
     if-eqz v0, :cond_0
 
@@ -767,21 +712,17 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 1196
     :cond_0
     const/4 v3, -0x1
 
     iput v3, p1, Landroid/os/StrictMode$ViolationInfo;->durationMillis:I
 
-    .line 1197
     invoke-virtual {p0, p1}, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->handleViolation(Landroid/os/StrictMode$ViolationInfo;)V
 
-    .line 1257
     :cond_1
     :goto_0
     return-void
 
-    .line 1201
     :cond_2
     invoke-static {}, Landroid/os/StrictMode;->access$500()Ljava/lang/ThreadLocal;
 
@@ -793,7 +734,6 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 1202
     .local v1, records:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/StrictMode$ViolationInfo;>;"
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -803,17 +743,14 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 1206
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1207
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
     if-gt v3, v5, :cond_1
 
-    .line 1214
     iget v3, p1, Landroid/os/StrictMode$ViolationInfo;->policy:I
 
     and-int/lit16 v3, v3, 0x800
@@ -832,12 +769,10 @@
 
     move-object v2, v3
 
-    .line 1216
     .local v2, windowManager:Landroid/view/IWindowManager;
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 1218
     const/4 v3, 0x1
 
     :try_start_0
@@ -845,7 +780,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1232
     :cond_3
     :goto_2
     invoke-static {}, Landroid/os/StrictMode;->access$700()Ljava/lang/ThreadLocal;
@@ -866,14 +800,12 @@
 
     goto :goto_0
 
-    .line 1214
     .end local v2           #windowManager:Landroid/view/IWindowManager;
     :cond_4
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 1219
     .restart local v2       #windowManager:Landroid/view/IWindowManager;
     :catch_0
     move-exception v3
@@ -886,19 +818,16 @@
     .parameter "name"
 
     .prologue
-    .line 1115
     iget v1, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
     and-int/lit8 v1, v1, 0x8
 
     if-nez v1, :cond_1
 
-    .line 1124
     :cond_0
     :goto_0
     return-void
 
-    .line 1118
     :cond_1
     #calls: Landroid/os/StrictMode;->tooManyViolationsThisLoop()Z
     invoke-static {}, Landroid/os/StrictMode;->access$400()Z
@@ -907,18 +836,15 @@
 
     if-nez v1, :cond_0
 
-    .line 1121
     new-instance v0, Landroid/os/StrictMode$StrictModeCustomViolation;
 
     iget v1, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
     invoke-direct {v0, v1, p1}, Landroid/os/StrictMode$StrictModeCustomViolation;-><init>(ILjava/lang/String;)V
 
-    .line 1122
     .local v0, e:Ldalvik/system/BlockGuard$BlockGuardPolicyException;
     invoke-virtual {v0}, Ldalvik/system/BlockGuard$BlockGuardPolicyException;->fillInStackTrace()Ljava/lang/Throwable;
 
-    .line 1123
     invoke-virtual {p0, v0}, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->startHandlingViolationException(Ldalvik/system/BlockGuard$BlockGuardPolicyException;)V
 
     goto :goto_0
@@ -928,19 +854,16 @@
     .locals 2
 
     .prologue
-    .line 1141
     iget v1, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
     and-int/lit8 v1, v1, 0x4
 
     if-nez v1, :cond_1
 
-    .line 1153
     :cond_0
     :goto_0
     return-void
 
-    .line 1144
     :cond_1
     iget v1, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
@@ -948,14 +871,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 1145
     new-instance v1, Landroid/os/NetworkOnMainThreadException;
 
     invoke-direct {v1}, Landroid/os/NetworkOnMainThreadException;-><init>()V
 
     throw v1
 
-    .line 1147
     :cond_2
     #calls: Landroid/os/StrictMode;->tooManyViolationsThisLoop()Z
     invoke-static {}, Landroid/os/StrictMode;->access$400()Z
@@ -964,18 +885,15 @@
 
     if-nez v1, :cond_0
 
-    .line 1150
     new-instance v0, Landroid/os/StrictMode$StrictModeNetworkViolation;
 
     iget v1, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
     invoke-direct {v0, v1}, Landroid/os/StrictMode$StrictModeNetworkViolation;-><init>(I)V
 
-    .line 1151
     .local v0, e:Ldalvik/system/BlockGuard$BlockGuardPolicyException;
     invoke-virtual {v0}, Ldalvik/system/BlockGuard$BlockGuardPolicyException;->fillInStackTrace()Ljava/lang/Throwable;
 
-    .line 1152
     invoke-virtual {p0, v0}, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->startHandlingViolationException(Ldalvik/system/BlockGuard$BlockGuardPolicyException;)V
 
     goto :goto_0
@@ -985,19 +903,16 @@
     .locals 2
 
     .prologue
-    .line 1128
     iget v1, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
     and-int/lit8 v1, v1, 0x2
 
     if-nez v1, :cond_1
 
-    .line 1137
     :cond_0
     :goto_0
     return-void
 
-    .line 1131
     :cond_1
     #calls: Landroid/os/StrictMode;->tooManyViolationsThisLoop()Z
     invoke-static {}, Landroid/os/StrictMode;->access$400()Z
@@ -1006,18 +921,15 @@
 
     if-nez v1, :cond_0
 
-    .line 1134
     new-instance v0, Landroid/os/StrictMode$StrictModeDiskReadViolation;
 
     iget v1, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
     invoke-direct {v0, v1}, Landroid/os/StrictMode$StrictModeDiskReadViolation;-><init>(I)V
 
-    .line 1135
     .local v0, e:Ldalvik/system/BlockGuard$BlockGuardPolicyException;
     invoke-virtual {v0}, Ldalvik/system/BlockGuard$BlockGuardPolicyException;->fillInStackTrace()Ljava/lang/Throwable;
 
-    .line 1136
     invoke-virtual {p0, v0}, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->startHandlingViolationException(Ldalvik/system/BlockGuard$BlockGuardPolicyException;)V
 
     goto :goto_0
@@ -1027,19 +939,16 @@
     .locals 2
 
     .prologue
-    .line 1102
     iget v1, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
     and-int/lit8 v1, v1, 0x1
 
     if-nez v1, :cond_1
 
-    .line 1111
     :cond_0
     :goto_0
     return-void
 
-    .line 1105
     :cond_1
     #calls: Landroid/os/StrictMode;->tooManyViolationsThisLoop()Z
     invoke-static {}, Landroid/os/StrictMode;->access$400()Z
@@ -1048,18 +957,15 @@
 
     if-nez v1, :cond_0
 
-    .line 1108
     new-instance v0, Landroid/os/StrictMode$StrictModeDiskWriteViolation;
 
     iget v1, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
     invoke-direct {v0, v1}, Landroid/os/StrictMode$StrictModeDiskWriteViolation;-><init>(I)V
 
-    .line 1109
     .local v0, e:Ldalvik/system/BlockGuard$BlockGuardPolicyException;
     invoke-virtual {v0}, Ldalvik/system/BlockGuard$BlockGuardPolicyException;->fillInStackTrace()Ljava/lang/Throwable;
 
-    .line 1110
     invoke-virtual {p0, v0}, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->startHandlingViolationException(Ldalvik/system/BlockGuard$BlockGuardPolicyException;)V
 
     goto :goto_0
@@ -1070,10 +976,8 @@
     .parameter "policyMask"
 
     .prologue
-    .line 1156
     iput p1, p0, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->mPolicyMask:I
 
-    .line 1157
     return-void
 .end method
 
@@ -1082,7 +986,6 @@
     .parameter "e"
 
     .prologue
-    .line 1165
     new-instance v0, Landroid/os/StrictMode$ViolationInfo;
 
     invoke-virtual {p1}, Ldalvik/system/BlockGuard$BlockGuardPolicyException;->getPolicy()I
@@ -1091,7 +994,6 @@
 
     invoke-direct {v0, p1, v1}, Landroid/os/StrictMode$ViolationInfo;-><init>(Ljava/lang/Throwable;I)V
 
-    .line 1166
     .local v0, info:Landroid/os/StrictMode$ViolationInfo;
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -1099,10 +1001,8 @@
 
     iput-wide v1, v0, Landroid/os/StrictMode$ViolationInfo;->violationUptimeMillis:J
 
-    .line 1167
     invoke-virtual {p0, v0}, Landroid/os/StrictMode$AndroidBlockGuardPolicy;->handleViolationWithTimingAttempt(Landroid/os/StrictMode$ViolationInfo;)V
 
-    .line 1168
     return-void
 .end method
 
@@ -1110,7 +1010,6 @@
     .locals 2
 
     .prologue
-    .line 1092
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

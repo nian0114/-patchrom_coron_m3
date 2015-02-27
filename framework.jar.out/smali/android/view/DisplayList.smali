@@ -24,7 +24,6 @@
     .locals 0
 
     .prologue
-    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,12 +38,10 @@
     .locals 1
 
     .prologue
-    .line 250
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/view/DisplayList;->mDirty:Z
 
-    .line 251
     return-void
 .end method
 
@@ -67,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 326
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -125,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 262
     iget-boolean v0, p0, Landroid/view/DisplayList;->mDirty:Z
 
     return v0
@@ -138,12 +133,10 @@
     .locals 1
 
     .prologue
-    .line 237
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/view/DisplayList;->mDirty:Z
 
-    .line 238
     return-void
 .end method
 

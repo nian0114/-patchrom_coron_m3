@@ -49,13 +49,10 @@
     .parameter "callback"
 
     .prologue
-    .line 601
     invoke-direct {p0}, Landroid/accessibilityservice/IAccessibilityServiceClient$Stub;-><init>()V
 
-    .line 602
     iput-object p3, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCallback:Landroid/accessibilityservice/AccessibilityService$Callbacks;
 
-    .line 603
     new-instance v0, Lcom/android/internal/os/HandlerCaller;
 
     const/4 v1, 0x1
@@ -64,7 +61,6 @@
 
     iput-object v0, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
-    .line 604
     return-void
 .end method
 
@@ -74,7 +70,6 @@
     .locals 3
 
     .prologue
-    .line 628
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     const/16 v2, 0x32
@@ -83,13 +78,11 @@
 
     move-result-object v0
 
-    .line 629
     .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 630
     return-void
 .end method
 
@@ -98,12 +91,10 @@
     .parameter "message"
 
     .prologue
-    .line 639
     iget v5, p1, Landroid/os/Message;->what:I
 
     sparse-switch v5, :sswitch_data_0
 
-    .line 692
     const-string v5, "AccessibilityService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -128,39 +119,32 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 694
     :cond_0
     :goto_0
     return-void
 
-    .line 641
     :sswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/view/accessibility/AccessibilityEvent;
 
-    .line 642
     .local v1, event:Landroid/view/accessibility/AccessibilityEvent;
     if-eqz v1, :cond_0
 
-    .line 643
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v5
 
     invoke-virtual {v5, v1}, Landroid/view/accessibility/AccessibilityInteractionClient;->onAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 644
     iget-object v5, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCallback:Landroid/accessibilityservice/AccessibilityService$Callbacks;
 
     invoke-interface {v5, v1}, Landroid/accessibilityservice/AccessibilityService$Callbacks;->onAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 645
     invoke-virtual {v1}, Landroid/view/accessibility/AccessibilityEvent;->recycle()V
 
     goto :goto_0
 
-    .line 649
     .end local v1           #event:Landroid/view/accessibility/AccessibilityEvent;
     :sswitch_1
     iget-object v5, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCallback:Landroid/accessibilityservice/AccessibilityService$Callbacks;
@@ -169,22 +153,18 @@
 
     goto :goto_0
 
-    .line 652
     :sswitch_2
     iget v5, p1, Landroid/os/Message;->arg1:I
 
     iput v5, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mConnectionId:I
 
-    .line 653
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/accessibilityservice/IAccessibilityServiceConnection;
 
-    .line 655
     .local v0, connection:Landroid/accessibilityservice/IAccessibilityServiceConnection;
     if-eqz v0, :cond_1
 
-    .line 656
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v5
@@ -193,21 +173,18 @@
 
     invoke-virtual {v5, v6, v0}, Landroid/view/accessibility/AccessibilityInteractionClient;->addConnection(ILandroid/accessibilityservice/IAccessibilityServiceConnection;)V
 
-    .line 658
     iget-object v5, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCallback:Landroid/accessibilityservice/AccessibilityService$Callbacks;
 
     iget v6, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mConnectionId:I
 
     invoke-interface {v5, v6}, Landroid/accessibilityservice/AccessibilityService$Callbacks;->onSetConnectionId(I)V
 
-    .line 659
     iget-object v5, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCallback:Landroid/accessibilityservice/AccessibilityService$Callbacks;
 
     invoke-interface {v5}, Landroid/accessibilityservice/AccessibilityService$Callbacks;->onServiceConnected()V
 
     goto :goto_0
 
-    .line 661
     :cond_1
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
@@ -217,14 +194,12 @@
 
     invoke-virtual {v5, v6}, Landroid/view/accessibility/AccessibilityInteractionClient;->removeConnection(I)V
 
-    .line 662
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v5
 
     invoke-virtual {v5}, Landroid/view/accessibility/AccessibilityInteractionClient;->clearCache()V
 
-    .line 663
     iget-object v5, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCallback:Landroid/accessibilityservice/AccessibilityService$Callbacks;
 
     const/4 v6, -0x1
@@ -233,12 +208,10 @@
 
     goto :goto_0
 
-    .line 667
     .end local v0           #connection:Landroid/accessibilityservice/IAccessibilityServiceConnection;
     :sswitch_3
     iget v2, p1, Landroid/os/Message;->arg1:I
 
-    .line 668
     .local v2, gestureId:I
     iget-object v5, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCallback:Landroid/accessibilityservice/AccessibilityService$Callbacks;
 
@@ -246,7 +219,6 @@
 
     goto :goto_0
 
-    .line 671
     .end local v2           #gestureId:I
     :sswitch_4
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
@@ -257,13 +229,11 @@
 
     goto :goto_0
 
-    .line 674
     :sswitch_5
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/view/KeyEvent;
 
-    .line 676
     .local v1, event:Landroid/view/KeyEvent;
     :try_start_0
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
@@ -276,24 +246,20 @@
 
     move-result-object v0
 
-    .line 678
     .restart local v0       #connection:Landroid/accessibilityservice/IAccessibilityServiceConnection;
     if-eqz v0, :cond_2
 
-    .line 679
     iget-object v5, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCallback:Landroid/accessibilityservice/AccessibilityService$Callbacks;
 
     invoke-interface {v5, v1}, Landroid/accessibilityservice/AccessibilityService$Callbacks;->onKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v3
 
-    .line 680
     .local v3, result:Z
     iget v4, p1, Landroid/os/Message;->arg1:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 682
     .local v4, sequence:I
     :try_start_1
     invoke-interface {v0, v3, v4}, Landroid/accessibilityservice/IAccessibilityServiceConnection;->setOnKeyEventResult(ZI)V
@@ -301,7 +267,6 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 688
     .end local v3           #result:Z
     .end local v4           #sequence:I
     :cond_2
@@ -318,7 +283,6 @@
 
     throw v5
 
-    .line 683
     .restart local v0       #connection:Landroid/accessibilityservice/IAccessibilityServiceConnection;
     .restart local v3       #result:Z
     .restart local v4       #sequence:I
@@ -327,7 +291,6 @@
 
     goto :goto_1
 
-    .line 639
     :sswitch_data_0
     .sparse-switch
         0xa -> :sswitch_2
@@ -344,7 +307,6 @@
     .parameter "event"
 
     .prologue
-    .line 618
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     const/16 v2, 0x1e
@@ -353,13 +315,11 @@
 
     move-result-object v0
 
-    .line 619
     .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 620
     return-void
 .end method
 
@@ -368,7 +328,6 @@
     .parameter "gestureId"
 
     .prologue
-    .line 623
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     const/16 v2, 0x28
@@ -377,13 +336,11 @@
 
     move-result-object v0
 
-    .line 624
     .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 625
     return-void
 .end method
 
@@ -391,7 +348,6 @@
     .locals 3
 
     .prologue
-    .line 613
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     const/16 v2, 0x14
@@ -400,13 +356,11 @@
 
     move-result-object v0
 
-    .line 614
     .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 615
     return-void
 .end method
 
@@ -416,7 +370,6 @@
     .parameter "sequence"
 
     .prologue
-    .line 634
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     const/16 v2, 0x3c
@@ -425,13 +378,11 @@
 
     move-result-object v0
 
-    .line 635
     .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 636
     return-void
 .end method
 
@@ -441,7 +392,6 @@
     .parameter "connectionId"
 
     .prologue
-    .line 607
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     const/16 v2, 0xa
@@ -450,12 +400,10 @@
 
     move-result-object v0
 
-    .line 609
     .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 610
     return-void
 .end method

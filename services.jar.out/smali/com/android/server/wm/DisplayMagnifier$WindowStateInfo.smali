@@ -42,7 +42,6 @@
     .locals 2
 
     .prologue
-    .line 666
     new-instance v0, Landroid/util/Pools$SimplePool;
 
     const/16 v1, 0x1e
@@ -51,7 +50,6 @@
 
     sput-object v0, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;->sPool:Landroid/util/Pools$SimplePool;
 
-    .line 669
     new-instance v0, Landroid/graphics/Region;
 
     invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
@@ -65,10 +63,8 @@
     .locals 1
 
     .prologue
-    .line 663
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 672
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -83,7 +79,6 @@
     .parameter "windowState"
 
     .prologue
-    .line 675
     sget-object v1, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;->sPool:Landroid/util/Pools$SimplePool;
 
     invoke-virtual {v1}, Landroid/util/Pools$SimplePool;->acquire()Ljava/lang/Object;
@@ -92,34 +87,28 @@
 
     check-cast v0, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;
 
-    .line 676
     .local v0, info:Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;
     if-nez v0, :cond_0
 
-    .line 677
     new-instance v0, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;
 
     .end local v0           #info:Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;
     invoke-direct {v0}, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;-><init>()V
 
-    .line 679
     .restart local v0       #info:Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;
     :cond_0
     iput-object p0, v0, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;->mWindowState:Lcom/android/server/wm/WindowState;
 
-    .line 680
     sget-object v1, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;->mTempRegion:Landroid/graphics/Region;
 
     invoke-virtual {p0, v1}, Lcom/android/server/wm/WindowState;->getTouchableRegion(Landroid/graphics/Region;)V
 
-    .line 681
     sget-object v1, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;->mTempRegion:Landroid/graphics/Region;
 
     iget-object v2, v0, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;->mTouchableRegion:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Region;->getBounds(Landroid/graphics/Rect;)Z
 
-    .line 682
     return-object v0
 .end method
 
@@ -129,21 +118,17 @@
     .locals 1
 
     .prologue
-    .line 686
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;->mWindowState:Lcom/android/server/wm/WindowState;
 
-    .line 687
     iget-object v0, p0, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;->mTouchableRegion:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 688
     sget-object v0, Lcom/android/server/wm/DisplayMagnifier$WindowStateInfo;->sPool:Landroid/util/Pools$SimplePool;
 
     invoke-virtual {v0, p0}, Landroid/util/Pools$SimplePool;->release(Ljava/lang/Object;)Z
 
-    .line 689
     return-void
 .end method

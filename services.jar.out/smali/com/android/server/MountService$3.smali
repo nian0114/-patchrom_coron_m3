@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 638
     iput-object p1, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,18 +39,15 @@
     .parameter "intent"
 
     .prologue
-    .line 641
     iget-object v2, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->waitForReady()V
     invoke-static {v2}, Lcom/android/server/MountService;->access$1200(Lcom/android/server/MountService;)V
 
-    .line 642
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 646
     .local v0, action:Ljava/lang/String;
     const-string v2, "android.intent.action.ACTION_IDLE_MAINTENANCE_START"
 
@@ -61,7 +57,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 650
     :try_start_0
     iget-object v2, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
@@ -84,7 +79,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 651
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -93,16 +87,13 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 656
     :cond_0
     :goto_0
     return-void
 
-    .line 652
     :catch_0
     move-exception v1
 
-    .line 653
     .local v1, ndce:Lcom/android/server/NativeDaemonConnectorException;
     const-string v2, "MountService"
 

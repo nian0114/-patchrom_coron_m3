@@ -42,7 +42,6 @@
     .parameter
 
     .prologue
-    .line 222
     iput-object p1, p0, Landroid/transition/ChangeText$3;->this$0:Landroid/transition/ChangeText;
 
     iput-object p2, p0, Landroid/transition/ChangeText$3;->val$startText:Ljava/lang/CharSequence;
@@ -69,7 +68,6 @@
     .parameter "animation"
 
     .prologue
-    .line 225
     iget-object v0, p0, Landroid/transition/ChangeText$3;->val$startText:Ljava/lang/CharSequence;
 
     iget-object v1, p0, Landroid/transition/ChangeText$3;->val$view:Landroid/widget/TextView;
@@ -84,21 +82,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 227
     iget-object v0, p0, Landroid/transition/ChangeText$3;->val$view:Landroid/widget/TextView;
 
     iget-object v1, p0, Landroid/transition/ChangeText$3;->val$endText:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 228
     iget-object v0, p0, Landroid/transition/ChangeText$3;->val$view:Landroid/widget/TextView;
 
     instance-of v0, v0, Landroid/widget/EditText;
 
     if-eqz v0, :cond_0
 
-    .line 229
     iget-object v1, p0, Landroid/transition/ChangeText$3;->this$0:Landroid/transition/ChangeText;
 
     iget-object v0, p0, Landroid/transition/ChangeText$3;->val$view:Landroid/widget/TextView;
@@ -112,7 +107,6 @@
     #calls: Landroid/transition/ChangeText;->setSelection(Landroid/widget/EditText;II)V
     invoke-static {v1, v0, v2, v3}, Landroid/transition/ChangeText;->access$000(Landroid/transition/ChangeText;Landroid/widget/EditText;II)V
 
-    .line 234
     :cond_0
     iget-object v0, p0, Landroid/transition/ChangeText$3;->val$view:Landroid/widget/TextView;
 
@@ -120,6 +114,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 235
     return-void
 .end method

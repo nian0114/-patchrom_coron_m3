@@ -24,15 +24,12 @@
     .parameter
 
     .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManager$AdbSettingsObserver;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
-    .line 131
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 132
     return-void
 .end method
 
@@ -47,7 +44,6 @@
 
     const/4 v2, 0x1
 
-    .line 135
     iget-object v1, p0, Lcom/android/server/usb/UsbDeviceManager$AdbSettingsObserver;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     #getter for: Lcom/android/server/usb/UsbDeviceManager;->mContentResolver:Landroid/content/ContentResolver;
@@ -78,7 +74,6 @@
 
     move v0, v2
 
-    .line 138
     .local v0, enable:Z
     :goto_1
     iget-object v1, p0, Lcom/android/server/usb/UsbDeviceManager$AdbSettingsObserver;->this$0:Lcom/android/server/usb/UsbDeviceManager;
@@ -90,14 +85,12 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->sendMessage(IZ)V
 
-    .line 139
     return-void
 
     .end local v0           #enable:Z
     :cond_0
     move v1, v3
 
-    .line 135
     goto :goto_0
 
     :cond_1

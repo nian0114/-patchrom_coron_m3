@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 1182
     invoke-static {}, Lcom/android/server/am/ActivityStack$ActivityState;->values()[Lcom/android/server/am/ActivityStack$ActivityState;
 
     move-result-object v0

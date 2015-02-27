@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 68
     iput-object p1, p0, Landroid/widget/MagnifierController$1;->this$0:Landroid/widget/MagnifierController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Landroid/widget/MagnifierController$1;->this$0:Landroid/widget/MagnifierController;
 
     invoke-virtual {v0}, Landroid/widget/MagnifierController;->dismiss()V
 
-    .line 71
     return-void
 .end method

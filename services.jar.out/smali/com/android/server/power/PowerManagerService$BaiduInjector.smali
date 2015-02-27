@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 2850
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .parameter "service"
 
     .prologue
-    .line 2853
     #getter for: Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
     invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->access$1600(Lcom/android/server/power/PowerManagerService;)Landroid/content/Context;
 
@@ -40,7 +38,6 @@
 
     move-result-object v0
 
-    .line 2854
     .local v0, resolver:Landroid/content/ContentResolver;
     const-string v1, "button_light_off"
 
@@ -59,7 +56,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 2857
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2860
     #getter for: Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
     invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->access$1600(Lcom/android/server/power/PowerManagerService;)Landroid/content/Context;
 
@@ -80,7 +75,6 @@
 
     move-result-object v2
 
-    .line 2861
     .local v2, resolver:Landroid/content/ContentResolver;
     const-string v3, "button_light_off"
 
@@ -90,11 +84,9 @@
 
     move-result v1
 
-    .line 2864
     .local v1, buttonLightOff:I
     if-eqz v1, :cond_0
 
-    .line 2865
     #getter for: Lcom/android/server/power/PowerManagerService;->mLightsService:Lcom/android/server/LightsService;
     invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->access$iget-mLightsService-24a2db(Lcom/android/server/power/PowerManagerService;)Lcom/android/server/LightsService;
 
@@ -106,14 +98,11 @@
 
     move-result-object v0
 
-    .line 2866
     .local v0, buttonLight:Lcom/android/server/LightsService$Light;
     if-eqz v0, :cond_0
 
-    .line 2867
     invoke-virtual {v0, v5}, Lcom/android/server/LightsService$Light;->setBrightness(I)V
 
-    .line 2870
     .end local v0           #buttonLight:Lcom/android/server/LightsService$Light;
     :cond_0
     return-void

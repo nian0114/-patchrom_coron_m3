@@ -37,10 +37,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 378
     iput-object p1, p0, Lcom/android/server/wifi/WifiService$BatchedScanRequest;->this$0:Lcom/android/server/wifi/WifiService;
 
-    .line 379
     const/4 v2, 0x0
 
     move-object v0, p0
@@ -53,27 +51,22 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/wifi/WifiService$DeathRecipient;-><init>(Lcom/android/server/wifi/WifiService;ILjava/lang/String;Landroid/os/IBinder;Landroid/os/WorkSource;)V
 
-    .line 380
     iput-object p2, p0, Lcom/android/server/wifi/WifiService$BatchedScanRequest;->settings:Landroid/net/wifi/BatchedScanSettings;
 
-    .line 381
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/wifi/WifiService$BatchedScanRequest;->uid:I
 
-    .line 382
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/wifi/WifiService$BatchedScanRequest;->pid:I
 
-    .line 383
     iput-object p4, p0, Lcom/android/server/wifi/WifiService$BatchedScanRequest;->workSource:Landroid/os/WorkSource;
 
-    .line 384
     return-void
 .end method
 
@@ -83,7 +76,6 @@
     .locals 4
 
     .prologue
-    .line 386
     iget-object v0, p0, Lcom/android/server/wifi/WifiService$BatchedScanRequest;->this$0:Lcom/android/server/wifi/WifiService;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiService$BatchedScanRequest;->settings:Landroid/net/wifi/BatchedScanSettings;
@@ -95,7 +87,6 @@
     #calls: Lcom/android/server/wifi/WifiService;->stopBatchedScan(Landroid/net/wifi/BatchedScanSettings;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/wifi/WifiService;->access$500(Lcom/android/server/wifi/WifiService;Landroid/net/wifi/BatchedScanSettings;II)V
 
-    .line 387
     return-void
 .end method
 
@@ -105,7 +96,6 @@
     .parameter "pid"
 
     .prologue
-    .line 393
     iget v0, p0, Lcom/android/server/wifi/WifiService$BatchedScanRequest;->uid:I
 
     if-ne v0, p1, :cond_0
@@ -129,7 +119,6 @@
     .locals 2
 
     .prologue
-    .line 389
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -120,7 +120,6 @@
     .prologue
     const/16 v2, 0xe
 
-    .line 122
     const-string v0, "ro.sys.fw.bg_apps_limit"
 
     const/16 v1, 0x18
@@ -131,7 +130,6 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->MAX_CACHED_APPS:I
 
-    .line 128
     sget v0, Lcom/android/server/am/ProcessList;->MAX_CACHED_APPS:I
 
     invoke-static {v0}, Lcom/android/server/am/ProcessList;->computeEmptyProcessLimit(I)I
@@ -140,14 +138,12 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->MAX_EMPTY_APPS:I
 
-    .line 132
     sget v0, Lcom/android/server/am/ProcessList;->MAX_EMPTY_APPS:I
 
     div-int/lit8 v0, v0, 0x2
 
     sput v0, Lcom/android/server/am/ProcessList;->TRIM_EMPTY_APPS:I
 
-    .line 136
     sget v0, Lcom/android/server/am/ProcessList;->MAX_CACHED_APPS:I
 
     sget v1, Lcom/android/server/am/ProcessList;->MAX_EMPTY_APPS:I
@@ -160,28 +156,24 @@
 
     sput v0, Lcom/android/server/am/ProcessList;->TRIM_CACHED_APPS:I
 
-    .line 425
     new-array v0, v2, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/server/am/ProcessList;->sProcStateToProcMem:[I
 
-    .line 442
     new-array v0, v2, [J
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/android/server/am/ProcessList;->sFirstAwakePssTimes:[J
 
-    .line 459
     new-array v0, v2, [J
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/android/server/am/ProcessList;->sSameAwakePssTimes:[J
 
-    .line 476
     new-array v0, v2, [J
 
     fill-array-data v0, :array_3
@@ -190,7 +182,6 @@
 
     return-void
 
-    .line 425
     :array_0
     .array-data 0x4
         0x0t 0x0t 0x0t 0x0t
@@ -209,7 +200,6 @@
         0x4t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 442
     :array_1
     .array-data 0x8
         0xc0t 0xd4t 0x1t 0x0t 0x0t 0x0t 0x0t 0x0t
@@ -228,7 +218,6 @@
         0x30t 0x75t 0x0t 0x0t 0x0t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 459
     :array_2
     .array-data 0x8
         0xa0t 0xbbt 0xdt 0x0t 0x0t 0x0t 0x0t 0x0t
@@ -247,7 +236,6 @@
         0x40t 0x77t 0x1bt 0x0t 0x0t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 476
     :array_3
     .array-data 0x8
         0xa0t 0xbbt 0xdt 0x0t 0x0t 0x0t 0x0t 0x0t
@@ -275,31 +263,26 @@
 
     const/4 v5, 0x0
 
-    .line 172
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 147
     new-array v1, v2, [I
 
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lcom/android/server/am/ProcessList;->mOomAdj:[I
 
-    .line 153
     new-array v1, v2, [J
 
     fill-array-data v1, :array_1
 
     iput-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFreeLow:[J
 
-    .line 159
     new-array v1, v2, [J
 
     fill-array-data v1, :array_2
 
     iput-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFreeHigh:[J
 
-    .line 164
     iget-object v1, p0, Lcom/android/server/am/ProcessList;->mOomAdj:[I
 
     array-length v1, v1
@@ -308,16 +291,13 @@
 
     iput-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFree:[J
 
-    .line 173
     new-instance v0, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {v0}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
-    .line 174
     .local v0, minfo:Lcom/android/internal/util/MemInfoReader;
     invoke-virtual {v0}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    .line 175
     invoke-virtual {v0}, Lcom/android/internal/util/MemInfoReader;->getTotalSize()J
 
     move-result-wide v1
@@ -328,13 +308,10 @@
 
     iput-wide v1, p0, Lcom/android/server/am/ProcessList;->mTotalMemMb:J
 
-    .line 176
     invoke-direct {p0, v5, v5, v5}, Lcom/android/server/am/ProcessList;->updateOomLevels(IIZ)V
 
-    .line 177
     return-void
 
-    .line 147
     nop
 
     :array_0
@@ -347,7 +324,6 @@
         0xft 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 153
     :array_1
     .array-data 0x8
         0x0t 0x20t 0x0t 0x0t 0x0t 0x0t 0x0t 0x0t
@@ -358,7 +334,6 @@
         0x0t 0x80t 0x0t 0x0t 0x0t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 159
     :array_2
     .array-data 0x8
         0x0t 0xc0t 0x0t 0x0t 0x0t 0x0t 0x0t 0x0t
@@ -376,7 +351,6 @@
     .parameter "ramKb"
 
     .prologue
-    .line 381
     const/4 v1, 0x0
 
     .local v1, j:I
@@ -388,19 +362,16 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 382
     int-to-long v2, v0
 
     cmp-long v2, p1, v2
 
     if-gez v2, :cond_0
 
-    .line 383
     const/16 v2, 0x20
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 381
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
@@ -408,11 +379,9 @@
 
     goto :goto_0
 
-    .line 386
     :cond_1
     invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 387
     return-void
 .end method
 
@@ -424,18 +393,14 @@
     .parameter "base"
 
     .prologue
-    .line 286
     if-ne p2, p3, :cond_1
 
-    .line 287
     if-nez p1, :cond_0
 
-    .line 290
     .end local p0
     :goto_0
     return-object p0
 
-    .line 288
     .restart local p0
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -458,7 +423,6 @@
 
     goto :goto_0
 
-    .line 290
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -496,7 +460,6 @@
     .parameter "totalProcessLimit"
 
     .prologue
-    .line 282
     mul-int/lit8 v0, p0, 0x2
 
     div-int/lit8 v0, v0, 0x3
@@ -512,14 +475,12 @@
     .parameter "now"
 
     .prologue
-    .line 499
     if-eqz p2, :cond_1
 
     if-eqz p1, :cond_0
 
     sget-object v0, Lcom/android/server/am/ProcessList;->sFirstAwakePssTimes:[J
 
-    .line 506
     .local v0, table:[J
     :goto_0
     aget-wide v1, v0, p0
@@ -528,7 +489,6 @@
 
     return-wide v1
 
-    .line 499
     .end local v0           #table:[J
     :cond_0
     sget-object v0, Lcom/android/server/am/ProcessList;->sSameSleepingPssTimes:[J
@@ -563,12 +523,10 @@
 
     const/4 v2, 0x0
 
-    .line 294
     const/16 v0, 0x9
 
     if-lt p0, v0, :cond_0
 
-    .line 295
     const-string v0, "cch"
 
     const-string v1, "  "
@@ -579,17 +537,14 @@
 
     move-result-object v0
 
-    .line 321
     :goto_0
     return-object v0
 
-    .line 296
     :cond_0
     const/16 v0, 0x8
 
     if-lt p0, v0, :cond_1
 
-    .line 297
     const-string v0, "svcb "
 
     const/16 v1, 0x8
@@ -600,13 +555,11 @@
 
     goto :goto_0
 
-    .line 298
     :cond_1
     const/4 v0, 0x7
 
     if-lt p0, v0, :cond_2
 
-    .line 299
     const-string v0, "prev "
 
     const/4 v1, 0x7
@@ -617,13 +570,11 @@
 
     goto :goto_0
 
-    .line 300
     :cond_2
     const/4 v0, 0x6
 
     if-lt p0, v0, :cond_3
 
-    .line 301
     const-string v0, "home "
 
     const/4 v1, 0x6
@@ -634,13 +585,11 @@
 
     goto :goto_0
 
-    .line 302
     :cond_3
     const/4 v0, 0x5
 
     if-lt p0, v0, :cond_4
 
-    .line 303
     const-string v0, "svc  "
 
     const/4 v1, 0x5
@@ -651,13 +600,11 @@
 
     goto :goto_0
 
-    .line 304
     :cond_4
     const/4 v0, 0x4
 
     if-lt p0, v0, :cond_5
 
-    .line 305
     const-string v0, "hvy  "
 
     const/4 v1, 0x4
@@ -668,13 +615,11 @@
 
     goto :goto_0
 
-    .line 306
     :cond_5
     const/4 v0, 0x3
 
     if-lt p0, v0, :cond_6
 
-    .line 307
     const-string v0, "bkup "
 
     const/4 v1, 0x3
@@ -685,13 +630,11 @@
 
     goto :goto_0
 
-    .line 308
     :cond_6
     const/4 v0, 0x2
 
     if-lt p0, v0, :cond_7
 
-    .line 309
     const-string v0, "prcp "
 
     const/4 v1, 0x2
@@ -702,11 +645,9 @@
 
     goto :goto_0
 
-    .line 310
     :cond_7
     if-lt p0, v5, :cond_8
 
-    .line 311
     const-string v0, "vis  "
 
     invoke-static {v0, v2, p0, v5}, Lcom/android/server/am/ProcessList;->buildOomTag(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
@@ -715,11 +656,9 @@
 
     goto :goto_0
 
-    .line 312
     :cond_8
     if-ltz p0, :cond_9
 
-    .line 313
     const-string v0, "fore "
 
     const/4 v1, 0x0
@@ -730,11 +669,9 @@
 
     goto :goto_0
 
-    .line 314
     :cond_9
     if-lt p0, v4, :cond_a
 
-    .line 315
     const-string v0, "pers "
 
     invoke-static {v0, v2, p0, v4}, Lcom/android/server/am/ProcessList;->buildOomTag(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
@@ -743,11 +680,9 @@
 
     goto :goto_0
 
-    .line 316
     :cond_a
     if-lt p0, v3, :cond_b
 
-    .line 317
     const-string v0, "sys  "
 
     invoke-static {v0, v2, p0, v3}, Lcom/android/server/am/ProcessList;->buildOomTag(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
@@ -756,11 +691,9 @@
 
     goto :goto_0
 
-    .line 318
     :cond_b
     if-lt p0, v1, :cond_c
 
-    .line 319
     const-string v0, "ntv  "
 
     invoke-static {v0, v2, p0, v1}, Lcom/android/server/am/ProcessList;->buildOomTag(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
@@ -769,7 +702,6 @@
 
     goto :goto_0
 
-    .line 321
     :cond_c
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -783,153 +715,119 @@
     .parameter "curProcState"
 
     .prologue
-    .line 327
     packed-switch p0, :pswitch_data_0
 
-    .line 374
     const-string v0, "??"
 
-    .line 377
     .local v0, procState:Ljava/lang/String;
     :goto_0
     return-object v0
 
-    .line 329
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_0
     const-string v0, "N "
 
-    .line 330
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 332
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_1
     const-string v0, "P "
 
-    .line 333
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 335
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_2
     const-string v0, "PU"
 
-    .line 336
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 338
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_3
     const-string v0, "T "
 
-    .line 339
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 341
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_4
     const-string v0, "IF"
 
-    .line 342
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 344
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_5
     const-string v0, "IB"
 
-    .line 345
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 347
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_6
     const-string v0, "BU"
 
-    .line 348
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 350
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_7
     const-string v0, "HW"
 
-    .line 351
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 353
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_8
     const-string v0, "S "
 
-    .line 354
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 356
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_9
     const-string v0, "R "
 
-    .line 357
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 359
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_a
     const-string v0, "HO"
 
-    .line 360
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 362
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_b
     const-string v0, "LA"
 
-    .line 363
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 365
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_c
     const-string v0, "CA"
 
-    .line 366
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 368
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_d
     const-string v0, "Ca"
 
-    .line 369
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 371
     .end local v0           #procState:Ljava/lang/String;
     :pswitch_e
     const-string v0, "CE"
 
-    .line 372
     .restart local v0       #procState:Ljava/lang/String;
     goto :goto_0
 
-    .line 327
     nop
 
     :pswitch_data_0
@@ -958,7 +856,6 @@
     .parameter "procState2"
 
     .prologue
-    .line 494
     sget-object v0, Lcom/android/server/am/ProcessList;->sProcStateToProcMem:[I
 
     aget v0, v0, p0
@@ -987,7 +884,6 @@
     .parameter "write"
 
     .prologue
-    .line 193
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/am/ProcessList;->mTotalMemMb:J
@@ -1008,15 +904,12 @@
 
     div-float v19, v20, v21
 
-    .line 196
     .local v19, scaleMem:F
     const v11, 0x5dc00
 
-    .line 197
     .local v11, minSize:I
     const v9, 0xfa000
 
-    .line 198
     .local v9, maxSize:I
     mul-int v20, p1, p2
 
@@ -1042,19 +935,16 @@
 
     div-float v18, v20, v21
 
-    .line 205
     .local v18, scaleDisp:F
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 206
     .local v3, adjString:Ljava/lang/StringBuilder;
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 208
     .local v10, memString:Ljava/lang/StringBuilder;
     cmpl-float v20, v19, v18
 
@@ -1062,7 +952,6 @@
 
     move/from16 v17, v19
 
-    .line 209
     .local v17, scale:F
     :goto_0
     const/16 v20, 0x0
@@ -1073,7 +962,6 @@
 
     const/16 v17, 0x0
 
-    .line 211
     :cond_0
     :goto_1
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
@@ -1086,7 +974,6 @@
 
     move-result v13
 
-    .line 213
     .local v13, minfree_adj:I
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -1098,7 +985,6 @@
 
     move-result v12
 
-    .line 219
     .local v12, minfree_abs:I
     const/4 v6, 0x0
 
@@ -1120,7 +1006,6 @@
 
     if-ge v6, v0, :cond_3
 
-    .line 220
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFreeLow:[J
@@ -1129,7 +1014,6 @@
 
     aget-wide v7, v20, v6
 
-    .line 221
     .local v7, low:J
     move-object/from16 v0, p0
 
@@ -1139,7 +1023,6 @@
 
     aget-wide v4, v20, v6
 
-    .line 222
     .local v4, high:J
     move-object/from16 v0, p0
 
@@ -1171,7 +1054,6 @@
 
     aput-wide v21, v20, v6
 
-    .line 219
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
@@ -1185,10 +1067,8 @@
     :cond_1
     move/from16 v17, v18
 
-    .line 208
     goto :goto_0
 
-    .line 210
     .restart local v17       #scale:F
     :cond_2
     const/high16 v20, 0x3f80
@@ -1201,14 +1081,12 @@
 
     goto :goto_1
 
-    .line 225
     .restart local v6       #i:I
     .restart local v12       #minfree_abs:I
     .restart local v13       #minfree_adj:I
     :cond_3
     if-ltz v12, :cond_4
 
-    .line 226
     const/4 v6, 0x0
 
     :goto_3
@@ -1228,7 +1106,6 @@
 
     if-ge v6, v0, :cond_4
 
-    .line 227
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFree:[J
@@ -1293,16 +1170,13 @@
 
     aput-wide v21, v20, v6
 
-    .line 226
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_3
 
-    .line 231
     :cond_4
     if-eqz v13, :cond_6
 
-    .line 232
     const/4 v6, 0x0
 
     :goto_4
@@ -1322,7 +1196,6 @@
 
     if-ge v6, v0, :cond_6
 
-    .line 233
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFree:[J
@@ -1391,7 +1264,6 @@
 
     aput-wide v21, v20, v6
 
-    .line 234
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFree:[J
@@ -1406,7 +1278,6 @@
 
     if-gez v20, :cond_5
 
-    .line 235
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFree:[J
@@ -1417,13 +1288,11 @@
 
     aput-wide v21, v20, v6
 
-    .line 232
     :cond_5
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_4
 
-    .line 243
     :cond_6
     const/16 v20, 0xf
 
@@ -1449,7 +1318,6 @@
 
     iput-wide v0, v2, Lcom/android/server/am/ProcessList;->mCachedRestoreLevel:J
 
-    .line 245
     const/4 v6, 0x0
 
     :goto_5
@@ -1469,24 +1337,20 @@
 
     if-ge v6, v0, :cond_8
 
-    .line 246
     if-lez v6, :cond_7
 
-    .line 247
     const/16 v20, 0x2c
 
     move/from16 v0, v20
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 248
     const/16 v20, 0x2c
 
     move/from16 v0, v20
 
     invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 250
     :cond_7
     move-object/from16 v0, p0
 
@@ -1500,7 +1364,6 @@
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 251
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mOomMinFree:[J
@@ -1521,12 +1384,10 @@
 
     invoke-virtual {v10, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 245
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_5
 
-    .line 256
     :cond_8
     mul-int v20, p1, p2
 
@@ -1538,7 +1399,6 @@
 
     div-int/lit16 v14, v0, 0x400
 
-    .line 257
     .local v14, reserve:I
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -1550,7 +1410,6 @@
 
     move-result v16
 
-    .line 258
     .local v16, reserve_adj:I
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -1562,31 +1421,23 @@
 
     move-result v15
 
-    .line 260
     .local v15, reserve_abs:I
     if-ltz v15, :cond_9
 
-    .line 261
     move v14, v15
 
-    .line 264
     :cond_9
     if-eqz v16, :cond_a
 
-    .line 265
     add-int v14, v14, v16
 
-    .line 266
     if-gez v14, :cond_a
 
-    .line 267
     const/4 v14, 0x0
 
-    .line 272
     :cond_a
     if-eqz p3, :cond_b
 
-    .line 273
     const-string v20, "/sys/module/lowmemorykiller/parameters/adj"
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1601,7 +1452,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/am/ProcessList;->writeFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 274
     const-string v20, "/sys/module/lowmemorykiller/parameters/minfree"
 
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1616,7 +1466,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/am/ProcessList;->writeFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 275
     const-string v20, "sys.sysctl.extra_free_kbytes"
 
     invoke-static {v14}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -1625,7 +1474,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 279
     :cond_b
     return-void
 .end method
@@ -1636,10 +1484,8 @@
     .parameter "data"
 
     .prologue
-    .line 527
     const/4 v1, 0x0
 
-    .line 529
     .local v1, fos:Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
@@ -1649,7 +1495,6 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 530
     .end local v1           #fos:Ljava/io/FileOutputStream;
     .local v2, fos:Ljava/io/FileOutputStream;
     :try_start_1
@@ -1662,10 +1507,8 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 534
     if-eqz v2, :cond_2
 
-    .line 536
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -1673,14 +1516,12 @@
 
     move-object v1, v2
 
-    .line 541
     .end local v2           #fos:Ljava/io/FileOutputStream;
     .restart local v1       #fos:Ljava/io/FileOutputStream;
     :cond_0
     :goto_0
     return-void
 
-    .line 537
     .end local v1           #fos:Ljava/io/FileOutputStream;
     .restart local v2       #fos:Ljava/io/FileOutputStream;
     :catch_0
@@ -1688,16 +1529,13 @@
 
     move-object v1, v2
 
-    .line 538
     .end local v2           #fos:Ljava/io/FileOutputStream;
     .restart local v1       #fos:Ljava/io/FileOutputStream;
     goto :goto_0
 
-    .line 531
     :catch_1
     move-exception v0
 
-    .line 532
     .local v0, e:Ljava/io/IOException;
     :goto_1
     :try_start_3
@@ -1725,10 +1563,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 534
     if-eqz v1, :cond_0
 
-    .line 536
     :try_start_4
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -1736,13 +1572,11 @@
 
     goto :goto_0
 
-    .line 537
     :catch_2
     move-exception v3
 
     goto :goto_0
 
-    .line 534
     .end local v0           #e:Ljava/io/IOException;
     :catchall_0
     move-exception v3
@@ -1750,24 +1584,20 @@
     :goto_2
     if-eqz v1, :cond_1
 
-    .line 536
     :try_start_5
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 538
     :cond_1
     :goto_3
     throw v3
 
-    .line 537
     :catch_3
     move-exception v4
 
     goto :goto_3
 
-    .line 534
     .end local v1           #fos:Ljava/io/FileOutputStream;
     .restart local v2       #fos:Ljava/io/FileOutputStream;
     :catchall_1
@@ -1779,7 +1609,6 @@
     .restart local v1       #fos:Ljava/io/FileOutputStream;
     goto :goto_2
 
-    .line 531
     .end local v1           #fos:Ljava/io/FileOutputStream;
     .restart local v2       #fos:Ljava/io/FileOutputStream;
     :catch_4
@@ -1810,23 +1639,19 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 180
     iget-boolean v1, p0, Lcom/android/server/am/ProcessList;->mHaveDisplaySize:Z
 
     if-nez v1, :cond_0
 
-    .line 181
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
-    .line 182
     .local v0, p:Landroid/graphics/Point;
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1, v0}, Lcom/android/server/wm/WindowManagerService;->getBaseDisplaySize(ILandroid/graphics/Point;)V
 
-    .line 183
     iget v1, v0, Landroid/graphics/Point;->x:I
 
     if-eqz v1, :cond_0
@@ -1835,17 +1660,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 184
     iget v1, v0, Landroid/graphics/Point;->x:I
 
     iget v2, v0, Landroid/graphics/Point;->y:I
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/am/ProcessList;->updateOomLevels(IIZ)V
 
-    .line 185
     iput-boolean v3, p0, Lcom/android/server/am/ProcessList;->mHaveDisplaySize:Z
 
-    .line 188
     .end local v0           #p:Landroid/graphics/Point;
     :cond_0
     return-void
@@ -1855,7 +1677,6 @@
     .locals 2
 
     .prologue
-    .line 523
     iget-wide v0, p0, Lcom/android/server/am/ProcessList;->mCachedRestoreLevel:J
 
     return-wide v0
@@ -1868,7 +1689,6 @@
     .prologue
     const-wide/16 v3, 0x400
 
-    .line 510
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -1879,31 +1699,26 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 511
     iget-object v1, p0, Lcom/android/server/am/ProcessList;->mOomAdj:[I
 
     aget v1, v1, v0
 
     if-gt p1, v1, :cond_0
 
-    .line 512
     iget-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFree:[J
 
     aget-wide v1, v1, v0
 
     mul-long/2addr v1, v3
 
-    .line 515
     :goto_1
     return-wide v1
 
-    .line 510
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 515
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFree:[J
 

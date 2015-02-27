@@ -28,26 +28,21 @@
     .parameter "token"
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/TorchService$CameraUserRecord;->token:Landroid/os/IBinder;
 
-    .line 41
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/TorchService$CameraUserRecord;->pid:I
 
-    .line 42
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/TorchService$CameraUserRecord;->uid:I
 
-    .line 43
     return-void
 .end method

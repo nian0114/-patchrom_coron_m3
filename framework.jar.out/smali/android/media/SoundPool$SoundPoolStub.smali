@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 625
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 656
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 658
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .parameter "priority"
 
     .prologue
-    .line 632
     const/4 v0, 0x0
 
     return v0
@@ -65,7 +61,6 @@
     .parameter "priority"
 
     .prologue
-    .line 636
     const/4 v0, 0x0
 
     return v0
@@ -79,7 +74,6 @@
     .parameter "priority"
 
     .prologue
-    .line 640
     const/4 v0, 0x0
 
     return v0
@@ -91,7 +85,6 @@
     .parameter "priority"
 
     .prologue
-    .line 628
     const/4 v0, 0x0
 
     return v0
@@ -102,7 +95,6 @@
     .parameter "streamID"
 
     .prologue
-    .line 652
     return-void
 .end method
 
@@ -116,7 +108,6 @@
     .parameter "rate"
 
     .prologue
-    .line 649
     const/4 v0, 0x0
 
     return v0
@@ -126,7 +117,6 @@
     .locals 0
 
     .prologue
-    .line 677
     return-void
 .end method
 
@@ -135,7 +125,6 @@
     .parameter "streamID"
 
     .prologue
-    .line 654
     return-void
 .end method
 
@@ -145,7 +134,6 @@
     .parameter "loop"
 
     .prologue
-    .line 670
     return-void
 .end method
 
@@ -154,7 +142,6 @@
     .parameter "listener"
 
     .prologue
-    .line 675
     return-void
 .end method
 
@@ -164,7 +151,6 @@
     .parameter "priority"
 
     .prologue
-    .line 668
     return-void
 .end method
 
@@ -174,7 +160,6 @@
     .parameter "rate"
 
     .prologue
-    .line 672
     return-void
 .end method
 
@@ -184,7 +169,6 @@
     .parameter "volume"
 
     .prologue
-    .line 666
     return-void
 .end method
 
@@ -195,7 +179,6 @@
     .parameter "rightVolume"
 
     .prologue
-    .line 663
     return-void
 .end method
 
@@ -204,7 +187,6 @@
     .parameter "streamID"
 
     .prologue
-    .line 660
     return-void
 .end method
 
@@ -213,7 +195,6 @@
     .parameter "soundID"
 
     .prologue
-    .line 644
     const/4 v0, 0x1
 
     return v0

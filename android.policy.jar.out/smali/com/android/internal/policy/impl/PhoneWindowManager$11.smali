@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 1392
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$11;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,13 +39,11 @@
     .parameter "intent"
 
     .prologue
-    .line 1395
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$11;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mUiContext:Landroid/content/Context;
 
-    .line 1396
     return-void
 .end method

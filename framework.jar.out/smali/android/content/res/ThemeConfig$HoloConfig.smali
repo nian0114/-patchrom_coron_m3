@@ -19,14 +19,12 @@
     .locals 1
 
     .prologue
-    .line 531
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/content/res/ThemeConfig;-><init>(Ljava/util/Map;)V
 
-    .line 532
     return-void
 .end method
 
@@ -37,7 +35,6 @@
     .parameter "x0"
 
     .prologue
-    .line 528
     check-cast p1, Landroid/content/res/ThemeConfig;
 
     .end local p1

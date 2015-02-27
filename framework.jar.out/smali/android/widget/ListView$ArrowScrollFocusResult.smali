@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 2778
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .parameter "x0"
 
     .prologue
-    .line 2778
     invoke-direct {p0}, Landroid/widget/ListView$ArrowScrollFocusResult;-><init>()V
 
     return-void
@@ -48,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 2795
     iget v0, p0, Landroid/widget/ListView$ArrowScrollFocusResult;->mAmountToScroll:I
 
     return v0
@@ -58,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 2791
     iget v0, p0, Landroid/widget/ListView$ArrowScrollFocusResult;->mSelectedPosition:I
 
     return v0
@@ -70,12 +66,9 @@
     .parameter "amountToScroll"
 
     .prologue
-    .line 2786
     iput p1, p0, Landroid/widget/ListView$ArrowScrollFocusResult;->mSelectedPosition:I
 
-    .line 2787
     iput p2, p0, Landroid/widget/ListView$ArrowScrollFocusResult;->mAmountToScroll:I
 
-    .line 2788
     return-void
 .end method

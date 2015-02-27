@@ -43,7 +43,6 @@
     .parameter
 
     .prologue
-    .line 197
     iput-object p5, p0, Lcom/android/internal/app/LocalePicker$1;->val$inflater:Landroid/view/LayoutInflater;
 
     iput p6, p0, Lcom/android/internal/app/LocalePicker$1;->val$layoutId:I
@@ -64,10 +63,8 @@
     .parameter "parent"
 
     .prologue
-    .line 202
     if-nez p2, :cond_0
 
-    .line 203
     iget-object v3, p0, Lcom/android/internal/app/LocalePicker$1;->val$inflater:Landroid/view/LayoutInflater;
 
     iget v4, p0, Lcom/android/internal/app/LocalePicker$1;->val$layoutId:I
@@ -78,7 +75,6 @@
 
     move-result-object v2
 
-    .line 204
     .local v2, view:Landroid/view/View;
     iget v3, p0, Lcom/android/internal/app/LocalePicker$1;->val$fieldId:I
 
@@ -88,11 +84,9 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 205
     .local v1, text:Landroid/widget/TextView;
     invoke-virtual {v2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 210
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/internal/app/LocalePicker$1;->getItem(I)Ljava/lang/Object;
 
@@ -100,7 +94,6 @@
 
     check-cast v0, Lcom/android/internal/app/LocalePicker$LocaleInfo;
 
-    .line 211
     .local v0, item:Lcom/android/internal/app/LocalePicker$LocaleInfo;
     invoke-virtual {v0}, Lcom/android/internal/app/LocalePicker$LocaleInfo;->toString()Ljava/lang/String;
 
@@ -108,24 +101,20 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 212
     invoke-virtual {v0}, Lcom/android/internal/app/LocalePicker$LocaleInfo;->getLocale()Ljava/util/Locale;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextLocale(Ljava/util/Locale;)V
 
-    .line 214
     return-object v2
 
-    .line 207
     .end local v0           #item:Lcom/android/internal/app/LocalePicker$LocaleInfo;
     .end local v1           #text:Landroid/widget/TextView;
     .end local v2           #view:Landroid/view/View;
     :cond_0
     move-object v2, p2
 
-    .line 208
     .restart local v2       #view:Landroid/view/View;
     invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 

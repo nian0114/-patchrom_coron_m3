@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 271
     iput-object p1, p0, Landroid/widget/ActivityChooserView$5;->this$0:Landroid/widget/ActivityChooserView;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -38,15 +37,12 @@
     .locals 1
 
     .prologue
-    .line 274
     invoke-super {p0}, Landroid/database/DataSetObserver;->onChanged()V
 
-    .line 275
     iget-object v0, p0, Landroid/widget/ActivityChooserView$5;->this$0:Landroid/widget/ActivityChooserView;
 
     #calls: Landroid/widget/ActivityChooserView;->updateAppearance()V
     invoke-static {v0}, Landroid/widget/ActivityChooserView;->access$400(Landroid/widget/ActivityChooserView;)V
 
-    .line 276
     return-void
 .end method

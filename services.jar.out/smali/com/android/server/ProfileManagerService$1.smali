@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 82
     iput-object p1, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 85
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 86
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.LOCALE_CHANGED"
 
@@ -55,24 +52,20 @@
 
     if-eqz v1, :cond_1
 
-    .line 87
     iget-object v1, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     #calls: Lcom/android/server/ProfileManagerService;->persistIfDirty()V
     invoke-static {v1}, Lcom/android/server/ProfileManagerService;->access$000(Lcom/android/server/ProfileManagerService;)V
 
-    .line 88
     iget-object v1, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     #calls: Lcom/android/server/ProfileManagerService;->initialize()V
     invoke-static {v1}, Lcom/android/server/ProfileManagerService;->access$100(Lcom/android/server/ProfileManagerService;)V
 
-    .line 92
     :cond_0
     :goto_0
     return-void
 
-    .line 89
     :cond_1
     const-string v1, "android.intent.action.ACTION_SHUTDOWN"
 
@@ -82,7 +75,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 90
     iget-object v1, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     #calls: Lcom/android/server/ProfileManagerService;->persistIfDirty()V

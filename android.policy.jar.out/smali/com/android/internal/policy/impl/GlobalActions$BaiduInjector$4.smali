@@ -21,7 +21,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1137
     invoke-direct {p0, p1, p2}, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;-><init>(II)V
 
     return-void
@@ -33,7 +32,6 @@
     .locals 4
 
     .prologue
-    .line 1141
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->access$sget-mGlobalActions-a61d42()Lcom/android/internal/policy/impl/GlobalActions;
 
     move-result-object v0
@@ -45,7 +43,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/GlobalActions$GlobalActionsDialog;->dismiss()V
 
-    .line 1143
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->access$sget-mScreenshotHandler-c6f3d5()Landroid/os/Handler;
 
     move-result-object v0
@@ -58,7 +55,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1144
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 1151
     const/4 v0, 0x1
 
     return v0
@@ -76,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 1147
     const/4 v0, 0x1
 
     return v0

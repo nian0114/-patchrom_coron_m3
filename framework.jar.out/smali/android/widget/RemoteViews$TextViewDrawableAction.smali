@@ -44,37 +44,28 @@
     .parameter "d4"
 
     .prologue
-    .line 1384
     iput-object p1, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 1427
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->isRelative:Z
 
-    .line 1385
     iput p2, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->viewId:I
 
-    .line 1386
     iput-boolean p3, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->isRelative:Z
 
-    .line 1387
     iput p4, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d1:I
 
-    .line 1388
     iput p5, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d2:I
 
-    .line 1389
     iput p6, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d3:I
 
-    .line 1390
     iput p7, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d4:I
 
-    .line 1391
     return-void
 .end method
 
@@ -86,24 +77,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1393
     iput-object p1, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 1427
     iput-boolean v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->isRelative:Z
 
-    .line 1394
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->viewId:I
 
-    .line 1395
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -115,35 +102,30 @@
     :cond_0
     iput-boolean v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->isRelative:Z
 
-    .line 1396
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d1:I
 
-    .line 1397
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d2:I
 
-    .line 1398
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d3:I
 
-    .line 1399
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d4:I
 
-    .line 1400
     return-void
 .end method
 
@@ -156,7 +138,6 @@
     .parameter "handler"
 
     .prologue
-    .line 1414
     iget v1, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->viewId:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -165,21 +146,17 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 1415
     .local v0, target:Landroid/widget/TextView;
     if-nez v0, :cond_0
 
-    .line 1421
     :goto_0
     return-void
 
-    .line 1416
     :cond_0
     iget-boolean v1, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->isRelative:Z
 
     if-eqz v1, :cond_1
 
-    .line 1417
     iget v1, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d1:I
 
     iget v2, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d2:I
@@ -192,7 +169,6 @@
 
     goto :goto_0
 
-    .line 1419
     :cond_1
     iget v1, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d1:I
 
@@ -211,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 1424
     const-string v0, "TextViewDrawableAction"
 
     return-object v0
@@ -223,17 +198,14 @@
     .parameter "flags"
 
     .prologue
-    .line 1403
     const/16 v0, 0xb
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1404
     iget v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->viewId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1405
     iget-boolean v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->isRelative:Z
 
     if-eqz v0, :cond_0
@@ -243,30 +215,24 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1406
     iget v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d1:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1407
     iget v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d2:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1408
     iget v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d3:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1409
     iget v0, p0, Landroid/widget/RemoteViews$TextViewDrawableAction;->d4:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1410
     return-void
 
-    .line 1405
     :cond_0
     const/4 v0, 0x0
 

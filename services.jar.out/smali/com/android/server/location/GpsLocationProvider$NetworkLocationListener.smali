@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1849
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$NetworkLocationListener;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1849
     invoke-direct {p0, p1}, Lcom/android/server/location/GpsLocationProvider$NetworkLocationListener;-><init>(Lcom/android/server/location/GpsLocationProvider;)V
 
     return-void
@@ -54,7 +52,6 @@
     .parameter "location"
 
     .prologue
-    .line 1853
     const-string v0, "network"
 
     invoke-virtual {p1}, Landroid/location/Location;->getProvider()Ljava/lang/String;
@@ -67,13 +64,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 1854
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$NetworkLocationListener;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->handleUpdateLocation(Landroid/location/Location;)V
     invoke-static {v0, p1}, Lcom/android/server/location/GpsLocationProvider;->access$3100(Lcom/android/server/location/GpsLocationProvider;Landroid/location/Location;)V
 
-    .line 1856
     :cond_0
     return-void
 .end method
@@ -83,7 +78,6 @@
     .parameter "provider"
 
     .prologue
-    .line 1862
     return-void
 .end method
 
@@ -92,7 +86,6 @@
     .parameter "provider"
 
     .prologue
-    .line 1860
     return-void
 .end method
 
@@ -103,6 +96,5 @@
     .parameter "extras"
 
     .prologue
-    .line 1858
     return-void
 .end method

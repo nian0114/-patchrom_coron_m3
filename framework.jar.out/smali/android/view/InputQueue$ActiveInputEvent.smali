@@ -28,7 +28,6 @@
     .parameter
 
     .prologue
-    .line 130
     iput-object p1, p0, Landroid/view/InputQueue$ActiveInputEvent;->this$0:Landroid/view/InputQueue;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "x1"
 
     .prologue
-    .line 130
     invoke-direct {p0, p1}, Landroid/view/InputQueue$ActiveInputEvent;-><init>(Landroid/view/InputQueue;)V
 
     return-void
@@ -56,12 +54,9 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 135
     iput-object v0, p0, Landroid/view/InputQueue$ActiveInputEvent;->mToken:Ljava/lang/Object;
 
-    .line 136
     iput-object v0, p0, Landroid/view/InputQueue$ActiveInputEvent;->mCallback:Landroid/view/InputQueue$FinishedInputEventCallback;
 
-    .line 137
     return-void
 .end method

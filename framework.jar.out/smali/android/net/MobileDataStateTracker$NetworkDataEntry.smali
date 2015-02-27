@@ -33,21 +33,15 @@
     .parameter "i4"
 
     .prologue
-    .line 989
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 990
     iput p1, p0, Landroid/net/MobileDataStateTracker$NetworkDataEntry;->networkType:I
 
-    .line 991
     iput p2, p0, Landroid/net/MobileDataStateTracker$NetworkDataEntry;->downloadBandwidth:I
 
-    .line 992
     iput p3, p0, Landroid/net/MobileDataStateTracker$NetworkDataEntry;->uploadBandwidth:I
 
-    .line 993
     iput p4, p0, Landroid/net/MobileDataStateTracker$NetworkDataEntry;->latency:I
 
-    .line 994
     return-void
 .end method

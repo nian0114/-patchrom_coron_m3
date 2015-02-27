@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 4561
     invoke-direct {p0}, Landroid/content/IntentFilter;-><init>()V
 
     return-void

@@ -22,10 +22,8 @@
     .parameter "user"
 
     .prologue
-    .line 2231
     invoke-direct {p0, p1, p2, p3}, Landroid/app/ContextImpl$ApplicationContentResolver;-><init>(Landroid/content/Context;Landroid/app/ActivityThread;Landroid/os/UserHandle;)V
 
-    .line 2232
     return-void
 .end method
 
@@ -37,12 +35,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 2241
     invoke-static {p1}, Lcom/baidu/server/dp/DynamicPermissionManager;->getInstance(Landroid/content/Context;)Lcom/baidu/server/dp/DynamicPermissionManager;
 
     move-result-object v0
 
-    .line 2242
     .local v0, dpm:Lcom/baidu/server/dp/DynamicPermissionManager;
     invoke-virtual {v0, p2}, Lcom/baidu/server/dp/DynamicPermissionManager;->checkProviderPermissionSync(Ljava/lang/String;)I
 
@@ -50,10 +46,8 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 2243
     const-string p2, "com.baidu.dp.impostor"
 
-    .line 2246
     :cond_0
     iget-object v1, p0, Landroid/app/ContextImpl$BaiduApplicationContentResolver;->mMainThread:Landroid/app/ActivityThread;
 
@@ -76,12 +70,10 @@
     .parameter "auth"
 
     .prologue
-    .line 2258
     invoke-static {p1}, Lcom/baidu/server/dp/DynamicPermissionManager;->getInstance(Landroid/content/Context;)Lcom/baidu/server/dp/DynamicPermissionManager;
 
     move-result-object v0
 
-    .line 2259
     .local v0, dpm:Lcom/baidu/server/dp/DynamicPermissionManager;
     invoke-virtual {v0, p2}, Lcom/baidu/server/dp/DynamicPermissionManager;->checkProviderPermissionSync(Ljava/lang/String;)I
 
@@ -91,10 +83,8 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 2260
     const-string p2, "com.baidu.dp.impostor"
 
-    .line 2263
     :cond_0
     iget-object v1, p0, Landroid/app/ContextImpl$BaiduApplicationContentResolver;->mMainThread:Landroid/app/ActivityThread;
 
@@ -121,7 +111,6 @@
     .parameter "auth"
 
     .prologue
-    .line 2235
     invoke-direct {p0, p1, p2}, Landroid/app/ContextImpl$BaiduApplicationContentResolver;->acquireProviderBaidu(Landroid/content/Context;Ljava/lang/String;)Landroid/content/IContentProvider;
 
     move-result-object v0
@@ -135,7 +124,6 @@
     .parameter "auth"
 
     .prologue
-    .line 2252
     invoke-direct {p0, p1, p2}, Landroid/app/ContextImpl$BaiduApplicationContentResolver;->acquireUnstableProviderBaidu(Landroid/content/Context;Ljava/lang/String;)Landroid/content/IContentProvider;
 
     move-result-object v0

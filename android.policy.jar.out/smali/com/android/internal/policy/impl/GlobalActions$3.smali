@@ -26,7 +26,6 @@
     .parameter "x1"
 
     .prologue
-    .line 306
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$3;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0, p2, p3}, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;-><init>(II)V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 334
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$3;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -52,7 +50,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->shutdown(Z)V
 
-    .line 335
     return v1
 .end method
 
@@ -62,10 +59,8 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 310
     const/4 v1, 0x0
 
-    .line 311
     .local v1, quickbootAvailable:Z
     iget-object v4, p0, Lcom/android/internal/policy/impl/GlobalActions$3;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -78,7 +73,6 @@
 
     move-result-object v0
 
-    .line 313
     .local v0, pm:Landroid/content/pm/PackageManager;
     :try_start_0
     const-string v4, "com.qapp.quickboot"
@@ -89,10 +83,8 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 314
     const/4 v1, 0x1
 
-    .line 318
     :goto_0
     iget-object v4, p0, Lcom/android/internal/policy/impl/GlobalActions$3;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -115,31 +107,26 @@
 
     move v2, v3
 
-    .line 323
     .local v2, quickbootEnabled:Z
     :goto_1
     if-eqz v1, :cond_1
 
     if-eqz v2, :cond_1
 
-    .line 324
     iget-object v3, p0, Lcom/android/internal/policy/impl/GlobalActions$3;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #calls: Lcom/android/internal/policy/impl/GlobalActions;->startQuickBoot()V
     invoke-static {v3}, Lcom/android/internal/policy/impl/GlobalActions;->access$600(Lcom/android/internal/policy/impl/GlobalActions;)V
 
-    .line 330
     :goto_2
     return-void
 
-    .line 318
     .end local v2           #quickbootEnabled:Z
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 329
     .restart local v2       #quickbootEnabled:Z
     :cond_1
     iget-object v4, p0, Lcom/android/internal/policy/impl/GlobalActions$3;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
@@ -153,7 +140,6 @@
 
     goto :goto_2
 
-    .line 315
     .end local v2           #quickbootEnabled:Z
     :catch_0
     move-exception v4
@@ -165,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 343
     const/4 v0, 0x1
 
     return v0
@@ -175,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 339
     const/4 v0, 0x1
 
     return v0

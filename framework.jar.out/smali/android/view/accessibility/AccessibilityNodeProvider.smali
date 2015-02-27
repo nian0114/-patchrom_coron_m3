@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
     .parameter "virtualViewId"
 
     .prologue
-    .line 96
     const/4 v0, 0x0
 
     return-object v0
@@ -44,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 133
     const/4 v0, 0x0
 
     return-object v0
@@ -55,7 +52,6 @@
     .parameter "focus"
 
     .prologue
-    .line 148
     const/4 v0, 0x0
 
     return-object v0
@@ -68,7 +64,6 @@
     .parameter "arguments"
 
     .prologue
-    .line 114
     const/4 v0, 0x0
 
     return v0

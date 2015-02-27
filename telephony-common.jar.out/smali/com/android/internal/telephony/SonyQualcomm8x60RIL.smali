@@ -14,10 +14,8 @@
     .parameter "cdmaSubscription"
 
     .prologue
-    .line 37
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/RIL;-><init>(Landroid/content/Context;II)V
 
-    .line 38
     return-void
 .end method
 
@@ -31,35 +29,29 @@
     .parameter "result"
 
     .prologue
-    .line 43
     const/16 v1, 0xa
 
     invoke-static {v1, p4}, Lcom/android/internal/telephony/RILRequest;->obtain(ILandroid/os/Message;)Lcom/android/internal/telephony/RILRequest;
 
     move-result-object v0
 
-    .line 45
     .local v0, rr:Lcom/android/internal/telephony/RILRequest;
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 46
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {v1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 48
     if-nez p3, :cond_0
 
-    .line 49
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 56
     :goto_0
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
@@ -67,7 +59,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 58
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,13 +93,10 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/SonyQualcomm8x60RIL;->riljLog(Ljava/lang/String;)V
 
-    .line 60
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/SonyQualcomm8x60RIL;->send(Lcom/android/internal/telephony/RILRequest;)V
 
-    .line 61
     return-void
 
-    .line 51
     :cond_0
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
@@ -116,7 +104,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 52
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {p3}, Lcom/android/internal/telephony/UUSInfo;->getType()I
@@ -125,7 +112,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 53
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {p3}, Lcom/android/internal/telephony/UUSInfo;->getDcs()I
@@ -134,7 +120,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 54
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {p3}, Lcom/android/internal/telephony/UUSInfo;->getUserData()[B
@@ -152,37 +137,30 @@
     .parameter "response"
 
     .prologue
-    .line 67
     if-nez p1, :cond_0
 
-    .line 68
     const/16 v1, 0x2e
 
     invoke-static {v1, p2}, Lcom/android/internal/telephony/RILRequest;->obtain(ILandroid/os/Message;)Lcom/android/internal/telephony/RILRequest;
 
     move-result-object v0
 
-    .line 72
     .local v0, rr:Lcom/android/internal/telephony/RILRequest;
     :goto_0
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 73
     iget-object v1, v0, Lcom/android/internal/telephony/RILRequest;->mParcel:Landroid/os/Parcel;
 
     const/4 v2, -0x1
 
     invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 75
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/SonyQualcomm8x60RIL;->send(Lcom/android/internal/telephony/RILRequest;)V
 
-    .line 76
     return-void
 
-    .line 70
     .end local v0           #rr:Lcom/android/internal/telephony/RILRequest;
     :cond_0
     const/16 v1, 0x2f
@@ -200,12 +178,10 @@
     .parameter "response"
 
     .prologue
-    .line 81
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Lcom/android/internal/telephony/SonyQualcomm8x60RIL;->setNetworkSelectionMode(Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 82
     return-void
 .end method
 
@@ -215,9 +191,7 @@
     .parameter "response"
 
     .prologue
-    .line 87
     invoke-virtual {p0, p1, p2}, Lcom/android/internal/telephony/SonyQualcomm8x60RIL;->setNetworkSelectionMode(Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 88
     return-void
 .end method

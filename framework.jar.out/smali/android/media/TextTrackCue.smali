@@ -60,59 +60,46 @@
 
     const/4 v1, 0x0
 
-    .line 405
     invoke-direct {p0}, Landroid/media/SubtitleTrack$Cue;-><init>()V
 
-    .line 406
     const-string v0, ""
 
     iput-object v0, p0, Landroid/media/TextTrackCue;->mId:Ljava/lang/String;
 
-    .line 407
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/media/TextTrackCue;->mPauseOnExit:Z
 
-    .line 408
     iput v2, p0, Landroid/media/TextTrackCue;->mWritingDirection:I
 
-    .line 409
     const-string v0, ""
 
     iput-object v0, p0, Landroid/media/TextTrackCue;->mRegionId:Ljava/lang/String;
 
-    .line 410
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/media/TextTrackCue;->mSnapToLines:Z
 
-    .line 411
     iput-object v1, p0, Landroid/media/TextTrackCue;->mLinePosition:Ljava/lang/Integer;
 
-    .line 412
     const/16 v0, 0x32
 
     iput v0, p0, Landroid/media/TextTrackCue;->mTextPosition:I
 
-    .line 413
     iput v2, p0, Landroid/media/TextTrackCue;->mSize:I
 
-    .line 414
     const/16 v0, 0xc8
 
     iput v0, p0, Landroid/media/TextTrackCue;->mAlignment:I
 
     move-object v0, v1
 
-    .line 415
     check-cast v0, [[Landroid/media/TextTrackCueSpan;
 
     iput-object v0, p0, Landroid/media/TextTrackCue;->mLines:[[Landroid/media/TextTrackCueSpan;
 
-    .line 416
     iput-object v1, p0, Landroid/media/TextTrackCue;->mRegion:Landroid/media/TextTrackRegion;
 
-    .line 417
     return-void
 .end method
 
@@ -123,25 +110,21 @@
     .parameter "builder"
 
     .prologue
-    .line 479
     move-object/from16 v0, p0
 
     iget-object v13, v0, Landroid/media/TextTrackCue;->mLines:[[Landroid/media/TextTrackCueSpan;
 
     if-nez v13, :cond_0
 
-    .line 480
-    const-string/jumbo v13, "null"
+    const-string v13, "null"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 514
     :goto_0
     return-object p1
 
-    .line 482
     :cond_0
     const-string v13, "["
 
@@ -149,10 +132,8 @@
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 483
     const/4 v3, 0x1
 
-    .line 484
     .local v3, first:Z
     move-object/from16 v0, p0
 
@@ -176,34 +157,28 @@
 
     aget-object v12, v1, v5
 
-    .line 485
     .local v12, spans:[Landroid/media/TextTrackCueSpan;
     if-nez v3, :cond_1
 
-    .line 486
     const-string v13, ", "
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 488
     :cond_1
     if-nez v12, :cond_2
 
-    .line 489
-    const-string/jumbo v13, "null"
+    const-string v13, "null"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 510
     .end local v5           #i$:I
     :goto_2
     const/4 v3, 0x0
 
-    .line 484
     add-int/lit8 v4, v5, 0x1
 
     .restart local v4       #i$:I
@@ -213,7 +188,6 @@
     .restart local v5       #i$:I
     goto :goto_1
 
-    .line 491
     :cond_2
     const-string v13, "\""
 
@@ -221,14 +195,11 @@
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 492
     const/4 v6, 0x1
 
-    .line 493
     .local v6, innerFirst:Z
     const-wide/16 v7, -0x1
 
-    .line 494
     .local v7, lastTimestamp:J
     move-object v2, v12
 
@@ -245,18 +216,15 @@
 
     aget-object v11, v2, v4
 
-    .line 495
     .local v11, span:Landroid/media/TextTrackCueSpan;
     if-nez v6, :cond_3
 
-    .line 496
     const-string v13, " "
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 498
     :cond_3
     iget-wide v13, v11, Landroid/media/TextTrackCueSpan;->mTimestampMs:J
 
@@ -264,7 +232,6 @@
 
     if-eqz v13, :cond_4
 
-    .line 499
     const-string v13, "<"
 
     move-object/from16 v0, p1
@@ -287,10 +254,8 @@
 
     invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 503
     iget-wide v7, v11, Landroid/media/TextTrackCueSpan;->mTimestampMs:J
 
-    .line 505
     :cond_4
     iget-object v13, v11, Landroid/media/TextTrackCueSpan;->mText:Ljava/lang/String;
 
@@ -298,15 +263,12 @@
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 506
     const/4 v6, 0x0
 
-    .line 494
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 508
     .end local v11           #span:Landroid/media/TextTrackCueSpan;
     :cond_5
     const-string v13, "\""
@@ -317,7 +279,6 @@
 
     goto :goto_2
 
-    .line 512
     .end local v2           #arr$:[Landroid/media/TextTrackCueSpan;
     .end local v4           #i$:I
     .end local v6           #innerFirst:Z
@@ -340,30 +301,24 @@
     .parameter "builder"
 
     .prologue
-    .line 455
     iget-object v5, p0, Landroid/media/TextTrackCue;->mStrings:[Ljava/lang/String;
 
     if-nez v5, :cond_0
 
-    .line 456
-    const-string/jumbo v5, "null"
+    const-string v5, "null"
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 475
     :goto_0
     return-object p1
 
-    .line 458
     :cond_0
     const-string v5, "["
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 459
     const/4 v1, 0x1
 
-    .line 460
     .local v1, first:Z
     iget-object v0, p0, Landroid/media/TextTrackCue;->mStrings:[Ljava/lang/String;
 
@@ -379,50 +334,40 @@
 
     aget-object v4, v0, v2
 
-    .line 461
     .local v4, s:Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 462
     const-string v5, ", "
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 464
     :cond_1
     if-nez v4, :cond_2
 
-    .line 465
-    const-string/jumbo v5, "null"
+    const-string v5, "null"
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 471
     :goto_2
     const/4 v1, 0x0
 
-    .line 460
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 467
     :cond_2
     const-string v5, "\""
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 468
     invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 469
     const-string v5, "\""
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 473
     .end local v4           #s:Ljava/lang/String;
     :cond_3
     const-string v5, "]"
@@ -441,28 +386,23 @@
 
     const/4 v5, 0x0
 
-    .line 421
     instance-of v7, p1, Landroid/media/TextTrackCue;
 
     if-nez v7, :cond_1
 
     move v4, v5
 
-    .line 450
     :cond_0
     :goto_0
     return v4
 
-    .line 424
     :cond_1
     if-ne p0, p1, :cond_2
 
     move v4, v6
 
-    .line 425
     goto :goto_0
 
-    .line 429
     :cond_2
     :try_start_0
     move-object v0, p1
@@ -471,7 +411,6 @@
 
     move-object v1, v0
 
-    .line 430
     .local v1, cue:Landroid/media/TextTrackCue;
     iget-object v7, p0, Landroid/media/TextTrackCue;->mId:Ljava/lang/String;
 
@@ -558,12 +497,10 @@
 
     move v4, v6
 
-    .line 441
     .local v4, res:Z
     :goto_1
     if-ne v4, v6, :cond_0
 
-    .line 442
     const/4 v3, 0x0
 
     .local v3, line:I
@@ -574,7 +511,6 @@
 
     if-ge v3, v6, :cond_0
 
-    .line 443
     iget-object v6, p0, Landroid/media/TextTrackCue;->mLines:[[Landroid/media/TextTrackCueSpan;
 
     aget-object v6, v6, v3
@@ -593,7 +529,6 @@
 
     move v4, v5
 
-    .line 444
     goto :goto_0
 
     .end local v3           #line:I
@@ -601,10 +536,8 @@
     :cond_4
     move v4, v5
 
-    .line 430
     goto :goto_1
 
-    .line 442
     .restart local v3       #line:I
     .restart local v4       #res:Z
     :cond_5
@@ -612,7 +545,6 @@
 
     goto :goto_2
 
-    .line 449
     .end local v1           #cue:Landroid/media/TextTrackCue;
     .end local v3           #line:I
     .end local v4           #res:Z
@@ -622,7 +554,6 @@
     .local v2, e:Ljava/lang/IncompatibleClassChangeError;
     move v4, v5
 
-    .line 450
     goto :goto_0
 .end method
 
@@ -630,7 +561,6 @@
     .locals 1
 
     .prologue
-    .line 548
     invoke-virtual {p0}, Landroid/media/TextTrackCue;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -647,7 +577,6 @@
     .parameter "timeMs"
 
     .prologue
-    .line 553
     iget-object v0, p0, Landroid/media/TextTrackCue;->mLines:[[Landroid/media/TextTrackCueSpan;
 
     .local v0, arr$:[[Landroid/media/TextTrackCueSpan;
@@ -668,7 +597,6 @@
 
     aget-object v6, v0, v3
 
-    .line 554
     .local v6, line:[Landroid/media/TextTrackCueSpan;
     move-object v1, v6
 
@@ -685,7 +613,6 @@
 
     aget-object v7, v1, v2
 
-    .line 555
     .local v7, span:Landroid/media/TextTrackCueSpan;
     iget-wide v8, v7, Landroid/media/TextTrackCueSpan;->mTimestampMs:J
 
@@ -698,18 +625,15 @@
     :goto_2
     iput-boolean v8, v7, Landroid/media/TextTrackCueSpan;->mEnabled:Z
 
-    .line 554
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 555
     :cond_0
     const/4 v8, 0x0
 
     goto :goto_2
 
-    .line 553
     .end local v7           #span:Landroid/media/TextTrackCueSpan;
     :cond_1
     add-int/lit8 v2, v3, 0x1
@@ -720,7 +644,6 @@
     .restart local v3       #i$:I
     goto :goto_0
 
-    .line 558
     .end local v1           #arr$:[Landroid/media/TextTrackCueSpan;
     .end local v5           #len$:I
     .end local v6           #line:[Landroid/media/TextTrackCueSpan;
@@ -732,12 +655,10 @@
     .locals 4
 
     .prologue
-    .line 518
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 520
     .local v0, res:Ljava/lang/StringBuilder;
     iget-wide v1, p0, Landroid/media/TextTrackCue;->mStartTimeMs:J
 
@@ -896,23 +817,20 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 542
     invoke-virtual {p0, v0}, Landroid/media/TextTrackCue;->appendStringsToBuilder(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    const-string/jumbo v2, "}"
+    const-string v2, "}"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 543
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 520
     :cond_0
     iget v1, p0, Landroid/media/TextTrackCue;->mWritingDirection:I
 
@@ -920,7 +838,7 @@
 
     if-ne v1, v3, :cond_1
 
-    const-string/jumbo v1, "vertical_lr"
+    const-string v1, "vertical_lr"
 
     goto :goto_0
 
@@ -931,7 +849,7 @@
 
     if-ne v1, v3, :cond_2
 
-    const-string/jumbo v1, "vertical_rl"
+    const-string v1, "vertical_rl"
 
     goto :goto_0
 
@@ -963,7 +881,7 @@
 
     if-ne v1, v3, :cond_6
 
-    const-string/jumbo v1, "middle"
+    const-string v1, "middle"
 
     goto :goto_2
 
@@ -974,7 +892,7 @@
 
     if-ne v1, v3, :cond_7
 
-    const-string/jumbo v1, "right"
+    const-string v1, "right"
 
     goto :goto_2
 
@@ -985,7 +903,7 @@
 
     if-ne v1, v3, :cond_8
 
-    const-string/jumbo v1, "start"
+    const-string v1, "start"
 
     goto :goto_2
 

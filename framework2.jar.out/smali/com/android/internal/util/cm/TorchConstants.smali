@@ -22,7 +22,6 @@
     .locals 3
 
     .prologue
-    .line 54
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -46,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

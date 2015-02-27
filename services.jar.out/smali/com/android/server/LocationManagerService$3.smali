@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 271
     iput-object p1, p0, Lcom/android/server/LocationManagerService$3;->this$0:Lcom/android/server/LocationManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 274
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 275
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.USER_SWITCHED"
 
@@ -55,7 +52,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 276
     iget-object v1, p0, Lcom/android/server/LocationManagerService$3;->this$0:Lcom/android/server/LocationManagerService;
 
     const-string v2, "android.intent.extra.user_handle"
@@ -69,7 +65,6 @@
     #calls: Lcom/android/server/LocationManagerService;->switchUser(I)V
     invoke-static {v1, v2}, Lcom/android/server/LocationManagerService;->access$400(Lcom/android/server/LocationManagerService;I)V
 
-    .line 278
     :cond_0
     return-void
 .end method

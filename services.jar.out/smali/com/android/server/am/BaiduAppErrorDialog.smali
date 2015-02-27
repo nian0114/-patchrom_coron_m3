@@ -34,32 +34,25 @@
 
     const/4 v6, 0x0
 
-    .line 42
     invoke-direct {p0, p1}, Lcom/android/server/am/BaseErrorDialog;-><init>(Landroid/content/Context;)V
 
-    .line 90
     new-instance v3, Lcom/android/server/am/BaiduAppErrorDialog$1;
 
     invoke-direct {v3, p0}, Lcom/android/server/am/BaiduAppErrorDialog$1;-><init>(Lcom/android/server/am/BaiduAppErrorDialog;)V
 
     iput-object v3, p0, Lcom/android/server/am/BaiduAppErrorDialog;->mHandler:Landroid/os/Handler;
 
-    .line 44
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 46
     .local v2, res:Landroid/content/res/Resources;
     iput-object p2, p0, Lcom/android/server/am/BaiduAppErrorDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 47
     iput-object p4, p0, Lcom/android/server/am/BaiduAppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
-    .line 48
     iput-object p3, p0, Lcom/android/server/am/BaiduAppErrorDialog;->mResult:Lcom/android/server/am/AppErrorResult;
 
-    .line 50
     iget-object v3, p4, Lcom/android/server/am/ProcessRecord;->pkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v3}, Landroid/util/ArrayMap;->size()I
@@ -81,7 +74,6 @@
     .local v1, name:Ljava/lang/CharSequence;
     if-eqz v1, :cond_1
 
-    .line 52
     const v3, #android:string@aerr_application#t
 
     const/4 v4, 0x2
@@ -106,11 +98,9 @@
 
     invoke-virtual {p0, v3}, Lcom/android/server/am/BaiduAppErrorDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 62
     :goto_0
     invoke-virtual {p0, v6}, Lcom/android/server/am/BaiduAppErrorDialog;->setCancelable(Z)V
 
-    .line 64
     const/4 v3, -0x2
 
     const v4, #android:string@force_close#t
@@ -127,7 +117,6 @@
 
     invoke-virtual {p0, v3, v4, v5}, Lcom/android/server/am/BaiduAppErrorDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 69
     const/4 v3, -0x1
 
     const v4, #android:string@report#t
@@ -144,7 +133,6 @@
 
     invoke-virtual {p0, v3, v4, v5}, Lcom/android/server/am/BaiduAppErrorDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 74
     const v3, #android:string@aerr_title#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
@@ -153,7 +141,6 @@
 
     invoke-virtual {p0, v3}, Lcom/android/server/am/BaiduAppErrorDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 75
     invoke-virtual {p0}, Lcom/android/server/am/BaiduAppErrorDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v3
@@ -162,7 +149,6 @@
 
     move-result-object v0
 
-    .line 76
     .local v0, attrs:Landroid/view/WindowManager$LayoutParams;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -188,26 +174,22 @@
 
     invoke-virtual {v0, v3}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 77
     iget v3, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     or-int/lit16 v3, v3, 0x110
 
     iput v3, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 79
     invoke-virtual {p0}, Lcom/android/server/am/BaiduAppErrorDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v3
 
     invoke-virtual {v3, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 80
     iget-boolean v3, p4, Lcom/android/server/am/ProcessRecord;->persistent:Z
 
     if-eqz v3, :cond_0
 
-    .line 81
     invoke-virtual {p0}, Lcom/android/server/am/BaiduAppErrorDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v3
@@ -216,7 +198,6 @@
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->setType(I)V
 
-    .line 85
     :cond_0
     iget-object v3, p0, Lcom/android/server/am/BaiduAppErrorDialog;->mHandler:Landroid/os/Handler;
 
@@ -230,16 +211,13 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 88
     return-void
 
-    .line 56
     .end local v0           #attrs:Landroid/view/WindowManager$LayoutParams;
     .end local v1           #name:Ljava/lang/CharSequence;
     :cond_1
     iget-object v1, p4, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 57
     .restart local v1       #name:Ljava/lang/CharSequence;
     const v3, #android:string@aerr_process#t
 
@@ -265,7 +243,6 @@
     .parameter "x0"
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/android/server/am/BaiduAppErrorDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
     return-object v0
@@ -276,7 +253,6 @@
     .parameter "x0"
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/android/server/am/BaiduAppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
     return-object v0
@@ -287,7 +263,6 @@
     .parameter "x0"
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/android/server/am/BaiduAppErrorDialog;->mResult:Lcom/android/server/am/AppErrorResult;
 
     return-object v0

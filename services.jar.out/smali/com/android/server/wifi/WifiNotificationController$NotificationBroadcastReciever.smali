@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 286
     iput-object p1, p0, Lcom/android/server/wifi/WifiNotificationController$NotificationBroadcastReciever;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 286
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiNotificationController$NotificationBroadcastReciever;-><init>(Lcom/android/server/wifi/WifiNotificationController;)V
 
     return-void
@@ -52,13 +50,11 @@
     .parameter "intent"
 
     .prologue
-    .line 289
     new-instance v0, Lcom/android/server/wifi/WifiNotificationController$NotificationBroadcastReciever$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/wifi/WifiNotificationController$NotificationBroadcastReciever$1;-><init>(Lcom/android/server/wifi/WifiNotificationController$NotificationBroadcastReciever;)V
 
     invoke-static {v0}, Landroid/os/AsyncTask;->execute(Ljava/lang/Runnable;)V
 
-    .line 296
     return-void
 .end method

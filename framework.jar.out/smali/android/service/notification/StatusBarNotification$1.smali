@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 118
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .parameter "parcel"
 
     .prologue
-    .line 121
     new-instance v0, Landroid/service/notification/StatusBarNotification;
 
     invoke-direct {v0, p1}, Landroid/service/notification/StatusBarNotification;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .parameter "x0"
 
     .prologue
-    .line 118
     invoke-virtual {p0, p1}, Landroid/service/notification/StatusBarNotification$1;->createFromParcel(Landroid/os/Parcel;)Landroid/service/notification/StatusBarNotification;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .parameter "size"
 
     .prologue
-    .line 126
     new-array v0, p1, [Landroid/service/notification/StatusBarNotification;
 
     return-object v0
@@ -82,7 +78,6 @@
     .parameter "x0"
 
     .prologue
-    .line 118
     invoke-virtual {p0, p1}, Landroid/service/notification/StatusBarNotification$1;->newArray(I)[Landroid/service/notification/StatusBarNotification;
 
     move-result-object v0

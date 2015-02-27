@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Landroid/graphics/Canvas;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .parameter "drawGLFunction"
 
     .prologue
-    .line 150
     const/4 v0, 0x0
 
     return v0
@@ -51,14 +49,12 @@
     .parameter "displayList"
 
     .prologue
-    .line 94
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, p1, v0, v1}, Landroid/view/HardwareCanvas;->drawDisplayList(Landroid/view/DisplayList;Landroid/graphics/Rect;I)I
 
-    .line 95
     return-void
 .end method
 
@@ -72,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Landroid/view/HardwareCanvas;->mName:Ljava/lang/String;
 
     return-object v0
@@ -83,7 +78,6 @@
     .parameter "dirty"
 
     .prologue
-    .line 164
     const/4 v0, 0x0
 
     return v0
@@ -93,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 34
     const/4 v0, 0x1
 
     return v0
@@ -116,7 +109,6 @@
     .parameter "bitmap"
 
     .prologue
-    .line 39
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -129,9 +121,7 @@
     .parameter "name"
 
     .prologue
-    .line 53
     iput-object p1, p0, Landroid/view/HardwareCanvas;->mName:Ljava/lang/String;
 
-    .line 54
     return-void
 .end method

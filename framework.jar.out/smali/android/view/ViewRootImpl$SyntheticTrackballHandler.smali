@@ -30,19 +30,16 @@
     .parameter
 
     .prologue
-    .line 4034
     iput-object p1, p0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4035
     new-instance v0, Landroid/view/ViewRootImpl$TrackballAxis;
 
     invoke-direct {v0}, Landroid/view/ViewRootImpl$TrackballAxis;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mX:Landroid/view/ViewRootImpl$TrackballAxis;
 
-    .line 4036
     new-instance v0, Landroid/view/ViewRootImpl$TrackballAxis;
 
     invoke-direct {v0}, Landroid/view/ViewRootImpl$TrackballAxis;-><init>()V
@@ -59,12 +56,10 @@
     .parameter "event"
 
     .prologue
-    .line 4142
     const-wide/32 v0, -0x80000000
 
     iput-wide v0, p0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mLastTime:J
 
-    .line 4147
     iget-object v0, p0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
@@ -77,14 +72,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 4148
     iget-object v0, p0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->this$0:Landroid/view/ViewRootImpl;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/ViewRootImpl;->ensureTouchMode(Z)Z
 
-    .line 4150
     :cond_0
     return-void
 .end method
@@ -94,12 +87,10 @@
     .parameter "event"
 
     .prologue
-    .line 4041
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
 
-    .line 4042
     .local v3, curTime:J
     move-object/from16 v0, p0
 
@@ -113,7 +104,6 @@
 
     if-gez v2, :cond_0
 
-    .line 4045
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mX:Landroid/view/ViewRootImpl$TrackballAxis;
@@ -122,7 +112,6 @@
 
     invoke-virtual {v2, v5}, Landroid/view/ViewRootImpl$TrackballAxis;->reset(I)V
 
-    .line 4046
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mY:Landroid/view/ViewRootImpl$TrackballAxis;
@@ -131,28 +120,23 @@
 
     invoke-virtual {v2, v5}, Landroid/view/ViewRootImpl$TrackballAxis;->reset(I)V
 
-    .line 4047
     move-object/from16 v0, p0
 
     iput-wide v3, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mLastTime:J
 
-    .line 4050
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v26
 
-    .line 4051
     .local v26, action:I
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v10
 
-    .line 4052
     .local v10, metaState:I
     packed-switch v26, :pswitch_data_0
 
-    .line 4077
     :goto_0
     move-object/from16 v0, p0
 
@@ -172,7 +156,6 @@
 
     move-result v28
 
-    .line 4078
     .local v28, xOff:F
     move-object/from16 v0, p0
 
@@ -192,25 +175,20 @@
 
     move-result v29
 
-    .line 4086
     .local v29, yOff:F
     const/4 v8, 0x0
 
-    .line 4087
     .local v8, keycode:I
     const/16 v27, 0x0
 
-    .line 4088
     .local v27, movement:I
     const/high16 v24, 0x3f80
 
-    .line 4089
     .local v24, accel:F
     cmpl-float v2, v28, v29
 
     if-lez v2, :cond_5
 
-    .line 4090
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mX:Landroid/view/ViewRootImpl$TrackballAxis;
@@ -219,15 +197,12 @@
 
     move-result v27
 
-    .line 4091
     if-eqz v27, :cond_1
 
-    .line 4092
     if-lez v27, :cond_4
 
     const/16 v8, 0x16
 
-    .line 4094
     :goto_1
     move-object/from16 v0, p0
 
@@ -237,7 +212,6 @@
 
     move/from16 v24, v0
 
-    .line 4095
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mY:Landroid/view/ViewRootImpl$TrackballAxis;
@@ -246,12 +220,10 @@
 
     invoke-virtual {v2, v5}, Landroid/view/ViewRootImpl$TrackballAxis;->reset(I)V
 
-    .line 4107
     :cond_1
     :goto_2
     if-eqz v8, :cond_8
 
-    .line 4108
     if-gez v27, :cond_2
 
     move/from16 v0, v27
@@ -260,7 +232,6 @@
 
     move/from16 v27, v0
 
-    .line 4109
     :cond_2
     move/from16 v0, v27
 
@@ -272,7 +243,6 @@
 
     move/from16 v25, v0
 
-    .line 4113
     .local v25, accelMovement:I
     move/from16 v0, v25
 
@@ -280,13 +250,10 @@
 
     if-le v0, v1, :cond_3
 
-    .line 4116
     add-int/lit8 v27, v27, -0x1
 
-    .line 4117
     sub-int v9, v25, v27
 
-    .line 4118
     .local v9, repeatCount:I
     move-object/from16 v0, p0
 
@@ -310,21 +277,17 @@
 
     invoke-virtual {v15, v2}, Landroid/view/ViewRootImpl;->enqueueInputEvent(Landroid/view/InputEvent;)V
 
-    .line 4123
     .end local v9           #repeatCount:I
     :cond_3
     :goto_3
     if-lez v27, :cond_7
 
-    .line 4126
     add-int/lit8 v27, v27, -0x1
 
-    .line 4127
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
 
-    .line 4128
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->this$0:Landroid/view/ViewRootImpl;
@@ -355,7 +318,6 @@
 
     invoke-virtual {v2, v11}, Landroid/view/ViewRootImpl;->enqueueInputEvent(Landroid/view/InputEvent;)V
 
-    .line 4132
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->this$0:Landroid/view/ViewRootImpl;
@@ -388,7 +350,6 @@
 
     goto :goto_3
 
-    .line 4054
     .end local v8           #keycode:I
     .end local v24           #accel:F
     .end local v25           #accelMovement:I
@@ -404,7 +365,6 @@
 
     invoke-virtual {v2, v5}, Landroid/view/ViewRootImpl$TrackballAxis;->reset(I)V
 
-    .line 4055
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mY:Landroid/view/ViewRootImpl$TrackballAxis;
@@ -413,7 +373,6 @@
 
     invoke-virtual {v2, v5}, Landroid/view/ViewRootImpl$TrackballAxis;->reset(I)V
 
-    .line 4056
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->this$0:Landroid/view/ViewRootImpl;
@@ -442,7 +401,6 @@
 
     goto/16 :goto_0
 
-    .line 4062
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -452,7 +410,6 @@
 
     invoke-virtual {v2, v5}, Landroid/view/ViewRootImpl$TrackballAxis;->reset(I)V
 
-    .line 4063
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mY:Landroid/view/ViewRootImpl$TrackballAxis;
@@ -461,7 +418,6 @@
 
     invoke-virtual {v2, v5}, Landroid/view/ViewRootImpl$TrackballAxis;->reset(I)V
 
-    .line 4064
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->this$0:Landroid/view/ViewRootImpl;
@@ -490,7 +446,6 @@
 
     goto/16 :goto_0
 
-    .line 4092
     .restart local v8       #keycode:I
     .restart local v24       #accel:F
     .restart local v27       #movement:I
@@ -501,7 +456,6 @@
 
     goto/16 :goto_1
 
-    .line 4097
     :cond_5
     const/4 v2, 0x0
 
@@ -509,7 +463,6 @@
 
     if-lez v2, :cond_1
 
-    .line 4098
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mY:Landroid/view/ViewRootImpl$TrackballAxis;
@@ -518,15 +471,12 @@
 
     move-result v27
 
-    .line 4099
     if-eqz v27, :cond_1
 
-    .line 4100
     if-lez v27, :cond_6
 
     const/16 v8, 0x14
 
-    .line 4102
     :goto_4
     move-object/from16 v0, p0
 
@@ -536,7 +486,6 @@
 
     move/from16 v24, v0
 
-    .line 4103
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mX:Landroid/view/ViewRootImpl$TrackballAxis;
@@ -547,25 +496,21 @@
 
     goto/16 :goto_2
 
-    .line 4100
     :cond_6
     const/16 v8, 0x13
 
     goto :goto_4
 
-    .line 4137
     .restart local v25       #accelMovement:I
     :cond_7
     move-object/from16 v0, p0
 
     iput-wide v3, v0, Landroid/view/ViewRootImpl$SyntheticTrackballHandler;->mLastTime:J
 
-    .line 4139
     .end local v25           #accelMovement:I
     :cond_8
     return-void
 
-    .line 4052
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

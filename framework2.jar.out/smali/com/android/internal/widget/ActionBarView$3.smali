@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 163
     iput-object p1, p0, Lcom/android/internal/widget/ActionBarView$3;->this$0:Lcom/android/internal/widget/ActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "v"
 
     .prologue
-    .line 165
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarView$3;->this$0:Lcom/android/internal/widget/ActionBarView;
 
     #getter for: Lcom/android/internal/widget/ActionBarView;->mMenuPrepared:Z
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 167
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarView$3;->this$0:Lcom/android/internal/widget/ActionBarView;
 
     iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mWindowCallback:Landroid/view/Window$Callback;
@@ -68,7 +65,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
-    .line 169
     :cond_0
     return-void
 .end method

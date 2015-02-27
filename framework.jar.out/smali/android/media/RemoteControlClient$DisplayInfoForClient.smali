@@ -37,31 +37,24 @@
     .parameter "h"
 
     .prologue
-    .line 1054
     iput-object p1, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->this$0:Landroid/media/RemoteControlClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1051
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mWantsPositionSync:Z
 
-    .line 1052
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mEnabled:Z
 
-    .line 1055
     iput-object p2, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mRcDisplay:Landroid/media/IRemoteControlDisplay;
 
-    .line 1056
     iput p3, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mArtworkExpectedWidth:I
 
-    .line 1057
     iput p4, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mArtworkExpectedHeight:I
 
-    .line 1058
     return-void
 .end method
 
@@ -70,7 +63,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1046
     iget-boolean v0, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mEnabled:Z
 
     return v0
@@ -82,7 +74,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1046
     iput-boolean p1, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mEnabled:Z
 
     return p1
@@ -93,7 +84,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1046
     iget-object v0, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mRcDisplay:Landroid/media/IRemoteControlDisplay;
 
     return-object v0
@@ -104,7 +94,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1046
     iget v0, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mArtworkExpectedWidth:I
 
     return v0
@@ -116,7 +105,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1046
     iput p1, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mArtworkExpectedWidth:I
 
     return p1
@@ -127,7 +115,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1046
     iget v0, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mArtworkExpectedHeight:I
 
     return v0
@@ -139,7 +126,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1046
     iput p1, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mArtworkExpectedHeight:I
 
     return p1
@@ -150,7 +136,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1046
     iget-boolean v0, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mWantsPositionSync:Z
 
     return v0
@@ -162,7 +147,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1046
     iput-boolean p1, p0, Landroid/media/RemoteControlClient$DisplayInfoForClient;->mWantsPositionSync:Z
 
     return p1

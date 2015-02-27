@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 303
     iput-object p1, p0, Lcom/android/server/wifi/WifiService$1;->this$0:Lcom/android/server/wifi/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 306
     iget-object v0, p0, Lcom/android/server/wifi/WifiService$1;->this$0:Lcom/android/server/wifi/WifiService;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiService;->mSettingsStore:Lcom/android/server/wifi/WifiSettingsStore;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 307
     iget-object v0, p0, Lcom/android/server/wifi/WifiService$1;->this$0:Lcom/android/server/wifi/WifiService;
 
     #getter for: Lcom/android/server/wifi/WifiService;->mWifiController:Lcom/android/server/wifi/WifiController;
@@ -63,7 +60,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiController;->sendMessage(I)V
 
-    .line 309
     :cond_0
     return-void
 .end method

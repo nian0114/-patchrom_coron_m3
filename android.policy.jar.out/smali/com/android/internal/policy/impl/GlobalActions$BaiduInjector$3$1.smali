@@ -28,7 +28,6 @@
     .parameter
 
     .prologue
-    .line 1101
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$3$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$3;
 
     iput-object p3, p0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$3$1;->val$myConn:Landroid/content/ServiceConnection;
@@ -45,14 +44,12 @@
     .parameter "msg"
 
     .prologue
-    .line 1105
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->access$sget-mScreenshotLock-0429bb()Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 1106
     :try_start_0
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->access$sget-mScreenshotConnection-22a399()Landroid/content/ServiceConnection;
 
@@ -62,7 +59,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 1107
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$3$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$3;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector$3;->val$context:Landroid/content/Context;
@@ -73,12 +69,10 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 1108
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->access$sput-mScreenshotConnection-a527ce(Landroid/content/ServiceConnection;)Landroid/content/ServiceConnection;
 
-    .line 1109
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->access$sget-mScreenshotHandler-c6f3d5()Landroid/os/Handler;
 
     move-result-object v0
@@ -89,14 +83,11 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1111
     :cond_0
     monitor-exit v1
 
-    .line 1112
     return-void
 
-    .line 1111
     :catchall_0
     move-exception v0
 

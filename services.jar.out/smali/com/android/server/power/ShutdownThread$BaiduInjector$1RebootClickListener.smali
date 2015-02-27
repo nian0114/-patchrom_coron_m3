@@ -32,7 +32,6 @@
     .end annotation
 
     .prologue
-    .line 224
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$BaiduInjector$1RebootClickListener;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,15 +47,12 @@
     .parameter "which"
 
     .prologue
-    .line 226
     if-gez p2, :cond_1
 
-    .line 232
     :cond_0
     :goto_0
     return-void
 
-    .line 228
     :cond_1
     iget-object v1, p0, Lcom/android/server/power/ShutdownThread$BaiduInjector$1RebootClickListener;->val$context:Landroid/content/Context;
 
@@ -70,7 +66,6 @@
 
     move-result-object v0
 
-    .line 230
     .local v0, actions:[Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -78,7 +73,6 @@
 
     if-ge p2, v1, :cond_0
 
-    .line 231
     aget-object v1, v0, p2
 
     invoke-static {v1}, Lcom/android/server/power/ShutdownThread;->access$302(Ljava/lang/String;)Ljava/lang/String;

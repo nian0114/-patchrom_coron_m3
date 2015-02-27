@@ -20,9 +20,7 @@
     .parameter "rs"
 
     .prologue
-    .line 35
     invoke-direct {p0, p1, p2}, Landroid/renderscript/ProgramFragment;-><init>(ILandroid/renderscript/RenderScript;)V
 
-    .line 36
     return-void
 .end method

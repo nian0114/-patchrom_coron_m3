@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 160
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .parameter "in"
 
     .prologue
-    .line 162
     new-instance v0, Landroid/net/DhcpResults;
 
     const/4 v1, 0x0
@@ -58,7 +56,6 @@
 
     invoke-direct {v0, v1}, Landroid/net/DhcpResults;-><init>(Landroid/net/LinkProperties;)V
 
-    .line 164
     .local v0, prop:Landroid/net/DhcpResults;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -66,7 +63,6 @@
 
     iput v1, v0, Landroid/net/DhcpResults;->leaseDuration:I
 
-    .line 166
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -75,7 +71,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 168
     :try_start_0
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
@@ -89,7 +84,6 @@
     :try_end_0
     .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 172
     :cond_0
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -98,10 +92,8 @@
 
     iput-object v1, v0, Landroid/net/DhcpResults;->vendorInfo:Ljava/lang/String;
 
-    .line 174
     return-object v0
 
-    .line 169
     :catch_0
     move-exception v1
 
@@ -113,7 +105,6 @@
     .parameter "x0"
 
     .prologue
-    .line 160
     invoke-virtual {p0, p1}, Landroid/net/DhcpResults$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/DhcpResults;
 
     move-result-object v0
@@ -126,7 +117,6 @@
     .parameter "size"
 
     .prologue
-    .line 178
     new-array v0, p1, [Landroid/net/DhcpResults;
 
     return-object v0
@@ -137,7 +127,6 @@
     .parameter "x0"
 
     .prologue
-    .line 160
     invoke-virtual {p0, p1}, Landroid/net/DhcpResults$1;->newArray(I)[Landroid/net/DhcpResults;
 
     move-result-object v0

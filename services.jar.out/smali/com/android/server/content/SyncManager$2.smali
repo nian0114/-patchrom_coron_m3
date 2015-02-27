@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 217
     iput-object p1, p0, Lcom/android/server/content/SyncManager$2;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 220
     const-string v1, "from_quickboot"
 
     const/4 v2, 0x0
@@ -49,15 +47,12 @@
 
     move-result v0
 
-    .line 221
     .local v0, fromQuickBoot:Z
     if-eqz v0, :cond_0
 
-    .line 224
     :goto_0
     return-void
 
-    .line 223
     :cond_0
     iget-object v1, p0, Lcom/android/server/content/SyncManager$2;->this$0:Lcom/android/server/content/SyncManager;
 

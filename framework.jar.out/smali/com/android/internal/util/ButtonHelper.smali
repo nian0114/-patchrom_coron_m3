@@ -41,17 +41,14 @@
     .locals 2
 
     .prologue
-    .line 87
     const/4 v0, 0x5
 
     sput v0, Lcom/android/internal/util/ButtonHelper;->HARDWARE_KEY_SIZE:I
 
-    .line 88
     const-string v0, "hardware_key_config"
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper;->HARDWARE_KEY_CONFIG:Ljava/lang/String;
 
-    .line 99
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,12 +119,10 @@
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper;->HARDWARE_KEY_CONFIG_DEFAULT:Ljava/lang/String;
 
-    .line 125
     const-string v0, "nav_button_config"
 
     sput-object v0, Lcom/android/internal/util/ButtonHelper;->NAV_BUTTON_CONFIG:Ljava/lang/String;
 
-    .line 126
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -211,10 +206,8 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     return-void
 .end method
 
@@ -223,12 +216,10 @@
     .parameter "context"
 
     .prologue
-    .line 111
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 112
     .local v1, resolver:Landroid/content/ContentResolver;
     sget-object v2, Lcom/android/internal/util/ButtonHelper;->HARDWARE_KEY_CONFIG:Ljava/lang/String;
 
@@ -236,14 +227,11 @@
 
     move-result-object v0
 
-    .line 113
     .local v0, config:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 114
     sget-object v0, Lcom/android/internal/util/ButtonHelper;->HARDWARE_KEY_CONFIG_DEFAULT:Ljava/lang/String;
 
-    .line 116
     :cond_0
     invoke-static {v0}, Lcom/android/internal/util/ButtonConfigHelper;->parseHardwareKeyConfigValues(Ljava/lang/String;)[Lcom/android/internal/util/ButtonHelper$Action;
 
@@ -261,7 +249,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 192
     const-string v6, "ButtonHelper"
 
     const/4 v7, 0x3
@@ -272,7 +259,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 193
     const-string v6, "ButtonHelper"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -307,29 +293,23 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     :cond_0
     const/4 v3, -0x1
 
-    .line 196
     .local v3, resId:I
     const/4 v0, 0x0
 
-    .line 197
     .local v0, d:Landroid/graphics/drawable/Drawable;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 198
     .local v2, pm:Landroid/content/pm/PackageManager;
     if-nez v2, :cond_1
 
-    .line 223
     :goto_0
     return-object v5
 
-    .line 204
     :cond_1
     if-eqz p2, :cond_4
 
@@ -343,7 +323,6 @@
 
     move-result-object v4
 
-    .line 210
     .local v4, systemUiResources:Landroid/content/res/Resources;
     iget-object v5, p1, Lcom/android/internal/util/ButtonHelper$Action;->type:Lcom/android/internal/util/ButtonHelper$ActionType;
 
@@ -355,7 +334,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 212
     :try_start_1
     iget-object v5, p1, Lcom/android/internal/util/ButtonHelper$Action;->args:Ljava/lang/Object;
 
@@ -367,17 +345,14 @@
 
     move-result-object v0
 
-    .line 218
     :cond_2
     :goto_2
     if-nez v0, :cond_3
 
-    .line 219
     invoke-static {v4, p1, p2}, Lcom/android/internal/util/ButtonHelper;->getIconResIdForNavBarButton(Landroid/content/res/Resources;Lcom/android/internal/util/ButtonHelper$Action;Z)I
 
     move-result v3
 
-    .line 220
     invoke-virtual {v4, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -385,10 +360,8 @@
     :cond_3
     move-object v5, v0
 
-    .line 223
     goto :goto_0
 
-    .line 204
     .end local v4           #systemUiResources:Landroid/content/res/Resources;
     :cond_4
     :try_start_2
@@ -398,11 +371,9 @@
 
     goto :goto_1
 
-    .line 205
     :catch_0
     move-exception v1
 
-    .line 206
     .local v1, e:Ljava/lang/Exception;
     const-string v6, "ButtonHelper"
 
@@ -412,13 +383,11 @@
 
     goto :goto_0
 
-    .line 213
     .end local v1           #e:Ljava/lang/Exception;
     .restart local v4       #systemUiResources:Landroid/content/res/Resources;
     :catch_1
     move-exception v1
 
-    .line 214
     .local v1, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v1}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
@@ -432,10 +401,8 @@
     .parameter "isSystemUI"
 
     .prologue
-    .line 155
     const/4 v0, 0x0
 
-    .line 156
     .local v0, resName:Ljava/lang/String;
     sget-object v1, Lcom/android/internal/util/ButtonHelper$1;->$SwitchMap$com$android$internal$util$ButtonHelper$ActionType:[I
 
@@ -449,10 +416,8 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 185
     const-string v0, "ic_sysbar_home"
 
-    .line 188
     :goto_0
     const-string v2, "drawable"
 
@@ -467,76 +432,56 @@
 
     return v1
 
-    .line 158
     :pswitch_0
     const-string v0, "ic_sysbar_back"
 
-    .line 159
     goto :goto_0
 
-    .line 161
     :pswitch_1
     const-string v0, "ic_sysbar_home"
 
-    .line 162
     goto :goto_0
 
-    .line 164
     :pswitch_2
     const-string v0, "ic_sysbar_recent"
 
-    .line 165
     goto :goto_0
 
-    .line 167
     :pswitch_3
     const-string v0, "ic_sysbar_last_app"
 
-    .line 168
     goto :goto_0
 
-    .line 170
     :pswitch_4
     const-string v0, "ic_sysbar_kill_app"
 
-    .line 171
     goto :goto_0
 
-    .line 173
     :pswitch_5
     const-string v0, "ic_sysbar_notification"
 
-    .line 174
     goto :goto_0
 
-    .line 176
     :pswitch_6
     const-string v0, "ic_sysbar_power_menu"
 
-    .line 177
     goto :goto_0
 
-    .line 179
     :pswitch_7
     const-string v0, "ic_sysbar_search"
 
-    .line 180
     goto :goto_0
 
-    .line 182
     :pswitch_8
     const-string v0, "ic_sysbar_voice_assist"
 
-    .line 183
     goto :goto_0
 
-    .line 188
     :cond_0
     const-string v1, "com.android.settings"
 
     goto :goto_1
 
-    .line 156
     nop
 
     :pswitch_data_0
@@ -569,12 +514,10 @@
     .end annotation
 
     .prologue
-    .line 135
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 136
     .local v1, resolver:Landroid/content/ContentResolver;
     sget-object v2, Lcom/android/internal/util/ButtonHelper;->NAV_BUTTON_CONFIG:Ljava/lang/String;
 
@@ -582,7 +525,6 @@
 
     move-result-object v0
 
-    .line 137
     .local v0, config:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -592,11 +534,9 @@
 
     if-nez v2, :cond_1
 
-    .line 138
     :cond_0
     sget-object v0, Lcom/android/internal/util/ButtonHelper;->NAV_BAR_BUTTON_CONFIG_DEFAULT:Ljava/lang/String;
 
-    .line 140
     :cond_1
     invoke-static {v0}, Lcom/android/internal/util/ButtonConfigHelper;->parseNavButtonConfigValues(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -611,12 +551,10 @@
     .parameter "actions"
 
     .prologue
-    .line 120
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 121
     .local v0, resolver:Landroid/content/ContentResolver;
     sget-object v1, Lcom/android/internal/util/ButtonHelper;->HARDWARE_KEY_CONFIG:Ljava/lang/String;
 
@@ -626,7 +564,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 123
     return-void
 .end method
 
@@ -647,17 +584,14 @@
     .end annotation
 
     .prologue
-    .line 144
     .local p1, configs:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/util/ButtonHelper$ButtonConfig;>;"
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 145
     .local v0, resolver:Landroid/content/ContentResolver;
     if-nez p2, :cond_0
 
-    .line 146
     sget-object v1, Lcom/android/internal/util/ButtonHelper;->NAV_BUTTON_CONFIG:Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/internal/util/ButtonConfigHelper;->makeNavButtonConfigValues(Ljava/util/ArrayList;)Ljava/lang/String;
@@ -666,11 +600,9 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 152
     :goto_0
     return-void
 
-    .line 149
     :cond_0
     sget-object v1, Lcom/android/internal/util/ButtonHelper;->NAV_BUTTON_CONFIG:Ljava/lang/String;
 

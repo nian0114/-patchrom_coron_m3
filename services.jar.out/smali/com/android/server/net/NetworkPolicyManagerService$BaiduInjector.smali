@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 2094
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .parameter "totalBytes"
 
     .prologue
-    .line 2105
     return-void
 .end method
 
@@ -42,19 +40,15 @@
     .parameter "orgUidRules"
 
     .prologue
-    .line 2096
     move v0, p1
 
-    .line 2097
     .local v0, uidRules:I
     and-int/lit8 v1, p0, 0x2
 
     if-eqz v1, :cond_0
 
-    .line 2099
     const/4 v0, 0x1
 
-    .line 2101
     :cond_0
     return v0
 .end method

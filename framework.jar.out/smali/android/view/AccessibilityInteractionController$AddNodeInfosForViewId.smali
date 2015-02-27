@@ -50,12 +50,10 @@
     .parameter
 
     .prologue
-    .line 994
     iput-object p1, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->this$0:Landroid/view/AccessibilityInteractionController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 995
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mViewId:I
@@ -69,7 +67,6 @@
     .parameter "x1"
 
     .prologue
-    .line 994
     invoke-direct {p0, p1}, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;-><init>(Landroid/view/AccessibilityInteractionController;)V
 
     return-void
@@ -82,7 +79,6 @@
     .parameter "view"
 
     .prologue
-    .line 1010
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
@@ -100,7 +96,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1011
     iget-object v0, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mInfos:Ljava/util/List;
 
     invoke-virtual {p1}, Landroid/view/View;->createAccessibilityNodeInfo()Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -109,7 +104,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1013
     :cond_0
     const/4 v0, 0x0
 
@@ -121,7 +115,6 @@
     .parameter "x0"
 
     .prologue
-    .line 994
     check-cast p1, Landroid/view/View;
 
     .end local p1
@@ -147,14 +140,11 @@
     .end annotation
 
     .prologue
-    .line 999
     .local p2, infos:Ljava/util/List;,"Ljava/util/List<Landroid/view/accessibility/AccessibilityNodeInfo;>;"
     iput p1, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mViewId:I
 
-    .line 1000
     iput-object p2, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mInfos:Ljava/util/List;
 
-    .line 1001
     return-void
 .end method
 
@@ -162,16 +152,13 @@
     .locals 1
 
     .prologue
-    .line 1004
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mViewId:I
 
-    .line 1005
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/view/AccessibilityInteractionController$AddNodeInfosForViewId;->mInfos:Ljava/util/List;
 
-    .line 1006
     return-void
 .end method

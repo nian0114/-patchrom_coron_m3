@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
@@ -21,10 +20,8 @@
     .parameter "view"
 
     .prologue
-    .line 38
     invoke-virtual {p0}, Landroid/accounts/CantAddAccountActivity;->onBackPressed()V
 
-    .line 39
     return-void
 .end method
 
@@ -33,14 +30,11 @@
     .parameter "savedInstanceState"
 
     .prologue
-    .line 33
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 34
     const v0, 0x109002a
 
     invoke-virtual {p0, v0}, Landroid/accounts/CantAddAccountActivity;->setContentView(I)V
 
-    .line 35
     return-void
 .end method

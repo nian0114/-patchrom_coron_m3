@@ -20,10 +20,8 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     return-void
 .end method
 
@@ -32,7 +30,6 @@
     .parameter "context"
 
     .prologue
-    .line 67
     invoke-static {p0}, Lcom/android/internal/view/RotationPolicy;->isRotationSupported(Landroid/content/Context;)Z
 
     move-result v0
@@ -71,7 +68,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 75
     invoke-static {p0}, Lcom/android/internal/view/RotationPolicy;->isRotationLockToggleSupported(Landroid/content/Context;)Z
 
     move-result v1
@@ -117,7 +113,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 87
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -143,12 +138,10 @@
     .parameter "context"
 
     .prologue
-    .line 52
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    .line 53
     .local v0, pm:Landroid/content/pm/PackageManager;
     const-string v1, "android.hardware.sensor.accelerometer"
 
@@ -191,14 +184,12 @@
     .parameter "listener"
 
     .prologue
-    .line 151
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
     invoke-static {p0, p1, v0}, Lcom/android/internal/view/RotationPolicy;->registerRotationPolicyListener(Landroid/content/Context;Lcom/android/internal/view/RotationPolicy$RotationPolicyListener;I)V
 
-    .line 152
     return-void
 .end method
 
@@ -211,7 +202,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 160
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -226,7 +216,6 @@
 
     invoke-virtual {v0, v1, v3, v2, p2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 163
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -241,7 +230,6 @@
 
     invoke-virtual {v0, v1, v3, v2, p2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 166
     return-void
 .end method
 
@@ -251,7 +239,6 @@
     .parameter "enabled"
 
     .prologue
-    .line 97
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -264,14 +251,12 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 101
     new-instance v0, Lcom/android/internal/view/RotationPolicy$1;
 
     invoke-direct {v0, p1}, Lcom/android/internal/view/RotationPolicy$1;-><init>(Z)V
 
     invoke-static {v0}, Landroid/os/AsyncTask;->execute(Ljava/lang/Runnable;)V
 
-    .line 116
     return-void
 .end method
 
@@ -281,7 +266,6 @@
     .parameter "enabled"
 
     .prologue
-    .line 125
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -297,17 +281,14 @@
 
     invoke-static {v1, v2, v0, v3}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 129
     new-instance v0, Lcom/android/internal/view/RotationPolicy$2;
 
     invoke-direct {v0, p1}, Lcom/android/internal/view/RotationPolicy$2;-><init>(Z)V
 
     invoke-static {v0}, Landroid/os/AsyncTask;->execute(Ljava/lang/Runnable;)V
 
-    .line 144
     return-void
 
-    .line 125
     :cond_0
     const/4 v0, 0x0
 
@@ -320,7 +301,6 @@
     .parameter "listener"
 
     .prologue
-    .line 173
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -329,6 +309,5 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 174
     return-void
 .end method

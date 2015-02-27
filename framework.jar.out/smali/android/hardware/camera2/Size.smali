@@ -16,16 +16,12 @@
     .parameter "height"
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput p1, p0, Landroid/hardware/camera2/Size;->mWidth:I
 
-    .line 32
     iput p2, p0, Landroid/hardware/camera2/Size;->mHeight:I
 
-    .line 33
     return-void
 .end method
 
@@ -40,24 +36,19 @@
 
     const/4 v2, 0x0
 
-    .line 45
     if-nez p1, :cond_1
 
-    .line 55
     :cond_0
     :goto_0
     return v2
 
-    .line 48
     :cond_1
     if-ne p0, p1, :cond_2
 
     move v2, v1
 
-    .line 49
     goto :goto_0
 
-    .line 51
     :cond_2
     instance-of v3, p1, Landroid/hardware/camera2/Size;
 
@@ -65,10 +56,8 @@
 
     move-object v0, p1
 
-    .line 52
     check-cast v0, Landroid/hardware/camera2/Size;
 
-    .line 53
     .local v0, other:Landroid/hardware/camera2/Size;
     iget v3, p0, Landroid/hardware/camera2/Size;->mWidth:I
 
@@ -97,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 40
     iget v0, p0, Landroid/hardware/camera2/Size;->mHeight:I
 
     return v0
@@ -107,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 36
     iget v0, p0, Landroid/hardware/camera2/Size;->mWidth:I
 
     return v0
@@ -119,10 +106,8 @@
     .prologue
     const-wide v6, 0xffffffffL
 
-    .line 65
     const-wide v0, 0xffffffffL
 
-    .line 67
     .local v0, INT_MASK:J
     iget v4, p0, Landroid/hardware/camera2/Size;->mWidth:I
 
@@ -130,13 +115,11 @@
 
     and-long v2, v6, v4
 
-    .line 68
     .local v2, asLong:J
     const/16 v4, 0x20
 
     shl-long/2addr v2, v4
 
-    .line 70
     iget v4, p0, Landroid/hardware/camera2/Size;->mHeight:I
 
     int-to-long v4, v4
@@ -145,7 +128,6 @@
 
     or-long/2addr v2, v4
 
-    .line 72
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
@@ -161,7 +143,6 @@
     .locals 2
 
     .prologue
-    .line 60
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,7 +153,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "x"
+    const-string v1, "x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

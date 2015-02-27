@@ -40,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,7 +54,6 @@
     .parameter "isReload"
 
     .prologue
-    .line 188
     return-void
 .end method
 
@@ -66,10 +64,8 @@
     .parameter "resend"
 
     .prologue
-    .line 176
     invoke-virtual {p2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 177
     return-void
 .end method
 
@@ -79,7 +75,6 @@
     .parameter "url"
 
     .prologue
-    .line 80
     return-void
 .end method
 
@@ -89,7 +84,6 @@
     .parameter "url"
 
     .prologue
-    .line 70
     return-void
 .end method
 
@@ -100,7 +94,6 @@
     .parameter "favicon"
 
     .prologue
-    .line 58
     return-void
 .end method
 
@@ -112,7 +105,6 @@
     .parameter "failingUrl"
 
     .prologue
-    .line 163
     return-void
 .end method
 
@@ -124,10 +116,8 @@
     .parameter "realm"
 
     .prologue
-    .line 221
     invoke-virtual {p2}, Landroid/webkit/HttpAuthHandler;->cancel()V
 
-    .line 222
     return-void
 .end method
 
@@ -139,7 +129,6 @@
     .parameter "args"
 
     .prologue
-    .line 280
     return-void
 .end method
 
@@ -150,10 +139,8 @@
     .parameter "error"
 
     .prologue
-    .line 204
     invoke-virtual {p2}, Landroid/webkit/SslErrorHandler;->cancel()V
 
-    .line 205
     return-void
 .end method
 
@@ -164,7 +151,6 @@
     .parameter "newScale"
 
     .prologue
-    .line 266
     return-void
 .end method
 
@@ -177,10 +163,8 @@
     .end annotation
 
     .prologue
-    .line 117
     invoke-virtual {p2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 118
     return-void
 .end method
 
@@ -190,19 +174,15 @@
     .parameter "event"
 
     .prologue
-    .line 251
     invoke-virtual {p1}, Landroid/webkit/WebView;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
     move-result-object v0
 
-    .line 252
     .local v0, root:Landroid/view/ViewRootImpl;
     if-eqz v0, :cond_0
 
-    .line 253
     invoke-virtual {v0, p2}, Landroid/view/ViewRootImpl;->dispatchUnhandledKey(Landroid/view/KeyEvent;)V
 
-    .line 255
     :cond_0
     return-void
 .end method
@@ -213,7 +193,6 @@
     .parameter "url"
 
     .prologue
-    .line 99
     const/4 v0, 0x0
 
     return-object v0
@@ -225,7 +204,6 @@
     .parameter "event"
 
     .prologue
-    .line 237
     const/4 v0, 0x0
 
     return v0
@@ -237,7 +215,6 @@
     .parameter "url"
 
     .prologue
-    .line 42
     const/4 v0, 0x0
 
     return v0

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 263
     iput-object p1, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 263
     invoke-direct {p0, p1}, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;-><init>(Landroid/net/CaptivePortalTracker;)V
 
     return-void
@@ -50,7 +48,6 @@
     .locals 5
 
     .prologue
-    .line 266
     iget-object v1, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     const/4 v2, 0x2
@@ -67,7 +64,6 @@
 
     move-result-object v0
 
-    .line 267
     .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
@@ -78,18 +74,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 268
     iget-object v1, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     const-wide/16 v2, 0x2710
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/net/CaptivePortalTracker;->sendMessageDelayed(Landroid/os/Message;J)V
 
-    .line 272
     :goto_0
     return-void
 
-    .line 270
     :cond_0
     iget-object v1, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
@@ -107,7 +100,6 @@
 
     const/4 v4, 0x1
 
-    .line 276
     iget-object v6, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -137,26 +129,22 @@
     #calls: Landroid/net/CaptivePortalTracker;->log(Ljava/lang/String;)V
     invoke-static {v6, v7}, Landroid/net/CaptivePortalTracker;->access$2300(Landroid/net/CaptivePortalTracker;Ljava/lang/String;)V
 
-    .line 277
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
     move v4, v5
 
-    .line 315
     :cond_0
     :goto_0
     return v4
 
-    .line 279
     :pswitch_0
     iget-object v6, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     #calls: Landroid/net/CaptivePortalTracker;->setNotificationOff()V
     invoke-static {v6}, Landroid/net/CaptivePortalTracker;->access$900(Landroid/net/CaptivePortalTracker;)V
 
-    .line 281
     iget v6, p1, Landroid/os/Message;->arg1:I
 
     iget-object v7, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
@@ -168,7 +156,6 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 282
     iget-object v6, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     iget-object v7, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
@@ -183,7 +170,6 @@
 
     move-result-object v3
 
-    .line 283
     .local v3, server:Ljava/net/InetAddress;
     if-eqz v3, :cond_2
 
@@ -198,12 +184,10 @@
 
     move v0, v4
 
-    .line 284
     .local v0, captive:Z
     :goto_1
     if-eqz v0, :cond_3
 
-    .line 285
     iget-object v5, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -234,7 +218,6 @@
     #calls: Landroid/net/CaptivePortalTracker;->log(Ljava/lang/String;)V
     invoke-static {v5, v6}, Landroid/net/CaptivePortalTracker;->access$2700(Landroid/net/CaptivePortalTracker;Ljava/lang/String;)V
 
-    .line 289
     :goto_2
     iget-object v5, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
@@ -248,7 +231,6 @@
     #calls: Landroid/net/CaptivePortalTracker;->notifyPortalCheckCompleted(Landroid/net/NetworkInfo;Z)V
     invoke-static {v5, v6, v0}, Landroid/net/CaptivePortalTracker;->access$2900(Landroid/net/CaptivePortalTracker;Landroid/net/NetworkInfo;Z)V
 
-    .line 290
     iget-object v5, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     #getter for: Landroid/net/CaptivePortalTracker;->mDeviceProvisioned:Z
@@ -258,10 +240,8 @@
 
     if-eqz v5, :cond_4
 
-    .line 291
     if-eqz v0, :cond_1
 
-    .line 295
     :try_start_0
     iget-object v5, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
@@ -305,7 +285,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 309
     :cond_1
     :goto_3
     iget-object v5, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
@@ -326,10 +305,8 @@
     :cond_2
     move v0, v5
 
-    .line 283
     goto :goto_1
 
-    .line 287
     .restart local v0       #captive:Z
     :cond_3
     iget-object v5, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
@@ -364,17 +341,14 @@
 
     goto :goto_2
 
-    .line 297
     :catch_0
     move-exception v1
 
-    .line 298
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 302
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_4
     new-instance v2, Landroid/content/Intent;
@@ -383,18 +357,15 @@
 
     invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 304
     .local v2, intent:Landroid/content/Intent;
     const-string v5, "captivePortal"
 
     invoke-virtual {v2, v5, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 305
     const-string v5, "com.google.android.setupwizard"
 
     invoke-virtual {v2, v5}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 306
     iget-object v5, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     #getter for: Landroid/net/CaptivePortalTracker;->mContext:Landroid/content/Context;
@@ -406,7 +377,6 @@
 
     goto :goto_3
 
-    .line 277
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0

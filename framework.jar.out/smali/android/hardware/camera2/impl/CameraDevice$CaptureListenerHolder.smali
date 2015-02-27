@@ -33,15 +33,12 @@
     .parameter "repeating"
 
     .prologue
-    .line 435
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 436
     if-eqz p1, :cond_0
 
     if-nez p3, :cond_1
 
-    .line 437
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -51,20 +48,15 @@
 
     throw v0
 
-    .line 440
     :cond_1
     iput-boolean p4, p0, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->mRepeating:Z
 
-    .line 441
     iput-object p3, p0, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->mHandler:Landroid/os/Handler;
 
-    .line 442
     iput-object p2, p0, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
-    .line 443
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->mListener:Landroid/hardware/camera2/CameraDevice$CaptureListener;
 
-    .line 444
     return-void
 .end method
 
@@ -74,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 459
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -84,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 451
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->mListener:Landroid/hardware/camera2/CameraDevice$CaptureListener;
 
     return-object v0
@@ -94,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 455
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
     return-object v0
@@ -104,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 447
     iget-boolean v0, p0, Landroid/hardware/camera2/impl/CameraDevice$CaptureListenerHolder;->mRepeating:Z
 
     return v0

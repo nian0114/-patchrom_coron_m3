@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 368
     iput-object p1, p0, Landroid/view/TextureView$2;->this$0:Landroid/view/TextureView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +41,11 @@
     .parameter "surfaceTexture"
 
     .prologue
-    .line 373
     iget-object v0, p0, Landroid/view/TextureView$2;->this$0:Landroid/view/TextureView;
 
     #calls: Landroid/view/TextureView;->updateLayer()V
     invoke-static {v0}, Landroid/view/TextureView;->access$100(Landroid/view/TextureView;)V
 
-    .line 375
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -59,16 +56,13 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 376
     iget-object v0, p0, Landroid/view/TextureView$2;->this$0:Landroid/view/TextureView;
 
     invoke-virtual {v0}, Landroid/view/TextureView;->invalidate()V
 
-    .line 380
     :goto_0
     return-void
 
-    .line 378
     :cond_0
     iget-object v0, p0, Landroid/view/TextureView$2;->this$0:Landroid/view/TextureView;
 

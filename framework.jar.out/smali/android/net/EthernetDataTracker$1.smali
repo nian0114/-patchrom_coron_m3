@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 166
     iput-object p1, p0, Landroid/net/EthernetDataTracker$1;->this$0:Landroid/net/EthernetDataTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .locals 6
 
     .prologue
-    .line 168
     new-instance v0, Landroid/net/DhcpResults;
 
     invoke-direct {v0}, Landroid/net/DhcpResults;-><init>()V
 
-    .line 169
     .local v0, dhcpResults:Landroid/net/DhcpResults;
     invoke-static {}, Landroid/net/EthernetDataTracker;->access$000()Ljava/lang/String;
 
@@ -58,7 +55,6 @@
 
     if-nez v2, :cond_0
 
-    .line 170
     const-string v2, "Ethernet"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -85,11 +81,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     :goto_0
     return-void
 
-    .line 173
     :cond_0
     iget-object v2, p0, Landroid/net/EthernetDataTracker$1;->this$0:Landroid/net/EthernetDataTracker;
 
@@ -97,7 +91,6 @@
 
     iput-object v3, v2, Landroid/net/EthernetDataTracker;->mLinkProperties:Landroid/net/LinkProperties;
 
-    .line 175
     iget-object v2, p0, Landroid/net/EthernetDataTracker$1;->this$0:Landroid/net/EthernetDataTracker;
 
     iget-object v2, v2, Landroid/net/EthernetDataTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -106,7 +99,6 @@
 
     invoke-virtual {v2, v3}, Landroid/net/NetworkInfo;->setIsAvailable(Z)V
 
-    .line 176
     iget-object v2, p0, Landroid/net/EthernetDataTracker$1;->this$0:Landroid/net/EthernetDataTracker;
 
     iget-object v2, v2, Landroid/net/EthernetDataTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -124,7 +116,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 177
     iget-object v2, p0, Landroid/net/EthernetDataTracker$1;->this$0:Landroid/net/EthernetDataTracker;
 
     #getter for: Landroid/net/EthernetDataTracker;->mCsHandler:Landroid/os/Handler;
@@ -142,7 +133,6 @@
 
     move-result-object v1
 
-    .line 178
     .local v1, msg:Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 

@@ -252,10 +252,8 @@
     .locals 0
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     return-void
 .end method
 
@@ -280,19 +278,16 @@
     .end annotation
 
     .prologue
-    .line 105
     .local p0, type:Ljava/lang/Class;,"Ljava/lang/Class<+Landroid/hardware/camera2/CameraMetadata;>;"
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 107
     .local v6, keyList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/hardware/camera2/CameraMetadata$Key<*>;>;"
     invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v3
 
-    .line 108
     .local v3, fields:[Ljava/lang/reflect/Field;
     move-object v0, v3
 
@@ -308,7 +303,6 @@
 
     aget-object v2, v0, v4
 
-    .line 110
     .local v2, field:Ljava/lang/reflect/Field;
     invoke-virtual {v2}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
@@ -330,7 +324,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 114
     :try_start_0
     invoke-virtual {v2, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -341,7 +334,6 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 120
     .local v5, key:Landroid/hardware/camera2/CameraMetadata$Key;,"Landroid/hardware/camera2/CameraMetadata$Key<*>;"
     if-eqz p1, :cond_0
 
@@ -351,22 +343,18 @@
 
     if-eqz v8, :cond_1
 
-    .line 121
     :cond_0
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 108
     .end local v5           #key:Landroid/hardware/camera2/CameraMetadata$Key;,"Landroid/hardware/camera2/CameraMetadata$Key<*>;"
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 115
     :catch_0
     move-exception v1
 
-    .line 116
     .local v1, e:Ljava/lang/IllegalAccessException;
     new-instance v8, Ljava/lang/AssertionError;
 
@@ -376,12 +364,10 @@
 
     throw v8
 
-    .line 117
     .end local v1           #e:Ljava/lang/IllegalAccessException;
     :catch_1
     move-exception v1
 
-    .line 118
     .local v1, e:Ljava/lang/IllegalArgumentException;
     new-instance v8, Ljava/lang/AssertionError;
 
@@ -391,7 +377,6 @@
 
     throw v8
 
-    .line 126
     .end local v1           #e:Ljava/lang/IllegalArgumentException;
     .end local v2           #field:Ljava/lang/reflect/Field;
     :cond_2
@@ -425,7 +410,6 @@
     .end annotation
 
     .prologue
-    .line 92
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0

@@ -32,19 +32,14 @@
     .parameter "to"
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     iput-object p2, p0, Landroid/renderscript/ScriptGroup$ConnectLine;->mFrom:Landroid/renderscript/Script$KernelID;
 
-    .line 67
     iput-object p3, p0, Landroid/renderscript/ScriptGroup$ConnectLine;->mToF:Landroid/renderscript/Script$FieldID;
 
-    .line 68
     iput-object p1, p0, Landroid/renderscript/ScriptGroup$ConnectLine;->mAllocationType:Landroid/renderscript/Type;
 
-    .line 69
     return-void
 .end method
 
@@ -55,18 +50,13 @@
     .parameter "to"
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     iput-object p2, p0, Landroid/renderscript/ScriptGroup$ConnectLine;->mFrom:Landroid/renderscript/Script$KernelID;
 
-    .line 61
     iput-object p3, p0, Landroid/renderscript/ScriptGroup$ConnectLine;->mToK:Landroid/renderscript/Script$KernelID;
 
-    .line 62
     iput-object p1, p0, Landroid/renderscript/ScriptGroup$ConnectLine;->mAllocationType:Landroid/renderscript/Type;
 
-    .line 63
     return-void
 .end method

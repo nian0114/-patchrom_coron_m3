@@ -36,19 +36,16 @@
     .parameter "c"
 
     .prologue
-    .line 455
     iput-object p1, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareMonitorCallbackWrapper;->this$0:Landroid/hardware/location/GeofenceHardware;
 
     invoke-direct {p0}, Landroid/hardware/location/IGeofenceHardwareMonitorCallback$Stub;-><init>()V
 
-    .line 456
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareMonitorCallbackWrapper;->mCallback:Ljava/lang/ref/WeakReference;
 
-    .line 457
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .parameter "location"
 
     .prologue
-    .line 461
     iget-object v1, p0, Landroid/hardware/location/GeofenceHardware$GeofenceHardwareMonitorCallbackWrapper;->mCallback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -70,13 +66,11 @@
 
     check-cast v0, Landroid/hardware/location/GeofenceHardwareMonitorCallback;
 
-    .line 462
     .local v0, c:Landroid/hardware/location/GeofenceHardwareMonitorCallback;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/location/GeofenceHardwareMonitorCallback;->onMonitoringSystemChange(IZLandroid/location/Location;)V
 
-    .line 463
     :cond_0
     return-void
 .end method

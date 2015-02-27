@@ -15,10 +15,8 @@
     .parameter "detailMessage"
 
     .prologue
-    .line 30
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 31
     return-void
 .end method
 
@@ -28,7 +26,6 @@
     .parameter "event"
 
     .prologue
-    .line 38
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -65,13 +62,10 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 39
     iput-object p1, p0, Lcom/android/server/NativeDaemonConnectorException;->mCmd:Ljava/lang/String;
 
-    .line 40
     iput-object p2, p0, Lcom/android/server/NativeDaemonConnectorException;->mEvent:Lcom/android/server/NativeDaemonEvent;
 
-    .line 41
     return-void
 .end method
 
@@ -81,10 +75,8 @@
     .parameter "throwable"
 
     .prologue
-    .line 34
     invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 35
     return-void
 .end method
 
@@ -94,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/server/NativeDaemonConnectorException;->mCmd:Ljava/lang/String;
 
     return-object v0
@@ -104,19 +95,16 @@
     .locals 1
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/server/NativeDaemonConnectorException;->mEvent:Lcom/android/server/NativeDaemonEvent;
 
     if-eqz v0, :cond_0
 
-    .line 45
     iget-object v0, p0, Lcom/android/server/NativeDaemonConnectorException;->mEvent:Lcom/android/server/NativeDaemonEvent;
 
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonEvent;->getCode()I
 
     move-result v0
 
-    .line 48
     :goto_0
     return v0
 
@@ -130,7 +118,6 @@
     .locals 2
 
     .prologue
-    .line 61
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p0}, Lcom/android/server/NativeDaemonConnectorException;->getMessage()Ljava/lang/String;

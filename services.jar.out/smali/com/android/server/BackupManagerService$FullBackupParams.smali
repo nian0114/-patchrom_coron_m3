@@ -43,32 +43,23 @@
     .parameter "pkgList"
 
     .prologue
-    .line 405
     iput-object p1, p0, Lcom/android/server/BackupManagerService$FullBackupParams;->this$0:Lcom/android/server/BackupManagerService;
 
     invoke-direct {p0, p1}, Lcom/android/server/BackupManagerService$FullParams;-><init>(Lcom/android/server/BackupManagerService;)V
 
-    .line 406
     iput-object p2, p0, Lcom/android/server/BackupManagerService$FullBackupParams;->fd:Landroid/os/ParcelFileDescriptor;
 
-    .line 407
     iput-boolean p3, p0, Lcom/android/server/BackupManagerService$FullBackupParams;->includeApks:Z
 
-    .line 408
     iput-boolean p4, p0, Lcom/android/server/BackupManagerService$FullBackupParams;->includeObbs:Z
 
-    .line 409
     iput-boolean p5, p0, Lcom/android/server/BackupManagerService$FullBackupParams;->includeShared:Z
 
-    .line 410
     iput-boolean p6, p0, Lcom/android/server/BackupManagerService$FullBackupParams;->allApps:Z
 
-    .line 411
     iput-boolean p7, p0, Lcom/android/server/BackupManagerService$FullBackupParams;->includeSystem:Z
 
-    .line 412
     iput-object p8, p0, Lcom/android/server/BackupManagerService$FullBackupParams;->packages:[Ljava/lang/String;
 
-    .line 413
     return-void
 .end method

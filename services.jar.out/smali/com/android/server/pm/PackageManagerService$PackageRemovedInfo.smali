@@ -41,25 +41,18 @@
 
     const/4 v0, -0x1
 
-    .line 10203
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10205
     iput v0, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->uid:I
 
-    .line 10206
     iput v0, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->removedAppId:I
 
-    .line 10207
     iput-object v2, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->removedUsers:[I
 
-    .line 10208
     iput-boolean v1, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->isRemovedPackageSystemUpdate:Z
 
-    .line 10210
     iput-object v2, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->args:Lcom/android/server/pm/PackageManagerService$InstallArgs;
 
-    .line 10211
     iput-boolean v1, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->isThemeApk:Z
 
     return-void
@@ -78,12 +71,10 @@
 
     const/4 v4, 0x0
 
-    .line 10214
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3, v5}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 10215
     .local v3, extras:Landroid/os/Bundle;
     const-string v1, "android.intent.extra.UID"
 
@@ -96,43 +87,34 @@
     :goto_0
     invoke-virtual {v3, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 10216
     const-string v0, "android.intent.extra.DATA_REMOVED"
 
     invoke-virtual {v3, v0, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 10217
     if-eqz p2, :cond_0
 
-    .line 10218
     const-string v0, "android.intent.extra.REPLACING"
 
     invoke-virtual {v3, v0, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 10220
     :cond_0
     const-string v0, "android.intent.extra.REMOVED_FOR_ALL_USERS"
 
     invoke-virtual {v3, v0, p3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 10221
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->removedPackage:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
-    .line 10222
     const/4 v2, 0x0
 
-    .line 10223
     .local v2, category:Ljava/lang/String;
     iget-boolean v0, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->isThemeApk:Z
 
     if-eqz v0, :cond_1
 
-    .line 10224
     const-string v2, "com.tmobile.intent.category.THEME_PACKAGE_INSTALL_STATE_CHANGE"
 
-    .line 10226
     :cond_1
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
@@ -144,12 +126,10 @@
 
     invoke-static/range {v0 .. v6}, Lcom/android/server/pm/PackageManagerService;->sendPackageBroadcast(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Landroid/content/IIntentReceiver;[I)V
 
-    .line 10228
     if-eqz p1, :cond_2
 
     if-nez p2, :cond_2
 
-    .line 10229
     const-string v0, "android.intent.action.PACKAGE_FULLY_REMOVED"
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->removedPackage:Ljava/lang/String;
@@ -160,14 +140,12 @@
 
     invoke-static/range {v0 .. v6}, Lcom/android/server/pm/PackageManagerService;->sendPackageBroadcast(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Landroid/content/IIntentReceiver;[I)V
 
-    .line 10233
     .end local v2           #category:Ljava/lang/String;
     :cond_2
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->removedAppId:I
 
     if-ltz v0, :cond_3
 
-    .line 10234
     const-string v5, "android.intent.action.UID_REMOVED"
 
     iget-object v11, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->removedUsers:[I
@@ -184,11 +162,9 @@
 
     invoke-static/range {v5 .. v11}, Lcom/android/server/pm/PackageManagerService;->sendPackageBroadcast(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Landroid/content/IIntentReceiver;[I)V
 
-    .line 10237
     :cond_3
     return-void
 
-    .line 10215
     :cond_4
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->uid:I
 

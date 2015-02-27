@@ -40,10 +40,8 @@
     .parameter "logCmd"
 
     .prologue
-    .line 511
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 491
     new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
 
     const/16 v1, 0xa
@@ -52,12 +50,9 @@
 
     iput-object v0, p0, Lcom/android/server/NativeDaemonConnector$ResponseQueue$PendingCmd;->responses:Ljava/util/concurrent/BlockingQueue;
 
-    .line 512
     iput p1, p0, Lcom/android/server/NativeDaemonConnector$ResponseQueue$PendingCmd;->cmdNum:I
 
-    .line 513
     iput-object p2, p0, Lcom/android/server/NativeDaemonConnector$ResponseQueue$PendingCmd;->logCmd:Ljava/lang/String;
 
-    .line 514
     return-void
 .end method

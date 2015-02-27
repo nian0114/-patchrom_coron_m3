@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 790
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$5;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Landroid/app/AppOpsManager$OnOpChangedInternalListener;-><init>()V
@@ -40,11 +39,9 @@
     .parameter "packageName"
 
     .prologue
-    .line 793
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$5;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->updateAppOpsState()V
 
-    .line 794
     return-void
 .end method

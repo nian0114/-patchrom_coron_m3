@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 943
     iput-object p1, p0, Landroid/widget/VideoView$8;->this$0:Landroid/widget/VideoView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .parameter "renderingWidget"
 
     .prologue
-    .line 946
     iget-object v0, p0, Landroid/widget/VideoView$8;->this$0:Landroid/widget/VideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->invalidate()V
 
-    .line 947
     return-void
 .end method

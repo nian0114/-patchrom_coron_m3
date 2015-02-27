@@ -47,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 1876
     const-string v0, "content://mms"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -56,7 +55,6 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1881
     sget-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "report-request"
@@ -67,7 +65,6 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->REPORT_REQUEST_URI:Landroid/net/Uri;
 
-    .line 1887
     sget-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "report-status"
@@ -78,7 +75,6 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->REPORT_STATUS_URI:Landroid/net/Uri;
 
-    .line 1904
     const-string v0, "\\s*(\"[^\"]*\"|[^<>\"]+)\\s*<([^<>]+)>\\s*"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -94,10 +90,8 @@
     .locals 0
 
     .prologue
-    .line 1870
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1871
     return-void
 .end method
 
@@ -106,14 +100,12 @@
     .parameter "address"
 
     .prologue
-    .line 1932
     sget-object v1, Landroid/provider/Telephony$Mms;->NAME_ADDR_EMAIL_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 1934
     .local v0, match:Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -121,14 +113,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1935
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1937
     .end local p0
     :cond_0
     return-object p0
@@ -139,27 +129,22 @@
     .parameter "address"
 
     .prologue
-    .line 1948
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 1949
     const/4 v2, 0x0
 
-    .line 1954
     :goto_0
     return v2
 
-    .line 1952
     :cond_0
     invoke-static {p0}, Landroid/provider/Telephony$Mms;->extractAddrSpec(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1953
     .local v1, s:Ljava/lang/String;
     sget-object v2, Landroid/util/Patterns;->EMAIL_ADDRESS:Ljava/util/regex/Pattern;
 
@@ -167,7 +152,6 @@
 
     move-result-object v0
 
-    .line 1954
     .local v0, match:Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -181,21 +165,17 @@
     .parameter "number"
 
     .prologue
-    .line 1965
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 1966
     const/4 v1, 0x0
 
-    .line 1970
     :goto_0
     return v1
 
-    .line 1969
     :cond_0
     sget-object v1, Landroid/util/Patterns;->PHONE:Ljava/util/regex/Pattern;
 
@@ -203,7 +183,6 @@
 
     move-result-object v0
 
-    .line 1970
     .local v0, match:Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -220,7 +199,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1913
     sget-object v1, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v5, "date DESC"
@@ -246,7 +224,6 @@
     .parameter "orderBy"
 
     .prologue
-    .line 1923
     sget-object v1, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

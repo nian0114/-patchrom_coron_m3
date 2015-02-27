@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 1280
     iput-object p1, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
     iput-boolean p2, p0, Landroid/widget/AbsListView$2;->val$alwaysShow:Z
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 1283
     iget-object v0, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
     iget-boolean v1, p0, Landroid/widget/AbsListView$2;->val$alwaysShow:Z
@@ -54,6 +52,5 @@
     #calls: Landroid/widget/AbsListView;->setFastScrollerAlwaysVisibleUiThread(Z)V
     invoke-static {v0, v1}, Landroid/widget/AbsListView;->access$100(Landroid/widget/AbsListView;Z)V
 
-    .line 1284
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 321
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .parameter "rhs"
 
     .prologue
-    .line 324
     iget-wide v0, p1, Lcom/android/server/am/UriPermission;->persistedCreateTime:J
 
     iget-wide v2, p2, Lcom/android/server/am/UriPermission;->persistedCreateTime:J
@@ -64,7 +62,6 @@
     .parameter "x1"
 
     .prologue
-    .line 321
     check-cast p1, Lcom/android/server/am/UriPermission;
 
     .end local p1

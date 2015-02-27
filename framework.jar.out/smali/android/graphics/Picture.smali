@@ -30,14 +30,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 45
     invoke-static {v1}, Landroid/graphics/Picture;->nativeConstructor(I)I
 
     move-result v0
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/Picture;-><init>(IZ)V
 
-    .line 46
     return-void
 .end method
 
@@ -47,27 +45,21 @@
     .parameter "fromStream"
 
     .prologue
-    .line 171
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 172
     if-nez p1, :cond_0
 
-    .line 173
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
 
     throw v0
 
-    .line 175
     :cond_0
     iput p1, p0, Landroid/graphics/Picture;->mNativePicture:I
 
-    .line 176
     iput-boolean p2, p0, Landroid/graphics/Picture;->createdFromStream:Z
 
-    .line 177
     return-void
 .end method
 
@@ -78,7 +70,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 54
     if-eqz p1, :cond_0
 
     iget v0, p1, Landroid/graphics/Picture;->mNativePicture:I
@@ -90,13 +81,11 @@
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/Picture;-><init>(IZ)V
 
-    .line 55
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 54
     goto :goto_0
 .end method
 
@@ -107,7 +96,6 @@
     .end annotation
 
     .prologue
-    .line 130
     new-instance v0, Landroid/graphics/Picture;
 
     const/16 v1, 0x4000
@@ -154,14 +142,12 @@
     .parameter "height"
 
     .prologue
-    .line 66
     iget v1, p0, Landroid/graphics/Picture;->mNativePicture:I
 
     invoke-static {v1, p1, p2}, Landroid/graphics/Picture;->nativeBeginRecording(III)I
 
     move-result v0
 
-    .line 67
     .local v0, ni:I
     new-instance v1, Landroid/graphics/Picture$RecordingCanvas;
 
@@ -169,7 +155,6 @@
 
     iput-object v1, p0, Landroid/graphics/Picture;->mRecordingCanvas:Landroid/graphics/Canvas;
 
-    .line 68
     iget-object v1, p0, Landroid/graphics/Picture;->mRecordingCanvas:Landroid/graphics/Canvas;
 
     return-object v1
@@ -180,15 +165,12 @@
     .parameter "canvas"
 
     .prologue
-    .line 107
     iget-object v0, p0, Landroid/graphics/Picture;->mRecordingCanvas:Landroid/graphics/Canvas;
 
     if-eqz v0, :cond_0
 
-    .line 108
     invoke-virtual {p0}, Landroid/graphics/Picture;->endRecording()V
 
-    .line 110
     :cond_0
     iget v0, p1, Landroid/graphics/Canvas;->mNativeCanvas:I
 
@@ -196,7 +178,6 @@
 
     invoke-static {v0, v1}, Landroid/graphics/Picture;->nativeDraw(II)V
 
-    .line 111
     return-void
 .end method
 
@@ -204,22 +185,18 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/graphics/Picture;->mRecordingCanvas:Landroid/graphics/Canvas;
 
     if-eqz v0, :cond_0
 
-    .line 79
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/graphics/Picture;->mRecordingCanvas:Landroid/graphics/Canvas;
 
-    .line 80
     iget v0, p0, Landroid/graphics/Picture;->mNativePicture:I
 
     invoke-static {v0}, Landroid/graphics/Picture;->nativeEndRecording(I)V
 
-    .line 82
     :cond_0
     return-void
 .end method
@@ -233,7 +210,6 @@
     .end annotation
 
     .prologue
-    .line 161
     :try_start_0
     iget v0, p0, Landroid/graphics/Picture;->mNativePicture:I
 
@@ -241,13 +217,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 163
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 165
     return-void
 
-    .line 163
     :catchall_0
     move-exception v0
 
@@ -266,7 +239,6 @@
     .locals 1
 
     .prologue
-    .line 168
     iget v0, p0, Landroid/graphics/Picture;->mNativePicture:I
 
     return v0
@@ -279,17 +251,14 @@
     .end annotation
 
     .prologue
-    .line 150
     if-nez p1, :cond_0
 
-    .line 151
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 153
     :cond_0
     iget v0, p0, Landroid/graphics/Picture;->mNativePicture:I
 
@@ -303,14 +272,12 @@
 
     if-nez v0, :cond_1
 
-    .line 155
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
 
     throw v0
 
-    .line 157
     :cond_1
     return-void
 .end method

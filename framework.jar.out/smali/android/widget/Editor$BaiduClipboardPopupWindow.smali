@@ -37,12 +37,10 @@
     .parameter
 
     .prologue
-    .line 3454
     iput-object p1, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
     invoke-direct {p0, p1}, Landroid/widget/Editor$PinnedPopupWindow;-><init>(Landroid/widget/Editor;)V
 
-    .line 3460
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mShowOnTop:Z
@@ -56,7 +54,6 @@
     .parameter "x1"
 
     .prologue
-    .line 3454
     invoke-direct {p0, p1}, Landroid/widget/Editor$BaiduClipboardPopupWindow;-><init>(Landroid/widget/Editor;)V
 
     return-void
@@ -70,10 +67,8 @@
     .parameter "top"
 
     .prologue
-    .line 3586
     sub-int v0, p2, p1
 
-    .line 3587
     .local v0, shift:I
     iget-object v2, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
@@ -83,25 +78,21 @@
 
     move-result v1
 
-    .line 3588
     .local v1, width:I
     div-int/lit8 v2, p3, 0x2
 
     sub-int v0, v2, v0
 
-    .line 3589
     sub-int v2, p3, v1
 
     invoke-static {v2, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    .line 3590
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 3592
     iget-object v2, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     check-cast v2, Lcom/android/internal/widget/PopupLayout;
@@ -117,10 +108,8 @@
     :goto_0
     invoke-virtual {v2, v0, v3}, Lcom/android/internal/widget/PopupLayout;->setXY(II)V
 
-    .line 3593
     return-void
 
-    .line 3592
     :cond_0
     const/4 v3, 0x0
 
@@ -134,20 +123,16 @@
     .parameter "positionY"
 
     .prologue
-    .line 3545
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mShowOnTop:Z
 
-    .line 3546
     if-gez p1, :cond_0
 
-    .line 3547
     invoke-virtual {p0}, Landroid/widget/Editor$BaiduClipboardPopupWindow;->getTextOffset()I
 
     move-result v3
 
-    .line 3548
     .local v3, offset:I
     iget-object v4, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -160,13 +145,11 @@
 
     move-result-object v1
 
-    .line 3549
     .local v1, layout:Landroid/text/Layout;
     invoke-virtual {v1, v3}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v2
 
-    .line 3550
     .local v2, line:I
     invoke-virtual {v1, v2}, Landroid/text/Layout;->getLineBottom(I)I
 
@@ -180,7 +163,6 @@
 
     add-int/2addr p1, v4
 
-    .line 3551
     iget-object v4, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getMeasuredHeight()I
@@ -189,7 +171,6 @@
 
     add-int/2addr p1, v4
 
-    .line 3554
     iget-object v4, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -214,7 +195,6 @@
 
     move-result-object v0
 
-    .line 3556
     .local v0, handle:Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -222,12 +202,10 @@
 
     add-int/2addr p1, v4
 
-    .line 3557
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mShowOnTop:Z
 
-    .line 3559
     .end local v0           #handle:Landroid/graphics/drawable/Drawable;
     .end local v1           #layout:Landroid/text/Layout;
     .end local v2           #line:I
@@ -240,7 +218,6 @@
     .locals 4
 
     .prologue
-    .line 3519
     new-instance v0, Landroid/widget/PopupWindow;
 
     iget-object v1, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
@@ -262,14 +239,12 @@
 
     iput-object v0, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
-    .line 3521
     iget-object v0, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setClippingEnabled(Z)V
 
-    .line 3522
     return-void
 .end method
 
@@ -277,7 +252,6 @@
     .locals 2
 
     .prologue
-    .line 3535
     iget-object v0, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -312,7 +286,6 @@
     .parameter "line"
 
     .prologue
-    .line 3540
     iget-object v0, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -347,7 +320,6 @@
 
     const/4 v9, 0x1
 
-    .line 3465
     new-instance v4, Lcom/android/internal/widget/PopupLayout;
 
     iget-object v7, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
@@ -363,11 +335,9 @@
 
     invoke-direct {v4, v7}, Lcom/android/internal/widget/PopupLayout;-><init>(Landroid/content/Context;)V
 
-    .line 3466
     .local v4, popupLayout:Lcom/android/internal/widget/PopupLayout;
     invoke-virtual {v4, v9}, Lcom/android/internal/widget/PopupLayout;->setOrientation(I)V
 
-    .line 3467
     iget-object v7, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -391,12 +361,10 @@
 
     invoke-virtual {v4, v7}, Lcom/android/internal/widget/PopupLayout;->setDividerDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 3468
     const/4 v7, 0x2
 
     invoke-virtual {v4, v7}, Lcom/android/internal/widget/PopupLayout;->setShowDividers(I)V
 
-    .line 3469
     iget-object v7, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -422,17 +390,14 @@
 
     invoke-virtual {v4, v7}, Lcom/android/internal/widget/PopupLayout;->setDividerPadding(I)V
 
-    .line 3470
     iput-object v4, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
-    .line 3471
     iget-object v7, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     const v8, #android:drawable@yi_text_edit_paste_window#t
 
     invoke-virtual {v7, v8}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
-    .line 3475
     iget-object v7, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -452,7 +417,6 @@
 
     check-cast v2, Landroid/view/LayoutInflater;
 
-    .line 3478
     .local v2, inflater:Landroid/view/LayoutInflater;
     new-instance v6, Landroid/view/ViewGroup$LayoutParams;
 
@@ -462,7 +426,6 @@
 
     invoke-direct {v6, v7, v8}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 3481
     .local v6, wrapContent:Landroid/view/ViewGroup$LayoutParams;
     iget-object v7, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -483,7 +446,6 @@
 
     move-result-object v0
 
-    .line 3482
     .local v0, displayMetrics:Landroid/util/DisplayMetrics;
     iget v7, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
@@ -491,20 +453,17 @@
 
     div-int/lit8 v3, v7, 0x4
 
-    .line 3483
     .local v3, maxWidth:I
     new-array v7, v10, [Landroid/widget/TextView;
 
     iput-object v7, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mTextViews:[Landroid/widget/TextView;
 
-    .line 3484
     const/4 v1, 0x0
 
     .local v1, i:I
     :goto_0
     if-ge v1, v10, :cond_0
 
-    .line 3485
     const v7, #android:layout@yi_text_edit_action_popup_text#t
 
     const/4 v8, 0x0
@@ -515,19 +474,15 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    .line 3486
     .local v5, text:Landroid/widget/TextView;
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 3487
     const/16 v7, 0x11
 
     invoke-virtual {v5, v7}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 3488
     invoke-virtual {v5, v9}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 3489
     const-string v7, "END"
 
     invoke-static {v7}, Landroid/text/TextUtils$TruncateAt;->valueOf(Ljava/lang/String;)Landroid/text/TextUtils$TruncateAt;
@@ -536,28 +491,22 @@
 
     invoke-virtual {v5, v7}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 3490
     invoke-virtual {v5, v3}, Landroid/widget/TextView;->setMaxWidth(I)V
 
-    .line 3491
     iget-object v7, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v7, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 3492
     invoke-virtual {v5, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 3493
     iget-object v7, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mTextViews:[Landroid/widget/TextView;
 
     aput-object v5, v7, v1
 
-    .line 3484
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3495
     .end local v5           #text:Landroid/widget/TextView;
     :cond_0
     iget-object v7, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
@@ -581,7 +530,6 @@
 
     iput-object v7, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mClipboardManager:Landroid/content/ClipboardManager;
 
-    .line 3496
     return-void
 .end method
 
@@ -590,12 +538,10 @@
     .parameter "view"
 
     .prologue
-    .line 3526
     instance-of v0, p1, Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 3527
     iget-object v0, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -612,15 +558,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->pasteBaidu(Ljava/lang/CharSequence;)V
 
-    .line 3528
     invoke-virtual {p0}, Landroid/widget/Editor$BaiduClipboardPopupWindow;->hide()V
 
-    .line 3529
     iget-object v0, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
     invoke-virtual {v0}, Landroid/widget/Editor;->stopSelectionActionMode()V
 
-    .line 3531
     :cond_0
     return-void
 .end method
@@ -629,23 +572,19 @@
     .locals 5
 
     .prologue
-    .line 3500
     iget-object v3, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mClipboardManager:Landroid/content/ClipboardManager;
 
     invoke-virtual {v3}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
 
     move-result-object v0
 
-    .line 3501
     .local v0, clip:Landroid/content/ClipData;
     if-eqz v0, :cond_2
 
-    .line 3502
     invoke-virtual {v0}, Landroid/content/ClipData;->getItemCount()I
 
     move-result v1
 
-    .line 3503
     .local v1, count:I
     const/4 v2, 0x0
 
@@ -655,10 +594,8 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 3504
     if-ge v2, v1, :cond_0
 
-    .line 3505
     iget-object v3, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mTextViews:[Landroid/widget/TextView;
 
     aget-object v3, v3, v2
@@ -673,7 +610,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 3506
     iget-object v3, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mTextViews:[Landroid/widget/TextView;
 
     aget-object v3, v3, v2
@@ -682,13 +618,11 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 3503
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 3508
     :cond_0
     iget-object v3, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mTextViews:[Landroid/widget/TextView;
 
@@ -700,11 +634,9 @@
 
     goto :goto_1
 
-    .line 3514
     :cond_1
     invoke-super {p0}, Landroid/widget/Editor$PinnedPopupWindow;->show()V
 
-    .line 3515
     .end local v1           #count:I
     .end local v2           #i:I
     :cond_2
@@ -721,28 +653,23 @@
 
     const/4 v6, -0x1
 
-    .line 3564
     iget v5, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mPositionX:I
 
     add-int v2, p1, v5
 
-    .line 3565
     .local v2, positionX:I
     iget v5, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mPositionY:I
 
     add-int v3, p2, v5
 
-    .line 3566
     .local v3, positionY:I
     move v0, v2
 
-    .line 3568
     .local v0, beforeClipX:I
     invoke-virtual {p0, v3}, Landroid/widget/Editor$BaiduClipboardPopupWindow;->clipVertically(I)I
 
     move-result v3
 
-    .line 3571
     iget-object v5, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -758,7 +685,6 @@
 
     move-result-object v1
 
-    .line 3572
     .local v1, displayMetrics:Landroid/util/DisplayMetrics;
     iget-object v5, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
@@ -766,7 +692,6 @@
 
     move-result v4
 
-    .line 3573
     .local v4, width:I
     iget v5, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
@@ -776,12 +701,10 @@
 
     move-result v2
 
-    .line 3574
     invoke-static {v7, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
-    .line 3575
     iget-object v5, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     instance-of v5, v5, Lcom/android/internal/widget/PopupLayout;
@@ -792,7 +715,6 @@
 
     invoke-direct {p0, v0, v2, v4, v5}, Landroid/widget/Editor$BaiduClipboardPopupWindow;->updateArrowPosition(IIIZ)V
 
-    .line 3577
     :cond_0
     invoke-virtual {p0}, Landroid/widget/Editor$BaiduClipboardPopupWindow;->isShowing()Z
 
@@ -800,16 +722,13 @@
 
     if-eqz v5, :cond_1
 
-    .line 3578
     iget-object v5, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     invoke-virtual {v5, v2, v3, v6, v6}, Landroid/widget/PopupWindow;->update(IIII)V
 
-    .line 3583
     :goto_0
     return-void
 
-    .line 3580
     :cond_1
     iget-object v5, p0, Landroid/widget/Editor$BaiduClipboardPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 

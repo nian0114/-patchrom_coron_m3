@@ -35,15 +35,12 @@
     .parameter "next"
 
     .prologue
-    .line 3382
     iput-object p1, p0, Landroid/view/ViewRootImpl$InputStage;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3383
     iput-object p2, p0, Landroid/view/ViewRootImpl$InputStage;->mNext:Landroid/view/ViewRootImpl$InputStage;
 
-    .line 3384
     return-void
 .end method
 
@@ -57,39 +54,31 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 3421
     if-nez p2, :cond_0
 
-    .line 3422
     invoke-virtual {p0, p1}, Landroid/view/ViewRootImpl$InputStage;->forward(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3430
     :goto_0
     return-void
 
-    .line 3423
     :cond_0
     if-ne p2, v0, :cond_1
 
-    .line 3424
     invoke-virtual {p0, p1, v0}, Landroid/view/ViewRootImpl$InputStage;->finish(Landroid/view/ViewRootImpl$QueuedInputEvent;Z)V
 
     goto :goto_0
 
-    .line 3425
     :cond_1
     const/4 v0, 0x2
 
     if-ne p2, v0, :cond_2
 
-    .line 3426
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/view/ViewRootImpl$InputStage;->finish(Landroid/view/ViewRootImpl$QueuedInputEvent;Z)V
 
     goto :goto_0
 
-    .line 3428
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -121,21 +110,17 @@
     .parameter "q"
 
     .prologue
-    .line 3390
     iget v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
     and-int/lit8 v0, v0, 0x4
 
     if-eqz v0, :cond_0
 
-    .line 3391
     invoke-virtual {p0, p1}, Landroid/view/ViewRootImpl$InputStage;->forward(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3397
     :goto_0
     return-void
 
-    .line 3392
     :cond_0
     invoke-virtual {p0, p1}, Landroid/view/ViewRootImpl$InputStage;->shouldDropInputEvent(Landroid/view/ViewRootImpl$QueuedInputEvent;)Z
 
@@ -143,14 +128,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 3393
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/view/ViewRootImpl$InputStage;->finish(Landroid/view/ViewRootImpl$QueuedInputEvent;Z)V
 
     goto :goto_0
 
-    .line 3395
     :cond_1
     invoke-virtual {p0, p1}, Landroid/view/ViewRootImpl$InputStage;->onProcess(Landroid/view/ViewRootImpl$QueuedInputEvent;)I
 
@@ -167,17 +150,14 @@
     .parameter "writer"
 
     .prologue
-    .line 3468
     iget-object v0, p0, Landroid/view/ViewRootImpl$InputStage;->mNext:Landroid/view/ViewRootImpl$InputStage;
 
     if-eqz v0, :cond_0
 
-    .line 3469
     iget-object v0, p0, Landroid/view/ViewRootImpl$InputStage;->mNext:Landroid/view/ViewRootImpl$InputStage;
 
     invoke-virtual {v0, p1, p2}, Landroid/view/ViewRootImpl$InputStage;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 3471
     :cond_0
     return-void
 .end method
@@ -188,28 +168,23 @@
     .parameter "handled"
 
     .prologue
-    .line 3403
     iget v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
     or-int/lit8 v0, v0, 0x4
 
     iput v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
-    .line 3404
     if-eqz p2, :cond_0
 
-    .line 3405
     iget v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
     or-int/lit8 v0, v0, 0x8
 
     iput v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
-    .line 3407
     :cond_0
     invoke-virtual {p0, p1}, Landroid/view/ViewRootImpl$InputStage;->forward(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3408
     return-void
 .end method
 
@@ -218,10 +193,8 @@
     .parameter "q"
 
     .prologue
-    .line 3414
     invoke-virtual {p0, p1}, Landroid/view/ViewRootImpl$InputStage;->onDeliverToNext(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3415
     return-void
 .end method
 
@@ -230,21 +203,17 @@
     .parameter "q"
 
     .prologue
-    .line 3444
     iget-object v0, p0, Landroid/view/ViewRootImpl$InputStage;->mNext:Landroid/view/ViewRootImpl$InputStage;
 
     if-eqz v0, :cond_0
 
-    .line 3445
     iget-object v0, p0, Landroid/view/ViewRootImpl$InputStage;->mNext:Landroid/view/ViewRootImpl$InputStage;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewRootImpl$InputStage;->deliver(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3449
     :goto_0
     return-void
 
-    .line 3447
     :cond_0
     iget-object v0, p0, Landroid/view/ViewRootImpl$InputStage;->this$0:Landroid/view/ViewRootImpl;
 
@@ -259,7 +228,6 @@
     .parameter "q"
 
     .prologue
-    .line 3437
     const/4 v0, 0x0
 
     return v0
@@ -272,7 +240,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 3452
     iget-object v1, p0, Landroid/view/ViewRootImpl$InputStage;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v1, v1, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
@@ -285,7 +252,6 @@
 
     if-nez v1, :cond_1
 
-    .line 3453
     :cond_0
     const-string v1, "ViewRootImpl"
 
@@ -311,11 +277,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3464
     :goto_0
     return v0
 
-    .line 3455
     :cond_1
     iget-object v1, p0, Landroid/view/ViewRootImpl$InputStage;->this$0:Landroid/view/ViewRootImpl;
 
@@ -343,7 +307,6 @@
 
     if-nez v1, :cond_2
 
-    .line 3461
     const-string v1, "ViewRootImpl"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -370,7 +333,6 @@
 
     goto :goto_0
 
-    .line 3464
     :cond_2
     const/4 v0, 0x0
 

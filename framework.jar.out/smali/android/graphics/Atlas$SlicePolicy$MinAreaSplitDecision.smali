@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 316
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .parameter "x0"
 
     .prologue
-    .line 316
     invoke-direct {p0}, Landroid/graphics/Atlas$SlicePolicy$MinAreaSplitDecision;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .parameter "rectHeight"
 
     .prologue
-    .line 320
     mul-int v0, p3, p2
 
     mul-int v1, p1, p4

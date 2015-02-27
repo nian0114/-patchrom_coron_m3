@@ -70,30 +70,24 @@
     .locals 1
 
     .prologue
-    .line 177
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 172
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->mVideoPauseState:I
 
-    .line 178
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 179
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 180
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallDetails;->extras:[Ljava/lang/String;
 
-    .line 181
     return-void
 .end method
 
@@ -104,24 +98,18 @@
     .parameter "extraparams"
 
     .prologue
-    .line 183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 172
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->mVideoPauseState:I
 
-    .line 184
     iput p1, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 185
     iput p2, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 186
     iput-object p3, p0, Lcom/android/internal/telephony/CallDetails;->extras:[Ljava/lang/String;
 
-    .line 187
     return-void
 .end method
 
@@ -130,43 +118,34 @@
     .parameter "srcCall"
 
     .prologue
-    .line 189
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 172
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->mVideoPauseState:I
 
-    .line 190
     if-eqz p1, :cond_0
 
-    .line 191
     iget v0, p1, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->call_type:I
 
-    .line 192
     iget v0, p1, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
     iput v0, p0, Lcom/android/internal/telephony/CallDetails;->call_domain:I
 
-    .line 193
     iget-object v0, p1, Lcom/android/internal/telephony/CallDetails;->extras:[Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallDetails;->extras:[Ljava/lang/String;
 
-    .line 194
     iget-object v0, p1, Lcom/android/internal/telephony/CallDetails;->localAbility:[Lcom/android/internal/telephony/ServiceStatus;
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallDetails;->localAbility:[Lcom/android/internal/telephony/ServiceStatus;
 
-    .line 195
     iget-object v0, p1, Lcom/android/internal/telephony/CallDetails;->peerAbility:[Lcom/android/internal/telephony/ServiceStatus;
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallDetails;->peerAbility:[Lcom/android/internal/telephony/ServiceStatus;
 
-    .line 197
     :cond_0
     return-void
 .end method
@@ -187,22 +166,17 @@
     .end annotation
 
     .prologue
-    .line 204
     .local p0, newExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v1, 0x0
 
-    .line 206
     .local v1, extras:[Ljava/lang/String;
     if-nez p0, :cond_0
 
-    .line 207
     const/4 v4, 0x0
 
-    .line 220
     :goto_0
     return-object v4
 
-    .line 212
     :cond_0
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
@@ -210,13 +184,10 @@
 
     new-array v1, v4, [Ljava/lang/String;
 
-    .line 214
     if-eqz v1, :cond_1
 
-    .line 215
     const/4 v2, 0x0
 
-    .line 216
     .local v2, i:I
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -240,7 +211,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 217
     .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -292,7 +262,6 @@
     :cond_1
     move-object v4, v1
 
-    .line 220
     goto :goto_0
 .end method
 
@@ -304,7 +273,6 @@
     .parameter "key"
 
     .prologue
-    .line 241
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -315,12 +283,10 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 242
     aget-object v2, p1, v1
 
     if-eqz v2, :cond_0
 
-    .line 243
     aget-object v2, p1, v1
 
     const-string v3, "="
@@ -329,7 +295,6 @@
 
     move-result-object v0
 
-    .line 244
     .local v0, currKey:[Ljava/lang/String;
     array-length v2, v0
 
@@ -347,23 +312,19 @@
 
     if-eqz v2, :cond_0
 
-    .line 245
     const/4 v2, 0x1
 
     aget-object v2, v0, v2
 
-    .line 249
     .end local v0           #currKey:[Ljava/lang/String;
     :goto_1
     return-object v2
 
-    .line 241
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 249
     :cond_1
     const/4 v2, 0x0
 
@@ -374,7 +335,6 @@
     .locals 1
 
     .prologue
-    .line 237
     iget v0, p0, Lcom/android/internal/telephony/CallDetails;->mVideoPauseState:I
 
     return v0
@@ -385,10 +345,8 @@
     .parameter "extraparams"
 
     .prologue
-    .line 200
     iput-object p1, p0, Lcom/android/internal/telephony/CallDetails;->extras:[Ljava/lang/String;
 
-    .line 201
     return-void
 .end method
 
@@ -407,7 +365,6 @@
     .end annotation
 
     .prologue
-    .line 224
     .local p1, newExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p1}, Lcom/android/internal/telephony/CallDetails;->getExtrasFromMap(Ljava/util/Map;)[Ljava/lang/String;
 
@@ -415,7 +372,6 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallDetails;->extras:[Ljava/lang/String;
 
-    .line 225
     return-void
 .end method
 
@@ -424,20 +380,16 @@
     .parameter "videoPauseState"
 
     .prologue
-    .line 229
     packed-switch p1, :pswitch_data_0
 
-    .line 234
     :goto_0
     return-void
 
-    .line 232
     :pswitch_0
     iput p1, p0, Lcom/android/internal/telephony/CallDetails;->mVideoPauseState:I
 
     goto :goto_0
 
-    .line 229
     nop
 
     :pswitch_data_0
@@ -451,7 +403,6 @@
     .locals 14
 
     .prologue
-    .line 257
     const-string v3, ""
 
     .local v3, extrasResult:Ljava/lang/String;
@@ -460,13 +411,11 @@
     .local v8, localSrvAbility:Ljava/lang/String;
     const-string v9, ""
 
-    .line 258
     .local v9, peerSrvAbility:Ljava/lang/String;
     iget-object v12, p0, Lcom/android/internal/telephony/CallDetails;->extras:[Ljava/lang/String;
 
     if-eqz v12, :cond_0
 
-    .line 259
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->extras:[Ljava/lang/String;
 
     .local v0, arr$:[Ljava/lang/String;
@@ -481,7 +430,6 @@
 
     aget-object v10, v0, v4
 
-    .line 260
     .local v10, s:Ljava/lang/String;
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -499,12 +447,10 @@
 
     move-result-object v3
 
-    .line 259
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 264
     .end local v0           #arr$:[Ljava/lang/String;
     .end local v4           #i$:I
     .end local v6           #len$:I
@@ -514,7 +460,6 @@
 
     if-eqz v12, :cond_2
 
-    .line 265
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->localAbility:[Lcom/android/internal/telephony/ServiceStatus;
 
     .local v0, arr$:[Lcom/android/internal/telephony/ServiceStatus;
@@ -535,11 +480,9 @@
 
     aget-object v11, v0, v5
 
-    .line 266
     .local v11, srv:Lcom/android/internal/telephony/ServiceStatus;
     if-eqz v11, :cond_1
 
-    .line 267
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -588,12 +531,10 @@
 
     move-result-object v8
 
-    .line 269
     iget-object v12, v11, Lcom/android/internal/telephony/ServiceStatus;->accessTechStatus:[Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
 
     if-eqz v12, :cond_1
 
-    .line 270
     iget-object v1, v11, Lcom/android/internal/telephony/ServiceStatus;->accessTechStatus:[Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
 
     .local v1, arr$:[Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
@@ -609,7 +550,6 @@
 
     aget-object v2, v1, v4
 
-    .line 271
     .local v2, at:Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -633,12 +573,10 @@
 
     move-result-object v8
 
-    .line 270
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 265
     .end local v1           #arr$:[Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
     .end local v2           #at:Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
     .end local v4           #i$:I
@@ -653,7 +591,6 @@
     .restart local v5       #i$:I
     goto :goto_1
 
-    .line 278
     .end local v5           #i$:I
     .end local v11           #srv:Lcom/android/internal/telephony/ServiceStatus;
     :cond_2
@@ -661,7 +598,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 279
     iget-object v0, p0, Lcom/android/internal/telephony/CallDetails;->peerAbility:[Lcom/android/internal/telephony/ServiceStatus;
 
     .restart local v0       #arr$:[Lcom/android/internal/telephony/ServiceStatus;
@@ -682,11 +618,9 @@
 
     aget-object v11, v0, v5
 
-    .line 280
     .restart local v11       #srv:Lcom/android/internal/telephony/ServiceStatus;
     if-eqz v11, :cond_3
 
-    .line 281
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -735,12 +669,10 @@
 
     move-result-object v9
 
-    .line 283
     iget-object v12, v11, Lcom/android/internal/telephony/ServiceStatus;->accessTechStatus:[Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
 
     if-eqz v12, :cond_3
 
-    .line 284
     iget-object v1, v11, Lcom/android/internal/telephony/ServiceStatus;->accessTechStatus:[Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
 
     .restart local v1       #arr$:[Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
@@ -756,7 +688,6 @@
 
     aget-object v2, v1, v4
 
-    .line 285
     .restart local v2       #at:Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -780,12 +711,10 @@
 
     move-result-object v9
 
-    .line 284
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_4
 
-    .line 279
     .end local v1           #arr$:[Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
     .end local v2           #at:Lcom/android/internal/telephony/ServiceStatus$StatusForAccessTech;
     .end local v4           #i$:I
@@ -800,7 +729,6 @@
     .restart local v5       #i$:I
     goto :goto_3
 
-    .line 292
     .end local v5           #i$:I
     .end local v11           #srv:Lcom/android/internal/telephony/ServiceStatus;
     :cond_4

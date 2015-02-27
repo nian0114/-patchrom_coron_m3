@@ -75,25 +75,18 @@
 
     const/4 v0, 0x0
 
-    .line 301
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 252
     iput-wide v1, p0, Landroid/content/SyncRequest$Builder;->mTxBytes:J
 
-    .line 254
     iput-wide v1, p0, Landroid/content/SyncRequest$Builder;->mRxBytes:J
 
-    .line 258
     iput v0, p0, Landroid/content/SyncRequest$Builder;->mPriority:I
 
-    .line 262
     iput v0, p0, Landroid/content/SyncRequest$Builder;->mSyncType:I
 
-    .line 264
     iput v0, p0, Landroid/content/SyncRequest$Builder;->mSyncTarget:I
 
-    .line 302
     return-void
 .end method
 
@@ -102,7 +95,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget-wide v0, p0, Landroid/content/SyncRequest$Builder;->mSyncFlexTimeSecs:J
 
     return-wide v0
@@ -113,7 +105,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -124,7 +115,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget-boolean v0, p0, Landroid/content/SyncRequest$Builder;->mDisallowMetered:Z
 
     return v0
@@ -135,7 +125,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget-wide v0, p0, Landroid/content/SyncRequest$Builder;->mTxBytes:J
 
     return-wide v0
@@ -146,7 +135,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget-wide v0, p0, Landroid/content/SyncRequest$Builder;->mRxBytes:J
 
     return-wide v0
@@ -157,7 +145,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget-wide v0, p0, Landroid/content/SyncRequest$Builder;->mSyncRunTimeSecs:J
 
     return-wide v0
@@ -168,7 +155,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mAccount:Landroid/accounts/Account;
 
     return-object v0
@@ -179,7 +165,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mAuthority:Ljava/lang/String;
 
     return-object v0
@@ -190,7 +175,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mComponentName:Landroid/content/ComponentName;
 
     return-object v0
@@ -201,7 +185,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget v0, p0, Landroid/content/SyncRequest$Builder;->mSyncType:I
 
     return v0
@@ -212,7 +195,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget v0, p0, Landroid/content/SyncRequest$Builder;->mSyncTarget:I
 
     return v0
@@ -223,7 +205,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget-boolean v0, p0, Landroid/content/SyncRequest$Builder;->mExpedited:Z
 
     return v0
@@ -234,7 +215,6 @@
     .parameter "x0"
 
     .prologue
-    .line 222
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mCustomExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -246,12 +226,10 @@
     .parameter "before"
 
     .prologue
-    .line 369
     cmp-long v0, p3, p1
 
     if-lez v0, :cond_0
 
-    .line 370
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Specified run time for the sync must be after the specified flex time."
@@ -260,14 +238,11 @@
 
     throw v0
 
-    .line 373
     :cond_0
     iput-wide p1, p0, Landroid/content/SyncRequest$Builder;->mSyncRunTimeSecs:J
 
-    .line 374
     iput-wide p3, p0, Landroid/content/SyncRequest$Builder;->mSyncFlexTimeSecs:J
 
-    .line 375
     return-void
 .end method
 
@@ -278,7 +253,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 614
     const-string v0, "force"
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
@@ -335,7 +309,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 621
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -345,7 +318,6 @@
 
     throw v0
 
-    .line 623
     :cond_1
     return-void
 .end method
@@ -358,109 +330,92 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 555
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mCustomExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 556
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/SyncRequest$Builder;->mCustomExtras:Landroid/os/Bundle;
 
-    .line 559
     :cond_0
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mCustomExtras:Landroid/os/Bundle;
 
     invoke-static {v0}, Landroid/content/ContentResolver;->validateSyncExtrasBundle(Landroid/os/Bundle;)V
 
-    .line 561
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
-    .line 562
     iget-boolean v0, p0, Landroid/content/SyncRequest$Builder;->mIgnoreBackoff:Z
 
     if-eqz v0, :cond_1
 
-    .line 563
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
     const-string v1, "ignore_backoff"
 
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 565
     :cond_1
     iget-boolean v0, p0, Landroid/content/SyncRequest$Builder;->mDisallowMetered:Z
 
     if-eqz v0, :cond_2
 
-    .line 566
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
     const-string v1, "disallow_metered"
 
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 568
     :cond_2
     iget-boolean v0, p0, Landroid/content/SyncRequest$Builder;->mIgnoreSettings:Z
 
     if-eqz v0, :cond_3
 
-    .line 569
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
     const-string v1, "ignore_settings"
 
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 571
     :cond_3
     iget-boolean v0, p0, Landroid/content/SyncRequest$Builder;->mNoRetry:Z
 
     if-eqz v0, :cond_4
 
-    .line 572
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
     const-string v1, "do_not_retry"
 
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 574
     :cond_4
     iget-boolean v0, p0, Landroid/content/SyncRequest$Builder;->mExpedited:Z
 
     if-eqz v0, :cond_5
 
-    .line 575
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
     const-string v1, "expedited"
 
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 577
     :cond_5
     iget-boolean v0, p0, Landroid/content/SyncRequest$Builder;->mIsManual:Z
 
     if-eqz v0, :cond_6
 
-    .line 578
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
     const-string v1, "force"
 
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 580
     :cond_6
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
@@ -470,7 +425,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 581
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
     const-string v1, "expected_download"
@@ -479,36 +433,30 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 582
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "sync_priority"
+    const-string v1, "sync_priority"
 
     iget v2, p0, Landroid/content/SyncRequest$Builder;->mPriority:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 583
     iget v0, p0, Landroid/content/SyncRequest$Builder;->mSyncType:I
 
     if-ne v0, v4, :cond_8
 
-    .line 585
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mCustomExtras:Landroid/os/Bundle;
 
     invoke-direct {p0, v0}, Landroid/content/SyncRequest$Builder;->validatePeriodicExtras(Landroid/os/Bundle;)V
 
-    .line 586
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mSyncConfigExtras:Landroid/os/Bundle;
 
     invoke-direct {p0, v0}, Landroid/content/SyncRequest$Builder;->validatePeriodicExtras(Landroid/os/Bundle;)V
 
-    .line 588
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mAccount:Landroid/accounts/Account;
 
     if-nez v0, :cond_7
 
-    .line 589
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Account must not be null for periodic sync."
@@ -517,13 +465,11 @@
 
     throw v0
 
-    .line 592
     :cond_7
     iget-object v0, p0, Landroid/content/SyncRequest$Builder;->mAuthority:Ljava/lang/String;
 
     if-nez v0, :cond_9
 
-    .line 593
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Authority must not be null for periodic sync."
@@ -532,13 +478,11 @@
 
     throw v0
 
-    .line 596
     :cond_8
     iget v0, p0, Landroid/content/SyncRequest$Builder;->mSyncType:I
 
     if-nez v0, :cond_9
 
-    .line 597
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Must call either syncOnce() or syncPeriodic()"
@@ -547,13 +491,11 @@
 
     throw v0
 
-    .line 600
     :cond_9
     iget v0, p0, Landroid/content/SyncRequest$Builder;->mSyncTarget:I
 
     if-nez v0, :cond_a
 
-    .line 601
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Must specify an adapter with setSyncAdapter(Account, String"
@@ -562,7 +504,6 @@
 
     throw v0
 
-    .line 604
     :cond_a
     new-instance v0, Landroid/content/SyncRequest;
 
@@ -576,10 +517,8 @@
     .parameter "disallow"
 
     .prologue
-    .line 397
     iput-boolean p1, p0, Landroid/content/SyncRequest$Builder;->mDisallowMetered:Z
 
-    .line 398
     return-object p0
 .end method
 
@@ -588,10 +527,8 @@
     .parameter "expedited"
 
     .prologue
-    .line 530
     iput-boolean p1, p0, Landroid/content/SyncRequest$Builder;->mExpedited:Z
 
-    .line 531
     return-object p0
 .end method
 
@@ -600,10 +537,8 @@
     .parameter "bundle"
 
     .prologue
-    .line 459
     iput-object p1, p0, Landroid/content/SyncRequest$Builder;->mCustomExtras:Landroid/os/Bundle;
 
-    .line 460
     return-object p0
 .end method
 
@@ -612,10 +547,8 @@
     .parameter "ignoreBackoff"
 
     .prologue
-    .line 503
     iput-boolean p1, p0, Landroid/content/SyncRequest$Builder;->mIgnoreBackoff:Z
 
-    .line 504
     return-object p0
 .end method
 
@@ -624,10 +557,8 @@
     .parameter "ignoreSettings"
 
     .prologue
-    .line 487
     iput-boolean p1, p0, Landroid/content/SyncRequest$Builder;->mIgnoreSettings:Z
 
-    .line 488
     return-object p0
 .end method
 
@@ -636,10 +567,8 @@
     .parameter "isManual"
 
     .prologue
-    .line 517
     iput-boolean p1, p0, Landroid/content/SyncRequest$Builder;->mIsManual:Z
 
-    .line 518
     return-object p0
 .end method
 
@@ -648,10 +577,8 @@
     .parameter "noRetry"
 
     .prologue
-    .line 473
     iput-boolean p1, p0, Landroid/content/SyncRequest$Builder;->mNoRetry:Z
 
-    .line 474
     return-object p0
 .end method
 
@@ -660,7 +587,6 @@
     .parameter "priority"
 
     .prologue
-    .line 540
     const/4 v0, -0x2
 
     if-lt p1, v0, :cond_0
@@ -669,7 +595,6 @@
 
     if-le p1, v0, :cond_1
 
-    .line 541
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -679,11 +604,9 @@
 
     throw v0
 
-    .line 543
     :cond_1
     iput p1, p0, Landroid/content/SyncRequest$Builder;->mPriority:I
 
-    .line 544
     return-object p0
 .end method
 
@@ -693,12 +616,10 @@
     .parameter "authority"
 
     .prologue
-    .line 408
     iget v0, p0, Landroid/content/SyncRequest$Builder;->mSyncTarget:I
 
     if-eqz v0, :cond_0
 
-    .line 409
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Sync target has already been defined."
@@ -707,7 +628,6 @@
 
     throw v0
 
-    .line 411
     :cond_0
     if-eqz p2, :cond_1
 
@@ -717,7 +637,6 @@
 
     if-nez v0, :cond_1
 
-    .line 412
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Authority must be non-empty"
@@ -726,24 +645,19 @@
 
     throw v0
 
-    .line 414
     :cond_1
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/content/SyncRequest$Builder;->mSyncTarget:I
 
-    .line 415
     iput-object p1, p0, Landroid/content/SyncRequest$Builder;->mAccount:Landroid/accounts/Account;
 
-    .line 416
     iput-object p2, p0, Landroid/content/SyncRequest$Builder;->mAuthority:Ljava/lang/String;
 
-    .line 417
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/SyncRequest$Builder;->mComponentName:Landroid/content/ComponentName;
 
-    .line 418
     return-object p0
 .end method
 
@@ -753,13 +667,10 @@
     .parameter "txBytes"
 
     .prologue
-    .line 386
     iput-wide p1, p0, Landroid/content/SyncRequest$Builder;->mRxBytes:J
 
-    .line 387
     iput-wide p3, p0, Landroid/content/SyncRequest$Builder;->mTxBytes:J
 
-    .line 388
     return-object p0
 .end method
 
@@ -769,12 +680,10 @@
     .prologue
     const-wide/16 v1, 0x0
 
-    .line 313
     iget v0, p0, Landroid/content/SyncRequest$Builder;->mSyncType:I
 
     if-eqz v0, :cond_0
 
-    .line 314
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Sync type has already been defined."
@@ -783,16 +692,13 @@
 
     throw v0
 
-    .line 316
     :cond_0
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/content/SyncRequest$Builder;->mSyncType:I
 
-    .line 317
     invoke-direct {p0, v1, v2, v1, v2}, Landroid/content/SyncRequest$Builder;->setupInterval(JJ)V
 
-    .line 318
     return-object p0
 .end method
 
@@ -802,12 +708,10 @@
     .parameter "beforeSeconds"
 
     .prologue
-    .line 359
     iget v0, p0, Landroid/content/SyncRequest$Builder;->mSyncType:I
 
     if-eqz v0, :cond_0
 
-    .line 360
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Sync type has already been defined."
@@ -816,15 +720,12 @@
 
     throw v0
 
-    .line 362
     :cond_0
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/content/SyncRequest$Builder;->mSyncType:I
 
-    .line 363
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/content/SyncRequest$Builder;->setupInterval(JJ)V
 
-    .line 364
     return-object p0
 .end method

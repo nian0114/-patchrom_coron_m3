@@ -43,7 +43,6 @@
     .parameter
 
     .prologue
-    .line 294
     iput-object p1, p0, Landroid/transition/Fade$3;->this$0:Landroid/transition/Fade;
 
     iput-object p2, p0, Landroid/transition/Fade$3;->val$finalViewToKeep:Landroid/view/View;
@@ -58,12 +57,10 @@
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    .line 295
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/transition/Fade$3;->mCanceled:Z
 
-    .line 296
     const/high16 v0, -0x4080
 
     iput v0, p0, Landroid/transition/Fade$3;->mPausedAlpha:F
@@ -78,12 +75,10 @@
     .parameter "animation"
 
     .prologue
-    .line 317
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/transition/Fade$3;->mCanceled:Z
 
-    .line 318
     iget v0, p0, Landroid/transition/Fade$3;->mPausedAlpha:F
 
     const/4 v1, 0x0
@@ -92,14 +87,12 @@
 
     if-ltz v0, :cond_0
 
-    .line 319
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalView:Landroid/view/View;
 
     iget v1, p0, Landroid/transition/Fade$3;->mPausedAlpha:F
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTransitionAlpha(F)V
 
-    .line 321
     :cond_0
     return-void
 .end method
@@ -109,19 +102,16 @@
     .parameter "animation"
 
     .prologue
-    .line 325
     iget-boolean v0, p0, Landroid/transition/Fade$3;->mCanceled:Z
 
     if-nez v0, :cond_0
 
-    .line 326
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalView:Landroid/view/View;
 
     const/high16 v1, 0x3f80
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTransitionAlpha(F)V
 
-    .line 329
     :cond_0
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalViewToKeep:Landroid/view/View;
 
@@ -131,20 +121,17 @@
 
     if-nez v0, :cond_1
 
-    .line 330
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalViewToKeep:Landroid/view/View;
 
     iget v1, p0, Landroid/transition/Fade$3;->val$finalVisibility:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 332
     :cond_1
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalOverlayView:Landroid/view/View;
 
     if-eqz v0, :cond_2
 
-    .line 333
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalSceneRoot:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
@@ -155,7 +142,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroupOverlay;->remove(Landroid/view/View;)V
 
-    .line 335
     :cond_2
     return-void
 .end method
@@ -165,7 +151,6 @@
     .parameter "animation"
 
     .prologue
-    .line 300
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalViewToKeep:Landroid/view/View;
 
     if-eqz v0, :cond_0
@@ -174,14 +159,12 @@
 
     if-nez v0, :cond_0
 
-    .line 301
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalViewToKeep:Landroid/view/View;
 
     iget v1, p0, Landroid/transition/Fade$3;->val$finalVisibility:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 303
     :cond_0
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalView:Landroid/view/View;
 
@@ -191,14 +174,12 @@
 
     iput v0, p0, Landroid/transition/Fade$3;->mPausedAlpha:F
 
-    .line 304
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalView:Landroid/view/View;
 
     const/high16 v1, 0x3f80
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTransitionAlpha(F)V
 
-    .line 305
     return-void
 .end method
 
@@ -207,7 +188,6 @@
     .parameter "animation"
 
     .prologue
-    .line 309
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalViewToKeep:Landroid/view/View;
 
     if-eqz v0, :cond_0
@@ -216,14 +196,12 @@
 
     if-nez v0, :cond_0
 
-    .line 310
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalViewToKeep:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 312
     :cond_0
     iget-object v0, p0, Landroid/transition/Fade$3;->val$finalView:Landroid/view/View;
 
@@ -231,6 +209,5 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTransitionAlpha(F)V
 
-    .line 313
     return-void
 .end method
