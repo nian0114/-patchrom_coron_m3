@@ -7,7 +7,7 @@
 # The default value is base.
 # Support values: base, base_cm, base_mt6592 and other devices in the future.
 #-----------------------------------------------------------------------------
-#BASE := base_cm
+BASE := base_cm
 
 ##############################################################################
 # The value is used for resource adapter with the aapt tool.
@@ -21,7 +21,7 @@ DENSITY := xhdpi
 # It depends on the device's resolution, such as 480x854, 540x960, 720x1280, 1080x1920.
 # The default value is nothing.
 #-----------------------------------------------------------------------------
-RESOLUTION := 0x0
+RESOLUTION := 720x1280
 
 ##############################################################################
 # The value decides whether use prebuilt image or pack from the BOOT or RECOVERY directory in the vendor directory.
@@ -54,7 +54,7 @@ RESOLUTION := 0x0
 # The default value is Bluetooth.
 # You can configure the apk name in the vendor/system/app or vendor/system/pri-app directory.
 #-----------------------------------------------------------------------------
-vendor_saved_apps := Bluetooth BluetoothExt Stk
+vendor_saved_apps := Bluetooth BluetoothExt Nfc Stk zmappstore iFlyIME Status
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
@@ -105,7 +105,7 @@ vendor_modify_jars := android.policy framework framework2 pm services telephony-
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode baidu system apk).
 #-----------------------------------------------------------------------------
-baidu_modify_apps := Phone
+baidu_modify_apps := 
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the baidu framework jar.
@@ -128,8 +128,8 @@ baidu_modify_apps := Phone
 # The default value is 0.
 # If 1, hide the soft mainkeys. If 0, display the soft mainkeys.
 # You should configure the property according to your device.
-#override_property += \
-#    qemu.hw.mainkeys=1
+override_property += \
+    qemu.hw.mainkeys=1
 
 # The property decide whether the device support the phone book index in the sim card.
 # If true, support the phone book index. If false, don't support the phone book index.
@@ -143,7 +143,8 @@ baidu_modify_apps := Phone
 # The default value is Coron.
 # You should configure the property according to your ID, ie, replace "Coron" with your ID.
 override_property += \
-    ro.baidu.romer=Coron
+   ro.baidu.romer=nian0114 \
+   ro.build.version.release=4.4.4
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.

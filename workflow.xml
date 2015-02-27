@@ -5,7 +5,7 @@
     </phase>
 
     <phase action="config">
-        <state>actived</state>
+        <state>inactive</state>
         <next action="newproject" />
 
         <sequence>

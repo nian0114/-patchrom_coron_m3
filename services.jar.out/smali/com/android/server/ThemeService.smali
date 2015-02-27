@@ -2191,7 +2191,7 @@
 
     move-result-object v8
 
-    const v9, 0x1080223
+    const v9, #android:drawable@default_wallpaper#t
 
     invoke-static {v8, v9}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -4543,11 +4543,9 @@
 
     iget-object v2, p0, Lcom/android/server/ThemeService;->mWallpaperChangeReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    #invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 191
-    invoke-direct {p0}, Lcom/android/server/ThemeService;->processInstalledThemes()V
+    #invoke-direct {p0}, Lcom/android/server/ThemeService;->processInstalledThemes()V
 
-    .line 192
     return-void
 .end method

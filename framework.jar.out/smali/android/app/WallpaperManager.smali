@@ -7,6 +7,7 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/app/WallpaperManager$1;,
+        Landroid/app/WallpaperManager$BaiduInjector;,
         Landroid/app/WallpaperManager$Globals;,
         Landroid/app/WallpaperManager$FastBitmapDrawable;
     }
@@ -369,19 +370,15 @@
 
     const/4 v3, 0x0
 
-    .line 1229
     if-eqz p1, :cond_0
 
-    .line 1230
-    const v1, 0x1080223
+    const v1, #android:drawable@default_wallpaper#t
 
     invoke-virtual {p0, v1}, Landroid/app/WallpaperManager;->setResource(I)V
 
-    .line 1236
     :goto_0
     return-void
 
-    .line 1232
     :cond_0
     sget-object v1, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
@@ -397,7 +394,7 @@
 
     move-result-object v1
 
-    const v2, 0x106000c
+    const v2, #android:color@black#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -592,7 +589,7 @@
     .line 489
     new-instance v17, Ljava/io/BufferedInputStream;
 
-    const v5, 0x1080223
+    const v5, #android:drawable@default_wallpaper#t
 
     move-object/from16 v0, v22
 
@@ -703,7 +700,7 @@
     new-instance v17, Ljava/io/BufferedInputStream;
 
     .end local v17           #is:Ljava/io/InputStream;
-    const v5, 0x1080223
+    const v5, #android:drawable@default_wallpaper#t
 
     move-object/from16 v0, v22
 
@@ -941,7 +938,7 @@
     new-instance v17, Ljava/io/BufferedInputStream;
 
     .end local v17           #is:Ljava/io/InputStream;
-    const v5, 0x1080223
+    const v5, #android:drawable@default_wallpaper#t
 
     move-object/from16 v0, v22
 
@@ -2591,7 +2588,17 @@
     .parameter "yOffset"
 
     .prologue
-    .line 1090
+    #calls: Landroid/app/WallpaperManager$BaiduInjector;->setWallpaperOffsets(Landroid/app/WallpaperManager;Landroid/os/IBinder;FF)Z
+    invoke-static/range {p0 .. p3}, Landroid/app/WallpaperManager$BaiduInjector;->access$invoke-setWallpaperOffsets-aa0944(Landroid/app/WallpaperManager;Landroid/os/IBinder;FF)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_baidu_0
+
+    goto :goto_baidu_0
+
+    :cond_baidu_0
+
     :try_start_0
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowSession()Landroid/view/IWindowSession;
 
@@ -2619,11 +2626,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1097
     :goto_0
+    :goto_baidu_0
     return-void
 
-    .line 1094
     :catch_0
     move-exception v0
 
@@ -2636,13 +2642,10 @@
     .parameter "yOverscroll"
 
     .prologue
-    .line 1129
     iput p1, p0, Landroid/app/WallpaperManager;->mWallpaperXOverscroll:I
 
-    .line 1130
     iput p2, p0, Landroid/app/WallpaperManager;->mWallpaperYOverscroll:I
 
-    .line 1131
     return-void
 .end method
 
@@ -2653,7 +2656,7 @@
     .parameter "yOverscrollOffset"
 
     .prologue
-    .line 1117
+    .line 1090
     :try_start_0
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowSession()Landroid/view/IWindowSession;
 
@@ -2681,11 +2684,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1125
+    .line 1097
     :goto_0
     return-void
 
-    .line 1122
+    .line 1094
     :catch_0
     move-exception v0
 
@@ -2698,6 +2701,7 @@
     .parameter "minimumHeight"
 
     .prologue
+    .line 1117
     .line 1064
     :try_start_0
     sget-object v0, Landroid/app/WallpaperManager;->sGlobals:Landroid/app/WallpaperManager$Globals;
@@ -2740,4 +2744,43 @@
     move-exception v0
 
     goto :goto_0
+.end method
+
+.method static synthetic access$iget-mContext-8e44b4(Landroid/app/WallpaperManager;)Landroid/content/Context;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget-object v0, p0, Landroid/app/WallpaperManager;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
+.method static synthetic access$sget-sGlobals-60adc1()Landroid/app/WallpaperManager$Globals;
+    .locals 1
+
+    .prologue
+    sget-object v0, Landroid/app/WallpaperManager;->sGlobals:Landroid/app/WallpaperManager$Globals;
+
+    return-object v0
+.end method
+
+.method static synthetic access$iget-mWallpaperXStep-2e2e4d(Landroid/app/WallpaperManager;)F
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget v0, p0, Landroid/app/WallpaperManager;->mWallpaperXStep:F
+
+    return v0
+.end method
+
+.method static synthetic access$iget-mWallpaperYStep-3eebf1(Landroid/app/WallpaperManager;)F
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget v0, p0, Landroid/app/WallpaperManager;->mWallpaperYStep:F
+
+    return v0
 .end method

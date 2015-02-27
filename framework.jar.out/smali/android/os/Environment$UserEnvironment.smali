@@ -816,3 +816,32 @@
 
     return-object v0
 .end method
+
+.method public getSecondaryExternalStorageDirectory()Ljava/io/File;
+    .locals 3
+
+    .prologue
+    #calls: Landroid/os/Environment;->getSecondaryVolume()Landroid/os/storage/StorageVolume;
+    invoke-static {}, Landroid/os/Environment;->access$invoke-getSecondaryVolume-32cf99()Landroid/os/storage/StorageVolume;
+
+    move-result-object v0
+
+    .local v0, SecondaryVolume:Landroid/os/storage/StorageVolume;
+    if-eqz v0, :cond_0
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-virtual {v0}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    :goto_0
+    return-object v1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
+.end method
